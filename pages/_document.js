@@ -34,11 +34,6 @@ class MyDocument extends Document {
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
           ></script>
-
-          {/* Boostrap js */}
-          <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         </Head>
         <body>
           <Main />
