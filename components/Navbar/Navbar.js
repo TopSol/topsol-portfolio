@@ -4,6 +4,9 @@ import logo from "../../assets/images/logo.png";
 import styles from "../../styles/Layout.module.css";
 import styles2 from "../../styles/Home.module.css";
 
+import { Link } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
@@ -11,9 +14,16 @@ function Navbar() {
   return (
     <header className={styles2.header}>
       <nav className={styles.navbar}>
-        <a href="#home" className={styles.navlogo}>
+        <Link
+          href="#home"
+          className={styles.navlogo}
+          to="home"
+          smooth={true}
+          duration={1000}
+          onClick={() => scroll.scrollToTop()}
+        >
           <Image src={logo} alt="logo_img" />
-        </a>
+        </Link>
         <ul
           className={
             isOpen === false
@@ -22,20 +32,23 @@ function Navbar() {
           }
         >
           <li className={styles.navitem}>
-            <a
-              href="/#home"
+            <Link
+              href="#home"
               className={
                 isOpen === false
                   ? styles.navlink
                   : styles.navlink + " " + styles.active
               }
               onClick={openMenu}
+              to="home"
+              smooth={true}
+              duration={1000}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li className={styles.navitem}>
-            <a
+            <Link
               href="#service"
               className={
                 isOpen === false
@@ -43,12 +56,15 @@ function Navbar() {
                   : styles.navlink + " " + styles.active
               }
               onClick={openMenu}
+              to="service"
+              smooth={true}
+              duration={1000}
             >
               Service
-            </a>
+            </Link>
           </li>
           <li className={styles.navitem}>
-            <a
+            <Link
               href="#portfolio"
               className={
                 isOpen === false
@@ -56,12 +72,15 @@ function Navbar() {
                   : styles.navlink + " " + styles.active
               }
               onClick={openMenu}
+              to="portfolio"
+              smooth={true}
+              duration={1000}
             >
               Works
-            </a>
+            </Link>
           </li>
           <li className={styles.navitem}>
-            <a
+            <Link
               href="#testimonial"
               className={
                 isOpen === false
@@ -69,12 +88,15 @@ function Navbar() {
                   : styles.navlink + " " + styles.active
               }
               onClick={openMenu}
+              to="testimonial"
+              smooth={true}
+              duration={1000}
             >
               Testimonial
-            </a>
+            </Link>
           </li>
           <li className={styles.navitem}>
-            <a
+            <Link
               href="#contact"
               className={
                 isOpen === false
@@ -82,9 +104,12 @@ function Navbar() {
                   : styles.navlink + " " + styles.active
               }
               onClick={openMenu}
+              to="contact"
+              smooth={true}
+              duration={1000}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
         <button

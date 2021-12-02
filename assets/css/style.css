@@ -23,7 +23,7 @@ Author URI: http://bootstrapthemes.co
   min-height: 300px;
 }
 .carousel-caption {
-  bottom: 220px;
+  bottom: 165px;
 }
 .carousel-caption h5 {
   font-size: 45px;
@@ -753,6 +753,8 @@ input::-ms-input-placeholder {
 /*service section css*/
 
 .service_tabe_menu {
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-tabs > li.active > a,
@@ -767,12 +769,12 @@ input::-ms-input-placeholder {
   border-color: transparent;
 }
 
-/*.service_tabe .nav {
+/* .service_tabe .nav {
     padding-left: 30px;
     margin-bottom: 0;
     list-style: none;
     margin: top;
-}*/
+} */
 
 .service .nav-tabs > li > a {
   text-align: center;
@@ -803,6 +805,17 @@ input::-ms-input-placeholder {
 
 .service .tab-content {
   margin-top: 100px;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .service_tabe_menu {
+    text-align: center;
+    justify-content: center;
+  }
+  .service .nav-tabs > li > a {
+    margin-left: 0px;
+  }
 }
 
 /*features section css*/

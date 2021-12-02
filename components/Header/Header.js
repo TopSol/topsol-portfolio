@@ -3,7 +3,7 @@ import Home from "../Home/Home";
 
 const Header = () => {
   return (
-    <>
+    <div id="home">
       <div
         className="carousel slide"
         data-bs-ride="carousel"
@@ -115,7 +115,7 @@ const Header = () => {
         </button>
       </div>
       <Home />
-    </>
+    </div>
   );
 };
 
