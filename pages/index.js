@@ -20,17 +20,17 @@ export default function Index() {
       data-target=".navbar"
       data-offset="200"
     >
-      {/* <Navbar />
+      <Navbar />
       <Header />
       <Feature />
       <About />
       <Services />
       <ChooseUs />
-      <Portfolio /> */}
+      <Portfolio />
       <Testimonial />
-      {/* <ContactUs />
+      <ContactUs />
       <GoogleMap />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
