@@ -12,7 +12,7 @@ function Portfolio() {
                 <div className="separator"></div>
               </div>
             </div>
-            <div className="col-sm-6 col-sm-offset-2">
+            <div className="col-sm-6 col-sm-offset-2 tab">
               <div id="filters" className="toolbar mb2 mt2">
                 <button
                   className="btn-md fil-cat filter active"
@@ -47,10 +47,10 @@ function Portfolio() {
             </div>
             {/* <img src="pf9.jpg" alt="" /> */}
 
-            {/* <div style="clear:both;"></div> */}
+            <div style={{ clear: "both" }}></div>
             <div id="portfoliowork">
               <div className="single_portfolio tile scale-anm web grid-item-width2">
-                <img src="pf9.jpg" alt="" />
+                <img src="pf1.jpg" alt="" />
                 <div className="grid_item_overlay g_overlay_1">
                   <a href="assets/images/pf1.jpg" className="portfolio-img">
                     {" "}
@@ -63,7 +63,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="single_portfolio tile scale-anm bcards">
-                <img src="assets/images/pf2.jpg" alt="" />
+                <img src="pf2.jpg" alt="" />
                 <div className="grid_item_overlay">
                   <a href="assets/images/pf2.jpg" className="portfolio-img">
                     {" "}
@@ -76,7 +76,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="single_portfolio tile scale-anm web ">
-                <img src="assets/images/pf3.jpg" alt="" />
+                <img src="pf3.jpg" alt="" />
                 <div className="grid_item_overlay">
                   <a href="assets/images/pf3.jpg" className="portfolio-img">
                     {" "}
@@ -89,7 +89,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="single_portfolio tile scale-anm web">
-                <img src="assets/images/pf4.jpg" alt="" />
+                <img src="pf4.jpg" alt="" />
                 <div className="grid_item_overlay">
                   <a href="assets/images/pf4.jpg" className="portfolio-img">
                     {" "}
@@ -102,7 +102,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="single_portfolio tile scale-anm bcards">
-                <img src="assets/images/pf8.jpg" alt="" />
+                <img src="pf8.jpg" alt="" />
                 <div className="grid_item_overlay">
                   <a href="assets/images/pf8.jpg" className="portfolio-img">
                     {" "}
@@ -115,7 +115,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="single_portfolio tile scale-anm web">
-                <img src="assets/images/pf9.jpg" alt="" />
+                <img src="pf9.jpg" alt="" />
                 <div className="grid_item_overlay">
                   <a href="assets/images/pf9.jpg" className="portfolio-img">
                     <i className="fa fa-link"></i>
@@ -126,7 +126,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="single_portfolio tile scale-anm flyers">
-                <img src="assets/images/pf5.jpg" alt="" />
+                <img src="pf5.jpg" alt="" />
                 <div className="grid_item_overlay g_overlay_2">
                   <a href="assets/images/pf5.jpg" className="portfolio-img">
                     {" "}
@@ -139,7 +139,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="single_portfolio tile scale-anm flyers">
-                <img src="assets/images/pf6.jpg" alt="" />
+                <img src="pf6.jpg" alt="" />
                 <div className="grid_item_overlay g_overlay_1">
                   <a href="assets/images/pf6.jpg" className="portfolio-img">
                     {" "}
@@ -153,7 +153,7 @@ function Portfolio() {
               </div>
 
               <div className="single_portfolio tile scale-anm bcards">
-                <img src="assets/images/pf7.jpg" alt="" />
+                <img src="pf7.jpg" alt="" />
                 <div className="grid_item_overlay">
                   <a href="assets/images/pf7.jpg" className="portfolio-img">
                     {" "}
@@ -166,7 +166,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="single_portfolio tile scale-anm flyers">
-                <img src="assets/images/pf6.jpg" alt="" />
+                <img src="pf6.jpg" alt="" />
                 <div className="grid_item_overlay g_overlay_1">
                   <a href="assets/images/pf6.jpg" className="portfolio-img">
                     {" "}
@@ -180,7 +180,7 @@ function Portfolio() {
               </div>
 
               <div className="single_portfolio tile scale-anm bcards">
-                <img src="assets/images/pf7.jpg" alt="" />
+                <img src="pf7.jpg" alt="" />
                 <div className="grid_item_overlay">
                   <a href="assets/images/pf7.jpg" className="portfolio-img">
                     {" "}
@@ -194,7 +194,7 @@ function Portfolio() {
               </div>
             </div>
 
-            {/* <div style="clear:both;"></div> */}
+            <div style={{ clear: "both" }}></div>
           </div>
         </div>
       </div>

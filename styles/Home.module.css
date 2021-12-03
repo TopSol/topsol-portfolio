@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.carousel-control-prev{
+  bottom: 100;
+}
+
 .footer {
   display: flex;
   flex: 1;
