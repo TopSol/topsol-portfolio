@@ -27,10 +27,10 @@ export default function Index() {
       <Services />
       <ChooseUs />
       <Portfolio />
-      {/* <Testimonial />
+      <Testimonial />
       <ContactUs />
       <GoogleMap />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

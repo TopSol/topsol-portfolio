@@ -8,24 +8,16 @@ function Feature() {
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-            <div className="main_features_area sections">
-              <div className="head_title">
-                <h3>FEATURED WORK</h3>
-                <div className="separator"></div>
-              </div>
+            <div className="head_title">
+              <h3>FEATURED WORK</h3>
+              <div className="separator"></div>
               <div className="row">
                 <div className="main_features_content">
                   <div className="col-sm-6">
                     <div className="single_features_slide">
                       <div className="single_ft_s_item">
-                        <Image src={featureslid} alt="featureslid_img" />
+                        <Image src={featureslid} alt="featureslid1_image" />
                       </div>
-                      {/* <div className="single_ft_s_item">
-                        <Image src={featureslid} alt="featureslid_img" />
-                      </div>
-                      <div className="single_ft_s_item">
-                        <Image src={featureslid} alt="stab1_img" />
-                      </div> */}
                     </div>
                   </div>
                   <div className="col-sm-6">
@@ -36,7 +28,7 @@ function Feature() {
                         typesetting industry. Lorem Ipsum has been the
                         industry's standard dummy text ever since the 1500s,
                         when an unknown printer took a galley of type and
-                        scrambled{" "}
+                        scrambled
                       </p>
 
                       <ul>

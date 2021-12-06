@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import stab1 from "../../assets/images/stab1.png";
+import services from "../../assets/data/services/services";
 
 function Home() {
   return (
@@ -13,54 +14,23 @@ function Home() {
                 <div className="service_tabe">
                   {/* <!-- Nav tabs --> */}
                   <ul className="service_tabe_menu nav nav-tabs" role="tablist">
-                    <li role="presentation" className="active">
-                      <a
-                        href="#webdesign"
-                        aria-controls="webdesign"
-                        role="tab"
-                        data-toggle="tab"
-                      >
-                        <i className="fa fa-map-marker"></i> <br />
-                        WEB DESIGN
-                      </a>
-                    </li>
-                    <li role="presentation">
-                      <a
-                        href="#appdesign"
-                        aria-controls="appdesign"
-                        role="tab"
-                        data-toggle="tab"
-                      >
-                        <i className="fa fa-map-marker"></i> <br />
-                        APP DESIGN
-                      </a>
-                    </li>
-                    <li role="presentation">
-                      <a
-                        href="#graphicdesign"
-                        aria-controls="graphicdesign"
-                        role="tab"
-                        data-toggle="tab"
-                      >
-                        <i className="fa fa-map-marker"></i> <br />
-                        GRAPHIC DESIGN
-                      </a>
-                    </li>
-                    <li role="presentation">
-                      <a
-                        href="#gamedesign"
-                        aria-controls="gamedesign"
-                        role="tab"
-                        data-toggle="tab"
-                      >
-                        <i className="fa fa-map-marker"></i> <br />
-                        GAME DESIGN
-                      </a>
-                    </li>
+                    {services.map((services) => (
+                      <li role="presentation" className="active">
+                        <a
+                          href="#webdesign"
+                          aria-controls="webdesign"
+                          role="tab"
+                          data-toggle="tab"
+                        >
+                          <i className="fa fa-map-marker"></i> <br />
+                          {services.name}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
 
                   {/* <!-- Tab panes --> */}
-                  <div className="tab-content">
+                  {/* <div className="tab-content">
                     <div
                       role="tabpanel"
                       className="tab-pane active"
@@ -101,7 +71,7 @@ function Home() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

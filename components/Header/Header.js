@@ -9,7 +9,7 @@ const Header = () => {
         data-bs-ride="carousel"
         id="carouselExampleIndicators"
       >
-        <div className="carousel-indicators">
+        <div className="carousel-indicators" style={{bottom: "50px"}}>
           <button
             aria-label="Slide 1"
             className="active"
@@ -35,8 +35,8 @@ const Header = () => {
             <img
               alt="..."
               className="d-block w-100"
-              src="homebg.jpg"
-              // src="https://i.postimg.cc/LsTXqTNZ/1.jpg"
+              // src="homebg.jpg"
+              src="https://i.postimg.cc/LsTXqTNZ/1.jpg"
             />
             <div className="carousel-caption">
               <h5 className="animated bounceInRight" style={{ color: "white" }}>

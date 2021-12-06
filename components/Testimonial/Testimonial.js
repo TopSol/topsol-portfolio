@@ -2,229 +2,140 @@ import React from "react";
 
 function Testimonial() {
   return (
-    // <section id="testimonial" class="testimonial">
-    //   <div class="video_overlay">
-    //     <div class="container">
-    //       <div class="row">
-    //         <div class="main_testimonial sections text-center">
-    //           <div class="col-md-12" data-wow-delay="0.2s">
-    //             <div class="main_teastimonial_slider text-center">
-    //               <div class="single_testimonial">
-    //                 <div class="row">
-    //                   <div class="col-sm-8 col-sm-offset-2">
-    // <i class="fa fa-quote-left"></i>
-    // <p>
-    //   There are many variations of passages of Lorem Ipsum
-    //   available, but the majority have suffered alteration
-    //   in some form, by injected humour, or randomised words
-    //   which don't look even slightly believable. If you are
-    //   going to use a passage of Lorem Ipsum, you need to be
-    //   sure there isn't anything embarrassing hidden in the
-    //   middle of text. All the Lorem ww
-    // </p>
-    // <div class="single_test_author">
-    //   <h4>
-    //     JANE GALADRIEL <span> -- CEO TENGKUREP</span>
-    //   </h4>
-    // </div>
-    //                   </div>
-    //                 </div>
-    //               </div>
-    //               {/* <div class="single_testimonial">
-    //                 <div class="row">
-    //                   <div class="col-sm-8 col-sm-offset-2">
-    //                     <i class="fa fa-quote-left"></i>
-    //                     <p>
-    //                       There are many variations of passages of Lorem Ipsum
-    //                       available, but the majority have suffered alteration
-    //                       in some form, by injected humour, or randomised words
-    //                       which don't look even slightly believable. If you are
-    //                       going to use a passage of Lorem Ipsum, you need to be
-    //                       sure there isn't anything embarrassing hidden in the
-    //                       middle of text. All the Lorem
-    //                     </p>
-    //                     <div class="single_test_author">
-    //                       <h4>
-    //                         JANE GALADRIEL <span> -- CEO TENGKUREP</span>
-    //                       </h4>
-    //                     </div>
-    //                   </div>
-    //                 </div>
-    //               </div> */}
-    //               {/* <div class="single_testimonial">
-    //                 <div class="row">
-    //                   <div class="col-sm-8 col-sm-offset-2">
-    //                     <i class="fa fa-quote-left"></i>
-    //                     <p>
-    //                       There are many variations of passages of Lorem Ipsum
-    //                       available, but the majority have suffered alteration
-    //                       in some form, by injected humour, or randomised words
-    //                       which don't look even slightly believable. If you are
-    //                       going to use a passage of Lorem Ipsum, you need to be
-    //                       sure there isn't anything embarrassing hidden in the
-    //                       middle of text. All the Lorem
-    //                     </p>
-    //                     <div class="single_test_author">
-    //                       <h4>
-    //                         JANE GALADRIEL <span> -- CEO TENGKUREP</span>
-    //                       </h4>
-    //                     </div>
-    //                   </div>
-    //                 </div>
-    //               </div> */}
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
-    <>
-      <section class="py-5 text-center">
-        <div class="container py-4 text-white">
-          <header>
-            <h1 class="display-4">Bootstrap carousel quotes</h1>
-            <p class="font-italic mb-1">
-              Create an elegant quote carousel using default Bootstrap 4
-              carousel component.
-            </p>
-            <p class="font-italic">
-              Snippet by
-              <a class="text-white" href="https://bootstrapious.com/">
-                <u>Bootstrapious</u>
-              </a>
-            </p>
-          </header>
+    <div id="testimonial" className="body">
+      <div className="container my-5 justify-content-center">
+        <div className="head_title my-0">
+          <h3 className="">What People Say</h3>
+          <div className="separator"></div>
         </div>
-      </section>
-
-      <section class="pb-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10 col-xl-8 mx-auto">
-              <div class="p-5 bg-white shadow rounded">
-                <div
-                  class="carousel slide"
-                  id="carouselExampleIndicators"
-                  data-ride="carousel"
-                >
-                  <ol class="carousel-indicators mb-0">
-                    <li
-                      class="active"
-                      data-target="#carouselExampleIndicators"
-                      data-slide-to="0"
-                    ></li>
-                    <li
-                      data-target="#carouselExampleIndicators"
-                      data-slide-to="1"
-                    ></li>
-                    <li
-                      data-target="#carouselExampleIndicators"
-                      data-slide-to="2"
-                    ></li>
-                  </ol>
-                  <div class="carousel-inner px-5 pb-4">
-                    <div class="carousel-item active">
-                      <div class="media">
-                        <img
-                          class="rounded-circle img-thumbnail"
-                          src="https://bootstrapious.com/i/snippets/sn-slider-quote/avatar-1.jpg"
-                          alt=""
-                          width="75"
-                        />
-                        <div class="media-body ml-3">
-                          <blockquote class="blockquote border-0 p-0">
-                            <p class="font-italic lead">
-                              {" "}
-                              <i class="fa fa-quote-left mr-3 text-success"></i>
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit, sed do eiusmod tempor incididunt
-                              ut labore et dolore magna aliqua.
-                            </p>
-                            <footer class="blockquote-footer">
-                              Someone famous in
-                              <cite title="Source Title">Source Title</cite>
-                            </footer>
-                          </blockquote>
+        <div className=" row justify-content-center ">
+          <div className="col-lg-6 col-12 mt-5 ">
+            <div className="card mt-3 ">
+              <div className="layer"></div>
+              <div className="content">
+                <div className="card-header text-center border-0">
+                  <div className="row justify-content-center my-4">
+                    <div className="col">
+                      <div className="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                        <div className="col-3 text-right">
+                          <img
+                            className="img-fluid"
+                            id="quotes"
+                            src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png"
+                            width="110"
+                            height="110"
+                          />
                         </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="media">
-                        <img
-                          class="rounded-circle img-thumbnail"
-                          src="https://bootstrapious.com/i/snippets/sn-slider-quote/avatar-3.jpg"
-                          alt=""
-                          width="75"
-                        />
-                        <div class="media-body ml-3">
-                          <blockquote class="blockquote border-0 p-0">
-                            <p class="font-italic lead">
-                              {" "}
-                              <i class="fa fa-quote-left mr-3 text-success"></i>
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit, sed do eiusmod tempor incididunt
-                              ut labore et dolore magna aliqua.
-                            </p>
-                            <footer class="blockquote-footer">
-                              Someone famous in
-                              <cite title="Source Title">Source Title</cite>
-                            </footer>
-                          </blockquote>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="media">
-                        <img
-                          class="rounded-circle img-thumbnail"
-                          src="https://bootstrapious.com/i/snippets/sn-slider-quote/avatar-2.jpg"
-                          alt=""
-                          width="75"
-                        />
-                        <div class="media-body ml-3">
-                          <blockquote class="blockquote border-0 p-0">
-                            <p class="font-italic lead">
-                              {" "}
-                              <i class="fa fa-quote-left mr-3 text-success"></i>
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit, sed do eiusmod tempor incididunt
-                              ut labore et dolore magna aliqua.
-                            </p>
-                            <footer class="blockquote-footer">
-                              Someone famous in
-                              <cite title="Source Title">Source Title</cite>
-                            </footer>
-                          </blockquote>
+                        <div className="col pr-lg-5">
+                          <img
+                            className=" img-1 mr-lg-5 "
+                            src="https://i.imgur.com/nUNhspp.jpg"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
-                  <a
-                    class="carousel-control-prev width-auto"
-                    href="#carouselExampleIndicators"
-                    role="button"
-                    data-slide="prev"
-                  >
-                    <i class="fa fa-angle-left text-dark text-lg"></i>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a
-                    class="carousel-control-next width-auto"
-                    href="#carouselExampleIndicators"
-                    role="button"
-                    data-slide="next"
-                  >
-                    <i class="fa fa-angle-right text-dark text-lg"></i>
-                    <span class="sr-only">Next</span>
-                  </a>
+                </div>
+                <div className="card-body text-center pb-3 ">
+                  <div className="row justify-content-center">
+                    <div className="col text-center justify-content-center ">
+                      <p className="bold text-center px-md-3">
+                        {" "}
+                        Growth of data is exponential and our ability to get
+                        true insight that matter was challenging with
+                        classNameic, traditional Bi tools. Vertix allow us to
+                        unserstand what is driving exceptions so we can take
+                        action Growth of data our ability to get true insight
+                        that matter was challenging with classNameic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <hr className="mt-auto mb-4" />
+                <div className="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                  <div className="row text-center name mt-auto ">
+                    <div className="col">
+                      <h4 className="mb-0 Elizabeth">Sophia Smith</h4>{" "}
+                      <small className="mt-0 text-white">Hair Specialist</small>
+                      <p>
+                        <span className="fa fa-star text-warning mr-1"></span>
+                        <span className="fa fa-star text-warning mr-1"></span>
+                        <span className="fa fa-star text-warning mr-1"></span>
+                        <span className="fa fa-star-half-o text-warning mr-1"></span>
+                        <span className="fa fa-star-o text-warning mr-1"></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6 col-12 mt-5 ">
+            <div className="card mt-3 ">
+              <div className="layer"></div>
+              <div className="content">
+                <div className="card-header text-center border-0">
+                  <div className="row justify-content-center my-4">
+                    <div className="col">
+                      <div className="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                        <div className="col-3 text-right">
+                          <img
+                            className="img-fluid"
+                            id="quotes"
+                            src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png"
+                            width="110"
+                            height="110"
+                          />
+                        </div>
+                        <div className="col pr-lg-5">
+                          <img
+                            className=" img-1 mr-lg-5 "
+                            src="https://i.imgur.com/HjKTNkG.jpg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body text-center pb-3 ">
+                  <div className="row justify-content-center">
+                    <div className="col text-center justify-content-center ">
+                      <p className="bold text-center px-md-3">
+                        {" "}
+                        Growth of data is exponential and our ability to get
+                        true insight that matter was challenging with
+                        classNameic, traditional Bi tools. Vertix allow us to
+                        unserstand what is driving exceptions so we can take
+                        action Growth of data our ability to get true insight
+                        that matter was challenging with classNameic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <hr className="mt-auto mb-4" />
+                <div className="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                  <div className="row text-center name mt-auto ">
+                    <div className="col">
+                      <h4 className="mb-0 Elizabeth">SMike Housin</h4>{" "}
+                      <small className="mt-0 text-white">
+                        Director of Marketing
+                      </small>
+                      <p>
+                        <span className="fa fa-star text-warning mr-1"></span>
+                        <span className="fa fa-star text-warning mr-1"></span>
+                        <span className="fa fa-star-o text-warning mr-1"></span>
+                        <span className="fa fa-star-o text-warning mr-1"></span>
+                        <span className="fa fa-star-o text-warning mr-1"></span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }
 
