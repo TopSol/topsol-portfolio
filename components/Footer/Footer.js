@@ -2,22 +2,25 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../assets/images/logo.png";
 
+import { Link } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+
 function Footer() {
   return (
     <>
-      <div id="footer" class="footer_widget">
-        <div class="video_overlay">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="row">
-                  <div class="main_widget">
-                    <div class="col-sm-3 col-xs-12">
+      <div id="footer" className="footer_widget">
+        <div className="video_overlay">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12">
+                <div className="row">
+                  <div className="main_widget">
+                    <div className="col-sm-3 col-xs-12">
                       <div
-                        class="single_widget wow fadeIn"
+                        className="single_widget wow fadeIn"
                         data-wow-duration="800ms"
                       >
-                        <div class="footer_logo">
+                        <div className="footer_logo">
                           <Image src={logo} alt="logo_img" />
                         </div>
                         <p>
@@ -30,14 +33,14 @@ function Footer() {
                       </div>
                     </div>
 
-                    <div class="col-sm-3  col-xs-12">
+                    <div className="col-sm-3  col-xs-12">
                       <div
-                        class="single_widget wow fadeIn"
+                        className="single_widget wow fadeIn"
                         data-wow-duration="800ms"
                       >
-                        <div class="footer_title">
+                        <div className="footer_title">
                           <h4>SITEMAP</h4>
-                          <div class="separator"></div>
+                          <div className="separator"></div>
                         </div>
                         <ul>
                           <li>
@@ -56,14 +59,14 @@ function Footer() {
                       </div>
                     </div>
 
-                    <div class="col-sm-3  col-xs-12">
+                    <div className="col-sm-3  col-xs-12">
                       <div
-                        class="single_widget wow fadeIn"
+                        className="single_widget wow fadeIn"
                         data-wow-duration="800ms"
                       >
-                        <div class="footer_title">
+                        <div className="footer_title">
                           <h4>ACHIVES</h4>
-                          <div class="separator"></div>
+                          <div className="separator"></div>
                         </div>
                         <ul>
                           <li>
@@ -82,29 +85,35 @@ function Footer() {
                       </div>
                     </div>
 
-                    <div class="col-sm-3 col-xs-12">
+                    <div className="col-sm-3 col-xs-12">
                       <div
-                        class="single_widget wow fadeIn"
+                        className="single_widget wow fadeIn"
                         data-wow-duration="800ms"
                       >
-                        <div class="footer_title">
+                        <div className="footer_title">
                           <h4>NEWSLETTER</h4>
-                          <div class="separator"></div>
+                          <div className="separator"></div>
                         </div>
 
-                        <div class="footer_subcribs_area">
+                        <div className="footer_subcribs_area">
                           <p>
                             Sign up for our mailing list to get latest updates
                             and offers.
                           </p>
-                          <form class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
+                          <form
+                            className="navbar-form navbar-left"
+                            role="search"
+                          >
+                            <div className="form-group">
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="Search"
                               />
-                              <button type="submit" class="submit_btn"></button>
+                              <button
+                                type="submit"
+                                className="submit_btn"
+                              ></button>
                             </div>
                           </form>
                         </div>
@@ -117,42 +126,46 @@ function Footer() {
           </div>
         </div>
       </div>
-
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="main_footer">
-                <div class="row">
-                  <div class="col-sm-6 col-xs-12">
-                    <div class="copyright_text">
-                      <p class=" wow fadeInRight" data-wow-duration="1s">
-                        Made with <i class="fa fa-heart"></i> by{" "}
-                        <a href="">Topsol</a>
+      <div className="footer">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="main_footer">
+                <div className="row">
+                  <div className="col-sm-6 col-xs-12">
+                    <div className="copyright_text">
+                      <p className=" wow fadeInRight" data-wow-duration="1s">
+                        Made with <i className="fa fa-heart"></i> by{" "}
+                        <a target="_blank" href="http://www.topsol.org/">
+                          Topsol
+                        </a>
                         2016. All Rights Reserved
                       </p>
                     </div>
                   </div>
 
-                  <div class="col-sm-6 col-xs-12">
-                    <div class="flowus">
+                  <div className="col-sm-6 col-xs-12">
+                    <div className="flowus">
                       <a href="">
-                        <i class="fa fa-facebook"></i>
+                        <i className="fa fa-facebook"></i>
                       </a>
                       <a href="">
-                        <i class="fa fa-twitter"></i>
+                        <i className="fa fa-linkedin"></i>
                       </a>
                       <a href="">
-                        <i class="fa fa-google-plus"></i>
+                        <i className="fa fa-google-plus"></i>
                       </a>
                       <a href="">
-                        <i class="fa fa-instagram"></i>
+                        <i className="fa fa-twitter"></i>
                       </a>
                       <a href="">
-                        <i class="fa fa-youtube"></i>
+                        <i className="fa fa-instagram"></i>
                       </a>
                       <a href="">
-                        <i class="fa fa-dribbble"></i>
+                        <i className="fa fa-youtube"></i>
+                      </a>
+                      <a href="">
+                        <i className="fa fa-dribbble"></i>
                       </a>
                     </div>
                   </div>
@@ -162,11 +175,16 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div class="scrollup">
-        <a href="#">
-          <i class="fa fa-chevron-up"></i>
-        </a>
-      </div>
+      <Link className="scrollup">
+        <Link
+          href="home"
+          smooth={true}
+          duration={1000}
+          onClick={() => scroll.scrollToTop()}
+        >
+          <i className="fa fa-chevron-up"></i>
+        </Link>
+      </Link>
     </>
   );
 }

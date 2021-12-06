@@ -29,49 +29,7 @@ function Home() {
                     ))}
                   </ul>
 
-                  {/* <!-- Tab panes --> */}
-                  {/* <div className="tab-content">
-                    <div
-                      role="tabpanel"
-                      className="tab-pane active"
-                      id="webdesign"
-                    >
-                      <div className="single_service_tab">
-                        <div className="row">
-                          <div className="col-sm-6">
-                            <div className="single_tab_content">
-                              <div className="head_title">
-                                <h3>WEB DESIGN One</h3>
-                                <div className="separator"></div>
-                              </div>
-                              <p>
-                                It is a long established fact that a reader will
-                                be distracted by the readable content of a page
-                                when looking at its layout. The point of using
-                                Lorem Ipsum is that it has a more-or-less normal
-                                distribution of letters, as opposed to using
-                                'Content here, content here', making it look
-                                like readable English. Many desktop publishing
-                                packages and web page editors now use Lorem
-                                Ipsum as their default model text, and a search
-                                for 'lorem ipsum'{" "}
-                              </p>
-
-                              <a href="" className="btn btn-primary">
-                                LEARN MORE
-                              </a>
-                            </div>
-                          </div>
-
-                          <div className="col-sm-6">
-                            <div className="single_tab_img">
-                              <Image src={stab1} alt="stab1_img" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
+                  {/* <!-- Tab panes -->  */}
                 </div>
               </div>
             </div>

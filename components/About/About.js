@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import abright from "../../assets/images/abright.png";
 
+import about from "../../assets/data/about/about";
+
 function About() {
   return (
     <section id="about" className="about">
@@ -20,47 +22,18 @@ function About() {
                         <h3>ABOUT LOGIC</h3>
                         <div className="separator"></div>
                       </div>
-
-                      <div className="single_about">
-                        <div className="single_ab_icon">
-                          <div className="ab_border_right"></div>
-                          <i className="fa fa-coffee"></i>
+                      {about.map((about) => (
+                        <div className="single_about">
+                          <div className="single_ab_icon">
+                            <div className="ab_border_right"></div>
+                            <i className="fa fa-coffee"></i>
+                          </div>
+                          <div className="single_ab_text">
+                            <h3>{about.name}</h3>
+                            <p>{about.description}</p>
+                          </div>
                         </div>
-                        <div className="single_ab_text">
-                          <h3>RESPONSIVE DESIGN</h3>
-                          <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text
-                          </p>
-                        </div>
-                      </div>
-                      <div className="single_about">
-                        <div className="single_ab_icon">
-                          <i className="fa fa-paint-brush"></i>
-                        </div>
-                        <div className="single_ab_text">
-                          <h3>EASY TO CUSTOMIZE</h3>
-                          <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text
-                          </p>
-                        </div>
-                      </div>
-                      <div className="single_about">
-                        <div className="single_ab_icon">
-                          <i className="fa fa-headphones"></i>
-                        </div>
-                        <div className="single_ab_text">
-                          <h3>LIFE TIME SUPPORT</h3>
-                          <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text
-                          </p>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
 
@@ -119,7 +92,7 @@ function About() {
                             id="mission"
                           >
                             <div className="single_about_tab">
-                              <p>
+                              <p style={{ color: "black" }}>
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry. Lorem Ipsum has been
                                 the industry's standard dummy text ever since

@@ -6,6 +6,13 @@ Author URI: http://bootstrapthemes.co
    Author's custom styles
    ========================================================================== */
 
+/* Acordian */
+
+
+
+/* End */
+
+
 /* Slider CSS */
 
 * {
@@ -1048,6 +1055,11 @@ input::-ms-input-placeholder {
   float: left;
   margin-left: 20px;
 }
+
+.single_ab_text p {
+  color: black;
+}
+
 .about .single_ab_mision li {
   margin-bottom: 10px;
 }

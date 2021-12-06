@@ -1,5 +1,4 @@
 import React from "react";
-import Home from "../Home/Home";
 
 const Header = () => {
   return (
@@ -9,7 +8,7 @@ const Header = () => {
         data-bs-ride="carousel"
         id="carouselExampleIndicators"
       >
-        <div className="carousel-indicators" style={{bottom: "50px"}}>
+        <div className="carousel-indicators" style={{ bottom: "50px" }}>
           <button
             aria-label="Slide 1"
             className="active"
@@ -35,7 +34,6 @@ const Header = () => {
             <img
               alt="..."
               className="d-block w-100"
-              // src="homebg.jpg"
               src="https://i.postimg.cc/LsTXqTNZ/1.jpg"
             />
             <div className="carousel-caption">
@@ -90,32 +88,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <button
-          className="carousel-control-prev"
-          data-bs-slide="prev"
-          data-bs-target="#carouselExampleIndicators"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            className="carousel-control-prev-icon"
-          ></span>{" "}
-          <span className="visually-hidden">Previous</span>
-        </button>{" "}
-        <button
-          className="carousel-control-next"
-          data-bs-slide="next"
-          data-bs-target="#carouselExampleIndicators"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            className="carousel-control-next-icon"
-          ></span>{" "}
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
-      <Home />
     </div>
   );
 };

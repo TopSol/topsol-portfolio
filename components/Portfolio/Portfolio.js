@@ -1,4 +1,5 @@
 import React from "react";
+import portfolio from "../../assets/data/portfolio/portfolio";
 
 function Portfolio() {
   return (
@@ -45,155 +46,24 @@ function Portfolio() {
                 <div className="separator2"></div>
               </div>
             </div>
-            {/* <img src="pf9.jpg" alt="" /> */}
-
             <div style={{ clear: "both" }}></div>
             <div id="portfoliowork">
-              <div className="single_portfolio tile scale-anm web grid-item-width2">
-                <img src="pf1.jpg" alt="" />
-                <div className="grid_item_overlay g_overlay_1">
-                  <a href="assets/images/pf1.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
+              {portfolio.map((portfolio) => (
+                <div className="single_portfolio tile scale-anm web grid-item-width2">
+                  <img src={portfolio.img} alt="" />
+                  <div className="grid_item_overlay g_overlay_1">
+                    <a href="assets/images/pf1.jpg" className="portfolio-img">
+                      {" "}
+                      <i className={portfolio.icon}></i>
+                    </a>
+                    <a href="#">
+                      {" "}
+                      <i className={portfolio.icon1}></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="single_portfolio tile scale-anm bcards">
-                <img src="pf2.jpg" alt="" />
-                <div className="grid_item_overlay">
-                  <a href="assets/images/pf2.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="single_portfolio tile scale-anm web ">
-                <img src="pf3.jpg" alt="" />
-                <div className="grid_item_overlay">
-                  <a href="assets/images/pf3.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="single_portfolio tile scale-anm web">
-                <img src="pf4.jpg" alt="" />
-                <div className="grid_item_overlay">
-                  <a href="assets/images/pf4.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="single_portfolio tile scale-anm bcards">
-                <img src="pf8.jpg" alt="" />
-                <div className="grid_item_overlay">
-                  <a href="assets/images/pf8.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="single_portfolio tile scale-anm web">
-                <img src="pf9.jpg" alt="" />
-                <div className="grid_item_overlay">
-                  <a href="assets/images/pf9.jpg" className="portfolio-img">
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="single_portfolio tile scale-anm flyers">
-                <img src="pf5.jpg" alt="" />
-                <div className="grid_item_overlay g_overlay_2">
-                  <a href="assets/images/pf5.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="single_portfolio tile scale-anm flyers">
-                <img src="pf6.jpg" alt="" />
-                <div className="grid_item_overlay g_overlay_1">
-                  <a href="assets/images/pf6.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div className="single_portfolio tile scale-anm bcards">
-                <img src="pf7.jpg" alt="" />
-                <div className="grid_item_overlay">
-                  <a href="assets/images/pf7.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="single_portfolio tile scale-anm flyers">
-                <img src="pf6.jpg" alt="" />
-                <div className="grid_item_overlay g_overlay_1">
-                  <a href="assets/images/pf6.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div className="single_portfolio tile scale-anm bcards">
-                <img src="pf7.jpg" alt="" />
-                <div className="grid_item_overlay">
-                  <a href="assets/images/pf7.jpg" className="portfolio-img">
-                    {" "}
-                    <i className="fa fa-link"></i>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <i className="fa fa-search"></i>
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
-
             <div style={{ clear: "both" }}></div>
           </div>
         </div>

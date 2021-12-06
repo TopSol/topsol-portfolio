@@ -1,4 +1,5 @@
 import React from "react";
+import services from "../../assets/data/otherServices/OtherServices";
 
 function Services() {
   return (
@@ -14,123 +15,25 @@ function Services() {
                 </div>
 
                 <div className="main_othersservice_content">
-                  <div className="col-sm-4">
-                    <div className="single_othersservice">
-                      <div className="single_othersservice_icon">
-                        <h4>
-                          <span>
-                            <i className="fa fa-clock-o"></i>
-                          </span>{" "}
-                          CREATIVE DESIGN
-                        </h4>
-                      </div>
-                      <div className="single_othersservice_content">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-4">
-                    <div className="single_othersservice">
-                      <div className="single_othersservice_icon">
-                        <h4>
-                          {" "}
-                          <span>
-                            <i className="fa fa-picture-o"></i>
-                          </span>{" "}
-                          WEB DEVELOPMENT
-                        </h4>
-                      </div>
-                      <div className="single_othersservice_content">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-4">
-                    <div className="single_othersservice">
-                      <div className="single_othersservice_icon">
-                        <h4>
-                          {" "}
-                          <span>
-                            <i class="fa fa-television" aria-hidden="true"></i>
-                          </span>{" "}
-                          VIDEO EDITING
-                        </h4>
-                      </div>
-                      <div className="single_othersservice_content">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-4">
-                    <div className="single_othersservice">
-                      <div className="single_othersservice_icon">
-                        <h4>
-                          {" "}
-                          <span>
-                            <i className="fa fa-object-group"></i>
-                          </span>{" "}
-                          MARKETING
-                        </h4>
-                      </div>
-                      <div className="single_othersservice_content">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-4">
-                    <div className="single_othersservice">
-                      <div className="single_othersservice_icon">
-                        <h4>
-                          {" "}
-                          <span>
-                            <i className="fa fa-object-group"></i>
-                          </span>{" "}
-                          PHOTOGRAPHY
-                        </h4>
-                      </div>
-                      <div className="single_othersservice_content">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-4">
-                    <div className="single_othersservice">
-                      <div className="s_ot_i_area">
+                  {services.map((services) => (
+                    <div className="col-sm-4">
+                      <div className="single_othersservice">
                         <div className="single_othersservice_icon">
                           <h4>
                             <span>
-                              <i className="fa fa-object-group"></i>
+                              <i className={services.icon}></i>
                             </span>{" "}
-                            LOGO DESIGN
+                            {services.name}
                           </h4>
                         </div>
-                      </div>
-                      <div className="single_othersservice_content">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor.
-                        </p>
+                        <div className="single_othersservice_content">
+                          <p style={{ color: "black" }}>
+                            {services.description}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
