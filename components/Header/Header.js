@@ -8,8 +8,16 @@ const Header = () => {
         data-bs-ride="carousel"
         id="carouselExampleIndicators"
       >
-        <div className="carousel-indicators" style={{ bottom: "50px" }}>
+        <div className="carousel-indicators" style={{ bottom: "20px" }}>
           <button
+            style={{
+              margin: "5px",
+              height: "20px",
+              width: '20px',
+              backgroundColor: 'orange',
+              borderRadius: '50%',
+              display: "inline-block"
+            }}
             aria-label="Slide 1"
             className="active"
             data-bs-slide-to="0"
@@ -17,12 +25,28 @@ const Header = () => {
             type="button"
           ></button>{" "}
           <button
+            style={{
+              margin: "5px",
+              height: "20px",
+              width: '20px',
+              backgroundColor: 'orange',
+              borderRadius: '50%',
+              display: "inline-block"
+            }}
             aria-label="Slide 2"
             data-bs-slide-to="1"
             data-bs-target="#carouselExampleIndicators"
             type="button"
           ></button>{" "}
           <button
+            style={{
+              margin: "5px",
+              height: "20px",
+              width: '20px',
+              backgroundColor: 'orange',
+              borderRadius: '50%',
+              display: "inline-block"
+            }}
             aria-label="Slide 3"
             data-bs-slide-to="2"
             data-bs-target="#carouselExampleIndicators"
@@ -37,14 +61,14 @@ const Header = () => {
               src="https://i.postimg.cc/LsTXqTNZ/1.jpg"
             />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ color: "white" }}>
+              <h5 style={{ color: "white" }}>
                 Web Design
               </h5>
-              <p className="animated bounceInLeft d-none d-md-block">
+              <p className="d-md-block">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Maxime, nulla, tempore. Deserunt excepturi quas vero.
               </p>
-              <p className="animated bounceInRight">
+              <p>
                 <a href="#">Learn More</a>
               </p>
             </div>
@@ -56,14 +80,14 @@ const Header = () => {
               src="https://i.postimg.cc/C1rx7Kyh/2.jpg"
             />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ color: "white" }}>
+              <h5 style={{ color: "white" }}>
                 Graphics Design
               </h5>
-              <p className="animated bounceInLeft d-none d-md-block">
+              <p className="d-md-block">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Maxime, nulla, tempore. Deserunt excepturi quas vero.
               </p>
-              <p className="animated bounceInRight">
+              <p>
                 <a href="#">Learn More</a>
               </p>
             </div>
@@ -75,14 +99,14 @@ const Header = () => {
               src="https://i.postimg.cc/c4nL7ZFW/3.jpg"
             />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ color: "white" }}>
+              <h5 style={{ color: "white" }}>
                 Photography
               </h5>
-              <p className="animated bounceInLeft d-none d-md-block">
+              <p className="d-md-block">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Maxime, nulla, tempore. Deserunt excepturi quas vero.
               </p>
-              <p className="animated bounceInRight">
+              <p>
                 <a href="#">Learn More</a>
               </p>
             </div>

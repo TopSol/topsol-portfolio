@@ -49,8 +49,8 @@ function Portfolio() {
             <div style={{ clear: "both" }}></div>
             <div id="portfoliowork">
               {portfolio.map((portfolio) => (
-                <div className="single_portfolio tile scale-anm web grid-item-width2">
-                  <img src={portfolio.img} alt="" />
+                <div className="single_portfolio tile">
+                  <img src={portfolio.img} alt=""/>
                   <div className="grid_item_overlay g_overlay_1">
                     <a href="assets/images/pf1.jpg" className="portfolio-img">
                       {" "}
