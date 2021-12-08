@@ -72,7 +72,7 @@ a:hover,a:focus{
 }
 #accordion .panel-body{
   padding: 10px 15px;
-  background: #eee;
+  background: #fff;
   border: none;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) inset, 0 1px 2px rgba(255, 255, 255, 0.9);

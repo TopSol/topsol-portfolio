@@ -12,8 +12,8 @@ const Header = () => {
           <button
             style={{
               margin: "5px",
-              height: "20px",
-              width: '20px',
+              height: "15px",
+              width: '15px',
               backgroundColor: 'orange',
               borderRadius: '50%',
               display: "inline-block"
@@ -27,8 +27,8 @@ const Header = () => {
           <button
             style={{
               margin: "5px",
-              height: "20px",
-              width: '20px',
+              height: "15px",
+              width: '15px',
               backgroundColor: 'orange',
               borderRadius: '50%',
               display: "inline-block"
@@ -41,8 +41,8 @@ const Header = () => {
           <button
             style={{
               margin: "5px",
-              height: "20px",
-              width: '20px',
+              height: "15px",
+              width: '15px',
               backgroundColor: 'orange',
               borderRadius: '50%',
               display: "inline-block"
