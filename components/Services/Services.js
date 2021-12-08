@@ -10,7 +10,7 @@ function Services() {
             <div className="main_othersservice_area sections">
               <div className="row">
                 <div className="head_title">
-                  <h3>OTHER SERVICES</h3>
+                  <h3 className="m-4" style={{fontWeight: "bold"}}>OTHER SERVICES</h3>
                   <div className="separator"></div>
                 </div>
 

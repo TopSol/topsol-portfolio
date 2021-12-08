@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ProgressBar from 'react-bootstrap/ProgressBar'
 import abright from "../../assets/images/abright.png";
 
 import about from "../../assets/data/about/about";
@@ -19,7 +20,7 @@ function About() {
                   >
                     <div className="single_about_right_content">
                       <div className="head_title">
-                        <h3>ABOUT LOGIC</h3>
+                        <h3 style={{fontWeight: "bold"}}>ABOUT LOGIC</h3>
                         <div className="separator"></div>
                       </div>
                       {about.map((about) => (
@@ -131,7 +132,7 @@ function About() {
                           </div>
                           <div role="tabpanel" className="tab-pane" id="goal">
                             <div className="single_about_tab">
-                              <p>
+                              <p style={{ color: "black" }}>
                                 222Lorem Ipsum is simply dummy text of the
                                 printing and typesetting industry. Lorem Ipsum
                                 has been the industry's standard dummy text ever
@@ -175,7 +176,7 @@ function About() {
                             id="achivements"
                           >
                             <div className="single_about_tab">
-                              <p>
+                              <p style={{ color: "black" }}>
                                 333Lorem Ipsum is simply dummy text of the
                                 printing and typesetting industry. Lorem Ipsum
                                 has been the industry's standard dummy text ever
@@ -223,7 +224,7 @@ function About() {
                             <h3 className="blue">PHOTOSHOP</h3>
                             <span className="sm-text">79%</span>
                           </div>
-                          <div className="skillbar-bar blue"></div>
+                          <ProgressBar striped variant="warning" now={79} style={{ height: "8px" }} />
                         </div>
 
                         <div className="skillbar" data-percent="90%">
@@ -231,7 +232,7 @@ function About() {
                             <h3 className="blue">HTML/CSS</h3>
                             <span className="sm-text">90%</span>
                           </div>
-                          <div className="skillbar-bar blue"></div>
+                          <ProgressBar striped variant="warning" now={90} style={{ height: "8px" }} />
                         </div>
 
                         <div className="skillbar" data-percent="69%">
@@ -239,7 +240,7 @@ function About() {
                             <h3 className="blue">JAVASCRIPT</h3>
                             <span className="sm-text">69%</span>
                           </div>
-                          <div className="skillbar-bar blue"></div>
+                          <ProgressBar striped variant="warning" now={69} style={{ height: "8px" }} />
                         </div>
 
                         <div className="skillbar" data-percent="92%">
@@ -247,7 +248,7 @@ function About() {
                             <h3 className="blue">WORDPRESS</h3>
                             <span className="sm-text">92%</span>
                           </div>
-                          <div className="skillbar-bar blue"></div>
+                          <ProgressBar striped variant="warning" now={92} style={{ height: "8px" }} />
                         </div>
                       </div>
                     </div>

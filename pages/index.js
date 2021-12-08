@@ -15,13 +15,13 @@ export default function Index() {
   return (
     <div>
       <Navbar />
-      <Header />
+      {/* <Header />
       <Home />
       <About />
       <Services />
       <ChooseUs />
       <Portfolio />
-      {/* <Testimonial />
+      <Testimonial />
       <ContactUs />
       <GoogleMap />
       <Footer /> */}

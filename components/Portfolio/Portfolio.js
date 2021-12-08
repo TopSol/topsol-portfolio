@@ -9,7 +9,7 @@ function Portfolio() {
           <div className="main_portfolio sections">
             <div className="col-sm-4">
               <div className="head_title">
-                <h3>LATEST PROJECT</h3>
+                <h3 style={{fontWeight: "bold"}}>LATEST PROJECT</h3>
                 <div className="separator"></div>
               </div>
             </div>
@@ -17,7 +17,7 @@ function Portfolio() {
               <div id="filters" className="toolbar mb2 mt2">
                 <button
                   className="btn-md fil-cat filter active"
-                  href=""
+                  href="show-all"
                   data-filter="all"
                 >
                   SHOW ALL
@@ -49,8 +49,8 @@ function Portfolio() {
             <div style={{ clear: "both" }}></div>
             <div id="portfoliowork">
               {portfolio.map((portfolio) => (
-                <div className="single_portfolio tile">
-                  <img src={portfolio.img} alt=""/>
+                <div className="single_portfolio tile" id="show-all">
+                  <img src={portfolio.img} alt="" />
                   <div className="grid_item_overlay g_overlay_1">
                     <a href="assets/images/pf1.jpg" className="portfolio-img">
                       {" "}

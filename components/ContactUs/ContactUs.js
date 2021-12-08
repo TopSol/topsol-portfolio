@@ -11,7 +11,7 @@ function ContactUs() {
                 <div className="col-sm-6">
                   <div className="main_contact_info">
                     <div className="head_title">
-                      <h3>CONTACT INFO</h3>
+                      <h3 style={{fontWeight: "bold"}}>CONTACT INFO</h3>
                       <div className="separator"></div>
                     </div>
                     <div className="row">
@@ -69,7 +69,7 @@ function ContactUs() {
 
                 <div className="col-sm-6">
                   <div className="head_title">
-                    <h3>LEAVE MESSAGE</h3>
+                    <h3 style={{fontWeight: "900"}}>LEAVE MESSAGE</h3>
                     <div className="separator"></div>
                   </div>
                   <div className="single_contant_left">

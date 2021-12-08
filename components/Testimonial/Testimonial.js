@@ -5,7 +5,7 @@ function Testimonial() {
     <div id="testimonial" className="body">
       <div className="container my-5 justify-content-center">
         <div className="head_title my-0">
-          <h3 className="">What People Say</h3>
+          <h3 style={{fontWeight: "bold"}}>What People Say</h3>
           <div className="separator"></div>
         </div>
         <div className=" row justify-content-center ">

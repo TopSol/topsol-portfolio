@@ -6,7 +6,232 @@ Author URI: http://bootstrapthemes.co
    Author's custom styles
    ========================================================================== */
 
+/* Navbar Start */
+
+
+body {
+  background-color: #b5fac7;
+}
+
+.pages {
+  color: #316685;
+  text-align: center;
+  font-size: calc(1.5rem + 2vw);
+  margin-top: 10%;
+  
+ 
+}
+
+.navbar {
+  background-color: #1f5156;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.main-container{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color:rgba(0,0,0,0.3);
+}
+
+.nav-logo {
+  color: #f5b921;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  flex-grow: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+.fa-code {
+  margin-left: 1rem;
+}
+
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: #ffdd40;
+}
+
+.nav-item .active {
+  color: #ffdd40;
+  border: 1px solid #ffdd40;
+}
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #1f5156;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item .active {
+    color: #ffdd40;
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffdd40;
+  }
+}
+
+
+/* Navbar End */
+
 /* Acordian */
+a:hover,a:focus{
+  text-decoration: none;
+  outline: none;
+}
+#accordion{
+  padding-left: 80px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+#accordion:before{
+  content: "";
+  width: 5px;
+  height: 100%;
+  background: #f7740a;
+  position: absolute;
+  top: 0;
+  left: 22px;
+  z-index: -1;
+}
+#accordion .panel{
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 15px;
+}
+#accordion .panel-heading{
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+#accordion .panel-title a{
+  display: block;
+  padding: 10px 30px 15px 0;
+  background: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #f7740a;
+   */
+  position: relative;
+  transition: all 0.5s ease 0s;
+}
+#accordion .panel-title a:before{
+  content: "\f068";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #cad5c2;
+  text-align: center;
+  font-size: 17px;
+  color: #f7740a;
+  border: 4px solid #f7740a;
+  position: absolute;
+  top: 0;
+  left: -80px;
+}
+#accordion .panel-title a.collapsed:before{
+  content: "\f067";
+  background: #fff;
+}
+#accordion .panel-body{
+  padding: 10px 15px;
+  background: #eee;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) inset, 0 1px 2px rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  color: bl;
+  line-height: 25px;
+}
+.panel-body p{
+  color: black;
+}
+
 
 /* End */
 
@@ -1142,6 +1367,13 @@ input::-ms-input-placeholder {
   width: 0;
 }
 
+
+@media only screen and (max-width: 767px) {
+  .about_skill{
+    margin-top: 20px;
+  }
+}
+
 /*counter section css*/
 /*counter section css*/
 .counter {
@@ -1515,6 +1747,11 @@ button.btn-md:hover {
   font-size: 1.5rem;
   padding-left: 15px;
 }
+
+.contact .single_info_icon i :hover{
+  color: darkorange;
+}
+
 .contact .single_info_text {
   float: left;
   width: 80%;
