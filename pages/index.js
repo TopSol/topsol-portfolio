@@ -15,7 +15,7 @@ export default function Index() {
   return (
     <div>
       <Navbar />
-      {/* <Header />
+      <Header />
       <Home />
       <About />
       <Services />
@@ -24,7 +24,7 @@ export default function Index() {
       <Testimonial />
       <ContactUs />
       <GoogleMap />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
