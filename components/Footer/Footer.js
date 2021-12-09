@@ -175,16 +175,14 @@ function Footer() {
           </div>
         </div>
       </div>
-      <Link className="scrollup">
-        <Link
-          href="home"
+        <Link className="scrollup" 
+          to="home"
           smooth={true}
           duration={1000}
           onClick={() => scroll.scrollToTop()}
         >
           <i className="fa fa-chevron-up"></i>
         </Link>
-      </Link>
     </>
   );
 }

@@ -14,8 +14,8 @@ function Home() {
                 <div className="service_tabe">
                   {/* <!-- Nav tabs --> */}
                   <ul className="service_tabe_menu nav nav-tabs" role="tablist">
-                    {services.map((services) => (
-                      <li role="presentation" className="active">
+                    {services.map((services, index) => (
+                      <li key={index} role="presentation" className="active">
                         <a
                           href="#webdesign"
                           aria-controls="webdesign"

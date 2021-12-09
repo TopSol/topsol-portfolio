@@ -23,8 +23,8 @@ function About() {
                         <h3 style={{fontWeight: "bold"}}>ABOUT LOGIC</h3>
                         <div className="separator"></div>
                       </div>
-                      {about.map((about) => (
-                        <div className="single_about">
+                      {about.map((about, index) => (
+                        <div className="single_about" key={index}>
                           <div className="single_ab_icon">
                             <div className="ab_border_right"></div>
                             <i className="fa fa-coffee"></i>

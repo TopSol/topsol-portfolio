@@ -10,13 +10,13 @@ function Services() {
             <div className="main_othersservice_area sections">
               <div className="row">
                 <div className="head_title">
-                  <h3 className="m-4" style={{fontWeight: "bold"}}>OTHER SERVICES</h3>
+                  <h3 className="m-4" style={{ fontWeight: "bold" }}>OTHER SERVICES</h3>
                   <div className="separator"></div>
                 </div>
 
                 <div className="main_othersservice_content">
-                  {services.map((services) => (
-                    <div className="col-sm-4">
+                  {services.map((services, index) => (
+                    <div className="col-sm-4" key={index}>
                       <div className="single_othersservice">
                         <div className="single_othersservice_icon">
                           <h4>

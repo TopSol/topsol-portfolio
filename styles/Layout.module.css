@@ -1,6 +1,5 @@
 .header {
   border-bottom: 1px solid #e2e8f0;
-
 }
 
 .navbar {
@@ -42,15 +41,17 @@
 .navlink {
   font-size: 1rem;
   font-weight: 400;
-  color: rgb(255, 178, 35);
+  color: darkorange;
+  /* color: rgb(255, 178, 35); */
   text-transform: uppercase;
 }
 
 .navlink:hover {
-  color: rgb(255, 178, 35);
+  color: darkorange;
 }
 
 .navlogo {
+  width: 100%;
   font-size: 1rem;
   font-weight: 500;
   color: rgb(255, 178, 35);
