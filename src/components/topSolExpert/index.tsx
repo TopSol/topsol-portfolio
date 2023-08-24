@@ -37,7 +37,7 @@ function TopSolExperts() {
           </p>
         </div>
         <div className="grid grid-cols-5 grid-rows-1 gap-6 mb-10">
-          <div className="flex flex-col hover:bg-[#00B8F1] hover:text-white items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px]">
+          <div className="flex flex-col hover:bg-[#00B8F1] hover:text-white items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
             <div className="bg-white rounded-full p-3">
               <img src={flexibilityImg} />
             </div>
@@ -45,7 +45,7 @@ function TopSolExperts() {
               <p>FLEXIBILITY</p>
             </div>
           </div>
-          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px]">
+          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
             <div className="bg-white rounded-full p-3">
               <img src={flexibilityImg} />
             </div>
@@ -53,7 +53,7 @@ function TopSolExperts() {
               <p>EMPOWERMENT</p>
             </div>
           </div>
-          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px]">
+          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
             <div className="bg-white rounded-full p-3">
               <img src={flexibilityImg} />
             </div>
@@ -61,7 +61,7 @@ function TopSolExperts() {
               <p>INCLUSIVITY</p>
             </div>
           </div>
-          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px]">
+          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
             <div className="bg-white rounded-full p-3">
               <img src={flexibilityImg} />
             </div>
@@ -69,7 +69,7 @@ function TopSolExperts() {
               <p>DISCIPLINE</p>
             </div>
           </div>
-          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px]">
+          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
             <div className="bg-white rounded-full p-3">
               <img src={flexibilityImg} />
             </div>

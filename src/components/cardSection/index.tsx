@@ -18,7 +18,7 @@ export default function CardSection() {
               before:transition before:ease-in-out before:duration-1000 mr-44"
           ></div>
         </div>
-        <div className="text-black text-center mx-4 rounded-2xl flex flex-col items-center w-full">
+        <div className="text-black text-center mx-4 flex flex-col items-center w-full">
           <img src={CodeModules} height={140} width={240} />
           <div className="w-[40%]  ">
             <p className="pt-4 font-popins text-xl font-bold ">
@@ -26,7 +26,7 @@ export default function CardSection() {
             </p>
             
           </div>
-          <p className=" mt-5 font-mont w-[400px]">
+          <p className=" mt-4 font-mont w-[400px]">
               Faster development process by leveraging the extensive collection
               of thousands of modules of reusable code available in our library.
             

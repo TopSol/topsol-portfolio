@@ -9,6 +9,7 @@ import TopSolExperts from "../components/topSolExpert";
 import OurPortfolio from "../components/ourPortfolio";
 import RatingSection from "../components/ratingSection";
 import Awards from "../components/awards";
+import GetInTouch from "../components/getInTouch";
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -22,6 +23,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <OurPortfolio/>
       <RatingSection/>
       <Awards/>
+      <GetInTouch/>
       <Footer/>
     </div>
   )
