@@ -42,7 +42,7 @@ export default function index() {
       <div className="py-6 w-[90%]  md:w-[60%] ">
         <div className="flex flex-col justify-center items-center">
         <div className="mb-2">
-          <h1 className="font-extrabold text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
+          <h1 className="font-extrabold font-montserrat text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
             People Like us, officially
           </h1>
         </div>
