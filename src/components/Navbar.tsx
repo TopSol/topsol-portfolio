@@ -56,7 +56,7 @@ function Navbar() {
               "
               >
                 <li className="md:p-4 py-2 block hover:text-blue-400">
-                  <Link to="/">SERVICES</Link>
+                  <Link to="/services">SERVICES</Link>
                 </li>
                 <li className="md:p-4 py-2 block hover:text-blue-400">
                   <Link to="/about">PORTFOLIO</Link>

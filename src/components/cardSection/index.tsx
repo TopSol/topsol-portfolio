@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CodeModules from "../../images/code_modules.png";
 import ExpertTeam from "../../images/expert_team.png";
 
 
 export default function CardSection() {
+  const [scrolled, setScrolled] = useState(false);
+
+  const listenScrollEvent = () => {
+   
+    if (window.scrollY > 200 && window.scrollY  < 900 ) {
+      setScrolled(true);
+    }else{
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
   return (
-    <div className="pt-20 bg-gradient-to-b from-[#0B234C] to-[#00B8F1]">
+    <div className={`pt-20 pb-20  ${scrolled ? "bg-animation ": "" }`}>
       <div className="flex overflow-x-hidden">
         <div className=" px-20">
-        <h1 className="mb-10 text-4xl font-bold mt-16 w-[400px] text-white">
+        <h1 className={`mb-10 text-4xl font-bold mt-16 w-[400px] ${scrolled ? "text-white ": "" } `}>
           Build Smarter Not From Scratch
         </h1>
         <div

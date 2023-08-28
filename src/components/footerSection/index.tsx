@@ -1,16 +1,13 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { AiFillSkype } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
 import locate from '../../images/location.png'
 import contact from '../../images/contact.png'
 import email from '../../images/email.png'
 export default function Footer() {
   return (
-    <div className=" bg-[#1A1A1A] font-mont px-10">
+    <div className="main-footer-container bg-[#1A1A1A] font-mont px-10">
       <div className="md:container md:mx-auto " id="contect-us">
         <div className="flex flex-col  py-6 text-white">
           <div className="flex justify-between">

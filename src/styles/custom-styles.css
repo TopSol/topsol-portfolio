@@ -1,0 +1,30 @@
+
+.main-footer-container{
+    background-image: linear-gradient(to right,rgb(26, 26, 26, .92),rgba(26, 26, 26, .90)),url(../images/footer-background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    background-position: center;
+}
+
+.bg-animation {
+  background:linear-gradient(#00B8F1,#0B234C);
+
+  animation: myanimation 1s ease-in-out;
+}
+@keyframes myanimation {
+  0% {
+    background:  linear-gradient(#00b9f144,#0b234c32);;
+ 
+  }
+  50% {
+    background: linear-gradient(#00b9f19f,#0b234ca4);
+ 
+  }
+  100% {
+    background: linear-gradient(#00B8F1,#0B234C);
+
+  }
+}

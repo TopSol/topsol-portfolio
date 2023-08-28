@@ -6,8 +6,8 @@ export default function VideoHero() {
       <section className="relative h-screen flex flex-col items-center justify-center  text-white py-0 px-3">   
         <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
           <video
+            // type="video/mp4"
             src="https://tecdn.b-cdn.net/img/video/forest.mp4"
-            type="video/mp4"
             loop
             className="w-full h-[100vh] object-cover"
             autoPlay
