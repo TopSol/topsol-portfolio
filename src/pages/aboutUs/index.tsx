@@ -3,10 +3,10 @@ import Navbar from "../../components/Navbar";
 import RatingSection from "../../components/ratingSection";
 import VidoeHero from "../../components/VidoeHero";
 import Footer from "../../components/footerSection";
-import locationIcon from "../../images/Icons/svg.png";
-import PhoneIcon from "../..//images/Icons/svg1.png";
-import EmailIcon from "../..//images/Icons/svg2.png";
+
 import PrimaryBtn from "../../components/PrimaryBtn";
+import InfoSection from "../../components/infoSection";
+import AddressSection from "../../components/addressSection";
 import { btnData, data } from "./data";
 export default function aboutUs() {
   const [ selectWorkers , setSetWorkers] = useState("All")
@@ -20,7 +20,7 @@ export default function aboutUs() {
     <div>
       <Navbar />
       <VidoeHero />
-      <div className="flex flex-col md:flex-row  lg:container mx-auto mt-14 ">
+      {/* <div className="flex flex-col md:flex-row  lg:container mx-auto mt-14 ">
         <div className=" w-full justify-center   md:w-[60%]">
           <img
             src="https://res.cloudinary.com/asifsaythe/image/upload/v1692950236/new_portfolio/z18gbk01ycabyflhuixa.png"
@@ -44,7 +44,8 @@ export default function aboutUs() {
             startups and distinguished brands alike.
           </p>
         </div>
-      </div>
+      </div> */}
+      <InfoSection/>
       <div className="bg-gradient-to-b from-secondary to-primary mt-[80px]  ">
         <div className="md:container mx-auto flex flex-col md:flex-row  py-[160px] items-center justify-between">
           <div className=" md:w-[40%] lg:w-1/2 lg:text-center  text-white ">
@@ -147,59 +148,8 @@ export default function aboutUs() {
           })}
         </div>
       </div>
-
-      <div className="flex mt-[100px]  flex-col md:flex-row md:container mx-auto justify-between">
-        <div className="mx-5">
-          <h1 className="text-[34px] font-semibold font-montserrat ">
-            Where to Find us
-          </h1>
-          <img
-            src="https://res.cloudinary.com/asifsaythe/image/upload/v1692963971/new_portfolio/xpsckv18mrdifj1hzvlz.png"
-            alt=""
-            srcset=""
-            className="mt-[30px]"
-          />
-          <div className="mt-8">
-            <div className="flex items-center  ">
-              <img
-                src={locationIcon}
-                className="w-[16px] h-[16px] "
-                alt=""
-                srcset=""
-              />
-              <p className="text-base ml-2">
-                Sitara Techno Park, 2nd Floor, Lower Canal Road East Faisalabad,
-                Pakistan
-              </p>
-            </div>
-            <div className="flex items-center mt-[22px] ">
-              <img
-                src={PhoneIcon}
-                className="w-[16px] h-[16px] "
-                alt=""
-                srcset=""
-              />
-              <p className="text-base ml-2">+92-303-6362191</p>
-            </div>
-            <div className="flex items-center mt-[22px] ">
-              <img
-                src={EmailIcon}
-                className="w-[16px] h-[16px] "
-                alt=""
-                srcset=""
-              />
-              <p className="text-base ml-2">admin@topsol.org</p>
-            </div>
-          </div>
-        </div>
-        <div className="mt-6">
-          <img
-            src="https://res.cloudinary.com/asifsaythe/image/upload/v1692964174/new_portfolio/svmimvcbnjgiqe3bnwoc.png"
-            alt=""
-            srcset=""
-          />
-        </div>
-      </div>
+          <AddressSection/>
+     
 <div className="mt-10">
       <Footer />
 </div>

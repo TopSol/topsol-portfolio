@@ -1,8 +1,11 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import VideoHero from "../../components/VidoeHero";
-import { data } from "./data";
+import { data, data2 } from "./data";
 import PrimaryBtn from "../../components/PrimaryBtn";
+import Footer from "../../components/footerSection";
+import PortfolioCard from "../../components/portfolioCard";
+import SmallFooter from "../../components/smallFooter";
 export default function index() {
   const [selectWorkers, setSetWorkers] = React.useState("All");
 
@@ -10,7 +13,7 @@ export default function index() {
     <div>
       <Navbar />
       <VideoHero />
-      <div className="flex flex-col justify-center items-center     ">
+      <div className="flex  flex-col justify-center items-center     ">
         <div className="">
           <h1 className="font-extrabold text-textColors font-montserrat text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
             Our Recent work
@@ -43,26 +46,44 @@ export default function index() {
           );
         })}
       </div>
-      <div className="flex flex-col md:flex-row md:container md:mx-auto items-center ">
-        <div className="md:w-1/2" >
-          <img
-            src="https://res.cloudinary.com/asifsaythe/image/upload/v1693218773/new_portfolio/Group_9059_xlercr.png"
-            alt=""
-            srcset=""
-          />
-        </div>
-        <div className="md:w-1/2 flex flex-col  justify-between"  >
-          <h1 className="text-[25px] font-semibold font-montserrat text-primary  ">Green tea studio, a useful website UK based</h1>
-          <h3 className="text-[40px] font-montserrat font-semibold my-[37px] ">Green Tea Studios, developed by our experienced team</h3>
-          <p className="text-[20px]">
-            Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-            feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
-          </p>
-        </div>
-      </div>
+
+      {data2.map((item: any, index) => {
+        return (
+          // <div
+          //   key={index}
+          //   className={`flex flex-col  md:container md:mx-auto items-center ${item.side}`}
+          // >
+          //   <div className="md:w-1/2">
+          //     <img
+          //       src="https://res.cloudinary.com/asifsaythe/image/upload/v1693218773/new_portfolio/Group_9059_xlercr.png"
+          //       alt=""
+          //       srcset=""
+          //     />
+          //   </div>
+          //   <div className="md:w-1/2 flex flex-col  justify-between mx-5 md:mx-0 ">
+          //     <h1 className=" text-xl  md:text-[25px] font-semibold font-montserrat text-primary  ">
+          //       Green tea studio, a useful website UK based
+          //     </h1>
+          //     <h3 className=" text-3xl md:text-[40px] font-montserrat font-semibold my-[37px] ">
+          //       Green Tea Studios, developed by our experienced team
+          //     </h3>
+          //     <p className=" text-base md:text-[20px] ">
+          //       Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+          //       eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+          //       metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+          //       interdum tellus elit sed risus. Maecenas eget condimentum velit,
+          //       sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
+          //       torquent per
+          //     </p>
+          //   </div>
+          // </div>
+          <PortfolioCard heading={item.heading} discription={item.discription}  direction={item.side} />
+        );
+      })}
+
+      <SmallFooter/>
+
+      {/* <Footer /> */}
     </div>
   );
 }
