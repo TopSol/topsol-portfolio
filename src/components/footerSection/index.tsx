@@ -14,17 +14,17 @@ export default function Footer() {
   return (
     
       <div
-      className="bg-cover bg-center font-mont px-10"
+      className="bg-cover bg-center font-mont p-10 "
       style={{
         backgroundImage: `url(${footerBg})`,
       }}
     >
-      <div className="md:container md:mx-auto " id="contect-us">
+      <div className="">
         <div className="flex flex-col  py-6 text-white">
           <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
             <div>
               <div className="">
-                <h1 className="mb-4 text-blue-700 font-extrabold">
+                <h1 className="mb-4 text-primary-blue text-xl font-montserrat font-extrabold">
                   TopSol Solutions
                 </h1>
                 <span>A Software development Company</span>

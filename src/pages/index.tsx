@@ -10,20 +10,24 @@ import OurPortfolio from "../components/ourPortfolio";
 import RatingSection from "../components/ratingSection";
 import Awards from "../components/awards";
 import GetInTouch from "../components/getInTouch";
+import PageNotFound from "../components/pageNotFound";
+import JobDetail from "../components/jobDetails";
 
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <div className="">
+    <div>
       <Navbar/>
-      <Hero/>
+      {/* <Hero/>
       <CardSection/>
       <ServicesOffers/>
       <TopSolExperts/>
       <OurPortfolio/>
       <RatingSection/>
       <Awards/>
-      <GetInTouch/>
+      <GetInTouch/> */}
+      {/* <PageNotFound/> */}
+      <JobDetail/>
       <Footer/>
     </div>
   )

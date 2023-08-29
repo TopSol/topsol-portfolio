@@ -44,43 +44,43 @@ export default function CardSection() {
     responsive: [
       {
         breakpoint: 1024,
-        settings: 'unslick'
-        // {
+        // settings: 'unslick'
+        settings:{
           
           // vertical:true,
-          // slidesToShow: 4,
-          // slidesToScroll: 1,
-          // infinite: true,
-          // dots: false,
-        // },
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
       },
       {
         breakpoint: 600,
-        settings: 'unslick'
-        // settings: {
-        //   vertical:true,
-        //   // verticalSwiping: true,
-        //   slidesToShow: 4,
-        //   slidesToScroll: 1,
-        //   // initialSlide: 2
-        // },
+        // settings: 'unslick'
+        settings: {
+          // vertical:true,
+          // verticalSwiping: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          // initialSlide: 2
+        },
       },
       {
         breakpoint: 480,
-        settings: 'unslick'
-        // settings: {
-        //   vertical:true,
-        //   slidesToShow: 4,
-        //   // slidesToScroll: 1,
-        // },
+        // settings: 'unslick'
+        settings: {
+          // vertical:true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
     ],
   };
 
   return (
-    <div className="pt-20 px-8 pl-14 flex justify-center items-center bg-gradient-to-b from-[#0B234C] to-[#00B8F1] py-4">
+    <div className="pt-20 px-8 flex justify-center items-center bg-gradient-to-b from-[#0B234C] to-[#00B8F1] py-4">
       <div className="grid xl:grid-cols-2 grid-cols-1">
-        <div className="px-2 mb-8">
+        <div className="px-2 flex items-center justify-center flex-col mb-8">
           <h1 className="mb-10 text-4xl font-bold mt-16 max-w-[300px] text-white">
             Build Smarter Not From Scratch
           </h1>

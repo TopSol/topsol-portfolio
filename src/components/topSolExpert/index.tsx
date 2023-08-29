@@ -231,7 +231,7 @@ function TopSolExperts() {
             Motivation are Nurtured for Everyone
           </p>
         </div>
-        <div className={`grid lg:grid-cols-${gridColumns} md:grid-cols-${mdGridColumns} grid-cols-${smGridColumns}  gap-x-16 gap-y-10 mb-10`}>
+        <div className={`grid lg:grid-cols-5  gap-x-16 gap-y-10 mb-10`}>
         {selectedArray?.map((item, index) => {
             return (
               <div key={index}>
