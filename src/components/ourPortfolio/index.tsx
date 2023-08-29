@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import portfolioIm1 from "../../images/portfolioImg1.png";
 import dot1 from "../../images/dot1.png";
+import AnimateHr from "../animatedLine/AnimateHr";
 
 interface CardData {
   title: string;
@@ -26,21 +27,16 @@ function OurPortfolio() {
     setVisibleCards((prevVisibleCards) => prevVisibleCards + 4);
   };
   return (
-    <div className="px-10 pt-20">
+    <div className="px-4 pt-20 flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center">
         <div>
           <h1 className="py-4 text-4xl font-bold">Our Portfolio</h1>
         </div>
-        <div>
-          <div
-            className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
-              before:bottom-0 before:left-0 before:bg-[#00B8F1] before:rounded-3xl
-              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-              before:transition before:ease-in-out before:duration-1000 mr-44"
-          ></div>
+        <div className="w-[150px]">
+          <AnimateHr bgColor={'[#00B8F1]'}/>
         </div>
       </div>
-      <div className="my-10 pl-6 grid grid-cols-4 grid-rows-1 gap-1 ">
+      <div className="my-10 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-x-8  gap-y-6  ">
         {cardData.slice(0, visibleCards).map((card, index) => (
           <div
             key={index}
@@ -82,7 +78,7 @@ function OurPortfolio() {
         </button>
       </div>
 
-      <div className="flex justify-end mr-10">
+      <div className="lg:block ml-auto mr-20  hidden">
         <img src={dot1} alt="Dot" />
       </div>
     </div>

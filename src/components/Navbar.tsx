@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import logo from "../images/main-logo.png";
+import navbarMenu from "../images/navbarMenu.png";
 import { FaBars } from "react-icons/fa";
 import { Link } from "gatsby";
 function Navbar() {
   const [open, setopen] = useState(false);
+  console.log('open',open)
   return (
-    <div className=" bg-[#0B234C] pt-[8px]">
+    <div className=" bg-[#0B234C]">
       <div className="md:container  mx-auto " id="navbar">
         <header>
           <nav
             className="
-          px-4
+          px-14
           flex
-          py-4
           w-full
-          md:py-0
          
           flex-wrap
           items-center
@@ -22,35 +22,33 @@ function Navbar() {
           text-lg text-white
         "
           >
-            <div className="w-[150px]">
+            <div className="h-[84px]">
               <Link to="/">
                 <img
                   src={logo}
                   alt="TopSol"
                   decoding="async"
-                  className="logo_default"
+                  className="h-auto w-[150px]"
                 />
               </Link>
             </div>
             <div>
-              <FaBars
+              <img
+                src={navbarMenu}
                 onClick={() => setopen((p) => !p)}
-                className="h-6 w-6 cursor-pointer md:hidden block"
+                className="h-6 w-6 cursor-pointer"
               />
             </div>
             <div
-              className={` w-full md:flex md:items-center md:w-auto ${
-                open ? "flex" : "hidden"
-              }`}
+              className= {`w-full  ${open ? 'flex':'hidden'}`}
+              
               id="menu"
             >
               <ul
                 className="
               mr-8
               pt-4
-              md:flex
-              md:pt-0
-              md:justify-
+              flex justify-center items-center flex-col w-full
               text-base text-white font-mont
                
               "

@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 
 function GetInTouch() {
   return (
-    <div className="py-12 px-12">
+    <div className="py-12 sm:px-24 px-10">
       <div className="flex flex-col items-center">
         <div>
           <h1 className="font-extrabold text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
@@ -22,8 +22,8 @@ function GetInTouch() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 grid-rows-1">
-        <div className="flex flex-col justify-center items-center ">
+      <div className="lg:grid lg:grid-cols-2">
+        <div className="lg:flex flex-col  hidden">
           <div>
             <img src={touchImg1} className="w-[144px h-[102px]]" />
           </div>
