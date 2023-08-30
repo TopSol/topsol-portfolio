@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import hrImg from "../../../images/horizantolLine.png";
-import PrimaryBtn from "../../PrimaryBtn";
 import Form from "../form/Form";
 
 function AboutUs() {
@@ -19,7 +18,7 @@ function AboutUs() {
         <div className="md:border-t pt-8 md:pr-12">
           <div className="flex sm:flex-row flex-col items-center">
             <img src={hrImg} className="h-[5px] max-w-[49px]" />
-            <h1 className="sm:text-2xl text-xl text-center">About us</h1>
+            <h1 className="sm:text-2xl text-xl text-center px-2">About us</h1>
           </div>
           <div className="my-6">
             <p className="text-justify ">
@@ -33,7 +32,7 @@ function AboutUs() {
           </div>
           <div className="flex sm:flex-row flex-col items-center">
             <img src={hrImg} className="h-[5px] max-w-[49px]" />
-            <h1 className="sm:text-2xl text-xl text-center">Job Description</h1>
+            <h1 className="sm:text-2xl text-xl text-center px-2">Job Description</h1>
           </div>
           <div className="my-6 text-center">
             <p className="text-justify">
@@ -49,40 +48,25 @@ function AboutUs() {
         <div className="md:border-t md:border-l pl-2 pt-8">
           <div className="flex sm:flex-row flex-col items-center">
             <img src={hrImg} className="h-[5px] max-w-[49px]" />
-            <h1 className="sm:text-2xl text-xl text-center">Job information</h1>
+            <h1 className="sm:text-2xl text-xl text-center px-2">Job information</h1>
           </div>
           <div className="md:pl-12">
-            <div className="my-4">
-              <label className=" text-primary-gray text-lg">Industry</label>
-              <h1 className=" text-lg font-bold">UI/UX Design</h1>
-            </div>
-            <div className="my-4">
-              <label className=" text-primary-gray text-lg">
-                Work Experience
-              </label>
-              <h1 className=" text-lg font-bold">3 to 5 years</h1>
-            </div>
-            <div className="my-4">
-              <label className=" text-primary-gray text-lg">City</label>
-              <h1 className=" text-lg font-bold">Faisalabad</h1>
-            </div>
-            <div className="my-4">
-              <label className=" text-primary-gray text-lg">
-                State/Province
-              </label>
-              <h1 className=" text-lg font-bold">Punjab</h1>
-            </div>
-            <div className="my-4">
-              <label className=" text-primary-gray text-lg">Country</label>
-              <h1 className=" text-lg font-bold">Pakistan</h1>
-            </div>
+            <ul>
+            
+              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">Industry</span> UI/UX Design</li>
+              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">Work Experience</span> 3 to 5 years</li>
+              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">City</span>Faisalabad</li>
+              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">State/Province</span> Punjab</li>
+              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">Country</span>Pakistan</li>
+            </ul>
+            
           </div>
         </div>
       </div>
       <div>
         <div className="flex sm:flex-row flex-col items-center">
           <img src={hrImg} className="h-[5px] max-w-[49px]" />
-          <h1 className="text-2xl text-center">Responsibilities</h1>
+          <h1 className="text-2xl text-center px-2">Responsibilities</h1>
         </div>
         <div className="my-6 px-2">
           <ul className="sm:pl-5 list-disc">
@@ -117,7 +101,7 @@ function AboutUs() {
       <div>
         <div className="flex sm:flex-row flex-col items-center">
           <img src={hrImg} className="h-[5px] max-w-[49px]" />
-          <h1 className="text-2xl text-center">Requirements</h1>
+          <h1 className="text-2xl text-center px-2">Requirements</h1>
         </div>
         <div className="my-6 px-2">
           <ul className="sm:pl-5 list-disc">
@@ -159,7 +143,7 @@ function AboutUs() {
       <div>
         <div className="flex sm:flex-row flex-col items-center">
           <img src={hrImg} className="h-[5px] max-w-[49px]" />
-          <h1 className="text-2xl text-center">Benefits</h1>
+          <h1 className="text-2xl text-center px-2">Benefits</h1>
         </div>
         <div className="my-6 px-2">
           <ul className="sm:pl-5 list-disc">
@@ -172,7 +156,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center my-14">
         <button
         onClick={handleApplyClick}
         className="font-bold bg-primary  hover:bg-primary-light font-montserrat rounded-xl text-primary-white py-3 px-10">

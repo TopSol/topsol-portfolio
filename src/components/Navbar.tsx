@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import logo from "../images/main-logo.png";
 import navbarMenu from "../images/navbarMenu.png";
+import closeImg from "../images/close.png";
 import { FaBars } from "react-icons/fa";
 import { Link } from "gatsby";
 function Navbar() {
   const [open, setopen] = useState(false);
-  console.log('open',open)
+  console.log("open", open);
   return (
     <div className=" bg-[#0B234C]">
       <div className="md:container  mx-auto " id="navbar">
@@ -22,28 +23,28 @@ function Navbar() {
           text-lg text-white
         "
           >
-            <div className="h-[84px]">
+            <div className="py-2">
               <Link to="/">
-                <img
-                  src={logo}
-                  alt="TopSol"
-                  decoding="async"
-                  className="h-auto w-[150px]"
-                />
+                <img src={logo} alt="TopSol" decoding="async" className="" />
               </Link>
             </div>
             <div>
               <img
                 src={navbarMenu}
                 onClick={() => setopen((p) => !p)}
-                className="h-6 w-6 cursor-pointer"
+                className={`h-6 w-6 cursor-pointer ${
+                  open ? "hidden" : "block"
+                } `}
+              />
+              <img
+                src={closeImg}
+                onClick={() => setopen(false)}
+                className={`h-6 w-6 cursor-pointer ${
+                  open ? "block" : "hidden"
+                } `}
               />
             </div>
-            <div
-              className= {`w-full  ${open ? 'flex':'hidden'}`}
-              
-              id="menu"
-            >
+            <div className={`w-full  ${open ? "flex" : "hidden"}`} id="menu">
               <ul
                 className="
               mr-8

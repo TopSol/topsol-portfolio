@@ -21,6 +21,8 @@ module.exports = {
           gradientTwo:'#6DDCFFEB',
           white:'#FFFFFF',
           gray:'#8E8E8E',
+          formInput:'#FBFBFB',
+          
         },
         secondary: {
           DEFAULT: '#2B388F',

@@ -16,7 +16,7 @@ function Designer() {
           </div>
         </div>
         <div className="my-8">
-          <h1 className="md:text-6xl text-4xl font-bold">Product Designer</h1>
+          <h1 className="md:text-6xl text-4xl font-bold text-primary-white">Product <span className=" text-primary"> Designer</span></h1>
         </div>
         <div className="mb-4">
           <p className="text-primary-white font-montserrat">
@@ -35,7 +35,7 @@ function Designer() {
         </div>
       </div>
 
-      <div className="">
+      <div className="md:mt-0 mt-8 md:ml-0 ml-8">
         <img src={jobImg} className=""/>
       </div>
     </div>
