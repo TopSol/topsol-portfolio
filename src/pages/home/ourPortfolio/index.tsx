@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import portfolioIm1 from "../../images/portfolioImg1.png";
-import dot1 from "../../images/dot1.png";
-import AnimateHr from "../animatedLine/AnimateHr";
+import dot1 from "../../../images/dot1.png";
+import AnimateHr from "../../../components/animatedLine/AnimateHr";
+import { cardData } from "./data";
 
 interface CardData {
   title: string;
@@ -12,16 +12,7 @@ function OurPortfolio() {
   const initialVisibleCards = 4;
   const [visibleCards, setVisibleCards] = useState<number>(initialVisibleCards);
 
-  const cardData: CardData[] = [
-    { title: "Mobile Website", image: portfolioIm1 },
-    { title: "Mobile Website", image: portfolioIm1 },
-    { title: "Mobile Website", image: portfolioIm1 },
-    { title: "Mobile Website", image: portfolioIm1 },
-    { title: "Mobile Website", image: portfolioIm1 },
-    { title: "Mobile Website", image: portfolioIm1 },
-    { title: "Mobile Website", image: portfolioIm1 },
-    { title: "Mobile Website", image: portfolioIm1 },
-  ];
+  
 
   const handleViewMore = () => {
     setVisibleCards((prevVisibleCards) => prevVisibleCards + 4);

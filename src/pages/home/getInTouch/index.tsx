@@ -1,6 +1,6 @@
 import React from "react";
-import touchImg1 from "../../images/touchImg1.png";
-import check1 from "../../images/check1.png";
+import touchImg1 from "../../../images/touchImg1.png";
+import check1 from "../../../images/check1.png";
 import ContactForm from "./ContactForm";
 
 function GetInTouch() {

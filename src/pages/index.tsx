@@ -1,30 +1,16 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby";
-import Hero from "../components/hero";
-import CardSection from "../components/cardSection";
-import ServicesOffers from "../components/servisesOffers";
-import TopSolExperts from "../components/topSolExpert";
-import OurPortfolio from "../components/ourPortfolio";
-import RatingSection from "../components/ratingSection";
-import Awards from "../components/awards";
-import GetInTouch from "../components/getInTouch";
 import PageNotFound from "./pageNotFound";
 import JobDetail from "./jobDetails";
 import Layout from "../components/Layout";
+import Home from "./home";
 
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <div>
       <Layout>
-      {/* <Hero/>
-      <CardSection/>
-      <ServicesOffers/>
-      <TopSolExperts/>
-      <OurPortfolio/>
-      <RatingSection/>
-      <Awards/>
-      <GetInTouch/> */}
+      {/* <Home/> */}
       {/* <PageNotFound/> */}
       <JobDetail/>
       </Layout>

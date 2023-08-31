@@ -1,50 +1,14 @@
 import React, { useState } from "react";
-import imgOne from "../../images/imgSlider1.png";
-import imgTwo from "../../images/pakistan-thegem.png";
-import imgThree from "../../images/clutch-logo.png";
-import imgFive from "../../images/software-world.png";
-import prevImg from "../../images/prev.png";
-import nextImg from "../../images/next.png";
+import prevImg from "../../../images/prev.png";
+import nextImg from "../../../images/next.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImagSlider from "./ImagSlider";
-import AnimateHr from "../animatedLine/AnimateHr";
+import AnimateHr from "../../../components/animatedLine/AnimateHr";
+import { images } from "./data";
 
-let images = [
-  {
-    id: "1",
-    avatar: imgOne,
-  },
-  {
-    id: "2",
-    avatar: imgTwo,
-  },
-  {
-    id: "3",
-    avatar: imgThree,
-  },
-  {
-    id: "4",
-    avatar: imgOne,
-  },
-  {
-    id: "5",
-    avatar: imgFive,
-  },
-  {
-    id: "6",
-    avatar: imgOne,
-  },
-  {
-    id: "7",
-    avatar: imgOne,
-  },
-  {
-    id: "8",
-    avatar: imgOne,
-  },
-];
+
 
 function Awards() {
   const [slider, setSlider] = useState<Slider | null>(null);

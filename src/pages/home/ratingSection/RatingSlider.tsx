@@ -1,6 +1,6 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
-import ratingCircle from "../../images/rating1.png";
+import ratingCircle from "../../../images/rating1.png";
 
 type appProps ={
     review:any

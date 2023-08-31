@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import Navbar from "../../components/Navbar";
-import RatingSection from "../../components/ratingSection";
+import RatingSection from "../home/ratingSection";
 import VidoeHero from "../../components/VidoeHero";
 import Footer from "../../components/footerSection";
 
