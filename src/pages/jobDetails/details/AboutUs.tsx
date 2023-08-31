@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import hrImg from "../../../images/horizantolLine.png";
-import Form from "../form/Form";
+import Form from "../../../components/form/Form";
+// import Form from "../../../components/form/Form";
 
 function AboutUs() {
     const [showForm, setShowForm] = useState(false);
@@ -10,6 +11,10 @@ function AboutUs() {
     
       const handleSendMessage = () => {
         setShowForm(false);
+      };
+      const submit = () => {
+        alert("helo");
+        handleSendMessage();
       };
 
   return (
@@ -21,7 +26,7 @@ function AboutUs() {
             <h1 className="sm:text-2xl text-xl text-center px-2">About us</h1>
           </div>
           <div className="my-6">
-            <p className="text-justify ">
+            <p className="font-montserrat text-justify font-bold">
               At Topsol, we're more than a company - we're a collective of
               passionate innovators dedicated to pushing boundaries and crafting
               exceptional digital solutions. Our journey is rooted in a
@@ -35,7 +40,7 @@ function AboutUs() {
             <h1 className="sm:text-2xl text-xl text-center px-2">Job Description</h1>
           </div>
           <div className="my-6 text-center">
-            <p className="text-justify">
+            <p className="font-montserrat text-justify font-bold">
               We are seeking a talented Product Designer to join our team. As a
               Product Designer at Topsol, you will play a pivotal role in
               shaping user-centered web solutions that seamlessly blend
@@ -53,11 +58,11 @@ function AboutUs() {
           <div className="md:pl-12">
             <ul>
             
-              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">Industry</span> UI/UX Design</li>
-              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">Work Experience</span> 3 to 5 years</li>
-              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">City</span>Faisalabad</li>
-              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">State/Province</span> Punjab</li>
-              <li className="flex flex-col text-lg font-bold font-montserrat my-4"><span className=" text-primary-gray">Country</span>Pakistan</li>
+              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4"><span className=" text-primary-gray">Industry</span> UI/UX Design</li>
+              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4"><span className=" text-primary-gray">Work Experience</span> 3 to 5 years</li>
+              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4"><span className=" text-primary-gray">City</span>Faisalabad</li>
+              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4"><span className=" text-primary-gray">State/Province</span> Punjab</li>
+              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4"><span className=" text-primary-gray">Country</span>Pakistan</li>
             </ul>
             
           </div>
@@ -69,7 +74,7 @@ function AboutUs() {
           <h1 className="text-2xl text-center px-2">Responsibilities</h1>
         </div>
         <div className="my-6 px-2">
-          <ul className="sm:pl-5 list-disc">
+          <ul className="sm:pl-5 list-disc font-montserrat font-bold">
             <li>
               Collaborate closely with cross-functional teams to understand
               project requirements, objectives, and user needs.
@@ -104,7 +109,7 @@ function AboutUs() {
           <h1 className="text-2xl text-center px-2">Requirements</h1>
         </div>
         <div className="my-6 px-2">
-          <ul className="sm:pl-5 list-disc">
+          <ul className="sm:pl-5 list-disc font-montserrat font-bold">
             <li>
               Proven experience as a Product Designer, UI/UX Designer, or
               similar role with a minimum of 5 years of experience.
@@ -146,7 +151,7 @@ function AboutUs() {
           <h1 className="text-2xl text-center px-2">Benefits</h1>
         </div>
         <div className="my-6 px-2">
-          <ul className="sm:pl-5 list-disc">
+          <ul className="sm:pl-5 list-disc font-montserrat font-bold">
             <li>Competitive salary and benefits package.</li>
             <li>Opportunities for professional growth and development.</li>
             <li>Collaborative and inclusive work environment.</li>
@@ -164,7 +169,7 @@ function AboutUs() {
         </button>
       </div>
 
-      {showForm && <Form onClose={handleSendMessage} />}
+      {showForm && <Form submit={submit} heading="Apply for Product Designer" />}
     </div>
   );
 }

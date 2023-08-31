@@ -4,10 +4,12 @@ import "react-phone-input-2/lib/style.css";
 import FileUpload from "./uploadCv/ChooseFile";
 
 type FormProps = {
-  onClose: () => void;
+  // onClose: () => void;
+  submit: () => void;
+  heading?: string;
 };
 
-function Form({ onClose }: FormProps) {
+function Form({ submit, heading }: FormProps) {
   const [phone, setPhone] = useState("pk");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,14 +17,10 @@ function Form({ onClose }: FormProps) {
   const [help, setHelp] = useState("");
   const [checkBox, setCheckBox] = useState(false);
 
-  const submit = () => {
-    alert("helo");
-    onClose();
-  };
   return (
     <div className=" border rounded py-10 md:px-20 px-10 max-w-2xl mx-auto">
       <h1 className=" text-4xl font-montserrat font-bold text-center">
-        Apply for Product Designer
+        {heading}
       </h1>
 
       <input
@@ -63,8 +61,7 @@ function Form({ onClose }: FormProps) {
         onChange={(e) => setTextArea(e.target.value)}
       ></textarea>
       <div className="mt-4">
-      
-       <FileUpload/> 
+        <FileUpload />
       </div>
 
       <div className=" mt-10 w-full">

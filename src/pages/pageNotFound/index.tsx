@@ -1,5 +1,5 @@
 import React from "react";
-import notFoundImg from "../../../src/images/Frame.png";
+import notFoundImg from "../../images/Frame.png";
 
 
 function PageNotFound() {

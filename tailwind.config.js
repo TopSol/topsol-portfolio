@@ -22,6 +22,9 @@ module.exports = {
           white:'#FFFFFF',
           gray:'#8E8E8E',
           formInput:'#FBFBFB',
+          navbarBg: '#0B234C',
+          navItemBg:' #000a4c',
+          darkGray: '#555555',
           
         },
         secondary: {
