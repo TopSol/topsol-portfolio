@@ -28,7 +28,7 @@ export default function index() {
         imageUrl="https://res.cloudinary.com/asifsaythe/image/upload/v1693224854/new_portfolio/Frame_1_lv9ucy.png"
       />
       <div className='flex flex-col justify-center items-center '>
-        <p className='text-4xl md:text-5xl lg:text-6xl font-montserrat text-black mt-8 md:mt-16 xl:mt-32'>
+        <p className='text-4xl md:text-5xl lg:text-6xl  text-black mt-8 md:mt-16 xl:mt-32'>
           Top Niches
         </p>
         <img
@@ -52,7 +52,7 @@ export default function index() {
               <PrimaryBtn
                 text={item.name}
                 additionalClasses="bg-primary md:mt-0 px-4 text-[20px] w-full 
-                   md:mx-0  hover:bg-primary text-white font-montserrat "
+                   md:mx-0  hover:bg-primary text-white  "
               />
             </div>
           );
@@ -78,9 +78,9 @@ export default function index() {
                 />
               <h1 className=' text-[18px]  font-semibold md:text-[35px] text-primary' >{item.title}</h1>
               </div>
-              <p className=' my-[14px] font-montserrat text-gray-400' >{item.description}</p>
+              <p className=' my-[14px]  text-gray-400' >{item.description}</p>
               <PrimaryBtn text='Reade Mores'
-               additionalClasses="bg-primary  font-semibold hover:bg-primary text-white font-montserrat"
+               additionalClasses="bg-primary  font-semibold hover:bg-primary text-white "
               />
             </div>
           </div>

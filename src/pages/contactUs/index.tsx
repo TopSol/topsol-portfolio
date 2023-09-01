@@ -30,7 +30,7 @@ export default function index() {
             <div className='md:w-[60%] md:justify-center md:mx-auto'>
                 <div className='mt-[24px] md:container md:mx-auto  flex flex-col justify-center items-center md:justify-start md:items-start'>
                     <div>
-                        <h1 className=' text-center text-black font-montserrat text-[22px] md:text-[30px] lg:text-[40px]'>Ready to discuss your project?</h1>
+                        <h1 className=' text-center text-black  text-[22px] md:text-[30px] lg:text-[40px]'>Ready to discuss your project?</h1>
                     </div>
                     <div className=" flex  md:justify-start md:items-start">
                         <img
@@ -41,7 +41,7 @@ export default function index() {
                     </div>
                 </div>
                 <div className="mt-[24px] mx-[27px] px-[20px] py-[17px] md:container md:mx-auto  bg-light_Grey_bg sm:justify-between  justify-center  rounded-md flex relative">
-                    <h1 className=' flex text-black font-montserrat text-[15px]  md:text-[18px]'>
+                    <h1 className=' flex text-black  text-[15px]  md:text-[18px]'>
                         {selectedOption ? `${selectedOption?.name}?` : 'How can we help you?'}
                     </h1>
                     <div className=''>
@@ -129,11 +129,11 @@ export default function index() {
                             checked={isChecked}
                             onChange={toggleCheckbox}
                         />
-                        <label className="ml-2 text-[15px] md:text-[12px] lg:text-[18px] font-montserrat">I agree to terms &amp; conditions</label>
+                        <label className="ml-2 text-[15px] md:text-[12px] lg:text-[18px] ">I agree to terms &amp; conditions</label>
                     </div>
                     <div className='w-[85%]'>
                         <button
-                            className={` w-[100%] py-[12px] px-[37px] rounded  text-[18px] font-montserrat  ${isChecked ? 'bg-blue-500 text-white cursor-pointer' : 'bg-light_Grey_bg text-gray-500 cursor-not-allowed'
+                            className={` w-[100%] py-[12px] text-center px-[37px] rounded  text-[18px]   ${isChecked ? 'bg-blue-500 text-white cursor-pointer' : 'bg-light_Grey_bg text-gray-500 cursor-not-allowed'
                                 }`}
                             disabled={!isChecked}
                         >
