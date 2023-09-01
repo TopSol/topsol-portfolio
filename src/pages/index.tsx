@@ -8,12 +8,28 @@ import Home from "./home";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
+<<<<<<< HEAD
     <div>
       <Layout>
       {/* <Home/> */}
       {/* <PageNotFound/> */}
       <JobDetail/>
       </Layout>
+=======
+    <div className="">
+      <Navbar/>
+      <Hero/>
+      <CardSection/>
+      <ServicesOffers/>
+      <TopSolExperts/>
+      <OurPortfolio/>
+      <RatingSection/>
+      <Awards/>
+      <GetInTouch/>
+      <Footer/>
+
+      <div></div>
+>>>>>>> 926bcba (bug fix)
     </div>
   )
 }
