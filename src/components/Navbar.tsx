@@ -15,7 +15,9 @@ function Navbar() {
   return (
     <div
       className={`relative bg-primary-navbarBg ${
-        !open ? "hover:bg-primary-white transition-colors duration-500" : "bg-primary-navbarBg"
+        !open
+          ? "hover:bg-primary-white transition-colors duration-500"
+          : "bg-primary-navbarBg"
       }`}
     >
       <div className="md:container  mx-auto " id="navbar">
@@ -66,13 +68,13 @@ function Navbar() {
               "
               >
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
-                  <Link to="/">SERVICES</Link>
+                  <Link to="/services">SERVICES</Link>
                 </li>
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
-                  <Link to="/about">PORTFOLIO</Link>
+                  <Link to="/portfolio">PORTFOLIO</Link>
                 </li>
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
-                  <Link to="/#services">ABOUT US</Link>
+                  <Link to="/aboutUs">ABOUT US</Link>
                 </li>
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/#contact-us">CAREER</Link>
