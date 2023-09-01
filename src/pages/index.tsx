@@ -4,6 +4,7 @@ import PageNotFound from "./pageNotFound";
 import JobDetail from "./jobDetails";
 import Layout from "../components/Layout";
 import Home from "./home";
+import Careers from "./careers";
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -12,7 +13,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <Layout>
       {/* <Home/> */}
       {/* <PageNotFound/> */}
-      <JobDetail/>
+      {/* <JobDetail/> */}
+      <Careers/>
       </Layout>
     </div>
   )

@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Footer from './footerSection';
 
 
-interface LayoutProps {
+type LayoutProps = {
   children: ReactNode;
 }
 
