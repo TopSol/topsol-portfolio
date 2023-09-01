@@ -6,7 +6,8 @@ import RatingSection from "../../components/ratingSection";
 import Footer from "../../components/footerSection";
 import FileIcon from "../../images/Icons/fileIcon.png";
 import AddressSection from "../../components/addressSection";
-import {data} from "./data";
+import { data } from "./data";
+
 export default function index() {
   return (
     <div>
@@ -17,7 +18,7 @@ export default function index() {
       <div className="bg-gradient-to-b from-secondary to-primary  py-10 mt-12">
         <div className="flex flex-col justify-center items-center     ">
           <div className="">
-            <h1 className="font-extrabold text-white font-montserrat text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
+            <h1 className="font-extrabold text-white  text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
               Our Web Projects
             </h1>
           </div>
@@ -29,24 +30,23 @@ export default function index() {
           ></div>
         </div>
         <div>
-
-        <div className=" my-[100px] md:container mx-auto grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4  ">
-        {data.map((item: any, index) => {
-          return (
-            <div className="px-[25px] mx-5 md:mx-0 bg-white  hover:bg-primary hover:text-white  rounded-xl  py-2 ">
-              <img src={FileIcon}  className="w-[60px] bg-white rounded-full p-3 h-[60px] " alt="" />
-              <h1 className="font-semibold text-[20px] font-montserrat my-3 ">
-               {item.heading}
-              </h1>
-              <p className="text-[11px] font-montserrat">
-                {item.detail}
-              </p>
-            </div>
-          );
-        })}
-      </div>
-
-
+          <div className=" my-[100px] md:container mx-auto grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4  ">
+            {data.map((item: any, index) => {
+              return (
+                <div className="px-[25px] mx-5 md:mx-0 bg-white  hover:bg-primary hover:text-white  rounded-xl  py-2 ">
+                  <img
+                    src={FileIcon}
+                    className="w-[60px] bg-white rounded-full p-3 h-[60px] "
+                    alt=""
+                  />
+                  <h1 className="font-semibold text-[20px]  my-3 ">
+                    {item.heading}
+                  </h1>
+                  <p className="text-[11px] ">{item.detail}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
 

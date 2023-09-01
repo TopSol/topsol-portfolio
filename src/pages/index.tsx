@@ -25,6 +25,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <Awards/>
       <GetInTouch/>
       <Footer/>
+
+      <div></div>
     </div>
   )
 }

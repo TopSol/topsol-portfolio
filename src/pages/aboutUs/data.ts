@@ -29,7 +29,7 @@ export const data = [
     {
         id: 1,
         name: 'John Deff',
-        position: 'Ceo Topsol',
+        position: 'Ceo dsaf Topsol',
         catagory: "Developer",
     },
     {

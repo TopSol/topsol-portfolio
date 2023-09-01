@@ -12,7 +12,7 @@ export default function index() {
       <Navbar />
       <div className="">
         <div className="bg-gradient-to-b from-secondary  to-primary  ">
-          <div className="flex flex-col font-montserrat text-white justify-center items-center mx-6   lg:w-[55%] xl:w-[50%] md:mx-auto te ">
+          <div className="flex flex-col  text-white justify-center items-center mx-6   lg:w-[55%] xl:w-[50%] md:mx-auto te ">
             <h1 className="text-[50px] text-center font-bold mt-[70px] ">
               Video Downloader App
             </h1>
@@ -29,7 +29,7 @@ export default function index() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center" >
+        <div className="flex flex-col justify-center items-center">
           <img
             src="https://res.cloudinary.com/asifsaythe/image/upload/v1693297052/new_portfolio/image_1_1_my7upi.png"
             alt=""
@@ -38,12 +38,12 @@ export default function index() {
         </div>
       </div>
 
-      <div className="flex font-montserrat mt-[250px] md:mt-[350px] flex-col md:flex-row md:container justify-between  md:mx-auto">
+      <div className="flex  mt-[250px] md:mt-[350px] flex-col md:flex-row md:container justify-between  md:mx-auto">
         <div className=" mx-6 md:0 md:w-[50%] lg:w-[50%]">
-          <h1 className="text-[36px] md:text-[30px] lg:text-[36px] font-bold font-montserrat  ">
+          <h1 className="text-[36px] md:text-[30px] lg:text-[36px] font-bold   ">
             About Video Downloader
           </h1>
-          <p className="text-[22px] md:text-[18px]  lg:text-[22px]  font-montserrat mt-[36px] ">
+          <p className="text-[22px] md:text-[18px]  lg:text-[22px]   mt-[36px] ">
             Effortlessly capture your favorite videos with our Video Downloader
             App. Simply paste the video URL, and our app swiftly converts and
             saves the content to your device. Enjoy seamless downloads from
@@ -57,10 +57,10 @@ export default function index() {
           </p>
         </div>
         <div className=" md:w-[50%]  mt-6 md:mt-0 mx-6 md:0 lg:w-[30%] border-2 border-gray-300 px-[40px] rounded-[10px] py-[40px]">
-          <h1 className="text-[25px] font-bold font-montserrat text-textColors ">
+          <h1 className="text-[25px] font-bold  text-textColors ">
             Looking for something similar?
           </h1>
-          <p className="text-[18px] font-montserrat my-[28px] ">
+          <p className="text-[18px]  my-[28px] ">
             Our experienced and talented team is always ready to help you
             achieve your goal.Our team has provided a lot of people their
             business solutions
@@ -83,7 +83,7 @@ export default function index() {
 
         <div className="flex flex-col justify-center items-center     ">
           <div className="">
-            <h1 className="font-extrabold text-textColors font-montserrat text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
+            <h1 className="font-extrabold text-textColors  text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
               Unlock Media Magic with VidMaster
             </h1>
           </div>
@@ -96,7 +96,7 @@ export default function index() {
         </div>
 
         <div className="md:container mx-auto">
-          <p className=" text-xl mx-6 md:text-2xl font-montserrat  mt-[20px] ">
+          <p className=" text-xl mx-6 md:text-2xl   mt-[20px] ">
             VidMaster stands as a mobile application designed to redefine your
             entertainment experience. Seamlessly search and instantly download
             videos from a variety of platforms with this user-friendly app.
