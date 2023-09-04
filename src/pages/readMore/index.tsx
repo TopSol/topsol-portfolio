@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import PrimaryBtn from '../../components/PrimaryBtn';
-
 import line from '../../images/Frame 74.png'
+import Footer from '../../components/footerSection';
 import commentImage from '../../images/commentImage.png'
 import dataScience from '../../images/dataScience.png'
 export default function index() {
@@ -166,6 +166,8 @@ transforming raw information into actionable intelligence</p>
         </div>
 
       </div>
+      <Footer/>
     </div>
+
   )
 }

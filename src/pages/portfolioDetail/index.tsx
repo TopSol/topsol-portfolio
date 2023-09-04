@@ -140,7 +140,7 @@ export default function index() {
       </div>
 
       <SmallFooter />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

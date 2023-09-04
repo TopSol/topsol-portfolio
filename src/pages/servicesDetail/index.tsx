@@ -4,7 +4,7 @@ import InfoSection from "../../components/infoSection";
 import Footer from "../../components/footerSection";
 import { data,data2 } from "./data";
 import PrimaryBtn from "../../components/PrimaryBtn";
-
+import HeaderSection from "../../components/headerSection";
 import PortfolioCard from "../../components/portfolioCard";
 import FileIcon from "../../images/Icons/fileIcon.png";
 export default function index() {
@@ -14,6 +14,21 @@ export default function index() {
   return (
     <div>
       <Navbar />
+      <HeaderSection
+        title="Latest"
+        subtitle="Blogs"
+        content="Explore the Latest Blogs on Trends and Technologies"
+        subContent="Welcome to our blog page! Here you will find informative
+         and engaging articles on a variety of topics, including Blockchain,
+         WEB, Development. Our blog is updated regularly with fresh
+         content, so be sure to check back often.We strive to provide
+         insights and perspectives on the latest industrytrends and
+         developments. Whether you‘re looking for inspiration, tips, or
+         simply some interesting reading, our blog has something for
+         everyone.Thanks for visiting and happy reading!"
+        buttonLabel={false}
+        imageUrl="https://res.cloudinary.com/asifsaythe/image/upload/v1693224854/new_portfolio/Frame_1_lv9ucy.png"
+      />
       <InfoSection />
 
       <div className="  mx-5 md:container md:mx-auto my-[100px]">
@@ -69,6 +84,7 @@ export default function index() {
         <PrimaryBtn text="View More" additionalClasses="bg-white text-primary" />  
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

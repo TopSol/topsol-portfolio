@@ -11,6 +11,7 @@ export default function index() {
   return (
     <div>
       <Navbar />
+      
       <VideoHero />
       <ServicesOffers />
 
@@ -52,7 +53,7 @@ export default function index() {
 
       <RatingSection />
       <AddressSection />
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

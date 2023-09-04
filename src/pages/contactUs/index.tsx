@@ -6,6 +6,7 @@ import Footer from '../../components/footerSection'
 import line from '../../images/Frame 74.png'
 import dropDown from '../../images/dropdown.png'
 import { btnData } from './data'
+import Header from '../../components/headerSection'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 export default function index() {
@@ -29,7 +30,21 @@ export default function index() {
 
         <div>
             <Navbar />
-
+            <Header
+        title="Latest"
+        subtitle="Blogs"
+        content="Explore the Latest Blogs on Trends and Technologies"
+        subContent="Welcome to our blog page! Here you will find informative
+         and engaging articles on a variety of topics, including Blockchain,
+         WEB, Development. Our blog is updated regularly with fresh
+         content, so be sure to check back often.We strive to provide
+         insights and perspectives on the latest industrytrends and
+         developments. Whether you‘re looking for inspiration, tips, or
+         simply some interesting reading, our blog has something for
+         everyone.Thanks for visiting and happy reading!"
+        buttonLabel={false}
+        imageUrl="https://res.cloudinary.com/asifsaythe/image/upload/v1693224854/new_portfolio/Frame_1_lv9ucy.png"
+      />
             <div className='md:w-[60%] md:justify-center md:mx-auto'>
                 <div className='mt-[24px] md:container md:mx-auto  flex flex-col justify-center items-center md:justify-start md:items-start'>
                     <div>
@@ -147,7 +162,7 @@ export default function index() {
             </div>
 <AddressSection/>
 <SmallFooter/>
-{/* <Footer/> */}
+<Footer/>
         </div>
     )
 }

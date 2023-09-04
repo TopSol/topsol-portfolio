@@ -5,7 +5,7 @@ import PrimaryBtn from '../../components/PrimaryBtn';
 import dot from '../../images/dot.png'
 import line from '../../images/Frame 74.png'
 import { btnData, allData } from "./data";
-
+import Footer from '../../components/footerSection';
 export default function index() {
   const [selectWorkers, setSetWorkers] = useState("All")
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -86,6 +86,7 @@ export default function index() {
           </div>
         ))}
       </div>
+      <Footer/>
     </div>
   )
 }
