@@ -26,7 +26,8 @@ module.exports = {
           darker: '#2839A9',
         },
         textColors: "#000000",
-        light_Grey_bg:'#FBFBFB'
+        light_Grey_bg:'#FBFBFB',
+        light_Grey:'#707070',
       },
     },
   },

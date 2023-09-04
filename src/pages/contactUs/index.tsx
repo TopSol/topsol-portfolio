@@ -40,8 +40,8 @@ export default function index() {
                         />
                     </div>
                 </div>
-                <div className="mt-[24px] mx-[27px] px-[20px] py-[17px] md:container md:mx-auto  bg-light_Grey_bg sm:justify-between  justify-center  rounded-md flex relative">
-                    <h1 className=' flex text-black  text-[15px]  md:text-[18px]'>
+                <div className="mt-[24px] mx-[27px] px-[10px] py-[17px] md:container md:mx-auto  bg-light_Grey_bg sm:justify-between  justify-center  rounded-md flex relative">
+                    <h1 className=' flex text-light_Grey  text-[15px]  md:text-[18px]'>
                         {selectedOption ? `${selectedOption?.name}?` : 'How can we help you?'}
                     </h1>
                     <div className=''>
@@ -60,7 +60,7 @@ export default function index() {
                             {btnData.map((option, index) => (
                                 <li
                                     key={index}
-                                    className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${selectedOption === option ? 'bg-blue-500 text-white' : ''
+                                    className={`px-4 py-2  hover:bg-gray-100 cursor-pointer ${selectedOption === option ? 'bg-blue-500 text-white' : ''
                                         }`}
                                     onClick={() => handleOptionClick(option)}
                                 >
@@ -75,15 +75,15 @@ export default function index() {
                     <div className="mb-[24px] md:mr-[21px] w-[85%]  md:container md:mx-auto justify-center">
                         <input
                             type="text"
-                            className="px-[10px] py-[17px] outline-none rounded-md w-[100%]  bg-light_Grey_bg"
-                            placeholder="Name"
+                            className="px-[10px] py-[17px] text-light_Grey outline-none rounded-md w-[100%]  bg-light_Grey_bg"
+                            placeholder="Name*"
                         />
                     </div>
                     <div className="mb-[24px] w-[85%]  md:container md:mx-auto justify-center ">
                         <input
                             type="text"
-                            className="px-[10px] py-[17px] outline-none rounded-md w-[100%] bg-light_Grey_bg "
-                            placeholder="Email"
+                            className="px-[10px] py-[17px] text-light_Grey outline-none rounded-md w-[100%] bg-light_Grey_bg "
+                            placeholder="Email*"
                         />
                     </div>
                 </div>
@@ -92,11 +92,11 @@ export default function index() {
                     <div className="  mb-[24px] md:mr-[21px] w-[85%] ">
                         <input
                             type="text"
-                            className="px-[10px] py-[17px] w-[100%] outline-none rounded-md   bg-light_Grey_bg"
-                            placeholder="Organization"
+                            className="px-[10px] py-[17px] text-light_Grey w-[100%] outline-none rounded-md   bg-light_Grey_bg"
+                            placeholder="Organization*"
                         />
                     </div>
-                    <div className="  mb-[24px] w-[85%] bg-light_Grey_bg">
+                    <div className="  mb-[24px] w-[85%] text-light_Grey bg-light_Grey_bg">
                         <PhoneInput
                             inputStyle={{
                                 width: "100%",
@@ -116,8 +116,8 @@ export default function index() {
                     <div className="w-[100%] md:container md:mx-auto flex flex-col justify-center items-center  ">
                         <div className='w-[85%] md:w-[100%] '>
                         <textarea
-                            className=" outline-none px-[30px] py-[17px] h-[100px] md:h-[194px] bg-light_Grey_bg  rounded-md w-[100%]"
-                            placeholder="Massage"
+                            className=" outline-none text-light_Grey px-[10px] py-[17px] h-[100px] md:h-[194px] bg-light_Grey_bg  rounded-md w-[100%]"
+                            placeholder="Massage*"
                         ></textarea>
                         </div>
                     </div>
@@ -129,7 +129,7 @@ export default function index() {
                             checked={isChecked}
                             onChange={toggleCheckbox}
                         />
-                        <label className="ml-2 text-[15px] md:text-[12px] lg:text-[18px] ">I agree to terms &amp; conditions</label>
+                        <label className="ml-2 text-[15px] text-light_Grey md:text-[12px] lg:text-[18px] ">I agree to terms &amp; conditions</label>
                     </div>
                     <div className='w-[85%]'>
                         <button

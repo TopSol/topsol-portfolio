@@ -80,7 +80,7 @@ export default function index() {
               </div>
               <p className=' my-[14px]  text-gray-400' >{item.description}</p>
               <PrimaryBtn text='Reade Mores'
-               additionalClasses="bg-primary  font-semibold hover:bg-primary text-white "
+               additionalClasses="bg-primary mt-[24px] font-semibold hover:bg-primary text-white "
               />
             </div>
           </div>
