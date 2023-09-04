@@ -5,7 +5,7 @@ import { data, data2 } from "./data";
 import PrimaryBtn from "../../components/PrimaryBtn";
 import Footer from "../../components/footerSection";
 import PortfolioCard from "../../components/portfolioCard";
-import SmallFooter from "../../components/smallFooter";
+import SmallFooter from "../../components/SmallFooter";
 export default function index() {
   const [selectWorkers, setSetWorkers] = React.useState("All");
 

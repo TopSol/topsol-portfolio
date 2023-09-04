@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../../components/Navbar'
+import AddressSection from '../../components/addressSection'
+import SmallFooter from '../../components/SmallFooter'
+import Footer from '../../components/footerSection'
 import line from '../../images/Frame 74.png'
 import dropDown from '../../images/dropdown.png'
 import { btnData } from './data'
@@ -26,7 +29,7 @@ export default function index() {
 
         <div>
             <Navbar />
-            
+
             <div className='md:w-[60%] md:justify-center md:mx-auto'>
                 <div className='mt-[24px] md:container md:mx-auto  flex flex-col justify-center items-center md:justify-start md:items-start'>
                     <div>
@@ -103,24 +106,24 @@ export default function index() {
                                 border: "none",
                                 backgroundColor: "#FBFBFB",
                                 height: 59,
-                            
+
                             }}
                             buttonStyle={{ border: "none", backgroundColor: "#FBFBFB" }}
                             value={phone}
-                            country="pk" 
+                            country="pk"
                             countryCodeEditable={false}
                             onChange={(e) => setPhone(e)}
                         />
                     </div>
                 </div>
-                    <div className="w-[100%] md:container md:mx-auto flex flex-col justify-center items-center  ">
-                        <div className='w-[85%] md:w-[100%] '>
+                <div className="w-[100%] md:container md:mx-auto flex flex-col justify-center items-center  ">
+                    <div className='w-[85%] md:w-[100%] '>
                         <textarea
                             className=" outline-none text-light_Grey px-[10px] py-[17px] h-[100px] md:h-[194px] bg-light_Grey_bg  rounded-md w-[100%]"
                             placeholder="Massage*"
                         ></textarea>
-                        </div>
                     </div>
+                </div>
                 <div className="mt-[49px] md:container md:mx-auto flex flex-col md:flex-row  justify-center items-center">
                     <div className=" w-[85%] flex items-center mb-4 md:mb-0">
                         <input
@@ -142,7 +145,9 @@ export default function index() {
                     </div>
                 </div>
             </div>
-
+<AddressSection/>
+<SmallFooter/>
+{/* <Footer/> */}
         </div>
     )
 }

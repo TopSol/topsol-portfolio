@@ -63,7 +63,7 @@ export default function index() {
     .filter(item => selectedCategory === 'All' || item.catagery === selectedCategory)
     .map((item, index) => (
           <div className={` ${item.flexDirection} mt-10 mx-[35px] md:container md:mx-auto  flex flex-col md:flex-row justify-around items-center `} >
-            <div className='md:w-[48%]'>
+            <div className=' md:w-[48%]'>
               
               <img 
               
@@ -76,11 +76,11 @@ export default function index() {
                   className="w-[49px] h-[5px] pr-[8px] "
                   alt=""
                 />
-              <h1 className=' text-[18px]  font-semibold md:text-[35px] text-primary' >{item.title}</h1>
+              <h1 className=' md:text-[18px]  font-semibold lg:text-[35px] text-primary' >{item.title}</h1>
               </div>
-              <p className=' my-[14px]  text-gray-400' >{item.description}</p>
+              <p className=' my-[14px] lg:text-[20px] xl:text-[22px] text-gray-400' >{item.description}</p>
               <PrimaryBtn text='Reade Mores'
-               additionalClasses="bg-primary mt-[24px] font-semibold hover:bg-primary text-white "
+               additionalClasses="bg-primary text-[16px] lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary text-white "
               />
             </div>
           </div>

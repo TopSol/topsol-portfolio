@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import SmallFooter from "../../components/smallFooter";
+import SmallFooter from "../../components/SmallFooter";
 import Footer from "../../components/footerSection";
 import PrimaryBtn from "../../components/PrimaryBtn";
 import check1 from "../../images/check1.png";
