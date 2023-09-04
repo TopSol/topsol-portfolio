@@ -16,6 +16,11 @@ module.exports = {
           darker: '#00D0FF',
           light: '#6DDCFF',
           lighter: '#98E7FF',
+          blue:'#1976D2',
+          gradientOne:'#0B234CE8',
+          gradientTwo:'#6DDCFFEB',
+          white:'#FFFFFF',
+          gray:'#8E8E8E',
         },
         secondary: {
           DEFAULT: '#2B388F',

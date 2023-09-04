@@ -36,47 +36,14 @@ function TopSolExperts() {
             Motivation are Nurtured for Everyone
           </p>
         </div>
-        <div className="grid grid-cols-5 grid-rows-1 gap-6 mb-10">
-          <div className="flex flex-col hover:bg-[#00B8F1] hover:text-white items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
-            <div className="bg-white rounded-full p-3">
-              <img src={flexibilityImg} />
-            </div>
-            <div className="pt-6">
-              <p>FLEXIBILITY</p>
-            </div>
-          </div>
-          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
-            <div className="bg-white rounded-full p-3">
-              <img src={flexibilityImg} />
-            </div>
-            <div className="pt-6">
-              <p>EMPOWERMENT</p>
-            </div>
-          </div>
-          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
-            <div className="bg-white rounded-full p-3">
-              <img src={flexibilityImg} />
-            </div>
-            <div className="pt-6">
-              <p>INCLUSIVITY</p>
-            </div>
-          </div>
-          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
-            <div className="bg-white rounded-full p-3">
-              <img src={flexibilityImg} />
-            </div>
-            <div className="pt-6">
-              <p>DISCIPLINE</p>
-            </div>
-          </div>
-          <div className="flex flex-col hover:bg-[#00B8F1] items-center justify-center rounded-md border border-[#00B8F1] w-[198px] h-[140px] hover:scale-y-125 transform origin-top transition-transform duration-500 ease-in-out">
-            <div className="bg-white rounded-full p-3">
-              <img src={flexibilityImg} />
-            </div>
-            <div className="pt-6">
-              <p>GROWTH MINDSET</p>
-            </div>
-          </div>
+        <div className={`grid lg:grid-cols-5  gap-x-16 gap-y-10 mb-10`}>
+        {selectedArray?.map((item, index) => {
+            return (
+              <div key={index}>
+                <ExpertCards title={item.title} avatar={item.avatar} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

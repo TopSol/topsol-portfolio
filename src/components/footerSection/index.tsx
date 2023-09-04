@@ -10,13 +10,19 @@ import contact from '../../images/contact.png'
 import email from '../../images/email.png'
 export default function Footer() {
   return (
-    <div className=" bg-[#1A1A1A] font-mont px-10">
-      <div className="md:container md:mx-auto " id="contect-us">
+    
+      <div
+      className="bg-cover bg-center font-mont p-10 "
+      style={{
+        backgroundImage: `url(${footerBg})`,
+      }}
+    >
+      <div className="">
         <div className="flex flex-col  py-6 text-white">
           <div className="flex justify-between">
             <div>
-              <div className="mb-8">
-                <h1 className="mb-4 text-blue-700 font-extrabold">
+              <div className="">
+                <h1 className="mb-4 text-primary-blue text-xl font-montserrat font-extrabold">
                   TopSol Solutions
                 </h1>
                 <span>A Software development Company</span>
