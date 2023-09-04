@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import hrImg from "../../../images/horizantolLine.png";
-import Form from "../../../components/form/Form";
-// import Form from "../../../components/form/Form";
+import hrImg from "../../../../images/horizantolLine.png";
+import Form from "../../../../components/form/Form";
 
 function AboutUs() {
     const [showForm, setShowForm] = useState(false);

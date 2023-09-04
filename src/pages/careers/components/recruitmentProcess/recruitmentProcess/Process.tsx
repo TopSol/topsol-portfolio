@@ -1,14 +1,14 @@
 import React from "react";
-import AnimateHr from "../../../../components/animatedLine/AnimateHr";
+import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
 import { cardsData } from "./data";
-import SmallCards from "../../../../components/smallCards/SmallCards";
+import SmallCards from "../../../../../components/smallCards/SmallCards";
 
 function Process() {
   return (
     <div className="md:container mx-auto">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="md:text-6xl text-4xl text-center font-montserrat font-bold my-4">
-          Life at Topsol
+        <h1 className="md:text-4xl text-2xl text-center font-montserrat font-bold my-4">
+        Learn Our Recruitment <span className=" text-primary"> Process</span>
         </h1>
         <div className="w-[150px] my-12">
           <AnimateHr bgColor="[#00B8F1]" />

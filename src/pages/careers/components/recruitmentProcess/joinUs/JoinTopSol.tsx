@@ -1,5 +1,5 @@
 import React from "react";
-import careerOneImg from '../../../images/career1.png';
+import careerOneImg from '../../../../../images/career1.png';
 
 function JoinTopSol() {
   return (
@@ -9,7 +9,7 @@ function JoinTopSol() {
           <div className="my-8">
             <h1 className="md:text-6xl text-4xl text-primary-white">
               Join Our <span className=" text-primary"> Team</span> at
-              <span className=" text-primary"> Topsol</span>{" "}
+              <span className=" text-primary"> Topsol</span>
             </h1>
           </div>
           <div className="my-12">

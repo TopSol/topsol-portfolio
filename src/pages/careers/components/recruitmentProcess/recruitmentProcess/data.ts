@@ -1,24 +1,24 @@
-import careerCardOne from "../../../images/careerCard1.png";
+import processImgOne from "../../../../../images/process1.png";
 
 export const cardsData = [
   {
-    avatar: careerCardOne,
-    heading: "Large Beautiful Office",
+    avatar: processImgOne,
+    heading: "CV Submission",
     text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
   },
   {
-    avatar: careerCardOne,
-    heading: "Great Co-Workers",
+    avatar: processImgOne,
+    heading: "Phone Screening",
     text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
   },
   {
-    avatar: careerCardOne,
-    heading: "Easy Location",
+    avatar: processImgOne,
+    heading: "Skill Assessment",
     text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
   },
   {
-    avatar: careerCardOne,
-    heading: "Performance Awards",
+    avatar: processImgOne,
+    heading: "Final Interview",
     text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
   },
 ];

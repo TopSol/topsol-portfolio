@@ -1,5 +1,5 @@
 import React from "react";
-import jobImg from "../../../images/jobDt1.png";
+import jobImg from "../../../../images/jobDt1.png";
 
 function Designer() {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import AnimateHr from "../../../components/animatedLine/AnimateHr";
-import SmallCards from "../../../components/smallCards/SmallCards";
-import careerCardOne from "../../../images/careerCard1.png";
+import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
+import SmallCards from "../../../../../components/smallCards/SmallCards";
+import careerCardOne from "../../../../../images/careerCard1.png";
 
 function LifeTopsol() {
   const [showMore, setShowMore] = useState(false);

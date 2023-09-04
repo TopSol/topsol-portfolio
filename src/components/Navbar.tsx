@@ -7,7 +7,7 @@ import menuTwo from "../images/navbarMenu2.png";
 
 import { Link } from "gatsby";
 function Navbar() {
-  const [open, setopen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [hover, setHover] = useState(false);
 
   const logoImage = hover && !open ? logoTwo : logo;
@@ -43,12 +43,12 @@ function Navbar() {
             <div>
               <img
                 src={menuIcon}
-                onClick={() => setopen((p) => !p)}
+                onClick={() => setOpen(true)}
                 className={` cursor-pointer ${open ? "hidden" : "block"} `}
               />
               <img
                 src={closeImg}
-                onClick={() => setopen(false)}
+                onClick={() => setOpen(false)}
                 className={`h-6 w-6 cursor-pointer ${
                   open ? "block" : "hidden"
                 } `}
