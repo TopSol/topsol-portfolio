@@ -7,6 +7,9 @@ import Footer from "../../components/footerSection";
 import FileIcon from "../../images/Icons/fileIcon.png";
 import AddressSection from "../../components/addressSection";
 import {data} from "./data";
+import { link } from "fs";
+import { Link } from "gatsby";
+
 export default function index() {
   return (
     <div>
@@ -34,6 +37,7 @@ export default function index() {
         <div className=" my-[100px] md:container mx-auto grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4  ">
         {data.map((item: any, index) => {
           return (
+          <Link to={"/servicesDetail"}>
             <div className="px-[25px] mx-5 md:mx-0 bg-white  hover:bg-primary hover:text-white  rounded-xl  py-2 ">
               <img src={FileIcon}  className="w-[60px] bg-white rounded-full p-3 h-[60px] " alt="" />
               <h1 className="font-semibold text-[20px] font-montserrat my-3 ">
@@ -43,6 +47,7 @@ export default function index() {
                 {item.detail}
               </p>
             </div>
+            </Link>
           );
         })}
       </div>
@@ -53,7 +58,9 @@ export default function index() {
 
       <RatingSection />
       <AddressSection />
+      <div className="mt-[200px]">
       <Footer/>
+      </div>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import dot1 from "../../../images/dot1.png";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import { cardData } from "./data";
+import { Link } from "gatsby";
 
 interface CardData {
   title: string;
@@ -29,6 +30,7 @@ function OurPortfolio() {
       </div>
       <div className="my-10 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-x-8  gap-y-6  ">
         {cardData.slice(0, visibleCards).map((card, index) => (
+          <Link to={"/portfolio"}>
           <div
             key={index}
             className="rounded  border overflow-hidden hover:from-white hover:to-white bg-gradient-to-b from-[#00B8F1] to-[#FFFFFF] border-[#00B8F1] w-[250px] h-[374px] hover:scale-x-110 transform origin-left transition-transform duration-500 ease-in-out"
@@ -44,9 +46,12 @@ function OurPortfolio() {
               </div>
             </div>
           </div>
+          </Link>
         ))}
       </div>
       <div className="flex justify-center items-center">
+      <Link to={"/portfolio"}>
+
         <button
           className="px-6 py-2 group flex items-center justify-center rounded bg-[#00B8F1] text-white hover:scale-x-125 transform origin-left transition-transform duration-500 ease-in-out"
           onClick={handleViewMore}
@@ -67,6 +72,7 @@ function OurPortfolio() {
             />
           </svg>
         </button>
+        </Link>
       </div>
 
       <div className="lg:block ml-auto mr-20  hidden">

@@ -27,47 +27,41 @@ function TopSolExperts() {
   const smGridColumns = selectedCategory === 'Technologies' ? 2 : 1;
 
   return (
-    <div className="flex flex-col justify-center items-center bg-gradient-to-b from-[#2D4375] to-[#62C3ED] p-8">
+    <div className="flex flex-col justify-center items-center bg-gradient-to-b from-secondary to-primary ">
       <div className="flex flex-col justify-center items-center">
-        <div className="py-4 text-2xl font-bold text-white">
+        <div className="pb-5 mt-[54px] text-2xl font-bold text-white">
           <h1>Why TopSol Experts</h1>
         </div>
         <div className="w-[180px]">
           <AnimateHr bgColor={'white'}/>
         </div>
-        <div className="grid md:grid-cols-3 grid-cols-1  md:gap-x-8 gap-y-4 py-6">
+        <div className="grid md:grid-cols-3 grid-cols-1  md:gap-x-[40px] mt-[59px] ">
           <button
           onClick={() => handleCategoryChange("Values")}
-          className={` text-[#00B8F1] hover:bg-[#00B8F1] hover:text-white px-4 py-2 rounded ${
-            selectedCategory === "Values" ? "bg-[#00B8F1] text-white" : "bg-white"
-          }`}>
+          className={` text-primary bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}>
             Values
           </button>
           <button 
           onClick={() => handleCategoryChange("Industries")}
-          className={` text-[#00B8F1] hover:bg-[#00B8F1] hover:text-white px-4 py-2 rounded ${
-            selectedCategory === "Industries" ? "bg-[#00B8F1] text-white" : "bg-white"
-          }`}>
+          className={` text-primary bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}>
             Industries
           </button>
           <button 
           onClick={() => handleCategoryChange("Technologies")}
-          className={` text-[#00B8F1] hover:bg-[#00B8F1] hover:text-white px-4 py-2 rounded ${
-            selectedCategory === "Technologies" ? "bg-[#00B8F1] text-white" : "bg-white"
-          }`}>
+          className={`  text-primary bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold`}>
             Technologies
           </button>
         </div>
       </div>
 
-      <div className=" container flex flex-col items-center justify-center py-10 px-4 mb-14 bg-white rounded-3xl">
-        <div className="text-[#737373] text-center mb-10">
-          <p>
+      <div className=" container flex flex-col items-center justify-center mt-[42px] px-4 mb-[154px] bg-white rounded-[20px]">
+        
+          <p className="text-[#737373] text-center mt-[49px]" >
             We Go Beyond to Cultivate a Workspace Where Safety, Value, and
             Motivation are Nurtured for Everyone
           </p>
-        </div>
-        <div className={`grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-x-16 gap-y-10 mb-10`}>
+        
+        <div className={`grid mt-[75px] mb-[105px] lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-70px]  gap-x-[28px] `}>
         {selectedArray?.map((item, index) => {
             return (
               <div key={index}>

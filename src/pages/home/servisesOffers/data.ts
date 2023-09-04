@@ -38,7 +38,7 @@ export const cards = [
     },
     {
       heading: "AI & CHAT GPT",
-      desc: "Our AI & Chat GPT services harness the potential of advanced technology, engaging users in dynamic conversations and automating tasks with intelligence",
+      desc: "Our AI & Chat GPT services harness the potential of advanced technology, engaging users in dynamic conversations and automating ta",
       avatar: groupImg,
     },
   ];

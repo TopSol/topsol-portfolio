@@ -66,22 +66,22 @@ function Navbar() {
               "
               >
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
-                  <Link to="/">SERVICES</Link>
+                  <Link to="/services">SERVICES</Link>
                 </li>
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
-                  <Link to="/about">PORTFOLIO</Link>
+                  <Link to="/portfolio">PORTFOLIO</Link>
                 </li>
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
-                  <Link to="/#services">ABOUT US</Link>
+                  <Link to="/aboutUs">ABOUT US</Link>
                 </li>
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
-                  <Link to="/#contact-us">CAREER</Link>
+                  <Link to="/careers">CAREER</Link>
                 </li>
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
-                  <Link to="/blog">CONTACT US</Link>
+                  <Link to="/contactUs">CONTACT US</Link>
                 </li>
                 <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
-                  <Link to="/blog">BLOG</Link>
+                  <Link to="/blogs">BLOG</Link>
                 </li>
               </ul>
             </div>
