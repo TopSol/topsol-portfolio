@@ -8,7 +8,7 @@ type appProps ={
 export default function RatingSlider({ review }:appProps) {
   return (
     <div className="my-8">
-      <div className=" pl-4 pr-10 md:pl-16 border rounded-2xl relative">
+      <div className=" pl-4 pr-4 md:pl-16 border rounded-2xl relative">
         <div className="absolute top-0 right-0">
             <img src={ratingCircle} className="w-10 h-10"/>
         </div>
@@ -19,7 +19,7 @@ export default function RatingSlider({ review }:appProps) {
           <AiFillStar />
           <AiFillStar />
         </div>
-        <p className="mt-4 font-[13px] text-[#000000]">{review?.text}</p>
+        <p className="mt-4 font-[13px] text-justify text-[#000000]">{review?.text}</p>
         <div className="flex my-8">
           <img
             src={review?.avatar}

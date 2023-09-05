@@ -25,19 +25,20 @@ function Awards() {
     }
   };
 
-  const settings = {
+  var settings = {
     dots: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 4,
+    infinite: true,
+    speed: 1000,
     arrows: false,
-    // initialSlide:0,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           dots: false
         }
@@ -45,20 +46,16 @@ function Awards() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false
-          // initialSlide: 2
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false
+          slidesToScroll: 1
         }
       }
     ]
@@ -66,10 +63,10 @@ function Awards() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center py-14 bg-[#F4F4F4]">
+      <div className="flex flex-col items-center justify-center pb-[105px]  bg-[#F4F4F4]">
         <div className="flex flex-col justify-center items-center">
           <div>
-            <h1 className="font-extrabold text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
+            <h1 className="font-extrabold text-[24px] md:text-[34px] mt-[68px] text-center">
               Awards and Honor
             </h1>
           </div>
@@ -77,16 +74,16 @@ function Awards() {
             <AnimateHr bgColor={'[#00B8F1]'}/>
           </div>
         </div>
-        <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center mt-[84px]  ">
           <button className="button " onClick={previous}>
             <img src={prevImg} />
           </button>
-          <div className="md:w-[100vh] sm:pl-0 pl-14 w-[40vh]  ">
+          <div className=" w-[90vw] ">
             <Slider {...settings} ref={setSlider}>
               {images?.map((review, id) => {
                 return (
-                  <div key={id} className="">
-                    <ImagSlider review={review} />
+                  <div key={id} className=" ">
+                     <img src={review.avatar} alt="#" className="w-[105px] h-[105px] mx-auto " />
                   </div>
                 );
               })}

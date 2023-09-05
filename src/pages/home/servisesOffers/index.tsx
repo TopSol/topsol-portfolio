@@ -15,14 +15,12 @@ function ServicesOffers() {
       <div className="lg:mr-auto">
         <img src={dotImg} className="lg:block hidden" />
       </div>
-      <div className="w-1/2 flex flex-col justify-center items-center lg:mr-auto">
-        <div className="text-center font-semibold text-[34px] ">
+      <div className="md:w-1/2 flex flex-col justify-center items-center lg:mr-auto">
+        <div className="text-center font-semibold text-[24px] md:text-[34px] ">
           <h1>Services We Offer</h1>
         </div>
-        <div className="w-[150px] my-4">
-          <AnimateHr bgColor={"primary"} />
-        </div>
-        <div className=" text-[20px] mt-[27px] text-center md:block hidden">
+       
+        <div className=" text-[20px] md:mt-[27px] text-center md:block hidden">
           <p>
             From Industry Titans to Emerging Ventures - Topsol Empowers You
             with the Fusion of Creative, Technical, and Business Expertise
@@ -32,7 +30,7 @@ function ServicesOffers() {
       </div>
     </div>
 
-    <div className="grid mt-[85px] gap-[27px] md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid mt-[36px] md:mt-[85px] gap-[27px] md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
       {cards?.map((item, index) => (
         <div key={index}>
           <Link to={"/services"}>

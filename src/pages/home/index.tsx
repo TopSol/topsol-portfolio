@@ -15,10 +15,10 @@ function Home() {
       {/* <CardSection/> */}
       <ServicesOffers/>
       <TopSolExperts/>
-      {/* <OurPortfolio/> */}
-      {/* <RatingSection/> */}
-      {/* <Awards/> */}
-      {/* <GetInTouch/> */}
+      <OurPortfolio/>
+      <RatingSection/>
+      <Awards/>
+      <GetInTouch/>
     </div>
   )
 }

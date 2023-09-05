@@ -21,10 +21,7 @@ function TopSolExperts() {
   }
 
  
-  const gridColumns = selectedCategory === 'Technologies' ? 8 : 5;
-  const lgGridColumns = selectedCategory === 'Technologies' ? 6 : 4;
-  const mdGridColumns = selectedCategory === 'Technologies' ? 4 : 2;
-  const smGridColumns = selectedCategory === 'Technologies' ? 2 : 1;
+
 
   return (
     <div className="flex flex-col justify-center items-center bg-gradient-to-b from-secondary to-primary ">
@@ -35,7 +32,7 @@ function TopSolExperts() {
         <div className="w-[180px]">
           <AnimateHr bgColor={'white'}/>
         </div>
-        <div className="grid md:grid-cols-3 grid-cols-1  md:gap-x-[40px] mt-[59px] ">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-y-5  md:gap-x-[40px] mt-[59px] ">
           <button
           onClick={() => handleCategoryChange("Values")}
           className={` text-primary bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}>
@@ -61,7 +58,7 @@ function TopSolExperts() {
             Motivation are Nurtured for Everyone
           </p>
         
-        <div className={`grid mt-[75px] mb-[105px] lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-70px]  gap-x-[28px] `}>
+        <div className={`grid mt-[75px] mb-[105px] ${ selectedCategory === "Technologies" ? "md:grid-cols-8 gap-x-[41px]" :"md:grid-cols-5 gap-x-[28px]" }  sm:grid-cols-2 grid-cols-1 md:gap-y-[70px] gap-[28px]   `}>
         {selectedArray?.map((item, index) => {
             return (
               <div key={index}>

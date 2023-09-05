@@ -33,9 +33,9 @@ function OurPortfolio() {
           <Link to={"/portfolio"}>
           <div
             key={index}
-            className="rounded  border overflow-hidden hover:from-white hover:to-white bg-gradient-to-b from-[#00B8F1] to-[#FFFFFF] border-[#00B8F1] w-[250px] h-[374px] hover:scale-x-110 transform origin-left transition-transform duration-500 ease-in-out"
+            className="rounded  border overflow-hidden hover:from-white hover:to-white bg-gradient-to-b from-[#00B8F1] to-[#FFFFFF] border-[#00B8F1] w-[250px] h-[374px]"
           >
-            <div className="h-full relative group hover:scale-110 transition duration-500">
+            <div className="h-full relative group ">
               <div className="flex flex-col items-center ">
                 <div className="px-4 mt-16 ">
                   <img src={card.image} alt={`Portfolio ${index}`} />
@@ -53,7 +53,7 @@ function OurPortfolio() {
       <Link to={"/portfolio"}>
 
         <button
-          className="px-6 py-2 group flex items-center justify-center rounded bg-[#00B8F1] text-white hover:scale-x-125 transform origin-left transition-transform duration-500 ease-in-out"
+          className="px-[35px] py-[15px] group flex items-center justify-center rounded bg-[#00B8F1] text-white hover:scale-x-125 transform origin-left transition-transform duration-500 ease-in-out"
           onClick={handleViewMore}
         >
           View more
