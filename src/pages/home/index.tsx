@@ -7,31 +7,29 @@ import OurPortfolio from "./ourPortfolio";
 import RatingSection from "./ratingSection";
 import Awards from "./awards";
 import GetInTouch from "./getInTouch";
+import { motion } from "framer-motion";
 
 function Home() {
-  const [scrollY, setScrollY] = useState(0);
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [bg, setBg] = useState("#fff");
   return (
-    <div>
+    <>
       <Hero />
-      <CardSection scrollY={scrollY} setScrollY={setScrollY} />
-      <ServicesOffers />
+      <motion.div
+        initial={{ background: "#fff" }}
+        animate={{
+          background: bg,
+        }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <CardSection setBg={setBg} />
+        <ServicesOffers />
+      </motion.div>
       <TopSolExperts />
       <OurPortfolio />
       <RatingSection />
       <Awards />
       <GetInTouch />
-    </div>
+    </>
   );
 }
 

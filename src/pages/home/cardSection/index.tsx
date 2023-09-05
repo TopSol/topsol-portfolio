@@ -1,18 +1,29 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import { reviews } from "./data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function CardSection({ scrollY }) {
+export default function CardSection({ setBg }) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
 
+  const [scrollY, setScrollY] = useState(0);
   const [viewRef, isInView] = useInView();
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -24,7 +35,7 @@ export default function CardSection({ scrollY }) {
       scrub: 0.5,
       markers: false,
       start: "top top",
-      end: () => `+=2000`,
+      end: () => `+=1500`,
     });
 
     ScrollTrigger.create({
@@ -47,24 +58,25 @@ export default function CardSection({ scrollY }) {
     };
   }, []);
 
+  useEffect(() => {
+    if (isInView) {
+      setBg("#0B234C");
+    } else {
+      setBg("#fff");
+    }
+  }, [isInView]);
+
   console.log(isInView, "scroll", scrollY);
 
   return (
-    <motion.div
-      ref={containerRef}
-      initial={{ background: "#fff" }}
-      animate={{
-        background: isInView ? "#0B234C" : "#fff",
-      }}
-      transition={{ duration: 2, ease: "easeInOut" }}
-    >
+    <div ref={containerRef}>
       <div
         className={`h-screen flex justify-center items-center py-4 overflow-hidden`}
-        ref={viewRef}
       >
         <div className="flex flex-row">
           {/* Upper Section */}
           <div
+            ref={viewRef}
             className="p-2 flex items-center justify-center flex-col mb-8 mr-8 transform w-[50vw]"
             style={{
               transform:
@@ -91,8 +103,8 @@ export default function CardSection({ scrollY }) {
               transform:
                 scrollY <= 1000
                   ? `translateX(0%)`
-                  : scrollY >= 3000
-                  ? `translateX(-2000px)`
+                  : scrollY >= 2500
+                  ? `translateX(-1500px)`
                   : `translateX(-${scrollY - 1000}px)`,
             }}
           >
@@ -113,6 +125,6 @@ export default function CardSection({ scrollY }) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
