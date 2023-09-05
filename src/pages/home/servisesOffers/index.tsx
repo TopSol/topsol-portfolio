@@ -16,10 +16,17 @@ function ServicesOffers() {
         <img src={dotImg} className="lg:block hidden" />
       </div>
       <div className="md:w-1/2 flex flex-col justify-center items-center lg:mr-auto">
-        <div className="text-center font-semibold text-[24px] md:text-[34px] ">
-          <h1>Services We Offer</h1>
+      <div className="">
+          <h1 className="font-extrabold font-montserrat text-[26px] md:text-34[px] lg:text-4xl text-center">
+          Services We Offer
+          </h1>
         </div>
-       
+        <div
+            className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
+              before:bottom-0 before:left-0 before:bg-[#00B8F1] before:rounded-3xl
+              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
+              before:transition before:ease-in-out before:duration-1000 mr-44 mt-[22px] "
+          ></div>
         <div className=" text-[20px] md:mt-[27px] text-center md:block hidden">
           <p>
             From Industry Titans to Emerging Ventures - Topsol Empowers You

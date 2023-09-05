@@ -25,13 +25,18 @@ function TopSolExperts() {
 
   return (
     <div className="flex flex-col justify-center items-center bg-gradient-to-b from-secondary to-primary ">
-      <div className="flex flex-col justify-center items-center">
-        <div className="pb-5 mt-[54px] text-2xl font-bold text-white">
-          <h1>Why TopSol Experts</h1>
+      <div className="flex flex-col justify-center items-center ">
+      <div className="">
+          <h1 className="font-extrabold mt-[64px] text-white font-montserrat text-[26px] md:text-34[px] lg:text-4xl text-center">
+          Why Topsol Experts
+          </h1>
         </div>
-        <div className="w-[180px]">
-          <AnimateHr bgColor={'white'}/>
-        </div>
+        <div
+            className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
+              before:bottom-0 before:left-0 before:bg-[#ffff] before:rounded-3xl
+              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
+              before:transition before:ease-in-out before:duration-1000 mr-44 mt-[22px] "
+          ></div>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-y-5  md:gap-x-[40px] mt-[59px] ">
           <button
           onClick={() => handleCategoryChange("Values")}
@@ -58,10 +63,10 @@ function TopSolExperts() {
             Motivation are Nurtured for Everyone
           </p>
         
-        <div className={`grid mt-[75px] mb-[105px] ${ selectedCategory === "Technologies" ? "md:grid-cols-8 gap-x-[41px]" :"md:grid-cols-5 gap-x-[28px]" }  sm:grid-cols-2 grid-cols-1 md:gap-y-[70px] gap-[28px]   `}>
+        <div className={`grid mt-[75px] mb-[105px] ${ selectedCategory === "Technologies" ? "md:grid-cols-8 gap-x-[41px]" :" md:grid-cols-5            gap-x-[28px]" }  sm:grid-cols-2 grid-cols-1 gap-y-[70px] gap-[28px]   `}>
         {selectedArray?.map((item, index) => {
             return (
-              <div key={index}>
+              <div className="  " key={index}>
                 <ExpertCards title={item.title} avatar={item.avatar} />
               </div>
             );

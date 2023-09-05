@@ -15,7 +15,7 @@ export const Values = [
     avatar: flexibilityImg,
   },
   {
-    title: "EDUCATION",
+    title: "ON DEMAND SERVICES",
     avatar: flexibilityImg,
   },
   {

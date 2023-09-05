@@ -59,28 +59,29 @@ function Navbar() {
                 className="
               mr-8
               pt-20
-              flex justify-center items-center flex-col w-screen
+              flex items-center flex-col h-screen w-screen
               text-base text-white font-mont
               absolute bg-primary-navItemBg  left-0 right-0
+              space-y-[53px]
                bg-opacity-80
               "
               >
-                <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
+                <li className="md:p-4 py-2 text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/services">SERVICES</Link>
                 </li>
-                <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
+                <li className="md:p-4 py-2 text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/portfolio">PORTFOLIO</Link>
                 </li>
-                <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
+                <li className="md:p-4 py-2 text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/aboutUs">ABOUT US</Link>
                 </li>
-                <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
+                <li className="md:p-4 py-2 text-[35px]  font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/careers">CAREER</Link>
                 </li>
-                <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
+                <li className="md:p-4 py-2 text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/contactUs">CONTACT US</Link>
                 </li>
-                <li className="md:p-4 py-2 text-lg font-montserrat font-bold block hover:text-blue-400">
+                <li className="md:p-4 py-2  text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/blogs">BLOG</Link>
                 </li>
               </ul>

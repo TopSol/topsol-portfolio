@@ -30,8 +30,8 @@ function Awards() {
     infinite: true,
     speed: 1000,
     arrows: false,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     initialSlide: 0,
     responsive: [
       {
@@ -63,16 +63,19 @@ function Awards() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center pb-[105px]  bg-[#F4F4F4]">
+      <div className="flex flex-col items-center justify-center pb-[105px] mt-[106px]  bg-[#F4F4F4]">
         <div className="flex flex-col justify-center items-center">
-          <div>
-            <h1 className="font-extrabold text-[24px] md:text-[34px] mt-[68px] text-center">
-              Awards and Honor
-            </h1>
-          </div>
-          <div className="my-6 w-[150px]">
-            <AnimateHr bgColor={'[#00B8F1]'}/>
-          </div>
+        <div className="">
+          <h1 className="font-extrabold mt-[68px] font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
+            People Like us, officially
+          </h1>
+        </div>
+        <div
+            className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
+              before:bottom-0 before:left-0 before:bg-[#00B8F1] before:rounded-3xl
+              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
+              before:transition before:ease-in-out before:duration-1000 mr-44 mt-[18px]"
+          ></div>
         </div>
         <div className="flex justify-center items-center mt-[84px]  ">
           <button className="button " onClick={previous}>
