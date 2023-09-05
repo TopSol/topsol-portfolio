@@ -13,10 +13,12 @@ export default function CardSection({ setBg }) {
 
   const [scrollY, setScrollY] = useState(0);
   const [viewRef, isInView] = useInView();
+  const [restrict, setRestrict] = useState(false);
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -29,27 +31,32 @@ export default function CardSection({ setBg }) {
     const container = containerRef.current;
     const map = mapRef.current;
 
-    const pinTrigger = ScrollTrigger.create({
-      trigger: container,
-      pin: true,
-      scrub: 0.5,
-      markers: false,
-      start: "top top",
-      end: () => `+=1500`,
-    });
+    if (window.innerWidth >= 1024) {
+      setRestrict(true);
+      const pinTrigger = ScrollTrigger.create({
+        trigger: container,
+        pin: true,
+        scrub: 0.5,
+        markers: false,
+        start: "top top",
+        end: () => `+=1500`,
+      });
 
-    ScrollTrigger.create({
-      trigger: map,
-      start: "top top",
-      end: "bottom bottom",
-      onToggle: (self) => {
-        if (self.isActive) {
-          pinTrigger.disable();
-        } else {
-          pinTrigger.enable();
-        }
-      },
-    });
+      ScrollTrigger.create({
+        trigger: map,
+        start: "top top",
+        end: "bottom bottom",
+        onToggle: (self) => {
+          if (self.isActive) {
+            pinTrigger.disable();
+          } else {
+            pinTrigger.enable();
+          }
+        },
+      });
+    } else {
+      setRestrict(false);
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => {
@@ -78,14 +85,18 @@ export default function CardSection({ setBg }) {
           <div
             ref={viewRef}
             className="p-2 flex items-center justify-center flex-col mb-8 mr-8 transform w-[50vw]"
-            style={{
-              transform:
-                scrollY <= 1080
-                  ? `translateY(0%)`
-                  : scrollY >= 1560
-                  ? `translateY(-${480}px)`
-                  : `translateY(-${scrollY - 1080}px)`,
-            }}
+            style={
+              restrict
+                ? {
+                    transform:
+                      scrollY <= 1080
+                        ? `translateY(0%)`
+                        : scrollY >= 1560
+                        ? `translateY(-${480}px)`
+                        : `translateY(-${scrollY - 1080}px)`,
+                  }
+                : {}
+            }
           >
             <h1 className="mb-10 text-4xl font-bold mt-16 max-w-[300px] text-white">
               Build Smarter Not From Scratch
@@ -98,15 +109,21 @@ export default function CardSection({ setBg }) {
           {/* Lower Section (Horizontal Scroll - Reviews) */}
           <div
             ref={mapRef}
-            className="flex flex-row transform w-[50vw]"
-            style={{
-              transform:
-                scrollY <= 1000
-                  ? `translateX(0%)`
-                  : scrollY >= 2500
-                  ? `translateX(-1500px)`
-                  : `translateX(-${scrollY - 1000}px)`,
-            }}
+            className={`flex flex-row ${
+              restrict ? "transform" : "overflow-scroll"
+            } w-[50vw]`}
+            style={
+              restrict
+                ? {
+                    transform:
+                      scrollY <= 1000
+                        ? `translateX(0%)`
+                        : scrollY >= 2500
+                        ? `translateX(-1500px)`
+                        : `translateX(-${scrollY - 1000}px)`,
+                  }
+                : {}
+            }
           >
             {reviews?.map((v, i) => {
               return (
