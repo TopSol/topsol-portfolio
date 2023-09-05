@@ -21,4 +21,10 @@ export const reviews = [
     desc: "Begin by receiving a comprehensive MVP cost estimation, then smoothly transition to a fixed monthly contract for any additional work needed.",
     avatar: CodeModules,
   },
+  {
+    heading: "Predictable Cost",
+    desc: "Begin by receiving a comprehensive MVP cost estimation, then smoothly transition to a fixed monthly contract for any additional work needed.",
+    avatar: CodeModules,
+  },
+  
 ];

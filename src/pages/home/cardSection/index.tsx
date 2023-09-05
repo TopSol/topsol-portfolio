@@ -1,83 +1,118 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { useEffect, useRef } from "react";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import { reviews } from "./data";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
-export default function CardSection() {
-  const [ref, inView] = useInView();
-  const [scrollDirection, setScrollDirection] = useState("down");
-  const [scrollY, setScrollY] = useState(0);
+gsap.registerPlugin(ScrollTrigger);
 
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+export default function CardSection({ scrollY }) {
+  const containerRef = useRef(null);
+  const mapRef = useRef(null);
 
-    if (currentScrollY > scrollY) {
-      setScrollDirection("down");
-    } else {
-      setScrollDirection("up");
-    }
-
-    setScrollY(currentScrollY);
-  };
+  const [viewRef, isInView] = useInView();
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    const container = containerRef.current;
+    const map = mapRef.current;
+
+    const pinTrigger = ScrollTrigger.create({
+      trigger: container,
+      pin: true,
+      scrub: 0.5,
+      markers: false,
+      start: "top top",
+      end: () => `+=2000`,
+    });
+
+    ScrollTrigger.create({
+      trigger: map,
+      start: "top top",
+      end: "bottom bottom",
+      onToggle: (self) => {
+        if (self.isActive) {
+          pinTrigger.disable();
+        } else {
+          pinTrigger.enable();
+        }
+      },
+    });
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      ScrollTrigger.getAll().forEach((trigger) => {
+        trigger.kill();
+      });
     };
-  }, [scrollY]);
+  }, []);
+
+  console.log(isInView, "scroll", scrollY);
 
   return (
-    <div
-      className="h-screen flex justify-center items-center bg-gradient-to-b from-[#0B234C] to-[#00B8F1] py-4"
-      ref={ref}
+    <motion.div
+      ref={containerRef}
+      initial={{ background: "#fff" }}
+      animate={{
+        background: isInView ? "#0B234C" : "#fff",
+      }}
+      transition={{ duration: 2, ease: "easeInOut" }}
     >
-      <div className="flex flex-row">
-        {/* Upper Section */}
-        <div
-          className="p-2 flex items-center justify-center flex-col mb-8 mr-8"
-          style={{
-            transform:
-              scrollDirection === "up"
-                ? `translateY(-${scrollY}px)`
-                : `translateY(${scrollY}px)`,
-          }}
-        >
-          <h1 className="mb-10 text-4xl font-bold mt-16 max-w-[300px] text-white">
-            Build Smarter Not From Scratch
-          </h1>
-          <div className="w-[150px]">
-            <AnimateHr bgColor={"white"} />
+      <div
+        className={`h-screen flex justify-center items-center py-4 overflow-hidden`}
+        ref={viewRef}
+      >
+        <div className="flex flex-row">
+          {/* Upper Section */}
+          <div
+            className="p-2 flex items-center justify-center flex-col mb-8 mr-8 transform w-[50vw]"
+            style={{
+              transform:
+                scrollY <= 1080
+                  ? `translateY(0%)`
+                  : scrollY >= 1560
+                  ? `translateY(-${480}px)`
+                  : `translateY(-${scrollY - 1080}px)`,
+            }}
+          >
+            <h1 className="mb-10 text-4xl font-bold mt-16 max-w-[300px] text-white">
+              Build Smarter Not From Scratch
+            </h1>
+            <div className="w-[150px]">
+              <AnimateHr bgColor={"white"} />
+            </div>
           </div>
-        </div>
 
-        {/* Lower Section (Horizontal Scroll) */}
-        <div
-          className="flex flex-row overflow-hidden"
-          style={{
-            transform:
-              scrollDirection === "up"
-                ? `translateX(-${scrollY}px)`
-                : `translateX(${scrollY}px)`,
-          }}
-        >
-          {[...reviews, ...reviews, ...reviews, ...reviews, ...reviews]?.map(
-            (review, index) => {
+          {/* Lower Section (Horizontal Scroll - Reviews) */}
+          <div
+            ref={mapRef}
+            className="flex flex-row transform w-[50vw]"
+            style={{
+              transform:
+                scrollY <= 1000
+                  ? `translateX(0%)`
+                  : scrollY >= 3000
+                  ? `translateX(-2000px)`
+                  : `translateX(-${scrollY - 1000}px)`,
+            }}
+          >
+            {reviews?.map((v, i) => {
               return (
                 <img
-                  key={index}
-                  src="https://images.unsplash.com/photo-1653953893860-b8f756596132?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5OHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  key={i}
+                  src={
+                    "https://images.unsplash.com/photo-1653953893860-b8f756596132?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5OHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  }
                   height={700}
                   width={500}
-                  className={`ml-8`}
                   alt="Avatar"
+                  className="ml-8"
                 />
               );
-            }
-          )}
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
