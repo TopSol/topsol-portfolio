@@ -7,12 +7,10 @@ function Process() {
   return (
     <div className="md:container mx-auto">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="md:text-4xl text-2xl text-center font-montserrat font-bold my-4">
+        <h1 className="md:text-6xl text-2xl text-center font-bold my-8">
         Learn Our Recruitment <span className=" text-primary"> Process</span>
         </h1>
-        <div className="w-[150px] my-12">
-          <AnimateHr bgColor="[#00B8F1]" />
-        </div>
+          <AnimateHr bgColor="[#00B8F1] w-[150px] flex my-12" />
       </div>
 
       <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4">

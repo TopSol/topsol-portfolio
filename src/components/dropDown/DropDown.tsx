@@ -1,28 +1,34 @@
-
 import React, { useState } from "react";
 import downImg from "../../images/down.png";
 
 type DropDownProps = {
   buttonTitle: string;
   data: any[];
+//   onChange: (value:string)=> void;
 };
 
 function DropDown({ buttonTitle, data }: DropDownProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState('');
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+  const handleItemClick = (item) => {
+    toggleDropdown();
+    // onChange(item.label); // Call the onChange prop with the selected value
+    setSelectedItem(item.label)
+  };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative w-[100%]">
       <button
         id="dropdownDefaultButton"
         onClick={toggleDropdown}
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        className="text-primary py-4 w-[100%]  bg-primary-white  font-medium rounded-lg text-sm px-5   flex justify-between items-center "
         type="button"
       >
-        {buttonTitle}
+        {selectedItem?selectedItem: buttonTitle}
         <img src={downImg} alt="Dropdown" />
       </button>
       {isOpen && (
@@ -35,13 +41,13 @@ function DropDown({ buttonTitle, data }: DropDownProps) {
             aria-labelledby="dropdownDefaultButton"
           >
             {data.map((item, index) => (
-              <li key={index}>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  {item.dpt}
-                </a>
+              <li key={index} onClick={()=>handleItemClick(item)}
+              className="block hover:cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+
+              >
+                
+                  {item.label}
+                
               </li>
             ))}
           </ul>

@@ -48,7 +48,7 @@ function OurPortfolio() {
       </div>
       <div className="flex justify-center items-center">
         <button
-          className="px-6 py-2 group flex items-center justify-center rounded bg-[#00B8F1] text-white hover:scale-x-125 transform origin-left transition-transform duration-500 ease-in-out"
+          className="px-6 py-2 group flex items-center justify-center rounded bg-primary text-white hover:scale-x-125 transform origin-left transition-transform duration-500 ease-in-out"
           onClick={handleViewMore}
         >
           View more
