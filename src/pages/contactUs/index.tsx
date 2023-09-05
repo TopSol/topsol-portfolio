@@ -5,8 +5,8 @@ import SmallFooter from '../../components/SmallFooter'
 import Footer from '../../components/footerSection'
 import line from '../../images/Frame 74.png'
 import dropDown from '../../images/dropdown.png'
+import contactUs from '../../images/contactUs.png'
 import { btnData } from './data'
-import Header from '../../components/headerSection'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 export default function index() {
@@ -30,36 +30,52 @@ export default function index() {
 
         <div>
             <Navbar />
-            <Header
-        title="Latest"
-        subtitle="Blogs"
-        content="Explore the Latest Blogs on Trends and Technologies"
-        subContent="Welcome to our blog page! Here you will find informative
-         and engaging articles on a variety of topics, including Blockchain,
-         WEB, Development. Our blog is updated regularly with fresh
-         content, so be sure to check back often.We strive to provide
-         insights and perspectives on the latest industrytrends and
-         developments. Whether you‘re looking for inspiration, tips, or
-         simply some interesting reading, our blog has something for
-         everyone.Thanks for visiting and happy reading!"
-        buttonLabel={false}
-        imageUrl="https://res.cloudinary.com/asifsaythe/image/upload/v1693224854/new_portfolio/Frame_1_lv9ucy.png"
-      />
+            <div className='pb-[30px] md:pb-[123px] md:pt-[101px] bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo'>
+
+                <div className='md:w-[80%] md:container md:mx-auto md:flex-row flex flex-col  justify-center'>
+                    <div className='w-full mt-[70px] md:container md:mx-auto md:mt-0  flex flex-col justify-center text-center md:text-left '>
+                        <p className="text-[36px] md:text-[50px] xl:text-[70px]  text-white font-[600]">
+                            Initiate a <br />
+                            <span className="md:inline xl:w-[100%] text-primary">Conversation</span><br />
+                            About Your <br />
+                            <span className="inline md:block text-primary md:text-white">Business</span>
+                        </p>
+                        <div className="my-12 md:container md:mx-auto">
+                            <p className="text-primary-white font-bold font-montserrat">
+                                Every endeavor takes root from a concept. Let's explore,<br /> construct, and nurture your online enterprise
+                            </p>
+                        </div>
+                        <div className="">
+                            <button className="border rounded px-14 py-2 text-primary-white hover:bg-primary">
+                                Start your project
+                            </button>
+                        </div>
+                    </div>
+                    <div className='mt-[36px] md:container md:mx-auto justify-center items-center flex flex-col'>
+                        <img className='items-center w-[90%] md:w-[470]'
+                            src={contactUs} alt="#" />
+                    </div>
+                </div>
+            </div>
             <div className='md:w-[60%] md:justify-center md:mx-auto'>
-                <div className='mt-[24px] md:container md:mx-auto  flex flex-col justify-center items-center md:justify-start md:items-start'>
+                <div className='mt-[118px] md:container md:mx-auto  flex flex-col justify-center items-center md:justify-start md:items-start'>
                     <div>
                         <h1 className=' text-center text-black  text-[22px] md:text-[30px] lg:text-[40px]'>Ready to discuss your project?</h1>
                     </div>
                     <div className=" flex  md:justify-start md:items-start">
-                        <img
-                            src={line}
-                            className="w-[103px]  h-[7px] mt-[22px]"
-                            alt=""
-                        />
+                        <div className="flex justify-center items-center">
+                            <div
+                                className="before:content-[''] before:block before:h-[7px] 
+                                before:bg-[#00B8F1] before:rounded-3xl
+                                before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
+                                before:transition before:ease-in-out before:duration-1000
+                                w-[103px] md:w-[178px] mt-[21px] md:mt-[25px]  "
+                            ></div>
+                        </div>
                     </div>
                 </div>
-                <div className="mt-[24px] mx-[27px] px-[10px] py-[17px] md:container md:mx-auto  bg-light_Grey_bg sm:justify-between  justify-center  rounded-md flex relative">
-                    <h1 className=' flex text-light_Grey  text-[15px]  md:text-[18px]'>
+                <div className="mt-[24px] mx-[27px] px-[10px] py-[17px] md:container md:mx-auto bg-primary-formInput sm:justify-between  justify-center  rounded-md flex relative">
+                    <h1 className=' flex text-light_Grey    md:text-[18px]'>
                         {selectedOption ? `${selectedOption?.name}?` : 'How can we help you?'}
                     </h1>
                     <div className=''>
@@ -74,7 +90,7 @@ export default function index() {
                         </button>
                     </div>
                     {isOpen && (
-                        <ul className="absolute top-full left-0 w-full bg-light_Grey_bg border-gray-300 shadow mt-2">
+                        <ul className="absolute top-full left-0 w-full bg-primary-formInput border-gray-300 shadow mt-2">
                             {btnData.map((option, index) => (
                                 <li
                                     key={index}
@@ -93,14 +109,14 @@ export default function index() {
                     <div className="mb-[24px] md:mr-[21px] w-[85%]  md:container md:mx-auto justify-center">
                         <input
                             type="text"
-                            className="px-[10px] py-[17px] text-light_Grey outline-none rounded-md w-[100%]  bg-light_Grey_bg"
+                            className="px-[10px] py-[17px] text-[18px] text-light_Grey outline-none rounded-md w-[100%]  bg-primary-formInput"
                             placeholder="Name*"
                         />
                     </div>
                     <div className="mb-[24px] w-[85%]  md:container md:mx-auto justify-center ">
                         <input
                             type="text"
-                            className="px-[10px] py-[17px] text-light_Grey outline-none rounded-md w-[100%] bg-light_Grey_bg "
+                            className="px-[10px] text-[18px] py-[17px] text-light_Grey outline-none rounded-md w-[100%] bg-primary-formInput "
                             placeholder="Email*"
                         />
                     </div>
@@ -110,11 +126,11 @@ export default function index() {
                     <div className="  mb-[24px] md:mr-[21px] w-[85%] ">
                         <input
                             type="text"
-                            className="px-[10px] py-[17px] text-light_Grey w-[100%] outline-none rounded-md   bg-light_Grey_bg"
+                            className="px-[10px] text-[18px] py-[17px] text-light_Grey w-[100%] outline-none rounded-md   bg-primary-formInput"
                             placeholder="Organization*"
                         />
                     </div>
-                    <div className="  mb-[24px] w-[85%] text-light_Grey bg-light_Grey_bg">
+                    <div className="  mb-[24px] text-[18px] w-[85%] text-light_Grey bg-primary-formInput">
                         <PhoneInput
                             inputStyle={{
                                 width: "100%",
@@ -134,7 +150,7 @@ export default function index() {
                 <div className="w-[100%] md:container md:mx-auto flex flex-col justify-center items-center  ">
                     <div className='w-[85%] md:w-[100%] '>
                         <textarea
-                            className=" outline-none text-light_Grey px-[10px] py-[17px] h-[100px] md:h-[194px] bg-light_Grey_bg  rounded-md w-[100%]"
+                            className=" outline-none text-[18px] text-light_Grey px-[10px] py-[17px] h-[100px] md:h-[194px] bg-primary-formInput  rounded-md w-[100%]"
                             placeholder="Massage*"
                         ></textarea>
                     </div>
@@ -151,7 +167,7 @@ export default function index() {
                     </div>
                     <div className='w-[85%]'>
                         <button
-                            className={` w-[100%] py-[12px] text-center px-[37px] rounded  text-[18px]   ${isChecked ? 'bg-blue-500 text-white cursor-pointer' : 'bg-light_Grey_bg text-gray-500 cursor-not-allowed'
+                            className={` w-[100%]  py-[12px] text-center px-[37px] rounded  text-[18px]   ${isChecked ? 'bg-blue-500 text-white cursor-pointer' : 'bg-primary-formInput text-gray-500 cursor-not-allowed'
                                 }`}
                             disabled={!isChecked}
                         >
@@ -160,9 +176,9 @@ export default function index() {
                     </div>
                 </div>
             </div>
-<AddressSection/>
-<SmallFooter/>
-<Footer/>
+            <AddressSection />
+            <SmallFooter />
+            <Footer />
         </div>
     )
 }

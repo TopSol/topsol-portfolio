@@ -4,7 +4,7 @@ const Header = ({ title, subtitle, content, subContent, buttonLabel, imageUrl })
 
 
   return (
-    <div className=' pb-[130px] bg-gradient-to-b from-secondary to-primary'>
+    <div className=' pb-[130px] bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo'>
     <div className='md:container md:mx-auto md:flex-row flex flex-col  justify-center items-center'>
       <div className='w-full md:container md:mx-auto  md:w-1/2 flex flex-col justify-center p-4 md:p-8 text-center md:text-left '>
         <div className='flex justify-center mt-[86px] md: container md:mx-auto md:justify-start md:flex-col'>
@@ -18,7 +18,7 @@ const Header = ({ title, subtitle, content, subContent, buttonLabel, imageUrl })
         </button>}
       </div>
       {/* Image */}
-      <div className='w-full md:container md:mx-auto  md:mb-0 md:w-1/2 flex'>
+      <div className='w-full md:container md:mx-auto justify-center  md:mb-0 md:w-1/2 flex'>
      {imageUrl &&   <img className='w-full items-center md:w-[471.22px] h-[456.94px] md:h-auto px-[34px] pt-[35px] md:my-auto' src={imageUrl} alt="#" />}
       </div>
       </div>

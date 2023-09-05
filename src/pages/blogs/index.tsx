@@ -28,22 +28,26 @@ export default function index() {
         imageUrl="https://res.cloudinary.com/asifsaythe/image/upload/v1693224854/new_portfolio/Frame_1_lv9ucy.png"
       />
       <div className='flex flex-col justify-center items-center '>
-        <p className='text-4xl md:text-5xl lg:text-6xl  text-black mt-8 md:mt-16 xl:mt-32'>
+        <p className='text-4xl md:text-5xl lg:text-6xl  text-black mt-[43px] md:mt-[76px]'>
           Top Niches
         </p>
-        <img
-          src={line}
-          className="w-32 md:w-52 h-2 md:h-4 mt-2 md:mt-4"
-          alt=""
-        />
+        <div className="flex justify-center items-center">
+          <div
+            className="before:content-[''] before:block before:h-[7px] 
+            before:bg-[#00B8F1] before:rounded-3xl
+            before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
+            before:transition before:ease-in-out before:duration-1000
+             w-[103px] md:w-[178px] mt-[10px] md:mt-[16px]  "
+          ></div>
+        </div>
       </div>
 
-      <div className=" grid grid-col gap-3 items-center mt-[100px] md:grid-cols-2 lg:grid-cols-4  md:container md:mx-auto ">
+      <div className=" grid grid-col gap-3 items-center mt-[42px] md:mt-[76px] md:grid-cols-2 lg:grid-cols-4  md:container md:mx-auto ">
         {btnData.map((item: any, index) => {
           return (
             <div
-            className={`mx-5 md:mx-5 flex justify-around ${selectedCategory === item.name ? 'bg-primary' : ''}`}
-            key={index}
+              className={`mx-5 md:mx-5 flex justify-around ${selectedCategory === item.name ? 'bg-primary' : ''}`}
+              key={index}
               onClick={() => {
                 console.log("hello im am hear -----------------");
                 setSelectedCategory(item.name);
@@ -51,7 +55,7 @@ export default function index() {
             >
               <PrimaryBtn
                 text={item.name}
-                additionalClasses="bg-primary md:mt-0 px-4 text-[20px] w-full 
+                additionalClasses="bg-primary  px-4 text-[20px] w-full 
                    md:mx-0  hover:bg-primary text-white  "
               />
             </div>
@@ -59,34 +63,43 @@ export default function index() {
         })}
       </div>
       <div>
-      {allData
-    .filter(item => selectedCategory === 'All' || item.catagery === selectedCategory)
-    .map((item, index) => (
-          <div className={` ${item.flexDirection} mt-10 mx-[35px] md:container md:mx-auto  flex flex-col md:flex-row justify-around items-center `} >
-            <div className=' md:w-[48%]'>
-              
-              <img 
-              
-              src={"https://res.cloudinary.com/asifsaythe/image/upload/v1693296182/new_portfolio/man-using-tablet-work-connect-with-others_lhxghw.png"} alt="" />
-              </div>
-            <div className='mt-[14px]  md:w-[48%] ' >
-            <div className='flex items-center'>
+        {allData
+          .filter(item => selectedCategory === 'All' || item.catagery === selectedCategory)
+          .map((item, index) => (
+            <div className={` ${item.flexDirection} mt-10 mx-[35px] md:container md:mx-auto  flex flex-col md:flex-row justify-around items-center `} >
+              <div className=' md:w-[48%]'>
                 <img
-                  src={line}
-                  className="w-[49px] h-[5px] pr-[8px] "
-                  alt=""
-                />
-              <h1 className=' md:text-[18px]  font-semibold lg:text-[35px] text-primary' >{item.title}</h1>
+                  src={"https://res.cloudinary.com/asifsaythe/image/upload/v1693296182/new_portfolio/man-using-tablet-work-connect-with-others_lhxghw.png"} alt="" />
               </div>
-              <p className=' my-[14px] lg:text-[20px] xl:text-[22px] text-gray-400' >{item.description}</p>
-              <PrimaryBtn text='Reade Mores'
-               additionalClasses="bg-primary text-[16px] lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary text-white "
-              />
+              <div className='mt-[14px]  md:w-[48%] ' >
+                <div className='flex items-center'>
+                  {/* <img
+                    src={line}
+                    className="w-[49px] h-[5px] pr-[8px] "
+                    alt=""
+                  /> */}
+                  <div className="flex justify-center items-center">
+                    <div
+                      className="before:content-[''] before:block before:h-[5px] 
+                       before:bg-[#00B8F1] before:rounded-3xl
+                      before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
+                      before:transition before:ease-in-out before:duration-1000
+                       w-[49px]   pr-[8px] "
+                    ></div>
+                  </div>
+                  <h1 className=' md:text-[18px]  font-semibold lg:text-[35px] text-primary' >{item.title}</h1>
+                </div>
+                <p className='w-[100%] md:w-[90%] my-[14px] lg:text-[20px] xl:text-[22px] text-gray-400' >{item.description}</p>
+                <PrimaryBtn text='Reade Mores'
+                  additionalClasses="bg-primary text-[16px] lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary text-white "
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
-      <Footer/>
+      <div className='mt-[100px] md:mt-[139px]'>
+        <Footer />
+      </div>
     </div>
   )
 }
