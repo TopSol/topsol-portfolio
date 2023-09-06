@@ -20,13 +20,13 @@ export default function Hero() {
             </p>
         </div>
         <div className="">
-            <button className="border rounded px-14 py-2 text-primary-white hover:bg-primary">
+            <button className="border text-[26px] font-semibold rounded px-[56px] py-[19px] text-primary-white hover:bg-primary hover:border-primary">
                 Start your project
             </button>
         </div>
     </div>
     <div className='mt-[36px] md:container md:mx-auto justify-center items-center flex flex-col'>
-        <img className='items-center w-[90%] md:w-[470]'
+        <img className='items-center w-[90%] md:w-[100%]'
             src={contactUs} alt="#" />
     </div>
 </div>

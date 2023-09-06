@@ -40,15 +40,15 @@ export default function CommentSection() {
                             </div>
                             <div className=' flex md:w-[100%]  justify-center '>
                                 <textarea
-                                    className="outline-none px-[30px] md:w-[90%] w-[100%]  md:mt-[40px] py-[17px] h-[164px] md:h-[275px] bg-light_Grey_bg rounded-md"
+                                    className="outline-none px-[10px] md:w-[90%] w-[100%]  md:mt-[40px] py-[17px] h-[164px] md:h-[275px] bg-light_Grey_bg rounded-md"
                                     placeholder="Message"
                                 ></textarea>
                             </div>
                         </div>
                     </div>
                     <div className='md:mt-[42px]  mt-[22px] md:w-[90%]  md:container md:mx-auto  flex flex-col justify-center items-center md:items-end '>
-                        <PrimaryBtn text='Done'
-                            additionalClasses=" w-[85%] md:w-[198px] border rounded-md  bg-white  font-semibold hover:bg-primary hover:text-white text-primary "
+                        <PrimaryBtn text='Send'
+                            additionalClasses=" w-[85%] md:w-[198px] rounded-md  bg-white  font-semibold hover:bg-primary hover:text-white text-primary "
                         />
                     </div>
                 </div>

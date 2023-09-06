@@ -6,7 +6,7 @@ export default function DataScience({showFlex}) {
          <div className={`mt-[40px] mx-[37px] md:mt-[50px]  md:container md:mx-auto  md:flex flex-col  justify-center ${
           showFlex ? 'flex' : 'hidden'
         }`}>
-          <h1 className='text-[20px] md:text-[30px] justify-center  text-center md:text-left text-black  font-[600px] '>The Art of Data Science</h1>
+          <h1 className='text-[20px] md:text-[30px] justify-center  text-center md:text-left text-black font-semibold '>The Art of Data Science</h1>
           <div className=" flex justify-center items-center md:justify-start md:items-start">
 
             <div className="flex justify-center items-center">
@@ -19,7 +19,7 @@ export default function DataScience({showFlex}) {
               ></div>
             </div>
           </div>
-          <p className='text-[16px] md:text-[22px] text-center md:text-left text-black  font-[500px] mt-[35px] '> In the vast landscape of modern technology, data has emerged as the new gold. From the intricate
+          <p className='text-[16px] md:text-[22px] text-center md:text-left text-black font-medium mt-[35px] '> In the vast landscape of modern technology, data has emerged as the new gold. From the intricate
             patterns of consumer behavior to the deep insights hidden withinbusiness operations, data holds
             the key to unlocking unprecedented opportunities. This is where the realm of Data Science steps in,
             transforming raw information into actionable intelligence</p>

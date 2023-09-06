@@ -6,11 +6,12 @@ export default function Card() {
 
   return (
     <div>
-        <div className=" grid grid-col gap-3 items-center mt-[42px] md:mt-[76px] md:grid-cols-2 lg:grid-cols-4  md:container md:mx-auto ">
+      <div className=' lg:w-[100%] xl:w-[84%] justify-center mx-auto'>
+        <div className=" md:container grid grid-col gap-3 items-center mt-[42px] md:mt-[76px] md:grid-cols-2 lg:grid-cols-4   md:mx-auto ">
         {btnData.map((item: any, index) => {
           return (
             <div
-              className={`mx-5 md:mx-5 flex justify-around ${selectedCategory === item.name ? 'bg-primary' : ''}`}
+              className={`mx-5 md:mx-5 flex rounded justify-around ${selectedCategory === item.name ? 'bg-primary' : ''}`}
               key={index}
               onClick={() => {
                 console.log("hello im am hear -----------------");
@@ -20,11 +21,12 @@ export default function Card() {
               <PrimaryBtn
                 text={item.name}
                 additionalClasses="bg-primary  px-4 text-[20px] w-full 
-                   md:mx-0  hover:bg-primary text-white  "
+                   md:mx-0 hover:bg-primary-lighter text-white font-semibold rounded"
               />
             </div>
           );
         })}
+      </div>
       </div>
       <div>
         {allData
@@ -47,11 +49,11 @@ export default function Card() {
                        w-[49px]   pr-[8px] "
                     ></div>
                   </div>
-                  <h1 className=' md:text-[18px]  font-semibold lg:text-[35px] text-primary' >{item.title}</h1>
+                  <h1 className=' md:text-[18px]  font-semibold lg:text-[35px]  text-primary' >{item.title}</h1>
                 </div>
-                <p className='w-[100%] md:w-[100%] my-[14px] lg:text-[20px] xl:text-[22px] text-gray-400' >{item.description}</p>
+                <p className=' my-[14px] lg:text-[20px] font-medium xl:text-[22px] text-gray-400' >{item.description}</p>
                 <PrimaryBtn text='Reade Mores'
-                  additionalClasses="bg-primary text-[16px] lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary text-white "
+                  additionalClasses="bg-primary text-[16px] lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary-lighter text-white "
                 />
               </div>
             </div>
