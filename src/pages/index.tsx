@@ -7,9 +7,7 @@ import Home from "./home";
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <div>
-      <Layout>
       <Home/>
-      </Layout>
     </div>
   )
 }

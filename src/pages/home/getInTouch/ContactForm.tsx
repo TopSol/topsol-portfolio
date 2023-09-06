@@ -12,7 +12,7 @@ function ContactForm() {
     alert("helo");
   };
   return (
-    <div className=" sm:border rounded-2xl sm:p-8 max-w-lg mx-auto">
+    <div className=" sm:border rounded-2xl sm:p-8 ">
       <input
         type="text"
         placeholder="How can we help?"

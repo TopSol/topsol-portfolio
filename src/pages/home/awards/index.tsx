@@ -67,7 +67,7 @@ function Awards() {
         <div className="flex flex-col justify-center items-center">
         <div className="">
           <h1 className="font-extrabold mt-[68px] font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
-            People Like us, officially
+          Awards and Honors
           </h1>
         </div>
         <div
