@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function DataScience({showFlex}) {
   return (
-    <div>
-         <div className={` md:mt-[50px]  md:container md:mx-auto  md:flex flex-col  justify-center ${
+    <div className='md:w-[80%] md:justify-center md:mx-auto'>
+         <div className={`mt-[40px] mx-[37px] md:mt-[50px]  md:container md:mx-auto  md:flex flex-col  justify-center ${
           showFlex ? 'flex' : 'hidden'
         }`}>
           <h1 className='text-[20px] md:text-[30px] justify-center  text-center md:text-left text-black  font-[600px] '>The Art of Data Science</h1>
