@@ -4,10 +4,10 @@ import downImg from "../../images/down.png";
 type DropDownProps = {
   buttonTitle: string;
   data: any[];
-//   onChange: (value:string)=> void;
+  className?:string,
 };
 
-function DropDown({ buttonTitle, data }: DropDownProps) {
+function DropDown({ buttonTitle, data, className }: DropDownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState('');
 
@@ -16,16 +16,15 @@ function DropDown({ buttonTitle, data }: DropDownProps) {
   };
   const handleItemClick = (item) => {
     toggleDropdown();
-    // onChange(item.label); // Call the onChange prop with the selected value
     setSelectedItem(item.label)
   };
 
   return (
-    <div className="relative w-[100%]">
+    <div className={`relative ${className}`}>
       <button
         id="dropdownDefaultButton"
         onClick={toggleDropdown}
-        className="text-primary py-4 w-[100%]  bg-primary-white  font-medium rounded-lg text-sm px-5   flex justify-between items-center "
+        className="text-primary py-4 w-[100%] h-[100%]  bg-primary-white font-medium rounded-lg text-xl px-5 flex items-center justify-between "
         type="button"
       >
         {selectedItem?selectedItem: buttonTitle}

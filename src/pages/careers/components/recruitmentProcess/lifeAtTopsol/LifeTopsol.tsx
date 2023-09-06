@@ -21,17 +21,14 @@ function LifeTopsol() {
     responsive: [
       {
         breakpoint: 1024,
-        settings: 'unslick'
-        
+        settings: "unslick",
       },
       {
         breakpoint: 769,
         settings: {
-          
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
-
         },
       },
       {
@@ -40,7 +37,6 @@ function LifeTopsol() {
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
-
         },
       },
     ],
@@ -57,8 +53,8 @@ function LifeTopsol() {
           <h1 className="md:text-6xl lg:text-start text-center text-3xl font-semibold mb-8 md:mt-[161px] mt-[51px]">
             Life at Topsol
           </h1>
-            <AnimateHr bgColor="[#00B8F1]" className=" w-[150px]"/>
-          <p className=" text-xl md:mx-0 mx-[34px]  lg:text-start text-center font-medium my-10 flex items-center md:leading-10 leading-7 md:max-w-[628px] md:h-[297px] max-w-[252px] h-[510px]">
+          <AnimateHr bgColor="[#00B8F1]" className=" w-[150px]" />
+          <p className=" text-xl md:mx-0 mx-8   lg:text-start text-center font-medium my-10 flex items-center md:leading-10 leading-7 lg:max-w-[628px] lg:h-[297px]">
             Life at Topsol is more than just a job - it's an immersive
             experience that combines innovation, camaraderie, and personal
             growth. From the moment you step through our doors, you'll become a
@@ -85,52 +81,68 @@ function LifeTopsol() {
         </div>
 
         <div className="md:flex  justify-center gap-[42px] hidden">
-         
-            <div className="lg:mt-[141px] lg:mb-0 mb-[150px] mt-20 flex flex-col gap-y-10">
-              <SmallCards
-                avatar={careerCardOne}
-                heading={"Large Beautiful Office"}
-                text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-                color="cardBg"
-                className="bg-primary-cardBg"
-              />
-              
-              <SmallCards
-                avatar={careerCardOne}
-                heading={"Large Beautiful Office"}
-                text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-                color="cardBg"
-              />
-              </div>
-            
-            <div className="lg:mt-[219px] mt-20 flex flex-col gap-y-10">
-              <SmallCards
-                avatar={careerCardOne}
-                heading={"Large Beautiful Office"}
-                text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-                color="cardBg"
-              />
-              
-              <SmallCards
-                avatar={careerCardOne}
-                heading={"Large Beautiful Office"}
-                text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-                color="cardBg"
-              />
-              </div>
-          
+          <div className="lg:mt-[141px] lg:mb-0 mb-[150px] mt-20 flex flex-col gap-y-10">
+            <SmallCards
+              avatar={careerCardOne}
+              heading={"Large Beautiful Office"}
+              headingClass={"font-semibold text-sm"}
+              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
+              textClass="text-[11px] font-normal"
+              color="cardBg"
+              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
+            />
+
+            <SmallCards
+              avatar={careerCardOne}
+              heading={"Large Beautiful Office"}
+              headingClass={"font-semibold text-sm"}
+              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
+              textClass="text-[11px] font-normal"
+              color="cardBg"
+              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
+            />
+          </div>
+
+          <div className="lg:mt-[219px] mt-20 flex flex-col gap-y-10">
+            <SmallCards
+              avatar={careerCardOne}
+              heading={"Large Beautiful Office"}
+              headingClass={"font-semibold text-sm"}
+              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
+              textClass="text-[11px] font-normal"
+              color="cardBg"
+              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
+            />
+
+            <SmallCards
+              avatar={careerCardOne}
+              heading={"Large Beautiful Office"}
+              headingClass={"font-semibold text-sm"}
+              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
+              textClass="text-[11px] font-normal"
+              color="cardBg"
+              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
+            />
+          </div>
         </div>
         <div className=" md:hidden grid grid-cols-1 mt-[63px] mb-[70px]">
           {
             <Slider {...settings}>
-            {cardsData?.map((review, index) => {
-              return (
-                <div key={index} className="">
-                  <SmallCards heading={review.heading} text={review.text} avatar={review.avatar} className="bg-primary-cardBg mx-auto" />
-                </div>
-              );
-            })}
-          </Slider>
+              {cardsData?.map((review, index) => {
+                return (
+                  <div key={index} className="">
+                    <SmallCards
+                      heading={review.heading}
+                      headingClass="font-semibold text-sm"
+                      textClass="text-[11px] font-normal"
+                      text={review.text}
+                      avatar={review.avatar}
+                      className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[217px]  p-[22px]"
+                    />
+                  </div>
+                );
+              })}
+            </Slider>
           }
         </div>
       </div>

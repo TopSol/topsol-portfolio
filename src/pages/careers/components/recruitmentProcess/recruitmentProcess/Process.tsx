@@ -5,23 +5,25 @@ import SmallCards from "../../../../../components/smallCards/SmallCards";
 
 function Process() {
   return (
-    <div className="md:container mx-auto">
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="md:text-6xl text-2xl text-center font-bold my-8">
+    <div className="md:container mx-auto  flex flex-col justify-center items-center">
+      <div className="flex flex-col sm:items-center sm:justify-center">
+        <h1 className="md:text-6xl text-3xl md:text-center font-semibold md:mt-[76px] mt-[35px] md:ml-0 md:mr-0 ml-7 mr-[100px] mb-[15px]">
         Learn Our Recruitment <span className=" text-primary"> Process</span>
         </h1>
-          <AnimateHr bgColor="[#00B8F1] w-[150px] flex my-12" />
+          <AnimateHr bgColor="[#00B8F1]" className="w-[150px] md:ml-0 ml-7" />
       </div>
 
-      <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 md:gap-10 gap-[30px] xl:mx-0 md:mx-4 md:my-[76px] my-12">
         {cardsData?.map((data, index) => {
           return (
             <div key={index} className="flex justify-center items-center">
               <SmallCards
                 avatar={data.avatar}
                 heading={data.heading}
+                headingClass="text-[20px] font-semibold"
+                textClass="text-[11px] font-normal"
                 text={data.text}
-                className="border group py-6 "
+                className=" border border-primary-smCardBorder group max-w-[265px] h-[299px] py-[38px] pl-[32px] pr-[56px]"
                 color="white"
               />
             </div>

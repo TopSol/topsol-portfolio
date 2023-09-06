@@ -25,7 +25,8 @@ module.exports = {
           navbarBg: '#0B234C',
           navItemBg:' #000a4c',
           darkGray: '#555555',
-          cardBg: '#F7F7F7'
+          cardBg: '#F7F7F7',
+          smCardBorder: '#F4F4F4'
           
         },
         secondary: {
