@@ -17,7 +17,7 @@ export default function index() {
     slidesToScroll: 1,
   };
   return (
-    <div className=" overflow-x-hidden flex justify-center ">
+    <div className=" overflow-x-hidden mt-[69px] lg:mt-[0px] flex justify-center ">
       <div className="w-[90%]  md:w-[60%] ">
         <div className="flex flex-col justify-center items-center">
         <div className="">

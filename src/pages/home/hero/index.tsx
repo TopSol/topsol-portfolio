@@ -22,7 +22,7 @@ export default function Hero() {
         </p>
         <div className="bg-transparent    " ></div>
         <div className="flex flex-col mt-[54px]  sm:flex-row gap-[17px]">
-        <PrimaryBtn text="Let’s Talk " additionalClasses=" text-[20px] font-semibold  hover:bg-[#0080A7] text-white rounded-[10px]  " />
+        <PrimaryBtn text="Let’s Talk " additionalClasses=" text-[20px] font-semibold  hover:bg-secondary-light text-white rounded-[10px]  " />
         <PrimaryBtn text="Get a quote" additionalClasses="text-primary text-[20px] font-semibold bg-transparent border-2 border-primary hover:text-white hover:bg-primary rounded-[10px] " />
 
         </div>
