@@ -19,54 +19,54 @@ function GetInTouch() {
               before:transition before:ease-in-out before:duration-1000 mr-44 mt-[18px]"
           ></div>
           </div>
-      <div className=" mt-[84px] flex justify-center items-center md:container mx-auto ">
-        <div className=" mr-[74px]">
-          <div>
-            <img src={touchImg1} className="" />
+      <div className=" mt-[84px] flex justify-center  md:container mx-auto ">
+        <div className=" mr-[74px] lg:flex flex-col hidden ">
+          <div className="flex justify-center">
+            <img src={touchImg1} className="h-[102px] w-[144px]" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold my-6">
+            <h2 className="text-[30px] mt-[40px] font-semibold my-6">
               Let's Discuss Your Project
             </h2>
-            <ul className="">
-              <li className="flex py-2 ">
-                <img src={check1} className="mr-4" /> Efficient Communication
+            <ul className=" mt-[36px] ">
+              <li className="flex py-2  ">
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Efficient Communication</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Privacy and Security{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Privacy and Security</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Fast Response{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Fast Response</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Reduced Email Clutter{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Reduced Email Clutter</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Customization{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Customization</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Automated Routing{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Automated Routing</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Consistency{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Consistency</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Professionalism{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Professionalism</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Less Spam{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Less Spam</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Engagement{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Engagement</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> 24/7 Availability
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">24/7 Availability</p>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="w-[40%] ">
+        <div className="lg:w-[45%] w-[90%]  ">
           <ContactForm />
         </div>
       </div>

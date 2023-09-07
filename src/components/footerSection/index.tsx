@@ -37,7 +37,7 @@ export default function Footer() {
 
               </div>
             </div>
-            <div className="sm:grid hidden">
+            <div className="md:grid hidden justify-center">
               <h2 className="mb-[40px] text-[18px] font-semibold ">Services</h2>
               <ul className="text-base font-normal space-y-[26px] " >
                 <li >DevOps</li>
@@ -47,7 +47,7 @@ export default function Footer() {
                 <li >App Development</li>
               </ul>
             </div>
-            <div className="sm:grid hidden">
+            <div className="md:grid hidden ">
               <h1 className="mb-[40px] text-[18px] font-semibold">Quick Links</h1>
               <ul className="text-base font-normal space-y-[26px]">
                 <li >Blog</li>
@@ -57,9 +57,9 @@ export default function Footer() {
                 <li >Contact us</li>
               </ul>
             </div>
-            <div className="">
-              <h1 className="mb-[40px] text-[18px] font-semibold">Contact</h1>
-              <ul className="text-base font-normal space-y-[26px]" >
+            <div className="mt-[60px] md:mt-0">
+              <h1 className="mb-[40px] text-[18px] ml-[7px]  font-semibold">Contact</h1>
+              <ul className="text-base font-normal space-y-[16px]" >
                 <li className="flex my-4 ">
                   <img
                     src={locate}
@@ -77,7 +77,8 @@ export default function Footer() {
                     decoding="async"
                     className="logo_default h-6 mr-4"
                   />
-                  +92-303-6362191
+                  +92-303-6362191 <br />
+                  (041)8557244
                 </li>
                 <li className="flex flex-wrap my-4">
                   <img
@@ -92,12 +93,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* <div className="border-t  border-white my-4 w-full sm:grid hidden"></div>
-           */}
+          <div className=" sm:grid hidden">
             <hr className="mt-[82px]" />
           <div className="text-center text-white mt-[39px] mb-[70px] ">
             © 2023 | All rights reserved
           </div>
+        </div>
         </div>
       </div>
     </div>
