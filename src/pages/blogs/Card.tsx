@@ -28,11 +28,11 @@ export default function Card() {
         })}
       </div>
       </div>
-      <div>
+      <div className='md:mt-[99px] mt-[42px] space-y-[39px] md:space-y-[123px]'>
         {allData
           .filter(item => selectedCategory === 'All' || item.catagery === selectedCategory)
           .map((item, index) => (
-            <div className={` ${item.flexDirection} mt-10 mx-[35px] md:container md:mx-auto  flex flex-col md:flex-row justify-around items-center `} >
+            <div className={` ${item.flexDirection}  mx-[35px] xl:w-[90%] md:container md:mx-auto  flex flex-col md:flex-row justify-around items-center `} >
               <div className=' md:w-[100%] mx-0 md:mx-[50px]'>
                 <img
                   src={"https://res.cloudinary.com/asifsaythe/image/upload/v1693296182/new_portfolio/man-using-tablet-work-connect-with-others_lhxghw.png"} alt="" />
@@ -49,11 +49,11 @@ export default function Card() {
                        w-[49px]   pr-[8px] "
                     ></div>
                   </div>
-                  <h1 className=' md:text-[18px]  font-semibold lg:text-[35px]  text-primary' >{item.title}</h1>
+                  <h1 className=' md:text-[18px]  font-semibold lg:text-[25px] xl:text-[35px]  text-primary' >{item.title}</h1>
                 </div>
                 <p className=' my-[14px] lg:text-[20px] font-medium xl:text-[22px] text-gray-400' >{item.description}</p>
                 <PrimaryBtn text='Reade Mores'
-                  additionalClasses="bg-primary text-[16px] lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary-lighter text-white "
+                  additionalClasses="bg-primary text-[16px] md:px-[79px] px-10 lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary-lighter text-white "
                 />
               </div>
             </div>
