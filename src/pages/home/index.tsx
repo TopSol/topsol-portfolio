@@ -20,9 +20,8 @@ function Home() {
       <OurPortfolio />
       <RatingSection />
       <Awards />
-
-      <div className="mb-[116px]" >
-      <GetInTouch />
+      <div className="mb-[116px]">
+        <GetInTouch />
       </div>
       <Footer />
     </div>

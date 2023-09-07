@@ -20,14 +20,13 @@ function TopSolExperts() {
 
   return (
     <div className="flex flex-col justify-center h-[100%] items-center bg-gradient-to-b from-secondary to-primary ">
-       <div className="w-[10%] relative right-44 bottom-6  " >
-            <div className="absolute  " >
-          <CircleImage/>
-            </div>
-          </div>
+      <div className="w-[10%] relative right-44 bottom-6  ">
+        <div className="absolute  ">
+          <CircleImage />
+        </div>
+      </div>
       <div className="flex flex-col justify-center items-center ">
         <div className="">
-         
           <h1 className="font-extrabold mt-[54px] text-white font-montserrat text-[26px] md:text-34[px] lg:text-4xl text-center">
             Why Topsol Experts
           </h1>
@@ -41,19 +40,19 @@ function TopSolExperts() {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-y-5  md:gap-x-[40px] mt-[59px] ">
           <button
             onClick={() => handleCategoryChange("Values")}
-            className={` text-primary bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
+            className={` text-primary cursor-default bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
           >
             Values
           </button>
           <button
             onClick={() => handleCategoryChange("Industries")}
-            className={` text-primary bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
+            className={` text-primary  cursor-default bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
           >
             Industries
           </button>
           <button
             onClick={() => handleCategoryChange("Technologies")}
-            className={`  text-primary bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold`}
+            className={`  text-primary  cursor-default bg-white hover:text-white px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold`}
           >
             Technologies
           </button>

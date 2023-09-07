@@ -10,12 +10,12 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const [hover, setHover] = useState(false);
 
-  const logoImage = hover && !open ? logoTwo : logo;
-  const menuIcon = hover && !open ? menuTwo : navbarMenu;
   return (
     <div
       className={`relative bg-primary-navbarBg ${
-        !open ? "hover:bg-primary-white transition-colors duration-500" : "bg-primary-navbarBg"
+        !open
+          ? "hover:bg-primary-white transition-colors duration-500"
+          : "bg-primary-navbarBg"
       }`}
     >
       <div className="md:container  mx-auto " id="navbar">
@@ -37,12 +37,16 @@ function Navbar() {
           >
             <div className="py-2">
               <Link to="/">
-                <img src={logoImage} alt="TopSol" decoding="async" />
+                <img
+                  src={hover ? logoTwo : logo}
+                  alt="TopSol"
+                  decoding="async"
+                />
               </Link>
             </div>
             <div>
               <img
-                src={menuIcon}
+                src={hover ? menuTwo : navbarMenu}
                 onClick={() => setOpen(true)}
                 className={` cursor-pointer ${open ? "hidden" : "block"} `}
               />
@@ -57,6 +61,7 @@ function Navbar() {
             <div className={`w-full  ${open ? "block" : "hidden"}`} id="menu">
               <ul
                 className="
+                z-50
               mr-8
               pt-20
               flex items-center flex-col h-screen w-screen
