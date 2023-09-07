@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ExpertCards from "../expertCards/ExpertCards";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import { Industries, Technologies, Values } from "./data";
-
+import CircleImage from "../../../components/CircleImage";
 function TopSolExperts() {
   const [selectedCategory, setSelectedCategory] = useState("Values");
   const handleCategoryChange = (category: string) => {
@@ -19,10 +19,16 @@ function TopSolExperts() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center bg-gradient-to-b from-secondary to-primary ">
+    <div className="flex flex-col justify-center h-[100%] items-center bg-gradient-to-b from-secondary to-primary ">
+       <div className="w-[10%] relative right-44 bottom-6  " >
+            <div className="absolute  " >
+          <CircleImage/>
+            </div>
+          </div>
       <div className="flex flex-col justify-center items-center ">
         <div className="">
-          <h1 className="font-extrabold mt-[64px] text-white font-montserrat text-[26px] md:text-34[px] lg:text-4xl text-center">
+         
+          <h1 className="font-extrabold mt-[54px] text-white font-montserrat text-[26px] md:text-34[px] lg:text-4xl text-center">
             Why Topsol Experts
           </h1>
         </div>
@@ -54,14 +60,13 @@ function TopSolExperts() {
         </div>
       </div>
 
-      <div className=" container flex flex-col items-center justify-center mt-[42px] px-4 mb-[154px] bg-white rounded-[20px]">
-        <p className="text-[#737373] text-center mt-[49px]">
+      <div className=" container flex flex-col items-center  mt-[42px] px-4 mb-[154px]  bg-white rounded-[20px]">
+        <p className="text-[#737373] mt-[49px] text-center ">
           We Go Beyond to Cultivate a Workspace Where Safety, Value, and
           Motivation are Nurtured for Everyone
         </p>
-
         <div
-          className={`grid mt-[75px] mb-[105px] ${
+          className={`grid mt-[75px] min-h-[200px]   mb-[105px] ${
             selectedCategory === "Technologies"
               ? "md:grid-cols-8 gap-x-[41px]"
               : " md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5            gap-x-[28px]"
