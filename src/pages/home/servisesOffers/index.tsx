@@ -34,13 +34,13 @@ function ServicesOffers() {
           </div>
         </div>
       </div>
-      <div className="md:container relative hidden   2xl:right-24 mx-auto lg:flex justify-end " >
+      <div className="md:container relative hidden   2xl:right-24 mx-auto lg:flex justify-end ">
         <div className="absolute  ">
           <img src={circleImg} className="" alt="" />
         </div>
       </div>
 
-      <div className="grid mt-[36px] md:mt-[85px] gap-[27px] md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid mt-[36px] md:mt-[85px] gap-x-[27px] gap-y-[48px] md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
         {cards?.map((item, index) => (
           <div key={index}>
             <Link to={"/services"}>

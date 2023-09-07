@@ -32,34 +32,37 @@ export default function Footer() {
               </div>
               <div className="flex space-x-4 mt-[34px] ">
                 <AiFillLinkedin className="w-[30px] h-[30px] " />
-                <BsInstagram  className="w-[30px] h-[30px] " />
-                <FaFacebook  className="w-[30px] h-[30px] " />
-
+                <BsInstagram className="w-[30px] h-[30px] " />
+                <FaFacebook className="w-[30px] h-[30px] " />
               </div>
             </div>
             <div className="md:grid hidden justify-center">
               <h2 className="mb-[40px] text-[18px] font-semibold ">Services</h2>
-              <ul className="text-base font-normal space-y-[26px] " >
-                <li >DevOps</li>
-                <li >UX/UI Design</li>
-                <li >Web Development</li>
-                <li >Business Strategy</li>
-                <li >App Development</li>
+              <ul className="text-base font-normal space-y-[26px] ">
+                <li>DevOps</li>
+                <li>UX/UI Design</li>
+                <li>Web Development</li>
+                <li>Business Strategy</li>
+                <li>App Development</li>
               </ul>
             </div>
             <div className="md:grid hidden ">
-              <h1 className="mb-[40px] text-[18px] font-semibold">Quick Links</h1>
+              <h1 className="mb-[40px] text-[18px] font-semibold">
+                Quick Links
+              </h1>
               <ul className="text-base font-normal space-y-[26px]">
-                <li >Blog</li>
-                <li >About us</li>
-                <li >Portfolio</li>
-                <li >Careers</li>
-                <li >Contact us</li>
+                <li>Blog</li>
+                <li>About us</li>
+                <li>Portfolio</li>
+                <li>Careers</li>
+                <li>Contact us</li>
               </ul>
             </div>
             <div className="mt-[60px] md:mt-0">
-              <h1 className="mb-[40px] text-[18px] ml-[7px]  font-semibold">Contact</h1>
-              <ul className="text-base font-normal space-y-[16px]" >
+              <h1 className="mb-[40px] text-[18px] ml-[7px]  font-semibold">
+                Contact
+              </h1>
+              <ul className="text-base font-normal space-y-[16px]">
                 <li className="flex my-4 ">
                   <img
                     src={locate}
@@ -94,11 +97,11 @@ export default function Footer() {
           </div>
 
           <div className=" sm:grid hidden">
-            <hr className="mt-[82px]" />
-          <div className="text-center text-white mt-[39px] mb-[70px] ">
-            © 2023 | All rights reserved
+            <hr className="mt-[82px]  " />
+            <div className="text-center text-white mt-[39px] mb-[70px] ">
+              © 2023 | All rights reserved
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
