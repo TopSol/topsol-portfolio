@@ -25,11 +25,11 @@ export default function ProjectSection() {
         <div>
             {
                 showData.map((item:any,index)=>{
-                    return <PortfolioCard direction={item.side} textColor={"text-white"} heading={item.heading} discription={item.detail} />
+                    return <PortfolioCard direction={item.side} textColor={"text-white"} heading={item.heading} discription={item.detail} lineBgColor='#CCF3FF'/>
                 })
             }      
         </div>
-        <div className="flex flex-col justify-center  mx-auto w-[250px]" >
+        <div className="flex flex-col justify-center mt-[67px]  mx-auto w-[250px]" >
         <PrimaryBtn text="View More" additionalClasses="bg-white text-primary" />  
         </div>
       </div>

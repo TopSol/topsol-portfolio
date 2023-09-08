@@ -38,6 +38,7 @@ module.exports = {
         },
         textColors: "#000000",
         light_Grey:'#707070',
+        light_Black:'#3D3D3D'
         
       },
     },

@@ -3,8 +3,7 @@ import PrimaryBtn from "../../components/PrimaryBtn";
 import { btnData, allData } from "./data";
 import { Link } from "gatsby";
 export default function Card() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
+  const [selectedCategory, setSelectedCategory] = useState("All");    
   return (
     <div>
       <div className=" lg:w-[100%] xl:w-[84%] justify-center mx-auto">
@@ -31,7 +30,7 @@ export default function Card() {
           })}
         </div>
       </div>
-      <div className="md:mt-[99px] mt-[42px] space-y-[39px] md:space-y-[123px]">
+      <div className="md:mt-[99px]  mt-[42px] space-y-[39px] md:space-y-[123px]">
         {allData
           .filter(
             (item) =>
@@ -39,13 +38,13 @@ export default function Card() {
           )
           .map((item, index) => (
             <div
-              className={` ${item.flexDirection} px-3 sm:mx-5  md:container md:mx-auto  flex flex-col lg:flex-row justify-center items-center `}
+              className={` ${item.flexDirection} px-5   md:container md:mx-auto  flex flex-col md:flex-row justify-center  `}
             >
               <div
-                className={` lg:w-[40%] flex ${
-                  item.flexDirection === "lg:flex-row"
-                    ? "justify-end lg:mr-[50px] "
-                    : "justify-start lg:ml-[50px] "
+                className={` md:w-[50%]  flex ${
+                  item.flexDirection === "md:flex-row"
+                    ? "justify-start md:mr-[50px] xl:mr-0"
+                    : "justify-end  md:ml-[50px] xl:ml-0"
                 }   `}
               >
                 <img
@@ -56,8 +55,8 @@ export default function Card() {
                   alt=""
                 />
               </div>
-              <div className="mt-[14px] lg:w-[40%]   ">
-                <div className="flex items-center">
+              <div className=" md:w-[45%] mt-[14px] md:mt-0  ">
+                <div className="flex ">
                   <div className="flex justify-center items-center">
                     <div
                       className="before:content-[''] before:block before:h-[5px] 
@@ -67,17 +66,17 @@ export default function Card() {
                        w-[49px]   pr-[8px] "
                     ></div>
                   </div>
-                  <h1 className=" md:text-[18px]  font-semibold lg:text-[25px] xl:text-[35px]  text-primary">
+                  <h1 className=" md:text-[18px]   font-semibold lg:text-[25px] xl:text-[35px]  text-primary">
                     {item.title}
                   </h1>
                 </div>
-                <p className=" my-[14px] text-justify lg:text-[20px] font-medium xl:text-[22px] text-gray-400">
+                <p className=" text-justify mt-[14px] lg:text-[20px] font-medium xl:text-[22px] text-light_Black ">
                   {item.description}
                 </p>
                 <Link to={"/readMore"}>
                   <PrimaryBtn
                     text="Reade Mores"
-                    additionalClasses="bg-primary text-[16px] md:px-[79px] px-10 lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary-lighter text-white "
+                    additionalClasses="bg-primary mt-[14px] text-[16px] md:px-[79px] px-10 lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary-lighter text-white "
                   />
                 </Link>
               </div>

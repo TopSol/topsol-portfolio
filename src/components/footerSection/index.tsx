@@ -63,7 +63,7 @@ export default function Footer() {
                 Contact
               </h1>
               <ul className="text-base font-normal space-y-[16px]">
-                <li className="flex my-4 ">
+                <li className="flex my-4  items-center">
                   <img
                     src={locate}
                     alt="map"
@@ -73,7 +73,7 @@ export default function Footer() {
                   Sitara Techno Park, 2nd Floor, Lower Canal Road East
                   Faisalabad, Pakistan
                 </li>
-                <li className="flex flex-wrap my-4">
+                <li className="flex flex-wrap my-4 items-center">
                   <img
                     src={contact}
                     alt="contact"

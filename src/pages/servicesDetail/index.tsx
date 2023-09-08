@@ -2,45 +2,31 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import InfoSection from "../../components/infoSection";
 import Footer from "../../components/footerSection";
-import { data,data2 } from "./data";
+import { data, data2 } from "./data";
 import PrimaryBtn from "../../components/PrimaryBtn";
-import HeaderSection from "../../components/headerSection";
 import PortfolioCard from "../../components/portfolioCard";
+import HeroSection from "./component/HeroSection";
 import FileIcon from "../../images/Icons/fileIcon.png";
 import ProjectSection from "./component/projectSection";
 export default function index() {
-    
 
-    const showData = data2.slice(1, 3);
+
+  const showData = data2.slice(1, 3);
   return (
     <div>
       <Navbar />
-      <HeaderSection
-        title="Latest"
-        subtitle="Blogs"
-        content="Explore the Latest Blogs on Trends and Technologies"
-        subContent="Welcome to our blog page! Here you will find informative
-         and engaging articles on a variety of topics, including Blockchain,
-         WEB, Development. Our blog is updated regularly with fresh
-         content, so be sure to check back often.We strive to provide
-         insights and perspectives on the latest industrytrends and
-         developments. Whether you‘re looking for inspiration, tips, or
-         simply some interesting reading, our blog has something for
-         everyone.Thanks for visiting and happy reading!"
-        buttonLabel={false}
-        imageUrl="https://res.cloudinary.com/asifsaythe/image/upload/v1693224854/new_portfolio/Frame_1_lv9ucy.png"
-      />
+      <HeroSection />
       <InfoSection />
 
-      <div className="  mx-5 md:container md:mx-auto my-[100px]">
-        <div className="md:w-[75%]" >
-        <h1 className=" text-[30px] md:text-[40px] font-montserrat font-bold">
-          Ready to Outshine Your Competitors Online?
-        </h1>
-        <p className="text-2xl mt-[30px]">
-          Topsol crafts websites that captivate customers, load swiftly, offer
-          effortless maintenance, and adapt seamlessly to your business growth.
-        </p>
+      <div className="  mx-5 md:container md:mx-auto md:my-[100px] my-[50px] flex flex-row  justify-center">
+        <div className=" md:w-[90%] w-[100%] text-center md:text-left flex flex-col md:justify-center" >
+          <h1 className=" text-[20px] lg:text-[40px] font-semibold">
+            Ready to Outshine Your Competitors Online?
+          </h1>
+          <p className="lg:text-[24px] text-[20px] font-medium mt-[30px]">
+            Topsol crafts websites that captivate customers, load swiftly, offer
+            effortless maintenance, and adapt seamlessly to your business growth.
+          </p>
         </div>
       </div>
 
@@ -48,9 +34,9 @@ export default function index() {
         {data.map((item: any, index) => {
           return (
             <div className="px-[25px] mx-5 md:mx-0 border-primary hover:bg-primary hover:text-white border-2 rounded-xl  py-2 ">
-              <img src={FileIcon}  className="w-[60px] bg-white rounded-full p-3 h-[60px] " alt="" />
+              <img src={FileIcon} className="w-[60px] bg-white rounded-full p-3 h-[60px] " alt="" />
               <h1 className="font-semibold text-[20px] font-montserrat my-3 ">
-               {item.heading}
+                {item.heading}
               </h1>
               <p className="text-[11px] font-montserrat">
                 {item.detail}
@@ -60,7 +46,7 @@ export default function index() {
         })}
       </div>
 
-      <ProjectSection/>
+      <ProjectSection />
       <Footer />
     </div>
   );

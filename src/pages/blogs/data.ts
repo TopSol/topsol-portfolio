@@ -23,7 +23,7 @@ export const allData = [
     catagery: "All",
     description:
       "In the vast landscape of modern technology, data has emerged as the new gold. From the intricate patterns of consumer behavior to the deep insights hidden within business operations, data holds the key to unlocking unprecedented opportunities. This is where the realm of Data Science steps in, transforming raw information into actionable intelligence. unprecedented opportunities. This is where the realm of Data Science steps in, transforming raw information into actionable intelligence",
-    flexDirection: "lg:flex-row",
+    flexDirection: "md:flex-row",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const allData = [
     catagery: "Mobile Apps",
     description:
       "In the vast landscape of modern technology, data has emerged as the new gold. From the intricate patterns of consumer behavior to the deep insights hidden within business operations, data holds the key to unlocking unprecedented opportunities. This is where the realm of Data Science steps in, transforming raw information into actionable intelligence. unprecedented opportunities. This is where the realm of Data Science steps in, transforming raw information into actionable intelligence",
-    flexDirection: "lg:flex-row-reverse",
+    flexDirection: "md:flex-row-reverse",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const allData = [
     catagery: "Business projects",
     description:
       "In the vast landscape of modern technology, data has emerged as the new gold. From the intricate patterns of consumer behavior to the deep insights hidden within business operations, data holds the key to unlocking unprecedented opportunities. This is where the realm of Data Science steps in, transforming raw information into actionable intelligence. unprecedented opportunities. This is where the realm of Data Science steps in, transforming raw information into actionable intelligence",
-    flexDirection: "lg:flex-row",
+    flexDirection: "md:flex-row",
   },
   {
     id: 4,
@@ -47,6 +47,6 @@ export const allData = [
     catagery: "Web Projects",
     description:
       "In the vast landscape of modern technology, data has emerged as the new gold. From the intricate patterns of consumer behavior to the deep insights hidden within business operations, data holds the key to unlocking unprecedented opportunities. This is where the realm of Data Science steps in, transforming raw information into actionable intelligence. unprecedented opportunities. This is where the realm of Data Science steps in, transforming raw information into actionable intelligence",
-    flexDirection: "lg:flex-row-reverse",
+    flexDirection: "md:flex-row-reverse",
   },
 ];

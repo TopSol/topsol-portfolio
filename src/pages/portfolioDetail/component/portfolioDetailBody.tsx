@@ -92,14 +92,14 @@ export default function PortfolioDetailBody() {
       </div>
 
       <div className="flex flex-col justify-center items-center">
-        <h2 className="text-2xl font-bold my-6">Client's Vision</h2>
-        <div>
+        <h2 className="text-[36px] font-semibold my-6">Client's Vision</h2>
+        <div className='mt-[53px] mx-[15px] flex flex-col '>
           {dataList.map((item: any, index) => {
             return (
               <div>
-                <div className="flex py-2">
-                  <img src={check1} className="mr-4" />
-                  <p>{item.item}</p>
+                <div className="flex py-2 items-center">
+                  <img src={check1} className="mr-4 md:h-[26px] h-[20px] md:w-[26px] w-[20px]" />
+                  <p className='text-[16px] md:text-[24px] font-medium '>{item.item}</p>
                 </div>
               </div>
             );

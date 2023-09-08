@@ -49,6 +49,7 @@ export default function RecentWork() {
             heading={item.heading}
             discription={item.discription}
             direction={item.side}
+            lineBgColor="#00B8F1"
           />
           </div>
           </Link>
