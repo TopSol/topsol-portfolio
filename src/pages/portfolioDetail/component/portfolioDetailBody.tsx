@@ -1,22 +1,18 @@
-import React from 'react'
-import PrimaryBtn from '../../../components/PrimaryBtn'
+import React from "react";
+import PrimaryBtn from "../../../components/PrimaryBtn";
 import check1 from "../../../images/check1.png";
 import { dataList } from "../data";
 
-export default function PortfolioDetailBody() {
+export default function PortfolioDetailBody({ data }) {
   return (
     <div>
-        <div className="flex font-montserrat mt-[250px] md:mt-[350px] flex-col md:flex-row md:container justify-between  md:mx-auto">
+      <div className="flex font-montserrat mt-[250px] md:mt-[350px] flex-col md:flex-row md:container justify-between  md:mx-auto">
         <div className=" mx-6 md:0 md:w-[50%] lg:w-[50%]">
           <h1 className="text-[36px] md:text-[30px] lg:text-[36px] font-bold font-montserrat  ">
             About Video Downloader
           </h1>
           <p className="text-[22px] md:text-[18px]  lg:text-[22px]  font-montserrat mt-[36px] ">
-            Effortlessly capture your favorite videos with our Video Downloader
-            App. Simply paste the video URL, and our app swiftly converts and
-            saves the content to your device. Enjoy seamless downloads from
-            popular platforms, ensuring you can watch offline without any
-            connectivity constraints.
+            {data?.aboutDesc}
           </p>
           <p className="mt-[30px] text-[22px] md:text-[18px]  lg:text-[22px]  ">
             The app's intuitive interface makes organizing and accessing your
@@ -41,7 +37,7 @@ export default function PortfolioDetailBody() {
       <div>
         <div className="flex justify-center mx-6 md:mx-0">
           <video
-            src="https://tecdn.b-cdn.net/img/video/forest.mp4"
+            src={data?.videoUrl}
             className="h-[50vh] my-[20px] mx-6 md:mx-0 md:my-[70px]"
             autoPlay
             muted
@@ -85,21 +81,23 @@ export default function PortfolioDetailBody() {
       </div>
 
       <div className="flex justify-center mt-7">
-        <img
-          src="https://res.cloudinary.com/asifsaythe/image/upload/v1693228997/new_portfolio/image_2_d8157f.png"
-          alt=""
-        />
+        <img src={data?.imageCollection?.[0]} alt="" />
       </div>
 
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-[36px] font-semibold my-6">Client's Vision</h2>
-        <div className='mt-[53px] mx-[15px] flex flex-col '>
-          {dataList.map((item: any, index) => {
+        <div className="mt-[53px] mx-[15px] flex flex-col ">
+          {data?.clientVisions?.map((item: any, index) => {
             return (
               <div>
                 <div className="flex py-2 items-center">
-                  <img src={check1} className="mr-4 md:h-[26px] h-[20px] md:w-[26px] w-[20px]" />
-                  <p className='text-[16px] md:text-[24px] font-medium '>{item.item}</p>
+                  <img
+                    src={check1}
+                    className="mr-4 md:h-[26px] h-[20px] md:w-[26px] w-[20px]"
+                  />
+                  <p className="text-[16px] md:text-[24px] font-medium ">
+                    {item}
+                  </p>
                 </div>
               </div>
             );
@@ -107,5 +105,5 @@ export default function PortfolioDetailBody() {
         </div>
       </div>
     </div>
-  )
+  );
 }

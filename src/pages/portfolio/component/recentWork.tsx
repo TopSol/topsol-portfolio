@@ -1,13 +1,28 @@
-import React from "react";
-import { data, data2 } from "../data";
+import React, { useEffect, useState } from "react";
+import { data } from "../data";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import PortfolioCard from "../../../components/portfolioCard";
 import { Link } from "gatsby";
+import { db } from "../../../utils/firebase";
+import { collection, getDocs } from "firebase/firestore";
+
 export default function RecentWork() {
-  const [selectWorkers, setSetWorkers] = React.useState("All");
+  const [selectWorkers, setSetWorkers] = useState("All");
+  const [portFolios, setPortFolios] = useState([]);
+
+  const fetchPortFolios = async () => {
+    const portfolioCollection = await getDocs(collection(db, "portFolio"));
+    const portfolioData = portfolioCollection.docs.map((doc) => doc.data());
+    console.log("portfolioData", portfolioData);
+    setPortFolios(portfolioData);
+  };
+
+  useEffect(() => {
+    fetchPortFolios();
+  }, []);
   return (
     <>
-      <div className="flex  flex-col justify-center items-center     ">
+      <div className="flex  flex-col justify-center items-center">
         <div className="">
           <h1 className="font-extrabold text-textColors font-montserrat text-3xl md:text-3xl lg:text-4xl mt-[120px] text-center">
             Our Recent work
@@ -41,17 +56,12 @@ export default function RecentWork() {
         })}
       </div>
 
-      {data2.map((item: any, index) => {
+      {portFolios?.map((item: any, index) => {
         return (
-          <Link to={"/portfolioDetail"}>
-            <div className="mt-[100px]" >
-          <PortfolioCard
-            heading={item.heading}
-            discription={item.discription}
-            direction={item.side}
-            lineBgColor="#00B8F1"
-          />
-          </div>
+          <Link to={`/portfolioDetail?id=${item.id}`}>
+            <div className="mt-[100px]">
+              <PortfolioCard data={item} index={index} />
+            </div>
           </Link>
         );
       })}
