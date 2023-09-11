@@ -98,7 +98,7 @@ export default function Footer() {
 
           <div className=" sm:grid hidden">
             <hr className="mt-[82px]  " />
-            <div className="text-center text-white mt-[39px] mb-[70px] ">
+            <div className="text-center text-white mt-[39px] mb-[10px] ">
               © 2023 | All rights reserved
             </div>
           </div>
