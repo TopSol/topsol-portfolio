@@ -9,6 +9,7 @@ import GetInTouch from "./getInTouch";
 import Hero from "./hero";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footerSection";
+
 function Home() {
   return (
     <div>

@@ -4,6 +4,7 @@ import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import { cardData } from "./data";
 import { Link } from "gatsby";
 import "./style.css";
+
 interface CardData {
   title: string;
   image: string;

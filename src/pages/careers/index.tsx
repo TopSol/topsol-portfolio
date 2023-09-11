@@ -12,9 +12,7 @@ function Careers() {
       <LifeTopsol/>
       <AllOpenings/>
       <Process/>
-      <div className='sm:px-20'>
       <AddressSection/>
-      </div>
     </div>
   )
 }
