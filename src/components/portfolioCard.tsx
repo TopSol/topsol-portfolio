@@ -17,13 +17,13 @@ export default function PortfolioCard({
   return (
     <div>
       <div
-        className={`flex flex-col md:mt-[102px] mt-[30px]  md:container md:mx-auto justify-center items-center ${textColor} ${direction}`}
+        className={`flex flex-col md:mt-[102px] mt-[30px]  md:container md:mx-auto  items-center ${textColor} ${direction}`}
       >
         <div className={`xl:w-[60%] lg:w-[50%] md:w-[45%] my-10 md:my-0
         ${
-          direction === "flex-row"
-            ? "justify-end "
-            : "justify-start "
+          direction === "flex-row-reverse"
+            ? "justify-start "
+            : "justify-end "
         }
         `}>
           <img
@@ -31,7 +31,13 @@ export default function PortfolioCard({
             alt="#"
           />
         </div>
-        <div className="xl:w-[35%] lg:w-[45%] md:w-[50%] flex flex-col  mx-5 md:mx-0 ">
+        <div className={`xl:w-[50%] lg:w-[45%] md:w-[50%] flex flex-col  mx-5 md:mx-0
+        ${
+          direction === "flex-row-reverse"
+            ? "justify-start "
+            : "justify-end "
+        }
+        `} >
           <div className="flex ">
           <div className="flex justify-center mt-3">
       <div
