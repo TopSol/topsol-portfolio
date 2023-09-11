@@ -73,14 +73,12 @@ export default function CardSection({ setBg }) {
 
   return (
     <div ref={containerRef}>
-      <div
-        className={`h-screen flex justify-center items-center py-4 overflow-hidden`}
-      >
-        <div className="flex flex-row">
+      <div className={`h-screen flex   items-center py-4 overflow-hidden`}>
+        <div className="flex flex-col md:flex-row">
           {/* Upper Section */}
           <div
             ref={viewRef}
-            className="p-2 flex items-center justify-center flex-col mb-8 mr-8 transform w-[50vw]"
+            className="p-2 flex items-center flex-col mb-8  transform justify-start  w-[50vw] "
             style={{
               transform:
                 scrollY <= 1080
@@ -90,8 +88,8 @@ export default function CardSection({ setBg }) {
                   : `translateY(-${scrollY - 1080}px)`,
             }}
           >
-            <h1 className="mb-10 text-4xl font-bold mt-16 max-w-[300px] text-white">
-              Build Smarter Not From Scratch
+            <h1 className="mb-10 text-[50px] font-semibold mt-16  text-white">
+              Build Smarter <br /> Not From Scratch
             </h1>
             <div className="w-[150px]">
               <AnimateHr bgColor={"white"} />
@@ -101,7 +99,7 @@ export default function CardSection({ setBg }) {
           {/* Lower Section (Horizontal Scroll - Reviews) */}
           <div
             ref={mapRef}
-            className={`flex flex-row transform w-[50vw]`}
+            className={`flex  md:flex-row transform  `}
             style={{
               transform:
                 scrollY <= 1000
@@ -113,16 +111,17 @@ export default function CardSection({ setBg }) {
           >
             {reviews?.map((v, i) => {
               return (
-                <img
-                  key={i}
-                  src={
-                    "https://images.unsplash.com/photo-1653953893860-b8f756596132?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5OHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                  }
-                  height={700}
-                  width={500}
-                  alt="Avatar"
-                  className="ml-8"
-                />
+                <div className=" mr-12 w-[465px] h-[660px] flex flex-col items-center ">
+                  <img key={i} src={v.avatar} alt="Avatar" className=" " />
+                  <h1 className="text-[22px] font-semibold text-white mt-[46px] ">
+                    Ready-To-Use Set Of Modules
+                  </h1>
+                  <p className="text-center text-[15px] mx-6  mt-[46px] text-white ">
+                    Faster development process by leveraging the extensive
+                    collectionof thousands of modules of ruseable code available
+                    in our library
+                  </p>
+                </div>
               );
             })}
           </div>
