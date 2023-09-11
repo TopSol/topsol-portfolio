@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { initializeApp } from "firebase/app";
+import { getStorage} from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 
 const credentials = {
@@ -19,5 +20,6 @@ if (!firebase?.apps) {
 }
 
 const db = getFirestore(app);
+const storage = getStorage(app);
 
-export { db };
+export { db,storage };

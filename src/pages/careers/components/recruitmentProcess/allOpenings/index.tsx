@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
-import searchImg from "../../../../../images/search.png";
-import DropDown from "../../../../../components/dropDown/DropDown";
-import { CardData, Department, ExperienceLevel, JobType } from "./Data";
-import DropDownCards from "../../cards/DropDownCards";
-import { collection, getDocs } from "firebase/firestore";
+// @ts-ignore
 import { db } from "../../../../../utils/firebase";
+import DropDownCards from "../../cards/DropDownCards";
+// @ts-ignore
+import searchImg from "../../../../../images/search.png";
+import { collection, getDocs } from "firebase/firestore";
+import {  Department, ExperienceLevel, JobType } from "./Data";
+import DropDown from "../../../../../components/dropDown/DropDown";
+import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
 
 function AllOpenings() {
   const [jobPosts, setJobPosts] = useState([]);
@@ -16,11 +18,13 @@ function AllOpenings() {
     const fetchData = async () => {
       try {
         setSetLoading(true);
+        // @ts-ignore
         const data = [];
         const querySnapshot = await getDocs(collection(db, "jobPost"));
         querySnapshot.forEach((doc) => {
           data.push({ id: doc.id, ...doc.data() });
         });
+        // @ts-ignore
         setJobPosts(data);
         setSetLoading(false);
       } catch (error) {
@@ -80,9 +84,10 @@ function AllOpenings() {
           {loading ? (
             <p>Loading...</p>
           ) : jobPosts.length ? (
-            jobPosts?.slice(0, visibleCards).map((item, index) => {
+            jobPosts?.slice(0, visibleCards).map((item:any, index) => {
               return (
                 <DropDownCards
+                  item={item}
                   heading={item.id}
                   level="Senior Level"
                   type={item.time}
