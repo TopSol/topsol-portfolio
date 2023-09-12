@@ -1,6 +1,6 @@
 import React from 'react'
 import dot from '../../images/dot.png'
-
+import LineAnimation from '../../components/LineAnimation'
 export default function Heading() {
   return (
     <div>
@@ -12,12 +12,7 @@ export default function Heading() {
           <div className='hidden  md:flex flex-row absolute left-12  '>
                     <img src={dot} alt="" />
                 </div>
-          <div className="before:content-[''] before:block before:h-[7px] 
-      before:bg-[#00B8F1] before:rounded-3xl
-      before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-      before:transition before:ease-in-out before:duration-1000
-      w-[103px] md:w-[178px] mt-[10px] md:mt-[16px] items-center">
-          </div>
+                <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px"/>
         </div>
       </div>
 

@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ImagSlider from "./ImagSlider";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import { images } from "./data";
-
+import LineAnimation from "../../../components/LineAnimation";
 
 
 function Awards() {
@@ -70,12 +70,7 @@ function Awards() {
           Awards and Honors
           </h1>
         </div>
-        <div
-            className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
-              before:bottom-0 before:left-0 before:bg-[#00B8F1] before:rounded-3xl
-              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-              before:transition before:ease-in-out before:duration-1000 mr-44 mt-[18px]"
-          ></div>
+        <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="18px"/>
         </div>
         <div className="flex justify-center items-center mt-[84px]  ">
           <button className="button " onClick={previous}>

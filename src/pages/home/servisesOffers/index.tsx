@@ -5,6 +5,7 @@ import circleImg from "../../../images/hero-circle.png";
 import ServicesCards from "../servisesCards/ServicesCards";
 import { cards } from "./data";
 import { Link } from "gatsby";
+import LineAnimation from "../../../components/LineAnimation";
 
 function ServicesOffers() {
   return (
@@ -19,12 +20,7 @@ function ServicesOffers() {
               Services We Offer
             </h1>
           </div>
-          <div
-            className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
-              before:bottom-0 before:left-0 before:bg-[#00B8F1] before:rounded-3xl
-              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-              before:transition before:ease-in-out before:duration-1000 mr-44 mt-[22px] "
-          ></div>
+          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px"/>
           <div className=" text-[20px] md:mt-[27px] text-center md:block hidden">
             <p>
               From Industry Titans to Emerging Ventures - Topsol Empowers You

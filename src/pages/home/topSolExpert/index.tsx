@@ -3,6 +3,7 @@ import ExpertCards from "../expertCards/ExpertCards";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import { Industries, Technologies, Values } from "./data";
 import CircleImage from "../../../components/CircleImage";
+import LineAnimation from "../../../components/LineAnimation";
 function TopSolExperts() {
   const [selectedCategory, setSelectedCategory] = useState("Values");
   const handleCategoryChange = (category: string) => {
@@ -31,12 +32,7 @@ function TopSolExperts() {
             Why Topsol Experts
           </h1>
         </div>
-        <div
-          className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
-              before:bottom-0 before:left-0 before:bg-[#ffff] before:rounded-3xl
-              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-              before:transition before:ease-in-out before:duration-1000 mr-44 mt-[22px] "
-        ></div>
+        <LineAnimation width='178px' height='7px' backgroundColor='#FFFFFF' marginTop="20px"/>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-y-5  md:gap-x-[40px] mt-[59px] ">
           <button
             onClick={() => handleCategoryChange("Values")}

@@ -3,6 +3,7 @@ import dot1 from "../../../images/dot1.png";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import { cardData } from "./data";
 import { Link } from "gatsby";
+import LineAnimation from "../../../components/LineAnimation";
 import "./style.css";
 interface CardData {
   title: string;
@@ -24,12 +25,7 @@ function OurPortfolio() {
             Our Portfolio
           </h1>
         </div>
-        <div
-          className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
-              before:bottom-0 before:left-0 before:bg-[#00B8F1] before:rounded-3xl
-              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-              before:transition before:ease-in-out before:duration-1000 mr-44 mt-[22px] card "
-        ></div>
+        <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="18px"/>
       </div>
       <div className=" md:mt-[53px]   grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-x-[30px]  ">
         {cardData.slice(0, visibleCards).map((card, index) => (
