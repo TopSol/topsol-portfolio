@@ -7,9 +7,8 @@ import hrImg from "../../../../images/horizantolLine.png";
 import { addDoc, collection, setDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
-
 function AboutUs({ jobDetails }: any) {
-
+  const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -35,7 +34,7 @@ function AboutUs({ jobDetails }: any) {
     }
   };
 
-  const handleFileChange = (e:any) => {
+  const handleFileChange = (e: any) => {
     const file = e.target.files[0];
     setResumeFile(file);
   };
@@ -46,6 +45,16 @@ function AboutUs({ jobDetails }: any) {
 
   const submit = async () => {
     try {
+      if (
+        !formData.name ||
+        !formData.email ||
+        !formData.phone ||
+        !formData.cover
+      ) {
+        alert("Please fill all fields");
+        return;
+      }
+      setLoading(true);
       const docRef = await addDoc(collection(db, "jobApplications"), formData);
 
       if (resumeFile) {
@@ -55,8 +64,8 @@ function AboutUs({ jobDetails }: any) {
 
         await setDoc(docRef, { resumeURL: downloadURL }, { merge: true });
       }
-      
-      alert("Application submited")
+
+      alert("Application submited");
       setResumeFile(null);
       setFormData({
         name: "",
@@ -64,8 +73,10 @@ function AboutUs({ jobDetails }: any) {
         cover: "",
         phone: "",
       });
+      setLoading(false);
       setShowForm(false);
     } catch (e) {
+      setLoading(false);
       console.log("Error jobApplications", e);
     }
   };
@@ -96,7 +107,7 @@ function AboutUs({ jobDetails }: any) {
           </div>
           <div className="my-6 text-center">
             <p className="font-montserrat text-justify font-bold">
-              {jobDetails.detail}
+              {jobDetails.description}
             </p>
           </div>
         </div>
@@ -118,7 +129,8 @@ function AboutUs({ jobDetails }: any) {
                 {jobDetails?.experience}
               </li>
               <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4">
-                <span className=" text-primary-gray">City</span>Faisalabad
+                <span className=" text-primary-gray">Location</span>{" "}
+                {jobDetails?.location}
               </li>
               <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4">
                 <span className=" text-primary-gray">State/Province</span>
@@ -165,11 +177,9 @@ function AboutUs({ jobDetails }: any) {
         </div>
         <div className="my-6 px-2">
           <ul className="sm:pl-5 list-disc font-montserrat font-bold">
-            <li>Competitive salary and benefits package.</li>
-            <li>Opportunities for professional growth and development.</li>
-            <li>Collaborative and inclusive work environment.</li>
-            <li>Flexibility in work arrangements.</li>
-            <li>Engaging team events and workshops.</li>
+            {jobDetails?.benefits?.map((i: string) => (
+              <li key={i}>{i}</li>
+            ))}
           </ul>
         </div>
       </div>
@@ -186,13 +196,14 @@ function AboutUs({ jobDetails }: any) {
       {showForm && (
         <Form
           submit={submit}
+          loading={loading}
           formData={formData}
           resumeFile={resumeFile}
           setFormData={setFormData}
           handleChange={handleChange}
           setResumeFile={setResumeFile}
           handleFileChange={handleFileChange}
-          heading={`Apply for ${jobDetails.id}`}
+          heading={`Apply for ${jobDetails.title}`}
         />
       )}
     </div>

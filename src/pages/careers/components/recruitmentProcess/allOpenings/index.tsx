@@ -5,7 +5,7 @@ import DropDownCards from "../../cards/DropDownCards";
 // @ts-ignore
 import searchImg from "../../../../../images/search.png";
 import { collection, getDocs } from "firebase/firestore";
-import {  Department, ExperienceLevel, JobType } from "./Data";
+import { Department, ExperienceLevel, JobType } from "./Data";
 import DropDown from "../../../../../components/dropDown/DropDown";
 import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
 
@@ -20,7 +20,7 @@ function AllOpenings() {
         setSetLoading(true);
         // @ts-ignore
         const data = [];
-        const querySnapshot = await getDocs(collection(db, "jobPost"));
+        const querySnapshot = await getDocs(collection(db, "jobPosts"));
         querySnapshot.forEach((doc) => {
           data.push({ id: doc.id, ...doc.data() });
         });
@@ -32,7 +32,7 @@ function AllOpenings() {
         setSetLoading(false);
       }
     };
-    setTimeout(fetchData, 2000);
+    fetchData();
   }, []);
 
   const loadMoreCards = () => {
@@ -84,16 +84,8 @@ function AllOpenings() {
           {loading ? (
             <p>Loading...</p>
           ) : jobPosts.length ? (
-            jobPosts?.slice(0, visibleCards).map((item:any, index) => {
-              return (
-                <DropDownCards
-                  item={item}
-                  heading={item.id}
-                  level="Senior Level"
-                  type={item.time}
-                  className="w-[100%] "
-                />
-              );
+            jobPosts?.slice(0, visibleCards).map((item: any, index) => {
+              return <DropDownCards item={item} className="w-[100%] " />;
             })
           ) : (
             <p>No Openings Yet</p>

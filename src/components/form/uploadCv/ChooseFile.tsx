@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const FileUpload = ({
-  handleFileChange,
-  resumeFile
-}: any) => {
-;
-
+const FileUpload = ({ handleFileChange, resumeFile }: any) => {
   return (
     <div className="flex items-center">
-      
       <input
         type="file"
         id="cvUpload"
@@ -23,9 +17,11 @@ const FileUpload = ({
         hover:cursor-pointer
         hover:text-primary"
       >
-        Upload Cv
+        Upload CV
       </label>
-      <span className="text-lg">{resumeFile ? resumeFile.name : 'No file chosen'}</span>
+      <span className="text-lg">
+        {resumeFile ? resumeFile.name : "No file chosen"}
+      </span>
     </div>
   );
 };

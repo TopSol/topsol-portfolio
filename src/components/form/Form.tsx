@@ -7,21 +7,19 @@ type FormProps = {
   // onClose: () => void;
   submit: () => void;
   heading?: string;
-  formData: {},
-  setFormData: () => void
+  formData: {};
+  setFormData: () => void;
 };
 
 function Form({
   submit,
+  loading,
   heading,
   formData,
   resumeFile,
   handleChange,
-  handleFileChange
+  handleFileChange,
 }: any) {
-
-
-
   return (
     <div className=" border rounded py-10 md:px-20 px-10 max-w-2xl mx-auto">
       <h1 className=" text-4xl font-montserrat font-bold text-center">
@@ -78,6 +76,7 @@ function Form({
         <button
           type="button"
           onClick={submit}
+          disabled={loading}
           aria-label="Post Comment"
           className="w-full px-8 py-3  bg-primary border-2 rounded-md  text-white font-bold font-montserrat text-xs leading-tight uppercase hover:bg-primary-light  focus:bg-[#00B8F1]  active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out"
         >
