@@ -12,7 +12,7 @@ import Footer from "../../components/footerSection";
 
 function Home() {
   return (
-    <div>
+    <div id="topsol-custom-portfolio">
       <Navbar />
       <Hero />
       {/* <CardSection/> */}
