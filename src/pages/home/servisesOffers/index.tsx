@@ -44,6 +44,7 @@ function ServicesOffers() {
                 avatar={item.avatar}
                 heading={item.heading}
                 desc={item.desc}
+                bg={item.bg}
               />
             </Link>
           </div>
