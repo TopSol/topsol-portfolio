@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useEffect, useState } from "react";
-import { data } from "../data";
 import { db } from "../../../utils/firebase";
+import { data } from "../data";
 import {
   collection,
   query,
@@ -9,7 +9,6 @@ import {
   limit,
   getDocs,
   startAfter,
-  endBefore,
 } from "firebase/firestore";
 import PortfolioCard from "../../../components/portfolioCard";
 import PrimaryBtn from "../../../components/PrimaryBtn";
@@ -17,57 +16,57 @@ import { Link } from "gatsby";
 
 export default function RecentWork() {
   const [portFolios, setPortFolios] = useState([]);
+  const [loader, setLoader] = useState(false);
   const [startAfterDoc, setStartAfterDoc] = useState(null);
-  const [endBeforeDoc, setEndBeforeDoc] = useState(null);
   const [isNextPage, setIsNextPage] = useState(true);
-  const [isPreviousPage, setIsPreviousPage] = useState(false);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 2;
 
-  const fetchPortFolios = async (start, end) => {
-    const portfolioCollection = collection(db, "portFolio");
-    let portfolioQuery = query(
-      portfolioCollection,
-      orderBy("createdAt"),
-      limit(itemsPerPage)
-    );
+  const hasNextPage = currentIndex + itemsPerPage < portFolios.length;
+  const hasPreviousPage = currentIndex > 0;
 
-    if (start) {
-      portfolioQuery = query(
+  const fetchPortFolios = async (start) => {
+    try {
+      setLoader(true);
+      const portfolioCollection = collection(db, "portFolio");
+      let portfolioQuery = query(
         portfolioCollection,
         orderBy("createdAt"),
-        startAfter(start),
         limit(itemsPerPage)
       );
-    } else if (end) {
-      portfolioQuery = query(
-        portfolioCollection,
-        orderBy("createdAt"),
-        endBefore(end),
-        limit(itemsPerPage)
-      );
-    }
 
-    const portfolioSnapshot = await getDocs(portfolioQuery);
-    const portfolioData = portfolioSnapshot.docs.map((doc) => doc.data());
+      if (start) {
+        portfolioQuery = query(
+          portfolioCollection,
+          orderBy("createdAt"),
+          startAfter(start),
+          limit(itemsPerPage)
+        );
+      }
 
-    if (portfolioData.length > 0) {
-      setPortFolios(portfolioData);
-      setStartAfterDoc(portfolioData[portfolioData.length - 1].createdAt);
-      setEndBeforeDoc(portfolioData[0].createdAt);
-      if (start) {
-        setIsPreviousPage(true);
+      const portfolioSnapshot = await getDocs(portfolioQuery);
+      const portfolioData = portfolioSnapshot.docs.map((doc) => doc.data());
+
+      if (portfolioData?.length) {
+        if (start) {
+          setPortFolios((prevData) => [...prevData, ...portfolioData]);
+          setStartAfterDoc(portfolioData[portfolioData.length - 1].createdAt);
+          setCurrentIndex(currentIndex + itemsPerPage);
+        } else {
+          setPortFolios(portfolioData);
+          setStartAfterDoc(portfolioData[portfolioData.length - 1].createdAt);
+        }
       }
-      if (end) {
-        setIsNextPage(true);
-      }
-    } else {
-      if (start) {
+
+      if (portfolioSnapshot.size < itemsPerPage) {
         setIsNextPage(false);
       }
-      if (end) {
-        setIsPreviousPage(false);
-      }
+
+      setLoader(false);
+    } catch (error) {
+      setLoader(false);
+      console.log("error", error);
     }
   };
 
@@ -75,12 +74,33 @@ export default function RecentWork() {
     fetchPortFolios(null, null);
   }, []);
 
+  const scrollToTop = () => {
+    if ("scrollBehavior" in document.documentElement.style) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+  };
+
   const handleNextPage = () => {
-    fetchPortFolios(startAfterDoc, null);
+    scrollToTop();
+    if (hasNextPage) {
+      setCurrentIndex(currentIndex + itemsPerPage);
+    } else {
+      fetchPortFolios(startAfterDoc);
+    }
   };
 
   const handlePreviousPage = () => {
-    fetchPortFolios(null, endBeforeDoc);
+    scrollToTop();
+    if (hasPreviousPage) {
+      setCurrentIndex(currentIndex - itemsPerPage);
+      setIsNextPage(true);
+    }
   };
 
   return (
@@ -99,44 +119,44 @@ export default function RecentWork() {
         ></div>
       </div>
       <div className="grid grid-col gap-3 items-center mt-[100px] md:grid-cols-3 lg:grid-cols-4  md:container md:mx-auto">
-        {data.map((item: any, index) => {
-          return (
-            <div
-              className="mx-5 md:mx-0 flex justify-between   "
-              key={index}
-              onClick={() => {
-                console.log("hello im am hear -----------------");
-                setSetWorkers(item.name);
-              }}
-            >
-              <PrimaryBtn
-                text={item.name}
-                additionalClasses="bg-primary mt-4 md:mt-0 px-4 text-[22px] w-full 
-               md:mx-0 font-semibold hover:bg-primary text-white font-montserrat "
-              />
-            </div>
-          );
-        })}
+        {data.map((item, index) => (
+          <div
+            className="mx-5 md:mx-0 flex justify-between   "
+            key={index}
+            onClick={() => {
+              console.log("hello im am hear -----------------");
+              // setSetWorkers(item.name); // Commented out as it seems unused
+            }}
+          >
+            <PrimaryBtn
+              text={item.name}
+              additionalClasses="bg-primary mt-4 md:mt-0 px-4 text-[22px] w-full 
+              md:mx-0 font-semibold hover:bg-primary text-white font-montserrat "
+            />
+          </div>
+        ))}
       </div>
-      {portFolios.map((item, index) => {
-        return (
-          <Link to={`/portfolioDetail?id=${item.id}`} key={index}>
-            <div className="mt-[100px]">
-              <PortfolioCard data={item} index={index} />
-            </div>
-          </Link>
-        );
-      })}
+      {loader ? (
+        <div className="text-center">Loading...</div>
+      ) : (
+        portFolios
+          .slice(currentIndex, currentIndex + itemsPerPage)
+          .map((item, index) => (
+            <Link to={`/portfolioDetail?id=${item.id}`} key={index}>
+              <div className="mt-[100px]">
+                <PortfolioCard data={item} index={index} />
+              </div>
+            </Link>
+          ))
+      )}
 
       <div className="flex justify-around mt-4">
         <button
           className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
-            !endBeforeDoc || !isPreviousPage
-              ? "opacity-50 cursor-not-allowed"
-              : ""
+            !hasPreviousPage ? "opacity-50 cursor-not-allowed" : ""
           }`}
           onClick={handlePreviousPage}
-          disabled={!endBeforeDoc || !isPreviousPage}
+          disabled={!hasPreviousPage}
         >
           Previous
         </button>
