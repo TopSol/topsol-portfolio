@@ -5,10 +5,8 @@ import heroImg from "../../../images/hero-bg.png";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 export default function Hero() {
 
-  let root;
-  if (window) {
-    root = document.getElementById("topsol-custom-portfolio");
-  }
+  let root = document.body;
+
 
   return (
     <div
@@ -33,13 +31,14 @@ export default function Hero() {
         </p>
         <div className="bg-transparent    "></div>
         <div className="flex flex-col mt-[54px]  sm:flex-row gap-[17px]">
-          <PopupButton
+          {root && <PopupButton
             // @ts-ignore
             rootElement={root}
             text="Let’s Talk!"
             url="https://calendly.com/asif-mushtaq"
             className="bg-primary py-4 px-16  rounded hover:bg-primary text-[20px] font-semibold  hover:bg-secondary-light text-white rounded-[10px]  "
           />
+          }
 
           <PrimaryBtn
             text="Get a quote"
