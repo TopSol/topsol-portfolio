@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import CardSection from "./cardSection";
 import ServicesOffers from "./servisesOffers";
 import TopSolExperts from "./topSolExpert";
@@ -9,13 +9,24 @@ import GetInTouch from "./getInTouch";
 import Hero from "./hero";
 import Footer from "../../components/footerSection";
 import Navbar from "../../components/bar/sidebar";
+import {motion} from 'framer-motion'
+
 function Home() {
+  const [bg, setBg] = useState("#fff");
   return (
     <div className="">
       <Navbar />
       <Hero />
-      {/* <CardSection /> */}
-      <ServicesOffers />
+      <motion.div
+        initial={{ background: "#fff" }}
+        animate={{
+          background: bg,
+        }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <CardSection setBg={setBg} />
+        <ServicesOffers />
+      </motion.div>
       <TopSolExperts />
       <OurPortfolio />
       <RatingSection />

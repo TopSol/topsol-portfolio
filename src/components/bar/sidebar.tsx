@@ -7,6 +7,7 @@ import NavbarMenue from "../../images/navbarMenu.png";
 import Close from "../../images/close.png";
 function SideBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   const iconVariants = {
     opened: {
@@ -40,12 +41,19 @@ function SideBar() {
       y: 0,
     },
   };
+ 
 
   return (
     <div className="App">
-      <Header>
+      <Header className= {`hover:bg-white `}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}  
+        >
         <div className="flex justify-between px-5 md:px-[105px] items-center">
-          <img src={Logo} alt="" />
+        <img
+        src={hovered ? Logo2 : Logo}
+        alt=""
+      />
 
           <div
             className="z-50 "
@@ -54,7 +62,10 @@ function SideBar() {
             whileHover={{ scale: 1.4 }}
             onClick={() => setIsOpen(!isOpen)}
           >
-            <img src={NavbarMenu2} alt="" />
+            <img
+        src={hovered ? NavbarMenu2 : NavbarMenue}
+        alt=""
+      />
           </div>
         </div>
       </Header>
