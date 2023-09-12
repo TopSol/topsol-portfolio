@@ -9,20 +9,22 @@ import {
   limit,
   getDocs,
   startAfter,
+  endBefore,
 } from "firebase/firestore";
-import PrimaryBtn from "../../../components/PrimaryBtn";
 import PortfolioCard from "../../../components/portfolioCard";
+import PrimaryBtn from "../../../components/PrimaryBtn";
 import { Link } from "gatsby";
 
 export default function RecentWork() {
-  const [selectWorkers, setSetWorkers] = useState("All");
   const [portFolios, setPortFolios] = useState([]);
-  const [lastDocument, setLastDocument] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 2;
-  const [totalItems, setTotalItems] = useState(0);
+  const [startAfterDoc, setStartAfterDoc] = useState(null);
+  const [endBeforeDoc, setEndBeforeDoc] = useState(null);
+  const [isNextPage, setIsNextPage] = useState(true);
+  const [isPreviousPage, setIsPreviousPage] = useState(false);
 
-  const fetchPortFolios = async () => {
+  const itemsPerPage = 2;
+
+  const fetchPortFolios = async (start, end) => {
     const portfolioCollection = collection(db, "portFolio");
     let portfolioQuery = query(
       portfolioCollection,
@@ -30,11 +32,18 @@ export default function RecentWork() {
       limit(itemsPerPage)
     );
 
-    if (lastDocument && currentPage > 1) {
+    if (start) {
       portfolioQuery = query(
         portfolioCollection,
         orderBy("createdAt"),
-        startAfter(lastDocument),
+        startAfter(start),
+        limit(itemsPerPage)
+      );
+    } else if (end) {
+      portfolioQuery = query(
+        portfolioCollection,
+        orderBy("createdAt"),
+        endBefore(end),
         limit(itemsPerPage)
       );
     }
@@ -43,25 +52,35 @@ export default function RecentWork() {
     const portfolioData = portfolioSnapshot.docs.map((doc) => doc.data());
 
     if (portfolioData.length > 0) {
-      setLastDocument(portfolioSnapshot.docs[portfolioData.length - 1]);
+      setPortFolios(portfolioData);
+      setStartAfterDoc(portfolioData[portfolioData.length - 1].createdAt);
+      setEndBeforeDoc(portfolioData[0].createdAt);
+      if (start) {
+        setIsPreviousPage(true);
+      }
+      if (end) {
+        setIsNextPage(true);
+      }
+    } else {
+      if (start) {
+        setIsNextPage(false);
+      }
+      if (end) {
+        setIsPreviousPage(false);
+      }
     }
-
-    setPortFolios(portfolioData);
-  };
-
-  const fetchTotalItems = async () => {
-    const portfolioCollection = collection(db, "portFolio");
-    const totalItemsSnapshot = await getDocs(portfolioCollection);
-    setTotalItems(totalItemsSnapshot.size);
   };
 
   useEffect(() => {
-    fetchPortFolios();
-    fetchTotalItems();
-  }, [currentPage]);
+    fetchPortFolios(null, null);
+  }, []);
 
-  const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
+  const handleNextPage = () => {
+    fetchPortFolios(startAfterDoc, null);
+  };
+
+  const handlePreviousPage = () => {
+    fetchPortFolios(null, endBeforeDoc);
   };
 
   return (
@@ -99,7 +118,6 @@ export default function RecentWork() {
           );
         })}
       </div>
-
       {portFolios.map((item, index) => {
         return (
           <Link to={`/portfolioDetail?id=${item.id}`} key={index}>
@@ -110,25 +128,27 @@ export default function RecentWork() {
         );
       })}
 
-      <div className="flex justify-center mt-4">
-        <ul className="flex space-x-4">
-          {Array.from({ length: Math.ceil(totalItems / itemsPerPage) }).map(
-            (_, index) => (
-              <li key={index}>
-                <button
-                  className={`${
-                    currentPage === index + 1
-                      ? "bg-primary text-white"
-                      : "bg-gray-200 hover:bg-gray-300"
-                  } px-3 py-2 rounded-md font-medium`}
-                  onClick={() => paginate(index + 1)}
-                >
-                  {index + 1}
-                </button>
-              </li>
-            )
-          )}
-        </ul>
+      <div className="flex justify-around mt-4">
+        <button
+          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
+            !endBeforeDoc || !isPreviousPage
+              ? "opacity-50 cursor-not-allowed"
+              : ""
+          }`}
+          onClick={handlePreviousPage}
+          disabled={!endBeforeDoc || !isPreviousPage}
+        >
+          Previous
+        </button>
+        <button
+          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
+            !startAfterDoc || !isNextPage ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+          onClick={handleNextPage}
+          disabled={!startAfterDoc || !isNextPage}
+        >
+          Next
+        </button>
       </div>
     </>
   );
