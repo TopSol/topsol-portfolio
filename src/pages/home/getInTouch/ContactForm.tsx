@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { dropDownData } from "./data";
 import "react-phone-input-2/lib/style.css";
 import { db } from "../../../utils/firebase";
@@ -7,7 +7,10 @@ import { collection, addDoc } from "firebase/firestore";
 import { GoogleReCaptcha } from "react-google-recaptcha-v3";
 
 function ContactForm() {
-  const [capt, setCapt] = useState(null);
+
+  const [token, setToken] = useState();
+  const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,6 +18,11 @@ function ContactForm() {
     organization: "",
     agreeToTerms: false,
   });
+  
+ 
+  const onVerify = useCallback((token) => {
+    setToken(token);
+  },[]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -45,8 +53,20 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(!token){
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+        organization: "",
+        agreeToTerms: false,
+      });
+      setSelectedOption(null);
+      setRefreshReCaptcha(r => !r);
+      return
+    }
     try {
-      if (formData.agreeToTerms) {
+      if (formData.agreeToTerms && formData.name &&  formData.email && formData.message  ) {
         let body = { ...formData };
         if (selectedOption && selectedOption?.name) {
           body["messageAbout"] = selectedOption.name;
@@ -62,14 +82,16 @@ function ContactForm() {
           agreeToTerms: false,
         });
         setSelectedOption(null);
+        setRefreshReCaptcha(r => !r);
       } else {
-        alert("Please agree to the terms & conditions");
+        alert("Please agree to the terms & conditions and fill all fields");
       }
     } catch (e) {
       console.log(e);
       alert(e.message);
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -214,14 +236,14 @@ function ContactForm() {
             </label>
           </div>
           <GoogleReCaptcha
- 
-            onVerify={(e) => setCapt(e)}
+            onVerify={onVerify}
+            refreshReCaptcha={refreshReCaptcha}
           />
 
           <div className=" mt-10 w-full">
             <button
               type="submit"
-              disabled={!capt}
+              disabled={!token}
               aria-label="Post Comment"
               className="w-full px-6 py-[17px]  bg-[#00B8F1] border-2 rounded-md  text-white font-semibold text-[20px]  hover:bg-[#96dff6]  focus:bg-[#00B8F1]  active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out"
             >

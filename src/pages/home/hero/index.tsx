@@ -3,8 +3,13 @@ import { PopupButton } from "react-calendly";
 // @ts-ignore
 import heroImg from "../../../images/hero-bg.png";
 import PrimaryBtn from "../../../components/PrimaryBtn";
-
 export default function Hero() {
+
+  let root;
+  if (window) {
+    root = document.getElementById("topsol-custom-portfolio");
+  }
+
   return (
     <div
       className="bg-cover bg-center"
@@ -29,10 +34,10 @@ export default function Hero() {
         <div className="bg-transparent    "></div>
         <div className="flex flex-col mt-[54px]  sm:flex-row gap-[17px]">
           <PopupButton
+            // @ts-ignore
+            rootElement={root}
             text="Let’s Talk!"
             url="https://calendly.com/asif-mushtaq"
-            // @ts-ignore
-            rootElement={document.getElementById("topsol-custom-portfolio")}
             className="bg-primary py-4 px-16  rounded hover:bg-primary text-[20px] font-semibold  hover:bg-secondary-light text-white rounded-[10px]  "
           />
 
