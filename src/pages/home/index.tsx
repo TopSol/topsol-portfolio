@@ -7,14 +7,14 @@ import RatingSection from "./ratingSection";
 import Awards from "./awards";
 import GetInTouch from "./getInTouch";
 import Hero from "./hero";
-import Navbar from "../../components/Navbar";
 import Footer from "../../components/footerSection";
+import Navbar from "../../components/bar/sidebar";
 function Home() {
   return (
-    <div>
+    <div className="">
       <Navbar />
       <Hero />
-      {/* <CardSection/> */}
+      {/* <CardSection /> */}
       <ServicesOffers />
       <TopSolExperts />
       <OurPortfolio />
