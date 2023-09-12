@@ -2,13 +2,11 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Header = styled.header`
-  background: green;
+  background-color: #0b234c;
   position: fixed;
   width: 100vw;
-
   padding: 1rem;
-
-  z-index: 7;
+  z-index: 200;
 `;
 
 export const Nav = styled(motion.nav)`
