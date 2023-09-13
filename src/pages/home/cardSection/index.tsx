@@ -2,14 +2,19 @@ import React, { useEffect, useRef, useState } from "react";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import { reviews } from "./data";
 import { gsap } from "gsap";
+import { motion } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useInView } from "react-intersection-observer";
 import MouseFollower from "mouse-follower";
+import { AnimatePresence } from "framer-motion";
+
 gsap.registerPlugin(ScrollTrigger);
 MouseFollower.registerGSAP(gsap);
 export default function CardSection({ setBg }) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
+
+  const [selectedId, setSelectedId] = useState("");
 
   const [scrollY, setScrollY] = useState(0);
   const [isWorking, setIsWorking] = useState(true);
@@ -172,14 +177,25 @@ export default function CardSection({ setBg }) {
                 : "none",
             }}
           >
-            {reviews?.map((v, i) => {
+            {reviews?.map((v, index) => {
               return (
-                <div className="  lg:mr-12 hover:scale-105 hover:duration-300 transition ease-in-out delay-100     w-[465px] h-[660px] flex flex-col items-center ">
-                  <img key={i} src={v.avatar} alt="Avatar" className=" " />
-                  <h1 className="text-[22px]  font-semibold text-white mt-[46px] ">
-                    Ready-To-Use Set Of Modules
-                  </h1>
-                </div>
+                <>
+                  <div
+                    layoutId={v.id}
+                    onClick={() => setSelectedId(v.id)}
+                    className="  lg:mr-12 hover:scale-105 hover:duration-300 transition ease-in-out delay-100     w-[465px] h-[660px] flex flex-col items-center "
+                  >
+                    <img
+                      key={index}
+                      src={v.avatar}
+                      alt="Avatar"
+                      className=" "
+                    />
+                    <h1 className="text-[22px]  font-semibold text-white mt-[46px] ">
+                      Ready-To-Use Set Of Modules
+                    </h1>
+                  </div>
+                </>
               );
             })}
           </div>
