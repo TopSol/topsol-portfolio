@@ -36,17 +36,5 @@ export const data = [
         detail:
           "Qorem ipsum dolor sit amet, consectetur adipiscing elit.Qorem ipsum dolor sit amet,consectetur adipiscing elit.QoQorem ipsum dolor sit amet, consectetur adipiscing elit.rem ",
       },
-      {
-        id: 7,
     
-        heading: "Green Tea Studios, developed by our experienced team",
-        detail:
-          "Qorem ipsum dolor sit amet, consectetur adipiscing elit.Qorem ipsum dolor sit amet,consectetur adipiscing elit.QoQorem ipsum dolor sit amet, consectetur adipiscing elit.rem ",
-      },
-      {
-        id: 8,
-        heading: "Green Tea Studios, developed by our experienced team",
-        detail:
-          "Qorem ipsum dolor sit amet, consectetur adipiscing elit.Qorem ipsum dolor sit amet,consectetur adipiscing elit.QoQorem ipsum dolor sit amet, consectetur adipiscing elit.rem ",
-      },
   ];

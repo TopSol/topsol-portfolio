@@ -7,6 +7,8 @@ import OurPortfolio from "./ourPortfolio";
 import RatingSection from "./ratingSection";
 import Awards from "./awards";
 import GetInTouch from "./getInTouch";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/footerSection";
 import { motion } from "framer-motion";
 
 function Home() {

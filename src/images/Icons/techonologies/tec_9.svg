@@ -1,0 +1,18 @@
+<svg width="48" height="60" viewBox="0 0 48 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="flutter" clip-path="url(#clip0_54_1900)">
+<path id="Vector" d="M29.5624 0L0.00012207 29.5622L9.1502 38.7123L47.8627 0H29.5624Z" fill="#47C5FB"/>
+<path id="Vector_2" d="M29.3564 27.262L13.5279 43.0904L22.7124 52.4121L31.8456 43.2789L47.8627 27.262H29.3564Z" fill="#47C5FB"/>
+<path id="Vector_3" d="M22.7125 52.412L29.6653 59.3648H47.8626L31.8454 43.2788L22.7125 52.412Z" fill="#00569E"/>
+<path id="Vector_4" d="M13.4249 43.1933L22.5752 34.043L31.8454 43.279L22.7124 52.4121L13.4249 43.1933Z" fill="#00B5F8"/>
+<path id="Vector_5" d="M22.7124 52.4122L30.3174 49.8886L31.0728 44.0515L22.7124 52.4122Z" fill="url(#paint0_linear_54_1900)" fill-opacity="0.8"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_54_1900" x1="107.29" y1="759.455" x2="1647.13" y2="1446.56" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_54_1900">
+<rect width="48" height="59.4375" fill="white"/>
+</clipPath>
+</defs>
+</svg>

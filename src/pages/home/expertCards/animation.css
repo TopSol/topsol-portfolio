@@ -1,0 +1,11 @@
+.card {
+    transition: background-color 1s linear;
+    /* Define the base styles here */
+}
+
+.card:hover {
+    background-color: blue;
+    /* height: 100px; */
+    /* Override the base styles for hover */
+    /* transition: height 2s ease-in; Add a separate transition for height */
+}

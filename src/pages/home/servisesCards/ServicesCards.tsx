@@ -10,8 +10,8 @@ function ServicesCards({heading,desc,avatar}:appProps) {
   return (
     <div>
       <div className=" border-2  hover:bg-[#32CFFF] hover:text-white border-[#32CFFF] rounded-2xl  w-[264px] h-[369px]  items-center">
-            <div className="flex flex-col hover:translate-y-2 w-full items-center px-4 ">
-          <div className="mb-2">
+            <div className="flex flex-col hover:translate-y-1 w-full items-center px-4 ">
+          <div className="mb-2 w-[70px] h-[70px]  mt-2">
             <img src={avatar} />
           </div>
           <div className="py-4 font-extrabold">

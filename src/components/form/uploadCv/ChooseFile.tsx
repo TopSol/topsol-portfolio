@@ -1,16 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const FileUpload: React.FC = () => {
-  const [fileName, setFileName] = useState<string>('No file chosen');
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFile = event.target.files?.[0];
-    setFileName(selectedFile ? selectedFile.name : 'No file chosen');
-  };
-
+const FileUpload = ({ handleFileChange, resumeFile }: any) => {
   return (
     <div className="flex items-center">
-      
       <input
         type="file"
         id="cvUpload"
@@ -25,9 +17,11 @@ const FileUpload: React.FC = () => {
         hover:cursor-pointer
         hover:text-primary"
       >
-        Upload Cv
+        Upload CV
       </label>
-      <span className="text-lg">{fileName}</span>
+      <span className="text-lg">
+        {resumeFile ? resumeFile.name : "No file chosen"}
+      </span>
     </div>
   );
 };

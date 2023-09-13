@@ -1,25 +1,44 @@
-import React from 'react'
+import React, { useState } from "react";
+import "./animation.css";
+type appProps = {
+  title?: string | null;
+  avatar: string;
+};
 
-type appProps={
-    title?:string,
-    avatar:string,
-}
-
-function ExpertCards({title,avatar}:appProps) {
-    const hasTitle = !!title; 
-
+function ExpertCards({ title, avatar }: appProps) {
+  const hasTitle = !!title;
+  console.log(hasTitle, "true false value is hear -----");
+  // transform origin-top transition-transform ease-in-out  hover:scale-y-125
   return (
-    
-      <div className={`flex py-2 flex-col hover:bg-[#00B8F1] ${!hasTitle?'shadow-md':'shadow-none'}  hover:text-white items-center justify-center rounded-md ${!hasTitle?'':'border'} border-[#00B8F1] ${ hasTitle ? 'max-w-[198px]' : 'max-w-[100px]'} ${hasTitle?'max-h-[140px]':'max-h-[100px]'} ${hasTitle?'hover:scale-y-125':'hover:scale-y-none'} transform origin-top transition-transform duration-500 ease-in-out`}>
-            <div className="bg-white rounded-full p-2">
-              <img src={avatar} />
-            </div>
-            <div className={`pt-${hasTitle?6:0} text-center`}>
-              <p>{title}</p>
-            </div>
+    <div className={`${hasTitle ? "min-h-[180px]" : ""} `}>
+      <div
+        className={`hover:duration-500  flex flex-col items-center  ${
+          hasTitle
+            ? "rounded-[10px]  border-2 w-[198px]  hover:bg-primary-light group  border-primary-light  "
+            : "border-none shadow-lg shadow-gray-400 rounded-[20px]"
+        }`}
+      >
+        <img
+          src={avatar}
+          alt=""
+          className={`   ${
+            hasTitle
+              ? "  group-hover:bg-white p-4 mt-[12px] rounded-full "
+              : "m-[26px] w-[48px] h-[48px] "
+          } `}
+        />
+        {hasTitle ? (
+          <div>
+            <h1
+              className={`  mt-[19px] mb-[21px] group-hover:mt-10  group-hover:mb-6 group-hover:text-white  group-hover:duration-200 text-[13px] font-bold `}
+            >
+              {title}
+            </h1>
           </div>
-    
-  )
+        ) : null}
+      </div>
+    </div>
+  );
 }
 
-export default ExpertCards
+export default ExpertCards;

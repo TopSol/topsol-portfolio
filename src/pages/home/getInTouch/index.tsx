@@ -1,76 +1,76 @@
 import React from "react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import touchImg1 from "../../../images/touchImg1.png";
 import check1 from "../../../images/check1.png";
 import ContactForm from "./ContactForm";
 
 function GetInTouch() {
   return (
-    <div className="py-12 sm:px-24 px-10">
-      <div className="flex flex-col items-center">
-        <div>
-          <h1 className="font-extrabold text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
-            Get In Touch
+    <div>
+       <div className="flex flex-col mt-[137px] justify-center items-center">
+        <div className="">
+          <h1 className="font-extrabold font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
+          Get in Touch
           </h1>
         </div>
-        <div className="my-6">
-          <div
+        <div
             className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
               before:bottom-0 before:left-0 before:bg-[#00B8F1] before:rounded-3xl
               before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-              before:transition before:ease-in-out before:duration-1000 mr-44 my-6"
+              before:transition before:ease-in-out before:duration-1000 mr-44 mt-[18px]"
           ></div>
-        </div>
-      </div>
-
-      <div className="lg:grid lg:grid-cols-2">
-        <div className="lg:flex flex-col  hidden">
-          <div>
-            <img src={touchImg1} className="w-[144px h-[102px]]" />
+          </div>
+      <div className=" mt-[84px] flex justify-center  md:container mx-auto ">
+        <div className=" mr-[74px] lg:flex flex-col hidden ">
+          <div className="flex justify-center">
+            <img src={touchImg1} className="h-[102px] w-[144px]" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold my-6">
+            <h2 className="text-[30px] mt-[40px] font-semibold my-6">
               Let's Discuss Your Project
             </h2>
-            <ul>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Efficient Communication
+            <ul className=" mt-[36px] ">
+              <li className="flex py-2  ">
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Efficient Communication</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Privacy and Security{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Privacy and Security</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Fast Response{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Fast Response</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Reduced Email Clutter{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Reduced Email Clutter</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Customization{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Customization</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Automated Routing{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Automated Routing</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Consistency{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Consistency</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Professionalism{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Professionalism</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Less Spam{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Less Spam</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> Engagement{" "}
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">Engagement</p>
               </li>
               <li className="flex py-2">
-                <img src={check1} className="mr-4" /> 24/7 Availability
+                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" /> <p className=" text-[22px] font-medium">24/7 Availability</p>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="lg:w-[45%] w-[90%]  ">
+        <GoogleReCaptchaProvider reCaptchaKey="6Ld3fhcoAAAAAH4-XdxVLnTpos0snr6RyoJDARtn" >
           <ContactForm />
+          </GoogleReCaptchaProvider >
         </div>
       </div>
     </div>

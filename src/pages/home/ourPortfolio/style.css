@@ -1,0 +1,16 @@
+.card {
+    transition: background-color 1s linear;
+}
+
+.card:hover {
+    height: 200px;
+    transition: height 2s ease-in; 
+}
+.btn {
+    background-color: white;
+    transition: background-color 1s linear;
+}
+.btn:hover {
+    background-color: #00B8F1;
+    transition: background-color 1s linear;
+}

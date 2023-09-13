@@ -25,19 +25,20 @@ function Awards() {
     }
   };
 
-  const settings = {
+  var settings = {
     dots: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 4,
+    infinite: true,
+    speed: 1000,
     arrows: false,
-    // initialSlide:0,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           dots: false
         }
@@ -45,20 +46,16 @@ function Awards() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false
-          // initialSlide: 2
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false
+          slidesToScroll: 1
         }
       }
     ]
@@ -66,27 +63,30 @@ function Awards() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center py-14 bg-[#F4F4F4]">
+      <div className="flex flex-col items-center justify-center pb-[105px] md:mt-[106px] mt-[78px]  bg-[#F4F4F4]">
         <div className="flex flex-col justify-center items-center">
-          <div>
-            <h1 className="font-extrabold text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
-              Awards and Honor
-            </h1>
-          </div>
-          <div className="my-6 w-[150px]">
-            <AnimateHr bgColor={'[#00B8F1]'}/>
-          </div>
+        <div className="">
+          <h1 className="font-extrabold mt-[68px] font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
+          Awards and Honors
+          </h1>
         </div>
-        <div className="flex justify-center items-center ">
+        <div
+            className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
+              before:bottom-0 before:left-0 before:bg-[#00B8F1] before:rounded-3xl
+              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
+              before:transition before:ease-in-out before:duration-1000 mr-44 mt-[18px]"
+          ></div>
+        </div>
+        <div className="flex justify-center items-center mt-[84px]  ">
           <button className="button " onClick={previous}>
             <img src={prevImg} />
           </button>
-          <div className="md:w-[100vh] sm:pl-0 pl-14 w-[40vh]  ">
+          <div className=" w-[90vw] ">
             <Slider {...settings} ref={setSlider}>
               {images?.map((review, id) => {
                 return (
-                  <div key={id} className="">
-                    <ImagSlider review={review} />
+                  <div key={id} className=" ">
+                     <img src={review.avatar} alt="#" className="w-[105px] h-[105px] mx-auto " />
                   </div>
                 );
               })}

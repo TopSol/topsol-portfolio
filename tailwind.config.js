@@ -25,7 +25,8 @@ module.exports = {
           navbarBg: '#0B234C',
           navItemBg:' #000a4c',
           darkGray: '#555555',
-          cardBg: '#F7F7F7'
+          cardBg: '#F7F7F7',
+          smCardBorder: '#F4F4F4'
           
         },
         secondary: {
@@ -36,8 +37,11 @@ module.exports = {
           dark: '#4E5FD0',
           darker: '#2839A9',
         },
-        textColors: "#000000"
-      }
+        textColors: "#000000",
+        light_Grey:'#707070',
+        light_Black:'#3D3D3D'
+        
+      },
     },
   },
   plugins: [],

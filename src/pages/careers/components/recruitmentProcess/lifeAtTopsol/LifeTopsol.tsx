@@ -2,24 +2,59 @@ import React, { useState } from "react";
 import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
 import SmallCards from "../../../../../components/smallCards/SmallCards";
 import careerCardOne from "../../../../../images/careerCard1.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { cardsData } from "./data";
 
 function LifeTopsol() {
   const [showMore, setShowMore] = useState(false);
+
+  const settings = {
+    dots: false,
+    autoplay: true,
+    speed: 500,
+    arrows: false,
+    autoplaySpeed: 2500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: "unslick",
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+        },
+      },
+    ],
+  };
 
   const toggleButton = () => {
     setShowMore(!showMore);
   };
 
   return (
-    <div className="py-20 px-10 md:container mx-auto">
-      <div className="grid lg:grid-cols-2 ">
-        <div>
-          <h1 className="md:text-6xl text-4xl font-montserrat font-bold my-4">
+    <div className="md:container mx-auto">
+      <div className="flex lg:flex-row flex-col md:justify-center  xl:mx-0 lg:mx-3">
+        <div className="  lg:mb-[150px] flex items-center justify-center flex-col">
+          <h1 className="md:text-6xl lg:text-start text-center text-3xl font-semibold mb-8 md:mt-[161px] mt-[51px]">
             Life at Topsol
           </h1>
-
-          <AnimateHr bgColor="[#00B8F1]" />
-          <p className="my-10">
+          <AnimateHr bgColor="[#00B8F1]" className=" w-[150px]" />
+          <p className=" text-xl md:mx-0 mx-8   lg:text-start text-center font-medium my-10 flex items-center md:leading-10 leading-7 lg:max-w-[628px] lg:h-[297px]">
             Life at Topsol is more than just a job - it's an immersive
             experience that combines innovation, camaraderie, and personal
             growth. From the moment you step through our doors, you'll become a
@@ -39,43 +74,76 @@ function LifeTopsol() {
           </p>
           <button
             onClick={toggleButton}
-            className="px-10 py-2 rounded bg-primary text-primary-white hover:bg-primary-light"
+            className="md:px-[53px] px-[42px] md:max-w-[260px] max-w-[191px] h-[44px] md:h-[65px] md:text-[26px] text-lg font-semibold rounded-[5px] bg-primary text-primary-white hover:bg-primary-light"
           >
             {showMore ? "Show less" : "Learn more"}
           </button>
         </div>
 
-        <div className="">
-          <div className="flex items-center justify-center lg:mt-0 mt-10 gap-x-12">
-            <div className="flex flex-col gap-y-12 overflow-x-hidden">
-              <SmallCards
-                avatar={careerCardOne}
-                heading={"Large Beautiful Office"}
-                text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-                color='cardBg'
-              />
-              <SmallCards
-                avatar={careerCardOne}
-                heading={"Large Beautiful Office"}
-                text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-                color='cardBg'
-              />
-            </div>
-            <div className="lg:mt-20 gap-y-12 flex flex-col">
-              <SmallCards
-                avatar={careerCardOne}
-                heading={"Large Beautiful Office"}
-                text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-                color='cardBg'
-              />
-              <SmallCards
-                avatar={careerCardOne}
-                heading={"Large Beautiful Office"}
-                text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-                color='cardBg'
-              />
-            </div>
+        <div className="md:flex  justify-center gap-[42px] hidden">
+          <div className="lg:mt-[141px] lg:mb-0 mb-[150px] mt-20 flex flex-col gap-y-10">
+            <SmallCards
+              avatar={careerCardOne}
+              heading={"Large Beautiful Office"}
+              headingClass={"font-semibold text-sm"}
+              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
+              textClass="text-[11px] font-normal"
+              color="cardBg"
+              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
+            />
+
+            <SmallCards
+              avatar={careerCardOne}
+              heading={"Large Beautiful Office"}
+              headingClass={"font-semibold text-sm"}
+              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
+              textClass="text-[11px] font-normal"
+              color="cardBg"
+              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
+            />
           </div>
+
+          <div className="lg:mt-[219px] mt-20 flex flex-col gap-y-10">
+            <SmallCards
+              avatar={careerCardOne}
+              heading={"Large Beautiful Office"}
+              headingClass={"font-semibold text-sm"}
+              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
+              textClass="text-[11px] font-normal"
+              color="cardBg"
+              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
+            />
+
+            <SmallCards
+              avatar={careerCardOne}
+              heading={"Large Beautiful Office"}
+              headingClass={"font-semibold text-sm"}
+              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
+              textClass="text-[11px] font-normal"
+              color="cardBg"
+              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
+            />
+          </div>
+        </div>
+        <div className=" md:hidden grid grid-cols-1 mt-[63px] mb-[70px]">
+          {
+            <Slider {...settings}>
+              {cardsData?.map((review, index) => {
+                return (
+                  <div key={index} className="">
+                    <SmallCards
+                      heading={review.heading}
+                      headingClass="font-semibold text-sm"
+                      textClass="text-[11px] font-normal"
+                      text={review.text}
+                      avatar={review.avatar}
+                      className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[217px]  p-[22px]"
+                    />
+                  </div>
+                );
+              })}
+            </Slider>
+          }
         </div>
       </div>
     </div>

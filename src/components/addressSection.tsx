@@ -35,7 +35,7 @@ export default function AddressSection() {
               alt=""
               srcset=""
             />
-            <p className="text-base ml-2">+92-303-6362191</p>
+            <p className="text-base ml-2">+92-303-6362191 <br />(041)8557244</p>
           </div>
           <div className="flex items-center mt-[22px] ">
             <img
