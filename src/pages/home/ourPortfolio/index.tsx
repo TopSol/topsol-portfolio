@@ -1,22 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import dot1 from "../../../images/dot1.png";
-import AnimateHr from "../../../components/animatedLine/AnimateHr";
-import { cardData } from "./data";
 import { Link } from "gatsby";
 import "./style.css";
-
-interface CardData {
-  title: string;
-  image: string;
-}
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
+import { db } from "../../../utils/firebase";
 
 function OurPortfolio() {
-  const initialVisibleCards = 4;
-  const [visibleCards, setVisibleCards] = useState<number>(initialVisibleCards);
+  const [visibleCards, setVisibleCards] = useState([]);
 
-  const handleViewMore = () => {
-    setVisibleCards((prevVisibleCards) => prevVisibleCards + 4);
+  const fetchPortFolios = async () => {
+    try {
+      const docRef = doc(collection(db, "settings"), "appSettings");
+      const settings = (await getDoc(docRef)).data();
+      const getIds = settings?.homePagePortfolios;
+
+      const citiesRef = collection(db, "portFolio");
+      const q = query(citiesRef, where("id", "in", getIds));
+      const querySnapshot = await getDocs(q);
+
+      const fetchedDocuments = querySnapshot.docs.map((doc) => doc.data());
+      setVisibleCards(fetchedDocuments);
+    } catch (error) {
+      console.log("error", error);
+    }
   };
+
+  useEffect(() => {
+    fetchPortFolios();
+  }, []);
+
   return (
     <div className="px-4 mt-[126px] flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center">
@@ -33,7 +52,7 @@ function OurPortfolio() {
         ></div>
       </div>
       <div className=" md:mt-[53px]   grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-x-[30px]  ">
-        {cardData.slice(0, visibleCards).map((card, index) => (
+        {visibleCards?.map((card, index) => (
           <Link to={"/portfolio"}>
             <div
               key={index}
@@ -44,7 +63,7 @@ function OurPortfolio() {
               <div className="  ">
                 <div className="flex flex-col items-center ">
                   <img
-                    src={card.image}
+                    src={card.imageUrl}
                     style={{ transition: "all .50s ease " }}
                     className="  my-[66px] group-hover:transition group-hover:duration-500 group-hover:scale-110
                       group-hover:ease-in-out "
@@ -68,7 +87,6 @@ function OurPortfolio() {
             className=" w-[180px] py-[15px] mt-[73px] text-[20px] font-semibold group flex text-center 
             items-center justify-center rounded bg-[#00B8F1] text-white hover:scale-x-125 hover:pl-4 m hover:duration-500
              transform origin-left transition-transform duration-500 ease-in-outy"
-            onClick={handleViewMore}
           >
             <div className=" group-hover:scale-x-[.8] ">View more</div>
 

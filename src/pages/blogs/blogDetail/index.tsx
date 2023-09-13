@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "../../components/Navbar";
-import SmallFooter from "../../components/smallFooter";
-import Footer from "../../components/footerSection";
-import Hero from "./component/Hero";
-import PortfolioDetailBody from "./component/portfolioDetailBody";
-import { db } from "../../utils/firebase";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/footerSection";
+import Hero from "./components/Hero";
+import CommentSection from "./components/CommentSection";
+import { db } from "../../../utils/firebase";
+import { collection, doc, getDoc } from "firebase/firestore";
 
 export default function index() {
   const [detail, setDetail] = useState({});
@@ -18,7 +17,7 @@ export default function index() {
 
   const fetchPortfolioItem = async () => {
     try {
-      const portfolioItemRef = doc(collection(db, "portFolio"), id);
+      const portfolioItemRef = doc(collection(db, "blogs"), id);
       const portfolioItemDoc = await getDoc(portfolioItemRef);
 
       if (portfolioItemDoc.exists()) {
@@ -40,8 +39,8 @@ export default function index() {
     <div>
       <Navbar />
       <Hero data={detail} />
-      <PortfolioDetailBody data={detail} />
-      <SmallFooter />
+      <div dangerouslySetInnerHTML={{ __html: detail?.htmlCode || "" }} />
+      <CommentSection />
       <Footer />
     </div>
   );
