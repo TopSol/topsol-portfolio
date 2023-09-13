@@ -21,7 +21,7 @@ export default function RecentWork() {
   const [isNextPage, setIsNextPage] = useState(true);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 2;
+  const itemsPerPage = 5;
 
   const hasNextPage = currentIndex + itemsPerPage < portFolios.length;
   const hasPreviousPage = currentIndex > 0;
