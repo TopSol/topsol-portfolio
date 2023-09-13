@@ -71,7 +71,7 @@ export default function RecentWork() {
   };
 
   useEffect(() => {
-    fetchPortFolios(null, null);
+    fetchPortFolios(null);
   }, []);
 
   const scrollToTop = () => {

@@ -39,7 +39,9 @@ export default function PortfolioCard({ data, index }) {
           <h3 className=" text-[25px] lg:text-[30px] xl:text-[40px] leading-normal font-semibold my-[16px] xl:my-[37px] ">
             {data?.title}
           </h3>
-          <p className={`text-[15px]  lg:text-[20px] font-medium`}>
+          <p
+            className={"text-[15px]  lg:text-[20px] font-medium whitespace-pre"}
+          >
             {data?.description}
           </p>
         </div>
