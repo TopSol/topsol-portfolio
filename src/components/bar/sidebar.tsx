@@ -8,6 +8,8 @@ import Close from "../../images/close.png";
 function SideBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
 
   const iconVariants = {
     opened: {
@@ -23,7 +25,7 @@ function SideBar() {
       top: 0,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.5,
+        staggerChildren: 0.1,
       },
     },
     closed: {
@@ -41,47 +43,64 @@ function SideBar() {
       y: 0,
     },
   };
- 
+
 
   return (
-    <div className="App">
-      <Header className= {`hover:bg-white `}
+    <div className="App relative">
+      <Header className={` ${isOpen ? 'bg-primary-navbarBg' : hovered ? 'bg-white' : ' bg-primary-navbarBg'} `}
         onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}  
-        >
+        onMouseLeave={() => setHovered(false)}
+      >
         <div className="flex justify-between px-5 md:px-[105px] items-center">
-        <img
-        src={hovered ? Logo2 : Logo}
-        alt=""
-      />
-
-          <div
-            className="z-50 "
-            variants={iconVariants}
-            animate={isOpen ? "opened" : "closed"}
-            whileHover={{ scale: 1.4 }}
-            onClick={() => setIsOpen(!isOpen)}
+          <img
+            src={isOpen ? Logo : hovered ? Logo2 : Logo}
+            alt=""
+          />
+          <div className=" z-[300]"
+            onClick={() => { setIsOpen(!isOpen); setIsClicked(!isClicked) }}
           >
-            <img
-        src={hovered ? NavbarMenu2 : NavbarMenue}
-        alt=""
-      />
+            <div
+              className=" mr-4"
+              variants={iconVariants}
+              animate={isOpen ? "opened" : "closed"}
+              whileHover={{ scale: 1.4 }}
+
+            >
+              {isOpen ? <img
+                src={isOpen ? Close : hovered ? NavbarMenu2 : NavbarMenue}
+                alt=""
+                className="w-[24px] h-[24px]"
+              /> :
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+                  <rect width="28" height="4" rx="2" fill={hovered ? '#0B234C' : 'white'} />
+                  <rect y="10" width="14" height="4" rx="2" fill={hovered ? '#0B234C' : 'white'} />
+                  <rect y="20" width="22" height="4" rx="2" fill={hovered ? '#0B234C' : 'white'} />
+                </svg>}
+            </div>
+            <div className={`absolute top-4 right-32 z-[-10] ${isClicked ? 'clickedImage' : 'hoverImages'}`}>
+              {<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 96 96" fill="none">
+              </svg>}
+
+            </div>
+            <div className={` flex flex-row justify-center  `}>
+
+              <Nav
+                initial={false}
+                variants={menuVariants}
+                animate={isOpen ? "opened" : "closed"}
+              >
+                <LinkTag variants={linkVariants}>SERVICES</LinkTag>
+                <LinkTag variants={linkVariants}>PORTFOLIO</LinkTag>
+                <LinkTag variants={linkVariants}>ABOUT US</LinkTag>
+                <LinkTag variants={linkVariants}>CAREER</LinkTag>
+                <LinkTag variants={linkVariants}>CONTACT US</LinkTag>
+                <LinkTag variants={linkVariants}>BLOG</LinkTag>
+              </Nav>
+            </div>
           </div>
         </div>
       </Header>
 
-      <Nav
-        initial={false}
-        variants={menuVariants}
-        animate={isOpen ? "opened" : "closed"}
-      >
-        <LinkTag variants={linkVariants}>SERVICES</LinkTag>
-        <LinkTag variants={linkVariants}>PORTFOLIO</LinkTag>
-        <LinkTag variants={linkVariants}>ABOUT US</LinkTag>
-        <LinkTag variants={linkVariants}>CAREER</LinkTag>
-        <LinkTag variants={linkVariants}>CONTACT US</LinkTag>
-        <LinkTag variants={linkVariants}>BLOG</LinkTag>
-      </Nav>
     </div>
   );
 }

@@ -8,7 +8,7 @@ type appProps = {
 
 function ServicesCards({ heading, desc, avatar, bg }: appProps) {
   return (
-    <div className="border-2 border-[#32CFFF] rounded-2xl w-[264px] h-[369px] overflow-hidden relative hoverDive">
+    <div className="  bg-white rounded-2xl w-[264px] h-[369px] overflow-hidden relative hoverDive shadow-sm hover:text-primary-white shadow-black  ">
       <div className="flex flex-col w-full items-center px-4">
         <div className="mb-2 w-[70px] h-[70px] mt-2 z-[2]">
           <img src={avatar} alt="Avatar" />

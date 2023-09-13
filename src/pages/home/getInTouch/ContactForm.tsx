@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import dropDown from "../../../images/dropdown.png";
 import { dropDownData } from "./data";
+import { useAnimate, stagger, motion } from "framer-motion";
+
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isChecked, setIsChecked] = useState(false);
-  const [phone, setPhone] = useState("");
 
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
@@ -44,9 +45,8 @@ function ContactForm() {
             {dropDownData.map((option, index) => (
               <li
                 key={index}
-                className={`px-4 py-2  hover:bg-gray-100 cursor-pointer ${
-                  selectedOption === option ? "bg-primary text-white" : ""
-                }`}
+                className={`px-4 py-2  hover:bg-gray-100 cursor-pointer ${selectedOption === option ? "bg-primary text-white" : ""
+                  }`}
                 onClick={() => handleOptionClick(option)}
               >
                 {option.name}
