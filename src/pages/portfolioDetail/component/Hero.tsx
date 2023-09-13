@@ -9,7 +9,12 @@ export default function Hero({ data }) {
           <h1 className="text-[50px] text-center font-bold mt-[70px] ">
             {data?.title}
           </h1>
-          <p className="text-2xl text-center mt-[50px] ">{data?.description}</p>
+          {/* <p className="text-2xl text-center mt-[50px] ">{data?.description}</p> */}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<p style="margin-top: 20px; font-size: 1.25rem; line-height: 1.75rem margin-left: 1.5rem; margin-right: 1.5rem; font-family: Montserrat, sans-serif; ">${data?.description}</p>`,
+            }}
+          />
           <div className="w-[270px] my-[50px] pb-[200px]  md:pb-[300px] ">
             <PrimaryBtn
               text="Download Now"

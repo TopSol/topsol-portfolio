@@ -11,9 +11,14 @@ export default function PortfolioDetailBody({ data }) {
           <h1 className="text-[36px] md:text-[30px] lg:text-[36px] font-bold font-montserrat">
             About {data?.title}
           </h1>
-          <p className="text-[22px] md:text-[18px] lg:text-[22px] font-montserrat mt-[36px]">
+          {/* <p className="text-[22px] md:text-[18px] lg:text-[22px] font-montserrat mt-[36px]">
             {data?.aboutDesc}
-          </p>
+          </p> */}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<p style="margin-top: 20px; font-size: 1.25rem; line-height: 1.75rem margin-left: 1.5rem; margin-right: 1.5rem; font-family: Montserrat, sans-serif; ">${data?.aboutDesc}</p>`,
+            }}
+          />
         </div>
 
         <div className=" md:w-[50%]  mt-6 md:mt-0 mx-6 md:0 lg:w-[30%] border-2 border-gray-300 px-[40px] rounded-[10px] py-[40px]">
@@ -56,9 +61,14 @@ export default function PortfolioDetailBody({ data }) {
         </div>
 
         <div className="md:container mx-auto">
-          <p className=" text-xl mx-6 md:text-2xl font-montserrat  mt-[20px]">
+          {/* <p className=" text-xl mx-6 md:text-2xl font-montserrat  mt-[20px]">
             {data?.unlockDesc}
-          </p>
+          </p> */}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<p style="margin-top: 20px; font-size: 1.25rem; line-height: 1.75rem margin-left: 1.5rem; margin-right: 1.5rem; font-family: Montserrat, sans-serif; ">        ${data?.unlockDesc}    </p>`,
+            }}
+          />
         </div>
       </div>
 
