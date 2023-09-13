@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import CardSection from "./cardSection";
 import ServicesOffers from "./servisesOffers";
 import TopSolExperts from "./topSolExpert";
@@ -9,7 +9,7 @@ import GetInTouch from "./getInTouch";
 import Hero from "./hero";
 import Footer from "../../components/footerSection";
 import Navbar from "../../components/bar/sidebar";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 function Home() {
   const [bg, setBg] = useState("#fff");
