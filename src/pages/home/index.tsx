@@ -17,16 +17,16 @@ function Home() {
     <div className="">
       <Navbar />
       <Hero />
-      <motion.div
+      {/* <motion.div
         initial={{ background: "#fff" }}
         animate={{
           background: bg,
         }}
         transition={{ duration: 1, ease: "easeInOut" }}
-      >
-        <CardSection setBg={setBg} />
-        <ServicesOffers />
-      </motion.div>
+      > */}
+      {/* <CardSection setBg={setBg} /> */}
+      <ServicesOffers />
+      {/* </motion.div> */}
       <TopSolExperts />
       <OurPortfolio />
       <RatingSection />
