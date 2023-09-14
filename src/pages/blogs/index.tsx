@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/bar/sidebar";
 import Header from '../../components/headerSection';
 import Heading from './Heading';
 import Footer from '../../components/footerSection';
@@ -24,7 +24,7 @@ export default function index() {
         imageUrl="https://res.cloudinary.com/asifsaythe/image/upload/v1693224854/new_portfolio/Frame_1_lv9ucy.png"
       />
       <Heading />
-     <Card/>
+      <Card />
       <div className='mt-[100px] md:mt-[139px]'>
         <Footer />
       </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
+import Navbar from "../../components/bar/sidebar";
 import PrimaryBtn from '../../components/PrimaryBtn';
 import Footer from '../../components/footerSection';
 import DataScience from './components/DataScience';

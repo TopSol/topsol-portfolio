@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/bar/sidebar";
 import RatingSection from "../home/ratingSection";
 import VidoeHero from "../../components/VidoeHero";
 import Footer from "../../components/footerSection";
@@ -17,7 +17,7 @@ export default function aboutUs() {
       <InfoSection />
       <Experience />
       <div className="mt-[40px]" >
-      <RatingSection />
+        <RatingSection />
       </div>
       <OurTeam />
       <AddressSection />
