@@ -4,16 +4,16 @@ export default function PortfolioCard({ data, index }) {
   return (
     <div>
       <div
-        className={`flex flex-col md:mt-[102px] mt-[30px]  md:container md:mx-auto  items-center ${
+        className={`flex flex-col md:mt-[102px] mt-[30px]  md:container md:mx-auto gap-x-[122px] xl:px-0 md:px-4 justify-center  items-center ${
           index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
         }`}
       >
         <div
-          className={`xl:w-[60%] lg:w-[50%] md:w-[45%] my-10 md:my-0 ${
+          className={`max-w-[446px] min-w-[246px] min-h-[201px] max-h-[501px] sm:px-0 px-4 my-10 md:my-0 ${
             index % 2 == 0 ? "justify-end " : "justify-start "
           }`}
         >
-          <img src={data?.imageUrl} alt="#" />
+          <img src={data?.imageUrl} alt="#"/>
         </div>
         <div
           className={`xl:w-[50%] lg:w-[45%] md:w-[50%] flex flex-col  mx-5 md:mx-0 ${
