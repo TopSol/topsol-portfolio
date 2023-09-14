@@ -17,12 +17,12 @@ function useMenuAnimation(isOpen: boolean) {
       {
         clipPath: isOpen
           ? "inset(0% 0% 0% 0% round 10px)"
-          : "inset(10% 50% 90% 50% round 10px)"
+          : "inset(10% 50% 90% 50% round 10px)",
       },
       {
         type: "spring",
         bounce: 0,
-        duration: 0.5
+        duration: 0.5,
       }
     );
 
@@ -33,7 +33,7 @@ function useMenuAnimation(isOpen: boolean) {
         : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
       {
         duration: 0.2,
-        delay: isOpen ? staggerMenuItems : 0
+        delay: isOpen ? staggerMenuItems : 0,
       }
     );
   }, [isOpen]);
@@ -77,10 +77,11 @@ function ContactForm() {
             </svg>
           </div>
         </motion.button>
-        <ul className=" dropDownUl absolute  flex bg-primary-formInput flex-col gap-5"
+        <ul
+          className=" dropDownUl absolute  flex bg-primary-formInput flex-col gap-5"
           style={{
             pointerEvents: isOpen ? "auto" : "none",
-            clipPath: "inset(10% 50% 90% 50% round 10px)"
+            clipPath: "inset(10% 50% 90% 50% round 10px)",
           }}
         >
           <li className=" dropDownli block origin-[-20px_50%] ">Item 1 </li>

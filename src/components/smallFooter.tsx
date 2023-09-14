@@ -1,7 +1,7 @@
 import React from 'react'
 import PrimaryBtn from './PrimaryBtn'
 
-export default function smallFooter() {
+export default function SmallFooter() {
   return (
     <div className="bg-gradient-to-b mt-[100px]  from-secondary to-primary py-[100px] ">
         <div className="md:container mx-auto flex flex-col md:flex-row  justify-between items-center    " >

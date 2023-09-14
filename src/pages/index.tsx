@@ -19,6 +19,7 @@ export function Head() {
     <>
       <title>TopSol Portfolio</title>
       <meta name="description" content="TopSol Portfolio " />
+      <link rel="icon" href="/topsol-favicon.png" type="image/png"></link>
     </>
   );
 }

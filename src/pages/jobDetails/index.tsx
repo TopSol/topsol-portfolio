@@ -1,14 +1,15 @@
-import React from 'react'
-import Designer from './components/productDesigner/Designer'
-import AboutUs from './components/details/AboutUs'
+import React from "react";
+import AboutUs from "./components/details/AboutUs";
+import Designer from "./components/productDesigner/Designer";
 
-function JobDetail() {
+function JobDetail(props: any) {
+  const details = props?.location?.state
   return (
     <div>
-      <Designer/>
-      <AboutUs/>
+      <Designer jobDetails={details} />
+      <AboutUs jobDetails={details} />
     </div>
-  )
+  );
 }
 
-export default JobDetail
+export default JobDetail;

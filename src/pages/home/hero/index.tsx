@@ -1,7 +1,11 @@
 import React from "react";
+import { PopupButton } from "react-calendly";
+// @ts-ignore
 import heroImg from "../../../images/hero-bg.png";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 export default function Hero() {
+  let root = document.body;
+
   return (
     <div
       className="bg-cover bg-center"
@@ -9,8 +13,11 @@ export default function Hero() {
         backgroundImage: `url(${heroImg})`,
       }}
     >
-      <div className="flex flex-col items-center justify-center h-screen text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl  md:text-5xl text-primary  font-extrabold ">
+      <div className="flex flex-col items-center h-screen text-center px-4 sm:px-6 lg:px-8">
+        <h1
+          id="root"
+          className="text-3xl sm:text-4xl  md:text-5xl text-primary  font-extrabold mt-[203px] "
+        >
           Better <span className=" mt-4 text-black"> Approach to Develop </span>
           Software
         </h1>
@@ -22,10 +29,16 @@ export default function Hero() {
         </p>
         <div className="bg-transparent    "></div>
         <div className="flex flex-col mt-[54px]  sm:flex-row gap-[17px]">
-          <PrimaryBtn
-            text="Let’s Talk  "
-            additionalClasses=" text-[20px] font-semibold  hover:bg-secondary-light text-white rounded-[10px]  "
-          />
+          {root && (
+            <PopupButton
+              // @ts-ignore
+              rootElement={root}
+              text="Let’s Talk!"
+              url="https://calendly.com/asif-mushtaq"
+              className="bg-primary py-4 px-16  rounded hover:bg-primary text-[20px] font-semibold  hover:bg-secondary-light text-white rounded-[10px]  "
+            />
+          )}
+
           <PrimaryBtn
             text="Get a quote"
             additionalClasses="text-primary text-[20px] font-semibold bg-transparent border-2 border-primary hover:text-white hover:bg-primary rounded-[10px] "

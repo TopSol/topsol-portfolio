@@ -1,4 +1,5 @@
 import React from "react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import touchImg1 from "../../../images/touchImg1.png";
 import check1 from "../../../images/check1.png";
 import ContactForm from "./ContactForm";
@@ -62,7 +63,9 @@ function GetInTouch() {
         </div>
 
         <div className="lg:w-[45%] w-[90%]  ">
+        <GoogleReCaptchaProvider reCaptchaKey="6Ld3fhcoAAAAAH4-XdxVLnTpos0snr6RyoJDARtn" >
           <ContactForm />
+          </GoogleReCaptchaProvider >
         </div>
       </div>
     </div>
