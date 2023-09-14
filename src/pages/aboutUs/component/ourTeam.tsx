@@ -2,7 +2,7 @@ import React from 'react'
 import PrimaryBtn from '../../../components/PrimaryBtn'
 import { btnData, data } from '../data'
 import { useState } from 'react'
-
+import LineAnimation from '../../../components/LineAnimation'
 export default function OurTeam() {
     const [ selectWorkers , setSetWorkers] = useState("All")
   const filterData = data.filter((item:any)=>{
@@ -19,12 +19,7 @@ export default function OurTeam() {
               Our Team
             </h1>
           </div>
-          <div
-            className="relative before:content-[''] before:absolute before:block before:w-[178px] before:h-[7px] 
-              before:bottom-0 before:left-0 before:bg-[#00B8F1] before:rounded-3xl
-              before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-              before:transition before:ease-in-out before:duration-1000 mr-44 mt-4"
-          ></div>
+          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="14px"/>
         </div>
         <div className=" grid grid-col gap-3 mt-8 md:grid-cols-3 lg:grid-cols-6 md:container md:mx-auto ">
           {btnData.map((item: any,index) => {

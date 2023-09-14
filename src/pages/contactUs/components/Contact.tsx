@@ -3,6 +3,7 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import dropDown from '../../../images/dropdown.png'
 import dot from '../../../images/dot.png'
+import LineAnimation from '../../../components/LineAnimation'
 
 import { btnData } from '../data'
 export default function Contact() {
@@ -32,24 +33,19 @@ export default function Contact() {
                     </div>
                     <div className=" flex  md:justify-start md:items-start">
                         <div className="flex justify-center items-center">
-                            <div
-                                className="before:content-[''] before:block before:h-[7px] 
-                                before:bg-[#00B8F1] before:rounded-3xl
-                                before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-                                before:transition before:ease-in-out before:duration-1000
-                                w-[103px] md:w-[178px] mt-[21px] md:mt-[25px]  "
-                            ></div>
+                            <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px" />
                         </div>
                     </div>
                 </div>
-                <div className="mt-[24px] mx-[27px] px-[10px] py-[17px] md:container md:mx-auto bg-primary-formInput sm:justify-between  justify-center  rounded-md flex relative">
+                <div className="mt-[24px] mx-[27px] px-[10px] py-[17px] md:container md:mx-auto bg-primary-formInput sm:justify-between  justify-center  rounded-md flex relative cursor-pointer"
+                onClick={toggleDropdown}
+                >
                     <h1 className=' flex text-light_Grey  font-medium   md:text-[18px]'>
                         {selectedOption ? `${selectedOption?.name}?` : 'How can we help you?'}
                     </h1>
                     <div className=''>
                         <button
                             className="ml-[18px] focus:outline-none "
-                            onClick={toggleDropdown}
                         >
                             <img
                                 src={dropDown}

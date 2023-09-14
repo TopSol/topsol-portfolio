@@ -1,6 +1,6 @@
 import React from 'react'
 import dot from '../../../images/dot.png'
-
+import LineAnimation from '../../../components/LineAnimation'
 export default function CardSection() {
   return (
     <div className='md:w-[80%] md:justify-center md:mx-auto'>
@@ -8,13 +8,9 @@ export default function CardSection() {
         <h1 className='text-[22px] md:text-[30px] justify-center  text-center md:text-left text-black font-semibold '>Unraveling the Power of Data Science</h1>
         <div className=" flex justify-center items-center md:justify-start md:items-start">
           <div className="flex justify-center items-center">
-            <div
-              className="before:content-[''] before:block before:h-[7px] 
-    before:bg-[#00B8F1] before:rounded-3xl
-    before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-    before:transition before:ease-in-out before:duration-1000
-    w-[103px] md:w-[307px] mt-[21px] md:mt-[25px] md:ml-[125px] "
-            ></div>
+            <div className='md:ml-[149px] ml-0'>
+          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px"/>
+          </div>
           </div>
         </div>
         <p className='text-[16px] md:text-[22px] text-center md:text-left text-black font-medium mt-[37px] '> In the vast landscape of modern technology, data has emerged as the new gold. From the intricate

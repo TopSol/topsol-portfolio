@@ -4,21 +4,28 @@ import navbarMenu from "../images/navbarMenu.png";
 import closeImg from "../images/close.png";
 import logoTwo from "../images/main-logo2.png";
 import menuTwo from "../images/navbarMenu2.png";
+import { motion } from "framer-motion";
 
 import { Link } from "gatsby";
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [hover, setHover] = useState(false);
 
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
+
   return (
-    <div
+    <motion.div
+      variants={variants}
       className={`relative bg-primary-navbarBg ${
         !open
           ? "hover:bg-primary-white transition-colors duration-500"
           : "bg-primary-navbarBg"
       }`}
     >
-      <div className="md:container  mx-auto " id="navbar">
+      <motion.div className="md:container  mx-auto " id="navbar">
         <header>
           <nav
             className="
@@ -93,8 +100,8 @@ function Navbar() {
             </div>
           </nav>
         </header>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 
