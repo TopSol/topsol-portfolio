@@ -4,8 +4,16 @@ import Form from "../../../../components/form/Form";
 import { db, storage } from "../../../../utils/firebase";
 // @ts-ignore
 import hrImg from "../../../../images/horizantolLine.png";
-import { addDoc, collection, setDoc } from "firebase/firestore";
+import { validateJobApplicatonForm } from "../../../../utils";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import {
+  Timestamp,
+  addDoc,
+  collection,
+  doc,
+  runTransaction,
+  setDoc,
+} from "firebase/firestore";
 
 function AboutUs({ jobDetails }: any) {
   const [loading, setLoading] = useState(false);
@@ -36,35 +44,65 @@ function AboutUs({ jobDetails }: any) {
 
   const handleFileChange = (e: any) => {
     const file = e.target.files[0];
-    setResumeFile(file);
+    if (file.type === "application/pdf") {
+      const maxSize = 5 * 1024 * 1024; // 5MB
+      if (file.size > maxSize) {
+        alert("PDF file size exceeds 5MB. Please select a smaller PDF.");
+        return;
+      }
+      setResumeFile(file);
+    } else {
+      alert("Please select a valid PDF file.");
+    }
   };
 
   const handleApplyClick = () => {
     setShowForm(true);
   };
 
-  const submit = async () => {
+  async function incrementApplicants(documentId: string) {
     try {
-      if (
-        !formData.name ||
-        !formData.email ||
-        !formData.phone ||
-        !formData.cover
-      ) {
-        alert("Please fill all fields");
+      const postRef = doc(db, "jobPosts", documentId);
+      await runTransaction(db, async (transaction) => {
+        const postDoc = await transaction.get(postRef);
+        console.log({ transaction, postDoc });
+        if (!postDoc.exists()) {
+          throw new Error("Document does not exist");
+        }
+        const newApplicantsCount = (postDoc.data().applicants || 0) + 1;
+        transaction.update(postRef, { applicants: newApplicantsCount });
+      });
+    } catch (error) {
+      console.error("Error updating document:", error);
+    }
+  }
+
+  const submit = async (e: Event) => {
+    e.preventDefault();
+    try {
+      const response = validateJobApplicatonForm(formData, resumeFile);
+      if (!response.isValid) {
+        alert(response.msg);
         return;
       }
+
       setLoading(true);
-      const docRef = await addDoc(collection(db, "jobApplications"), formData);
+      const body = {
+        ...formData,
+        jobId: jobDetails.id,
+        JobType: jobDetails.type,
+        appliedAt: Timestamp.now(),
+        jobTitle: jobDetails.title,
+      };
+      const docRef = await addDoc(collection(db, "jobApplications"), body);
 
       if (resumeFile) {
         const storageRef = ref(storage, `resumes/${docRef.id}`);
         await uploadBytes(storageRef, resumeFile);
         const downloadURL = await getDownloadURL(storageRef);
-
         await setDoc(docRef, { resumeURL: downloadURL }, { merge: true });
       }
-
+      incrementApplicants(jobDetails.id);
       alert("Application submited");
       setResumeFile(null);
       setFormData({
