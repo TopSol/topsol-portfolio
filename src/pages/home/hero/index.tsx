@@ -13,7 +13,7 @@ export default function Hero() {
         backgroundImage: `url(${heroImg})`,
       }}
     >
-      <div className="flex flex-col items-center h-screen text-center px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center  text-center px-4 sm:px-6 lg:px-8">
         <h1
           id="root"
           className="text-3xl sm:text-4xl  md:text-5xl text-primary  font-extrabold mt-[203px] "
@@ -28,7 +28,7 @@ export default function Hero() {
           of innovative app development.
         </p>
         <div className="bg-transparent    "></div>
-        <div className="flex flex-col mt-[54px]  sm:flex-row gap-[17px]">
+        <div className="flex flex-col mt-[54px] mb-[203px]  sm:flex-row gap-[17px]">
           {root && (
             <PopupButton
               // @ts-ignore
