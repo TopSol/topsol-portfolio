@@ -15,45 +15,45 @@ function AllOpenings() {
     <div className="bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
       <div className="md:container md:mx-auto flex justify-center items-center flex-col">
         <div className="flex flex-col items-center justify-center mb-14">
-          <h1 className="text-primary-white md:text-[40px] text-3xl text-center font-semibold md:mt-[49px] mt-[52px] mb-[18px]">
+          <h1 className="text-primary-white md:text-[40px] text-3xl text-center font-semibold md:mt-[49px] mt-[52px] md:mb-[18px] mb-[11px]">
             All Openings
           </h1>
           <AnimateHr bgColor="white" className="w-[150px]" />
         </div>
-        <div className=" md:w-[95%] lg:w-[71%] xl:w-[87%] 2xl:w-[73%]  md:mb-[39px] md:px-0 ">
-          <div className="flex  bg-white ">
-              <img className="  pointer-events-none" src={searchImg} />
+        <div className="w-[268px] overflow-hidden md:w-[95%] lg:w-[71%] xl:w-[87%] 2xl:w-[73%]  md:mb-[39px] md:px-0 ">
+          <div className="flex items-center md:h-[75px] h-[63px] rounded-[10px]  bg-white ">
+              <img className="  pointer-events-none ml-[30px] md:mr-7 mr-[18px] md:max-w-[34px] max-w-[29px] h-[29px] md:h-[34px]" src={searchImg}/>
             <input
-              className="p-4 text-sm text-black outline-none rounded-lg dark:bg-primary-white  dark:placeholder-primary dark:placeholder:text-xl dark:placeholder:font-medium"
+              className="text-lg text-black outline-none rounded-lg dark:placeholder-primary dark:placeholder:text-base md:dark:placeholder:text-xl dark:placeholder:font-medium"
               placeholder="Search jobs"
             
             />
           </div>
         </div>
-        <div className="flex md:flex-row md:my-0 mt-[25px] flex-wrap flex-col md:mb-[60px] mb-[58px] justify-center ">
-          <div className="mx-[9px] my-[25px]">
+        <div className="flex md:flex-row  flex-wrap flex-col md:mb-[60px] mb-[58px] justify-center ">
+          <div className="mx-[9px] md:mt-0 mt-[25px]">
             <DropDown
               buttonTitle="Department"
               data={Department}
-              className="min-w-[268px] sm:w-[362px] h-[75px] "
+              className="min-w-[268px] sm:w-[362px] md:h-[75px] h-[63px] "
             />
           </div>
-          <div className="mx-[9px] my-[25px]">
+          <div className="mx-[9px] md:my-0 my-[25px]">
             <DropDown
               buttonTitle="Experience Level"
               data={ExperienceLevel}
-              className="min-w-[268px] sm:w-[362px] h-[75px] "
+              className="min-w-[268px] sm:w-[362px] md:h-[75px] h-[63px] "
             />
           </div>
-          <div className="mx-[9px] my-[25px]">
+          <div className="mx-[9px]  xl:mt-0 md:mt-[25px]">
             <DropDown
               buttonTitle="Job Type"
               data={JobType}
-              className="min-w-[268px] sm:w-[362px] h-[75px]"
+              className="min-w-[268px] sm:w-[362px] md:h-[75px] h-[63px]"
             />
           </div>
         </div>
-        <div className="grid grid-cols-1  sm:grid-cols-2  md:grid-cols-3 md:mb-[60px] mb-[53px] gap-y-[35px] xl:gap-x-[71px] xl:gap-y-[36px] gap-x-3 md:min-w-[680px] lg:min-w-[980px] xl:min-w-[1120px]">
+        <div className="grid grid-cols-1  sm:grid-cols-2  md:grid-cols-3 md:mb-[60px] mb-[53px] gap-y-[35px] xl:gap-x-[71px] xl:gap-y-[36px] gap-x-3 min-w-[264px] md:min-w-[680px] lg:min-w-[980px] xl:min-w-[1120px]">
           {CardData?.slice(0, visibleCards).map((item, index) => {
             return (
               <DropDownCards
@@ -68,7 +68,7 @@ function AllOpenings() {
         <div className="flex justify-center items-center ">
           <button
             onClick={loadMoreCards}
-            className=" px-[34px] md:mb-[88px] mb-14 text-xl max-w-[180px] h-[56px] font-semibold group flex items-center justify-center rounded-[5px] bg-primary-white text-primary hover:scale-x-125 transform origin-left transition-transform duration-300 ease-in-out"
+            className=" px-[34px] md:mb-[88px] mb-14 text-xl max-w-[180px] h-[56px] font-semibold group flex md:flex-row flex-col items-center justify-center rounded-[5px] bg-primary-white text-primary hover:scale-x-125 transform origin-left transition-transform duration-300 ease-in-out"
           >
             View more
             <svg

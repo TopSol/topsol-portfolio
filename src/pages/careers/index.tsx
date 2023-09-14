@@ -1,9 +1,9 @@
 import React from 'react'
 import AddressSection from '../../components/addressSection'
-import LifeTopsol from './components/recruitmentProcess/lifeAtTopsol/LifeTopsol'
-import Process from './components/recruitmentProcess/recruitmentProcess/Process'
-import JoinTopSol from './components/recruitmentProcess/joinUs/JoinTopSol'
-import AllOpenings from './components/recruitmentProcess/allOpenings'
+import LifeTopsol from './components/pages/lifeAtTopsol/LifeTopsol'
+import Process from './components/pages/recruitmentProcess/Process'
+import JoinTopSol from './components/pages/joinUs/JoinTopSol'
+import AllOpenings from './components/pages/allOpenings'
 
 function Careers() {
   return (
