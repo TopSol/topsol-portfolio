@@ -29,7 +29,7 @@ const Modal = ({ setShowModal, isLoader }: AppProps) => {
       ) : (
         <div
           onClick={(e) => e.stopPropagation()}
-          className="flex  px-8 xs:w-3/4 sm:w-2/3 md:w-2/4 flex-col bg-white rounded-md p-4"
+          className="flex  px-8 w-[90%] lg:[70%]  flex-col bg-white rounded-md p-4"
         >
           {/* Modal content */}
           <div className="flex justify-center items-center">

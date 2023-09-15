@@ -8,14 +8,14 @@ import { useInView } from "react-intersection-observer";
 import MouseFollower from "mouse-follower";
 import { AnimatePresence } from "framer-motion";
 
-type CardSectionProps ={
-  setBg:any,
-  openModal:(value: boolean) => void,
-}
+type CardSectionProps = {
+  setBg: any;
+  openModal: (value: boolean) => void;
+};
 
 gsap.registerPlugin(ScrollTrigger);
 MouseFollower.registerGSAP(gsap);
-export default function CardSection({ setBg,openModal}:CardSectionProps) {
+export default function CardSection({ setBg, openModal }: CardSectionProps) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
 
@@ -133,18 +133,16 @@ export default function CardSection({ setBg,openModal}:CardSectionProps) {
   }, [isWorking]);
 
   useEffect(() => {
-    if(window.innerWidth < 768){
+    if (window.innerWidth < 1024) {
       setBg("#0B234C");
-    }else{
+    } else {
       if (isInView) {
         setBg("#0B234C");
       } else {
         setBg("#fff");
       }
     }
-    
   }, [isInView]);
-
 
   const handleClick = (id: string) => {
     setSelectedId(id);
@@ -170,7 +168,7 @@ export default function CardSection({ setBg,openModal}:CardSectionProps) {
                 : "none", // If isWorking is false, set transform to 'none' or any other desired default value
             }}
           >
-            <h1 className="mb-10 text-[50px] font-semibold mt-16  text-white">
+            <h1 className="mb-10 text-[30px] md:text-[50px] font-semibold mt-16  text-white">
               Build Smarter <br /> Not From Scratch
             </h1>
             <div className="w-[150px]">
@@ -197,7 +195,7 @@ export default function CardSection({ setBg,openModal}:CardSectionProps) {
                   <div
                     layoutId={v.id}
                     onClick={() => handleClick(v.id)}
-                    className="  lg:mr-12 hover:scale-105 hover:duration-300 transition ease-in-out delay-100     md:w-[465px] h-[460px] flex flex-col items-center "
+                    className="  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col items-center "
                   >
                     <img
                       key={index}
