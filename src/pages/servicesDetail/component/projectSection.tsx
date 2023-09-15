@@ -1,13 +1,58 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import PortfolioCard from '../../../components/portfolioCard'
+import { db } from "../../../utils/firebase";
+import {
+  collection,
+  query,
+  orderBy,
+  limit,
+  getDocs,
+  startAfter,
+} from "firebase/firestore";
+
 import PrimaryBtn from '../../../components/PrimaryBtn'
-import {data2} from '../data'
 import LineAnimation from '../../../components/LineAnimation'
 
 export default function ProjectSection() {
-    const showData = data2.slice(1, 3);
-    const initialVisibleCards = 4;
+  const [portFolios, setPortFolios] = useState([]);
+  const [loader, setLoader] = useState(false);
+  const [startAfterDoc, setStartAfterDoc] = useState(null);
+
+ 
+
+    const showData = portFolios.slice(1, 3);
+    const initialVisibleCards = 2;
   const [visibleCards, setVisibleCards] = useState<number>(initialVisibleCards);
+
+
+  const fetchPortfolios = async () => {
+    try {
+      setLoader(true);
+      const portfolioCollection = collection(db, "portFolio");
+      const portfolioQuery = query(
+        portfolioCollection,
+        orderBy("createdAt")
+      );
+  
+      const portfolioSnapshot = await getDocs(portfolioQuery);
+      const portfolioData = portfolioSnapshot.docs.map((doc) => doc.data());
+  
+      if (portfolioData?.length) {
+        setPortFolios(portfolioData);
+        setStartAfterDoc(portfolioData[portfolioData.length - 1].createdAt);
+      }
+  
+  
+      setLoader(false);
+    } catch (error) {
+      setLoader(false);
+      console.log("error", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchPortfolios();
+  }, []);
 
   const handleViewMore = () => {
     setVisibleCards((prevVisibleCards) => prevVisibleCards + 4);
@@ -26,11 +71,11 @@ export default function ProjectSection() {
         <div>
             {
                 showData.map((item:any,index)=>{
-                    return <PortfolioCard direction={item.side} textColor={"text-white"} heading={item.heading} discription={item.detail} lineBgColor='#CCF3FF'/>
+                    return <PortfolioCard data={item}  index={index}/>
                 })
             }      
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mt-8">
           <button
             className=" w-[180px] py-[15px] mt-[73px] text-[20px] font-semibold group flex text-center 
             items-center justify-center rounded bg-[#ffffff] text-primary hover:scale-x-125 hover:pl-4 m hover:duration-500
