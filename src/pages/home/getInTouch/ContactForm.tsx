@@ -4,42 +4,8 @@ import "react-phone-input-2/lib/style.css";
 import dropDown from "../../../images/dropdown.png";
 import { dropDownData } from "./data";
 import { useAnimate, stagger, motion } from "framer-motion";
+import useMenuAnimation from "../../../components/dropDownAnimaion";
 
-const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
-function useMenuAnimation(isOpen: boolean) {
-  const [scope, animate] = useAnimate();
-
-  useEffect(() => {
-    animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
-
-    animate(
-      ".dropDownUl",
-      {
-        clipPath: isOpen
-          ? "inset(0% 0% 0% 0% round 10px)"
-          : "inset(10% 50% 90% 50% round 10px)",
-      },
-      {
-        type: "spring",
-        bounce: 0,
-        duration: 0.5,
-      }
-    );
-
-    animate(
-      ".dropDownli",
-      isOpen
-        ? { opacity: 1, scale: 1, filter: "blur(0px)" }
-        : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
-      {
-        duration: 0.2,
-        delay: isOpen ? staggerMenuItems : 0,
-      }
-    );
-  }, [isOpen]);
-
-  return scope;
-}
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -90,34 +56,6 @@ function ContactForm() {
           ))}
         </ul>
       </nav>
-
-      {/* <div
-        onClick={toggleDropdown}
-        className="mt-[24px]  px-[24px] py-[17px] md:container md:mx-auto bg-primary-formInput sm:justify-between  justify-center  rounded-md flex relative"
-      >
-        <h1 className=" flex text-light_Grey  font-medium   md:text-[15px] lg:text-[18px]">
-          {selectedOption ? `${selectedOption?.name}?` : "How can we help you?"}
-        </h1>
-        <div className="">
-          <button className="ml-[18px] focus:outline-none ">
-            <img src={dropDown} alt="" />
-          </button>
-        </div>
-        {isOpen && (
-          <ul className="absolute top-full left-0 w-full bg-primary-formInput border-gray-300 shadow mt-2">
-            {dropDownData.map((option, index) => (
-              <li
-                key={index}
-                className={`px-4 py-2  hover:bg-gray-100 cursor-pointer ${selectedOption === option ? "bg-primary text-white" : ""
-                  }`}
-                onClick={() => handleOptionClick(option)}
-              >
-                {option.name}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div> */}
       <div className="  md:container  mx-auto flex flex-col justify-center">
         <input
           type="text"

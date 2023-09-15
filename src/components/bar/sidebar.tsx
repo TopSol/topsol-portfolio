@@ -30,7 +30,7 @@ function SideBar() {
       },
     },
     closed: {
-      top: "-90vh",
+      top: "-100vh",
     },
   };
 
@@ -47,12 +47,12 @@ function SideBar() {
 
 
   return (
-    <div className="App relative">
+    <div className="App ">
       <Header className={` ${isOpen ? 'bg-primary-navbarBg' : hovered ? 'bg-white' : ' bg-primary-navbarBg'} `}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <div className="flex justify-between px-5 md:px-[105px] items-center">
+        <div className="flex  px-5 md:px-[105px] items-center">
           <Link to="/">
             <img
               src={isOpen ? Logo : hovered ? Logo2 : Logo}
@@ -80,27 +80,26 @@ function SideBar() {
                   <rect y="20" width="22" height="4" rx="2" fill={hovered ? '#0B234C' : 'white'} />
                 </svg>}
             </div>
-            <div className={`absolute top-4 right-32 z-[-10] ${isClicked ? 'clickedImage' : 'hoverImages'}`}>
+            {/* <div className={`absolute top-4 right-32 z-[-10] ${isClicked ? 'clickedImage' : 'hoverImages'}`}>
               {<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 96 96" fill="none">
               </svg>}
 
-            </div>
-            <div className={` flex flex-row justify-center  `}>
+            </div> */}
 
-              <Nav
-                initial={false}
-                variants={menuVariants}
-                animate={isOpen ? "opened" : "closed"}
-              >
-                <Link to="/services"><LinkTag variants={linkVariants}>SERVICES</LinkTag></Link>
-                <Link to="/portfolio"> <LinkTag variants={linkVariants}>PORTFOLIO</LinkTag></Link>
-                <Link to="/aboutUs"><LinkTag variants={linkVariants}>ABOUT US</LinkTag></Link>
-                <Link to="/careers"> <LinkTag variants={linkVariants}>CAREER</LinkTag></Link>
-                <Link to="/contactUs"><LinkTag variants={linkVariants}>CONTACT US</LinkTag></Link>
-                <Link to="/blogs"><LinkTag variants={linkVariants}>BLOG</LinkTag></Link>
-              </Nav>
-            </div>
-          </div >
+            <Nav
+              initial={false}
+              variants={menuVariants}
+              animate={isOpen ? "opened" : "closed"}
+              className={`bg-primary-navbarBg w-[100%]`}
+            >
+              <Link to="/services"><LinkTag className="flex justify-start" variants={linkVariants}>SERVICES</LinkTag></Link>
+              <Link to="/portfolio"> <LinkTag variants={linkVariants}>PORTFOLIO</LinkTag></Link>
+              <Link to="/aboutUs"><LinkTag variants={linkVariants}>ABOUT US</LinkTag></Link>
+              <Link to="/careers"> <LinkTag variants={linkVariants}>CAREER</LinkTag></Link>
+              <Link to="/contactUs"><LinkTag variants={linkVariants}>CONTACT US</LinkTag></Link>
+              <Link to="/blogs"><LinkTag variants={linkVariants}>BLOG</LinkTag></Link>
+            </Nav>
+          </div>
         </div >
       </Header >
 

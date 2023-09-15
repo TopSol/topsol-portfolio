@@ -8,7 +8,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { Department, ExperienceLevel, JobType } from "./Data";
 import DropDown from "../../../../../components/dropDown/DropDown";
 import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
-
+import LineAnimation from "../../../../../components/LineAnimation";
 function AllOpenings() {
   const [jobPosts, setJobPosts] = useState([]);
   const [loading, setSetLoading] = useState(false);
@@ -43,10 +43,12 @@ function AllOpenings() {
     <div className="bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
       <div className="md:container md:mx-auto flex justify-center items-center flex-col">
         <div className="flex flex-col items-center justify-center mb-14">
-          <h1 className="text-primary-white md:text-[40px] text-3xl text-center font-semibold md:mt-[49px] mt-[52px] mb-[18px]">
+          <h1 className="text-primary-white md:text-[40px] text-3xl text-center font-semibold md:mt-[49px] mt-[52px] ">
             All Openings
           </h1>
-          <AnimateHr bgColor="white" className="w-[150px]" />
+          <div className="flex justify-center items-center">
+            <LineAnimation width='178px' height='7px' backgroundColor='#FFFFFF' marginTop="22px" />
+          </div>
         </div>
         <div className=" md:w-[95%] lg:w-[71%] xl:w-[87%] 2xl:w-[73%]  md:mb-[39px] md:px-0 ">
           <div className="flex  bg-white ">

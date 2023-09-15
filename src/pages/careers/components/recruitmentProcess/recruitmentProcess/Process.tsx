@@ -2,15 +2,17 @@ import React from "react";
 import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
 import { cardsData } from "./data";
 import SmallCards from "../../../../../components/smallCards/SmallCards";
-
+import LineAnimation from "../../../../../components/LineAnimation";
 function Process() {
   return (
     <div className="md:container mx-auto  flex flex-col justify-center items-center">
       <div className="flex flex-col sm:items-center sm:justify-center">
-        <h1 className="md:text-6xl text-3xl md:text-center font-semibold md:mt-[76px] mt-[35px] md:ml-0 md:mr-0 ml-7 mr-[100px] mb-[15px]">
-        Learn Our Recruitment <span className=" text-primary"> Process</span>
+        <h1 className="md:text-6xl text-3xl md:text-center font-semibold md:mt-[76px] mt-[35px] md:ml-0 md:mr-0 ml-7 mr-[100px] ">
+          Learn Our Recruitment <span className=" text-primary"> Process</span>
         </h1>
-          <AnimateHr bgColor="[#00B8F1]" className="w-[150px] md:ml-0 ml-7" />
+        <div className="flex justify-center items-center">
+          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px" />
+        </div>
       </div>
 
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 md:gap-10 gap-[30px] xl:mx-0 md:mx-4 md:my-[76px] my-12">

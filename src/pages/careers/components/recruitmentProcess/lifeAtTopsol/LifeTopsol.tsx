@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { cardsData } from "./data";
-
+import LineAnimation from "../../../../../components/LineAnimation";
 function LifeTopsol() {
   const [showMore, setShowMore] = useState(false);
 
@@ -49,11 +49,13 @@ function LifeTopsol() {
   return (
     <div className="md:container mx-auto">
       <div className="flex lg:flex-row flex-col md:justify-center  xl:mx-0 lg:mx-3">
-        <div className="  lg:mb-[150px] flex items-center justify-center flex-col">
-          <h1 className="md:text-6xl lg:text-start text-center text-3xl font-semibold mb-8 md:mt-[161px] mt-[51px]">
+        <div className="  lg:mb-[150px] flex items-center justify-center md:justify-start md:items-start flex-col">
+          <h1 className="md:text-6xl lg:text-start text-center text-3xl font-semibold  md:mt-[161px] mt-[51px]">
             Life at Topsol
           </h1>
-          <AnimateHr bgColor="[#00B8F1]" className=" w-[150px]" />
+          <div className="flex justify-start items-start">
+            <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="15px" />
+          </div>
           <p className=" text-xl md:mx-0 mx-8   lg:text-start text-center font-medium my-10 flex items-center md:leading-10 leading-7 lg:max-w-[628px] lg:h-[297px]">
             Life at Topsol is more than just a job - it's an immersive
             experience that combines innovation, camaraderie, and personal

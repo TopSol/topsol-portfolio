@@ -8,7 +8,7 @@ import Awards from "./awards";
 import GetInTouch from "./getInTouch";
 import Hero from "./hero";
 import Footer from "../../components/footerSection";
-import Navbar from "../../components/bar/sidebar";
+import Navbar from "../../components/Navbar";
 import { motion } from "framer-motion";
 
 function Home() {

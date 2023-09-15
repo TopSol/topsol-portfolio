@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/bar/sidebar";
+import Navbar from "../../components/Navbar";
 import InfoSection from "../../components/infoSection";
 import Footer from "../../components/footerSection";
 import { data, data2 } from "./data";

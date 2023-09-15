@@ -3,31 +3,35 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   
-  position: fixed;
-  width: 100vw;
-  padding: 20px;
-  z-index: 100;
+background: green;
+position: relative;
+display: flex;
+padding: 1rem;
+justify-content: flex-end;
+z-index: 2;
 `;
 
 export const Nav = styled(motion.nav)`
 
-  height: 100vh;
-  width: 25vw;
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+background-color: red;
+height: 90vh;
+width: 100vw;
+position: fixed;
+top: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ 
+ 
   
 `;
 
 export const LinkTag = styled(motion.li)`
-  color: white;
+color: white;
   margin-bottom: 1.6rem;
   font-size: 1.4rem;
-  list-style: none;
-  margin-left: 40px
+
  
 `;
 

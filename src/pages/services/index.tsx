@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/bar/sidebar";
+import Navbar from "../../components/Navbar";
 import VideoHero from "../../components/VidoeHero";
 import ServicesOffers from "../home/servisesOffers";
 import RatingSection from "../home/ratingSection";
