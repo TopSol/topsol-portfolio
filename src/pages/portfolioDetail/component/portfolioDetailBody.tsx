@@ -1,7 +1,6 @@
 import React from "react";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import check1 from "../../../images/check1.png";
-import { dataList } from "../data";
 import LineAnimation from "../../../components/LineAnimation";
 
 export default function PortfolioDetailBody({ data }) {
@@ -80,9 +79,9 @@ export default function PortfolioDetailBody({ data }) {
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-[36px] font-semibold my-6">Client's Vision</h2>
         <div className="mt-[53px] mx-[15px] flex flex-col ">
-          {data?.clientVisions?.map((item: any, index) => {
+          {data?.clientVisions?.map((item: any, index: number) => {
             return (
-              <div className="md:container md:mx-auto">
+              <div key={index} className="md:container md:mx-auto">
                 <div className="flex py-2 items-center">
                   <img
                     src={check1}
