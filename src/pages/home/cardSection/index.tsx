@@ -145,7 +145,6 @@ export default function CardSection({ setBg,openModal}:CardSectionProps) {
     
   }, [isInView]);
 
-  console.log(isInView, "scroll", scrollY);
 
   const handleClick = (id: string) => {
     setSelectedId(id);
