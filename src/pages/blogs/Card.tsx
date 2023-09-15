@@ -142,7 +142,7 @@ export default function Card() {
                   : "justify-end  md:ml-[50px] xl:ml-0"
               }   `}
             >
-              <img className="" src={item.image} alt="" />
+              <img className=" h-[500px]  " src={item.image} alt="" />
             </div>
             <div className=" md:w-[45%] mt-[14px] md:mt-0  ">
               <div className="flex ">
