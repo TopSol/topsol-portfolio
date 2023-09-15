@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="flex flex-col items-center  text-center px-4 sm:px-6 lg:px-8">
         <h1
           id="root"
-          className="text-3xl sm:text-4xl  md:text-5xl text-primary  font-extrabold mt-[203px] "
+          className="text-3xl sm:text-4xl  md:text-5xl text-primary  font-extrabold md:mt-[203px] mt-8 "
         >
           Better <span className=" mt-4 text-black"> Approach to Develop </span>
           Software
