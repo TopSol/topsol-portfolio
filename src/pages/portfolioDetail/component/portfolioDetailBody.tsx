@@ -74,7 +74,7 @@ export default function PortfolioDetailBody({ data }) {
       </div>
 
       <div className="flex justify-center mt-7">
-        <img src={data?.imageCollection?.[0]} alt="" />
+        <img src={data?.imageCollection?.[0]} alt="" className="w-[500px]" />
       </div>
 
       <div className="flex flex-col justify-center items-center">
@@ -82,7 +82,7 @@ export default function PortfolioDetailBody({ data }) {
         <div className="mt-[53px] mx-[15px] flex flex-col ">
           {data?.clientVisions?.map((item: any, index) => {
             return (
-              <div>
+              <div className="md:container md:mx-auto">
                 <div className="flex py-2 items-center">
                   <img
                     src={check1}

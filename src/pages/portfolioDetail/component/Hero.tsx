@@ -6,7 +6,7 @@ export default function Hero({ data }) {
     <div className="">
       <div className="bg-gradient-to-b from-secondary  to-primary  ">
         <div className="flex flex-col font-montserrat text-white justify-center items-center mx-6   lg:w-[55%] xl:w-[50%] md:mx-auto te ">
-          <h1 className="text-[50px] text-center font-bold mt-[70px] ">
+          <h1 className="text-[50px]  text-center font-bold mt-[70px] ">
             {data?.title}
           </h1>
           {/* <p className="text-2xl text-center mt-[50px] ">{data?.description}</p> */}
@@ -24,7 +24,11 @@ export default function Hero({ data }) {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <img src={data?.detailImageUrl} alt="" className="absolute  " />
+        <img
+          src={data?.detailImageUrl}
+          alt=""
+          className="absolute h-[500px] "
+        />
       </div>
     </div>
   );
