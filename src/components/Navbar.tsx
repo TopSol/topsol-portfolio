@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <motion.div
       variants={variants}
-      className={`relative bg-primary-navbarBg ${
+      className={`relative bg-primary-navbarBg  ${
         !open
           ? "hover:bg-primary-white transition-colors duration-500"
           : "bg-primary-navbarBg"
@@ -70,8 +70,8 @@ function Navbar() {
                 className="
                 z-50
               mr-8
-              md:pt-20 pt-8 
-              flex items-center flex-col h-screen w-full
+              md:pt-20 pt-8 md:pb-0 pb-2
+              flex items-center flex-col w-full
               text-base text-white font-mont
               absolute bg-primary-navItemBg  left-0 right-0
               space-y-[53px]
