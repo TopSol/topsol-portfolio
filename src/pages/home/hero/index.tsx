@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <div
-      className="bg-cover bg-center"
+      className="bg-cover bg-center h-[100vh]"
       style={{
         backgroundImage: `url(${heroImg})`,
       }}
