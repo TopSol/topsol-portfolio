@@ -12,7 +12,7 @@ function DropDownCards({ className, item }: CardsProps) {
       className={`${className} px-4 pt-[37px]  bg-primary-white rounded-[10px]`}
     >
       <div className="">
-        <h1 className="text-[22px] font-semibold">{item.title}</h1>
+        <h1 className="text-[22px] font-semibold h-[54px] sm:text-[18px] lg:text-[22px]">{item.title}</h1>
         <div className=" text-primary my-5 flex">
           <div className=" border-r-2 border-primary text-base font-medium pr-2 mr-2">
             <p>{item.experience}</p>

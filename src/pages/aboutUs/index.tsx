@@ -19,7 +19,7 @@ export default function aboutUs() {
       <div className="mt-[40px]" >
         <RatingSection />
       </div>
-      <OurTeam />
+      {/* <OurTeam /> */}
       <AddressSection />
       <div className="mt-10">
         <Footer />

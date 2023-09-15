@@ -56,7 +56,7 @@ function LifeTopsol() {
           <div className="flex justify-start items-start">
             <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="15px" />
           </div>
-          <p className=" text-xl md:mx-0 mx-8   lg:text-start text-center font-medium my-10 flex items-center md:leading-10 leading-7 lg:max-w-[628px] lg:h-[297px]">
+          <p className=" text-xl md:mx-0 mx-8   lg:text-start text-center font-medium my-10 flex items-center md:leading-10 leading-7 lg:max-w-[628px] ">
             Life at Topsol is more than just a job - it's an immersive
             experience that combines innovation, camaraderie, and personal
             growth. From the moment you step through our doors, you'll become a

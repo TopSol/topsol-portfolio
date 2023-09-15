@@ -1,8 +1,22 @@
-import React,{useState,useEffect,useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { useInView } from 'react-intersection-observer';
 
 export function AnimatedValue({ start, end, duration }) {
   const [value, setValue] = useState(start);
   const [startTimestamp, setStartTimestamp] = useState(null);
+  const [animationVisible, setAnimationVisible] = useState(false);
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setAnimationVisible(true);
+      setStartTimestamp(null);
+    }
+  }, [inView]);
 
   const step = (timestamp) => {
     if (!startTimestamp) setStartTimestamp(timestamp);
@@ -14,8 +28,15 @@ export function AnimatedValue({ start, end, duration }) {
   };
 
   useEffect(() => {
-    window.requestAnimationFrame(step);
-  }, []);
-  return <div>{value}</div>;
+    if (animationVisible && inView) {
+      window.requestAnimationFrame(step);
+    }
+  }, [animationVisible, inView]);
 
+  return (
+    <div ref={ref}>
+      {animationVisible && <div>{value}</div>}
+    </div>
+  );
 }
+
