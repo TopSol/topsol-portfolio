@@ -70,7 +70,7 @@ function Navbar() {
                 className="
                 z-50
               mr-8
-              pt-20
+              md:pt-20 pt-8 
               flex items-center flex-col h-screen w-full
               text-base text-white font-mont
               absolute bg-primary-navItemBg  left-0 right-0
