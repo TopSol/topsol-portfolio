@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 const FileUpload = ({ handleFileChange, resumeFile }: any) => {
   return (
     <div className="flex items-center">
       <input
         type="file"
+        accept=".pdf"
         id="cvUpload"
         className="hidden"
         onChange={handleFileChange}
