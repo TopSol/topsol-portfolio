@@ -81,7 +81,7 @@ export default function Footer() {
                     className="logo_default h-6 mr-4"
                   />
                   +92-303-6362191 <br />
-                  (041)8557244
+                  (041) 8557244
                 </li>
                 <li className="flex flex-wrap my-4">
                   <img
@@ -90,7 +90,7 @@ export default function Footer() {
                     decoding="async"
                     className="logo_default h-6 mr-4"
                   />
-                  admin@topsol.org
+                  info@topsol.org
                 </li>
               </ul>
             </div>
