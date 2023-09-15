@@ -15,6 +15,7 @@ import { db } from "../../../utils/firebase";
 
 function OurPortfolio() {
   const [visibleCards, setVisibleCards] = useState([]);
+  
 
   const fetchPortFolios = async () => {
     try {
@@ -23,7 +24,9 @@ function OurPortfolio() {
       const getIds = settings?.homePagePortfolios;
 
       const citiesRef = collection(db, "portFolio");
-      const q = query(citiesRef, where("id", "in", getIds));
+      console.log('cities',citiesRef);
+      const q = query(citiesRef);
+      // , where("id", "in", getIds)
       const querySnapshot = await getDocs(q);
 
       const fetchedDocuments = querySnapshot.docs.map((doc) => doc.data());
@@ -38,7 +41,7 @@ function OurPortfolio() {
   }, []);
 
   return (
-    <div className="px-4 mt-[126px] flex flex-col justify-center items-center">
+    <div className="md:px-4 mt-[126px] flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center">
         <div className="">
           <h1 className="font-extrabold text-black font-montserrat text-[26px] md:text-34[px] lg:text-4xl text-center">
@@ -62,7 +65,7 @@ function OurPortfolio() {
                     src={card.imageUrl}
                     style={{ transition: "all .50s ease " }}
                     className="  my-[66px] group-hover:transition group-hover:duration-500 group-hover:scale-110
-                      group-hover:ease-in-out "
+                      group-hover:ease-in-out w-[230px] h-[172px]"
                     alt={`Portfolio ${index}`}
                   />
                 </div>
