@@ -20,8 +20,8 @@ function Navbar() {
     <motion.div
       variants={variants}
       className={`relative bg-primary-navbarBg  ${!open
-          ? "hover:bg-primary-white transition-colors duration-500"
-          : "bg-primary-navbarBg"
+        ? "hover:bg-primary-white transition-colors duration-500"
+        : "bg-primary-navbarBg"
         }`}
     >
       <motion.div className="md:container  mx-auto " id="navbar">
@@ -68,7 +68,7 @@ function Navbar() {
                 className="
                 z-50
               mr-8
-              pt-20
+              md:pt-20 md:pb-0 pb-2
               flex items-center flex-col h-screen w-full
               text-base text-white font-mont
               absolute bg-primary-navItemBg  left-0 right-0
