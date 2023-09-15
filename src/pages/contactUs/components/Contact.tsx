@@ -4,13 +4,15 @@ import 'react-phone-input-2/lib/style.css'
 import dropDown from '../../../images/dropdown.png'
 import dot from '../../../images/dot.png'
 import LineAnimation from '../../../components/LineAnimation'
-
+import useMenuAnimation from '../../../components/dropDownAnimaion'
 import { btnData } from '../data'
+import { motion } from 'framer-motion'
 export default function Contact() {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
     const [isChecked, setIsChecked] = useState(false);
     const [phone, setPhone] = useState('');
+    const scope = useMenuAnimation(isOpen);
 
     const toggleCheckbox = () => {
         setIsChecked(!isChecked);
@@ -37,38 +39,42 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-[24px] mx-[27px] px-[10px] py-[17px] md:container md:mx-auto bg-primary-formInput sm:justify-between  justify-center  rounded-md flex relative cursor-pointer"
-                onClick={toggleDropdown}
-                >
-                    <h1 className=' flex text-light_Grey  font-medium   md:text-[18px]'>
-                        {selectedOption ? `${selectedOption?.name}?` : 'How can we help you?'}
-                    </h1>
-                    <div className=''>
-                        <button
-                            className="ml-[18px] focus:outline-none "
+                <div className='mt-[76px] '>
+                    <nav className="menu " ref={scope}>
+                        <motion.button
+                            whileTap={{ scale: 0.97 }}
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="buttonss bg-primary-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center w-[100%] "
                         >
-                            <img
-                                src={dropDown}
-                                alt=""
-                            />
-                        </button>
-                    </div>
-                    {isOpen && (
-                        <ul className="absolute top-full left-0 w-full bg-primary-formInput border-gray-300 shadow mt-2">
-                            {btnData.map((option, index) => (
+                            <h1 className=" flex text-light_Grey  font-medium   md:text-[15px] lg:text-[18px]">
+                                {selectedOption ? `${selectedOption?.name}?` : "How can we help you?"}
+                            </h1>
+                            <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
+                                <svg width="15" height="15" viewBox="0 0 20 20">
+                                    <path d="M0 7 L 20 7 L 10 16" />
+                                </svg>
+                            </div>
+                        </motion.button>
+                        <ul
+                            className={`dropDownUl ${isOpen ? 'relative' : 'hidden'}  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
+                            style={{
+                                pointerEvents: isOpen ? "auto" : "none",
+                                clipPath: "inset(10% 50% 90% 50% round 10px)",
+                            }}
+                        >
+                            {btnData.map((item) => (
                                 <li
-                                    key={index}
-                                    className={`px-4 py-2  hover:bg-gray-100 cursor-pointer ${selectedOption === option ? 'bg-primary text-white' : ''
+                                    key={item.id}
+                                    className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
                                         }`}
-                                    onClick={() => handleOptionClick(option)}
+                                    onClick={() => handleOptionClick(item)}
                                 >
-                                    {option.name}
+                                    {item.name}
                                 </li>
                             ))}
                         </ul>
-                    )}
+                    </nav>
                 </div>
-
                 <div className='mt-[49px]  md:container md:mx-auto  flex flex-col md:flex-row  justify-center items-center '>
 
                     <div className="mb-[24px] md:mr-[21px] w-[85%]  md:container md:mx-auto justify-center">

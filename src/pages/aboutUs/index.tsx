@@ -17,7 +17,7 @@ export default function aboutUs() {
       <InfoSection />
       <Experience />
       <div className="mt-[40px]" >
-      <RatingSection />
+        <RatingSection />
       </div>
       <OurTeam />
       <AddressSection />

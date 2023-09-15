@@ -5,6 +5,7 @@ import Logo2 from "../../images/main-logo2.png";
 import NavbarMenu2 from "../../images/navbarMenu2.png";
 import NavbarMenue from "../../images/navbarMenu.png";
 import Close from "../../images/close.png";
+import { Link } from "gatsby";
 function SideBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
@@ -29,7 +30,7 @@ function SideBar() {
       },
     },
     closed: {
-      top: "-90vh",
+      top: "-100vh",
     },
   };
 
@@ -46,17 +47,19 @@ function SideBar() {
 
 
   return (
-    <div className="App relative">
+    <div className="App ">
       <Header className={` ${isOpen ? 'bg-primary-navbarBg' : hovered ? 'bg-white' : ' bg-primary-navbarBg'} `}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <div className="flex justify-between px-5 md:px-[105px] items-center">
-          <img
-            src={isOpen ? Logo : hovered ? Logo2 : Logo}
-            alt=""
-          />
-          <div className=" z-[300]"
+        <div className="flex  px-5 md:px-[105px] items-center">
+          <Link to="/">
+            <img
+              src={isOpen ? Logo : hovered ? Logo2 : Logo}
+              alt=""
+            />
+          </Link>
+          <div className=" z-[300] "
             onClick={() => { setIsOpen(!isOpen); setIsClicked(!isClicked) }}
           >
             <div
@@ -69,7 +72,7 @@ function SideBar() {
               {isOpen ? <img
                 src={isOpen ? Close : hovered ? NavbarMenu2 : NavbarMenue}
                 alt=""
-                className="w-[24px] h-[24px]"
+                className="w-[24px] h-[24px] cursor-pointer"
               /> :
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
                   <rect width="28" height="4" rx="2" fill={hovered ? '#0B234C' : 'white'} />
@@ -77,31 +80,30 @@ function SideBar() {
                   <rect y="20" width="22" height="4" rx="2" fill={hovered ? '#0B234C' : 'white'} />
                 </svg>}
             </div>
-            <div className={`absolute top-4 right-32 z-[-10] ${isClicked ? 'clickedImage' : 'hoverImages'}`}>
+            {/* <div className={`absolute top-4 right-32 z-[-10] ${isClicked ? 'clickedImage' : 'hoverImages'}`}>
               {<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 96 96" fill="none">
               </svg>}
 
-            </div>
-            <div className={` flex flex-row justify-center  `}>
+            </div> */}
 
-              <Nav
-                initial={false}
-                variants={menuVariants}
-                animate={isOpen ? "opened" : "closed"}
-              >
-                <LinkTag variants={linkVariants}>SERVICES</LinkTag>
-                <LinkTag variants={linkVariants}>PORTFOLIO</LinkTag>
-                <LinkTag variants={linkVariants}>ABOUT US</LinkTag>
-                <LinkTag variants={linkVariants}>CAREER</LinkTag>
-                <LinkTag variants={linkVariants}>CONTACT US</LinkTag>
-                <LinkTag variants={linkVariants}>BLOG</LinkTag>
-              </Nav>
-            </div>
+            <Nav
+              initial={false}
+              variants={menuVariants}
+              animate={isOpen ? "opened" : "closed"}
+              className={`bg-primary-navbarBg w-[100%]`}
+            >
+              <Link to="/services"><LinkTag className="flex justify-start" variants={linkVariants}>SERVICES</LinkTag></Link>
+              <Link to="/portfolio"> <LinkTag variants={linkVariants}>PORTFOLIO</LinkTag></Link>
+              <Link to="/aboutUs"><LinkTag variants={linkVariants}>ABOUT US</LinkTag></Link>
+              <Link to="/careers"> <LinkTag variants={linkVariants}>CAREER</LinkTag></Link>
+              <Link to="/contactUs"><LinkTag variants={linkVariants}>CONTACT US</LinkTag></Link>
+              <Link to="/blogs"><LinkTag variants={linkVariants}>BLOG</LinkTag></Link>
+            </Nav>
           </div>
-        </div>
-      </Header>
+        </div >
+      </Header >
 
-    </div>
+    </div >
   );
 }
 

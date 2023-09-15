@@ -4,54 +4,12 @@ import "react-phone-input-2/lib/style.css";
 import dropDown from "../../../images/dropdown.png";
 import { dropDownData } from "./data";
 import { useAnimate, stagger, motion } from "framer-motion";
+import useMenuAnimation from "../../../components/dropDownAnimaion";
 
-const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
-function useMenuAnimation(isOpen: boolean) {
-  const [scope, animate] = useAnimate();
-
-  useEffect(() => {
-    animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
-
-    animate(
-      ".dropDownUl",
-      {
-        clipPath: isOpen
-          ? "inset(0% 0% 0% 0% round 10px)"
-          : "inset(10% 50% 90% 50% round 10px)",
-      },
-      {
-        type: "spring",
-        bounce: 0,
-        duration: 0.5,
-      }
-    );
-
-    animate(
-      ".dropDownli",
-      isOpen
-        ? { opacity: 1, scale: 1, filter: "blur(0px)" }
-        : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
-      {
-        duration: 0.2,
-        delay: isOpen ? staggerMenuItems : 0,
-      }
-    );
-  }, [isOpen]);
-
-  return scope;
-}
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [isChecked, setIsChecked] = useState(false);
   const scope = useMenuAnimation(isOpen);
-
-  const toggleCheckbox = () => {
-    setIsChecked(!isChecked);
-  };
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -68,9 +26,11 @@ function ContactForm() {
         <motion.button
           whileTap={{ scale: 0.97 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="buttonss"
+          className="buttonss bg-primary-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center w-[100%] "
         >
-          Menu
+          <h1 className=" flex text-light_Grey  font-medium   md:text-[15px] lg:text-[18px]">
+            {selectedOption ? `${selectedOption?.name}?` : "How can we help you?"}
+          </h1>
           <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
             <svg width="15" height="15" viewBox="0 0 20 20">
               <path d="M0 7 L 20 7 L 10 16" />
@@ -78,47 +38,24 @@ function ContactForm() {
           </div>
         </motion.button>
         <ul
-          className=" dropDownUl absolute  flex bg-primary-formInput flex-col gap-5"
+          className={`dropDownUl ${isOpen ? 'relative' : 'hidden'}  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
           style={{
             pointerEvents: isOpen ? "auto" : "none",
             clipPath: "inset(10% 50% 90% 50% round 10px)",
           }}
         >
-          <li className=" dropDownli block origin-[-20px_50%] ">Item 1 </li>
-          <li className=" dropDownli block origin-[-20px_50%]">Item 2 </li>
-          <li className=" dropDownli block origin-[-20px_50%]">Item 3 </li>
-          <li className=" dropDownli block origin-[-20px_50%]">Item 4 </li>
-          <li className=" dropDownli block origin-[-20px_50%]">Item 5 </li>
+          {dropDownData.map((item) => (
+            <li
+              key={item.id}
+              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
+                }`}
+              onClick={() => handleOptionClick(item)}
+            >
+              {item.name}
+            </li>
+          ))}
         </ul>
       </nav>
-
-      {/* <div
-        onClick={toggleDropdown}
-        className="mt-[24px]  px-[24px] py-[17px] md:container md:mx-auto bg-primary-formInput sm:justify-between  justify-center  rounded-md flex relative"
-      >
-        <h1 className=" flex text-light_Grey  font-medium   md:text-[15px] lg:text-[18px]">
-          {selectedOption ? `${selectedOption?.name}?` : "How can we help you?"}
-        </h1>
-        <div className="">
-          <button className="ml-[18px] focus:outline-none ">
-            <img src={dropDown} alt="" />
-          </button>
-        </div>
-        {isOpen && (
-          <ul className="absolute top-full left-0 w-full bg-primary-formInput border-gray-300 shadow mt-2">
-            {dropDownData.map((option, index) => (
-              <li
-                key={index}
-                className={`px-4 py-2  hover:bg-gray-100 cursor-pointer ${selectedOption === option ? "bg-primary text-white" : ""
-                  }`}
-                onClick={() => handleOptionClick(option)}
-              >
-                {option.name}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div> */}
       <div className="  md:container  mx-auto flex flex-col justify-center">
         <input
           type="text"
