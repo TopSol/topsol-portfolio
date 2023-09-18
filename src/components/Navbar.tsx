@@ -71,7 +71,7 @@ function Navbar() {
                 z-50
               mr-8
               md:pt-20 pt-8 md:pb-0 pb-2
-              flex items-center flex-col w-full
+              flex items-center flex-col h-screen w-full
               text-base text-white font-mont
               absolute bg-primary-navItemBg  left-0 right-0
               space-y-[53px]

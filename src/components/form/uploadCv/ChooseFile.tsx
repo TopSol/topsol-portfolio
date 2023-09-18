@@ -12,15 +12,15 @@ const FileUpload = ({ handleFileChange, resumeFile }: any) => {
       />
       <label
         htmlFor="cvUpload"
-        className="text-lg  
-         rounded mr-2 px-6 border-[1px] border-[#D0D0D0]
-         font-montserrat bg-primary-formInput 
+        className="md:text-lg text-[15px]  
+         rounded-[5px] md:mr-7 mr-[15px] md:px-[31px] px-6 py-[6px] border-[1px] border-[#D0D0D0]
+         font-medium bg-formInput
         hover:cursor-pointer
-        hover:text-primary"
+        "
       >
         Upload CV
       </label>
-      <span className="text-lg">
+      <span className="md:text-lg text-[15px] font-medium">
         {resumeFile ? resumeFile.name : "No file chosen"}
       </span>
     </div>

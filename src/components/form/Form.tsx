@@ -20,8 +20,8 @@ function Form({
   handleFileChange,
 }: any) {
   return (
-    <div className=" border rounded py-10 md:px-20 px-10 max-w-2xl mx-auto">
-      <h1 className=" text-4xl font-montserrat font-bold text-center">
+    <div className="md:border border-formBorder rounded-[10px] max-w-[689px] mx-auto md:px-[81px] px-[23] md:mb-[80px]">
+      <h1 className="md:text-4xl text-xl font-semibold text-center md:mt-[47px] md:mb-10 mb-[51px]">
         {heading}
       </h1>
       <form>
@@ -31,7 +31,7 @@ function Form({
           placeholder="Name*"
           value={formData.name}
           onChange={handleChange}
-          className="bg-primary-formInput p-4 text-xs rounded-sm mt-4 w-full "
+          className="bg-formInput p-4 text-xs rounded-sm  w-full "
         />
         <input
           type="email"
@@ -39,7 +39,7 @@ function Form({
           placeholder="Email*"
           value={formData.email}
           onChange={handleChange}
-          className="bg-primary-formInput p-4  text-xs my-4 rounded-sm w-full"
+          className="bg-formInput p-4  text-xs md:my-[31px] my-[35px] rounded-sm w-full"
         />
         <PhoneInput
           inputStyle={{
@@ -62,16 +62,16 @@ function Form({
           value={formData.cover}
           onChange={handleChange}
           placeholder="Cover Letter(optional)"
-          className="bg-primary-formInput text-xs p-4 my-4 w-full"
+          className="bg-formInput text-xs p-4 md:my-[31px] my-[35px] w-full"
         />
-        <div className="mt-4">
+        <div className="">
           <FileUpload
             resumeFile={resumeFile}
             handleFileChange={handleFileChange}
           />
         </div>
 
-        <div className=" mt-10 w-full">
+        <div className="md:mt-[31px] mt-[35px] md:mb-[34px] mb-[81px] w-full">
           <button
             type="submit"
             onClick={submit}
@@ -79,9 +79,9 @@ function Form({
             aria-label="Post Comment"
             className={`w-full px-8 py-3 ${
               loading ? "bg-[#bbbb]" : "bg-primary hover:bg-primary-light"
-            }  border-2 rounded-md  text-white font-bold font-montserrat text-xs leading-tight uppercase focus:bg-[#00B8F1]  active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out`}
+            }  rounded-md  text-white text-2xl font-semibold `}
           >
-            {loading ? "loading.." : "submit"}
+            {loading ? "loading.." : "Submit"}
           </button>
         </div>
       </form>
