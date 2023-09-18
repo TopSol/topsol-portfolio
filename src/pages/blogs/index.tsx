@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from "../../components/Navbar";
+import { ToggleBar } from '../../components/bar';
 import Header from '../../components/headerSection';
 import Heading from './Heading';
 import Footer from '../../components/footerSection';
@@ -8,6 +9,7 @@ export default function index() {
   return (
     <div>
       <Navbar />
+      {/* <ToggleBar /> */}
       <Header
         title="Latest"
         subtitle="Blogs"

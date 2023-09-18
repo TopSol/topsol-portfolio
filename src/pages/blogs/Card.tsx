@@ -104,14 +104,13 @@ export default function Card() {
 
   return (
     <div>
-      <div className=" lg:w-[100%] xl:w-[84%] justify-center mx-auto">
+      <div className=" lg:container  justify-center mx-auto">
         <div className=" md:container grid grid-col gap-3 items-center mt-[42px] md:mt-[76px] md:grid-cols-2 lg:grid-cols-4   md:mx-auto ">
           {btnData.map((item: any, index) => {
             return (
               <div
-                className={`mx-5 md:mx-5 flex rounded justify-around ${
-                  selectedCategory === item.name ? "bg-primary" : ""
-                }`}
+                className={`mx-5 md:mx-5 flex rounded justify-around ${selectedCategory === item.name ? "bg-primary" : ""
+                  }`}
                 key={index}
                 onClick={() => {
                   console.log("hello im am hear -----------------");
@@ -128,23 +127,21 @@ export default function Card() {
           })}
         </div>
       </div>
-      <div className="md:mt-[99px]  mt-[42px] space-y-[39px] md:space-y-[123px]">
+      <div className="md:mt-[99px] md:container md:mx-auto   mt-[42px] space-y-[39px] md:space-y-[123px]">
         {blogs.map((item, index) => (
           <div
-            className={` ${
-              index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } px-5   md:container md:mx-auto  flex flex-col md:flex-row justify-center  `}
+            className={` ${index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } px-5   lg:container  md:mx-auto  flex flex-col md:flex-row justify-center `}
           >
             <div
-              className={` md:w-[50%]  flex ${
-                index % 2 == 0
-                  ? "justify-start md:mr-[50px] xl:mr-0"
-                  : "justify-end  md:ml-[50px] xl:ml-0"
-              }   `}
+              className={` md:w-[50%] xl:w-[55%] w-[100%] flex ${index % 2 == 0
+                ? "justify-start md:mr-[50px] xl:mr-0"
+                : "justify-end  md:ml-[50px] xl:ml-0"
+                }   `}
             >
-              <img className="" src={item.image} alt="" />
+              <img className="w-[600px] h-[232px] lg:h-[509px]  object-cover rounded-lg" src={item.image} alt="" />
             </div>
-            <div className=" md:w-[45%] mt-[14px] md:mt-0  ">
+            <div className="md:w-[50%] xl:w-[48%] w-[100%] mt-[14px] md:mt-0  ">
               <div className="flex ">
                 <div className="flex justify-center items-center">
                   <div
@@ -159,9 +156,11 @@ export default function Card() {
                   {item.heading}
                 </h1>
               </div>
-              <p className=" text-justify mt-[14px] lg:text-[20px] font-medium xl:text-[22px] text-light_Black ">
+
+              <p className=" break-words text-justify mt-[14px] lg:text-[20px] font-medium xl:text-[22px] text-light_Black ">
                 {item.description}
               </p>
+
               <Link to={`/blogs/blogDetail?id=${item.id}`}>
                 <PrimaryBtn
                   text="Read More"
@@ -172,20 +171,18 @@ export default function Card() {
           </div>
         ))}
       </div>
-      <div className="flex justify-around mt-4">
+      <div className="flex justify-around mt-8">
         <button
-          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
-            !hasPreviousPage ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          className={`bg-primary text-white  py-2 rounded-md text-[16px]  w-[120px]  font-semibold ${!hasPreviousPage ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           onClick={handlePreviousPage}
           disabled={!hasPreviousPage}
         >
           Previous
         </button>
         <button
-          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
-            !startAfterDoc || !isNextPage ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          className={`bg-primary text-white py-2  rounded-md text-center text-[16px] w-[120px]   font-semibold   ${!startAfterDoc || !isNextPage ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           onClick={handleNextPage}
           disabled={!startAfterDoc || !isNextPage}
         >
