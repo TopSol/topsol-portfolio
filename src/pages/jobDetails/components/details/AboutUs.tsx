@@ -14,6 +14,7 @@ import {
   runTransaction,
   setDoc,
 } from "firebase/firestore";
+import dotImg from "../../../../images/dot.png";
 
 function AboutUs({ jobDetails }: any) {
   const [loading, setLoading] = useState(false);
@@ -120,15 +121,17 @@ function AboutUs({ jobDetails }: any) {
   };
 
   return (
-    <div className="py-10 sm:px-32 px-10">
-      <div className="grid md:grid-cols-2 grid-cols-1 mb-4">
-        <div className="md:border-t pt-8 md:pr-12">
-          <div className="flex sm:flex-row flex-col items-center">
-            <img src={hrImg} className="h-[5px] max-w-[49px]" />
-            <h1 className="sm:text-2xl text-xl text-center px-2">About us</h1>
+    <div className="lg:container lg:mx-auto  mx-[23px]">
+      <div className="flex lg:flex-row flex-col lg:mt-[98.5px] lg:mx-[166px]">
+        <div className="lg:border-t sm:order-1 order-2 border-pageBorder lg:pr-[52px]">
+          <div className="flex flex-row items-center md:mt-[57px] md:mb-[35px] ">
+            <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+            <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+              About us
+            </h1>
           </div>
-          <div className="my-6">
-            <p className="font-montserrat text-justify font-bold">
+          <div className="md:mb-[41px] md:my-0 my-[25px]">
+            <p className=" md:text-lg text-base font-medium md:text-justify text-center">
               At Topsol, we're more than a company - we're a collective of
               passionate innovators dedicated to pushing boundaries and crafting
               exceptional digital solutions. Our journey is rooted in a
@@ -137,84 +140,105 @@ function AboutUs({ jobDetails }: any) {
               impacts in the digital landscape, one project at a time.
             </p>
           </div>
-          <div className="flex sm:flex-row flex-col items-center">
-            <img src={hrImg} className="h-[5px] max-w-[49px]" />
-            <h1 className="sm:text-2xl text-xl text-center px-2">
+          <div className="flex flex-row items-center">
+            <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+            <h1 className=" md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
               Job Description
             </h1>
           </div>
-          <div className="my-6 text-center">
-            <p className="font-montserrat text-justify font-bold">
+          <div className="md:my-6 my-[25px] text-center lg:relative">
+            <img
+              src={dotImg}
+              className="absolute lg:block hidden left-[-77px] bottom-5"
+            />
+            <p className="md:text-lg text-base font-medium text-justify">
               {jobDetails.description}
             </p>
           </div>
         </div>
-        <div className="md:border-t md:border-l pl-2 pt-8">
-          <div className="flex sm:flex-row flex-col items-center">
-            <img src={hrImg} className="h-[5px] max-w-[49px]" />
-            <h1 className="sm:text-2xl text-xl text-center px-2">
+        <div className="lg:border-t sm:order-2  border-pageBorder lg:border-l md:pr-0 md:pl-0  md:mb-0 mb-[55px] ">
+          <div className="flex flex-row items-center md:ml-[10px] xl:mr-[142px] mt-[55px]  md:mt-[57px] ">
+            <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+            <h1 className="md:text-[28px] text-[22px] flex whitespace-nowrap font-semibold  md:ml-[15.5px] ml-[10px]">
               Job information
             </h1>
           </div>
-          <div className="md:pl-12">
-            <ul>
-              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4">
-                <span className=" text-primary-gray">Industry</span>
+          <div className="md:ml-[65px] ml-[42px] ">
+            <ul className="">
+              <li className="flex flex-col md:text-2xl text-lg font-semibold text-primary-darkGray md:mt-8 mt-[25px]">
+                <span className=" text-primary-gray md:text-2xl text-lg font-medium">
+                  Industry
+                </span>
                 {jobDetails?.industry}
               </li>
-              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4">
-                <span className=" text-primary-gray">Work Experience</span>
+              <li className="flex flex-col md:text-2xl text-lg font-semibold text-primary-darkGray md:my-10 my-[25px]">
+                <span className=" text-primary-gray md:text-2xl text-lg md:mb-0 mb-[17px] font-medium">
+                  Work Experience
+                </span>
                 {jobDetails?.experience}
               </li>
-              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4">
-                <span className=" text-primary-gray">Location</span>{" "}
+              <li className="flex flex-col ml-0 md:text-2xl text-lg font-semibold text-primary-darkGray">
+                <span className=" text-primary-gray md:text-2xl text-lg md:mb-0 mb-[17px] font-medium">
+                  Location
+                </span>
                 {jobDetails?.location}
               </li>
-              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4">
-                <span className=" text-primary-gray">State/Province</span>
+              <li className="flex flex-col md:text-2xl text-lg font-semibold text-primary-darkGray md:my-10 my-[25px]">
+                <span className=" text-primary-gray md:text-2xl text-lg md:mb-0 mb-[17px] font-medium">
+                  State/Province
+                </span>
                 Punjab
               </li>
-              <li className="flex flex-col text-lg font-extrabold font-montserrat text-primary-darkGray my-4">
-                <span className=" text-primary-gray">Country</span>Pakistan
+              <li className="flex flex-col md:text-2xl text-lg font-semibold text-primary-darkGray">
+                <span className=" text-primary-gray md:text-2xl text-lg md:mb-0 mb-[17px] font-medium">
+                  Country
+                </span>
+                Pakistan
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div>
-        <div className="flex sm:flex-row flex-col items-center">
-          <img src={hrImg} className="h-[5px] max-w-[49px]" />
-          <h1 className="text-2xl text-center px-2">Responsibilities</h1>
+      <div className=" lg:mx-[160px] md:mr-[209px] md:mt-[58px]">
+        <div className="flex flex-row items-center">
+          <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+          <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+            Responsibilities
+          </h1>
         </div>
-        <div className="my-6 px-2">
-          <ul className="sm:pl-5 list-disc font-montserrat font-bold">
+        <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px]">
+          <ul className="pl-5 list-disc">
             {jobDetails?.responsibilities?.map((i: string) => {
-              return <li>{i}</li>;
+              return <li className="md:text-lg text-base font-medium">{i}</li>;
             })}
           </ul>
         </div>
       </div>
 
-      <div>
-        <div className="flex sm:flex-row flex-col items-center">
-          <img src={hrImg} className="h-[5px] max-w-[49px]" />
-          <h1 className="text-2xl text-center px-2">Requirements</h1>
+      <div className=" lg:ml-[160px] lg:mr-[209px] md:mt-[58px]">
+        <div className="flex flex-row items-center">
+          <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+          <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+            Requirements
+          </h1>
         </div>
-        <div className="my-6 px-2">
-          <ul className="sm:pl-5 list-disc font-montserrat font-bold">
+        <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px] ">
+          <ul className="pl-5 list-disc md:text-lg text-base font-medium">
             {jobDetails?.requirements?.map((i: string) => {
               return <li>{i}</li>;
             })}
           </ul>
         </div>
       </div>
-      <div>
-        <div className="flex sm:flex-row flex-col items-center">
-          <img src={hrImg} className="h-[5px] max-w-[49px]" />
-          <h1 className="text-2xl text-center px-2">Benefits</h1>
+      <div className=" lg:ml-[160px] lg:mr-[209px] md:mt-[58px]">
+        <div className="flex flex-row items-center">
+          <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+          <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+            Benefits
+          </h1>
         </div>
-        <div className="my-6 px-2">
-          <ul className="sm:pl-5 list-disc font-montserrat font-bold">
+        <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px] ">
+          <ul className="pl-5 list-disc md:text-lg text-base font-medium">
             {jobDetails?.benefits?.map((i: string) => (
               <li key={i}>{i}</li>
             ))}
@@ -222,10 +246,10 @@ function AboutUs({ jobDetails }: any) {
         </div>
       </div>
 
-      <div className="flex justify-center items-center my-14">
+      <div className="flex justify-center items-center md:mt-[92px] md:mb-[86px] mb-[63px]">
         <button
           onClick={handleApplyClick}
-          className="font-bold bg-primary  hover:bg-primary-light font-montserrat rounded-xl text-primary-white py-3 px-10"
+          className=" font-semibold text-base bg-primary  hover:bg-primary-light rounded-[10px] text-primary-white py-[13px] pr-[41px] pl-[40px] "
         >
           Apply Now
         </button>
