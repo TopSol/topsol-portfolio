@@ -30,7 +30,7 @@ const Modal = ({ setShowModal, isLoader }: AppProps) => {
       ) : (
         <div
           onClick={(e) => e.stopPropagation()}
-          className="flex  px-8 w-[90%] lg:[70%]  flex-col bg-white rounded-md p-4"
+          className="flex   px-8 w-[90%] lg:[70%]  flex-col bg-white rounded-md p-4"
         >
           <div
             className=" hover:cursor-pointer flex justify-end "
