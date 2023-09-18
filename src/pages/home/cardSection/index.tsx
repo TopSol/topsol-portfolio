@@ -8,14 +8,14 @@ import { useInView } from "react-intersection-observer";
 import MouseFollower from "mouse-follower";
 import { AnimatePresence } from "framer-motion";
 
-type CardSectionProps ={
-  setBg:any,
-  openModal:(value: boolean) => void,
-}
+type CardSectionProps = {
+  setBg: any;
+  openModal: (value: boolean) => void;
+};
 
 gsap.registerPlugin(ScrollTrigger);
 MouseFollower.registerGSAP(gsap);
-export default function CardSection({ setBg,openModal}:CardSectionProps) {
+export default function CardSection({ setBg, openModal }: CardSectionProps) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
 
@@ -133,18 +133,16 @@ export default function CardSection({ setBg,openModal}:CardSectionProps) {
   }, [isWorking]);
 
   useEffect(() => {
-    if(window.innerWidth < 768){
+    // if(window.innerWidth < 768){
+    //   setBg("#0B234C");
+    // }else{
+    if (isInView) {
       setBg("#0B234C");
-    }else{
-      if (isInView) {
-        setBg("#0B234C");
-      } else {
-        setBg("#fff");
-      }
+    } else {
+      setBg("#fff");
     }
-    
+    // }
   }, [isInView]);
-
 
   const handleClick = (id: string) => {
     setSelectedId(id);
