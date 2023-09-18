@@ -5,19 +5,68 @@ import dropDown from "../../../images/dropdown.png";
 import { dropDownData } from "./data";
 import { useAnimate, stagger, motion } from "framer-motion";
 import useMenuAnimation from "../../../components/dropDownAnimaion";
-
+import { Interface } from "readline";
+import { db } from "../../../utils/firebase";
+import {
+  Timestamp,
+  addDoc,
+  collection,
+  doc,
+  runTransaction,
+  setDoc,
+} from "firebase/firestore";
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const scope = useMenuAnimation(isOpen);
-
-  const handleOptionClick = (option) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [checkbox, setCheckbox] = useState(false);
+  const [organization, setOrganization] = useState("");
+  const [message, setMessage] = useState("");
+  console.log(name, email, organization, message);
+  const handleOptionClick = (option: any) => {
     setSelectedOption(option);
     setIsOpen(false);
   };
-
+  console.log(checkbox);
   const submit = () => {
-    alert("helo");
+    if (
+      !name ||
+      !email ||
+      !organization ||
+      !message ||
+      !selectedOption ||
+      checkbox === false
+    ) {
+      alert("Please fill all the fields");
+    } else {
+      const body = {
+        selectedOption,
+        name,
+        email,
+        organization,
+        message,
+        checkbox,
+      };
+      console.log(body);
+      try {
+        const data = async (data: any) => {
+          const docRef = await addDoc(collection(db, "getInTouch"), body);
+          setSelectedOption(null);
+          setName("");
+          setEmail("");
+          setOrganization("");
+          setMessage("");
+          alert("Form submitted successfully");
+        };
+        data(body);
+      } catch (error) {
+        console.log(error);
+
+        alert("Data canntot be submitted");
+      }
+    }
   };
 
   return (
@@ -29,7 +78,9 @@ function ContactForm() {
           className="buttonss bg-primary-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center w-[100%] "
         >
           <h1 className=" flex text-light_Grey  font-medium   md:text-[15px] lg:text-[18px]">
-            {selectedOption ? `${selectedOption?.name}?` : "How can we help you?"}
+            {selectedOption
+              ? `${selectedOption?.name}`
+              : "How can we help you?"}
           </h1>
           <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
             <svg width="15" height="15" viewBox="0 0 20 20">
@@ -38,7 +89,9 @@ function ContactForm() {
           </div>
         </motion.button>
         <ul
-          className={`dropDownUl ${isOpen ? 'relative' : 'hidden'}  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
+          className={`dropDownUl ${
+            isOpen ? "relative" : "hidden"
+          }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
           style={{
             pointerEvents: isOpen ? "auto" : "none",
             clipPath: "inset(10% 50% 90% 50% round 10px)",
@@ -47,8 +100,9 @@ function ContactForm() {
           {dropDownData.map((item) => (
             <li
               key={item.id}
-              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
-                }`}
+              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${
+                selectedOption === item ? "bg-primary text-white" : ""
+              }`}
               onClick={() => handleOptionClick(item)}
             >
               {item.name}
@@ -60,12 +114,16 @@ function ContactForm() {
         <input
           type="text"
           placeholder="Name*"
+          onChange={(e) => setName(e.target.value)}
+          value={name}
           className="bg-primary-formInput  py-[17px] px-[24px] mt-[25px] outline-none text-[18px] font-medium rounded w-full "
         />
         <div className=" flex flex-row mt-[25px] px-[24px] bg-primary-formInput justify-between items-center">
           <input
             type="email"
             placeholder="Email*"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className=" bg-primary-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
           />
           <svg
@@ -103,7 +161,9 @@ function ContactForm() {
           <input
             type="text"
             placeholder="Organization*"
+            value={organization}
             className=" bg-primary-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
+            onChange={(e) => setOrganization(e.target.value)}
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -131,10 +191,17 @@ function ContactForm() {
 
         <textarea
           placeholder="Message*"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           className="bg-primary-formInput text-[18px] md:h-[167px] h-[100px] outline-none  font-medium px-[24px]  py-[17px] mt-[25px] w-full"
         ></textarea>
         <div className="flex self-start pl-4 mt-[36px]">
-          <input type="checkbox" className="mr-2  " />
+          <input
+            type="checkbox"
+            className="mr-2"
+            checked={checkbox}
+            onChange={() => setCheckbox(!checkbox)}
+          />
           <label className="md:text-[18px] text-[15px] font-medium">
             I agree to term & conditions
           </label>

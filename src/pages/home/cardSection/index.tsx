@@ -133,6 +133,7 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
   }, [isWorking]);
 
   useEffect(() => {
+<<<<<<< HEAD
     // if(window.innerWidth < 768){
     //   setBg("#0B234C");
     // }else{
@@ -142,6 +143,17 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
       setBg("#fff");
     }
     // }
+=======
+    if (window.innerWidth < 1024) {
+      setBg("#0B234C");
+    } else {
+      if (isInView) {
+        setBg("#0B234C");
+      } else {
+        setBg("#fff");
+      }
+    }
+>>>>>>> 7e4dd78c559ac5674ac8e5ec49908e7dd9ad7d41
   }, [isInView]);
 
   const handleClick = (id: string) => {
@@ -168,7 +180,7 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
                 : "none", // If isWorking is false, set transform to 'none' or any other desired default value
             }}
           >
-            <h1 className="mb-10 text-[50px] font-semibold mt-16  text-white">
+            <h1 className="mb-10 text-[30px] md:text-[50px] font-semibold mt-16  text-white">
               Build Smarter <br /> Not From Scratch
             </h1>
             <div className="w-[150px]">
@@ -195,7 +207,7 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
                   <div
                     layoutId={v.id}
                     onClick={() => handleClick(v.id)}
-                    className="  lg:mr-12 hover:scale-105 hover:duration-300 transition ease-in-out delay-100     md:w-[465px] h-[460px] flex flex-col items-center "
+                    className="  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col items-center "
                   >
                     <img
                       key={index}

@@ -9,7 +9,7 @@ import LineAnimation from "../../../components/LineAnimation";
 
 function ServicesOffers() {
   return (
-    <div className="my-[85px] lg:relative flex flex-col justify-center items-center px-2">
+    <div className=" bg-white py-[85px] lg:relative flex flex-col justify-center items-center px-2">
       <div className="flex flex-col items-center justify-center lg:flex-row">
         <div className="lg:mr-auto">
           <img src={dotImg} className="lg:block hidden" />
@@ -20,7 +20,12 @@ function ServicesOffers() {
               Services We Offer
             </h1>
           </div>
-          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px"/>
+          <LineAnimation
+            width="178px"
+            height="7px"
+            backgroundColor="#00B8F1"
+            marginTop="22px"
+          />
           <div className=" text-[20px] md:mt-[27px] text-center md:block hidden">
             <p>
               From Industry Titans to Emerging Ventures - Topsol Empowers You
