@@ -133,17 +133,6 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
   }, [isWorking]);
 
   useEffect(() => {
-<<<<<<< HEAD
-    // if(window.innerWidth < 768){
-    //   setBg("#0B234C");
-    // }else{
-    if (isInView) {
-      setBg("#0B234C");
-    } else {
-      setBg("#fff");
-    }
-    // }
-=======
     if (window.innerWidth < 1024) {
       setBg("#0B234C");
     } else {
@@ -153,7 +142,6 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
         setBg("#fff");
       }
     }
->>>>>>> 7e4dd78c559ac5674ac8e5ec49908e7dd9ad7d41
   }, [isInView]);
 
   const handleClick = (id: string) => {

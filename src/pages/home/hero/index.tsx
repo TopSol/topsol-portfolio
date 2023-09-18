@@ -8,26 +8,15 @@ export default function Hero() {
 
   return (
     <div
-<<<<<<< HEAD
-      className="bg-cover bg-center h-[100vh] flex items-center justify-center"
-=======
       className="bg-cover h-screen bg-center flex items-center justify-center "
->>>>>>> 7e4dd78c559ac5674ac8e5ec49908e7dd9ad7d41
       style={{
         backgroundImage: `url(${heroImg})`,
       }}
     >
-<<<<<<< HEAD
-      <div className="flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
-        <h1
-          id="root"
-          className="text-3xl sm:text-4xl  md:text-5xl text-primary  font-extrabold  lg:mt-0 mt-[200px]"
-=======
       <div className="flex flex-col items-center justify-center  text-center px-4 sm:px-6 lg:px-8">
         <h1
           id="root"
           className="text-3xl sm:text-4xl  md:text-5xl text-primary  font-extrabold "
->>>>>>> 7e4dd78c559ac5674ac8e5ec49908e7dd9ad7d41
         >
           Better <span className=" mt-4 text-black"> Approach to Develop </span>
           Software
