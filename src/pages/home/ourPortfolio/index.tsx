@@ -15,7 +15,6 @@ import { db } from "../../../utils/firebase";
 
 function OurPortfolio() {
   const [visibleCards, setVisibleCards] = useState([]);
-  
 
   const fetchPortFolios = async () => {
     try {
@@ -24,7 +23,7 @@ function OurPortfolio() {
       const getIds = settings?.homePagePortfolios;
 
       const citiesRef = collection(db, "portFolio");
-      console.log('cities',citiesRef);
+      console.log("cities", citiesRef);
       const q = query(citiesRef);
       // , where("id", "in", getIds)
       const querySnapshot = await getDocs(q);
@@ -48,7 +47,12 @@ function OurPortfolio() {
             Our Portfolio
           </h1>
         </div>
-        <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="18px"/>
+        <LineAnimation
+          width="178px"
+          height="7px"
+          backgroundColor="#00B8F1"
+          marginTop="18px"
+        />
       </div>
       <div className=" md:mt-[53px]   grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-x-[30px]  ">
         {visibleCards?.map((card, index) => (

@@ -7,7 +7,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import locate from "../../images/location.png";
 import contact from "../../images/contact.png";
-import email from "../../images/email.png";
+import email from "../../images/Icons/Mail_Send.png";
 import footerBg from "../../images/footerBg.png";
 
 export default function Footer() {
