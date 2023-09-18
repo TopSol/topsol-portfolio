@@ -5,7 +5,7 @@ const Header = ({ title, subtitle, content, subContent, buttonLabel, imageUrl })
 
   return (
     <div className='    bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo'>
-      <div className=' md:container h-[100vh] md:mx-auto md:flex-row flex flex-col  justify-center items-center'>
+      <div className=' md:container min-h-[100vh] md:mx-auto md:flex-row flex flex-col  justify-center items-center'>
         <div className=' md:w-[55%] md:mx-auto   flex flex-col justify-center md:justify-start p-4  text-center md:text-left '>
           <div className='flex justify-center  md: container md:mx-auto md:justify-start md:flex-col'>
             {title && <h1 className='text-3xl md:text-5xl lg:text-6xl xl:text-[70px] mb-0 md:mb-[21px]  text-white font-semibold'>{title}</h1>}
