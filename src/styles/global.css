@@ -35,3 +35,7 @@ height: 300%; */
   /* transition-delay: 0.5s; */
   background-color: #0B234C;
 }
+
+.active-category {
+  background-color: #00B8F1;
+}
