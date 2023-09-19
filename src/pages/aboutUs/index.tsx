@@ -13,13 +13,13 @@ export default function aboutUs() {
   return (
     <div>
       <Navbar />
-      <VidoeHero />
+      <VidoeHero title='About TopSol' />
       <InfoSection />
       <Experience />
       <div className="mt-[40px]" >
         <RatingSection />
       </div>
-      <OurTeam />
+      {/* <OurTeam /> */}
       <AddressSection />
       <div className="mt-10">
         <Footer />

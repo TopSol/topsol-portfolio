@@ -44,7 +44,7 @@ export default function Contact() {
                         <motion.button
                             whileTap={{ scale: 0.97 }}
                             onClick={() => setIsOpen(!isOpen)}
-                            className="buttonss bg-primary-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center w-[100%] "
+                            className="buttonss bg-primary-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center container mx-auto "
                         >
                             <h1 className=" flex text-light_Grey  font-medium   md:text-[15px] lg:text-[18px]">
                                 {selectedOption ? `${selectedOption?.name}?` : "How can we help you?"}

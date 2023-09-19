@@ -144,7 +144,7 @@ export default function RecentWork() {
           .map((item, index) => (
             <Link to={`/portfolioDetail?id=${item.id}`} key={index}>
               <div className="mt-[100px]">
-                <PortfolioCard data={item} index={index} />
+                <PortfolioCard data={item} index={index} textColor='text-black' subTitleColor='text-primary' lineColor='bg-primary' />
               </div>
             </Link>
           ))
@@ -152,18 +152,16 @@ export default function RecentWork() {
 
       <div className="flex justify-around mt-4">
         <button
-          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
-            !hasPreviousPage ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${!hasPreviousPage ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           onClick={handlePreviousPage}
           disabled={!hasPreviousPage}
         >
           Previous
         </button>
         <button
-          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
-            !startAfterDoc || !isNextPage ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${!startAfterDoc || !isNextPage ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           onClick={handleNextPage}
           disabled={!startAfterDoc || !isNextPage}
         >

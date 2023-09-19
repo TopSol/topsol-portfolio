@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+
       },
       colors: {
         primary: {
@@ -22,6 +22,7 @@ module.exports = {
           gradientTwo: "#6DDCFFEB",
           white: "#FFFFFF",
           gray: "#8E8E8E",
+
           navbarBg: "#0B234C",
           navItemBg: " #000a4c",
           darkGray: "#555555",
@@ -39,9 +40,11 @@ module.exports = {
         textColors: "#000000",
         light_Grey: "#707070",
         light_Black: "#3D3D3D",
+
         pageBorder: "#F9F9F9",
         formInput: "#FBFBFB",
         formBorder: "#E8E8E8",
+
       },
     },
   },
