@@ -15,7 +15,7 @@ export default function Hero({ data }) {
               __html: `<p style="margin-top: 20px; font-size: 1.25rem; line-height: 1.75rem margin-left: 1.5rem; margin-right: 1.5rem; font-family: Montserrat, sans-serif; ">${data?.description}</p>`,
             }}
           />
-          <div className="w-[270px] my-[50px] pb-[200px]  md:pb-[300px] ">
+          <div className="w-[270px] my-[50px] pb-[250px]  md:pb-[300px] ">
             <PrimaryBtn
               text="Download Now"
               additionalClasses=" bg-white text-primary hover:bg-primary hover:text-white "
@@ -23,11 +23,11 @@ export default function Hero({ data }) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col  justify-center items-center">
         <img
           src={data?.detailImageUrl}
           alt=""
-          className="absolute h-[500px] "
+          className="absolute mx-4 h-[500px] "
         />
       </div>
     </div>

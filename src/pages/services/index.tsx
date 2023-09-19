@@ -13,7 +13,7 @@ export default function index() {
   return (
     <div>
       <Navbar />
-      <VideoHero title='About TopSol' />
+      <VideoHero title="Our Services" />
       <ServicesOffers />
       <Project />
       <div className="mt-[76px]">
