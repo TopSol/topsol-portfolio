@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
-import SmallCards from "../../../../../components/smallCards/SmallCards";
-import careerCardOne from "../../../../../images/careerSection/careerCard1.png";
-import chairWhite from "../../../../../images/careerSection/chair.png";
-import award from "../../../../../images/careerSection/award.png";
-import location from "../../../../../images/careerSection/location.png";
-import square from "../../../../../images/careerSection/square.png";
-import awardBlue from "../../../../../images/careerSection/award-blue.png";
-import locationBlue from "../../../../../images/careerSection/location-blue.png";
-import squareBlue from "../../../../../images/careerSection/square-blue.png";
+import careerCardOne from "../../../../images/careerSection/careerCard1.png";
+import chairWhite from "../../../../images/careerSection/chair.png";
+import award from "../../../../images/careerSection/award.png";
+import location from "../../../../images/careerSection/location.png";
+import square from "../../../../images/careerSection/square.png";
+import awardBlue from "../../../../images/careerSection/award-blue.png";
+import locationBlue from "../../../../images/careerSection/location-blue.png";
+import squareBlue from "../../../../images/careerSection/square-blue.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { cardsData } from "./data";
-import LineAnimation from "../../../../../components/LineAnimation";
+import LineAnimation from "../../../../components/LineAnimation";
+import SmallCards from "../../../../components/smallCards/SmallCards";
 function LifeTopsol() {
   const [showMore, setShowMore] = useState(false);
 

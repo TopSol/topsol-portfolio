@@ -1,11 +1,11 @@
 import React from "react";
 import AddressSection from "../../components/addressSection";
-import LifeTopsol from "./components/recruitmentProcess/lifeAtTopsol/LifeTopsol";
-import Process from "./components/recruitmentProcess/recruitmentProcess/Process";
-import JoinTopSol from "./components/recruitmentProcess/joinUs/JoinTopSol";
-import AllOpenings from "./components/recruitmentProcess/allOpenings";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footerSection";
+import JoinTopSol from "./components/joinUs/JoinTopSol";
+import LifeTopsol from "./components/lifeAtTopsol/LifeTopsol";
+import AllOpenings from "./components/allOpenings";
+import Process from "./components/recruitmentProcess/Process";
 function Careers() {
   return (
     <div>

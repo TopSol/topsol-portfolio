@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 // @ts-ignore
-import { db } from "../../../../../utils/firebase";
-import DropDownCards from "../../cards/DropDownCards";
+import { db } from "../../../../utils/firebase";
 // @ts-ignore
 import searchImg from "../../../../../images/search.png";
 import { collection, getDocs } from "firebase/firestore";
 import { Department, ExperienceLevel, JobType } from "./Data";
-import DropDown from "../../../../../components/dropDown/DropDown";
-import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
-import LineAnimation from "../../../../../components/LineAnimation";
+import LineAnimation from "../../../../components/LineAnimation";
+import DropDownCards from "../cards/DropDownCards";
+import DropDown from "../../../../components/dropDown/DropDown";
 function AllOpenings() {
   const [jobPosts, setJobPosts] = useState([]);
   const [loading, setSetLoading] = useState(false);
