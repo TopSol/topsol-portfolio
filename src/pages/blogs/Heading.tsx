@@ -10,9 +10,9 @@ export default function Heading() {
             Top Niches
           </p>
           <div className='hidden  md:flex flex-row absolute left-12  '>
-                    <img src={dot} alt="" />
-                </div>
-                <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px"/>
+            <img src={dot} alt="" />
+          </div>
+          <LineAnimation width='150px' height='7px' backgroundColor='#00B8F1' marginTop="22px" />
         </div>
       </div>
 

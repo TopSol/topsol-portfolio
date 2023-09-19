@@ -1,5 +1,5 @@
 export const validateJobApplicatonForm = (formData: any, resumeFile: any) => {
-  if (!formData.name || !formData.email || !formData.phone || !formData.cover) {
+  if (!formData.name || !formData.email || !formData.phone ) {
     return { isValid: false, msg: "Please fill all fields" };
   }
   const name = formData.name;
