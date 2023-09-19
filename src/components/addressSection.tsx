@@ -6,7 +6,7 @@ export default function AddressSection() {
   return (
     <div className="flex mt-[100px]  flex-col md:flex-row md:container mx-auto justify-between">
       <div className="mx-5">
-        <h1 className="text-[34px] font-semibold font-montserrat ">
+        <h1 className="text-[26px] md:text-[34px] font-semibold  ">
           Where to Find us
         </h1>
         <img

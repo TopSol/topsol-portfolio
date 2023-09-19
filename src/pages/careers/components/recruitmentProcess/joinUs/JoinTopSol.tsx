@@ -4,7 +4,7 @@ import careerOneImg from "../../../../../images/career1.png";
 function JoinTopSol() {
   return (
     <div className="bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
-      <div className=" flex  md:flex-row flex-col justify-center items-center md:text-start text-center md:container md:mx-auto">
+      <div className=" flex min-h-[100vh] md:flex-row flex-col justify-center items-center md:text-start text-center md:container md:mx-auto">
         <div className="flex md:w-[50%] lg:[40%] flex-col justify-center  md:items-start items-center md:mt-[128px] md:mb-[129px]  mt-[70px] mb-0 md:ml-3 md:mr-0 mr-[25px] ml-[26px]">
           <h1 className="lg:text-[70px]  md:text-[50px] text-[36px] font-semibold text-primary-white  ">
             Join Our <span className=" text-primary"> Team</span> at

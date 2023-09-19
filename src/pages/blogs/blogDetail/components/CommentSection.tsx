@@ -29,7 +29,7 @@ export default function CommentSection() {
             </div>
             <div className="mb-[24px] md:mb-0 w-[85%]  md:container md:mx-auto justify-center ">
               <input
-                type="text"
+                type="Email"
                 className="px-[10px] py-[17px] outline-none rounded-md w-[100%] bg-light_Grey_bg "
                 placeholder="Email"
               />
