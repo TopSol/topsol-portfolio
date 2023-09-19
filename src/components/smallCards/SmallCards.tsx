@@ -30,7 +30,7 @@ function SmallCards({
       className={` bg-primary-${color} ${className} rounded hover:bg-primary hover:text-primary-white`}
     >
       <div className=" group-hover:bg-primary-white group-hover:rounded-full group-hover:w-16 group-hover:h-16 group-hover:p-2">
-        <img src={hover ? hoverAvatar : avatar} />
+        <img src={hover ? (hoverAvatar ? hoverAvatar : avatar) : avatar} />
       </div>
       <div className="my-4">
         <h1 className={`${headingClass}`}>{heading}</h1>

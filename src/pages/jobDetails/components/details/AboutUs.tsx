@@ -125,7 +125,7 @@ function AboutUs({ jobDetails }: any) {
       <div className="flex lg:flex-row flex-col lg:mt-[98.5px] lg:mx-[166px]">
         <div className="lg:border-t sm:order-1 order-2 border-pageBorder lg:pr-[52px]">
           <div className="flex flex-row items-center md:mt-[57px] md:mb-[35px] ">
-            <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+            <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
             <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
               About us
             </h1>
@@ -141,7 +141,7 @@ function AboutUs({ jobDetails }: any) {
             </p>
           </div>
           <div className="flex flex-row items-center">
-            <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+            <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
             <h1 className=" md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
               Job Description
             </h1>
@@ -158,7 +158,7 @@ function AboutUs({ jobDetails }: any) {
         </div>
         <div className="lg:border-t sm:order-2  border-pageBorder lg:border-l md:pr-0 md:pl-0  md:mb-0 mb-[55px] ">
           <div className="flex flex-row items-center md:ml-[10px] xl:mr-[142px] mt-[55px]  md:mt-[57px] ">
-            <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+            <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
             <h1 className="md:text-[28px] text-[22px] flex whitespace-nowrap font-semibold  md:ml-[15.5px] ml-[10px]">
               Job information
             </h1>
@@ -201,7 +201,7 @@ function AboutUs({ jobDetails }: any) {
       </div>
       <div className=" lg:mx-[160px] md:mr-[209px] md:mt-[58px]">
         <div className="flex flex-row items-center">
-          <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+          <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
           <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
             Responsibilities
           </h1>
@@ -217,7 +217,7 @@ function AboutUs({ jobDetails }: any) {
 
       <div className=" lg:ml-[160px] lg:mr-[209px] md:mt-[58px]">
         <div className="flex flex-row items-center">
-          <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+          <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
           <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
             Requirements
           </h1>
@@ -232,7 +232,7 @@ function AboutUs({ jobDetails }: any) {
       </div>
       <div className=" lg:ml-[160px] lg:mr-[209px] md:mt-[58px]">
         <div className="flex flex-row items-center">
-          <img src={hrImg} className="h-[5px] md:max-w-[49px] w-8" />
+          <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
           <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
             Benefits
           </h1>

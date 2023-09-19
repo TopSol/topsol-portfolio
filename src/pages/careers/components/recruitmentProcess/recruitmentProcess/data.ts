@@ -1,4 +1,7 @@
-import processImgOne from "../../../../../images/process1.png";
+import processImgOne from "../../../../../images/careerSection/recruitmentProcess/process1.png";
+import FrameTwo from "../../../../../images/careerSection/recruitmentProcess/Frame(2).png";
+import FrameThree from "../../../../../images/careerSection/recruitmentProcess/Frame(3).png";
+import FrameFour from "../../../../../images/careerSection/recruitmentProcess/Frame(4).png";
 
 export const cardsData = [
   {
@@ -7,17 +10,17 @@ export const cardsData = [
     text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
   },
   {
-    avatar: processImgOne,
+    avatar: FrameTwo,
     heading: "Phone Screening",
     text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
   },
   {
-    avatar: processImgOne,
+    avatar: FrameThree,
     heading: "Skill Assessment",
     text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
   },
   {
-    avatar: processImgOne,
+    avatar: FrameFour,
     heading: "Final Interview",
     text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
   },
