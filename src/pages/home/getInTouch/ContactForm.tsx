@@ -116,7 +116,7 @@ function ContactForm() {
           placeholder="Name*"
           onChange={(e) => setName(e.target.value)}
           value={name}
-          className="bg-primary-formInput  py-[17px] px-[24px] mt-[25px] outline-none text-[18px] font-medium rounded w-full "
+          className="bg-formInput  py-[17px] px-[24px] mt-[25px] outline-none text-[18px] font-medium rounded w-full "
         />
         <div className=" flex flex-row mt-[25px] px-[24px] bg-primary-formInput justify-between items-center">
           <input
@@ -124,7 +124,7 @@ function ContactForm() {
             placeholder="Email*"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className=" bg-primary-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
+            className=" bg-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -157,12 +157,12 @@ function ContactForm() {
           </svg>
         </div>
 
-        <div className=" flex flex-row mt-[25px] px-[24px] bg-primary-formInput justify-between items-center">
+        <div className=" flex flex-row mt-[25px] px-[24px] bg-formInput justify-between items-center">
           <input
             type="text"
             placeholder="Organization*"
             value={organization}
-            className=" bg-primary-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
+            className=" bg-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
             onChange={(e) => setOrganization(e.target.value)}
           />
           <svg
@@ -193,7 +193,7 @@ function ContactForm() {
           placeholder="Message*"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="bg-primary-formInput text-[18px] md:h-[167px] h-[100px] outline-none  font-medium px-[24px]  py-[17px] mt-[25px] w-full"
+          className="bg-formInput text-[18px] md:h-[167px] h-[100px] outline-none  font-medium px-[24px]  py-[17px] mt-[25px] w-full"
         ></textarea>
         <div className="flex self-start pl-4 mt-[36px]">
           <input
