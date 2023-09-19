@@ -4,9 +4,6 @@ import { useInView } from 'react-intersection-observer';
 
 export default function Experience() {
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
 
   return (
     <div className="bg-gradient-to-b from-secondary to-primary mt-[80px]  ">
@@ -21,52 +18,45 @@ export default function Experience() {
         </div>
         <div className=" md:w-[50%] md:mx-auto mt-10 md:mt-0 mx-[18px] flex flex-col justify-center items-center ">
           <div className="flex space-x-4">
-            <div className="bg-white rounded-[10px]  justify-center flex flex-col items-center  px-10 sm:px-[100px] md:px-[60px] lg:px-[100px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]  ">
-              <div
-                ref={ref}
-              >
+            <div className="bg-white rounded-[10px]  justify-center flex flex-col items-center  w-[141px] sm:w-[257px] md:w-[210px] lg:w-[330px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]  ">
+              <div >
                 <h1 className=" md:text-[35px] inline-flex text-secondary lg:text-[50px] font-bold  ">
-                  <AnimatedValue start={0} end={100} duration={6000} /> +
+                  <AnimatedValue start={0} end={100} duration={2000} /> +
                 </h1>
               </div>
               <p className="text-secondary md:text-3xl lg:text-4xl font-semibold ">
                 Clients
               </p>
             </div>
-            <div className="bg-white  rounded-[10px] justify-center flex flex-col items-center px-10 sm:px-[100px] md:px-[60px] lg:px-[100px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]">
+            <div className="bg-white  rounded-[10px] justify-center flex flex-col items-center w-[141px] sm:w-[257px] md:w-[210px] lg:w-[330px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]">
               <div
-                ref={ref}
               >
                 <h1 className=" md:text-[35px] inline-flex text-secondary lg:text-[50px] font-bold  ">
-                  <AnimatedValue start={0} end={200} duration={6000} /> +
+                  <AnimatedValue start={0} end={200} duration={2000} /> +
                 </h1>
               </div>
               <p className="text-secondary md:text-3xl lg:text-4xl font-semibold ">
-                Clients
+                Feedbacks
               </p>
             </div>
           </div>
           <div className="flex space-x-5 mt-5">
-            <div className="bg-white rounded-[10px] justify-center flex flex-col items-center  px-10 sm:px-[100px] md:px-[60px] lg:px-[100px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]  ">
-              <div
-                ref={ref}
-              >
+            <div className="bg-white rounded-[10px] justify-center flex flex-col items-center  w-[141px] sm:w-[257px] md:w-[210px] lg:w-[330px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]  ">
+              <div >
                 <h1 className=" md:text-[35px] inline-flex text-secondary lg:text-[50px] font-bold  ">
-                  <AnimatedValue start={0} end={100} duration={6000} /> +
+                  <AnimatedValue start={0} end={100} duration={2000} /> +
                 </h1>              </div>
               <p className="text-secondary md:text-3xl lg:text-4xl font-semibold ">
-                Clients
+                Projects
               </p>
             </div>
-            <div className="bg-white rounded-[10px] justify-center flex flex-col items-center px-10 sm:px-[100px] md:px-[60px] lg:px-[100px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]">
-              <div
-                ref={ref}
-              >
+            <div className="bg-white rounded-[10px] justify-center flex flex-col items-center w-[141px] sm:w-[257px] md:w-[210px] lg:w-[330px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]">
+              <div>
                 <h1 className=" md:text-[35px] inline-flex  text-secondary lg:text-[50px] font-bold  ">
-                  <AnimatedValue start={0} end={20} duration={6000} /> +
+                  <AnimatedValue start={0} end={20} duration={2000} /> +
                 </h1>              </div>
-              <p className="text-secondary md:text-3xl lg:text-4xl font-semibold ">
-                Clients
+              <p className="text-secondary  md:text-3xl lg:text-4xl font-semibold ">
+                Awards
               </p>
             </div>
           </div>

@@ -59,7 +59,7 @@ function Form({
           rows={5}
           cols={38}
           name="cover"
-          value={formData.cover}
+          value={formData?.cover}
           onChange={handleChange}
           placeholder="Cover Letter(optional)"
           className="bg-formInput text-xs p-4 md:my-[31px] my-[35px] w-full"
@@ -77,9 +77,8 @@ function Form({
             onClick={submit}
             disabled={loading}
             aria-label="Post Comment"
-            className={`w-full px-8 py-3 ${
-              loading ? "bg-[#bbbb]" : "bg-primary hover:bg-primary-light"
-            }  rounded-md  text-white text-2xl font-semibold `}
+            className={`w-full px-8 py-3 ${loading ? "bg-[#bbbb]" : "bg-primary hover:bg-primary-light"
+              }  rounded-md  text-white text-2xl font-semibold `}
           >
             {loading ? "loading.." : "Submit"}
           </button>
