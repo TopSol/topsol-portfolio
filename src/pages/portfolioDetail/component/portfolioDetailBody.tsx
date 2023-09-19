@@ -8,7 +8,7 @@ export default function PortfolioDetailBody({ data }) {
     <div>
       <div className="flex font-montserrat mt-[250px] md:mt-[350px] flex-col md:flex-row md:container justify-between  md:mx-auto">
         <div className="mx-6 md:0 md:w-[50%] lg:w-[50%]">
-          <h1 className="text-[36px] md:text-[30px] lg:text-[36px] font-bold font-montserrat">
+          <h1 className="text-[36px] mt-6 md:mt-0 md:text-[30px] lg:text-[36px] font-bold font-montserrat">
             About {data?.title}
           </h1>
           {/* <p className="text-[22px] md:text-[18px] lg:text-[22px] font-montserrat mt-[36px]">
@@ -60,7 +60,7 @@ export default function PortfolioDetailBody({ data }) {
           />
         </div>
 
-        <div className="md:container mx-auto">
+        <div className="md:container mx-4 md:mx-auto">
           {/* <p className=" text-xl mx-6 md:text-2xl font-montserrat  mt-[20px]">
             {data?.unlockDesc}
           </p> */}
@@ -72,8 +72,8 @@ export default function PortfolioDetailBody({ data }) {
         </div>
       </div>
 
-      <div className="flex justify-center mt-7">
-        <img src={data?.imageCollection?.[0]} alt="" className="w-[500px]" />
+      <div className="flex justify-center mx-4  mt-7">
+        <img src={data?.imageCollection?.[0]} alt="" className="w-[500px] " />
       </div>
 
       <div className="flex flex-col justify-center items-center">

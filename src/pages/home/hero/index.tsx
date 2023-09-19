@@ -35,7 +35,7 @@ export default function Hero() {
               rootElement={root}
               text="Let’s Talk!"
               url="https://calendly.com/asif-mushtaq"
-              className="bg-primary py-4 px-16  rounded hover:bg-primary text-[20px] font-semibold  hover:bg-secondary-light text-white rounded-[10px]  "
+              className="bg-primary py-4 px-16   text-[20px] font-semibold  hover:bg-secondary-light text-white rounded-[10px]  "
             />
           )}
 
