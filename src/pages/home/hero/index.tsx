@@ -8,9 +8,7 @@ export default function Hero() {
 
   return (
     <div
-
-      className="bg-cover h-screen bg-center flex items-center justify-center "
-
+      className="bg-cover  min-h-[100vh] bg-center flex items-center justify-center "
       style={{
         backgroundImage: `url(${heroImg})`,
       }}
@@ -30,7 +28,7 @@ export default function Hero() {
           of innovative app development.
         </p>
         <div className="bg-transparent    "></div>
-        <div className="flex flex-col mt-[54px] mb-[203px]  sm:flex-row gap-[17px]">
+        <div className="flex flex-col mt-[54px]   sm:flex-row gap-[17px]">
           {root && (
             <PopupButton
               // @ts-ignore
