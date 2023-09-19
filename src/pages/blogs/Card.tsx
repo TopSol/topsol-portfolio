@@ -139,7 +139,9 @@ export default function Card() {
                 : "justify-end  md:ml-[50px] xl:ml-0"
                 }   `}
             >
+
               <img className="w-[600px] h-[232px] lg:h-[509px]  object-cover rounded-lg" src={item.image} alt="" />
+
             </div>
             <div className="md:w-[50%] xl:w-[48%] w-[100%] mt-[14px] md:mt-0  ">
               <div className="flex ">
