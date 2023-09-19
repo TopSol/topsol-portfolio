@@ -19,13 +19,11 @@ function Navbar() {
   return (
     <motion.div
       variants={variants}
-
-      className={`relative bg-primary-navbarBg  ${
+      className={`relative bg-primary-navbarBg   ${
         !open
           ? "hover:bg-primary-white transition-colors duration-500"
           : "bg-primary-navbarBg"
       }`}
-
     >
       <motion.div className="md:container  mx-auto " id="navbar">
         <header>
@@ -62,44 +60,39 @@ function Navbar() {
               <img
                 src={closeImg}
                 onClick={() => setOpen(false)}
-                className={`h-6 w-6 cursor-pointer ${open ? "block" : "hidden"
-                  } `}
+                className={`h-6 w-6 cursor-pointer ${
+                  open ? "block" : "hidden"
+                } `}
               />
             </div>
             <div className={`w-full  ${open ? "block" : "hidden"}`} id="menu">
               <ul
                 className="
-                z-50
-              mr-8
-
-
+              z-50 mr-8
               md:pt-20 pt-8 md:pb-0 pb-2
-
-              pt-20
-
               flex items-center flex-col h-screen w-full
               text-base text-white font-mont
-              absolute bg-primary-navItemBg  left-0 right-0
+              absolute bg-primary-navItemBg min-h-[100vh]  left-0 right-0
               space-y-[53px]
                bg-opacity-80
               "
               >
-                <li className="md:p-4 py-2 text-[35px] font-montserrat font-bold block hover:text-blue-400">
+                <li className=" text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/services">SERVICES</Link>
                 </li>
-                <li className="md:p-4 py-2 text-[35px] font-montserrat font-bold block hover:text-blue-400">
+                <li className=" text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/portfolio">PORTFOLIO</Link>
                 </li>
-                <li className="md:p-4 py-2 text-[35px] font-montserrat font-bold block hover:text-blue-400">
+                <li className="text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/aboutUs">ABOUT US</Link>
                 </li>
-                <li className="md:p-4 py-2 text-[35px]  font-montserrat font-bold block hover:text-blue-400">
+                <li className=" text-[35px]  font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/careers">CAREER</Link>
                 </li>
-                <li className="md:p-4 py-2 text-[35px] font-montserrat font-bold block hover:text-blue-400">
+                <li className="text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/contactUs">CONTACT US</Link>
                 </li>
-                <li className="md:p-4 py-2  text-[35px] font-montserrat font-bold block hover:text-blue-400">
+                <li className=" text-[35px] font-montserrat font-bold block hover:text-blue-400">
                   <Link to="/blogs">BLOG</Link>
                 </li>
               </ul>

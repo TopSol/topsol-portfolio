@@ -1,14 +1,12 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { AiFillSkype } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
 import locate from "../../images/location.png";
 import contact from "../../images/contact.png";
 import email from "../../images/Icons/Mail_Send.png";
 import footerBg from "../../images/footerBg.png";
+import { Link } from "gatsby";
 
 export default function Footer() {
   return (
@@ -31,9 +29,15 @@ export default function Footer() {
                 </span>
               </div>
               <div className="flex space-x-4 mt-[34px] ">
-                <AiFillLinkedin className="w-[30px] h-[30px] " />
-                <BsInstagram className="w-[30px] h-[30px] " />
-                <FaFacebook className="w-[30px] h-[30px] " />
+                <Link to="https://www.linkedin.com/company/topsolorg/mycompany/">
+                  <AiFillLinkedin className="w-[30px] h-[30px] " />
+                </Link>
+                <Link to="https://www.instagram.com/topsol_org/">
+                  <BsInstagram className="w-[30px] h-[30px] " />
+                </Link>
+                <Link to="https://www.facebook.com/topsol.org">
+                  <FaFacebook className="w-[30px] h-[30px] " />
+                </Link>
               </div>
             </div>
             <div className="md:grid hidden justify-center">
@@ -51,11 +55,21 @@ export default function Footer() {
                 Quick Links
               </h1>
               <ul className="text-base font-normal space-y-[26px]">
-                <li>Blog</li>
-                <li>About us</li>
-                <li>Portfolio</li>
-                <li>Careers</li>
-                <li>Contact us</li>
+                <li>
+                  <Link to="/blogs">Blog</Link>
+                </li>
+                <li>
+                  <Link to="/aboutUs">About us</Link>
+                </li>
+                <li>
+                  <Link to="/portfolio">Portfolio</Link>
+                </li>
+                <li>
+                  <Link to="/careers">Careers</Link>
+                </li>
+                <li>
+                  <Link to="/contactUs">Contact us</Link>
+                </li>
               </ul>
             </div>
             <div className="mt-[60px] md:mt-0">
