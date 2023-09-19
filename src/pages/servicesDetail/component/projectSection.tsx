@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import PortfolioCard from '../../../components/portfolioCard'
 import { db } from "../../../utils/firebase";
 import {
@@ -18,10 +18,10 @@ export default function ProjectSection() {
   const [loader, setLoader] = useState(false);
   const [startAfterDoc, setStartAfterDoc] = useState(null);
 
- 
 
-    const showData = portFolios.slice(1, 3);
-    const initialVisibleCards = 2;
+
+  const showData = portFolios.slice(1, 3);
+  const initialVisibleCards = 2;
   const [visibleCards, setVisibleCards] = useState<number>(initialVisibleCards);
 
 
@@ -33,16 +33,16 @@ export default function ProjectSection() {
         portfolioCollection,
         orderBy("createdAt")
       );
-  
+
       const portfolioSnapshot = await getDocs(portfolioQuery);
       const portfolioData = portfolioSnapshot.docs.map((doc) => doc.data());
-  
+
       if (portfolioData?.length) {
         setPortFolios(portfolioData);
         setStartAfterDoc(portfolioData[portfolioData.length - 1].createdAt);
       }
-  
-  
+
+
       setLoader(false);
     } catch (error) {
       setLoader(false);
@@ -59,21 +59,22 @@ export default function ProjectSection() {
   };
   return (
     <div>
-        <div className="bg-gradient-to-b from-secondary to-primary  py-10 mt-12" >
-      <div className="flex flex-col justify-center items-center     ">
+      <div className="bg-gradient-to-b from-secondary to-primary  py-10 mt-12" >
+        <div className="flex flex-col justify-center items-center     ">
           <div className="">
             <h1 className="font-extrabold text-white  text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
-            Our Web Projects
+              Our Web Projects
             </h1>
           </div>
-          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px"/>
+          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px" />
         </div>
         <div>
-            {
-                showData.map((item:any,index)=>{
-                    return <PortfolioCard data={item}  index={index}/>
-                })
-            }      
+          {
+            showData.map((item: any, index) => {
+              return <PortfolioCard data={item} index={index} textColor='text-white' subTitleColor='text-[#CCF3FF]' lineColor='bg-[#CCF3FF]' />
+
+            })
+          }
         </div>
         <div className="flex justify-center items-center mt-8">
           <button
@@ -99,7 +100,7 @@ export default function ProjectSection() {
               />
             </svg>
           </button>
-      </div>
+        </div>
       </div>
     </div>
   )

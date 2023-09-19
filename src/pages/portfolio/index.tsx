@@ -8,7 +8,7 @@ export default function index() {
   return (
     <div>
       <Navbar />
-      <VideoHero />
+      <VideoHero title='About TopSol' />
       <RecentWork />
       <SmallFooter />
       <Footer />

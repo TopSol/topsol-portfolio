@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
 import SmallCards from "../../../../../components/smallCards/SmallCards";
-import careerCardOne from "../../../../../images/careerCard1.png";
+import careerCardOne from "../../../../../images/careerSection/careerCard1.png";
+import chairWhite from "../../../../../images/careerSection/chair.png";
+import award from "../../../../../images/careerSection/award.png";
+import location from "../../../../../images/careerSection/location.png";
+import square from "../../../../../images/careerSection/square.png";
+import awardBlue from "../../../../../images/careerSection/award-blue.png";
+import locationBlue from "../../../../../images/careerSection/location-blue.png";
+import squareBlue from "../../../../../images/careerSection/square-blue.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -49,14 +56,19 @@ function LifeTopsol() {
   return (
     <div className="md:container mx-auto">
       <div className="flex lg:flex-row flex-col md:justify-center  xl:mx-0 lg:mx-3">
-        <div className="  lg:mb-[150px] flex items-center justify-center md:justify-start md:items-start flex-col">
+        <div className="  lg:mb-[150px] flex items-center justify-center md:justify-start md:items-start flex-col lg:mx-0 md:mx-3">
           <h1 className="md:text-6xl lg:text-start text-center text-3xl font-semibold  md:mt-[161px] mt-[51px]">
             Life at Topsol
           </h1>
-          <div className="flex justify-start items-start">
-            <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="15px" />
+          <div className="flex justify-start items-start lg:ml-0 md:ml-2">
+            <LineAnimation
+              width="178px"
+              height="7px"
+              backgroundColor="#00B8F1"
+              marginTop="15px"
+            />
           </div>
-          <p className=" text-xl md:mx-0 mx-8   lg:text-start text-center font-medium my-10 flex items-center md:leading-10 leading-7 lg:max-w-[628px] lg:h-[297px]">
+          <p className=" text-xl md:mx-0 mx-8   lg:text-start text-center font-medium my-10 flex items-center md:leading-10 leading-7 lg:max-w-[628px] ">
             Life at Topsol is more than just a job - it's an immersive
             experience that combines innovation, camaraderie, and personal
             growth. From the moment you step through our doors, you'll become a
@@ -86,6 +98,7 @@ function LifeTopsol() {
           <div className="lg:mt-[141px] lg:mb-0 mb-[150px] mt-20 flex flex-col gap-y-10">
             <SmallCards
               avatar={careerCardOne}
+              hoverAvatar={chairWhite}
               heading={"Large Beautiful Office"}
               headingClass={"font-semibold text-sm"}
               text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
@@ -95,7 +108,8 @@ function LifeTopsol() {
             />
 
             <SmallCards
-              avatar={careerCardOne}
+              avatar={locationBlue}
+              hoverAvatar={location}
               heading={"Large Beautiful Office"}
               headingClass={"font-semibold text-sm"}
               text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
@@ -107,7 +121,8 @@ function LifeTopsol() {
 
           <div className="lg:mt-[219px] mt-20 flex flex-col gap-y-10">
             <SmallCards
-              avatar={careerCardOne}
+              avatar={squareBlue}
+              hoverAvatar={square}
               heading={"Large Beautiful Office"}
               headingClass={"font-semibold text-sm"}
               text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
@@ -117,7 +132,8 @@ function LifeTopsol() {
             />
 
             <SmallCards
-              avatar={careerCardOne}
+              avatar={awardBlue}
+              hoverAvatar={award}
               heading={"Large Beautiful Office"}
               headingClass={"font-semibold text-sm"}
               text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
@@ -139,6 +155,7 @@ function LifeTopsol() {
                       textClass="text-[11px] font-normal"
                       text={review.text}
                       avatar={review.avatar}
+                      hoverAvatar={review.hoverAvatar}
                       className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[217px]  p-[22px]"
                     />
                   </div>

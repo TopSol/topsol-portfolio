@@ -17,16 +17,16 @@ export default function index() {
     slidesToScroll: 1,
   };
   return (
-    <div className=" overflow-x-hidden mt-[69px] lg:mt-[0px] flex justify-center ">
+    <div className=" overflow-x-hidden mt-[69px] lg:mt-[100px] flex justify-center ">
       <div className="w-[90%]    2xl:w-[65%] ">
         <div className="flex flex-col justify-center items-center">
-        <div className="">
-          <h1 className="font-extrabold font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
-            People Like us, officially
-          </h1>
-        </div>
-        <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="18px"/>
+          <div className="">
+            <h1 className="font-extrabold font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
+              People Like us, officially
+            </h1>
           </div>
+          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="18px" />
+        </div>
         <div>
           <Slider {...settings}>
             {reviews?.map((review, index) => {

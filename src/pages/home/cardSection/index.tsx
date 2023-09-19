@@ -163,8 +163,8 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
                 ? scrollY <= 1080
                   ? "translateY(0%)"
                   : scrollY >= 1560
-                  ? "translateY(-480px)"
-                  : `translateY(-${scrollY - 1080}px)`
+                    ? "translateY(-480px)"
+                    : `translateY(-${scrollY - 1080}px)`
                 : "none", // If isWorking is false, set transform to 'none' or any other desired default value
             }}
           >
@@ -184,8 +184,8 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
                 ? scrollY <= 1000
                   ? `translateX(0%)`
                   : scrollY >= 2500
-                  ? `translateX(-1500px)`
-                  : `translateX(-${scrollY - 1000}px)`
+                    ? `translateX(-1500px)`
+                    : `translateX(-${scrollY - 1000}px)`
                 : "none",
             }}
           >
