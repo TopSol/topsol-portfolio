@@ -6,9 +6,10 @@ import Hero from "./component/Hero";
 import PortfolioDetailBody from "./component/portfolioDetailBody";
 import { db } from "../../utils/firebase";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
-
+import { PulseLoader } from 'react-spinners';
 export default function index() {
   const [detail, setDetail] = useState({});
+  const [loader, setLoader] = useState(false);
 
   const url = window.location.href;
 
@@ -18,6 +19,7 @@ export default function index() {
 
   const fetchPortfolioItem = async () => {
     try {
+      setLoader(true)
       const portfolioItemRef = doc(collection(db, "portFolio"), id);
       const portfolioItemDoc = await getDoc(portfolioItemRef);
 
@@ -26,8 +28,10 @@ export default function index() {
       } else {
         console.error("Portfolio item not found.");
       }
+      setLoader(false);
     } catch (error) {
       console.error("Error fetching portfolio item:", error);
+      setLoader(false);
     }
   };
 
@@ -36,11 +40,20 @@ export default function index() {
       fetchPortfolioItem();
     }
   }, [id]);
+
   return (
     <div>
       <Navbar />
-      <Hero data={detail} />
-      <PortfolioDetailBody data={detail} />
+      {loader ? (
+        <div className="flex justify-center h-[500px] items-center">
+          <PulseLoader color="#8E8E8E" size={18} />
+        </div>
+      ) : (
+        <div>
+          <Hero data={detail} />
+          <PortfolioDetailBody data={detail} />
+        </div>
+      )}
       <SmallFooter />
       <Footer />
     </div>

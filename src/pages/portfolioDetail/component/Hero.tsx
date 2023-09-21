@@ -15,7 +15,7 @@ export default function Hero({ data }) {
               __html: `<p style="margin-top: 20px; font-size: 1.25rem; line-height: 1.75rem margin-left: 1.5rem; margin-right: 1.5rem;  ">${data?.description}</p>`,
             }}
           />
-          <div className="w-[270px] my-[50px] pb-[250px]  md:pb-[300px] " style={{}}>
+          <div className="w-[270px] my-[50px] pb-[250px]  md:pb-[300px] ">
             <PrimaryBtn
               text="Download Now"
               additionalClasses=" bg-white text-primary hover:bg-primary hover:text-white "
