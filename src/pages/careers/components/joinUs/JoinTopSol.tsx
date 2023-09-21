@@ -1,5 +1,5 @@
 import React from "react";
-import careerOneImg from "../../../../../images/career1.png";
+import careerOneImg from "../../../../images/career1.png";
 
 function JoinTopSol() {
   return (

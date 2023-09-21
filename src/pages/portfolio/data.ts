@@ -2,18 +2,22 @@ export const data = [
   {
     id: 1,
     name: "All",
+    value: "All",
   },
   {
     id: 2,
     name: "Mobile App",
+    value: "mobile app",
   },
   {
     id: 3,
     name: "Web App",
+    value: "Website",
   },
   {
     id: 4,
     name: "Desktop App",
+    value: "desktop",
   },
 ];
 export const data2 = [

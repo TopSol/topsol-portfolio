@@ -19,6 +19,7 @@ export default function RecentWork() {
   const [loader, setLoader] = useState(false);
   const [startAfterDoc, setStartAfterDoc] = useState(null);
   const [isNextPage, setIsNextPage] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 5;
@@ -72,7 +73,7 @@ export default function RecentWork() {
 
   useEffect(() => {
     fetchPortFolios(null);
-  }, []);
+  }, [selectedCategory]);
 
   const scrollToTop = () => {
     if ("scrollBehavior" in document.documentElement.style) {
@@ -124,14 +125,17 @@ export default function RecentWork() {
             className="mx-5 md:mx-0 flex justify-between   "
             key={index}
             onClick={() => {
-              console.log("hello im am hear -----------------");
-              // setSetWorkers(item.name); // Commented out as it seems unused
+              setSelectedCategory(item.value);
             }}
           >
             <PrimaryBtn
               text={item.name}
-              additionalClasses="bg-primary mt-4 md:mt-0 px-4 text-[22px] w-full 
-              md:mx-0 font-semibold hover:bg-primary text-white font-montserrat "
+              additionalClasses={`bg-primary-light mt-4 md:mt-0 px-4 text-[22px] w-full 
+              md:mx-0 font-semibold hover:bg-primary text-white font-montserrat ${
+                selectedCategory === item.value
+                  ? "active-category"
+                  : "bg-primary-light"
+              }`}
             />
           </div>
         ))}
@@ -140,11 +144,22 @@ export default function RecentWork() {
         <div className="text-center">Loading...</div>
       ) : (
         portFolios
+          .filter((item) =>
+            selectedCategory === "All"
+              ? true
+              : item.category === selectedCategory
+          )
           .slice(currentIndex, currentIndex + itemsPerPage)
           .map((item, index) => (
             <Link to={`/portfolioDetail?id=${item.id}`} key={index}>
               <div className=" mt-10 md:mt-[100px]">
-                <PortfolioCard data={item} index={index} textColor='text-black' subTitleColor='text-primary' lineColor='bg-primary' />
+                <PortfolioCard
+                  data={item}
+                  index={index}
+                  textColor="text-black"
+                  subTitleColor="text-primary"
+                  lineColor="bg-primary"
+                />
               </div>
             </Link>
           ))
@@ -152,16 +167,18 @@ export default function RecentWork() {
 
       <div className="flex justify-around mt-4">
         <button
-          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${!hasPreviousPage ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
+            !hasPreviousPage ? "opacity-50 cursor-not-allowed" : ""
+          }`}
           onClick={handlePreviousPage}
           disabled={!hasPreviousPage}
         >
           Previous
         </button>
         <button
-          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${!startAfterDoc || !isNextPage ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
+            !startAfterDoc || !isNextPage ? "opacity-50 cursor-not-allowed" : ""
+          }`}
           onClick={handleNextPage}
           disabled={!startAfterDoc || !isNextPage}
         >

@@ -1,8 +1,8 @@
 import React from "react";
-import AnimateHr from "../../../../../components/animatedLine/AnimateHr";
 import { cardsData } from "./data";
-import SmallCards from "../../../../../components/smallCards/SmallCards";
-import LineAnimation from "../../../../../components/LineAnimation";
+import LineAnimation from "../../../../components/LineAnimation";
+import SmallCards from "../../../../components/smallCards/SmallCards";
+
 function Process() {
   return (
     <div className="md:container mx-auto  flex flex-col justify-center items-center">
@@ -11,7 +11,12 @@ function Process() {
           Learn Our Recruitment <span className=" text-primary"> Process</span>
         </h1>
         <div className="flex justify-center items-center">
-          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="22px" />
+          <LineAnimation
+            width="178px"
+            height="7px"
+            backgroundColor="#00B8F1"
+            marginTop="22px"
+          />
         </div>
       </div>
 
