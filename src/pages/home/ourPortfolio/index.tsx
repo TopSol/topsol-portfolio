@@ -29,7 +29,8 @@ function OurPortfolio() {
       const querySnapshot = await getDocs(q);
 
       const fetchedDocuments = querySnapshot.docs.map((doc) => doc.data());
-      setVisibleCards(fetchedDocuments);
+      const cardData = fetchedDocuments.splice(0, 4);
+      setVisibleCards(cardData);
     } catch (error) {
       console.log("error", error);
     }
