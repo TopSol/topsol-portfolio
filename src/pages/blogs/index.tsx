@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from "../../components/Navbar";
-import { ToggleBar } from '../../components/bar';
 import Header from '../../components/headerSection';
 import Heading from './Heading';
 import Footer from '../../components/footerSection';
@@ -9,7 +8,6 @@ export default function index() {
   return (
     <div>
       <Navbar />
-      {/* <ToggleBar /> */}
       <Header
         title="Latest"
         subtitle="Blogs"
@@ -22,7 +20,6 @@ export default function index() {
          developments. Whether you‘re looking for inspiration, tips, or
          simply some interesting reading, our blog has something for
          everyone.Thanks for visiting and happy reading!"
-        buttonLabel={false}
         imageUrl="https://res.cloudinary.com/asifsaythe/image/upload/v1693224854/new_portfolio/Frame_1_lv9ucy.png"
       />
       <Heading />

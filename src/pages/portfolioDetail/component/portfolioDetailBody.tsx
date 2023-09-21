@@ -48,7 +48,7 @@ export default function PortfolioDetailBody({ data }) {
 
         <div className="flex flex-col justify-center items-center">
           <div className="">
-            <h1 className="font-extrabold text-textColors font-montserrat text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
+            <h1 className="font-extrabold text-textColors  text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
               {data?.unlockTitle}
             </h1>
           </div>
@@ -61,12 +61,9 @@ export default function PortfolioDetailBody({ data }) {
         </div>
 
         <div className="md:container mx-4 md:mx-auto">
-          {/* <p className=" text-xl mx-6 md:text-2xl font-montserrat  mt-[20px]">
-            {data?.unlockDesc}
-          </p> */}
-          <div
+          <div className="text-[25px] text-textColors font-medium"
             dangerouslySetInnerHTML={{
-              __html: `<p style="margin-top: 20px; font-size: 1.25rem; line-height: 1.75rem margin-left: 1.5rem; margin-right: 1.5rem; font-family: Montserrat, sans-serif; ">        ${data?.unlockDesc}    </p>`,
+              __html: `<p style="margin-top: 20px;  line-height: 1.75rem margin-left: 1.5rem; margin-right: 1.5rem;  ">        ${data?.unlockDesc}    </p>`,
             }}
           />
         </div>

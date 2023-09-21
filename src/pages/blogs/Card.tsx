@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PrimaryBtn from "../../components/PrimaryBtn";
 import { btnData } from "./data";
 import { Link } from "gatsby";
+import { PulseLoader } from 'react-spinners';
 import {
   collection,
   query,
@@ -25,7 +26,7 @@ export default function Card() {
   const hasNextPage = currentIndex + itemsPerPage < blogs.length;
   const hasPreviousPage = currentIndex > 0;
 
-  const fetchPortFolios = async (start) => {
+  const fetchPortFolios = async (start: any) => {
     try {
       setLoader(true);
       const blogCollection = collection(db, "blogs");
@@ -127,51 +128,57 @@ export default function Card() {
           })}
         </div>
       </div>
+
       <div className="md:mt-[99px] md:container md:mx-auto   mt-[42px] space-y-[39px] md:space-y-[123px]">
-        {blogs.map((item, index) => (
-          <div
-            className={` ${index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } px-5   lg:container  md:mx-auto  flex flex-col md:flex-row justify-center `}
-          >
+        {loader ? (
+          <div className="flex justify-center h-[500px] items-center">
+            <PulseLoader color="#8E8E8E" size={18} />
+          </div>
+        ) : (
+          blogs.map((item, index) => (
             <div
-              className={` md:w-[50%] xl:w-[55%] w-[100%] flex ${index % 2 == 0
-                ? "justify-start md:mr-[50px] xl:mr-0"
-                : "justify-end  md:ml-[50px] xl:ml-0"
-                }   `}
+              className={` ${index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } px-5   lg:container  md:mx-auto  flex flex-col md:flex-row justify-center `}
             >
+              <div
+                className={` md:w-[50%] xl:w-[55%] w-[100%] flex ${index % 2 == 0
+                  ? "justify-start md:mr-[50px] xl:mr-0"
+                  : "justify-end  md:ml-[50px] xl:ml-0"
+                  }   `}
+              >
 
-              <img className="w-[600px] h-[232px] lg:h-[509px]  object-cover rounded-lg" src={item.image} alt="" />
+                <img className="w-[600px] h-[232px] md:h-[509px]  object-cover rounded-lg" src={item.image} alt="" />
 
-            </div>
-            <div className="md:w-[50%] xl:w-[48%] w-[100%] mt-[14px] md:mt-0  ">
-              <div className="flex ">
-                <div className="flex justify-center items-center">
-                  <div
-                    className="before:content-[''] before:block before:h-[5px] 
+              </div>
+              <div className="md:w-[50%] xl:w-[48%] w-[100%] mt-[14px] md:mt-0  ">
+                <div className="flex ">
+                  <div className="flex justify-center items-center">
+                    <div
+                      className="before:content-[''] before:block before:h-[5px] 
                        before:bg-[#00B8F1] before:rounded-3xl
                       before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
                       before:transition before:ease-in-out before:duration-1000
-                       w-[49px]   pr-[8px] "
-                  ></div>
+                       w-[49px] pr-[8px] "
+                    ></div>
+                  </div>
+                  <h1 className=" md:text-[18px]   font-semibold lg:text-[25px] xl:text-[35px]  text-primary">
+                    {item.heading}
+                  </h1>
                 </div>
-                <h1 className=" md:text-[18px]   font-semibold lg:text-[25px] xl:text-[35px]  text-primary">
-                  {item.heading}
-                </h1>
+
+                <p className=" break-words text-justify mt-[14px] lg:text-[20px] font-medium xl:text-[22px] text-light_Black ">
+                  {item.description}
+                </p>
+
+                <Link to={`/blogs/blogDetail?id=${item.id}`}>
+                  <PrimaryBtn
+                    text="Read More"
+                    additionalClasses="bg-primary mt-[14px] text-[16px] md:px-[79px] px-10 lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary-lighter text-white "
+                  />
+                </Link>
               </div>
-
-              <p className=" break-words text-justify mt-[14px] lg:text-[20px] font-medium xl:text-[22px] text-light_Black ">
-                {item.description}
-              </p>
-
-              <Link to={`/blogs/blogDetail?id=${item.id}`}>
-                <PrimaryBtn
-                  text="Read More"
-                  additionalClasses="bg-primary mt-[14px] text-[16px] md:px-[79px] px-10 lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary-lighter text-white "
-                />
-              </Link>
             </div>
-          </div>
-        ))}
+          )))}
       </div>
       <div className="flex justify-around mt-8">
         <button

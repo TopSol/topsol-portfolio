@@ -14,6 +14,8 @@ import PortfolioCard from "../../../components/portfolioCard";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import { Link } from "gatsby";
 import LineAnimation from "../../../components/LineAnimation";
+import { PulseLoader } from 'react-spinners';
+
 export default function RecentWork() {
   const [portFolios, setPortFolios] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -141,7 +143,9 @@ export default function RecentWork() {
         ))}
       </div>
       {loader ? (
-        <div className="text-center">Loading...</div>
+        <div className="flex justify-center h-[500px] items-center">
+          <PulseLoader color="#8E8E8E" size={18} />
+        </div>
       ) : (
         portFolios
           .filter((item) =>
@@ -167,18 +171,20 @@ export default function RecentWork() {
 
       <div className="flex justify-around mt-4">
         <button
-          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
-            !hasPreviousPage ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+
+          className={`bg-primary text-white w-[120px] py-2 rounded-md font-medium ${!hasPreviousPage ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+
           onClick={handlePreviousPage}
           disabled={!hasPreviousPage}
         >
           Previous
         </button>
         <button
-          className={`bg-primary text-white px-3 py-2 rounded-md font-medium ${
-            !startAfterDoc || !isNextPage ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+
+          className={`bg-primary text-white w-[120px]  py-2 rounded-md font-medium ${!startAfterDoc || !isNextPage ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+
           onClick={handleNextPage}
           disabled={!startAfterDoc || !isNextPage}
         >
