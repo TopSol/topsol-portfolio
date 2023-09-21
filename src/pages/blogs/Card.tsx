@@ -25,7 +25,7 @@ export default function Card() {
   const hasNextPage = currentIndex + itemsPerPage < blogs.length;
   const hasPreviousPage = currentIndex > 0;
 
-  const fetchPortFolios = async (start) => {
+  const fetchPortFolios = async (start: any) => {
     try {
       setLoader(true);
       const blogCollection = collection(db, "blogs");
@@ -151,7 +151,7 @@ export default function Card() {
                        before:bg-[#00B8F1] before:rounded-3xl
                       before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
                       before:transition before:ease-in-out before:duration-1000
-                       w-[49px]   pr-[8px] "
+                       w-[49px] pr-[8px] "
                   ></div>
                 </div>
                 <h1 className=" md:text-[18px]   font-semibold lg:text-[25px] xl:text-[35px]  text-primary">

@@ -1,7 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+interface Iprops {
+  start: number,
+  end: number,
+  duration: number,
+}
 
-export function AnimatedValue({ start, end, duration }) {
+export function AnimatedValue({ start, end, duration }: Iprops) {
   const [value, setValue] = useState(start);
   const [animationVisible, setAnimationVisible] = useState(false);
 
@@ -17,9 +22,9 @@ export function AnimatedValue({ start, end, duration }) {
 
   useEffect(() => {
     if (animationVisible) {
-      let startTimestamp = null;
+      let startTimestamp: number | null = null;
 
-      const step = (timestamp) => {
+      const step = (timestamp: number) => {
         if (!startTimestamp) startTimestamp = timestamp;
         const progress = Math.min((timestamp - startTimestamp) / duration, 1);
         setValue(Math.floor(progress * (end - start) + start));

@@ -2,7 +2,7 @@ import React from "react";
 
 interface Iprops {
   text: string;
-  additionalClasses?: string; // Allow for optional additional classes
+  additionalClasses?: string;
 }
 
 export default function PrimaryBtn({ text, additionalClasses }: Iprops) {

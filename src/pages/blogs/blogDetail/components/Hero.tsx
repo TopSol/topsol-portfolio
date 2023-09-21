@@ -1,6 +1,9 @@
 import React from "react";
 
-export default function Hero({ data }) {
+interface Iprops {
+  data: any
+}
+export default function Hero({ data }: Iprops) {
   return (
     <div>
       <div className=" pb-[50px] bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
@@ -12,12 +15,11 @@ export default function Hero({ data }) {
               <span className="inline md:block text-primary md:text-white">
                 Science
               </span>
-              {/* {data?.heading} */}
             </h1>
           </div>
           <div className="w-[100%] mt-[56px] md:mt-0 md:container justify-center items-center flex flex-col">
             <img
-              className=" md:w-[471px] w-[90%] object-cover  xl:h-[445px] h-[274px]"
+              className=" md:w-[471px] w-[90%] object-cover rounded-lg xl:h-[445px] h-[274px]"
               src={data?.image}
               alt="#"
             />

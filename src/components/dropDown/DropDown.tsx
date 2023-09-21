@@ -4,7 +4,7 @@ import downImg from "../../images/down.png";
 type DropDownProps = {
   buttonTitle: string;
   data: any[];
-  className?:string,
+  className?: string,
 };
 
 function DropDown({ buttonTitle, data, className }: DropDownProps) {
@@ -27,7 +27,7 @@ function DropDown({ buttonTitle, data, className }: DropDownProps) {
         className="text-primary py-4 w-[100%] h-[100%]  bg-primary-white font-medium rounded-lg text-xl px-5 flex items-center justify-between "
         type="button"
       >
-        {selectedItem?selectedItem: buttonTitle}
+        {selectedItem ? selectedItem : buttonTitle}
         <img src={downImg} alt="Dropdown" />
       </button>
       {isOpen && (
@@ -40,13 +40,13 @@ function DropDown({ buttonTitle, data, className }: DropDownProps) {
             aria-labelledby="dropdownDefaultButton"
           >
             {data.map((item, index) => (
-              <li key={index} onClick={()=>handleItemClick(item)}
-              className="block hover:cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              <li key={index} onClick={() => handleItemClick(item)}
+                className="block hover:cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
 
               >
-                
-                  {item.label}
-                
+
+                {item.label}
+
               </li>
             ))}
           </ul>
