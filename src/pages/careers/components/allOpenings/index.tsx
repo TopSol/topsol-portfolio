@@ -2,17 +2,39 @@ import React, { useState, useEffect } from "react";
 // @ts-ignore
 import { db } from "../../../../utils/firebase";
 // @ts-ignore
-import searchImg from "../../../../../images/search.png";
+
 import { collection, getDocs } from "firebase/firestore";
-import { Department, ExperienceLevel, JobType } from "./Data";
 import LineAnimation from "../../../../components/LineAnimation";
 import DropDownCards from "../cards/DropDownCards";
 import DropDown from "../../../../components/dropDown/DropDown";
+import { PulseLoader } from 'react-spinners';
+
 function AllOpenings() {
   const [jobPosts, setJobPosts] = useState([]);
   const [loading, setSetLoading] = useState(false);
   const [visibleCards, setVisibleCards] = useState(9);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [jobDetails, setJobDetails] = useState([]);
+  const [dropTitle, setDropTitle] = useState([{}])
+  const [dropExp, setDropExp] = useState([{}])
+  const [dropType, setDropType] = useState([{}])
 
+  const handleSearchChange = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+  };
+  const jobPostFun = () => {
+
+    const filteredJobPosts = jobPosts.filter((item) =>
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.experience.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.type.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setJobDetails(filteredJobPosts)
+  }
+  useEffect(() => {
+    jobPostFun()
+  }, [jobDetails])
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,6 +48,9 @@ function AllOpenings() {
         // @ts-ignore
         setJobPosts(data);
         setSetLoading(false);
+        extractJobTitles()
+        extractJobType()
+        extractJobExp()
       } catch (error) {
         console.error("Error fetching job posts: ", error);
         setSetLoading(false);
@@ -37,6 +62,21 @@ function AllOpenings() {
   const loadMoreCards = () => {
     setVisibleCards((prevVisibleCards) => prevVisibleCards + 3);
   };
+  const extractJobTitles = () => {
+    const jobTitles = Array.from(new Set(jobPosts.map((post) => post.title)));
+    setDropTitle(jobTitles);
+  };
+
+  const extractJobType = () => {
+    const jobType = Array.from(new Set(jobPosts.map((post) => post.type)));
+    setDropType(jobType);
+  };
+
+  const extractJobExp = () => {
+    const jobExp = Array.from(new Set(jobPosts.map((post) => post.experience)));
+    setDropExp(jobExp);
+  };
+
 
   return (
     <div className="bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
@@ -72,8 +112,10 @@ function AllOpenings() {
               />
             </svg>
             <input
-              className=" pl-[24px] mt-1 items-center text-sm text-black outline-none rounded-lg dark:bg-primary-white  dark:placeholder-primary dark:placeholder:text-xl dark:placeholder:font-medium"
+              className=" pl-[24px] mt-1 items-center w-[100%] text-lg text-black outline-none rounded-lg dark:bg-primary-white  dark:placeholder-primary dark:placeholder:text-xl dark:placeholder:font-medium"
               placeholder="Search jobs"
+              value={searchQuery}
+              onChange={handleSearchChange}
             />
           </div>
         </div>
@@ -81,37 +123,50 @@ function AllOpenings() {
           <div className="w-[100%] my-[25px]">
             <DropDown
               buttonTitle="Department"
-              data={Department}
+              data={dropTitle}
               className="w-[100%] h-[75px] "
+
             />
           </div>
           <div className="w-[100%] my-[25px]">
             <DropDown
-              buttonTitle="Experience Level"
-              data={ExperienceLevel}
-              className=" w-[100%] h-[75px]  "
+              buttonTitle="Experience"
+              data={dropType}
+              className="w-[100%] h-[75px] "
+
             />
           </div>
           <div className="w-[100%] my-[25px]">
             <DropDown
-              buttonTitle="Job Type"
-              data={JobType}
-              className="w-[100%] h-[75px]"
+              buttonTitle="Experience"
+              data={dropExp}
+              className="w-[100%] h-[75px] "
+
             />
           </div>
         </div>
         <div className="w-[95%]">
-          <div className="grid grid-cols-1  sm:grid-cols-2  md:grid-cols-3 md:mb-[60px]  gap-y-[35px] xl:gap-x-[60px] xl:gap-y-[36px] gap-x-3 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:mb-[60px] gap-y-[35px] xl:gap-x-[60px] xl:gap-y-[36px] gap-x-3">
             {loading ? (
-              <p>Loading...</p>
-            ) : jobPosts.length ? (
-              jobPosts?.slice(0, visibleCards).map((item: any, index) => {
-                return <DropDownCards item={item} className="w-[100%] " />;
+              <div className="flex justify-center items-center">
+                <PulseLoader color="#FFFFFF" size={18} />
+              </div>
+            ) : searchQuery === "" ? (
+
+              jobPosts.slice(0, visibleCards).map((item: any, index) => {
+                return <DropDownCards item={item} className="w-[100%]" key={index} />;
+              })
+            ) : jobDetails.length ? (
+              jobDetails.slice(0, visibleCards).map((item: any, index) => {
+                return <DropDownCards item={item} className="w-[100%]" key={index} />;
               })
             ) : (
-              <p>No Openings Yet</p>
+              <div className="text-center text-gray-500">
+                No matching job posts found.
+              </div>
             )}
           </div>
+
         </div>
         <div className="flex justify-center items-center ">
           <button

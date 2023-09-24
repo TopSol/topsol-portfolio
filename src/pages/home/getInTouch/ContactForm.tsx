@@ -75,7 +75,7 @@ function ContactForm() {
         <motion.button
           whileTap={{ scale: 0.97 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="buttonss bg-primary-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center w-[100%] "
+          className="buttonss bg-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center w-[100%] "
         >
           <h1 className=" flex text-light_Grey  font-medium   md:text-[15px] lg:text-[18px]">
             {selectedOption
@@ -89,9 +89,8 @@ function ContactForm() {
           </div>
         </motion.button>
         <ul
-          className={`dropDownUl ${
-            isOpen ? "relative" : "hidden"
-          }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
+          className={`dropDownUl ${isOpen ? "relative" : "hidden"
+            }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
           style={{
             pointerEvents: isOpen ? "auto" : "none",
             clipPath: "inset(10% 50% 90% 50% round 10px)",
@@ -100,9 +99,8 @@ function ContactForm() {
           {dropDownData.map((item) => (
             <li
               key={item.id}
-              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${
-                selectedOption === item ? "bg-primary text-white" : ""
-              }`}
+              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
+                }`}
               onClick={() => handleOptionClick(item)}
             >
               {item.name}
@@ -118,7 +116,7 @@ function ContactForm() {
           value={name}
           className="bg-formInput  py-[17px] px-[24px] mt-[25px] outline-none text-[18px] font-medium rounded w-full "
         />
-        <div className=" flex flex-row mt-[25px] px-[24px] bg-primary-formInput justify-between items-center">
+        <div className=" flex flex-row mt-[25px] px-[24px] bg-formInput justify-between items-center">
           <input
             type="email"
             placeholder="Email*"

@@ -131,7 +131,7 @@ function AboutUs({ jobDetails }: any) {
             </h1>
           </div>
           <div className="md:mb-[41px] md:my-0 my-[25px]">
-            <p className=" md:text-lg text-base font-medium md:text-justify text-center">
+            <p className=" md:text-lg  font-medium text-justify ">
               At Topsol, we're more than a company - we're a collective of
               passionate innovators dedicated to pushing boundaries and crafting
               exceptional digital solutions. Our journey is rooted in a
