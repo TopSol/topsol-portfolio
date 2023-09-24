@@ -32,36 +32,6 @@ function AllOpenings() {
     );
     setJobDetails(filteredJobPosts)
   }
-  useEffect(() => {
-    jobPostFun()
-  }, [jobDetails])
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setSetLoading(true);
-        // @ts-ignore
-        const data = [];
-        const querySnapshot = await getDocs(collection(db, "jobPosts"));
-        querySnapshot.forEach((doc) => {
-          data.push({ id: doc.id, ...doc.data() });
-        });
-        // @ts-ignore
-        setJobPosts(data);
-        setSetLoading(false);
-        extractJobTitles()
-        extractJobType()
-        extractJobExp()
-      } catch (error) {
-        console.error("Error fetching job posts: ", error);
-        setSetLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
-
-  const loadMoreCards = () => {
-    setVisibleCards((prevVisibleCards) => prevVisibleCards + 3);
-  };
   const extractJobTitles = () => {
     const jobTitles = Array.from(new Set(jobPosts.map((post) => post.title)));
     setDropTitle(jobTitles);
@@ -76,6 +46,37 @@ function AllOpenings() {
     const jobExp = Array.from(new Set(jobPosts.map((post) => post.experience)));
     setDropExp(jobExp);
   };
+  useEffect(() => {
+    jobPostFun()
+    extractJobTitles()
+    extractJobType()
+    extractJobExp()
+  }, [jobDetails])
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setSetLoading(true);
+        // @ts-ignore
+        const data = [];
+        const querySnapshot = await getDocs(collection(db, "jobPosts"));
+        querySnapshot.forEach((doc) => {
+          data.push({ id: doc.id, ...doc.data() });
+        });
+        // @ts-ignore
+        setJobPosts(data);
+        setSetLoading(false);
+      } catch (error) {
+        console.error("Error fetching job posts: ", error);
+        setSetLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const loadMoreCards = () => {
+    setVisibleCards((prevVisibleCards) => prevVisibleCards + 3);
+  };
+
 
 
   return (
@@ -119,32 +120,38 @@ function AllOpenings() {
             />
           </div>
         </div>
-        <div className="flex md:flex-row md:my-0 mt-[25px] w-[95%] md:mx-auto gap-4 lg:gap-10 flex-col md:mb-[60px] mb-[58px] justify-between ">
-          <div className="w-[100%] my-[25px]">
-            <DropDown
-              buttonTitle="Department"
-              data={dropTitle}
-              className="w-[100%] h-[75px] "
-
-            />
+        {loading ? (
+          <div className="flex justify-center items-center">
+            <PulseLoader color="#FFFFFF" size={18} />
           </div>
-          <div className="w-[100%] my-[25px]">
-            <DropDown
-              buttonTitle="Experience"
-              data={dropType}
-              className="w-[100%] h-[75px] "
+        ) : (
+          <div className="flex md:flex-row md:my-0 mt-[25px] w-[95%] md:mx-auto gap-4 lg:gap-10 flex-col md:mb-[60px] mb-[58px] justify-between ">
+            <div className="w-[100%] my-[25px]">
+              <DropDown
+                buttonTitle="Department"
+                data={dropTitle}
+                className="w-[100%] h-[75px] "
 
-            />
-          </div>
-          <div className="w-[100%] my-[25px]">
-            <DropDown
-              buttonTitle="Experience"
-              data={dropExp}
-              className="w-[100%] h-[75px] "
+              />
+            </div>
+            <div className="w-[100%] my-[25px]">
+              <DropDown
+                buttonTitle="Type"
+                data={dropType}
+                className="w-[100%] h-[75px] "
 
-            />
+              />
+            </div>
+            <div className="w-[100%] my-[25px]">
+              <DropDown
+                buttonTitle="Experience"
+                data={dropExp}
+                className="w-[100%] h-[75px] "
+
+              />
+            </div>
           </div>
-        </div>
+        )}
         <div className="w-[95%]">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:mb-[60px] gap-y-[35px] xl:gap-x-[60px] xl:gap-y-[36px] gap-x-3">
             {loading ? (
