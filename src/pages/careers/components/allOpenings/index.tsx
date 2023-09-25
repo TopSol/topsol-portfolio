@@ -12,46 +12,46 @@ import { PulseLoader } from 'react-spinners';
 function AllOpenings() {
   const [jobPosts, setJobPosts] = useState([]);
   const [loading, setSetLoading] = useState(false);
-  const [visibleCards, setVisibleCards] = useState(9);
   const [searchQuery, setSearchQuery] = useState("");
-  const [jobDetails, setJobDetails] = useState([]);
-  const [dropTitle, setDropTitle] = useState([{}])
-  const [dropExp, setDropExp] = useState([{}])
-  const [dropType, setDropType] = useState([{}])
-
-  const handleSearchChange = (event) => {
+  const [expType, setExpType] = useState({ title: "", experience: "", type: "" });
+  const [options, setOptions] = useState([])
+  const handleSearchChange = (event: any) => {
     const query = event.target.value;
     setSearchQuery(query);
   };
-  const jobPostFun = () => {
+  const handleDropdownChange = (type: any, value: any) => {
+    setExpType(prevExpType => ({
+      ...prevExpType,
+      [type]: value,
+    }));
 
-    const filteredJobPosts = jobPosts.filter((item) =>
+  };
+
+  const jobPostFun = () => {
+    let jobTypes = JSON.parse(JSON.stringify(jobPosts));
+
+    jobTypes = jobTypes.filter((item: any) => (
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.experience.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.type.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setJobDetails(filteredJobPosts)
-  }
-  const extractJobTitles = () => {
-    const jobTitles = Array.from(new Set(jobPosts.map((post) => post.title)));
-    setDropTitle(jobTitles);
-  };
+    ))
+    jobTypes = jobTypes.filter((item: any) => (
+      item.title.toLowerCase().includes(expType?.title?.toLowerCase())
 
-  const extractJobType = () => {
-    const jobType = Array.from(new Set(jobPosts.map((post) => post.type)));
-    setDropType(jobType);
-  };
+    ))
+    jobTypes = jobTypes.filter((item: any) => (
+      item.experience.toLowerCase().includes(expType?.experience?.toLowerCase())
 
-  const extractJobExp = () => {
-    const jobExp = Array.from(new Set(jobPosts.map((post) => post.experience)));
-    setDropExp(jobExp);
+    ))
+    jobTypes = jobTypes.filter((item: any) => (
+      item.type.toLowerCase().includes(expType?.type?.toLowerCase())
+
+    ))
+    return jobTypes
   };
   useEffect(() => {
-    jobPostFun()
-    extractJobTitles()
-    extractJobType()
-    extractJobExp()
-  }, [jobDetails])
+    jobPostFun();
+  }, [searchQuery, expType?.experience, expType?.title, expType?.type]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -64,6 +64,7 @@ function AllOpenings() {
         });
         // @ts-ignore
         setJobPosts(data);
+        setOptions(data)
         setSetLoading(false);
       } catch (error) {
         console.error("Error fetching job posts: ", error);
@@ -72,12 +73,6 @@ function AllOpenings() {
     };
     fetchData();
   }, []);
-
-  const loadMoreCards = () => {
-    setVisibleCards((prevVisibleCards) => prevVisibleCards + 3);
-  };
-
-
 
   return (
     <div className="bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
@@ -129,25 +124,31 @@ function AllOpenings() {
             <div className="w-[100%] my-[25px]">
               <DropDown
                 buttonTitle="Department"
-                data={dropTitle}
+                options={options}
                 className="w-[100%] h-[75px] "
-
+                setExpType={setExpType}
+                type="title"
+                handleDropdownChange={handleDropdownChange}
               />
             </div>
             <div className="w-[100%] my-[25px]">
               <DropDown
                 buttonTitle="Type"
-                data={dropType}
+                options={options}
                 className="w-[100%] h-[75px] "
-
+                setExpType={setExpType}
+                type="type"
+                handleDropdownChange={handleDropdownChange}
               />
             </div>
             <div className="w-[100%] my-[25px]">
               <DropDown
                 buttonTitle="Experience"
-                data={dropExp}
+                options={options}
                 className="w-[100%] h-[75px] "
-
+                setExpType={setExpType}
+                type="experience"
+                handleDropdownChange={handleDropdownChange}
               />
             </div>
           </div>
@@ -160,11 +161,11 @@ function AllOpenings() {
               </div>
             ) : searchQuery === "" ? (
 
-              jobPosts.slice(0, visibleCards).map((item: any, index) => {
+              jobPostFun()?.map((item: any, index: any) => {
                 return <DropDownCards item={item} className="w-[100%]" key={index} />;
               })
-            ) : jobDetails.length ? (
-              jobDetails.slice(0, visibleCards).map((item: any, index) => {
+            ) : jobPostFun().length ? (
+              jobPostFun()?.map((item: any, index: any) => {
                 return <DropDownCards item={item} className="w-[100%]" key={index} />;
               })
             ) : (
@@ -177,7 +178,6 @@ function AllOpenings() {
         </div>
         <div className="flex justify-center items-center ">
           <button
-            onClick={loadMoreCards}
             className=" w-[180px] py-[15px] mt-[50px] px-[34px] mb-[88px] text-[20px] font-semibold group flex text-center 
             items-center justify-center rounded bg-white text-primary hover:scale-x-125 hover:pl-4 m hover:duration-500
              transform origin-left transition-transform duration-500 ease-in-outy"
