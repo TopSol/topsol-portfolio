@@ -159,11 +159,6 @@ function AllOpenings() {
               <div className="flex justify-center items-center">
                 <PulseLoader color="#FFFFFF" size={18} />
               </div>
-            ) : searchQuery === "" ? (
-
-              jobPostFun()?.map((item: any, index: any) => {
-                return <DropDownCards item={item} className="w-[100%]" key={index} />;
-              })
             ) : jobPostFun().length ? (
               jobPostFun()?.map((item: any, index: any) => {
                 return <DropDownCards item={item} className="w-[100%]" key={index} />;

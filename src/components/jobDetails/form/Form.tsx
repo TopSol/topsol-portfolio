@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-type FormProps= {
-    onClose: () => void;
-  }
+type FormProps = {
+  onClose: () => void;
+}
 
-function Form({onClose}:FormProps) {
+function Form({ onClose }: FormProps) {
   const [subject, setSubject] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -13,7 +13,6 @@ function Form({onClose}:FormProps) {
   const [checkBox, setCheckBox] = useState(false);
 
   const submit = () => {
-    alert("helo");
     onClose();
 
   };

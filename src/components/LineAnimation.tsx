@@ -16,7 +16,6 @@ export default function LineAnimation({
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
-  // console.log("dsaf",ref)
   const initialWidth = '0px';
   const widths = animationVisible ? width : initialWidth;
 

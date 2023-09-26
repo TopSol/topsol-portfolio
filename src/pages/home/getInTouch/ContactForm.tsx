@@ -5,8 +5,9 @@ import dropDown from "../../../images/dropdown.png";
 import { dropDownData } from "./data";
 import { useAnimate, stagger, motion } from "framer-motion";
 import useMenuAnimation from "../../../components/dropDownAnimaion";
-import { Interface } from "readline";
 import { db } from "../../../utils/firebase";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   Timestamp,
   addDoc,
@@ -39,7 +40,7 @@ function ContactForm() {
       !selectedOption ||
       checkbox === false
     ) {
-      alert("Please fill all the fields");
+      toast.error("Please fill all the fields");
     } else {
       const body = {
         selectedOption,
@@ -58,19 +59,22 @@ function ContactForm() {
           setEmail("");
           setOrganization("");
           setMessage("");
-          alert("Form submitted successfully");
+          toast.success("Form submitted successfully");
         };
         data(body);
       } catch (error) {
         console.log(error);
 
-        alert("Data canntot be submitted");
+        toast.error("Data cannot be submitted");
       }
     }
   };
 
   return (
     <div className=" md:border-primary  md:border-[1px] border-[0px] rounded-2xl sm:p-8 ">
+      <div>
+        <ToastContainer />
+      </div>
       <nav className="menu " ref={scope}>
         <motion.button
           whileTap={{ scale: 0.97 }}
