@@ -71,7 +71,7 @@ export default function Contact() {
     }
   };
   return (
-    <div>
+    <div id="contact">
       <div>
         <ToastContainer />
       </div>

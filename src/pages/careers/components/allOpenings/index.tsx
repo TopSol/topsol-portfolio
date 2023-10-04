@@ -75,7 +75,7 @@ function AllOpenings() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
+    <div id="opening" className="bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
       <div className="md:container md:mx-auto sm:mx-0 mx-[14px] flex justify-center items-center flex-col">
         <div className="flex flex-col items-center justify-center mb-14">
           <h1 className="text-primary-white md:text-[40px] text-3xl text-center font-semibold md:mt-[49px] mt-[52px] ">

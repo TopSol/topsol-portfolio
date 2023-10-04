@@ -19,11 +19,13 @@ function JoinTopSol() {
               our united team
             </p>
           </div>
-          <div className="flex md:justify-start justify-center items-center md:max-w-[349px] md:h-[71px] max-w-[228px] h-[54px]">
-            <button className="md:text-[26px] text-xl font-semibold border hover:border-none rounded-[5px] md:px-[75px] md:pt-[20px] md:pb-[19px] py-[15px] px-9 text-primary-white hover:bg-primary">
-              View openings
-            </button>
-          </div>
+          <a href="#opening">
+            <div className="flex md:justify-start justify-center items-center md:max-w-[349px] md:h-[71px] max-w-[228px] h-[54px]">
+              <button className="md:text-[26px] text-xl font-semibold border hover:border-none rounded-[5px] md:px-[75px] md:pt-[20px] md:pb-[19px] py-[15px] px-9 text-primary-white hover:bg-primary">
+                View openings
+              </button>
+            </div>
+          </a>
         </div>
 
         <div className="md:mb-[129px] xl:mr-[115px] md:w-[50%] md:mx-0 mx-12  flex justify-end items-end mb-[84px]   md:mt-[128px] mt-8 ">

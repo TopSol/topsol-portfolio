@@ -1,5 +1,6 @@
 import React from "react";
 import contactUs from "../../../images/contactUs.png";
+import { Link } from "gatsby";
 
 export default function Hero() {
   return (
@@ -24,11 +25,13 @@ export default function Hero() {
                 <br /> construct, and nurture your online enterprise
               </p>
             </div>
-            <div className="">
-              <button className="border md:text-[26px] text-[20px] font-semibold rounded md:px-[56px] px-[23px] md:py-[19px] py-[15px] text-primary-white hover:bg-primary hover:border-primary">
-                Start your project
-              </button>
-            </div>
+            <a href="#contact">
+              <div className="">
+                <button className="border md:text-[26px] text-[20px] font-semibold rounded md:px-[56px] px-[23px] md:py-[19px] py-[15px] text-primary-white hover:bg-primary hover:border-primary">
+                  Start your project
+                </button>
+              </div>
+            </a>
           </div>
           <div className="mt-[36px] md:container md:mx-auto justify-center items-center flex flex-col">
             <img

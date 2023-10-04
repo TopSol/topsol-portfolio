@@ -1,9 +1,11 @@
 import React from "react";
 import PrimaryBtn from "./PrimaryBtn";
 import heroImg from "../images/hero-bg.png";
+import { Link } from "gatsby";
 interface Iprops {
   title: string
 }
+
 export default function VideoHero({ title }: Iprops) {
   const splitTitle = title?.split(' ');
   const firstName = splitTitle[0];
@@ -30,9 +32,11 @@ export default function VideoHero({ title }: Iprops) {
                 build elegant and functional digital products that solve complex
                 problem.
               </h3>
-              <div className="flex  justify-center md:justify-start">
-                <PrimaryBtn text="Get Started" additionalClasses="px-[68px] py-[17px] mt-[68px] text-[22px] mb-[113px] text-white " />
-              </div>
+              <Link to="/contactUs">
+                <div className="flex  justify-center md:justify-start">
+                  <PrimaryBtn text="Get Started" additionalClasses="px-[68px] py-[17px] mt-[68px] text-[22px] mb-[113px] text-white " />
+                </div>
+              </Link>
             </div>
           </div>
         </section>

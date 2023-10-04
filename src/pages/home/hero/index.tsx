@@ -3,6 +3,7 @@ import { PopupButton } from "react-calendly";
 // @ts-ignore
 import heroImg from "../../../images/hero-bg.png";
 import PrimaryBtn from "../../../components/PrimaryBtn";
+import { Link } from "gatsby";
 export default function Hero() {
   let root = document.body;
 
@@ -38,11 +39,12 @@ export default function Hero() {
               className="bg-primary py-4 px-16   text-[20px] font-semibold  hover:bg-secondary-light text-white rounded-[10px]  "
             />
           )}
-
-          <PrimaryBtn
-            text="Get a quote"
-            additionalClasses="text-primary text-[20px] font-semibold bg-transparent border-2 border-primary hover:text-white hover:bg-primary rounded-[10px] "
-          />
+          <Link to="/contactUs">
+            <PrimaryBtn
+              text="Get a quote"
+              additionalClasses="text-primary text-[20px] font-semibold bg-transparent border-2 border-primary hover:text-white hover:bg-primary rounded-[10px] "
+            />
+          </Link>
         </div>
       </div>
     </div>
