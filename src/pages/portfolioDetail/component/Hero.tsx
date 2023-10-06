@@ -1,7 +1,7 @@
 import React from "react";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 
-export default function Hero({ data }) {
+export default function Hero(data: any) {
   return (
     <div className="">
       <div className="bg-gradient-to-b from-secondary  to-primary  ">

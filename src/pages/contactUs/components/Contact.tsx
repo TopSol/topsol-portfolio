@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';;
 
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<any>(null);
   const [isChecked, setIsChecked] = useState(false);
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
@@ -28,7 +28,7 @@ export default function Contact() {
   };
 
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (option: any) => {
     setSelectedOption(option);
     setIsOpen(false);
   };

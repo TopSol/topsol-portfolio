@@ -1,14 +1,14 @@
 import React from "react";
 import CodeModules from "../../images/code_modules.png";
 import ExpertTeam from "../../images/expert_team.png";
-
+import AnimateHr from "../animatedLine/AnimateHr";
 
 export default function CardSection() {
   const settings = {
     dots: false,
     // infinite: true,
     autoplay: true,
-    centerPadding:60,
+    centerPadding: 60,
     speed: 500,
     arrows: false,
     autoplaySpeed: 2500,
@@ -18,8 +18,8 @@ export default function CardSection() {
       {
         breakpoint: 1024,
         // settings: 'unslick'
-        settings:{
-          
+        settings: {
+
           // vertical:true,
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -58,7 +58,7 @@ export default function CardSection() {
             Build Smarter Not From Scratch
           </h1>
           <div className="w-[150px] ">
-          <AnimateHr bgColor={'white'}/>
+            <AnimateHr bgColor={'white'} />
           </div>
         </div>
         <div className="text-black text-center mx-4 rounded-2xl flex flex-col items-center px-10  min-h-[240px] ">

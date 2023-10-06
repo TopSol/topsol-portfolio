@@ -18,7 +18,7 @@ import {
 } from "firebase/firestore";
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<any>(null);
   const scope = useMenuAnimation(isOpen);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

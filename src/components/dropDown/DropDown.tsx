@@ -19,12 +19,12 @@ function DropDown({ buttonTitle, options, className, setExpType, type, handleDro
   const handleItemClick = (item: any) => {
     toggleDropdown();
     setSelectedItem(item);
-    setExpType(pre => ({ ...pre, [type]: item }));
+    setExpType((pre: any) => ({ ...pre, [type]: item }));
     handleDropdownChange(type, item);
   };
   const initialOptions = () => {
     if (options) {
-      const uniqueOptions = Array.from(new Set(options.map(elem => elem?.[type])));
+      const uniqueOptions = Array.from(new Set(options.map((elem: any) => elem?.[type])));
       setDropOptions(uniqueOptions);
     }
   };
@@ -55,7 +55,7 @@ function DropDown({ buttonTitle, options, className, setExpType, type, handleDro
             className="py-2 text-sm rounded-lg shadow   mt-2   bg-formInput"
             aria-labelledby="dropdownDefaultButton"
           >
-            {dropOptions.map((item, index) => (
+            {dropOptions.map((item: any, index: any) => (
               <li key={item.id} onClick={() => handleItemClick(item)}
                 className=" hover:cursor-pointer px-4 py-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
