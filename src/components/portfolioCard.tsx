@@ -1,3 +1,4 @@
+
 import React from "react";
 
 export default function PortfolioCard({
@@ -6,18 +7,16 @@ export default function PortfolioCard({
   textColor,
   subTitleColor,
   lineColor,
-}) {
+}: any) {
   return (
     <div>
       <div
-        className={`flex flex-col md:mt-[102px] mt-[30px]  md:container md:mx-auto gap-x-[122px] xl:px-0 md:px-4 justify-center  items-center ${
-          index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
-        }`}
+        className={`flex flex-col md:mt-[102px] mt-[30px]  md:container md:mx-auto gap-x-[122px] xl:px-0 md:px-4 justify-center  items-center ${index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
+          }`}
       >
         <div
-          className={` sm:px-0  px-4 my-10 md:my-0 ${
-            index % 2 == 0 ? "justify-end " : "justify-end "
-          }`}
+          className={` sm:px-0  px-4 my-10 md:my-0 ${index % 2 == 0 ? "justify-end " : "justify-end "
+            }`}
         >
           {" "}
           <img
@@ -27,9 +26,8 @@ export default function PortfolioCard({
           />
         </div>
         <div
-          className={` flex flex-col md:w-[40%]  mx-5 md:mx-0 ${
-            index % 2 == 0 ? "justify-start " : "justify-start "
-          }`}
+          className={` flex flex-col md:w-[40%]  mx-5 md:mx-0 ${index % 2 == 0 ? "justify-start " : "justify-start "
+            }`}
         >
           <div className="flex ">
             <div className="flex justify-center mt-3">
@@ -39,7 +37,7 @@ export default function PortfolioCard({
                      before:transition before:ease-in-out before:duration-1000
 
                      w-[49px] h-[7px]  mr-[8px] mt-0 rounded-2xl ${lineColor}`}
-                // style={{ backgroundColor: "#FFFFFF" }}
+              // style={{ backgroundColor: "#FFFFFF" }}
               ></div>
             </div>
             <h1

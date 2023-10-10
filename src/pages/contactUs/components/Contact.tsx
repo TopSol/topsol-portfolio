@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import dropDown from "../../../images/dropdown.png";
 import dot from "../../../images/dot.png";
 import LineAnimation from "../../../components/LineAnimation";
 import useMenuAnimation from "../../../components/dropDownAnimaion";
 import { btnData } from "../data";
 import { motion } from "framer-motion";
-import { db } from "../../../utils/firebase";
+import { db } from '../../../utils/firebase'
 import { addDoc, collection } from "firebase/firestore";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';;
+
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<any>(null);
   const [isChecked, setIsChecked] = useState(false);
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
@@ -24,11 +26,9 @@ export default function Contact() {
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
   };
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
 
-  const handleOptionClick = (option) => {
+
+  const handleOptionClick = (option: any) => {
     setSelectedOption(option);
     setIsOpen(false);
   };
@@ -42,7 +42,7 @@ export default function Contact() {
       !selectedOption ||
       isChecked === false
     ) {
-      alert("Please fill all the fields");
+      toast.error("Please fill all the fields");
     } else {
       const formData = {
         selectedOption,
@@ -52,7 +52,6 @@ export default function Contact() {
         message,
         isChecked,
       };
-      console.log(formData);
       try {
         const data = async (data: any) => {
           const docRef = await addDoc(collection(db, "contact"), formData);
@@ -62,18 +61,20 @@ export default function Contact() {
           setOrganization("");
           setMessage("");
           setPhone("");
-          alert("Form submitted successfully");
+          toast.success("Form submitted successfully");
+
         };
         data(formData);
       } catch (error) {
-        console.log(error);
-
-        alert("Data cannot be submitted");
+        toast.error("Data cannot be submitted");
       }
     }
   };
   return (
-    <div>
+    <div id="contact">
+      <div>
+        <ToastContainer />
+      </div>
       <div className="md:w-[70%] md:justify-center md:mx-auto">
         <div className="mt-[118px] md:container md:mx-auto  flex flex-col justify-center items-center md:justify-start md:items-start">
           <div>
@@ -206,14 +207,15 @@ export default function Contact() {
           <div className="w-[85%]">
             <button
               className={` w-[100%]  py-[12px] font-medium  text-center px-[37px] rounded  text-[18px]   ${isChecked
-                  ? " bg-primary text-white cursor-pointer hover:bg-primary-lighter"
-                  : "bg-primary text-white hover:bg-primary-lighter cursor-not-allowed "
+                ? " bg-primary text-white cursor-pointer hover:bg-primary-lighter"
+                : "bg-primary text-white hover:bg-primary-lighter cursor-not-allowed "
                 }`}
               disabled={!isChecked}
               onClick={handleSubmit}
             >
               Send Message
             </button>
+
           </div>
         </div>
       </div>

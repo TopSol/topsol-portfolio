@@ -6,6 +6,8 @@ import { db, storage } from "../../../../utils/firebase";
 import hrImg from "../../../../images/horizantolLine.png";
 import { validateJobApplicatonForm } from "../../../../utils";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   Timestamp,
   addDoc,
@@ -48,12 +50,12 @@ function AboutUs({ jobDetails }: any) {
     if (file.type === "application/pdf") {
       const maxSize = 5 * 1024 * 1024; // 5MB
       if (file.size > maxSize) {
-        alert("PDF file size exceeds 5MB. Please select a smaller PDF.");
+        toast.error("PDF file size exceeds 5MB. Please select a smaller PDF.");
         return;
       }
       setResumeFile(file);
     } else {
-      alert("Please select a valid PDF file.");
+      toast.error("Please select a valid PDF file.");
     }
   };
 
@@ -66,7 +68,7 @@ function AboutUs({ jobDetails }: any) {
       const postRef = doc(db, "jobPosts", documentId);
       await runTransaction(db, async (transaction) => {
         const postDoc = await transaction.get(postRef);
-        console.log({ transaction, postDoc });
+        // console.log({ transaction, postDoc });
         if (!postDoc.exists()) {
           throw new Error("Document does not exist");
         }
@@ -74,7 +76,7 @@ function AboutUs({ jobDetails }: any) {
         transaction.update(postRef, { applicants: newApplicantsCount });
       });
     } catch (error) {
-      console.error("Error updating document:", error);
+      // console.error("Error updating document:", error);
     }
   }
 
@@ -83,7 +85,7 @@ function AboutUs({ jobDetails }: any) {
     try {
       const response = validateJobApplicatonForm(formData, resumeFile);
       if (!response.isValid) {
-        alert(response.msg);
+        toast.error(response.msg);
         return;
       }
 
@@ -104,7 +106,7 @@ function AboutUs({ jobDetails }: any) {
         await setDoc(docRef, { resumeURL: downloadURL }, { merge: true });
       }
       incrementApplicants(jobDetails.id);
-      alert("Application submited");
+      toast.success("Application submited");
       setResumeFile(null);
       setFormData({
         name: "",
@@ -122,6 +124,9 @@ function AboutUs({ jobDetails }: any) {
 
   return (
     <div className="lg:container lg:mx-auto  mx-[23px]">
+      <div>
+        <ToastContainer />
+      </div>
       <div className="flex lg:flex-row flex-col lg:mt-[98.5px] lg:mx-[166px]">
         <div className="lg:border-t sm:order-1 order-2 border-pageBorder lg:pr-[52px]">
           <div className="flex flex-row items-center md:mt-[57px] md:mb-[35px] ">
@@ -131,7 +136,7 @@ function AboutUs({ jobDetails }: any) {
             </h1>
           </div>
           <div className="md:mb-[41px] md:my-0 my-[25px]">
-            <p className=" md:text-lg text-base font-medium md:text-justify text-center">
+            <p className=" md:text-lg  font-medium text-justify ">
               At Topsol, we're more than a company - we're a collective of
               passionate innovators dedicated to pushing boundaries and crafting
               exceptional digital solutions. Our journey is rooted in a

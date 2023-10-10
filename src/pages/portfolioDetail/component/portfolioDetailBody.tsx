@@ -3,7 +3,7 @@ import PrimaryBtn from "../../../components/PrimaryBtn";
 import check1 from "../../../images/check1.png";
 import LineAnimation from "../../../components/LineAnimation";
 
-export default function PortfolioDetailBody({ data }) {
+export default function PortfolioDetailBody({ data }: any) {
   return (
     <div>
       <div className="flex font-montserrat mt-[250px] md:mt-[350px] flex-col md:flex-row md:container justify-between  md:mx-auto">
@@ -74,7 +74,7 @@ export default function PortfolioDetailBody({ data }) {
       </div>
 
       <div className="flex flex-col justify-center items-center">
-        <h2 className="text-[36px] font-semibold my-6">Client's Vision</h2>
+        <h2 className="text-[36px] font-semibold my-6">Key Features</h2>
         <div className="mt-[53px] mx-[15px] flex flex-col ">
           {data?.clientVisions?.map((item: any, index: number) => {
             return (

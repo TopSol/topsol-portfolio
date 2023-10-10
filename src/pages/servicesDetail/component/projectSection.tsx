@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 import LineAnimation from "../../../components/LineAnimation";
 
 export default function ProjectSection() {
-  const [portFolios, setPortFolios] = useState([]);
+  const [portFolios, setPortFolios] = useState<any>([]);
   const [loader, setLoader] = useState(false);
   const [startAfterDoc, setStartAfterDoc] = useState(null);
 
@@ -59,7 +59,7 @@ export default function ProjectSection() {
           />
         </div>
         <div>
-          {showData.map((item: any, index) => {
+          {showData.map((item: any, index: any) => {
             return (
               <PortfolioCard
                 data={item}

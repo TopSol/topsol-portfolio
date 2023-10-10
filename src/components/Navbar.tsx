@@ -19,11 +19,10 @@ function Navbar() {
   return (
     <motion.div
       variants={variants}
-      className={`relative bg-primary-navbarBg   ${
-        !open
-          ? "hover:bg-primary-white transition-colors duration-500"
-          : "bg-primary-navbarBg"
-      }`}
+      className={`relative bg-primary-navbarBg   ${!open
+        ? "hover:bg-primary-white transition-colors duration-500"
+        : "bg-primary-navbarBg"
+        }`}
     >
       <motion.div className="md:container  mx-auto " id="navbar">
         <header>
@@ -32,7 +31,7 @@ function Navbar() {
           px-14
           flex
           w-full
-         
+         py-2
           flex-wrap
           items-center
           justify-between
@@ -60,9 +59,8 @@ function Navbar() {
               <img
                 src={closeImg}
                 onClick={() => setOpen(false)}
-                className={`h-6 w-6 cursor-pointer ${
-                  open ? "block" : "hidden"
-                } `}
+                className={`h-6 w-6 cursor-pointer ${open ? "block" : "hidden"
+                  } `}
               />
             </div>
             <div className={`w-full  ${open ? "block" : "hidden"}`} id="menu">

@@ -14,7 +14,7 @@ import {
 import { db } from "../../../utils/firebase";
 
 function OurPortfolio() {
-  const [visibleCards, setVisibleCards] = useState([]);
+  const [visibleCards, setVisibleCards] = useState<any>([]);
 
   const fetchPortFolios = async () => {
     try {
@@ -29,7 +29,8 @@ function OurPortfolio() {
       const querySnapshot = await getDocs(q);
 
       const fetchedDocuments = querySnapshot.docs.map((doc) => doc.data());
-      setVisibleCards(fetchedDocuments);
+      const cardData = fetchedDocuments.splice(0, 4);
+      setVisibleCards(cardData);
     } catch (error) {
       console.log("error", error);
     }
@@ -55,7 +56,7 @@ function OurPortfolio() {
         />
       </div>
       <div className=" md:mt-[53px]   grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-x-[30px]  ">
-        {visibleCards?.map((card, index) => (
+        {visibleCards?.map((card: any, index: any) => (
           <Link to={"/portfolio"}>
             <div
               key={index}

@@ -5,8 +5,9 @@ import dropDown from "../../../images/dropdown.png";
 import { dropDownData } from "./data";
 import { useAnimate, stagger, motion } from "framer-motion";
 import useMenuAnimation from "../../../components/dropDownAnimaion";
-import { Interface } from "readline";
 import { db } from "../../../utils/firebase";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   Timestamp,
   addDoc,
@@ -17,7 +18,7 @@ import {
 } from "firebase/firestore";
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<any>(null);
   const scope = useMenuAnimation(isOpen);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -39,7 +40,7 @@ function ContactForm() {
       !selectedOption ||
       checkbox === false
     ) {
-      alert("Please fill all the fields");
+      toast.error("Please fill all the fields");
     } else {
       const body = {
         selectedOption,
@@ -58,24 +59,27 @@ function ContactForm() {
           setEmail("");
           setOrganization("");
           setMessage("");
-          alert("Form submitted successfully");
+          toast.success("Form submitted successfully");
         };
         data(body);
       } catch (error) {
         console.log(error);
 
-        alert("Data canntot be submitted");
+        toast.error("Data cannot be submitted");
       }
     }
   };
 
   return (
     <div className=" md:border-primary  md:border-[1px] border-[0px] rounded-2xl sm:p-8 ">
+      <div>
+        <ToastContainer />
+      </div>
       <nav className="menu " ref={scope}>
         <motion.button
           whileTap={{ scale: 0.97 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="buttonss bg-primary-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center w-[100%] "
+          className="buttonss bg-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center w-[100%] "
         >
           <h1 className=" flex text-light_Grey  font-medium   md:text-[15px] lg:text-[18px]">
             {selectedOption
@@ -89,9 +93,8 @@ function ContactForm() {
           </div>
         </motion.button>
         <ul
-          className={`dropDownUl ${
-            isOpen ? "relative" : "hidden"
-          }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
+          className={`dropDownUl ${isOpen ? "relative" : "hidden"
+            }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
           style={{
             pointerEvents: isOpen ? "auto" : "none",
             clipPath: "inset(10% 50% 90% 50% round 10px)",
@@ -100,9 +103,8 @@ function ContactForm() {
           {dropDownData.map((item) => (
             <li
               key={item.id}
-              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${
-                selectedOption === item ? "bg-primary text-white" : ""
-              }`}
+              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
+                }`}
               onClick={() => handleOptionClick(item)}
             >
               {item.name}
@@ -118,7 +120,7 @@ function ContactForm() {
           value={name}
           className="bg-formInput  py-[17px] px-[24px] mt-[25px] outline-none text-[18px] font-medium rounded w-full "
         />
-        <div className=" flex flex-row mt-[25px] px-[24px] bg-primary-formInput justify-between items-center">
+        <div className=" flex flex-row mt-[25px] px-[24px] bg-formInput justify-between items-center">
           <input
             type="email"
             placeholder="Email*"

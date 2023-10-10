@@ -12,7 +12,6 @@ export default function AddressSection() {
         <img
           src="https://res.cloudinary.com/asifsaythe/image/upload/v1692963971/new_portfolio/xpsckv18mrdifj1hzvlz.png"
           alt=""
-          srcset=""
           className="mt-[30px]"
         />
         <div className="mt-8">
@@ -21,7 +20,6 @@ export default function AddressSection() {
               src={locationIcon}
               className="w-[16px] h-[16px] "
               alt=""
-              srcset=""
             />
             <p className="text-base ml-2">
               Sitara Techno Park, 2nd Floor, Lower Canal Road East Faisalabad,
@@ -33,7 +31,6 @@ export default function AddressSection() {
               src={PhoneIcon}
               className="w-[16px] h-[16px] "
               alt=""
-              srcset=""
             />
             <p className="text-base ml-2">
               +92-303-6362191 <br />
@@ -72,7 +69,6 @@ export default function AddressSection() {
         <img
           src="https://res.cloudinary.com/asifsaythe/image/upload/v1692964174/new_portfolio/svmimvcbnjgiqe3bnwoc.png"
           alt=""
-          srcset=""
         />
       </div>
     </div>

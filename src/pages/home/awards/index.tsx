@@ -11,7 +11,7 @@ import LineAnimation from "../../../components/LineAnimation";
 
 
 function Awards() {
-  const [slider, setSlider] = useState<Slider | null>(null);
+  const [slider, setSlider] = useState<any | null>(null);
 
   const next = () => {
     if (slider) {
@@ -65,12 +65,12 @@ function Awards() {
     <>
       <div className="flex flex-col items-center justify-center pb-[105px] md:mt-[106px] mt-[78px]  bg-[#F4F4F4]">
         <div className="flex flex-col justify-center items-center">
-        <div className="">
-          <h1 className="font-extrabold mt-[68px] font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
-          Awards and Honors
-          </h1>
-        </div>
-        <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="18px"/>
+          <div className="">
+            <h1 className="font-extrabold mt-[68px] font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
+              Awards and Honors
+            </h1>
+          </div>
+          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="18px" />
         </div>
         <div className="flex justify-center items-center mt-[84px]  ">
           <button className="button " onClick={previous}>
@@ -81,7 +81,7 @@ function Awards() {
               {images?.map((review, id) => {
                 return (
                   <div key={id} className=" ">
-                     <img src={review.avatar} alt="#" className="w-[105px] h-[105px] mx-auto " />
+                    <img src={review.avatar} alt="#" className="w-[105px] h-[105px] mx-auto " />
                   </div>
                 );
               })}
