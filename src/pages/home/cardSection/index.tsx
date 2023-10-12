@@ -189,22 +189,22 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
                 : "none",
             }}
           >
-            {reviews?.map((v, index) => {
+            {reviews?.map((item, index) => {
               return (
                 <>
                   <div
-                    layoutId={v.id}
+                    layoutId={item.id}
                     onClick={() => handleClick(v.id)}
                     className="mx-4 lg:mx-0  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col items-center "
                   >
                     <img
                       key={index}
-                      src={v.avatar}
+                      src={item.avatar}
                       alt="Avatar"
                       className=" "
                     />
                     <h1 className="text-[22px]  font-semibold text-white mt-[46px] ">
-                      Ready-To-Use Set Of Modules
+                      {item?.heading}
                     </h1>
                   </div>
                 </>

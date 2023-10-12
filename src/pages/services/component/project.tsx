@@ -1,5 +1,6 @@
 import React from "react";
 import { data } from "../data";
+import Icon2 from "../../images/Icons/servicersIcon/secourity.svg";
 import { Link } from "gatsby";
 import FileIcon from "../../../images/Icons/fileIcon.png";
 import LineAnimation from "../../../components/LineAnimation";
@@ -23,12 +24,10 @@ export default function Project() {
         <div className=" pb-[123px] mt-[111px] md:container mx-auto grid gap-x-[93px] gap-y-[51px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
           {data.map((item: any, index) => {
             return (
-              <div className="px-[25px]  mx-5 md:mx-0 bg-white  hover:bg-primary hover:text-white  rounded-xl  py-2 ">
-                <img
-                  src={FileIcon}
-                  className="w-[60px] bg-white rounded-full p-3 h-[60px] "
-                  alt=""
-                />
+              <div className="px-[25px]  mx-5 md:mx-0 p-3 bg-white  hover:bg-primary hover:text-white  rounded-xl  py-2 ">
+                <div className="bg-white w-[70px] justify-center flex items-center rounded-full h-[70px] ">
+                  <img src={item.icon} className="h-[40px] w-[40px]  " alt="" />
+                </div>
                 <h1 className="font-semibold text-[20px]  my-3 ">
                   {item.heading}
                 </h1>

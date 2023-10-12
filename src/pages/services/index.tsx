@@ -13,7 +13,10 @@ export default function index() {
   return (
     <div>
       <Navbar />
-      <VideoHero title="Our Services" />
+      <VideoHero
+        title="Our Services"
+        image="https://res.cloudinary.com/asifsaythe/image/upload/v1697023024/new_portfolio/flat-lay-business-concept_1_q6ptf7.png"
+      />
       <ServicesOffers />
       <Project />
       <div className="mt-[76px]">

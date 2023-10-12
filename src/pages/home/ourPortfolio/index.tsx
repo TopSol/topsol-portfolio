@@ -12,6 +12,7 @@ import {
   where,
 } from "firebase/firestore";
 import { db } from "../../../utils/firebase";
+import { portfolioData } from "./data";
 
 function OurPortfolio() {
   const [visibleCards, setVisibleCards] = useState<any>([]);
@@ -56,7 +57,8 @@ function OurPortfolio() {
         />
       </div>
       <div className=" md:mt-[53px]   grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-x-[30px]  ">
-        {visibleCards?.map((card: any, index: any) => (
+        {portfolioData?.map((item: any, index: any) => (
+          // <Link to={`/portfolio?id=${item.id}`} key={index}></Link>
           <Link to={"/portfolio"}>
             <div
               key={index}
@@ -67,10 +69,10 @@ function OurPortfolio() {
               <div className="  ">
                 <div className="flex flex-col items-center ">
                   <img
-                    src={card.imageUrl}
+                    src={item.image}
                     style={{ transition: "all .50s ease " }}
                     className="  my-[66px] group-hover:transition group-hover:duration-500 group-hover:scale-110
-                      group-hover:ease-in-out w-[230px] h-[172px]"
+                      group-hover:ease-in-out w-[287px] h-[190px]"
                     alt={`Portfolio ${index}`}
                   />
                 </div>
@@ -78,7 +80,7 @@ function OurPortfolio() {
                   className=" group-hover:bg-[#00B8F1] text-[21px]  bg-white font-bold pt-[24px] pb-[28px]
                  text-center group-hover:duration-700  group-hover:text-white"
                 >
-                  <h1>{card.title}</h1>
+                  <h1>{item.title}</h1>
                 </div>
               </div>
             </div>

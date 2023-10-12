@@ -16,8 +16,8 @@ export const data = [
   },
   {
     id: 4,
-    name: "Desktop App",
-    value: "desktop",
+    name: "AI",
+    value: "Ai",
   },
 ];
 export const data2 = [
