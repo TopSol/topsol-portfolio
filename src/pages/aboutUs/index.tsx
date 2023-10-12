@@ -6,7 +6,8 @@ import Footer from "../../components/footerSection";
 import InfoSection from "../../components/infoSection";
 import AddressSection from "../../components/addressSection";
 import Experience from "./component/Experience";
-export default function aboutUs() {
+
+const aboutUs = () => {
   return (
     <div>
       <Navbar />
@@ -25,4 +26,5 @@ export default function aboutUs() {
       </div>
     </div>
   );
-}
+};
+export default aboutUs;
