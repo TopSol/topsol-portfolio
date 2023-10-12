@@ -10,10 +10,13 @@ export default function aboutUs() {
   return (
     <div>
       <Navbar />
-      <VidoeHero title='About TopSol' />
+      <VidoeHero
+        image="https://res.cloudinary.com/asifsaythe/image/upload/v1697092135/new_portfolio/about_us_lcfcpj.png"
+        title="About TopSol"
+      />
       <InfoSection />
       <Experience />
-      <div className="mt-[40px]" >
+      <div className="mt-[40px]">
         <RatingSection />
       </div>
       <AddressSection />

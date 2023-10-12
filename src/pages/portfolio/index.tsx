@@ -8,7 +8,10 @@ export default function index() {
   return (
     <div>
       <Navbar />
-      <VideoHero title="Our Portfolio" />
+      <VideoHero
+        image="https://res.cloudinary.com/asifsaythe/image/upload/v1697092135/new_portfolio/portfolio_fhqqft.png"
+        title="Our Portfolio"
+      />
       <RecentWork />
       <SmallFooter />
       <Footer />
