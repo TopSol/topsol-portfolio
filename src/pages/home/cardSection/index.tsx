@@ -194,7 +194,7 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
                 <>
                   <div
                     layoutId={item.id}
-                    onClick={() => handleClick(v.id)}
+                    onClick={() => handleClick(item?.id)}
                     className="mx-4 lg:mx-0  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col items-center "
                   >
                     <img

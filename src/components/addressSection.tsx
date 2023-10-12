@@ -16,25 +16,17 @@ export default function AddressSection() {
         />
         <div className="mt-8">
           <div className="flex items-center  ">
-            <img
-              src={locationIcon}
-              className="w-[16px] h-[16px] "
-              alt=""
-            />
+            <img src={locationIcon} className="w-[16px] h-[16px] " alt="" />
             <p className="text-base ml-2">
               Sitara Techno Park, 2nd Floor, Lower Canal Road East Faisalabad,
               Pakistan
             </p>
           </div>
           <div className="flex items-center mt-[22px] ">
-            <img
-              src={PhoneIcon}
-              className="w-[16px] h-[16px] "
-              alt=""
-            />
+            <img src={PhoneIcon} className="w-[16px] h-[16px] " alt="" />
             <p className="text-base ml-2">
               +92-303-6362191 <br />
-              (041)8557244
+              (041) 855 7244
             </p>
           </div>
           <div className="flex items-center mt-[22px] ">

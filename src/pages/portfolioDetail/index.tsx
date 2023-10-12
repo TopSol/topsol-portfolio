@@ -6,7 +6,7 @@ import Hero from "./component/Hero";
 import PortfolioDetailBody from "./component/portfolioDetailBody";
 import { db } from "../../utils/firebase";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
-import { PulseLoader } from 'react-spinners';
+import { PulseLoader } from "react-spinners";
 export default function index() {
   const [detail, setDetail] = useState({});
   const [loader, setLoader] = useState(false);
@@ -19,7 +19,7 @@ export default function index() {
 
   const fetchPortfolioItem = async () => {
     try {
-      setLoader(true)
+      setLoader(true);
       const portfolioItemRef = doc(collection(db, "portFolio"), id);
       const portfolioItemDoc = await getDoc(portfolioItemRef);
 
@@ -40,7 +40,7 @@ export default function index() {
       fetchPortfolioItem();
     }
   }, [id]);
-
+  console.log("detail is hear so check this", detail);
   return (
     <div>
       <Navbar />

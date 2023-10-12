@@ -1,9 +1,7 @@
-import React from 'react'
-import { AnimatedValue } from './NumberAnimation';
+import React from "react";
+import { AnimatedValue } from "./NumberAnimation";
 
 export default function Experience() {
-
-
   return (
     <div className="bg-gradient-to-b from-secondary to-primary mt-[80px]  ">
       <div className="md:w-[90%] 2xl:container mx-auto flex flex-col md:flex-row pt-[48px] pb-[140px] md:pt-[160px] md:pb-[160px] items-center justify-between">
@@ -18,9 +16,9 @@ export default function Experience() {
         <div className=" md:w-[50%] md:mx-auto mt-10 md:mt-0 mx-[18px] flex flex-col justify-center items-center ">
           <div className="flex space-x-4">
             <div className="bg-white rounded-[10px]  justify-center flex flex-col items-center  w-[141px] sm:w-[257px] md:w-[210px] lg:w-[330px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]  ">
-              <div >
+              <div>
                 <h1 className=" md:text-[35px] inline-flex text-secondary lg:text-[50px] font-bold  ">
-                  <AnimatedValue start={0} end={100} duration={2000} /> +
+                  <AnimatedValue start={0} end={30} duration={2000} /> +
                 </h1>
               </div>
               <p className="text-secondary md:text-3xl lg:text-4xl font-semibold ">
@@ -30,7 +28,7 @@ export default function Experience() {
             <div className="bg-white  rounded-[10px] justify-center flex flex-col items-center w-[141px] sm:w-[257px] md:w-[210px] lg:w-[330px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]">
               <div>
                 <h1 className=" md:text-[35px] inline-flex text-secondary lg:text-[50px] font-bold  ">
-                  <AnimatedValue start={0} end={200} duration={2000} /> +
+                  <AnimatedValue start={0} end={50} duration={2000} /> +
                 </h1>
               </div>
               <p className="text-secondary md:text-3xl lg:text-4xl font-semibold ">
@@ -40,10 +38,11 @@ export default function Experience() {
           </div>
           <div className="flex space-x-5 mt-5">
             <div className="bg-white rounded-[10px] justify-center flex flex-col items-center  w-[141px] sm:w-[257px] md:w-[210px] lg:w-[330px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]  ">
-              <div >
+              <div>
                 <h1 className=" md:text-[35px] inline-flex text-secondary lg:text-[50px] font-bold  ">
                   <AnimatedValue start={0} end={100} duration={2000} /> +
-                </h1>              </div>
+                </h1>{" "}
+              </div>
               <p className="text-secondary md:text-3xl lg:text-4xl font-semibold ">
                 Projects
               </p>
@@ -51,7 +50,7 @@ export default function Experience() {
             <div className="bg-white rounded-[10px] justify-center flex flex-col items-center w-[141px] sm:w-[257px] md:w-[210px] lg:w-[330px]  py-6 sm:py-[55px] md:py-[30px] lg:py-[56px]">
               <div>
                 <h1 className=" md:text-[35px] inline-flex  text-secondary lg:text-[50px] font-bold  ">
-                  <AnimatedValue start={0} end={20} duration={2000} /> +
+                  <AnimatedValue start={0} end={10} duration={2000} /> +
                 </h1>
               </div>
               <p className="text-secondary  md:text-3xl lg:text-4xl font-semibold ">
@@ -62,5 +61,5 @@ export default function Experience() {
         </div>
       </div>
     </div>
-  )
+  );
 }
