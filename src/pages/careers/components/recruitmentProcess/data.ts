@@ -3,7 +3,7 @@ import FrameTwo from "../../../../images/careerSection/recruitmentProcess/Frame(
 import FrameThree from "../../../../images/careerSection/recruitmentProcess/Frame(3).png";
 import FrameFour from "../../../../images/careerSection/recruitmentProcess/Frame(4).png";
 
-export const cardsData = [
+const cardsData = [
   {
     avatar: processImgOne,
     heading: "CV Submission",
@@ -25,3 +25,5 @@ export const cardsData = [
     text: "Successful candidates proceed to a final interview, where they interact with the hiring team and potential superiors to determine their suitability for the role",
   },
 ];
+
+export default cardsData;

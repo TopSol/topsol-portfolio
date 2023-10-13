@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
-import { reviews } from "./data";
+import reviews from "./data";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

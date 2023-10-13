@@ -6,9 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImagSlider from "./ImagSlider";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
-import { images } from "./data";
+import images from "./data";
 import LineAnimation from "../../../components/LineAnimation";
-
 
 function Awards() {
   const [slider, setSlider] = useState<any | null>(null);
@@ -40,25 +39,25 @@ function Awards() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: false
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -70,7 +69,12 @@ function Awards() {
               Awards and Honors
             </h1>
           </div>
-          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="18px" />
+          <LineAnimation
+            width="178px"
+            height="7px"
+            backgroundColor="#00B8F1"
+            marginTop="18px"
+          />
         </div>
         <div className="flex justify-center items-center mt-[84px]  ">
           <button className="button " onClick={previous}>
@@ -81,7 +85,11 @@ function Awards() {
               {images?.map((review, id) => {
                 return (
                   <div key={id} className=" ">
-                    <img src={review.avatar} alt="#" className="w-[105px] h-[105px] mx-auto " />
+                    <img
+                      src={review.avatar}
+                      alt="#"
+                      className="w-[105px] h-[105px] mx-auto "
+                    />
                   </div>
                 );
               })}

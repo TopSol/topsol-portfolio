@@ -4,7 +4,7 @@ import Icon3 from "../../images/Icons/servicersIcon/secourity.svg";
 import Icon4 from "../../images/Icons/servicersIcon/quality.svg";
 import Icon5 from "../../images/Icons/servicersIcon/tag.svg";
 import Icon6 from "../../images/Icons/servicersIcon/scalability.svg";
-export const data = [
+const data = [
   {
     id: 1,
     icon: Icon1,
@@ -48,3 +48,5 @@ export const data = [
       "Providing ongoing technical support to ensure customers are getting the most out of the software.",
   },
 ];
+
+export default data;

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 interface Iprops {
-  start: number,
-  end: number,
-  duration: number,
+  start: number;
+  end: number;
+  duration: number;
 }
 
-export function AnimatedValue({ start, end, duration }: Iprops) {
+const AnimatedValue = ({ start, end, duration }: Iprops) => {
   const [value, setValue] = useState(start);
   const [animationVisible, setAnimationVisible] = useState(false);
 
@@ -40,9 +40,7 @@ export function AnimatedValue({ start, end, duration }: Iprops) {
     }
   }, [animationVisible, duration, end, start]);
 
-  return (
-    <div ref={ref}>
-      {animationVisible && <div>{value}</div>}
-    </div>
-  );
-}
+  return <div ref={ref}>{animationVisible && <div>{value}</div>}</div>;
+};
+
+export default AnimatedValue;

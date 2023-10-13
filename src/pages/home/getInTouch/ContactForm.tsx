@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import dropDown from "../../../images/dropdown.png";
-import { dropDownData } from "./data";
+import dropDownData from "./data";
 import { useAnimate, stagger, motion } from "framer-motion";
 import useMenuAnimation from "../../../components/dropDownAnimaion";
 import { db } from "../../../utils/firebase";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Timestamp,
   addDoc,
@@ -22,7 +22,7 @@ function ContactForm() {
   const scope = useMenuAnimation(isOpen);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [checkbox, setCheckbox] = useState(false);
+  const [checkbox, setCheckbox] = useState<any>(false);
   const [organization, setOrganization] = useState("");
   const [message, setMessage] = useState("");
   console.log(name, email, organization, message);
@@ -93,8 +93,9 @@ function ContactForm() {
           </div>
         </motion.button>
         <ul
-          className={`dropDownUl ${isOpen ? "relative" : "hidden"
-            }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
+          className={`dropDownUl ${
+            isOpen ? "relative" : "hidden"
+          }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
           style={{
             pointerEvents: isOpen ? "auto" : "none",
             clipPath: "inset(10% 50% 90% 50% round 10px)",
@@ -103,8 +104,9 @@ function ContactForm() {
           {dropDownData.map((item) => (
             <li
               key={item.id}
-              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
-                }`}
+              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${
+                selectedOption === item ? "bg-primary text-white" : ""
+              }`}
               onClick={() => handleOptionClick(item)}
             >
               {item.name}
@@ -202,7 +204,7 @@ function ContactForm() {
             type="checkbox"
             className="mr-2"
             checked={checkbox}
-            onChange={() => setCheckbox(!checkbox)}
+            onChange={(prev) => setCheckbox(!prev)}
           />
           <label className="md:text-[18px] text-[15px] font-medium">
             I agree to term & conditions

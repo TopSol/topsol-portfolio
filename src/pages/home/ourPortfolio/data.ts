@@ -11,7 +11,7 @@ export const cardData = [
   { title: "Mobile Website", image: portfolioIm1 },
 ];
 
-export const portfolioData = [
+const portfolioData = [
   {
     id: "",
     title: "Swift Sku",
@@ -37,3 +37,4 @@ export const portfolioData = [
       "https://res.cloudinary.com/asifsaythe/image/upload/v1697017604/new_portfolio/1153552_OR7V0Q1_1_ptifzw.png",
   },
 ];
+export default portfolioData;

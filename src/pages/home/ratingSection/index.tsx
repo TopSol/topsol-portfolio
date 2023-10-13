@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RatingSlider from "./RatingSlider";
-import { reviews } from "./data";
+import reviews from "./data";
 import LineAnimation from "../../../components/LineAnimation";
 
 export default function index() {
@@ -25,7 +25,12 @@ export default function index() {
               People Like us, officially
             </h1>
           </div>
-          <LineAnimation width='178px' height='7px' backgroundColor='#00B8F1' marginTop="18px" />
+          <LineAnimation
+            width="178px"
+            height="7px"
+            backgroundColor="#00B8F1"
+            marginTop="18px"
+          />
         </div>
         <div>
           <Slider {...settings}>
