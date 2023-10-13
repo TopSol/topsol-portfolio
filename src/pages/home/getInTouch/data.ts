@@ -1,4 +1,4 @@
-export const dropDownData = [
+const dropDownData = [
   {
     id: 1,
     name: "All",
@@ -16,3 +16,4 @@ export const dropDownData = [
     name: "Web Projects",
   },
 ];
+export default dropDownData;

@@ -6,7 +6,7 @@ import imgThree from "../../../images/clutch-logo.png";
 
 import imgFive from "../../../images/software-world.png";
 
-export let images = [
+const images = [
   {
     id: "1",
     avatar: imgOne,
@@ -40,3 +40,4 @@ export let images = [
     avatar: imgOne,
   },
 ];
+export default images;

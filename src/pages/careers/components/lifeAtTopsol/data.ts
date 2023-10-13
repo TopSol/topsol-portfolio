@@ -7,7 +7,7 @@ import awardBlue from "../../../../images/careerSection/award-blue.png";
 import locationBlue from "../../../../images/careerSection/location-blue.png";
 import squareBlue from "../../../../images/careerSection/square-blue.png";
 
-export const cardsData = [
+const cardsData = [
   {
     avatar: careerCardOne,
     hoverAvatar: chairWhite,
@@ -33,3 +33,5 @@ export const cardsData = [
     text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
   },
 ];
+
+export default cardsData;

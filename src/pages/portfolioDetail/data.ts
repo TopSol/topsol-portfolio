@@ -1,4 +1,4 @@
-export const dataList = [
+const dataList = [
   {
     id: 1,
     item: "A Robust Native App (Android + iOS)",
@@ -28,3 +28,4 @@ export const dataList = [
     item: "Push Notifications",
   },
 ];
+export default dataList;

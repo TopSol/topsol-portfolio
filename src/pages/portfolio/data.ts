@@ -50,3 +50,5 @@ export const data2 = [
     side: "md:flex-row-reverse ",
   },
 ];
+
+export default data;

@@ -1,47 +1,46 @@
 import flexibilityImg from "../../../images/flexibility.png";
 import JsIcon from "../../../images/Icons/technologiesIcon/js_Icon.png";
-import Expert_1 from "../../../images/Icons/expertSectionIcons/expert_1.png"
-import Expert_2 from "../../../images/Icons/expertSectionIcons/expert_2.png"
-import Expert_3 from "../../../images/Icons/expertSectionIcons/expert_3.png"
-import Expert_4 from "../../../images/Icons/expertSectionIcons/expert_4.png"
-import Expert_5 from "../../../images/Icons/expertSectionIcons/expert_5.png"
+import Expert_1 from "../../../images/Icons/expertSectionIcons/expert_1.png";
+import Expert_2 from "../../../images/Icons/expertSectionIcons/expert_2.png";
+import Expert_3 from "../../../images/Icons/expertSectionIcons/expert_3.png";
+import Expert_4 from "../../../images/Icons/expertSectionIcons/expert_4.png";
+import Expert_5 from "../../../images/Icons/expertSectionIcons/expert_5.png";
 
-import Industries_1 from "../../../images/Icons/industries/industries_1.png"
-import Industries_2 from "../../../images/Icons/industries/industries_2.png"
-import Industries_3 from "../../../images/Icons/industries/industries_3.png"
-import Industries_4 from "../../../images/Icons/industries/industries_4.png"
-import Industries_5 from "../../../images/Icons/industries/industries_5.png"
-import Industries_6 from "../../../images/Icons/industries/industries_6.png"
-import Industries_7 from "../../../images/Icons/industries/industries_7.png"
-import Industries_8 from "../../../images/Icons/industries/industries_8.png"
-import Industries_9 from "../../../images/Icons/industries/industries_9.png"
-import Industries_10 from "../../../images/Icons/industries/industries_10.png"
+import Industries_1 from "../../../images/Icons/industries/industries_1.png";
+import Industries_2 from "../../../images/Icons/industries/industries_2.png";
+import Industries_3 from "../../../images/Icons/industries/industries_3.png";
+import Industries_4 from "../../../images/Icons/industries/industries_4.png";
+import Industries_5 from "../../../images/Icons/industries/industries_5.png";
+import Industries_6 from "../../../images/Icons/industries/industries_6.png";
+import Industries_7 from "../../../images/Icons/industries/industries_7.png";
+import Industries_8 from "../../../images/Icons/industries/industries_8.png";
+import Industries_9 from "../../../images/Icons/industries/industries_9.png";
+import Industries_10 from "../../../images/Icons/industries/industries_10.png";
 
-import Tec_1 from "../../../images/Icons/techonologies/tec_1.svg"
-import Tec_2 from "../../../images/Icons/techonologies/tec_2.svg"
-import Tec_3 from "../../../images/Icons/techonologies/tec_3.svg"
-import Tec_4 from "../../../images/Icons/techonologies/tec_4.svg"
-import Tec_5 from "../../../images/Icons/techonologies/tec_5.svg"
-import Tec_6 from "../../../images/Icons/techonologies/tec_6.svg"
-import Tec_7 from "../../../images/Icons/techonologies/tec_7.svg"
-import Tec_8 from "../../../images/Icons/techonologies/tec_8.svg"
-import Tec_9 from "../../../images/Icons/techonologies/tec_9.svg"
-import Tec_10 from "../../../images/Icons/techonologies/tec_10.svg"
-import Tec_11 from "../../../images/Icons/techonologies/tec_11.svg"
-import Tec_12 from "../../../images/Icons/techonologies/tec_12.svg"
-import Tec_13 from "../../../images/Icons/techonologies/tec_13.svg"
-import Tec_14 from "../../../images/Icons/techonologies/tec_14.svg"
-import Tec_15 from "../../../images/Icons/techonologies/tec_15.svg"
-import Tec_16 from "../../../images/Icons/techonologies/tec_16.svg"
-import Tec_17 from "../../../images/Icons/techonologies/tec_17.svg"
-import Tec_18 from "../../../images/Icons/techonologies/tec_18.svg"
-import Tec_19 from "../../../images/Icons/techonologies/tec_19.svg"
-import Tec_20 from "../../../images/Icons/techonologies/tec_20.svg"
-import Tec_21 from "../../../images/Icons/techonologies/tec_21.svg"
-import Tec_22 from "../../../images/Icons/techonologies/tec_22.svg"
-import Tec_23 from "../../../images/Icons/techonologies/tec_23.svg"
-import Tec_24 from "../../../images/Icons/techonologies/tec_24.svg"
-
+import Tec_1 from "../../../images/Icons/techonologies/tec_1.svg";
+import Tec_2 from "../../../images/Icons/techonologies/tec_2.svg";
+import Tec_3 from "../../../images/Icons/techonologies/tec_3.svg";
+import Tec_4 from "../../../images/Icons/techonologies/tec_4.svg";
+import Tec_5 from "../../../images/Icons/techonologies/tec_5.svg";
+import Tec_6 from "../../../images/Icons/techonologies/tec_6.svg";
+import Tec_7 from "../../../images/Icons/techonologies/tec_7.svg";
+import Tec_8 from "../../../images/Icons/techonologies/tec_8.svg";
+import Tec_9 from "../../../images/Icons/techonologies/tec_9.svg";
+import Tec_10 from "../../../images/Icons/techonologies/tec_10.svg";
+import Tec_11 from "../../../images/Icons/techonologies/tec_11.svg";
+import Tec_12 from "../../../images/Icons/techonologies/tec_12.svg";
+import Tec_13 from "../../../images/Icons/techonologies/tec_13.svg";
+import Tec_14 from "../../../images/Icons/techonologies/tec_14.svg";
+import Tec_15 from "../../../images/Icons/techonologies/tec_15.svg";
+import Tec_16 from "../../../images/Icons/techonologies/tec_16.svg";
+import Tec_17 from "../../../images/Icons/techonologies/tec_17.svg";
+import Tec_18 from "../../../images/Icons/techonologies/tec_18.svg";
+import Tec_19 from "../../../images/Icons/techonologies/tec_19.svg";
+import Tec_20 from "../../../images/Icons/techonologies/tec_20.svg";
+import Tec_21 from "../../../images/Icons/techonologies/tec_21.svg";
+import Tec_22 from "../../../images/Icons/techonologies/tec_22.svg";
+import Tec_23 from "../../../images/Icons/techonologies/tec_23.svg";
+import Tec_24 from "../../../images/Icons/techonologies/tec_24.svg";
 
 export const Values = [
   {
@@ -109,7 +108,7 @@ export const Industries = [
   },
 ];
 
-export const Technologies = [
+const technologies = [
   {
     avatar: Tec_1,
   },
@@ -183,3 +182,6 @@ export const Technologies = [
     avatar: Tec_24,
   },
 ];
+const data = { technologies, Industries, Values };
+
+export default data;

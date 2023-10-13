@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useEffect, useState } from "react";
 import { db } from "../../../utils/firebase";
-import { data } from "../data";
+import data from "../data";
 import {
   collection,
   query,

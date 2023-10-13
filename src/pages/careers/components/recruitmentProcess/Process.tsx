@@ -1,5 +1,5 @@
 import React from "react";
-import { cardsData } from "./data";
+import cardsData from "./data";
 import LineAnimation from "../../../../components/LineAnimation";
 import SmallCards from "../../../../components/smallCards/SmallCards";
 
