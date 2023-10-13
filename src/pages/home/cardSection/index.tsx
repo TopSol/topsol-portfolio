@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
+import reviews from "./data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useInView } from "react-intersection-observer";
