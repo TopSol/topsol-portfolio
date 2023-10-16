@@ -42,7 +42,7 @@ import Tec_22 from "../../../images/Icons/techonologies/tec_22.svg";
 import Tec_23 from "../../../images/Icons/techonologies/tec_23.svg";
 import Tec_24 from "../../../images/Icons/techonologies/tec_24.svg";
 
-export const Values = [
+const Values = [
   {
     title: "HEALTH",
     avatar: Expert_1,
@@ -65,7 +65,7 @@ export const Values = [
   },
 ];
 
-export const Industries = [
+const Industries = [
   {
     title: "HEALTH",
     avatar: Industries_1,
