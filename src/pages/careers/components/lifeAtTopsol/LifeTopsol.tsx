@@ -10,7 +10,7 @@ import squareBlue from "../../../../images/careerSection/square-blue.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { cardsData } from "./data";
+import { upperCardData, lowerCardData, cardsData } from "./data";
 import LineAnimation from "../../../../components/LineAnimation";
 import SmallCards from "../../../../components/smallCards/SmallCards";
 function LifeTopsol() {
@@ -95,51 +95,40 @@ function LifeTopsol() {
 
         <div className="md:flex  justify-center gap-[42px] hidden">
           <div className="lg:mt-[141px] lg:mb-0 mb-[150px] mt-20 flex flex-col gap-y-10">
-            <SmallCards
-              avatar={careerCardOne}
-              hoverAvatar={chairWhite}
-              heading={"Large Beautiful Office"}
-              headingClass={"font-semibold text-sm"}
-              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-              textClass="text-[11px] font-normal"
-              color="cardBg"
-              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
-            />
 
-            <SmallCards
-              avatar={locationBlue}
-              hoverAvatar={location}
-              heading={"Large Beautiful Office"}
-              headingClass={"font-semibold text-sm"}
-              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-              textClass="text-[11px] font-normal"
-              color="cardBg"
-              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
-            />
+            {upperCardData?.map((review, index) => {
+              return (
+                <div key={index} className="">
+                  <SmallCards
+                    heading={review.heading}
+                    headingClass="font-semibold text-sm"
+                    textClass="text-[11px] font-normal"
+                    text={review.text}
+                    avatar={review.avatar}
+                    hoverAvatar={review.hoverAvatar}
+                    className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[230px]  p-[22px]"
+                  />
+                </div>
+              );
+            })}
           </div>
 
           <div className="lg:mt-[219px] mt-20 flex flex-col gap-y-10">
-            <SmallCards
-              avatar={squareBlue}
-              hoverAvatar={square}
-              heading={"Large Beautiful Office"}
-              headingClass={"font-semibold text-sm"}
-              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-              textClass="text-[11px] font-normal"
-              color="cardBg"
-              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
-            />
-
-            <SmallCards
-              avatar={awardBlue}
-              hoverAvatar={award}
-              heading={"Large Beautiful Office"}
-              headingClass={"font-semibold text-sm"}
-              text="lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru"
-              textClass="text-[11px] font-normal"
-              color="cardBg"
-              className="bg-primary-cardBg max-w-[208px] max-h-[217px]  p-[22px]"
-            />
+            {lowerCardData?.map((review, index) => {
+              return (
+                <div key={index} className="">
+                  <SmallCards
+                    heading={review.heading}
+                    headingClass="font-semibold text-sm"
+                    textClass="text-[11px] font-normal"
+                    text={review.text}
+                    avatar={review.avatar}
+                    hoverAvatar={review.hoverAvatar}
+                    className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[230px]  p-[22px]"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className=" md:hidden grid grid-cols-1 mt-[63px] mb-[70px]">

@@ -7,21 +7,21 @@ export const cardsData = [
   {
     avatar: processImgOne,
     heading: "CV Submission",
-    text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
+    text: "Candidates submit their resumes for initial consideration and review",
   },
   {
     avatar: FrameTwo,
     heading: "Phone Screening",
-    text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
+    text: "Shortlisted candidates undergo a preliminary phone interview to assess their qualifications and interest in the position",
   },
   {
     avatar: FrameThree,
     heading: "Skill Assessment",
-    text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
+    text: " Qualified candidates are assessed through various skill tests or tasks related to the job",
   },
   {
     avatar: FrameFour,
     heading: "Final Interview",
-    text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
+    text: "Successful candidates proceed to a final interview, where they interact with the hiring team and potential superiors to determine their suitability for the role",
   },
 ];
