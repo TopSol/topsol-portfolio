@@ -2,10 +2,10 @@ import React from "react";
 //@ts-ignore
 import jobImg from "../../../../images/jobDt1.png";
 
-function Designer({ jobDetails }: any) {
+function Designer({ jobDetails={} }: any) {
   const total_miliseconds =
-    (jobDetails.postedAt.seconds +
-      jobDetails.postedAt.nanoseconds * 0.00000001) *
+    (jobDetails?.postedAt?.seconds +
+      jobDetails?.postedAt?.nanoseconds * 0.00000001) *
     1000;
 
   return (
@@ -28,10 +28,10 @@ function Designer({ jobDetails }: any) {
           </div>
           <div className="md:my-8 md:mb-0 lg:ml-0 sm:ml-10">
             <h1 className=" md:text-[70px] leading-[1.2] mb-[22px] text-4xl font-semibold md:text-start text-center text-primary-white">
-              {jobDetails?.title.split(" ")[0]}{" "}
-              {jobDetails?.title.split(" ").length > 1 ? (
+              {jobDetails?.title?.split(" ")?.[0]}{" "}
+              {jobDetails?.title?.split(" ")?.length > 1 ? (
                 <span className=" text-primary">
-                  {jobDetails?.title.split(" ")[1]}
+                  {jobDetails?.title?.split(" ")?.[1]}
                 </span>
               ) : null}
             </h1>
