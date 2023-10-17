@@ -17,6 +17,7 @@ import Industries_8 from "../../../images/Icons/industries/industries_8.png";
 import Industries_9 from "../../../images/Icons/industries/industries_9.png";
 import Industries_10 from "../../../images/Icons/industries/industries_10.png";
 
+
 import Tec_1 from "../../../images/Icons/techonologies/tec_1.svg";
 import Tec_2 from "../../../images/Icons/techonologies/tec_2.svg";
 import Tec_3 from "../../../images/Icons/techonologies/tec_3.svg";
@@ -42,7 +43,8 @@ import Tec_22 from "../../../images/Icons/techonologies/tec_22.svg";
 import Tec_23 from "../../../images/Icons/techonologies/tec_23.svg";
 import Tec_24 from "../../../images/Icons/techonologies/tec_24.svg";
 
-export const Values = [
+const Values = [
+
   {
     title: "HEALTH",
     avatar: Expert_1,

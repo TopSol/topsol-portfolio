@@ -26,4 +26,5 @@ const reviews = [
     avatar:"https://res.cloudinary.com/asifsaythe/image/upload/v1697015647/new_portfolio/savings-formula_1_qf9of9.png",
   },
 ];
+
 export default reviews;

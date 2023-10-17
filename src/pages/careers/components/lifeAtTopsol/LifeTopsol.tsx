@@ -10,7 +10,9 @@ import squareBlue from "../../../../images/careerSection/square-blue.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import { upperCardData, lowerCardData, cardsData } from "./data";
+
 import LineAnimation from "../../../../components/LineAnimation";
 import SmallCards from "../../../../components/smallCards/SmallCards";
 function LifeTopsol() {

@@ -7,7 +7,9 @@ import balenceHover from '../../../../images/aboutTopsolIcon/balenceHovr.png';
 import office from '../../../../images/aboutTopsolIcon/office.png';
 import officeHover from '../../../../images/aboutTopsolIcon/officeHovr.png';
 
+
 export const upperCardData = [
+
   {
     avatar: collaborativeIcon,
     hoverAvatar: collaborativeHover,
@@ -62,3 +64,5 @@ export const cardsData=[
     text: "TOPSOL's office is not only spacious but also aesthetically pleasing, providing an inspiring and comfortable workspace for its employees",
   },
 ]
+
+
