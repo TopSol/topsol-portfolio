@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatedValue } from "./NumberAnimation";
+import AnimatedValue from "./NumberAnimation";
 
 export default function Experience() {
   return (
