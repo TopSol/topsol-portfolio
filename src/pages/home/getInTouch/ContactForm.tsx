@@ -1,72 +1,61 @@
-import React, { useState, useEffect } from "react";
-import PhoneInput from "react-phone-input-2";
+import React, { useState } from "react";
 import "react-phone-input-2/lib/style.css";
-import dropDown from "../../../images/dropdown.png";
 import dropDownData from "./data";
-import { useAnimate, stagger, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import useMenuAnimation from "../../../components/dropDownAnimaion";
 import { db } from "../../../utils/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
-  Timestamp,
   addDoc,
   collection,
-  doc,
-  runTransaction,
-  setDoc,
 } from "firebase/firestore";
+
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<any>(null);
   const scope = useMenuAnimation(isOpen);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [checkbox, setCheckbox] = useState<any>(false);
-  const [organization, setOrganization] = useState("");
-  const [message, setMessage] = useState("");
-  console.log(name, email, organization, message);
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [isTermsAgreed, setTermsAgree]    = useState<boolean>(false);
+  const [organization, setOrganization] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  
   const handleOptionClick = (option: any) => {
     setSelectedOption(option);
     setIsOpen(false);
   };
-  console.log(checkbox);
-  const submit = () => {
+
+  const submit = async () => {
     if (
       !name ||
       !email ||
-      !organization ||
       !message ||
       !selectedOption ||
-      checkbox === false
+      !isTermsAgreed
     ) {
       toast.error("Please fill all the fields");
-    } else {
-      const body = {
-        selectedOption,
-        name,
-        email,
-        organization,
-        message,
-        checkbox,
-      };
-      console.log(body);
-      try {
-        const data = async (data: any) => {
-          const docRef = await addDoc(collection(db, "getInTouch"), body);
-          setSelectedOption(null);
-          setName("");
-          setEmail("");
-          setOrganization("");
-          setMessage("");
-          toast.success("Form submitted successfully");
-        };
-        data(body);
-      } catch (error) {
-        console.log(error);
-
-        toast.error("Data cannot be submitted");
-      }
+      return;
+    }
+    const body = {
+      selectedOption,
+      name,
+      email,
+      organization,
+      message,
+    };
+    try {
+      await addDoc(collection(db, "getInTouch"), body);
+      setSelectedOption(null);
+      setName("");
+      setEmail("");
+      setOrganization("");
+      setMessage("");
+      toast.success(
+        "Your message is received. We will contact you back shortly."
+      );
+    } catch (error) {
+      toast.error("Data cannot be submitted");
     }
   };
 
@@ -118,7 +107,7 @@ function ContactForm() {
         <input
           type="text"
           placeholder="Name*"
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value as string)}
           value={name}
           className="bg-formInput  py-[17px] px-[24px] mt-[25px] outline-none text-[18px] font-medium rounded w-full "
         />
@@ -127,7 +116,7 @@ function ContactForm() {
             type="email"
             placeholder="Email*"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value as string)}
             className=" bg-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
           />
           <svg
@@ -164,10 +153,10 @@ function ContactForm() {
         <div className=" flex flex-row mt-[25px] px-[24px] bg-formInput justify-between items-center">
           <input
             type="text"
-            placeholder="Organization*"
+            placeholder="Organization"
             value={organization}
             className=" bg-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
-            onChange={(e) => setOrganization(e.target.value)}
+            onChange={(e) => setOrganization(e.target.value as string)}
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -196,15 +185,15 @@ function ContactForm() {
         <textarea
           placeholder="Message*"
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => setMessage(e.target.value as string)}
           className="bg-formInput text-[18px] md:h-[167px] h-[100px] outline-none  font-medium px-[24px]  py-[17px] mt-[25px] w-full"
         ></textarea>
         <div className="flex self-start pl-4 mt-[36px]">
           <input
             type="checkbox"
             className="mr-2"
-            checked={checkbox}
-            onChange={(prev) => setCheckbox(!prev)}
+            checked={isTermsAgreed}
+            onChange={() => setTermsAgree(!isTermsAgreed)}
           />
           <label className="md:text-[18px] text-[15px] font-medium">
             I agree to term & conditions
