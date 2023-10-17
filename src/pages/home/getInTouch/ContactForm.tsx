@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "react-phone-input-2/lib/style.css";
+
+import dropDown from "../../../images/dropdown.png";
 import dropDownData from "./data";
-import {  motion } from "framer-motion";
+import { useAnimate, stagger, motion } from "framer-motion";
+
 import useMenuAnimation from "../../../components/dropDownAnimaion";
 import { db } from "../../../utils/firebase";
 import { ToastContainer, toast } from "react-toastify";
@@ -17,10 +20,11 @@ function ContactForm() {
   const scope = useMenuAnimation(isOpen);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
+
   const [isTermsAgreed, setTermsAgree]    = useState<boolean>(false);
   const [organization, setOrganization] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  
+
   const handleOptionClick = (option: any) => {
     setSelectedOption(option);
     setIsOpen(false);

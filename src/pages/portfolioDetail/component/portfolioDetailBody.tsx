@@ -60,10 +60,10 @@ export default function PortfolioDetailBody({ data }: any) {
           />
         </div>
 
-        <div className="md:container mx-4 md:mx-auto">
-          <div className="text-[25px] text-textColors font-medium"
+        <div className="md:w-[80%]  mx-5 md:mx-auto">
+          <div className="font-montserrat font-medium text-[24px] text-black  break-words text-justify mt-5"
             dangerouslySetInnerHTML={{
-              __html: `<p style="margin-top: 20px;  line-height: 1.75rem margin-left: 1.5rem; margin-right: 1.5rem;  ">        ${data?.unlockDesc}    </p>`,
+              __html: `<p>        ${data?.unlockDesc}    </p>`,
             }}
           />
         </div>

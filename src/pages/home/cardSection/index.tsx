@@ -2,24 +2,26 @@ import React, { useEffect, useRef, useState } from "react";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import reviews from "./data";
 import { gsap } from "gsap";
-import { motion } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useInView } from "react-intersection-observer";
 import MouseFollower from "mouse-follower";
-import { AnimatePresence } from "framer-motion";
+import { reviewTypes } from "../../../types/interfaceTypes";
 
 type CardSectionProps = {
-  setBg: any;
+  setBg: (value: string) => void;
   openModal: (value: boolean) => void;
+  reviews: reviewTypes[];
+  setSelectedId: (item: reviewTypes) => void;
 };
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 MouseFollower.registerGSAP(gsap);
-export default function CardSection({ setBg, openModal }: CardSectionProps) {
+export default function CardSection({ setBg, openModal, reviews, setSelectedId }: CardSectionProps) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
 
-  const [selectedId, setSelectedId] = useState("");
 
   const [scrollY, setScrollY] = useState(0);
   const [isWorking, setIsWorking] = useState(true);
@@ -60,40 +62,6 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
     };
   }, []);
 
-  // useEffect(() => {
-  //   const container = containerRef.current;
-  //   const map = mapRef.current;
-
-  //   if (window.innerWidth >= 1024) {
-  //     const pinTrigger = ScrollTrigger.create({
-  //       trigger: container,
-  //       pin: true,
-  //       scrub: 0.5,
-  //       markers: false,
-  //       start: "top top",
-  //       end: () => `+=1500`,
-  //     });
-
-  //     ScrollTrigger.create({
-  //       trigger: map,
-  //       start: "top top",
-  //       end: "bottom bottom",
-  //       onToggle: (self) => {
-  //         if (self.isActive) {
-  //           pinTrigger.disable();
-  //         } else {
-  //           pinTrigger.enable();
-  //         }
-  //       },
-  //     });
-  //   }
-
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => {
-  //       trigger.kill();
-  //     });
-  //   };
-  // }, []);
 
   useEffect(() => {
     if (isWorking) {
@@ -144,8 +112,8 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
     }
   }, [isInView]);
 
-  const handleClick = (id: string) => {
-    setSelectedId(id);
+  const handleClick = (item: reviewTypes) => {
+    setSelectedId(item);
     openModal(true);
   };
 
@@ -163,8 +131,8 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
                 ? scrollY <= 1080
                   ? "translateY(0%)"
                   : scrollY >= 1560
-                  ? "translateY(-480px)"
-                  : `translateY(-${scrollY - 1080}px)`
+                    ? "translateY(-480px)"
+                    : `translateY(-${scrollY - 1080}px)`
                 : "none", // If isWorking is false, set transform to 'none' or any other desired default value
             }}
           >
@@ -184,17 +152,17 @@ export default function CardSection({ setBg, openModal }: CardSectionProps) {
                 ? scrollY <= 1000
                   ? `translateX(0%)`
                   : scrollY >= 2500
-                  ? `translateX(-1500px)`
-                  : `translateX(-${scrollY - 1000}px)`
+                    ? `translateX(-1500px)`
+                    : `translateX(-${scrollY - 1000}px)`
                 : "none",
             }}
           >
-            {reviews?.map((item, index) => {
+            {reviews?.map((item: any, index: any) => {
               return (
                 <>
                   <div
-                    layoutId={item.id}
-                    onClick={() => handleClick(item?.id)}
+                    id={item.id}
+                    onClick={() => handleClick(item)}
                     className="mx-4 lg:mx-0  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col items-center "
                   >
                     <img

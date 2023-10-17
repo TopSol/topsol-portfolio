@@ -11,11 +11,14 @@ import Footer from "../../components/footerSection";
 import Navbar from "../../components/Navbar";
 import { motion } from "framer-motion";
 import Modal from "./components/model/Modal";
+import reviews from './cardSection/data'
+import { reviewTypes } from "../../types/interfaceTypes";
 
 function Home() {
   const [bg, setBg] = useState("#fff");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedId, setSelectedId] = useState<reviewTypes>();
 
   const openModal = () => {
     setIsLoading(true);
@@ -40,7 +43,7 @@ function Home() {
         }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <CardSection setBg={setBg} openModal={openModal} />
+        <CardSection setBg={setBg} openModal={openModal} reviews={reviews} setSelectedId={setSelectedId} />
         <ServicesOffers />
       </motion.div>
       <TopSolExperts />
@@ -51,7 +54,7 @@ function Home() {
         <GetInTouch />
       </div>
       <Footer />
-      {isModalOpen && <Modal setShowModal={closeModal} isLoader={isLoading} />}
+      {isModalOpen && <Modal setShowModal={closeModal} isLoader={isLoading} selectedId={selectedId} />}
     </div>
   );
 }

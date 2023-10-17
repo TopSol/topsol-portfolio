@@ -1,37 +1,68 @@
-import careerCardOne from "../../../../images/careerSection/careerCard1.png";
-import chairWhite from "../../../../images/careerSection/chair.png";
-import award from "../../../../images/careerSection/award.png";
-import location from "../../../../images/careerSection/location.png";
-import square from "../../../../images/careerSection/square.png";
-import awardBlue from "../../../../images/careerSection/award-blue.png";
-import locationBlue from "../../../../images/careerSection/location-blue.png";
-import squareBlue from "../../../../images/careerSection/square-blue.png";
+import collaborativeIcon from '../../../../images/aboutTopsolIcon/Collaborative.png';
+import collaborativeHover from '../../../../images/aboutTopsolIcon/CollaborativeHover.png';
+import learning from '../../../../images/aboutTopsolIcon/learning.png';
+import learningHover from '../../../../images/aboutTopsolIcon/learningHove.png';
+import balence from '../../../../images/aboutTopsolIcon/balence.png';
+import balenceHover from '../../../../images/aboutTopsolIcon/balenceHovr.png';
+import office from '../../../../images/aboutTopsolIcon/office.png';
+import officeHover from '../../../../images/aboutTopsolIcon/officeHovr.png';
 
-const cardsData = [
+
+export const upperCardData = [
+
   {
-    avatar: careerCardOne,
-    hoverAvatar: chairWhite,
-    heading: "Large Beautiful Office",
-    text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
+    avatar: collaborativeIcon,
+    hoverAvatar: collaborativeHover,
+    heading: "Collaborative Culture",
+    text: "TOPSOL fosters a collaborative culture where teamwork and open communication are valued, driving collective success",
   },
   {
-    avatar: squareBlue,
-    hoverAvatar: square,
-    heading: "Great Co-Workers",
-    text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
+    avatar: learning,
+    hoverAvatar: learningHover,
+    heading: "Learning and Development",
+    text: "At TOPSOL, continuous learning and development opportunities are provided to enhance employees' skills and knowledge",
   },
-  {
-    avatar: locationBlue,
-    hoverAvatar: location,
-    heading: "Easy Location",
-    text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
-  },
-  {
-    avatar: awardBlue,
-    hoverAvatar: award,
-    heading: "Performance Awards",
-    text: "lorum ispum fdg gogjg dfdffgg fdsdffd fdjfidjfn oogoh epepe rere topo kjor reooir rerieoer reiroru",
-  },
+
 ];
+export const lowerCardData = [
+  {
+    avatar: balence,
+    hoverAvatar: balenceHover,
+    heading: "Work-Life Balance",
+    text: "The company places a strong emphasis on work-life balance, offering flexibility to help employees maintain a healthy equilibrium",
+  },
+  {
+    avatar: office,
+    hoverAvatar: officeHover,
+    heading: "Large Beautiful Office",
+    text: "TOPSOL's office is not only spacious but also aesthetically pleasing, providing an inspiring and comfortable workspace for its employees",
+  },
+]
+export const cardsData=[
+  {
+    avatar: collaborativeIcon,
+    hoverAvatar: collaborativeHover,
+    heading: "Collaborative Culture",
+    text: "TOPSOL fosters a collaborative culture where teamwork and open communication are valued, driving collective success",
+  },
+  {
+    avatar: learning,
+    hoverAvatar: learningHover,
+    heading: "Learning and Development",
+    text: "At TOPSOL, continuous learning and development opportunities are provided to enhance employees' skills and knowledge",
+  },
+  {
+    avatar: balence,
+    hoverAvatar: balenceHover,
+    heading: "Work-Life Balance",
+    text: "The company places a strong emphasis on work-life balance, offering flexibility to help employees maintain a healthy equilibrium",
+  },
+  {
+    avatar: office,
+    hoverAvatar: officeHover,
+    heading: "Large Beautiful Office",
+    text: "TOPSOL's office is not only spacious but also aesthetically pleasing, providing an inspiring and comfortable workspace for its employees",
+  },
+]
 
-export default cardsData;
+
