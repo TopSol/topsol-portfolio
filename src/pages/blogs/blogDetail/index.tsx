@@ -39,9 +39,9 @@ export default function index() {
     <div>
       <Navbar />
       <Hero data={detail} />
-      <div className=" md:container md:mx-auto flex">
-        <div dangerouslySetInnerHTML={{ __html: detail?.htmlCode || "" }} />
-      </div>
+      {/* <div className=" md:container md:mx-auto flex"> */}
+      <div dangerouslySetInnerHTML={{ __html: detail?.htmlCode || "" }} />
+      {/* </div> */}
       <CommentSection />
       <Footer />
     </div>
