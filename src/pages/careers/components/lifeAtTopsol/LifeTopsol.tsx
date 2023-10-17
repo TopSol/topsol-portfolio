@@ -11,7 +11,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { upperCardData, lowerCardData, cardsData } from "./data";
+import data from "./data";
+
+const { upperCardData, lowerCardData, cardsData } = data;
 
 import LineAnimation from "../../../../components/LineAnimation";
 import SmallCards from "../../../../components/smallCards/SmallCards";
@@ -97,7 +99,6 @@ function LifeTopsol() {
 
         <div className="md:flex  justify-center gap-[42px] hidden">
           <div className="lg:mt-[141px] lg:mb-0 mb-[150px] mt-20 flex flex-col gap-y-10">
-
             {upperCardData?.map((review, index) => {
               return (
                 <div key={index} className="">

@@ -1,15 +1,13 @@
-import collaborativeIcon from '../../../../images/aboutTopsolIcon/Collaborative.png';
-import collaborativeHover from '../../../../images/aboutTopsolIcon/CollaborativeHover.png';
-import learning from '../../../../images/aboutTopsolIcon/learning.png';
-import learningHover from '../../../../images/aboutTopsolIcon/learningHove.png';
-import balence from '../../../../images/aboutTopsolIcon/balence.png';
-import balenceHover from '../../../../images/aboutTopsolIcon/balenceHovr.png';
-import office from '../../../../images/aboutTopsolIcon/office.png';
-import officeHover from '../../../../images/aboutTopsolIcon/officeHovr.png';
+import collaborativeIcon from "../../../../images/aboutTopsolIcon/Collaborative.png";
+import collaborativeHover from "../../../../images/aboutTopsolIcon/CollaborativeHover.png";
+import learning from "../../../../images/aboutTopsolIcon/learning.png";
+import learningHover from "../../../../images/aboutTopsolIcon/learningHove.png";
+import balence from "../../../../images/aboutTopsolIcon/balence.png";
+import balenceHover from "../../../../images/aboutTopsolIcon/balenceHovr.png";
+import office from "../../../../images/aboutTopsolIcon/office.png";
+import officeHover from "../../../../images/aboutTopsolIcon/officeHovr.png";
 
-
-export const upperCardData = [
-
+const upperCardData = [
   {
     avatar: collaborativeIcon,
     hoverAvatar: collaborativeHover,
@@ -22,9 +20,8 @@ export const upperCardData = [
     heading: "Learning and Development",
     text: "At TOPSOL, continuous learning and development opportunities are provided to enhance employees' skills and knowledge",
   },
-
 ];
-export const lowerCardData = [
+const lowerCardData = [
   {
     avatar: balence,
     hoverAvatar: balenceHover,
@@ -37,8 +34,8 @@ export const lowerCardData = [
     heading: "Large Beautiful Office",
     text: "TOPSOL's office is not only spacious but also aesthetically pleasing, providing an inspiring and comfortable workspace for its employees",
   },
-]
-export const cardsData=[
+];
+const cardsData = [
   {
     avatar: collaborativeIcon,
     hoverAvatar: collaborativeHover,
@@ -63,6 +60,11 @@ export const cardsData=[
     heading: "Large Beautiful Office",
     text: "TOPSOL's office is not only spacious but also aesthetically pleasing, providing an inspiring and comfortable workspace for its employees",
   },
-]
+];
 
-
+const data = {
+  upperCardData,
+  lowerCardData,
+  cardsData,
+};
+export default data;

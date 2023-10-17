@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import "react-phone-input-2/lib/style.css";
-
-import dropDown from "../../../images/dropdown.png";
 import dropDownData from "./data";
-import { useAnimate, stagger, motion } from "framer-motion";
-
+import { motion } from "framer-motion";
 import useMenuAnimation from "../../../components/dropDownAnimaion";
 import { db } from "../../../utils/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {
-  addDoc,
-  collection,
-} from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +14,7 @@ function ContactForm() {
   const scope = useMenuAnimation(isOpen);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-
-  const [isTermsAgreed, setTermsAgree]    = useState<boolean>(false);
+  const [isTermsAgreed, setTermsAgree] = useState<boolean>(false);
   const [organization, setOrganization] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
@@ -31,13 +24,7 @@ function ContactForm() {
   };
 
   const submit = async () => {
-    if (
-      !name ||
-      !email ||
-      !message ||
-      !selectedOption ||
-      !isTermsAgreed
-    ) {
+    if (!name || !email || !message || !selectedOption || !isTermsAgreed) {
       toast.error("Please fill all the fields");
       return;
     }
