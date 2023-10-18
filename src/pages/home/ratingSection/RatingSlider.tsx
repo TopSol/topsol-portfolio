@@ -1,6 +1,6 @@
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
 import ratingCircle from "../../../images/rating1.png";
+import fiveStart from "../../../images/fiveStars.png";
 import CircleImage from "../../../components/CircleImage";
 type appProps = {
   review: any;
@@ -13,11 +13,7 @@ export default function RatingSlider({ review }: appProps) {
           <CircleImage />
         </div>
         <div className="flex text-yellow-500 mt-10 space-x-2  ">
-          <AiFillStar />
-          <AiFillStar />
-          <AiFillStar />
-          <AiFillStar />
-          <AiFillStar />
+          <img src={fiveStart} alt="" />
         </div>
         <p className="mt-4 font-[15px] w-[90%] text-[#000000]">
           {review?.text}

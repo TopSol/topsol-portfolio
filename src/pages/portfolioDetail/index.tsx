@@ -5,17 +5,17 @@ import Footer from "../../components/footerSection";
 import Hero from "./component/Hero";
 import PortfolioDetailBody from "./component/portfolioDetailBody";
 import { db } from "../../utils/firebase";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { collection, doc, getDoc } from "firebase/firestore";
 import { PulseLoader } from "react-spinners";
+import { useLocation } from "@reach/router";
+
 export default function index() {
   const [detail, setDetail] = useState({});
   const [loader, setLoader] = useState(false);
 
-  const url = window.location.href;
+  const location = useLocation();
 
-  const urlObj = new URL(url);
-
-  const id = urlObj.searchParams.get("id");
+  const id = new URLSearchParams(location.search).get("id");
 
   const fetchPortfolioItem = async () => {
     try {
@@ -40,7 +40,6 @@ export default function index() {
       fetchPortfolioItem();
     }
   }, [id]);
-  console.log("detail is hear so check this", detail);
   return (
     <div>
       <Navbar />

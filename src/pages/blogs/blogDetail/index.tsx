@@ -5,15 +5,23 @@ import Hero from "./components/Hero";
 import CommentSection from "./components/CommentSection";
 import { db } from "../../../utils/firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
+import { useLocation } from "@reach/router";
 
 export default function index() {
   const [detail, setDetail] = useState({});
+  const location = useLocation();
 
-  const url = window.location.href;
+  const id = new URLSearchParams(location.search).get("id");
 
-  const urlObj = new URL(url);
+  // let url;
 
-  const id = urlObj.searchParams.get("id");
+  // useEffect(() => {
+  //   url = window.location.href;
+  // }, []);
+
+  // const urlObj = new URL(url);
+
+  // const id = urlObj.searchParams.get("id");
 
   const fetchPortfolioItem = async () => {
     try {
@@ -47,4 +55,3 @@ export default function index() {
     </div>
   );
 }
-

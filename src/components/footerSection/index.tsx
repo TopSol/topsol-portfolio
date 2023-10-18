@@ -1,12 +1,12 @@
 import React from "react";
-import { FaFacebook } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
-import { AiFillLinkedin } from "react-icons/ai";
 import locate from "../../images/location.png";
 import contact from "../../images/contact.png";
 import email from "../../images/Icons/Mail_Send.png";
 import footerBg from "../../images/footerBg.png";
 import { Link } from "gatsby";
+import facebook from "../../images/facebook.png";
+import instagram from "../../images/instagram.png";
+import linkedin from "../../images/linkedIn.png";
 
 export default function Footer() {
   return (
@@ -30,13 +30,29 @@ export default function Footer() {
               </div>
               <div className="flex space-x-4 mt-[34px] ">
                 <Link to="https://www.linkedin.com/company/topsolorg/mycompany/">
-                  <AiFillLinkedin className="w-[30px] h-[30px] " />
+                  {/* <AiFillLinkedin className="w-[30px] h-[30px] " /> */}
+                  <img
+                    src={linkedin}
+                    alt="linkedin"
+                    decoding="async"
+                    className="logo_default h-[30px] w-[30px]"
+                  />
                 </Link>
                 <Link to="https://www.instagram.com/topsol_org/">
-                  <BsInstagram className="w-[30px] h-[30px] " />
+                  <img
+                    src={instagram}
+                    alt="instagram"
+                    decoding="async"
+                    className="logo_default h-[30px] w-[30px]"
+                  />
                 </Link>
                 <Link to="https://www.facebook.com/topsol.org">
-                  <FaFacebook className="w-[30px] h-[30px] " />
+                  <img
+                    src={facebook}
+                    alt="facebook"
+                    decoding="async"
+                    className="logo_default h-[30px] w-[30px]"
+                  />
                 </Link>
               </div>
             </div>
