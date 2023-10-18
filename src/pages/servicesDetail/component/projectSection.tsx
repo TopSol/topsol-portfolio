@@ -9,7 +9,6 @@ export default function ProjectSection() {
   const [portFolios, setPortFolios] = useState<any>([]);
   const [loader, setLoader] = useState(false);
   const [startAfterDoc, setStartAfterDoc] = useState(null);
-
   const showData = portFolios.slice(1, 3);
   const initialVisibleCards = 2;
   const [visibleCards, setVisibleCards] = useState<number>(initialVisibleCards);
@@ -59,7 +58,7 @@ export default function ProjectSection() {
           />
         </div>
         <div>
-          {showData.map((item: any, index: any) => {
+          {showData.map((item, index) => {
             return (
               <PortfolioCard
                 data={item}

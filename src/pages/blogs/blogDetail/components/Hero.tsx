@@ -1,15 +1,17 @@
 import React from "react";
+import { PortfolioItem } from "../../../../types/interfaceTypes";
 
-interface Iprops {
-  data: any
+interface HeroProps {
+  detail: PortfolioItem;
 }
-export default function Hero({ data }: Iprops) {
+
+export default function Hero({ detail }: HeroProps) {
   return (
     <div>
       <div
         className=" bg-cover flex  items-center bg-center xl:h-[100vh] bg-primary opacity-70 "
         style={{
-          backgroundImage: `url(${data?.image})`,
+          backgroundImage: `url(${detail?.image})`,
         }}
       >
         {/* <div className="md:w-[80%] min-h-[100vh] md:container md:mx-auto md:flex-row flex flex-col  justify-center items-center">

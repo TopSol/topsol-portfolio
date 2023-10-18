@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-
+import { JobPost } from "../../../../types/interfaceTypes";
 type CardsProps = {
-  item: any;
+  item: JobPost;
   className?: string;
 };
 

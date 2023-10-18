@@ -7,8 +7,9 @@ import PortfolioDetailBody from "./component/portfolioDetailBody";
 import { db } from "../../utils/firebase";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { PulseLoader } from "react-spinners";
+import { portfolioDetailType } from "../../types/interfaceTypes";
 export default function index() {
-  const [detail, setDetail] = useState({});
+  const [detail, setDetail] = useState<portfolioDetailType | null>(null);
   const [loader, setLoader] = useState(false);
 
   const url = window.location.href;
@@ -24,7 +25,7 @@ export default function index() {
       const portfolioItemDoc = await getDoc(portfolioItemRef);
 
       if (portfolioItemDoc.exists()) {
-        setDetail(portfolioItemDoc.data());
+        setDetail(portfolioItemDoc.data() as portfolioDetailType);
       } else {
         console.error("Portfolio item not found.");
       }
@@ -50,8 +51,8 @@ export default function index() {
         </div>
       ) : (
         <div>
-          <Hero data={detail} />
-          <PortfolioDetailBody data={detail} />
+          <Hero detail={detail} />
+          <PortfolioDetailBody detail={detail} />
         </div>
       )}
       <SmallFooter />

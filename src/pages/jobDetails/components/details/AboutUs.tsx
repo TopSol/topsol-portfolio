@@ -17,8 +17,9 @@ import {
   setDoc,
 } from "firebase/firestore";
 import dotImg from "../../../../images/dot.png";
+import { jobDetailsType } from "../../../../types/interfaceTypes";
 
-function AboutUs({ jobDetails }: any) {
+function AboutUs({ jobDetails }: { jobDetails: jobDetailsType }) {
   const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ function AboutUs({ jobDetails }: any) {
   });
   const [resumeFile, setResumeFile] = useState(null);
 
-  const handleChange = (e: any, isPhone: any) => {
+  const handleChange = (e, isPhone) => {
     if (isPhone) {
       console.log(e, isPhone);
       setFormData({
@@ -45,7 +46,7 @@ function AboutUs({ jobDetails }: any) {
     }
   };
 
-  const handleFileChange = (e: any) => {
+  const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file.type === "application/pdf") {
       const maxSize = 5 * 1024 * 1024; // 5MB
@@ -213,7 +214,7 @@ function AboutUs({ jobDetails }: any) {
         </div>
         <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px]">
           <ul className="pl-5 list-disc">
-            {jobDetails?.responsibilities?.map((i: string) => {
+            {jobDetails?.responsibilities?.map((i) => {
               return <li className="md:text-lg text-base font-medium">{i}</li>;
             })}
           </ul>
@@ -229,7 +230,7 @@ function AboutUs({ jobDetails }: any) {
         </div>
         <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px] ">
           <ul className="pl-5 list-disc md:text-lg text-base font-medium">
-            {jobDetails?.requirements?.map((i: string) => {
+            {jobDetails?.requirements?.map((i) => {
               return <li>{i}</li>;
             })}
           </ul>
@@ -244,7 +245,7 @@ function AboutUs({ jobDetails }: any) {
         </div>
         <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px] ">
           <ul className="pl-5 list-disc md:text-lg text-base font-medium">
-            {jobDetails?.benefits?.map((i: string) => (
+            {jobDetails?.benefits?.map((i) => (
               <li key={i}>{i}</li>
             ))}
           </ul>

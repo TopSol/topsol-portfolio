@@ -1,37 +1,44 @@
 import React, { useEffect, useState } from "react";
+import { ExpType } from "../../types/interfaceTypes";
+
+type Option = {
+  id: string;
+  [key: string]: string;
+};
 
 type DropDownProps = {
   buttonTitle: string;
   className?: string;
-  setExpType: any;
-  type: string;
-  options: Array<object>;
-  handleDropdownChange: (type: string, value: string) => void;
+  setExpType: React.Dispatch<React.SetStateAction<ExpType>>;
+  type: keyof ExpType;
+  options: Option[];
+  handleDropdownChange: (type: keyof ExpType, value: string) => void;
 };
 
 function DropDown({ buttonTitle, options, className, setExpType, type, handleDropdownChange }: DropDownProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState('');
-  const [dropOptions, setDropOptions] = useState([{}]);
+  const [selectedItem, setSelectedItem] = useState<string>('');
+  const [dropOptions, setDropOptions] = useState<string[]>([]);
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const handleItemClick = (item: any) => {
+  const handleItemClick = (item: string) => {
     toggleDropdown();
     setSelectedItem(item);
-    setExpType((pre: any) => ({ ...pre, [type]: item }));
+    setExpType((prevExpType) => ({ ...prevExpType, [type]: item }));
     handleDropdownChange(type, item);
   };
+
   const initialOptions = () => {
     if (options) {
-      const uniqueOptions = Array.from(new Set(options.map((elem: any) => elem?.[type])));
+      const uniqueOptions = Array.from(new Set(options.map((elem) => elem[type])));
       setDropOptions(uniqueOptions);
     }
   };
 
   useEffect(() => {
-    initialOptions()
-  }, [options]);
+    initialOptions();
+  }, [options, type]);
 
   return (
     <div className={`relative ${className}`}>
@@ -55,8 +62,8 @@ function DropDown({ buttonTitle, options, className, setExpType, type, handleDro
             className="py-2 text-sm rounded-lg shadow   mt-2   bg-formInput"
             aria-labelledby="dropdownDefaultButton"
           >
-            {dropOptions.map((item: any, index: any) => (
-              <li key={item.id} onClick={() => handleItemClick(item)}
+            {dropOptions.map((item, index) => (
+              <li key={index} onClick={() => handleItemClick(item)}
                 className=" hover:cursor-pointer px-4 py-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
                 {item}

@@ -4,7 +4,14 @@ import Icon3 from "../../images/Icons/servicersIcon/secourity.svg";
 import Icon4 from "../../images/Icons/servicersIcon/quality.svg";
 import Icon5 from "../../images/Icons/servicersIcon/tag.svg";
 import Icon6 from "../../images/Icons/servicersIcon/scalability.svg";
-const data = [
+
+interface ServiceData {
+  id: number;
+  icon: string; 
+  heading: string;
+  detail: string;
+}
+const data: ServiceData[] = [
   {
     id: 1,
     icon: Icon1,

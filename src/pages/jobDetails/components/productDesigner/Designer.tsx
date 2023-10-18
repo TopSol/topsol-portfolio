@@ -1,8 +1,8 @@
 import React from "react";
 //@ts-ignore
 import jobImg from "../../../../images/jobDt1.png";
-
-function Designer({ jobDetails={} }: any) {
+import { jobDetailsType } from "../../../../types/interfaceTypes";
+function Designer({ jobDetails }: { jobDetails: jobDetailsType }) {
   const total_miliseconds =
     (jobDetails?.postedAt?.seconds +
       jobDetails?.postedAt?.nanoseconds * 0.00000001) *

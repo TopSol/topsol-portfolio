@@ -1,10 +1,10 @@
 import React from "react";
 import FileIcon from "../../../images/Icons/fileIcon.png";
-
-type CardsProps ={
-    item:any
+import { ServiceData } from "../../../types/interfaceTypes";
+type CardsProps = {
+  item: ServiceData
 }
-function Cards({item}:CardsProps) {
+function Cards({ item }: CardsProps) {
   return (
     <div className="px-[25px] mx-5 md:mx-0 border-primary hover:bg-primary hover:text-white border-2 rounded-xl  py-2 ">
       <img

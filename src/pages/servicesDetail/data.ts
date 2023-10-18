@@ -1,4 +1,6 @@
-export const data = [
+import { ServiceData } from "../../types/interfaceTypes";
+
+export const data: ServiceData[] = [
   {
     id: 1,
     heading: "Green Tea Studios, developed by our experienced team",

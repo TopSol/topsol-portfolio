@@ -1,6 +1,5 @@
 import React from "react";
 import contactUs from "../../../images/contactUs.png";
-import { Link } from "gatsby";
 
 export default function Hero() {
   return (

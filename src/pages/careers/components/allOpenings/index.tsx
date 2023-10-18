@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 // @ts-ignore
 import { db } from "../../../../utils/firebase";
 // @ts-ignore
@@ -8,18 +8,23 @@ import LineAnimation from "../../../../components/LineAnimation";
 import DropDownCards from "../cards/DropDownCards";
 import DropDown from "../../../../components/dropDown/DropDown";
 import { PulseLoader } from 'react-spinners';
+import { JobPost } from "../../../../types/interfaceTypes";
 
 function AllOpenings() {
-  const [jobPosts, setJobPosts] = useState([]);
-  const [loading, setSetLoading] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [expType, setExpType] = useState({ title: "", experience: "", type: "" });
-  const [options, setOptions] = useState([])
-  const handleSearchChange = (event: any) => {
+  const [jobPosts, setJobPosts] = useState<JobPost[]>([]);
+  const [loading, setSetLoading] = useState<boolean>(false);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [expType, setExpType] = useState<{ title: string; experience: string; type: string }>({
+    title: "",
+    experience: "",
+    type: "",
+  });
+  const [options, setOptions] = useState<JobPost[]>([]);
+  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;
     setSearchQuery(query);
   };
-  const handleDropdownChange = (type: any, value: any) => {
+  const handleDropdownChange = (type, value) => {
     setExpType(prevExpType => ({
       ...prevExpType,
       [type]: value,
@@ -30,20 +35,20 @@ function AllOpenings() {
   const jobPostFun = () => {
     let jobTypes = JSON.parse(JSON.stringify(jobPosts));
 
-    jobTypes = jobTypes.filter((item: any) => (
+    jobTypes = jobTypes.filter((item) => (
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.experience.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.type.toLowerCase().includes(searchQuery.toLowerCase())
     ))
-    jobTypes = jobTypes.filter((item: any) => (
+    jobTypes = jobTypes.filter((item) => (
       item.title.toLowerCase().includes(expType?.title?.toLowerCase())
 
     ))
-    jobTypes = jobTypes.filter((item: any) => (
+    jobTypes = jobTypes.filter((item) => (
       item.experience.toLowerCase().includes(expType?.experience?.toLowerCase())
 
     ))
-    jobTypes = jobTypes.filter((item: any) => (
+    jobTypes = jobTypes.filter((item) => (
       item.type.toLowerCase().includes(expType?.type?.toLowerCase())
 
     ))
@@ -160,7 +165,7 @@ function AllOpenings() {
                 <PulseLoader color="#FFFFFF" size={18} />
               </div>
             ) : jobPostFun().length ? (
-              jobPostFun()?.map((item: any, index: any) => {
+              jobPostFun()?.map((item, index) => {
                 return <DropDownCards item={item} className="w-[100%]" key={index} />;
               })
             ) : (

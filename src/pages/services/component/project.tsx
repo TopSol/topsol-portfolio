@@ -1,9 +1,13 @@
 import React from "react";
 import data from "../data";
-import Icon2 from "../../images/Icons/servicersIcon/secourity.svg";
-import { Link } from "gatsby";
-import FileIcon from "../../../images/Icons/fileIcon.png";
 import LineAnimation from "../../../components/LineAnimation";
+
+interface dataType {
+  id: string
+  icon: string;
+  heading: string;
+  detail: string;
+}
 export default function Project() {
   return (
     <div className="bg-gradient-to-b from-secondary to-primary  ">
@@ -22,7 +26,7 @@ export default function Project() {
       </div>
       <div>
         <div className=" pb-[123px] mt-[111px] md:container mx-auto grid gap-x-[93px] gap-y-[51px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
-          {data.map((item: any, index) => {
+          {data.map((item, index) => {
             return (
               <div className="px-[25px]  mx-5 md:mx-0 p-3 bg-white  hover:bg-primary hover:text-white  rounded-xl  py-2 ">
                 <div className="bg-white w-[70px] justify-center flex items-center rounded-full h-[70px] ">

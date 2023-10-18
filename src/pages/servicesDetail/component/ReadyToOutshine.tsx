@@ -18,7 +18,7 @@ function ReadyToOutshine() {
         </div>
       </div>
       <div className=" grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-        {data.map((item: any, index) => {
+        {data.map((item) => {
           return <Cards item={item} />;
         })}
       </div>
