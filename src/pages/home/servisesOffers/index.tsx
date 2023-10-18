@@ -3,7 +3,7 @@ import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import dotImg from "../../../images/dot.png";
 import circleImg from "../../../images/hero-circle.png";
 import ServicesCards from "../servisesCards/ServicesCards";
-import cards from "./data";
+import cards from "../../../staticData/servisesOffersData";
 import { Link } from "gatsby";
 import LineAnimation from "../../../components/LineAnimation";
 

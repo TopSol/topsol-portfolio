@@ -6,8 +6,8 @@ import { db, storage } from "../../../../utils/firebase";
 import hrImg from "../../../../images/horizantolLine.png";
 import { validateJobApplicatonForm } from "../../../../utils";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Timestamp,
   addDoc,
@@ -157,7 +157,7 @@ function AboutUs({ jobDetails }: any) {
               className="absolute lg:block hidden left-[-77px] bottom-5"
             />
             <p className="md:text-lg text-base font-medium text-justify">
-              {jobDetails.description}
+              {jobDetails?.description}
             </p>
           </div>
         </div>

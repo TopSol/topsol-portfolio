@@ -5,11 +5,7 @@ type appProps = {
 };
 
 function ImagSlider({ review }: appProps) {
-  return (
-   
-      <img src={review.avatar} alt="#" className="" />
-   
-  );
+  return <img src={review?.avatar} alt="#" className="" />;
 }
 
 export default ImagSlider;

@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import data from "./data";
+import data from "../../../../staticData/lifeatTopsolData";
 
 const { upperCardData, lowerCardData, cardsData } = data;
 
@@ -103,12 +103,12 @@ function LifeTopsol() {
               return (
                 <div key={index} className="">
                   <SmallCards
-                    heading={review.heading}
+                    heading={review?.heading}
                     headingClass="font-semibold text-sm"
                     textClass="text-[11px] font-normal"
-                    text={review.text}
-                    avatar={review.avatar}
-                    hoverAvatar={review.hoverAvatar}
+                    text={review?.text}
+                    avatar={review?.avatar}
+                    hoverAvatar={review?.hoverAvatar}
                     className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[230px]  p-[22px]"
                   />
                 </div>
@@ -121,12 +121,12 @@ function LifeTopsol() {
               return (
                 <div key={index} className="">
                   <SmallCards
-                    heading={review.heading}
+                    heading={review?.heading}
                     headingClass="font-semibold text-sm"
                     textClass="text-[11px] font-normal"
-                    text={review.text}
-                    avatar={review.avatar}
-                    hoverAvatar={review.hoverAvatar}
+                    text={review?.text}
+                    avatar={review?.avatar}
+                    hoverAvatar={review?.hoverAvatar}
                     className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[230px]  p-[22px]"
                   />
                 </div>
@@ -141,12 +141,12 @@ function LifeTopsol() {
                 return (
                   <div key={index} className="">
                     <SmallCards
-                      heading={review.heading}
+                      heading={review?.heading}
                       headingClass="font-semibold text-sm"
                       textClass="text-[11px] font-normal"
-                      text={review.text}
-                      avatar={review.avatar}
-                      hoverAvatar={review.hoverAvatar}
+                      text={review?.text}
+                      avatar={review?.avatar}
+                      hoverAvatar={review?.hoverAvatar}
                       className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[217px]  p-[22px]"
                     />
                   </div>

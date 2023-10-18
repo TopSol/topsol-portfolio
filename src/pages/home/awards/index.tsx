@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImagSlider from "./ImagSlider";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
-import images from "./data";
+import images from "../../../staticData/awardsData";
 import LineAnimation from "../../../components/LineAnimation";
 
 function Awards() {
@@ -86,7 +86,7 @@ function Awards() {
                 return (
                   <div key={id} className=" ">
                     <img
-                      src={review.avatar}
+                      src={review?.avatar}
                       alt="#"
                       className="w-[105px] h-[105px] mx-auto "
                     />

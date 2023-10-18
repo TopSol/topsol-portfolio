@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../data";
+import data from "../../../staticData/servicesData";
 import Icon2 from "../../images/Icons/servicersIcon/secourity.svg";
 import { Link } from "gatsby";
 import FileIcon from "../../../images/Icons/fileIcon.png";

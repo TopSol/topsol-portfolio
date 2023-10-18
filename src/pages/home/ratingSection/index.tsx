@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RatingSlider from "./RatingSlider";
-import reviews from "./data";
+import reviews from "../../../staticData/ratingeSectionData";
 import LineAnimation from "../../../components/LineAnimation";
 
 export default function index() {

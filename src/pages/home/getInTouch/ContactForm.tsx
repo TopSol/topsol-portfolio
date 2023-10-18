@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "react-phone-input-2/lib/style.css";
-import dropDownData from "./data";
+import dropDownData from "../../../staticData/blogDetailsData";
 import { motion } from "framer-motion";
 import useMenuAnimation from "../../../components/dropDownAnimaion";
 import { db } from "../../../utils/firebase";

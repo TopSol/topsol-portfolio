@@ -1,8 +1,8 @@
-import Chris from "../../../images/chris.jpeg";
+import Chris from "../images/chris.jpeg";
 
-import Nick from "../../../images/nick.png";
+import Nick from "../images/nick.png";
 
-import Juan from "../../../images/juan.png";
+import Juan from "../images/juan.png";
 
 const reviews = [
   {

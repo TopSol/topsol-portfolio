@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PrimaryBtn from "../../components/PrimaryBtn";
-import btnData from "./data";
+import btnData from "../../staticData/blogDetailsData";
 import { Link } from "gatsby";
 import { PulseLoader } from "react-spinners";
 import {

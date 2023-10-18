@@ -6,7 +6,7 @@ import RatingSection from "../home/ratingSection";
 import Footer from "../../components/footerSection";
 import FileIcon from "../../images/Icons/fileIcon.png";
 import AddressSection from "../../components/addressSection";
-import { data } from "./data";
+import { data } from "../../staticData/servicesData";
 import { Link } from "gatsby";
 import Project from "./component/project";
 export default function index() {

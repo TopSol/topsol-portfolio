@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
-import reviews from "./data";
+import reviews from "../../../staticData/cardSectionData";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useInView } from "react-intersection-observer";
@@ -14,14 +14,16 @@ type CardSectionProps = {
   setSelectedId: (item: reviewTypes) => void;
 };
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 MouseFollower.registerGSAP(gsap);
-export default function CardSection({ setBg, openModal, reviews, setSelectedId }: CardSectionProps) {
+export default function CardSection({
+  setBg,
+  openModal,
+  reviews,
+  setSelectedId,
+}: CardSectionProps) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
-
 
   const [scrollY, setScrollY] = useState(0);
   const [isWorking, setIsWorking] = useState(true);
@@ -61,7 +63,6 @@ export default function CardSection({ setBg, openModal, reviews, setSelectedId }
       window.removeEventListener("resize", checkScreenWidth);
     };
   }, []);
-
 
   useEffect(() => {
     if (isWorking) {
@@ -131,8 +132,8 @@ export default function CardSection({ setBg, openModal, reviews, setSelectedId }
                 ? scrollY <= 1080
                   ? "translateY(0%)"
                   : scrollY >= 1560
-                    ? "translateY(-480px)"
-                    : `translateY(-${scrollY - 1080}px)`
+                  ? "translateY(-480px)"
+                  : `translateY(-${scrollY - 1080}px)`
                 : "none", // If isWorking is false, set transform to 'none' or any other desired default value
             }}
           >
@@ -152,8 +153,8 @@ export default function CardSection({ setBg, openModal, reviews, setSelectedId }
                 ? scrollY <= 1000
                   ? `translateX(0%)`
                   : scrollY >= 2500
-                    ? `translateX(-1500px)`
-                    : `translateX(-${scrollY - 1000}px)`
+                  ? `translateX(-1500px)`
+                  : `translateX(-${scrollY - 1000}px)`
                 : "none",
             }}
           >

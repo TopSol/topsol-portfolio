@@ -4,7 +4,7 @@ import "react-phone-input-2/lib/style.css";
 import dot from "../../../images/dot.png";
 import LineAnimation from "../../../components/LineAnimation";
 import useMenuAnimation from "../../../components/dropDownAnimaion";
-import btnData from "../data";
+import btnData from "../../../staticData/contactUsData";
 import { motion } from "framer-motion";
 import { db } from "../../../utils/firebase";
 import { addDoc, collection } from "firebase/firestore";

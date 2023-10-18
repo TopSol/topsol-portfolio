@@ -1,6 +1,7 @@
 import React from "react";
-import data from "../data";
+import data from "../../../staticData/serviceDetailsData";
 import Cards from "./Cards";
+import { servicesDetailsCardTypes } from "../../../types/interfaceTypes";
 
 function ReadyToOutshine() {
   return (
@@ -18,7 +19,7 @@ function ReadyToOutshine() {
         </div>
       </div>
       <div className=" grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-        {data.map((item: any, index) => {
+        {data.map((item: servicesDetailsCardTypes, index) => {
           return <Cards item={item} />;
         })}
       </div>

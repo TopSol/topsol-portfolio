@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PopupButton } from "react-calendly";
 // @ts-ignore
 import heroImg from "../../../images/hero-bg.png";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import { Link } from "gatsby";
 export default function Hero() {
-  let root = document.body;
+  let root;
+
+  useEffect(() => {
+    root = document.body;
+  }, []);
 
   return (
     <div

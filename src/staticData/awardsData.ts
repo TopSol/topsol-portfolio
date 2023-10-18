@@ -1,10 +1,10 @@
-import imgOne from "../../../images/imgSlider1.png";
+import imgOne from "../images/imgSlider1.png";
 
-import imgTwo from "../../../images/pakistan-thegem.png";
+import imgTwo from "../images/pakistan-thegem.png";
 
-import imgThree from "../../../images/clutch-logo.png";
+import imgThree from "../images/clutch-logo.png";
 
-import imgFive from "../../../images/software-world.png";
+import imgFive from "../images/software-world.png";
 
 const images = [
   {

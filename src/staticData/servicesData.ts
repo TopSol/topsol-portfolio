@@ -1,9 +1,9 @@
-import Icon1 from "../../images/Icons/servicersIcon/agile.svg";
-import Icon2 from "../../images/Icons/servicersIcon/quality.svg";
-import Icon3 from "../../images/Icons/servicersIcon/secourity.svg";
-import Icon4 from "../../images/Icons/servicersIcon/quality.svg";
-import Icon5 from "../../images/Icons/servicersIcon/tag.svg";
-import Icon6 from "../../images/Icons/servicersIcon/scalability.svg";
+import Icon1 from "../images/Icons/servicersIcon/agile.svg";
+import Icon2 from "../images/Icons/servicersIcon/quality.svg";
+import Icon3 from "../images/Icons/servicersIcon/secourity.svg";
+import Icon4 from "../images/Icons/servicersIcon/quality.svg";
+import Icon5 from "../images/Icons/servicersIcon/tag.svg";
+import Icon6 from "../images/Icons/servicersIcon/scalability.svg";
 const data = [
   {
     id: 1,

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ExpertCards from "../expertCards/ExpertCards";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
-import data from "./data";
+import data from "../../../staticData/topsolExpertsData";
 // import technologies from "./data";
 import CircleImage from "../../../components/CircleImage";
 import LineAnimation from "../../../components/LineAnimation";

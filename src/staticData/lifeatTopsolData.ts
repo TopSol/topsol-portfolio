@@ -1,11 +1,11 @@
-import collaborativeIcon from "../../../../images/aboutTopsolIcon/Collaborative.png";
-import collaborativeHover from "../../../../images/aboutTopsolIcon/CollaborativeHover.png";
-import learning from "../../../../images/aboutTopsolIcon/learning.png";
-import learningHover from "../../../../images/aboutTopsolIcon/learningHove.png";
-import balence from "../../../../images/aboutTopsolIcon/balence.png";
-import balenceHover from "../../../../images/aboutTopsolIcon/balenceHovr.png";
-import office from "../../../../images/aboutTopsolIcon/office.png";
-import officeHover from "../../../../images/aboutTopsolIcon/officeHovr.png";
+import collaborativeIcon from "../images/aboutTopsolIcon/Collaborative.png";
+import collaborativeHover from "../images/aboutTopsolIcon/CollaborativeHover.png";
+import learning from "../images/aboutTopsolIcon/learning.png";
+import learningHover from "../images/aboutTopsolIcon/learningHove.png";
+import balence from "../images/aboutTopsolIcon/balence.png";
+import balenceHover from "../images/aboutTopsolIcon/balenceHovr.png";
+import office from "../images/aboutTopsolIcon/office.png";
+import officeHover from "../images/aboutTopsolIcon/officeHovr.png";
 
 const upperCardData = [
   {

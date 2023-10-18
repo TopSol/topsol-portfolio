@@ -12,7 +12,7 @@ import {
   where,
 } from "firebase/firestore";
 import { db } from "../../../utils/firebase";
-import portfolioData from "./data";
+import portfolioData from "../../../staticData/outPortfolioData";
 
 function OurPortfolio() {
   const [visibleCards, setVisibleCards] = useState<any>([]);

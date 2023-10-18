@@ -1,15 +1,15 @@
-import Img1 from "../../../images/servicesSectionIcon/Services_1.png";
-import Img2 from "../../../images/servicesSectionIcon/Services_2.png";
-import Img3 from "../../../images/servicesSectionIcon/Services_3.png";
-import Img4 from "../../../images/servicesSectionIcon/Services_4.png";
-import Img5 from "../../../images/servicesSectionIcon/Services_5.png";
-import Img6 from "../../../images/servicesSectionIcon/Services_6.png";
-import Img7 from "../../../images/servicesSectionIcon/Services_7.png";
-import Img8 from "../../../images/servicesSectionIcon/Services_8.png";
-import svg from "../../../images/Svg/Group.svg";
-import svg1 from "../../../images/Svg/Group1.svg";
-import svg2 from "../../../images/Svg/Group2.svg";
-import svg3 from "../../../images/Svg/Group3.svg";
+import Img1 from "../images/servicesSectionIcon/Services_1.png";
+import Img2 from "../images/servicesSectionIcon/Services_2.png";
+import Img3 from "../images/servicesSectionIcon/Services_3.png";
+import Img4 from "../images/servicesSectionIcon/Services_4.png";
+import Img5 from "../images/servicesSectionIcon/Services_5.png";
+import Img6 from "../images/servicesSectionIcon/Services_6.png";
+import Img7 from "../images/servicesSectionIcon/Services_7.png";
+import Img8 from "../images/servicesSectionIcon/Services_8.png";
+import svg from "../images/Svg/Group.svg";
+import svg1 from "../images/Svg/Group1.svg";
+import svg2 from "../images/Svg/Group2.svg";
+import svg3 from "../images/Svg/Group3.svg";
 
 const cards = [
   {
