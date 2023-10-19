@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import PortfolioCard from "../../../components/portfolioCard";
 import { db } from "../../../utils/firebase";
-import { collection, query, orderBy, getDocs } from "firebase/firestore";
+import { collection, query, orderBy, getDocs, DocumentData, QueryDocumentSnapshot, Timestamp } from "firebase/firestore";
 import { Link } from "gatsby";
 import LineAnimation from "../../../components/LineAnimation";
-
+import { portfolioDetailType } from "../../../types/interfaceTypes";
 export default function ProjectSection() {
-  const [portFolios, setPortFolios] = useState<any>([]);
+  const [portFolios, setPortFolios] = useState<portfolioDetailType[]>([]);
   const [loader, setLoader] = useState(false);
-  const [startAfterDoc, setStartAfterDoc] = useState(null);
+  const [startAfterDoc, setStartAfterDoc] = useState<QueryDocumentSnapshot<DocumentData> | null>(null);
+
   const showData = portFolios.slice(1, 3);
   const initialVisibleCards = 2;
   const [visibleCards, setVisibleCards] = useState<number>(initialVisibleCards);
@@ -20,11 +21,11 @@ export default function ProjectSection() {
       const portfolioQuery = query(portfolioCollection, orderBy("createdAt"));
 
       const portfolioSnapshot = await getDocs(portfolioQuery);
-      const portfolioData = portfolioSnapshot.docs.map((doc) => doc.data());
+      const portfolioData = portfolioSnapshot.docs.map((doc) => doc.data() as portfolioDetailType);
 
       if (portfolioData?.length) {
         setPortFolios(portfolioData);
-        setStartAfterDoc(portfolioData[portfolioData.length - 1].createdAt);
+        setStartAfterDoc(portfolioData[portfolioData.length - 1].createdAt as any);
       }
 
       setLoader(false);

@@ -3,7 +3,7 @@ type appProps = {
   heading: string;
   desc: string;
   avatar: string;
-  bg: any;
+  bg: string;
 };
 
 function ServicesCards({ heading, desc, avatar, bg }: appProps) {

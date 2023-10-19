@@ -1,14 +1,16 @@
 import React from "react";
-
-type appProps = {
-  review: any;
+type Review = {
+  avatar: string;
 };
 
-function ImagSlider({ review }: appProps) {
+type ImagSliderProps = {
+  review: Review;
+};
+function ImagSlider({ review }: ImagSliderProps) {
   return (
-   
-      <img src={review.avatar} alt="#" className="" />
-   
+
+    <img src={review.avatar} alt="#" className="" />
+
   );
 }
 

@@ -3,14 +3,22 @@ import { AiFillStar } from "react-icons/ai";
 import ratingCircle from "../../../images/rating1.png";
 import CircleImage from "../../../components/CircleImage";
 type appProps = {
-  review: any;
+  text: string;
+  clientName: string;
+  type: string;
+  avatar: string;
 };
-export default function RatingSlider({ review }: appProps) {
+
+type RatingSliderProps = {
+  review?: appProps;
+};
+
+export default function RatingSlider({ review }: RatingSliderProps) {
   return (
     <div className="">
       <div className=" pl-4 md:container md:mx-auto pr-4 md:pl-16 border rounded-2xl relative">
         <div className="absolute top-0 right-0">
-          <CircleImage />
+          <CircleImage showFlex={false} />
         </div>
         <div className="flex text-yellow-500 mt-10 space-x-2  ">
           <AiFillStar />

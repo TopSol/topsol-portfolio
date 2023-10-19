@@ -2,12 +2,18 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import RatingSlider from "../ratingSection";
+import RatingSlider from "../../pages/home/ratingSection/RatingSlider";
 import Chris from "../../images/chris.jpeg";
 import Nick from "../../images/nick.png";
 import Juan from "../../images/juan.png";
 
-let reviews = [
+type appProps = {
+  text: string;
+  clientName: string;
+  type: string;
+  avatar: string;
+};
+let reviews: appProps[] = [
   {
     text: "I recently had the pleasure of working with the software company, TopSol Software Solutions. They were extremely professional and easy to work with. The team was extremely knowledgeable and went out of their way to make sure that all of our needs were met. They always made sure to keep us updated on the progress of our project, and the final product was exactly what we were looking for. I would highly recommend TopSol Software Solutions for any software development project. They are reliable, efficient, and will provide exceptional customer service.",
     clientName: "Juan Camilo",

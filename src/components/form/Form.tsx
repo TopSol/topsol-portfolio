@@ -2,14 +2,7 @@ import React from "react";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import FileUpload from "./uploadCv/ChooseFile";
-
-type FormProps = {
-  submit: () => void;
-  heading?: string;
-  formData: {};
-  setFormData: () => void;
-};
-
+import { FormProps } from "../../types/interfaceTypes";
 function Form({
   submit,
   loading,
@@ -18,7 +11,7 @@ function Form({
   resumeFile,
   handleChange,
   handleFileChange,
-}: any) {
+}: FormProps) {
   return (
     <div className="md:border border-formBorder rounded-[10px] max-w-[689px] mx-auto md:px-[81px] px-[23] md:mb-[80px]">
       <h1 className="md:text-4xl text-xl font-semibold text-center md:mt-[47px] md:mb-10 mb-[51px]">

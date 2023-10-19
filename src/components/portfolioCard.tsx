@@ -1,5 +1,12 @@
-
 import React from "react";
+import { portfolioDetailType } from "../types/interfaceTypes";
+interface portfolioCardType {
+  data: portfolioDetailType;
+  index: number;
+  textColor: string;
+  subTitleColor: string;
+  lineColor: string;
+}
 
 export default function PortfolioCard({
   data,
@@ -7,7 +14,7 @@ export default function PortfolioCard({
   textColor,
   subTitleColor,
   lineColor,
-}: any) {
+}: portfolioCardType) {
   return (
     <div>
       <div

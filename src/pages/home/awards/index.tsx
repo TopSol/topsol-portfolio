@@ -4,13 +4,15 @@ import nextImg from "../../../images/next.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ImagSlider from "./ImagSlider";
-import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import images from "./data";
 import LineAnimation from "../../../components/LineAnimation";
 
+interface imagePropes {
+  id: string;
+  avatar: string
+}
 function Awards() {
-  const [slider, setSlider] = useState<any | null>(null);
+  const [slider, setSlider] = useState(null);
 
   const next = () => {
     if (slider) {
@@ -82,7 +84,7 @@ function Awards() {
           </button>
           <div className=" w-[90vw] ">
             <Slider {...settings} ref={setSlider}>
-              {images?.map((review, id) => {
+              {images?.map((review: imagePropes, id) => {
                 return (
                   <div key={id} className=" ">
                     <img

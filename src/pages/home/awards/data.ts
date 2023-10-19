@@ -6,7 +6,12 @@ import imgThree from "../../../images/clutch-logo.png";
 
 import imgFive from "../../../images/software-world.png";
 
-const images = [
+interface imagePropes{
+  id:string;
+  avatar:string;
+}
+const images:imagePropes[] = [
+
   {
     id: "1",
     avatar: imgOne,

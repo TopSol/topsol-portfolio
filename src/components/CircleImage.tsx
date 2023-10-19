@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import commentCircle from '../images/rating1.png'
 import hoverCircle from '../images/ratingCircle.png'
-export default function CircleImage({ showFlex }: any) {
+interface CircleImageType {
+  showFlex: boolean
+}
+export default function CircleImage({ showFlex }: CircleImageType) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

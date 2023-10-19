@@ -1,3 +1,6 @@
+import { File } from "buffer";
+import { Timestamp } from "firebase/firestore";
+import React, { ChangeEvent } from "react";
 interface reviewTypes {
   id: string;
   heading: string;
@@ -50,6 +53,13 @@ interface portfolioDetailType {
   clientVisions: string[]; 
   detailImageUrl:string;
   description:string;
+  appStoreUrl:string;
+  category:string;
+  isActive:boolean;
+  webUrl:string;
+  subTitle:string;
+  createdAt:Timestamp;
+  imageUrl:string;
 }
 
 interface ServiceData {
@@ -57,4 +67,19 @@ interface ServiceData {
   heading: string;
   detail: string;
 }
-export {reviewTypes, JobPost,ExpType,PortfolioItem, jobDetailsType, portfolioDetailType, ServiceData}
+interface FormProps {
+  submit: () => void;
+  loading: boolean;
+  heading?: string;
+  formData: {
+    name: string;
+    email: string;
+    phone: string;
+    cover: string;
+  };
+  resumeFile: File | null ;
+  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | any, isPhone?: boolean) => void;
+  handleFileChange: (file: File | null) => void;
+}
+
+export {reviewTypes, JobPost,ExpType,PortfolioItem, jobDetailsType, portfolioDetailType, ServiceData,FormProps, }
