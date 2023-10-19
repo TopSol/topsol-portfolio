@@ -14,8 +14,10 @@ import {
 import { db } from "../../utils/firebase";
 
 interface BlogDocument {
-  createdAt: number; // Replace with the actual type
-  // Other properties from your document
+  id: string;
+  image: string;
+  heading: string;
+  description: string;
 }
 export default function Card() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -30,7 +32,7 @@ export default function Card() {
   const hasNextPage = currentIndex + itemsPerPage < blogs.length;
   const hasPreviousPage = currentIndex > 0;
 
-  const fetchPortFolios = async (start: any) => {
+  const fetchPortFolios = async (start) => {
     try {
       setLoader(true);
       const blogCollection = collection(db, "blogs");
@@ -111,12 +113,11 @@ export default function Card() {
     <div>
       <div className=" lg:container  justify-center mx-auto">
         <div className=" md:container grid grid-col gap-3 items-center mt-[42px] md:mt-[76px] md:grid-cols-2 lg:grid-cols-4   md:mx-auto ">
-          {btnData.map((item: any, index) => {
+          {btnData.map((item, index) => {
             return (
               <div
-                className={`mx-5 md:mx-5 flex rounded justify-around ${
-                  selectedCategory === item.name ? "bg-primary" : ""
-                }`}
+                className={`mx-5 md:mx-5 flex rounded justify-around ${selectedCategory === item.name ? "bg-primary" : ""
+                  }`}
                 key={index}
                 onClick={() => {
                   console.log("hello im am hear -----------------");
@@ -140,18 +141,16 @@ export default function Card() {
             <PulseLoader color="#8E8E8E" size={18} />
           </div>
         ) : (
-          blogs.map((item: any, index) => (
+          blogs.map((item: BlogDocument, index) => (
             <div
-              className={` ${
-                index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } px-5   lg:container  md:mx-auto  flex flex-col md:flex-row justify-center `}
+              className={` ${index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } px-5   lg:container  md:mx-auto  flex flex-col md:flex-row justify-center `}
             >
               <div
-                className={` md:w-[50%] xl:w-[55%] w-[100%] flex ${
-                  index % 2 == 0
-                    ? "justify-start md:mr-[50px] xl:mr-0"
-                    : "justify-end  md:ml-[50px] xl:ml-0"
-                }   `}
+                className={` md:w-[50%] xl:w-[55%] w-[100%] flex ${index % 2 == 0
+                  ? "justify-start md:mr-[50px] xl:mr-0"
+                  : "justify-end  md:ml-[50px] xl:ml-0"
+                  }   `}
               >
                 <img
                   className="w-[600px] h-[232px] md:h-[509px]  object-cover rounded-lg"
@@ -192,11 +191,10 @@ export default function Card() {
       </div>
       <div className="flex justify-around mt-16">
         <button
-          className={`bg-primary  w-[120px] justify-center items-center py-2 rounded-sm flex flex-row ${
-            !hasPreviousPage
-              ? "opacity-50 cursor-not-allowed"
-              : "cursor-pointer hover:opacity-50"
-          }`}
+          className={`bg-primary  w-[120px] justify-center items-center py-2 rounded-sm flex flex-row ${!hasPreviousPage
+            ? "opacity-50 cursor-not-allowed"
+            : "cursor-pointer hover:opacity-50"
+            }`}
           onClick={handlePreviousPage}
           disabled={!hasPreviousPage}
         >
@@ -219,11 +217,10 @@ export default function Card() {
           <p className="text-white font-semibold">Previous</p>
         </button>
         <button
-          className={`bg-primary w-[120px] justify-center items-center py-2 rounded-sm flex flex-row ${
-            !startAfterDoc || !isNextPage
-              ? "opacity-50 cursor-not-allowed"
-              : "cursor-pointer hover:opacity-50"
-          }`}
+          className={`bg-primary w-[120px] justify-center items-center py-2 rounded-sm flex flex-row ${!startAfterDoc || !isNextPage
+            ? "opacity-50 cursor-not-allowed"
+            : "cursor-pointer hover:opacity-50"
+            }`}
           onClick={handleNextPage}
           disabled={!startAfterDoc || !isNextPage}
         >

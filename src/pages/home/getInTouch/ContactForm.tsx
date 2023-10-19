@@ -14,18 +14,22 @@ import {
   collection,
 } from "firebase/firestore";
 
+interface ContactProps {
+  id: number;
+  name: string
+}
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<any>(null);
+  const [selectedOption, setSelectedOption] = useState<ContactProps | null>(null);
   const scope = useMenuAnimation(isOpen);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
 
-  const [isTermsAgreed, setTermsAgree]    = useState<boolean>(false);
+  const [isTermsAgreed, setTermsAgree] = useState<boolean>(false);
   const [organization, setOrganization] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
-  const handleOptionClick = (option: any) => {
+  const handleOptionClick = (option) => {
     setSelectedOption(option);
     setIsOpen(false);
   };
@@ -86,9 +90,8 @@ function ContactForm() {
           </div>
         </motion.button>
         <ul
-          className={`dropDownUl ${
-            isOpen ? "relative" : "hidden"
-          }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
+          className={`dropDownUl ${isOpen ? "relative" : "hidden"
+            }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
           style={{
             pointerEvents: isOpen ? "auto" : "none",
             clipPath: "inset(10% 50% 90% 50% round 10px)",
@@ -97,9 +100,8 @@ function ContactForm() {
           {dropDownData.map((item) => (
             <li
               key={item.id}
-              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${
-                selectedOption === item ? "bg-primary text-white" : ""
-              }`}
+              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
+                }`}
               onClick={() => handleOptionClick(item)}
             >
               {item.name}

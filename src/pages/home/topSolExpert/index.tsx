@@ -44,8 +44,8 @@ function TopSolExperts() {
           <button
             onClick={() => handleCategoryChange("Values")}
             className={`  ${selectedCategory === "Values"
-                ? "bg-primary text-white"
-                : "bg-white text-primary"
+              ? "bg-primary text-white"
+              : "bg-white text-primary"
               } cursor-default  hover:text-white px-[45px] lg:px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
           >
             Values
@@ -53,8 +53,8 @@ function TopSolExperts() {
           <button
             onClick={() => handleCategoryChange("Industries")}
             className={`  ${selectedCategory === "Industries"
-                ? "bg-primary text-white"
-                : "bg-white text-primary"
+              ? "bg-primary text-white"
+              : "bg-white text-primary"
               } text-primary  cursor-default  hover:text-white px-[45px] lg:px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
           >
             Industries
@@ -62,8 +62,8 @@ function TopSolExperts() {
           <button
             onClick={() => handleCategoryChange("Technologies")}
             className={`  text-primary  cursor-default ${selectedCategory === "Technologies"
-                ? "bg-primary text-white"
-                : "bg-white text-primary"
+              ? "bg-primary text-white"
+              : "bg-white text-primary"
               }  hover:text-white px-[45px] lg:px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold`}
           >
             Technologies
@@ -78,11 +78,11 @@ function TopSolExperts() {
         </p>
         <div
           className={`grid mt-[75px] min-h-[200px]   mb-[105px] ${selectedCategory === "Technologies"
-              ? "lg:grid-cols-8  grid-cols-2 sm:grid-cols-3 md:grid-cols-5  gap-x-[41px]"
-              : " md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5            gap-x-[28px]"
+            ? "lg:grid-cols-8  grid-cols-2 sm:grid-cols-3 md:grid-cols-5  gap-x-[41px]"
+            : " md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5            gap-x-[28px]"
             }  sm:grid-cols-2 grid-cols-1 gap-y-[70px] gap-[28px]   `}
         >
-          {selectedArray?.map((item: any, index) => {
+          {selectedArray?.map((item, index) => {
             return (
               <div className="  " key={index}>
                 <ExpertCards title={item.title} avatar={item.avatar} />

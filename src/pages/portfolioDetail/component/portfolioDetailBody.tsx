@@ -78,7 +78,7 @@ export default function PortfolioDetailBody({ detail }: { detail: portfolioDetai
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-[36px] font-semibold my-6">Key Features</h2>
         <div className="mt-[53px] mx-[15px] flex flex-col ">
-          {detail?.clientVisions?.map((item: any, index: number) => {
+          {detail?.clientVisions?.map((item, index) => {
             return (
               <div key={index} className="md:container md:mx-auto">
                 <div className="flex py-2 items-center">

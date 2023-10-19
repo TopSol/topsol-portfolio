@@ -11,10 +11,10 @@ declare module '*.png' {
     export = value;
   }
   declare module 'react-slick' {
-    const value: any;
+    const value: string;
     export default value;
   }
   declare module 'react-slick' {
-    const value: any;
+    const value: string;
     export default value;
   }

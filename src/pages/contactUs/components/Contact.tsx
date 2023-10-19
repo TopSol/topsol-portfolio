@@ -11,9 +11,13 @@ import { addDoc, collection } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+interface ContactProps {
+  id: number;
+  name: string
+}
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<any>(null);
+  const [selectedOption, setSelectedOption] = useState<ContactProps | null>(null);
   const [isChecked, setIsChecked] = useState(false);
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
@@ -27,7 +31,7 @@ export default function Contact() {
     setIsChecked(!isChecked);
   };
 
-  const handleOptionClick = (option: any) => {
+  const handleOptionClick = (option) => {
     setSelectedOption(option);
     setIsOpen(false);
   };
@@ -52,10 +56,12 @@ export default function Contact() {
         isChecked,
       };
       try {
-        const data = async (data: any) => {
+        const data = async (data) => {
           const docRef = await addDoc(collection(db, "contact"), formData);
 
-          setName("");
+          setName(""); interface ContactProps {
+            // Define any props specific to the Contact component here
+          }
           setEmail("");
           setOrganization("");
           setMessage("");
@@ -76,7 +82,7 @@ export default function Contact() {
       <div className="md:w-[70%] md:justify-center md:mx-auto">
         <div className="mt-[118px] md:container md:mx-auto  flex flex-col justify-center items-center md:justify-start md:items-start">
           <div>
-            <h1 className=" text-center text-black font-semibold text-[22px] md:text-[30px] lg:text-[40px]">
+            <h1 className=" text-center text-black fondropDownDatat-semibold text-[22px] md:text-[30px] lg:text-[40px]">
               Ready to discuss your project?
             </h1>
           </div>
@@ -110,9 +116,8 @@ export default function Contact() {
               </div>
             </motion.button>
             <ul
-              className={`dropDownUl ${
-                isOpen ? "relative" : "hidden"
-              }  shadow   mt-2  flex bg-formInput flex-col gap-5 `}
+              className={`dropDownUl ${isOpen ? "relative" : "hidden"
+                }  shadow   mt-2  flex bg-formInput flex-col gap-5 `}
               style={{
                 pointerEvents: isOpen ? "auto" : "none",
                 clipPath: "inset(10% 50% 90% 50% round 10px)",
@@ -121,12 +126,11 @@ export default function Contact() {
               {btnData.map((item) => (
                 <li
                   key={item.id}
-                  className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${
-                    selectedOption === item ? "bg-primary text-white" : ""
-                  }`}
+                  className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
+                    }`}
                   onClick={() => handleOptionClick(item)}
                 >
-                  {item.name}
+                  {item.name}dropDownData
                 </li>
               ))}
             </ul>
@@ -165,7 +169,7 @@ export default function Contact() {
               onChange={(e) => setOrganization(e.target.value)}
             />
           </div>
-          <div className="  mb-[24px] font-medium  text-[18px] w-[85%] text-light_Grey bg-formInput">
+          <div className="  mb-[24px] font-medium  text-dropDownData[18px] w-[85%] text-light_Grey bg-formInput">
             <PhoneInput
               inputStyle={{
                 width: "100%",
@@ -206,11 +210,10 @@ export default function Contact() {
           </div>
           <div className="w-[85%]">
             <button
-              className={` w-[100%]  py-[12px] font-medium  text-center px-[37px] rounded  text-[18px]   ${
-                isChecked
-                  ? " bg-primary text-white cursor-pointer hover:bg-primary-lighter"
-                  : "bg-primary text-white hover:bg-primary-lighter cursor-not-allowed "
-              }`}
+              className={` w-[100%]  py-[12px] font-medium  text-center px-[37px] rounded  text-[18px]   ${isChecked
+                ? " bg-primary text-white cursor-pointer hover:bg-primary-lighter"
+                : "bg-primary text-white hover:bg-primary-lighter cursor-not-allowed "
+                }`}
               disabled={!isChecked}
               onClick={handleSubmit}
             >

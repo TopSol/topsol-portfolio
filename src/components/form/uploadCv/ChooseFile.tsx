@@ -1,6 +1,6 @@
 import React from "react";
 
-const FileUpload = ({ handleFileChange, resumeFile }: any) => {
+const FileUpload = ({ handleFileChange, resumeFile }) => {
   return (
     <div className="flex items-center">
       <input

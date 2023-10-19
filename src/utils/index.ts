@@ -1,4 +1,4 @@
-export const validateJobApplicatonForm = (formData: any, resumeFile: any) => {
+export const validateJobApplicatonForm = (formData , resumeFile) => {
   if (!formData.name || !formData.email || !formData.phone ) {
     return { isValid: false, msg: "Please fill all fields" };
   }

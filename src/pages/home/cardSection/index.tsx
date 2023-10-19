@@ -157,7 +157,7 @@ export default function CardSection({ setBg, openModal, reviews, setSelectedId }
                 : "none",
             }}
           >
-            {reviews?.map((item: any, index: any) => {
+            {reviews?.map((item, index) => {
               return (
                 <>
                   <div
