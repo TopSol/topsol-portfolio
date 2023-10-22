@@ -22,3 +22,13 @@ function Careers() {
 }
 
 export default Careers;
+
+export function Head() {
+  return (
+    <>
+      <title>TOPSOL Innovative Solution</title>
+      <meta name="Career At Topsol" content="TOPSOL | Careers " />
+      <link rel="icon" href="/topsol-favicon.png" type="image/png"></link>
+    </>
+  );
+}

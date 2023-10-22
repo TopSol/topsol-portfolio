@@ -16,3 +16,13 @@ function JobDetail(props: any) {
 }
 
 export default JobDetail;
+
+export function Head() {
+  return (
+    <>
+      <title>TOPSOL Innovative Solution</title>
+      <meta name="Job Details" content="TOPSOL | Dob Details " />
+      <link rel="icon" href="/topsol-favicon.png" type="image/png"></link>
+    </>
+  );
+}

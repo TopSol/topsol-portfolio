@@ -33,3 +33,13 @@ const aboutUs = () => {
   );
 };
 export default aboutUs;
+
+export function Head() {
+  return (
+    <>
+      <title>TOPSOL Innovative Solution</title>
+      <meta name="description" content="TOPSOL | About Us " />
+      <link rel="icon" href="/topsol-favicon.png" type="image/png"></link>
+    </>
+  );
+}

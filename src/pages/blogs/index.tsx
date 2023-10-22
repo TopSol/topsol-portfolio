@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
-import Header from '../../components/headerSection';
-import Heading from './Heading';
-import Footer from '../../components/footerSection';
-import Card from './Card';
+import Header from "../../components/headerSection";
+import Heading from "./Heading";
+import Footer from "../../components/footerSection";
+import Card from "./Card";
 export default function index() {
   return (
     <div>
@@ -24,9 +24,19 @@ export default function index() {
       />
       <Heading />
       <Card />
-      <div className='mt-[100px] md:mt-[139px]'>
+      <div className="mt-[100px] md:mt-[139px]">
         <Footer />
       </div>
     </div>
-  )
+  );
+}
+
+export function Head() {
+  return (
+    <>
+      <title>TOPSOL Innovative Solution</title>
+      <meta name="Blogs" content="TOPSOL | Blogs " />
+      <link rel="icon" href="/topsol-favicon.png" type="image/png"></link>
+    </>
+  );
 }

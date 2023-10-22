@@ -29,3 +29,12 @@ export default function index() {
     </div>
   );
 }
+export function Head() {
+  return (
+    <>
+      <title>TOPSOL Innovative Solution</title>
+      <meta name="Services We Provide At Topsol" content="TOPSOL | Services " />
+      <link rel="icon" href="/topsol-favicon.png" type="image/png"></link>
+    </>
+  );
+}
