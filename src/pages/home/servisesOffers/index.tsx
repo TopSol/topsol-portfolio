@@ -44,7 +44,7 @@ function ServicesOffers() {
       <div className="grid mt-[36px] md:mt-[85px] gap-x-[27px] gap-y-[48px] md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
         {cards?.map((item, index) => (
           <div key={index}>
-            <Link to={"/servicesDetail"} state={{ serviceData: item }}>
+            <Link to={"/servicesDetail"} state={{ service: item }}>
               <ServicesCards serviceData={item} />
             </Link>
           </div>
