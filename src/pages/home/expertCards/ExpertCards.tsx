@@ -7,7 +7,6 @@ type appProps = {
 
 function ExpertCards({ title, avatar }: appProps) {
   const hasTitle = !!title;
-  console.log(hasTitle, "true false value is hear -----");
   // transform origin-top transition-transform ease-in-out  hover:scale-y-125
   return (
     <div className={`${hasTitle ? "min-h-[180px]" : ""} `}>

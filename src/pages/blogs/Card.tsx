@@ -119,7 +119,6 @@ export default function Card() {
                 }`}
                 key={index}
                 onClick={() => {
-                  console.log("hello im am hear -----------------");
                   setSelectedCategory(item.name);
                 }}
               >

@@ -12,9 +12,10 @@ export default function index({ location }) {
     <div>
       <Navbar />
       <HeroSection servicedata={state?.serviceData} />
-      <InfoSection />
-      <ReadyToOutshine />
-      <ProjectSection />
+      <InfoSection servicedata={state?.serviceData} />
+      <ReadyToOutshine servicedata={state?.serviceData} />
+      {state?.servicedata?.showProjects && <ProjectSection />}
+      {/* <ProjectSection /> */}
       <Footer />
     </div>
   );

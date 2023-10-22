@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function InfoSection() {
+export default function InfoSection(servicedata) {
   return (
     <div className="flex flex-col md:flex-row  md:container md:mx-auto  mt-14 ">
       <div className="xl:w-[50%] lg:w-[45%] md:w-[45%] w-[100%] justify-center  ">
@@ -12,17 +12,13 @@ export default function InfoSection() {
       </div>
       <div className=" xl:w-[40%] lg:w-[50%] md:w-[50%] w-[100%]  text-center md:text-left flex flex-col md:justify-center mt-6 lg:mt-12 ">
         <p className=" text-[18px] font-medium text-primary">
-          Work with the Tech Leader.
+          {servicedata?.servicedata?.heading}
         </p>
         <h1 className="  text-[20px] lg:text-[25px]  xl:text-[30px] font-semibold  mt-[10px] xl:mt-[34px] ">
-          Topsol brings ideas to life, leveraging modern technologies.
+          {servicedata?.servicedata?.details?.mainHeading}
         </h1>
         <p className=" text-justify mx-[24px] md:mx-0 text-[15px] lg:text-[18px] xl:text-[20px] font-medium mt-[10px] xl:mt-[34px] ">
-          Founded 2021, Topsol's evolution from a compact team to a dynamic
-          mobile-first software development company showcases our commitment.
-          With industry-leading team satisfaction, recognized by analysts, and a
-          growing client roster including, we're honored to have supported
-          startups and distinguished brands alike.
+          {servicedata?.servicedata?.details?.initialText}
         </p>
       </div>
     </div>
