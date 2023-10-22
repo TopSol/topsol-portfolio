@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { PopupButton } from "react-calendly";
 // @ts-ignore
 import heroImg from "../../../images/hero-bg.png";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import { Link } from "gatsby";
 export default function Hero() {
+  const [root, setRoot] = useState(null);
   // let root = document.body;
 
-  let root;
+  // let root;
   useEffect(() => {
-    root = document.body;
+    setRoot(document.body);
   }, []);
 
   return (
