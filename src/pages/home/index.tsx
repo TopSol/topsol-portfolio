@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import Modal from "./components/model/Modal";
 import reviews from "../../staticData/cardSectionData";
 import { reviewTypes } from "../../types/interfaceTypes";
+import MetaPixel from "../../utils/meta/metaPixel";
 
 function Home() {
   const [bg, setBg] = useState("#fff");
@@ -34,6 +35,8 @@ function Home() {
 
   return (
     <div className="">
+      <MetaPixel />
+
       <Navbar />
       <Hero />
       <motion.div
