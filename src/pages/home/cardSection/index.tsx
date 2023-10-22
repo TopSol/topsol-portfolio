@@ -164,7 +164,7 @@ export default function CardSection({
                   <div
                     id={item.id}
                     onClick={() => handleClick(item)}
-                    className="mx-4 lg:mx-0  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col items-center "
+                    className="mx-4 cursor-pointer lg:mx-0  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col items-center "
                   >
                     <img
                       key={index}
@@ -175,6 +175,10 @@ export default function CardSection({
                     <h1 className="text-[22px]  font-semibold text-white mt-[46px] ">
                       {item?.heading}
                     </h1>
+
+                    <p className="text-[18px] ml-4 mr-4 text-white mt-[20px] text-center">
+                      {item?.desc.slice(0, 100)}...
+                    </p>
                   </div>
                 </>
               );

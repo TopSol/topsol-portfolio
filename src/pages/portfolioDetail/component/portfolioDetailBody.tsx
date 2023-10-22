@@ -4,6 +4,10 @@ import check1 from "../../../images/check1.png";
 import LineAnimation from "../../../components/LineAnimation";
 
 export default function PortfolioDetailBody({ data }: any) {
+  console.log(
+    data && data.imageUrl,
+    "????????????????????????????????????????????????????"
+  );
   return (
     <div>
       <div className="flex font-montserrat mt-[250px] md:mt-[350px] flex-col md:flex-row md:container justify-between  md:mx-auto">
@@ -61,7 +65,8 @@ export default function PortfolioDetailBody({ data }: any) {
         </div>
 
         <div className="md:w-[80%]  mx-5 md:mx-auto">
-          <div className="font-montserrat font-medium text-[24px] text-black  break-words text-justify mt-5"
+          <div
+            className="font-montserrat font-medium text-[24px] text-black  break-words text-justify mt-5"
             dangerouslySetInnerHTML={{
               __html: `<p>        ${data?.unlockDesc}    </p>`,
             }}

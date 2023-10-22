@@ -58,8 +58,7 @@ function OurPortfolio() {
       </div>
       <div className=" md:mt-[53px]   grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-x-[30px]  ">
         {portfolioData?.map((item: any, index: any) => (
-          // <Link to={`/portfolio?id=${item.id}`} key={index}></Link>
-          <Link to={"/portfolio"}>
+          <Link to={`/portfolioDetail?id=${item.id}`} key={index}>
             <div
               key={index}
               className="rounded mt-[28px]  group hover:origin-left hover:scale-x-105 hover:duration-600 hover:border-white
