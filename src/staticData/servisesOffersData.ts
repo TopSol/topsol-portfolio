@@ -13,7 +13,7 @@ import svg3 from "../images/Svg/Group3.svg";
 
 const cards = [
   {
-    heading: "CUSTOM SOFTWARE",
+    heading: "CUSTOM SOFTWARE DEVELOPMENT",
     desc: "Our Custom Software Solutions are meticulously designed to fit your unique needs, delivering efficiency, scalability, and a technological edge",
     avatar: Img1,
     bg: svg1,
@@ -37,7 +37,7 @@ const cards = [
     bg: svg3,
   },
   {
-    heading: "MOBILE APPS",
+    heading: "MOBILE APPS DEVELOPMENT",
     desc: "Our Mobile App solutions blend innovation and functionality, crafting dynamic experiences that connect users with your brand on the go",
     avatar: Img5,
     bg: svg,

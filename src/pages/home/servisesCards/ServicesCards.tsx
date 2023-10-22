@@ -10,8 +10,8 @@ function ServicesCards({ serviceData }) {
         <div className="mb-2 w-[70px] h-[70px] mt-2 translate-x-[-50%] absolute top-0 left-[50%] hoverImage">
           <img src={serviceData?.bg} alt="" />
         </div>
-        <div className="py-4 font-extrabold z-[2] ">
-          <p>{serviceData?.heading}</p>
+        <div className="py-4 font-extrabold z-[2] text-center">
+          <p>{serviceData?.heading.replace("DEVELOPMENT", "")}</p>
         </div>
         <div className="text-center pt-4 leading-8 z-[2] ">
           <p>{serviceData?.desc}</p>

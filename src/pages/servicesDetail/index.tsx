@@ -5,14 +5,15 @@ import Footer from "../../components/footerSection";
 import HeroSection from "./component/HeroSection";
 import ProjectSection from "./component/projectSection";
 import ReadyToOutshine from "./component/ReadyToOutshine";
-export default function index() {
+export default function index({ location }) {
+  const { state } = location;
 
   return (
     <div>
       <Navbar />
-      <HeroSection />
+      <HeroSection servicedata={state?.serviceData} />
       <InfoSection />
-      <ReadyToOutshine/>
+      <ReadyToOutshine />
       <ProjectSection />
       <Footer />
     </div>
