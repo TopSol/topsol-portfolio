@@ -5,12 +5,12 @@ import heroImg from "../../../images/hero-bg.png";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import { Link } from "gatsby";
 export default function Hero() {
-  let root = document.body;
+  // let root = document.body;
 
-  // let root;
-  // useEffect(() => {
-  //   root = document.body;
-  // }, []);
+  let root;
+  useEffect(() => {
+    root = document.body;
+  }, []);
 
   return (
     <div

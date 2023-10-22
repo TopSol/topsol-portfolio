@@ -45,12 +45,7 @@ function ServicesOffers() {
         {cards?.map((item, index) => (
           <div key={index}>
             <Link to={"/servicesDetail"}>
-              <ServicesCards
-                avatar={item.avatar}
-                heading={item.heading}
-                desc={item.desc}
-                bg={item.bg}
-              />
+              <ServicesCards serviceData={item} />
             </Link>
           </div>
         ))}
