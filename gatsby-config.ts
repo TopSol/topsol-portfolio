@@ -2,8 +2,10 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `TopSol-portfolio`,
+    title: `TOPSOL`,
     siteUrl: `https://www.topsol.org`,
+    description: `TopSol Innovative Solution`,
+    defaultImage: `./src/images/main-logo2.png`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

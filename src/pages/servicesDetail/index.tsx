@@ -20,6 +20,7 @@ export default function ServiceDetails({ location }) {
         heading={state?.service?.heading}
         mainHeading={state?.service?.details?.mainHeading}
         initialText={state?.service?.details?.initialText}
+        image={state?.service?.details?.image}
       />
       <ReadyToOutshine servicedata={state?.service} />
       {state?.service?.showProjects && <ProjectSection />}

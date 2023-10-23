@@ -4,18 +4,24 @@ interface Props {
   heading?: string;
   mainHeading?: string;
   initialText?: string;
+  image?: any;
 }
 
 export default function InfoSection({
   heading,
   mainHeading,
   initialText,
+  image,
 }: Props) {
   return (
     <div className="flex flex-col md:flex-row  md:container md:mx-auto  mt-14 ">
       <div className="xl:w-[50%] lg:w-[45%] md:w-[45%] w-[100%] justify-center  ">
         <img
-          src="https://res.cloudinary.com/asifsaythe/image/upload/v1692950236/new_portfolio/z18gbk01ycabyflhuixa.png"
+          // src="https://res.cloudinary.com/asifsaythe/image/upload/v1692950236/new_portfolio/z18gbk01ycabyflhuixa.png"
+          src={
+            image ||
+            "https://res.cloudinary.com/asifsaythe/image/upload/v1692950236/new_portfolio/z18gbk01ycabyflhuixa.png"
+          }
           alt="#"
           className="w-[90%] justify-center mr-auto "
         />

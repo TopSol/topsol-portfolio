@@ -16,7 +16,7 @@ const portfolioData = [
     id: "TsYT4gN8ouV8Pg3vKd30",
     title: "Aura: Meditation & Sleep",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/topsol-portfolio.appspot.com/o/portfolio-imgs%2FGroup%209194.png?alt=media&token=bae688d4-44e9-4375-b4d8-55a59dcb3418 ",
+      "https://res.cloudinary.com/asifsaythe/image/upload/v1698039475/new_portfolio/zi1kvirmil2cx16qjgrh.png",
   },
   {
     id: "1MTT0c344phcrAtPNPjk",

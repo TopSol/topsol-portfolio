@@ -89,7 +89,11 @@ function TopSolExperts() {
           {selectedArray?.map((item: any, index) => {
             return (
               <div className="  " key={index}>
-                <ExpertCards title={item.title} avatar={item.avatar} />
+                <ExpertCards
+                  title={item.title}
+                  border={selectedCategory !== "Technologies"}
+                  avatar={item.avatar}
+                />
               </div>
             );
           })}

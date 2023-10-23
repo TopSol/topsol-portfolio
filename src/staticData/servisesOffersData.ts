@@ -10,6 +10,14 @@ import svg from "../images/Svg/Group.svg";
 import svg1 from "../images/Svg/Group1.svg";
 import svg2 from "../images/Svg/Group2.svg";
 import svg3 from "../images/Svg/Group3.svg";
+import customSoftware from "../images/servicesImages/Custom_Software.png";
+import devOps from "../images/servicesImages/devops.png";
+import team from "../images/servicesImages/team_Augmentation.png";
+import workshop from "../images/servicesImages/discover_workshop.png";
+import mobileApps from "../images/servicesImages/mobile_apps.png";
+import qualityAssurance from "../images/servicesImages/quality_assurance.png";
+import uiux from "../images/servicesImages/ui_ux_design.png";
+import aiChatGPT from "../images/servicesImages/Ai_and_chatgpt.png";
 
 const cards = [
   {
@@ -18,6 +26,7 @@ const cards = [
     avatar: Img1,
     bg: svg1,
     details: {
+      image: customSoftware,
       mainHeading: "Tailoring Solutions for Your Success",
       initialText:
         "Custom software development is a strategic approach to creating software solutions that are precisely aligned with the unique needs and requirements of your business or organization. Unlike off-the-shelf software, custom solutions are meticulously designed and developed to address your specific challenges, goals, and workflows.",
@@ -50,6 +59,7 @@ const cards = [
     avatar: Img2,
     bg: svg2,
     details: {
+      image: devOps,
       mainHeading: "Accelerating Software Delivery and Collaboration",
       initialText:
         "DevOps, short for Development and Operations, is a set of practices, tools, and cultural philosophies that bring together software development and IT operations. It aims to reduce the traditionally isolated roles of these two departments and streamline the software development lifecycle for faster, more reliable delivery. Our DevOps Services serve as a crucial bridge, ensuring alignment between development and operations teams, fostering a culture of collaboration and continuous improvement.",
@@ -81,6 +91,7 @@ const cards = [
     avatar: Img3,
     bg: svg,
     details: {
+      image: team,
       mainHeading:
         "Team Augmentation Services: Enhancing Your Project Capabilities",
       initialText:
@@ -109,6 +120,7 @@ const cards = [
     avatar: Img4,
     bg: svg3,
     details: {
+      image: workshop,
       mainHeading:
         "Discover Workshop: Fueling Growth, Efficiency, and Innovation",
       initialText:
@@ -141,6 +153,7 @@ const cards = [
     avatar: Img5,
     bg: svg,
     details: {
+      image: mobileApps,
       mainHeading: "Mobile Apps Development: Innovating User Experiences",
       initialText:
         "In the fast-paced digital landscape, mobile apps have become an integral part of businesses' success. Our Mobile App Development solutions seamlessly blend innovation and functionality to create dynamic and user-centric experiences, ensuring your brand remains accessible to customers on the go.",
@@ -185,6 +198,7 @@ const cards = [
     avatar: Img6,
     bg: svg1,
     details: {
+      image: qualityAssurance,
       mainHeading: "Ensuring Flawless Performance and User Experiences",
       initialText:
         "In today's fast-paced and technology-driven world, delivering impeccable software and products is imperative for success. Our Quality Assurance Services play a pivotal role in achieving this goal.",
@@ -221,6 +235,7 @@ const cards = [
     avatar: Img7,
     bg: svg2,
     details: {
+      image: uiux,
       mainHeading: "UI/UX Design: Elevating User Experiences",
       initialText:
         "In the digital age, our UI/UX Design team excels at creating immersive and user-centric interfaces that seamlessly blend aesthetics with functionality, thereby providing users with unparalleled journeys through digital platforms.",
@@ -265,6 +280,7 @@ const cards = [
     avatar: Img8,
     bg: svg3,
     details: {
+      image: aiChatGPT,
       mainHeading: "AI & Chat GPT Services: Revolutionizing Conversational AI",
       initialText:
         "Our AI & Chat GPT services represent a groundbreaking leap in the field of conversational artificial intelligence. These services leverage cutting-edge technology to create dynamic, engaging conversations and streamline automation processes. Here's a detailed look at how these services are transforming the way we interact with machines.",

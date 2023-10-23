@@ -109,75 +109,99 @@ const Industries = [
 const technologies = [
   {
     avatar: Tec_1,
+    title: "Azure",
   },
   {
     avatar: Tec_2,
+    title: "Python",
   },
   {
     avatar: Tec_3,
+    title: "Android",
   },
   {
     avatar: Tec_4,
+    title: "Firebase",
   },
   {
     avatar: Tec_5,
+    title: "TypeScript",
   },
   {
     avatar: Tec_6,
+    title: "JavasScript",
   },
   {
     avatar: Tec_7,
+    title: "AWS",
   },
   {
     avatar: Tec_8,
+    title: "Node.js",
   },
   {
     avatar: Tec_9,
+    title: "Flutter",
   },
   {
     avatar: Tec_10,
+    title: "MongoDB",
   },
   {
     avatar: Tec_11,
+    title: "Swift",
   },
   {
     avatar: Tec_12,
+    title: "Heroku",
   },
   {
     avatar: Tec_13,
+    title: "C#",
   },
   {
     avatar: Tec_14,
+    title: "MySQL",
   },
   {
     avatar: Tec_15,
+    title: "Kubernetes",
   },
   {
     avatar: Tec_16,
+    title: "Google Cloud",
   },
   {
     avatar: Tec_17,
+    title: "Express.js",
   },
   {
     avatar: Tec_18,
+    title: "Laravel",
   },
   {
     avatar: Tec_19,
+    title: "Next.js",
   },
   {
     avatar: Tec_20,
+    title: "Docker",
   },
   {
     avatar: Tec_21,
+    title: "WordPress",
   },
   {
     avatar: Tec_22,
+    title: "React",
   },
   {
     avatar: Tec_23,
+    title: "GraphQL",
   },
   {
     avatar: Tec_24,
+    title: "PostgreSQL",
   },
 ];
 const data = { technologies, Industries, Values };
