@@ -24,8 +24,8 @@ export function Head() {
     <>
       <title>TOPSOL Innovative Solution</title>
       <meta
-        name="Cotact us to know more about TOPSOL"
-        content="TOPSOL | Contect Us "
+        name="description"
+        content="Topsol Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
       />
 
       <meta property="og:type" content="website" />

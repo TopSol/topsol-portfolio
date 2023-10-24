@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
     title: `TOPSOL`,
     siteUrl: `https://www.topsol.org`,
     description: `TopSol Innovative Solution`,
-    defaultImage: `./src/images/main-logo2.png`,
+    defaultImage: `./src/images/favicon-01.png`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
