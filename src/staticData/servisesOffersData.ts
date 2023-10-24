@@ -18,6 +18,14 @@ import mobileApps from "../images/servicesImages/mobile_apps.png";
 import qualityAssurance from "../images/servicesImages/quality_assurance.png";
 import uiux from "../images/servicesImages/ui_ux_design.png";
 import aiChatGPT from "../images/servicesImages/Ai_and_chatgpt.png";
+import customSoftwareHead from "../images/servicesHeader/Group 9242.png";
+import devOpsHead from "../images/servicesHeader/Devops.png";
+import teamHead from "../images/servicesHeader/Team Augmentation.png";
+import workshopHead from "../images/servicesHeader/Discover workshop.png";
+import mobileAppsHead from "../images/servicesHeader/Mobile Apps.png";
+import qualityAssuranceHead from "../images/servicesHeader/Quality Asurance.png";
+import uiuxHead from "../images/servicesHeader/Ui Ux design.png";
+import aiChatGPTHead from "../images/servicesHeader/Ai Chat gpt.png";
 
 const cards = [
   {
@@ -27,6 +35,7 @@ const cards = [
     bg: svg1,
     details: {
       image: customSoftware,
+      imageHead:customSoftwareHead,
       mainHeading: "Tailoring Solutions for Your Success",
       initialText:
         "Custom software development is a strategic approach to creating software solutions that are precisely aligned with the unique needs and requirements of your business or organization. Unlike off-the-shelf software, custom solutions are meticulously designed and developed to address your specific challenges, goals, and workflows.",
@@ -60,6 +69,7 @@ const cards = [
     bg: svg2,
     details: {
       image: devOps,
+      imageHead:devOpsHead,
       mainHeading: "Accelerating Software Delivery and Collaboration",
       initialText:
         "DevOps, short for Development and Operations, is a set of practices, tools, and cultural philosophies that bring together software development and IT operations. It aims to reduce the traditionally isolated roles of these two departments and streamline the software development lifecycle for faster, more reliable delivery. Our DevOps Services serve as a crucial bridge, ensuring alignment between development and operations teams, fostering a culture of collaboration and continuous improvement.",
@@ -92,6 +102,7 @@ const cards = [
     bg: svg,
     details: {
       image: team,
+      imageHead:teamHead,
       mainHeading:
         "Team Augmentation Services: Enhancing Your Project Capabilities",
       initialText:
@@ -121,6 +132,7 @@ const cards = [
     bg: svg3,
     details: {
       image: workshop,
+      imageHead:workshopHead,
       mainHeading:
         "Discover Workshop: Fueling Growth, Efficiency, and Innovation",
       initialText:
@@ -154,6 +166,7 @@ const cards = [
     bg: svg,
     details: {
       image: mobileApps,
+      imageHead:mobileAppsHead,
       mainHeading: "Mobile Apps Development: Innovating User Experiences",
       initialText:
         "In the fast-paced digital landscape, mobile apps have become an integral part of businesses' success. Our Mobile App Development solutions seamlessly blend innovation and functionality to create dynamic and user-centric experiences, ensuring your brand remains accessible to customers on the go.",
@@ -199,6 +212,7 @@ const cards = [
     bg: svg1,
     details: {
       image: qualityAssurance,
+      imageHead:qualityAssuranceHead,
       mainHeading: "Ensuring Flawless Performance and User Experiences",
       initialText:
         "In today's fast-paced and technology-driven world, delivering impeccable software and products is imperative for success. Our Quality Assurance Services play a pivotal role in achieving this goal.",
@@ -236,6 +250,7 @@ const cards = [
     bg: svg2,
     details: {
       image: uiux,
+      imageHead:uiuxHead,
       mainHeading: "UI/UX Design: Elevating User Experiences",
       initialText:
         "In the digital age, our UI/UX Design team excels at creating immersive and user-centric interfaces that seamlessly blend aesthetics with functionality, thereby providing users with unparalleled journeys through digital platforms.",
@@ -281,6 +296,7 @@ const cards = [
     bg: svg3,
     details: {
       image: aiChatGPT,
+      imageHead:aiChatGPTHead,
       mainHeading: "AI & Chat GPT Services: Revolutionizing Conversational AI",
       initialText:
         "Our AI & Chat GPT services represent a groundbreaking leap in the field of conversational artificial intelligence. These services leverage cutting-edge technology to create dynamic, engaging conversations and streamline automation processes. Here's a detailed look at how these services are transforming the way we interact with machines.",

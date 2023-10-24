@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { PopupButton } from "react-calendly";
 // @ts-ignore
-import heroImg from "../../../images/hero-bg.png";
+import heroImg from "../../../images/hero-bg.webp";
+import HeroGif from '../../../images/J4o.gif';
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import { Link } from "gatsby";
 export default function Hero() {
@@ -17,7 +18,7 @@ export default function Hero() {
     <div
       className="bg-cover  min-h-[100vh] bg-center flex items-center justify-center "
       style={{
-        backgroundImage: `url(${heroImg})`,
+        backgroundImage: `url(${HeroGif})`,
       }}
     >
       <div className="flex flex-col items-center justify-center  text-center px-4 sm:px-6 lg:px-8">
@@ -25,10 +26,10 @@ export default function Hero() {
           id="root"
           className="text-3xl sm:text-4xl  md:text-5xl text-primary  font-extrabold "
         >
-          Better <span className=" mt-4 text-black"> Approach to Develop </span>
+          Better <span className=" mt-4 text-white"> Approach to Develop </span>
           Software
         </h1>
-        <p className="mt-[52px] text-[15px] md:text-[22px]  ">
+        <p className="mt-[52px] text-[15px] md:text-[22px] text-white ">
           Accelerate your launch by 2x with our groundbreaking development
           process, and <br /> reduce costs significantly. Say goodbye to the
           tedious process of starting from scratch <br /> and embrace the future
@@ -48,7 +49,7 @@ export default function Hero() {
           <Link to="/contactUs">
             <PrimaryBtn
               text="Get a quote"
-              additionalClasses="text-primary text-[20px] font-semibold bg-transparent border-2 border-primary hover:text-white hover:bg-primary rounded-[10px] "
+              additionalClasses="text-white text-[20px] font-semibold bg-transparent border-2 border-white hover:text-white hover:bg-primary rounded-[10px] "
             />
           </Link>
         </div>
