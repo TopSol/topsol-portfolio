@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../images/main-logo.png";
 import navbarMenu from "../images/navbarMenu.png";
 import closeImg from "../images/close.png";
-import logoTwo from "../images/main-logo2.png";
+import logoTwo from "../images/main_logo2.png";
 import menuTwo from "../images/navbarMenu2.png";
 import { motion } from "framer-motion";
 
@@ -19,10 +19,11 @@ function Navbar() {
   return (
     <motion.div
       variants={variants}
-      className={`relative bg-primary-navbarBg   ${!open
-        ? "hover:bg-primary-white transition-colors duration-500"
-        : "bg-primary-navbarBg"
-        }`}
+      className={`relative bg-primary-navbarBg   ${
+        !open
+          ? "hover:bg-primary-white transition-colors duration-500"
+          : "bg-primary-navbarBg"
+      }`}
     >
       <motion.div className="md:container  mx-auto " id="navbar">
         <header>
@@ -59,9 +60,11 @@ function Navbar() {
               <img
                 src={closeImg}
                 onClick={() => setOpen(false)}
-                className={`h-6 w-6 cursor-pointer ${open ? "block" : "hidden"
-                  } `}
+                className={`h-6 w-6 cursor-pointer ${
+                  open ? "block" : "hidden"
+                } `}
               />
+              {/* helo */}
             </div>
             <div className={`w-full  ${open ? "block" : "hidden"}`} id="menu">
               <ul
