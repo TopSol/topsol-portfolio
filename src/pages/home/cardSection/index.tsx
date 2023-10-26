@@ -7,11 +7,12 @@ import { useInView } from "react-intersection-observer";
 import MouseFollower from "mouse-follower";
 import { reviewTypes } from "../../../types/interfaceTypes";
 import arrowup from "../../../images/Icons/arrowup.svg";
+import { Link } from "gatsby";
 
 type CardSectionProps = {
   openModal: (value: boolean) => void;
   reviews: reviewTypes[];
-  setSelectedId: (item: reviewTypes) => void;
+  setSelectedId: (id: string) => void;
 };
 
 gsap.registerPlugin(ScrollTrigger);
@@ -100,8 +101,8 @@ export default function CardSection({
     }
   }, [isWorking]);
 
-  const handleClick = (item: reviewTypes) => {
-    setSelectedId(item);
+  const handleClick = (id: string) => {
+    setSelectedId(id);
     openModal(true);
   };
 
@@ -154,7 +155,7 @@ export default function CardSection({
                 <>
                   <div
                     id={item.id}
-                    onClick={() => handleClick(item)}
+                    onClick={() => handleClick(item.id)}
                     className="mx-4 cursor-pointer lg:mx-0  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col "
                   >
                     <img

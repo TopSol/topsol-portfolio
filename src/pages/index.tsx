@@ -3,8 +3,10 @@ import type { PageProps } from "gatsby";
 import Home from "./home";
 import Logo from "../images/favicon-01.png";
 import metaImage from "../images/main-logo2.png";
+import { useParams } from "@reach/router";
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = ({ pageContext }) => {
+  console.log("params", pageContext);
   return (
     <div>
       <Home />
