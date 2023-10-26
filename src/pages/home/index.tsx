@@ -41,15 +41,8 @@ function Home() {
 
       <Navbar />
       <Hero />
-      <motion.div
-        initial={{ background: "#fff" }}
-        animate={{
-          background: bg,
-        }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-      >
+      <motion.div className="secSectionBg">
         <CardSection
-          setBg={setBg}
           openModal={openModal}
           reviews={reviews}
           setSelectedId={setSelectedId}

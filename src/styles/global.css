@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&family=Urbanist:wght@700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .hoverDive:hover .hoverImage {
@@ -12,18 +15,17 @@
 height: 300%; */
   transform: scale(50);
   transition: all 2s ease-in-out;
-
 }
 
 .hoverImage {
-  width: '100%';
-  height: '100%';
+  width: "100%";
+  height: "100%";
   transition: all 1s ease-in-out;
 }
 
 .hoverImages {
-  width: '100%';
-  height: '100%';
+  width: "100%";
+  height: "100%";
   background-color: transparent;
   transition: all 0.5s ease-in-out;
   border-radius: 100%;
@@ -33,9 +35,34 @@ height: 300%; */
   transform: scale(6.2, 50);
   transition: all 0.5s ease-in-out;
   /* transition-delay: 0.5s; */
-  background-color: #0B234C;
+  background-color: #0b234c;
 }
 
 .active-category {
-  background-color: #00B8F1;
+  background-color: #00b8f1;
+}
+
+.heroBackground {
+  background: url("../images/J4o.gif"), linear-gradient(#01112e, #005b77);
+  background-blend-mode: color-dodge;
+  background-size: cover;
+}
+
+.hero-text-sideLine {
+  position: relative;
+  font-weight: 300 !important;
+}
+.hero-text-sideLine::before {
+  content: "";
+  height: 77px;
+  width: 2px;
+  background-color: white;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.secSectionBg {
+  background: url("../images/secSection.svg");
+  background-size: contain;
 }
