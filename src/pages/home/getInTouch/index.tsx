@@ -7,87 +7,28 @@ import LineAnimation from "../../../components/LineAnimation";
 
 function GetInTouch() {
   return (
-    <div>
-      <div className="flex flex-col mt-[137px] justify-center items-center">
-        <div className="">
-          <h1 className="font-extrabold font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
-            Get in Touch
-          </h1>
+    <div className=" mt-[84px] flex md:w-[80%] w-[100%] items-center justify-center mx-auto  md:flex-row flex-col ">
+      <div className=" flex flex-col justify-center items-center md:items-start w-[50%] ">
+        <div className=" flex ">
+          <img src={touchImg1} className="" />
         </div>
+        <h1 className="font-extrabold mt-4 uppercase font-urbanist text-[26px] md:text-[40px] lg:text-[60px]  md:text-left  text-center">
+          let’s
+        </h1>
+        <h1 className="font-extrabold uppercase font-urbanist text-[26px] md:text-[40px] lg:text-[60px]  md:text-left  text-center">
+          get in <span className="text-primary">touch</span>
+        </h1>
         <LineAnimation
-          width="178px"
+          width="160px"
           height="7px"
           backgroundColor="#00B8F1"
-          marginTop="18px"
+          marginTop="10px"
         />
       </div>
-      <div className=" mt-[84px] flex justify-center  md:container mx-auto ">
-        <div className=" mr-[74px] lg:flex flex-col hidden ">
-          <div className="flex justify-center">
-            <img src={touchImg1} className="h-[102px] w-[144px]" />
-          </div>
-          <div>
-            <h2 className="text-[30px] mt-[40px] font-semibold my-6">
-              Let's Discuss Your Project
-            </h2>
-            <ul className=" mt-[36px] ">
-              <li className="flex py-2  ">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">
-                  Efficient Communication
-                </p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">Privacy and Security</p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">Fast Response</p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">
-                  Reduced Email Clutter
-                </p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">Customization</p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">Automated Routing</p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">Consistency</p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">Professionalism</p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">Less Spam</p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">Engagement</p>
-              </li>
-              <li className="flex py-2">
-                <img src={check1} className="mr-4 w-[26px]  h-[26px] mt-1" />{" "}
-                <p className=" text-[22px] font-medium">24/7 Availability</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="lg:w-[45%] w-[90%]  ">
-          <GoogleReCaptchaProvider reCaptchaKey="6Ld3fhcoAAAAAH4-XdxVLnTpos0snr6RyoJDARtn">
-            <ContactForm />
-          </GoogleReCaptchaProvider>
-        </div>
+      <div className=" md:w-[60%] w-[95%] justify-center items-center">
+        <GoogleReCaptchaProvider reCaptchaKey="6Ld3fhcoAAAAAH4-XdxVLnTpos0snr6RyoJDARtn">
+          <ContactForm />
+        </GoogleReCaptchaProvider>
       </div>
     </div>
   );

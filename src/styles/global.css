@@ -66,3 +66,10 @@ height: 300%; */
   background: url("../images/secSection.svg");
   background-size: contain;
 }
+.borderss:last-child{
+border-bottom: 0.738px solid white;
+padding-bottom: 20px;
+}
+.arrowAwards:hover svg path{
+  stroke: white;
+}

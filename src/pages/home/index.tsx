@@ -16,7 +16,7 @@ import { reviewTypes } from "../../types/interfaceTypes";
 import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
 import MetaPixel from "../../utils/meta/metaPixel";
-
+import Faqs from "./faqs";
 function Home() {
   const [bg, setBg] = useState("#fff");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,7 +38,6 @@ function Home() {
   return (
     <div className="">
       <MetaPixel />
-
       <Navbar />
       <Hero />
       <motion.div className="secSectionBg">
@@ -53,6 +52,7 @@ function Home() {
       <OurPortfolio />
       <RatingSection />
       <Awards />
+      <Faqs />
       <div className="mb-[116px]">
         <GetInTouch />
       </div>
