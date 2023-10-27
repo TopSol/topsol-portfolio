@@ -55,7 +55,7 @@ export const ToggleBar = () => {
         <img
           src={Logo}
           alt=""
-          className="z-[900] sm:w-[300px] w-[200px] max-w-none h-24 sm:h-36"
+          className="z-[900] sm:w-[230px] w-[200px] max-w-none h-24 sm:h-28"
         />
       </div>
       <motion.nav
@@ -68,7 +68,7 @@ export const ToggleBar = () => {
         ref={containerRef}
       >
         <motion.div
-          className="background sm:top-[32px] top-[0px]"
+          className="background sm:top-[18px] top-[10px]"
           variants={sidebar}
         />
         <Navigation />

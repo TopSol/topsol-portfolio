@@ -9,35 +9,20 @@ import LineAnimation from "../../../components/LineAnimation";
 
 function ServicesOffers() {
   return (
-    <div className=" bg-white py-[85px] lg:relative flex flex-col justify-center items-center px-2">
-      <div className="flex flex-col items-center justify-center lg:flex-row">
-        <div className="lg:mr-auto">
-          <img src={dotImg} className="lg:block hidden" />
-        </div>
-        <div className="md:w-1/2 flex flex-col justify-center items-center lg:mr-auto">
+    <div className="bg-gradient-to-b from-[#0B234C] to-[#00B8F1] py-[85px] lg:relative flex flex-col justify-center items-center px-2 ">
+      <div className="">
+        <div className="">
           <div className="">
-            <h1 className="font-extrabold font-montserrat text-[26px] md:text-34[px] lg:text-4xl text-center">
-              Services We Offer
+            <h1 className="font-extrabold text-white uppercase font-urbanist text-[26px] md:text-34[px] lg:text-4xl">
+              Explore our <span className="text-[#10BCF2]">services</span>
             </h1>
           </div>
           <LineAnimation
             width="178px"
             height="7px"
-            backgroundColor="#00B8F1"
+            backgroundColor="#fff"
             marginTop="22px"
           />
-          <div className=" text-[20px] md:mt-[27px] text-center md:block hidden">
-            <p>
-              From Industry Titans to Emerging Ventures - Topsol Empowers You
-              with the Fusion of Creative, Technical, and Business Expertise
-              Needed to Thrive
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="md:container relative hidden   2xl:right-24 mx-auto lg:flex justify-end ">
-        <div className="absolute  ">
-          <img src={circleImg} className="" alt="" />
         </div>
       </div>
 
