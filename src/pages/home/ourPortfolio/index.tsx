@@ -41,9 +41,9 @@ function OurPortfolio() {
     fetchPortFolios();
   }, []);
   return (
-    <div className=" w-[90%] mx-auto  flex flex-col mt-[50px] ">
+    <div className=" w-[80%] mx-auto  flex flex-col mt-[50px] ">
       <div className="flex flex-col items-center md:items-start ">
-        <div className="">
+        <div className="flex items-start justify-start">
           <h1 className="font-extrabold text-black font-urbanist uppercase text-[26px] md:text-34[px] lg:text-4xl md:text-left text-center">
             Our <span className="text-primary"> Portfolio </span>
           </h1>
@@ -56,7 +56,7 @@ function OurPortfolio() {
         />
         <p className="mt-[50px] font-figtree text-[20px] font-light md:w-[60%] w-[100%] text-center md:text-left">Explore our digital creations and innovative software solutions that empower businesses worldwide</p>
       </div>
-      <div className=" md:mt-[53px]  w-[100%] grid  md:grid-cols-2  xl:grid-cols-4  grid-cols-1  md:gap-x-4 ">
+      <div className=" md:mt-[53px]   w-[100%] grid  md:grid-cols-2  xl:grid-cols-4  grid-cols-1  md:gap-x-4 ">
         {portfolioData?.map((item: any, index: any) => (
           <div
             key={index}

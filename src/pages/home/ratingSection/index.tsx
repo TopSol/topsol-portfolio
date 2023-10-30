@@ -38,7 +38,7 @@ export default function index() {
   };
   return (
     <div className="  mt-[69px] lg:mt-[100px] flex justify-center ">
-      <div className="w-[90%]    2xl:w-[65%] ">
+      <div className="w-[85%]    ">
         <div className="flex flex-col justify-center items-center">
           <div className="">
             <h1 className="font-extrabold font-urbanist uppercase text-[26px] md:text-[34px] lg:text-4xl  text-center">
