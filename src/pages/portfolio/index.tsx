@@ -11,6 +11,7 @@ export default function index() {
     <div>
       <Navbar />
       <VideoHero
+        page="portfolio"
         image="https://res.cloudinary.com/asifsaythe/image/upload/v1697092135/new_portfolio/portfolio_fhqqft.png"
         title="Our Portfolio"
       />

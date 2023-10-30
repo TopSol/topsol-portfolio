@@ -7,9 +7,10 @@ import ServicesOffers from "../pages/home/servisesOffers";
 interface Iprops {
   title: string;
   image?: string;
+  page: string
 }
 
-export default function VideoHero({ title, image }: Iprops) {
+export default function VideoHero({ title, image, page }: Iprops) {
   const splitTitle = title?.split(" ");
   const firstName = splitTitle[0];
   const lastName = splitTitle.slice(1).join(" ");
@@ -17,10 +18,10 @@ export default function VideoHero({ title, image }: Iprops) {
   return (
     <div className=" ">
       <div
-      // className="bg-cover  bg-center xl:h-[100vh]"
-      // style={{
-      //   backgroundImage: `url(${heroImage})`,
-      // }}
+        className="bg-cover h-[100vh]"
+        style={{
+          backgroundImage: page === 'services' ? "none" : `url(${heroImg})`,
+        }}
       >
         <section className="   flex flex-col  md:container mx-auto ">
           <div className="   mx-6   md:mx-auto md:w-[90%] ">
@@ -40,7 +41,8 @@ export default function VideoHero({ title, image }: Iprops) {
                 <div className="flex  justify-center md:justify-start">
                   <PrimaryBtn
                     text="Get Started"
-                    additionalClasses="px-[68px] py-[17px] mt-[68px] text-[22px] mb-[113px] text-white "
+                    icon={true}
+                    additionalClasses="text-primary flex items-center font-figtree py-[10px] sm:px-[88px] px-[26px] bg-none text-[18px] mt-[68px] text-white rounded-[6px] "
                   />
                 </div>
               </Link>

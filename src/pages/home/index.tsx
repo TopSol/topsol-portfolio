@@ -60,7 +60,7 @@ function Home() {
           setSelectedId={setSelectedId}
         />
       </motion.div>
-      <ServicesOffers />
+      <ServicesOffers page={'home'} />
       <TopSolExperts />
       <OurPortfolio />
       <RatingSection />

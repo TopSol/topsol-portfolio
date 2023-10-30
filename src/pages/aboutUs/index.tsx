@@ -15,6 +15,7 @@ const aboutUs = () => {
     <div>
       <Navbar />
       <VidoeHero
+        page="about"
         image="https://res.cloudinary.com/asifsaythe/image/upload/v1697092135/new_portfolio/about_us_lcfcpj.png"
         title="About TopSol"
       />

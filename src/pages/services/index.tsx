@@ -18,10 +18,11 @@ export default function index() {
       <ToggleBar />
       <div className="services-page-hero">
         <VideoHero
+          page="services"
           title="Our Services"
           image="https://res.cloudinary.com/asifsaythe/image/upload/v1697023024/new_portfolio/flat-lay-business-concept_1_q6ptf7.png"
         />
-        <ServicesOffers />
+        <ServicesOffers page='services' />
       </div>
       <Project />
       <RatingSection />

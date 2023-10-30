@@ -103,3 +103,9 @@ padding-bottom: 20px;
   background-blend-mode: color-dodge;
   background-size: cover;
 }
+.service-cards-transition div img {
+  transition: all 0.5s ease-in-out;
+}
+.service-cards-transition:hover div img {
+  transform: scale(1.3);
+}

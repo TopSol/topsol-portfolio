@@ -3,10 +3,15 @@ import ServicesCards from "../servisesCards/ServicesCards";
 import cards, { imgCards } from "../../../staticData/servisesOffersData";
 import { Link } from "gatsby";
 import LineAnimation from "../../../components/LineAnimation";
+import PrimaryBtn from "../../../components/PrimaryBtn";
 
-function ServicesOffers() {
+function ServicesOffers({ page }) {
   return (
-    <div className="  py-[50px] relative flex flex-col justify-center items-center px-2">
+    <div className="  py-[50px] relative flex flex-col justify-center items-center px-2"
+      style={{
+        background: page === 'services' ? "none" : "linear-gradient(#0B234C, #00B8F1)"
+      }}
+    >
       <div className=" flex flex-col md:justify-start justify-center items-center  ">
         <h1 className="font-extrabold text-white  uppercase font-urbanist text-[26px] md:text-34[px] lg:text-4xl text-center md:text-left">
           Explore our <span className="text-primary">services</span>
@@ -27,6 +32,15 @@ function ServicesOffers() {
             </Link>
           </div>
         ))}
+      </div>
+      <div className="mt-16">
+        <Link to="/services">
+          <PrimaryBtn
+            text="All Services"
+            icon={true}
+            additionalClasses="text-primary flex items-center font-figtree py-[10px] sm:px-[88px] px-[26px] bg-none text-[18px] border-2 border-white text-white rounded-[6px] "
+          />
+        </Link>
       </div>
     </div>
   );
