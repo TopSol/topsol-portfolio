@@ -3,6 +3,7 @@ import ServicesCards from "../servisesCards/ServicesCards";
 import cards, { imgCards } from "../../../staticData/servisesOffersData";
 import { Link } from "gatsby";
 import LineAnimation from "../../../components/LineAnimation";
+import PrimaryBtn from "../../../components/PrimaryBtn";
 
 function ServicesOffers() {
   return (
@@ -30,6 +31,15 @@ function ServicesOffers() {
             </Link>
           </div>
         ))}
+      </div>
+      <div className="mt-16">
+        <Link to="/services">
+          <PrimaryBtn
+            text="All Services"
+            icon={true}
+            additionalClasses="text-primary flex items-center font-figtree py-[10px] sm:px-[88px] px-[26px] bg-none text-[18px] border-2 border-white text-white rounded-[6px] "
+          />
+        </Link>
       </div>
     </div>
   );

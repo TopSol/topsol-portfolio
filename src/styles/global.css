@@ -90,3 +90,9 @@ height: 300%; */
   width: 100%;
   transform: scale(1.5);
 }
+.service-cards-transition div img {
+  transition: all 0.5s ease-in-out;
+}
+.service-cards-transition:hover div img {
+  transform: scale(1.3);
+}

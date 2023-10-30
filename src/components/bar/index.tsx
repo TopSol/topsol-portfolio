@@ -6,7 +6,7 @@ import { Navigation } from "./Navigation";
 import "./style.css";
 import Logo from "../../images/main-logo2.png";
 import Logo2 from "../../images/main-logo.png";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 
 const sidebar = {
   open: (width = 1000) => ({
@@ -51,16 +51,16 @@ export const ToggleBar = () => {
   });
   return (
     <div className={` ${"bg-white"} `}>
-      <div className="">
+      <Link to="/">
         <img
           src={Logo}
           alt=""
           className="z-[900] sm:w-[230px] w-[200px] max-w-none h-24 sm:h-28"
         />
-      </div>
+      </Link>
       <motion.nav
         className={`navbar ${
-          isOpen && "bg-[#0b234c]"
+          isOpen && ""
         } transition-bg duration-500 ease-in-out`}
         initial={false}
         animate={isOpen ? "open" : "closed"}
@@ -68,7 +68,7 @@ export const ToggleBar = () => {
         ref={containerRef}
       >
         <motion.div
-          className="background sm:top-[18px] top-[10px]"
+          className="background sm:top-[18px] top-[10px] relative"
           variants={sidebar}
         />
         <Navigation />
