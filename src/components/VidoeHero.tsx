@@ -18,7 +18,7 @@ export default function VideoHero({ title, image, page }: Iprops) {
   return (
     <div className=" ">
       <div
-        className="bg-cover h-[100vh]"
+        className={` ${page === 'services' ? "none" : 'bg-cover h-[100vh] flex items-center'}`}
         style={{
           backgroundImage: page === 'services' ? "none" : `url(${heroImg})`,
         }}
@@ -27,10 +27,10 @@ export default function VideoHero({ title, image, page }: Iprops) {
           <div className="   mx-6   md:mx-auto md:w-[90%] ">
             <div className="  ">
               <h1 className="text-4xl mt-[158px] text-center md:text-start md:text-[54px] font-bold font-montserrat">
-                <span className="text-white">{firstName}</span>{" "}
+                <span className={`${page === 'services' ? 'text-white' : 'text-textColors'}`}>{firstName}</span>{" "}
                 <span className="text-primary">{lastName}</span>
               </h1>{" "}
-              <h3 className="text-center md:text-start md:text-[22px]  font-figtree font-light  text-white hero-text-sideLine   lg:w-[75%] mt-[56px] ">
+              <h3 className={`text-center md:text-start md:text-[22px]  font-figtree font-light  ${page === 'services' ? 'text-white' : 'text-textColors'} hero-text-sideLine   lg:w-[75%] mt-[56px]`} >
                 Topsol is a software and mobile app development company with a
                 world-class team of talented data scientists, developers,
                 designers, mathematicians, engineers, and creative artists. We

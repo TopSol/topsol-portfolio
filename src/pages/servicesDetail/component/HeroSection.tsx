@@ -4,9 +4,10 @@ import { Link } from "gatsby";
 
 interface propTypes {
   servicedata?: any;
+  imageHead: string
 }
 
-export default function HeroSection(servicedata: propTypes) {
+export default function HeroSection({ servicedata, imageHead }: propTypes) {
   return (
     <div>
       <div className="pb-[30px] md:pb-[123px] md:pt-[101px] bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
@@ -16,7 +17,7 @@ export default function HeroSection(servicedata: propTypes) {
               Our
               <br />
               <span className="md:inline xl:w-[100%] text-primary">
-                {`${servicedata?.servicedata?.heading}`}
+                {`${servicedata?.heading}`}
               </span>
               <br />
               {/* Development <br /> */}
@@ -26,7 +27,7 @@ export default function HeroSection(servicedata: propTypes) {
             </p>
             <div className="xl:my-12 lg:my-8 my-4 md:container md:mx-auto mx-[24px]">
               <p className="text-primary-white font-medium text-[16px] lg:text-[22px] ">
-                {servicedata?.servicedata?.desc}
+                {servicedata?.desc}
               </p>
             </div>
             <Link to="/contactUs">
@@ -40,7 +41,7 @@ export default function HeroSection(servicedata: propTypes) {
           <div className="mt-[36px] md:container  md:mx-auto justify-center items-center flex flex-col">
             <img
               className="items-center w-[80%] md:w-[100%] lg:ml-[58px] ml-0"
-              src={ServicesDet}
+              src={imageHead}
               alt="#"
             />
           </div>
