@@ -62,13 +62,14 @@ function Awards() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center pb-[105px] md:mt-[106px] mt-[78px]  bg-[#F4F4F4]">
-        <div className="flex flex-col justify-center items-center">
-          <div className="">
-            <h1 className="font-extrabold mt-[68px] font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
-              Awards and Honors
-            </h1>
-          </div>
+      <div className="flex  flex-col md:flex-row items-center justify-around h-[431px]  md:mt-[106px] mt-[78px] bg-[#F4F4F4] ">
+        <div className="flex flex-col  items-center md:items-start mb-6">
+          <h1 className="font-extrabold  font-urbanist  text-[26px] md:text-[34px] lg:text-[48px]  uppercase leading-[120%] ">
+            AWARD &
+          </h1>
+          <h1 className="font-extrabold font-urbanist  text-primary text-[26px] md:text-[34px] lg:text-[48px]  uppercase leading-[120%] ">
+            HONOURS
+          </h1>
           <LineAnimation
             width="178px"
             height="7px"
@@ -76,11 +77,8 @@ function Awards() {
             marginTop="18px"
           />
         </div>
-        <div className="flex justify-center items-center mt-[84px]  ">
-          <button className="button " onClick={previous}>
-            <img src={prevImg} />
-          </button>
-          <div className=" w-[90vw] ">
+        <div className="flex flex-col justify-center items-center    ">
+          <div className=" md:w-[50vw] w-[90vw] ">
             <Slider {...settings} ref={setSlider}>
               {images?.map((review, id) => {
                 return (
@@ -95,10 +93,20 @@ function Awards() {
               })}
             </Slider>
           </div>
-
-          <button className="button" onClick={next}>
-            <img src={nextImg} />
-          </button>
+          <div className="flex mt-[32px]">
+            <button className="button arrowAwards bg-white hover:bg-primary p-2 rounded-full" onClick={previous}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M20.25 12.1564H3.75" stroke="#121314" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10.5 5.40637L3.75 12.1564L10.5 18.9064" stroke="#121314" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button className="button arrowAwards bg-white p-2 hover:bg-primary rounded-full ml-6" onClick={next}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M3.75 12.1564H20.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M13.5 5.40637L20.25 12.1564L13.5 18.9064" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </>

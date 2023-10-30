@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import logo from "../images/main-logo.png";
-import navbarMenu from "../images/navbarMenu.png";
 import closeImg from "../images/close.png";
 import logoTwo from "../images/main_logo2.png";
-import menuTwo from "../images/navbarMenu2.png";
+import Arrowup from "../images/Icons/arrowup.svg";
 import { motion } from "framer-motion";
 
 import { Link } from "gatsby";
@@ -19,7 +17,7 @@ function Navbar() {
   return (
     <motion.div
       variants={variants}
-      className={`relative bg-primary-navbarBg   ${
+      className={`relative  ${
         !open
           ? "hover:bg-primary-white transition-colors duration-500"
           : "bg-primary-navbarBg"
@@ -29,34 +27,35 @@ function Navbar() {
         <header>
           <nav
             className="
-          px-14
+          sm:px-14
+          px-[8px]
           flex
           w-full
          py-2
-          flex-wrap
           items-center
           justify-between
           text-lg text-white
            
         "
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
           >
-            <div className="py-2">
+            <div className="py-2 w-full">
               <Link to="/">
-                <img
-                  src={hover ? logoTwo : logo}
-                  alt="TopSol"
-                  decoding="async"
-                />
+                <img src={logoTwo} alt="TopSol" decoding="async" />
               </Link>
             </div>
             <div>
-              <img
-                src={hover ? menuTwo : navbarMenu}
-                onClick={() => setOpen(true)}
-                className={` cursor-pointer ${open ? "hidden" : "block"} `}
-              />
+              {!open && (
+                <div
+                  className="flex gap-1 items-center cursor-pointer "
+                  onClick={() => setOpen(true)}
+                >
+                  <h3 className="text-black font-figtree text-[18px]">Menu</h3>
+                  <img
+                    src={Arrowup}
+                    className={` cursor-pointer ${open ? "hidden" : "block"} `}
+                  />
+                </div>
+              )}
               <img
                 src={closeImg}
                 onClick={() => setOpen(false)}

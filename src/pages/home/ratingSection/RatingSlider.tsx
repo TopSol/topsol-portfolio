@@ -8,25 +8,22 @@ type appProps = {
 export default function RatingSlider({ review }: appProps) {
   return (
     <div className="">
-      <div className=" pl-4 md:container md:mx-auto pr-4 md:pl-16 border rounded-2xl relative">
-        <div className="absolute top-0 right-0">
-          <CircleImage />
-        </div>
-        <div className="flex text-yellow-500 mt-10 space-x-2  ">
-          <img src={fiveStart} alt="" />
-        </div>
-        <p className="mt-4 font-[15px] w-[90%] text-[#000000]">
-          {review?.text}
+      <div className=" pl-4  md:mx-auto pr-4 md:pl-16  ">
+        <p className="mt-4  font-figtree font-light text-[#1F1F1F]">
+          {review?.text?.slice(0, 180)}...
         </p>
-        <div className="flex my-8">
+        <div className="flex justify-end space-x-2  ">
+          <img src={fiveStart} alt="" className="mt-5" />
+        </div>
+        <div className="flex  my-8">
           <img
             src={review?.avatar}
             alt=""
             className=" rounded-full w-[50px] h-[50px]"
           />
           <div className=" text-sm ml-4">
-            <p className=" font-semibold text-[22px]">{review?.clientName}</p>
-            <p className="mt-2 text-[#4E5FD0] fotn-[18px] ">{review?.type}</p>
+            <p className=" text-[#1F1F1F] font-semibold  font-figtree text-[22px]">{review?.clientName}</p>
+            <p className="mt-2 text-[#1F1F1F] font-figtree fotn-[18px] ">{review?.type}</p>
           </div>
         </div>
       </div>

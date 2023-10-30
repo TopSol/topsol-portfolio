@@ -1,46 +1,41 @@
 import React, { useState } from "react";
-import "react-phone-input-2/lib/style.css";
-import dropDownData from "../../../staticData/blogDetailsData";
-import { motion } from "framer-motion";
-import useMenuAnimation from "../../../components/dropDownAnimaion";
 import { db } from "../../../utils/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { addDoc, collection } from "firebase/firestore";
-
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 function ContactForm() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<any>(null);
-  const scope = useMenuAnimation(isOpen);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [isTermsAgreed, setTermsAgree] = useState<boolean>(false);
-  const [organization, setOrganization] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [phone, setPhone] = useState("");
+  const [isFocused, setIsFocused] = useState("");
 
-  const handleOptionClick = (option: any) => {
-    setSelectedOption(option);
-    setIsOpen(false);
+  const handleFocus = (inputName) => {
+    setIsFocused(inputName);
+  };
+
+  const handleBlur = () => {
+    setIsFocused("");
   };
 
   const submit = async () => {
-    if (!name || !email || !message || !selectedOption || !isTermsAgreed) {
+    if (!name || !email || !message || !phone) {
       toast.error("Please fill all the fields");
       return;
     }
     const body = {
-      selectedOption,
       name,
       email,
-      organization,
+      phone,
       message,
     };
     try {
       await addDoc(collection(db, "getInTouch"), body);
-      setSelectedOption(null);
       setName("");
       setEmail("");
-      setOrganization("");
+      setPhone("");
       setMessage("");
       toast.success(
         "Your message is received. We will contact you back shortly."
@@ -51,155 +46,111 @@ function ContactForm() {
   };
 
   return (
-    <div className=" md:border-primary  md:border-[1px] border-[0px] rounded-2xl sm:p-8 ">
+    <div className=" ">
       <div>
         <ToastContainer />
       </div>
-      <nav className="menu " ref={scope}>
-        <motion.button
-          whileTap={{ scale: 0.97 }}
-          onClick={() => setIsOpen(!isOpen)}
-          className="buttonss bg-formInput border-none rounded-[10px] px-[24px] py-[17px] cursor-pointer flex justify-between items-center w-[100%] "
+      <div className=" mx-auto  w-[100%] mt-10 md:mt-0">
+        <div
+          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${isFocused === "name" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
         >
-          <h1 className=" flex text-light_Grey  font-medium   md:text-[15px] lg:text-[18px]">
-            {selectedOption
-              ? `${selectedOption?.name}`
-              : "How can we help you?"}
-          </h1>
-          <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
-            <svg width="15" height="15" viewBox="0 0 20 20">
-              <path d="M0 7 L 20 7 L 10 16" />
+          <div className="md:w-[6%] w-[13%]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 14 17" fill="none">
+              <path d="M6.5735 8.20728C7.63234 8.20728 8.54909 7.82751 9.29836 7.07825C10.0474 6.3291 10.4273 5.41248 10.4273 4.35352C10.4273 3.29492 10.0475 2.37817 9.29824 1.62878C8.54897 0.879761 7.63222 0.5 6.5735 0.5C5.51454 0.5 4.59791 0.879761 3.84876 1.62891C3.09962 2.37805 2.71973 3.2948 2.71973 4.35352C2.71973 5.41248 3.09962 6.32922 3.84876 7.07837C4.59815 7.82739 5.5149 8.20728 6.5735 8.20728ZM4.51185 2.29187C5.08668 1.71704 5.761 1.43762 6.5735 1.43762C7.38588 1.43762 8.06032 1.71704 8.63527 2.29187C9.2101 2.86682 9.48964 3.54126 9.48964 4.35352C9.48964 5.16602 9.2101 5.84033 8.63527 6.41528C8.06032 6.99023 7.38588 7.26965 6.5735 7.26965C5.76124 7.26965 5.08692 6.99011 4.51185 6.41528C3.9369 5.84045 3.65736 5.16602 3.65736 4.35352C3.65736 3.54126 3.9369 2.86682 4.51185 2.29187Z" fill={isFocused === "name" ? "#00B8F1" : "#999"} />
+              <path d="M13.3166 12.8032C13.2949 12.4915 13.2512 12.1514 13.1869 11.7922C13.122 11.4304 13.0384 11.0884 12.9383 10.7758C12.8347 10.4526 12.6942 10.1335 12.5203 9.82776C12.34 9.51038 12.1281 9.23401 11.8903 9.00659C11.6416 8.76868 11.3372 8.57739 10.9851 8.43787C10.6343 8.29907 10.2455 8.22876 9.82961 8.22876C9.66628 8.22876 9.50832 8.29578 9.20326 8.49438C9.01552 8.61682 8.79592 8.75842 8.5508 8.91504C8.3412 9.04858 8.05727 9.17371 7.70656 9.28699C7.36439 9.39771 7.01698 9.45386 6.67396 9.45386C6.33119 9.45386 5.98378 9.39771 5.64137 9.28699C5.29103 9.17383 5.00697 9.04871 4.79774 8.91516C4.55494 8.76001 4.33521 8.61841 4.14466 8.49426C3.83985 8.29565 3.68189 8.22864 3.51856 8.22864C3.10255 8.22864 2.71387 8.29907 2.36316 8.43799C2.01136 8.57727 1.70679 8.76855 1.45789 9.00671C1.2201 9.23425 1.00818 9.5105 0.828004 9.82776C0.654298 10.1335 0.513673 10.4525 0.410157 10.7759C0.310181 11.0885 0.226563 11.4304 0.161621 11.7922C0.0971682 12.1509 0.053589 12.4911 0.0319825 12.8036C0.0107422 13.1091 0 13.4271 0 13.7484C0 14.5836 0.265503 15.2598 0.789064 15.7584C1.30615 16.2505 1.99024 16.5 2.82239 16.5H10.5265C11.3584 16.5 12.0425 16.2505 12.5597 15.7584C13.0834 15.2601 13.3489 14.5837 13.3489 13.7483C13.3488 13.4259 13.3379 13.1079 13.3166 12.8032ZM11.9132 15.0791C11.5716 15.4043 11.1179 15.5624 10.5264 15.5624H2.82239C2.23072 15.5624 1.7771 15.4043 1.43555 15.0792C1.10047 14.7603 0.937624 14.3248 0.937624 13.7484C0.937624 13.4486 0.947512 13.1526 0.967287 12.8684C0.986574 12.5896 1.026 12.2833 1.08447 11.9579C1.14221 11.6365 1.2157 11.3348 1.3031 11.0618C1.38697 10.7999 1.50135 10.5406 1.64319 10.2909C1.77857 10.0529 1.93433 9.84863 2.10621 9.68408C2.26697 9.53015 2.46961 9.40417 2.70838 9.30969C2.9292 9.22229 3.17737 9.17444 3.44678 9.16724C3.47962 9.18469 3.53809 9.21802 3.63282 9.27979C3.82557 9.4054 4.04774 9.54871 4.29334 9.70557C4.5702 9.88208 4.92689 10.0415 5.35304 10.1791C5.78871 10.3199 6.23304 10.3915 6.67409 10.3915C7.11513 10.3915 7.55958 10.3199 7.99501 10.1792C8.42153 10.0414 8.77809 9.88208 9.05532 9.70532C9.30666 9.54468 9.5226 9.40552 9.71535 9.27979C9.81008 9.21814 9.86855 9.18469 9.90139 9.16724C10.1709 9.17444 10.4191 9.22229 10.64 9.30969C10.8787 9.40417 11.0813 9.53027 11.2421 9.68408C11.414 9.84851 11.5697 10.0527 11.7051 10.291C11.8471 10.5406 11.9616 10.8 12.0453 11.0616C12.1328 11.3351 12.2064 11.6366 12.2641 11.9578C12.3224 12.2838 12.362 12.5902 12.3812 12.8685C12.4011 13.1516 12.4112 13.4478 12.4113 13.7484C12.4112 14.325 12.2483 14.7603 11.9132 15.0791Z" fill={isFocused === "name" ? "#00B8F1" : "#999"} />
             </svg>
           </div>
-        </motion.button>
-        <ul
-          className={`dropDownUl ${
-            isOpen ? "relative" : "hidden"
-          }  shadow   mt-2  flex bg-primary-formInput flex-col gap-5 `}
-          style={{
-            pointerEvents: isOpen ? "auto" : "none",
-            clipPath: "inset(10% 50% 90% 50% round 10px)",
-          }}
-        >
-          {dropDownData.map((item) => (
-            <li
-              key={item.id}
-              className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${
-                selectedOption === item ? "bg-primary text-white" : ""
-              }`}
-              onClick={() => handleOptionClick(item)}
-            >
-              {item.name}
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div className="  md:container  mx-auto flex flex-col justify-center">
-        <input
-          type="text"
-          placeholder="Name*"
-          onChange={(e) => setName(e.target.value as string)}
-          value={name}
-          className="bg-formInput  py-[17px] px-[24px] mt-[25px] outline-none text-[18px] font-medium rounded w-full "
-        />
-        <div className=" flex flex-row mt-[25px] px-[24px] bg-formInput justify-between items-center">
-          <input
-            type="email"
-            placeholder="Email*"
-            value={email}
-            onChange={(e) => setEmail(e.target.value as string)}
-            className=" bg-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-          >
-            <g clip-path="url(#clip0_63_2427)">
-              <path
-                d="M17.8572 2.5H2.14287C1.76399 2.5 1.40062 2.65051 1.13271 2.91842C0.864804 3.18633 0.714294 3.54969 0.714294 3.92857V16.0714C0.714294 16.4503 0.864804 16.8137 1.13271 17.0816C1.40062 17.3495 1.76399 17.5 2.14287 17.5H17.8572C18.236 17.5 18.5994 17.3495 18.8673 17.0816C19.1352 16.8137 19.2857 16.4503 19.2857 16.0714V3.92857C19.2857 3.54969 19.1352 3.18633 18.8673 2.91842C18.5994 2.65051 18.236 2.5 17.8572 2.5Z"
-                stroke="#696969"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M0.714294 4.28564L9.08572 9.31993C9.34287 9.47136 9.66572 9.55279 10 9.55279C10.3343 9.55279 10.6572 9.47136 10.9143 9.31993L19.2857 4.28564"
-                stroke="#696969"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_63_2427">
-                <rect width="20" height="20" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
-
-        <div className=" flex flex-row mt-[25px] px-[24px] bg-formInput justify-between items-center">
           <input
             type="text"
-            placeholder="Organization"
-            value={organization}
-            className=" bg-formInput py-[17px]  text-[18px] outline-none font-medium  rounded "
-            onChange={(e) => setOrganization(e.target.value as string)}
+            placeholder="Name*"
+            onChange={(e) => setName(e.target.value as string)}
+            value={name}
+            onFocus={() => handleFocus("name")}
+            onBlur={handleBlur}
+            className="outline-none text-[18px] font-medium w-[90%] font-figtree"
           />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
+        </div>
+        <div className="flex flex-col md:flex-row md:mt-7  mt-3 justify-between">
+          <div className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[7px]  px-[20px] ${isFocused === "email" ? "border-primary" : "border-[#1F1F1F]"}`}>
+            <div className="w-[9%] mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 16 13" fill="none">
+                <path d="M16 1.98071C16 1.16883 15.3395 0.508301 14.5276 0.508301H1.47241C0.66069 0.508332 0.000281251 1.16855 0 1.98096V11.0187C0 11.8408 0.667253 12.4916 1.47291 12.4916H14.5271C15.3491 12.4916 16 11.8244 16 11.0187V1.98121C16 1.98115 16 1.98128 16 1.98121C16 1.98112 16 1.98084 16 1.98071ZM1.47241 1.44584H14.5276C14.8225 1.44584 15.0625 1.68581 15.0625 1.98149C15.0625 2.13862 14.9844 2.28446 14.8535 2.37171L8.29703 6.74286C8.11663 6.86314 7.88344 6.86317 7.703 6.74286C7.703 6.74286 1.14641 2.37162 1.14654 2.37171C1.14657 2.37175 1.14657 2.37175 1.14654 2.37171C1.01572 2.28456 0.937504 2.13862 0.937504 1.98071C0.937504 1.68577 1.17747 1.44584 1.47241 1.44584ZM14.5271 11.5541H1.47291C1.18107 11.5541 0.937504 11.3182 0.937504 11.0187V3.35912L7.18293 7.52286C7.43112 7.68833 7.71556 7.77105 8 7.77105C8.28447 7.77105 8.56894 7.68833 8.8171 7.52286L15.0625 3.35912V11.0187C15.0625 11.3106 14.8265 11.5541 14.5271 11.5541Z" fill={isFocused === "email" ? "#00B8F1" : "#999"} />
+              </svg>
+            </div>
+            <input
+              type="email"
+              placeholder="Email*"
+              value={email}
+              onChange={(e) => setEmail(e.target.value as string)}
+              onFocus={() => handleFocus("email")}
+              onBlur={handleBlur}
+              className="outline-none text-[18px] font-medium w-[90%] font-figtree"
+            />
+          </div>
+          <div
+            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] md:mt-0  mt-3 border-[1px] items-center py-[7px]  px-[20px] ${isFocused === "phone" ? "border-primary" : "border-[#1F1F1F]"
+              }`}
           >
-            <path
-              d="M12.1428 0.714355H7.85713C7.47825 0.714355 7.11489 0.864865 6.84698 1.13277C6.57907 1.40068 6.42856 1.76405 6.42856 2.14293V2.85721C6.42856 3.23609 6.57907 3.59946 6.84698 3.86737C7.11489 4.13527 7.47825 4.28578 7.85713 4.28578H12.1428C12.5217 4.28578 12.8851 4.13527 13.153 3.86737C13.4209 3.59946 13.5714 3.23609 13.5714 2.85721V2.14293C13.5714 1.76405 13.4209 1.40068 13.153 1.13277C12.8851 0.864865 12.5217 0.714355 12.1428 0.714355Z"
-              stroke="#696969"
-              stroke-width="1.42857"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13.9286 2.14307H16.0714C16.4503 2.14307 16.8137 2.29358 17.0816 2.56149C17.3495 2.82939 17.5 3.19276 17.5 3.57164V17.8574C17.5 18.2362 17.3495 18.5996 17.0816 18.8675C16.8137 19.1354 16.4503 19.2859 16.0714 19.2859H3.92857C3.54969 19.2859 3.18633 19.1354 2.91842 18.8675C2.65051 18.5996 2.5 18.2362 2.5 17.8574V3.57164C2.5 3.19276 2.65051 2.82939 2.91842 2.56149C3.18633 2.29358 3.54969 2.14307 3.92857 2.14307H6.07143"
-              stroke="#696969"
-              stroke-width="1.42857"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
+            <PhoneInput
+              inputStyle={{
+                width: "100%",
+                border: "none",
+                backgroundColor: "white",
 
-        <textarea
-          placeholder="Message*"
-          value={message}
-          onChange={(e) => setMessage(e.target.value as string)}
-          className="bg-formInput text-[18px] md:h-[167px] h-[100px] outline-none  font-medium px-[24px]  py-[17px] mt-[25px] w-full"
-        ></textarea>
-        <div className="flex self-start pl-4 mt-[36px]">
+              }}
+              buttonStyle={{ border: "none", backgroundColor: 'white' }}
+              value={phone}
+              country="pk"
+              countryCodeEditable={false}
+              onChange={(e) => setPhone(e)}
+              onFocus={() => handleFocus("phone")}
+              onBlur={handleBlur}
+            />
+          </div>
+        </div>
+        <div
+          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "message" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
+        >
           <input
-            type="checkbox"
-            className="mr-2"
-            checked={isTermsAgreed}
-            onChange={() => setTermsAgree(!isTermsAgreed)}
+            type="text"
+            placeholder="Write your Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value as string)}
+            className="outline-none text-[18px] font-medium w-[90%] font-figtree"
+            onFocus={() => handleFocus("message")}
+            onBlur={handleBlur}
           />
-          <label className="md:text-[18px] text-[15px] font-medium">
-            I agree to term & conditions
-          </label>
         </div>
-
-        <div className=" mt-10 w-full">
+        <div className="mt-10 md:w-[30%] w-[50%] ">
           <button
             type="button"
             onClick={submit}
             aria-label="Post Comment"
-            className="w-full px-6 py-[17px]  bg-[#00B8F1] border-2 rounded-md  text-white font-semibold text-[20px]  hover:bg-[#96dff6]  focus:bg-[#00B8F1]  active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out"
+            className="w-full px-6 py-[10px] bg-[#00B8F1] border-[1px] font-urbanist rounded-md text-white font-semibold text-[20px] hover:bg-[#96dff6] focus:bg-[#00B8F1] active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out flex items-center justify-center"
           >
-            Send Message
+            Send
+            <div className="ml-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+                <path d="M2.23234 10.884L8.44555 4.14408L8.4536 9.61177C8.4545 10.2602 8.98096 10.7851 9.62942 10.7841C9.95359 10.7836 10.247 10.6518 10.4591 10.439C10.6713 10.2262 10.8023 9.93243 10.8017 9.60825L10.7895 1.3061C10.7886 0.657704 10.2621 0.132785 9.61368 0.13374L1.31153 0.145962C0.663188 0.146917 0.138269 0.673383 0.139169 1.32178C0.140068 1.97018 0.666534 2.4951 1.31499 2.49414L6.78268 2.48609L0.569465 9.22597C0.11164 9.68515 0.112735 10.4286 0.57191 10.8864C1.03109 11.3442 1.77451 11.3431 2.23234 10.884Z" fill="white" />
+              </svg>
+            </div>
           </button>
+        </div>
+      </div>
+      <div className="flex flex-col mt-[37px] md:flex-row justify-between">
+        <div className=" md:w-[30%] w-[100%]">
+          <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">lOCATION</h1>
+          <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">Lorem ipsum street 1880 1990 Baseline Faisalabad, Pakistan</p>
+        </div>
+        <div className="md:w-[30%] mt-3 md:mt-0 w-[100%]">
+          <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">cALL NOW</h1>
+          <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">092 1234 12324 123</p>
+        </div>
+        <div className="md:w-[30%] mt-3 md:mt-0 w-[100%]">
+          <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">Email</h1>
+          <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">info@topsol.com</p>
         </div>
       </div>
     </div>

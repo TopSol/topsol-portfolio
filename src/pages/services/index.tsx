@@ -6,26 +6,28 @@ import RatingSection from "../home/ratingSection";
 import Footer from "../../components/footerSection";
 import FileIcon from "../../images/Icons/fileIcon.png";
 import AddressSection from "../../components/addressSection";
-import { data } from "../../staticData/servicesData";
 import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
 import { Link } from "gatsby";
 import Project from "./component/project";
+import heroImage from '../../images/heroImage.png'
+import { ToggleBar } from "../../components/bar";
 export default function index() {
   return (
     <div>
-      <Navbar />
-      <VideoHero
-        title="Our Services"
-        image="https://res.cloudinary.com/asifsaythe/image/upload/v1697023024/new_portfolio/flat-lay-business-concept_1_q6ptf7.png"
-      />
-      <ServicesOffers />
-      <Project />
-      <div className="mt-[76px]">
-        <RatingSection />
+      <ToggleBar />
+      <div className="services-page-hero">
+        <VideoHero
+          page="services"
+          title="Our Services"
+          image="https://res.cloudinary.com/asifsaythe/image/upload/v1697023024/new_portfolio/flat-lay-business-concept_1_q6ptf7.png"
+        />
+        <ServicesOffers page='services' />
       </div>
+      <Project />
+      <RatingSection />
       <AddressSection />
-      <div className="mt-[200px]">
+      <div className="mt-[20px]">
         <Footer />
       </div>
     </div>

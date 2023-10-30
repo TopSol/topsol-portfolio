@@ -21,23 +21,23 @@ const images = [
   },
   {
     id: "4",
-    avatar: imgOne,
-  },
-  {
-    id: "5",
     avatar: imgFive,
   },
   {
-    id: "6",
+    id: "5",
     avatar: imgOne,
+  },
+  {
+    id: "6",
+    avatar: imgTwo,
   },
   {
     id: "7",
-    avatar: imgOne,
+    avatar: imgThree,
   },
   {
     id: "8",
-    avatar: imgOne,
+    avatar: imgFive,
   },
 ];
 export default images;

@@ -1,69 +1,93 @@
-import React, { useState } from "react";
-import cancelBtn from "../../../../images/cancel.png";
-import PulseLoader from "react-spinners/PulseLoader";
-import { reviewTypes } from "../../../../types/interfaceTypes";
+import React from "react";
+import { motion } from "framer-motion";
+import reviews from "../../../../staticData/cardSectionData";
 
-type AppProps = {
-  setShowModal: (value: boolean) => void;
-  isLoader: boolean;
-  selectedId: reviewTypes;
-};
+export default function Modal({
+  id,
+  closeModal,
+}: {
+  id: string;
+  closeModal: () => void;
+}) {
+  const { heading, subheading, desc, avatar } = reviews.find(
+    (item) => item.id === id
+  );
+  // const { heading, subheading, desc, avatar } = reviews[0];
+  // console.log("hello", id);
 
-const Modal = ({ setShowModal, isLoader, selectedId }: AppProps) => {
-  const handleUpdateClick = () => {
-    setShowModal(false);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-  console.log("loader", isLoader);
   return (
-    <div
-      onClick={handleCloseModal}
-      className="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-70 overflow-scroll"
-    >
-      {isLoader ? (
-        <div className="flex justify-center items-center">
-          <PulseLoader color="#8E8E8E" size={18} />
-        </div>
-      ) : (
-        <div
-          onClick={(e) => e.stopPropagation()}
-          className="flex   px-8 w-[90%] lg:[70%]  flex-col bg-white rounded-md p-4"
+    <>
+      <motion.div
+        initial={{
+          opacity: 1,
+          width: "0",
+          height: "0",
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%,-50%)",
+        }}
+        animate={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%,-50%)",
+          width: "100%",
+          height: "100vh",
+        }}
+        exit={{ opacity: 0, transition: { duration: 0.15 } }}
+        transition={{ duration: 0.8 }}
+        style={{
+          pointerEvents: "auto",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "none",
+          zIndex: 2000,
+        }}
+        className="overlay"
+        onClick={() => closeModal()}
+      >
+        <motion.div
+          className="card-content-container open bg-[#efefef] xl:mx-[12%] md:mx-[4%] lg:mx-[8%] xl:min-h-[70vh] md:min-h-[60vh] sm:min-h-[65vh] min-h-[80vh] mx-[1%] rounded-2xl px-[60px] xl:py-[100px] lg:py-[40px] relative"
+          initial={{ opacity: 0, width: "0px", height: "0px" }}
+          animate={{ opacity: 1, width: "100%" }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          style={{ overflow: "hidden" }}
         >
-          <div
-            className=" hover:cursor-pointer flex justify-end  mt-[600px] md:mt-[420px] lg:mt-[300px] xl:mt-[77px] mb-7  "
-            onClick={handleCloseModal}
-          >
-            <img src={cancelBtn} alt="" className="h-[30px] w-[30px]" />
+          <div className="absolute top-12 right-12 px-[11px] py-1 text-white text-center align-middle cursor-pointer font-bold rounded-full bg-[#309BD3]">
+            X
           </div>
 
-          <div className="flex flex-col lg:flex-row-reverse justify-center  mb-5 lg:mb-[71px] ">
-            <div className="lg:ml-[77px] justify-center flex">
-              <img
-                src={selectedId?.avatar}
-                alt=""
-                className="resize object-cover rounded-md"
-              />
-            </div>
-            <div className="lg:w-[40%] mt-[30px] lg:mt-0 ">
-              <h3 className="text-[20px] flex items-center text-secondary  font-semibold ">
-                <hr className=" bg-secondary  w-7 rounded-full h-1  " />
+          <motion.div
+            className="card-content flex md:justify-between justify-center items-center h-full md:flex-row flex-col-reverse"
+            layoutId={`card-container-${id}`}
+          >
+            <div className="md:w-[62%] w-full mt-6">
+              <h4 className="font-montserrat capitalize md:text-[12px] md:text-left text-center lg:text-[20px] text-[#004264]">
                 we are here
-              </h3>
-              <h1 className=" text:[30px] md:text-[36px] font-bold text-primary-blue ">
-                {selectedId?.heading}
-              </h1>
-              <p className=" text-base md:text-[18px] mt-[23] md:mt-[30px] fotn  ">
-                {selectedId?.desc}
+              </h4>
+              <p className="font-montserrat md:text-[18px] lg:text-[36px]  md:text-left text-center font-bold text-[#309BD3] capitalize">
+                {heading}
+              </p>
+              <p className="font-montserrat md:text-[18px] lg:text-[36px]  md:text-left text-center font-bold text-[#309BD3] capitalize">
+                {subheading}
+              </p>
+              <p className="font-montserrat lg:pr-7 pr-3 lg:mt-5 md:mt-3 md:text-[13px]  md:text-left text-justify text-[10px]">
+                {desc}
               </p>
             </div>
-          </div>
-        </div>
-      )}
-    </div>
+            <motion.div className="md:w-[38%] w-[50%]">
+              <img
+                className="modalCardImage h-full max-w-full"
+                src={avatar}
+                alt=""
+              />
+            </motion.div>
+            <motion.div className="content-container" animate></motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </>
   );
-};
-
-export default Modal;
+}

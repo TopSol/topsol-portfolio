@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
-
+        figtree: ["Figtree", "sans-serif"],
+        urbanist: ["Urbanist", "sans-serif"],
       },
       colors: {
         primary: {
@@ -44,7 +45,6 @@ module.exports = {
         pageBorder: "#F9F9F9",
         formInput: "#FBFBFB",
         formBorder: "#E8E8E8",
-
       },
     },
   },

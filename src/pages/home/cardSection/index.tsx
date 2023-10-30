@@ -6,18 +6,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useInView } from "react-intersection-observer";
 import MouseFollower from "mouse-follower";
 import { reviewTypes } from "../../../types/interfaceTypes";
+import arrowup from "../../../images/Icons/arrowup.svg";
+import { Link } from "gatsby";
 
 type CardSectionProps = {
-  setBg: (value: string) => void;
   openModal: (value: boolean) => void;
   reviews: reviewTypes[];
-  setSelectedId: (item: reviewTypes) => void;
+  setSelectedId: (id: string) => void;
 };
 
 gsap.registerPlugin(ScrollTrigger);
 MouseFollower.registerGSAP(gsap);
 export default function CardSection({
-  setBg,
   openModal,
   reviews,
   setSelectedId,
@@ -101,20 +101,8 @@ export default function CardSection({
     }
   }, [isWorking]);
 
-  useEffect(() => {
-    if (window.innerWidth < 1024) {
-      setBg("#0B234C");
-    } else {
-      if (isInView) {
-        setBg("#0B234C");
-      } else {
-        setBg("#fff");
-      }
-    }
-  }, [isInView]);
-
-  const handleClick = (item: reviewTypes) => {
-    setSelectedId(item);
+  const handleClick = (id: string) => {
+    setSelectedId(id);
     openModal(true);
   };
 
@@ -137,9 +125,13 @@ export default function CardSection({
                 : "none", // If isWorking is false, set transform to 'none' or any other desired default value
             }}
           >
-            <h1 className="mb-10 text-[30px] md:text-[50px] font-semibold mt-16  text-white">
-              Build Smarter <br /> Not From Scratch
-            </h1>
+            <div className="relative">
+              <h1 className="mb-10 text-[30px] md:text-[48px] font-semibold mt-16 font-urbanist uppercase ">
+                Build <span className="text-primary">Smarter</span> <br /> Not
+                From <span className="text-primary">Scratch</span>
+              </h1>
+              <div className="absolute w-[259px] h-[4px] bg-primary"></div>
+            </div>
             <div className="w-[150px]">
               <AnimateHr bgColor={"white"} />
             </div>
@@ -163,8 +155,8 @@ export default function CardSection({
                 <>
                   <div
                     id={item.id}
-                    onClick={() => handleClick(item)}
-                    className="mx-4 cursor-pointer lg:mx-0  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col items-center "
+                    onClick={() => handleClick(item.id)}
+                    className="mx-4 cursor-pointer lg:mx-0  lg:mr-12 hover:scale-105 mt-5 hover:duration-300 transition ease-in-out delay-100     md:w-[465px]  flex flex-col "
                   >
                     <img
                       key={index}
@@ -172,13 +164,27 @@ export default function CardSection({
                       alt="Avatar"
                       className=" "
                     />
-                    <h1 className="text-[22px]  font-semibold text-white mt-[46px] ">
+                    <h1 className="text-[22px] px-2 font-semibold mt-[46px] capitalize tracking-wide font-figtree ">
                       {item?.heading}
                     </h1>
-
-                    <p className="text-[18px] ml-4 mr-4 text-white mt-[20px] text-center">
-                      {item?.desc.slice(0, 100)}...
+                    <h1 className="text-[22px] px-2 font-semibold capitalize  font-figtree ">
+                      {item?.subheading}
+                    </h1>
+                    <p className="text-[18px] px-2 mr-4 font-figtree font-light mt-[20px]">
+                      {item?.desc.slice(0, 130)}...
                     </p>
+                    <div className="flex gap-2 mt-5 px-2 font-figtree font-semibold text-primary">
+                      <h2>VIEW MORE</h2>
+                      <img
+                        src={arrowup}
+                        style={{
+                          filter:
+                            "invert(53%) sepia(74%) saturate(2900%) hue-rotate(159deg) brightness(103%) contrast(102%)",
+                        }}
+                        width={12}
+                        height={12}
+                      />
+                    </div>
                   </div>
                 </>
               );

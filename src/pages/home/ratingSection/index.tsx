@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,22 +7,42 @@ import reviews from "../../../staticData/ratingeSectionData";
 import LineAnimation from "../../../components/LineAnimation";
 
 export default function index() {
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  const updateSlidesToShow = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+      setSlidesToShow(1);
+    } else if (screenWidth >= 768 && screenWidth <= 1024) {
+      setSlidesToShow(2);
+    }
+    else {
+      setSlidesToShow(3);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('resize', updateSlidesToShow);
+    updateSlidesToShow();
+    return () => {
+      window.removeEventListener('resize', updateSlidesToShow);
+    };
+  }, []);
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: true,
     speed: 500,
     autoplaySpeed: 2500,
-    slidesToShow: 1,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
   };
   return (
-    <div className=" overflow-x-hidden mt-[69px] lg:mt-[100px] flex justify-center ">
-      <div className="w-[90%]    2xl:w-[65%] ">
+    <div className="  mt-[69px] lg:mt-[100px] flex justify-center ">
+      <div className="w-[85%]    ">
         <div className="flex flex-col justify-center items-center">
           <div className="">
-            <h1 className="font-extrabold font-montserrat text-[26px] md:text-[34px] lg:text-4xl  text-center">
-              People Like us, officially
+            <h1 className="font-extrabold font-urbanist uppercase text-[26px] md:text-[34px] lg:text-4xl  text-center">
+              WHAT OUR <span className="text-primary">CLIENTS SAY </span>
             </h1>
           </div>
           <LineAnimation
