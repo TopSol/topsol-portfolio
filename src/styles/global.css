@@ -66,3 +66,27 @@ height: 300%; */
   background: url("../images/secSection.svg");
   background-size: contain;
 }
+.service-hover-cards-transition {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 0;
+  height: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #0009;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  border-radius: 100%;
+}
+.service-hover-cards-transition p {
+  font-size: 12px;
+}
+.service-cards-transition:hover .service-hover-cards-transition {
+  height: 100%;
+  width: 100%;
+  transform: scale(1.5);
+}

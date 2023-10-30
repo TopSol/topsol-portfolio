@@ -18,6 +18,14 @@ import mobileApps from "../images/servicesImages/mobile_apps.png";
 import qualityAssurance from "../images/servicesImages/quality_assurance.png";
 import uiux from "../images/servicesImages/ui_ux_design.png";
 import aiChatGPT from "../images/servicesImages/Ai_and_chatgpt.png";
+import Custom from "../images/Custom.png";
+import Dev from "../images/devops.png";
+import Team from "../images/team.png";
+import Discover from "../images/discover.png";
+import Mobile from "../images/mobile.png";
+import Quality from "../images/quality.png";
+import UI from "../images/ui.png";
+import AI from "../images/Ai.png";
 
 const cards = [
   {
@@ -310,6 +318,41 @@ const cards = [
       ],
     },
     showProjects: true,
+  },
+];
+
+export const imgCards = [
+  {
+    bgImg: Custom,
+    heading: "Custom Software",
+  },
+  {
+    bgImg: Dev,
+    heading: "Devops",
+  },
+  {
+    bgImg: Team,
+    heading: "Team Augmentation",
+  },
+  {
+    bgImg: Discover,
+    heading: "Discover Workshop",
+  },
+  {
+    bgImg: Mobile,
+    heading: "App Development",
+  },
+  {
+    bgImg: Quality,
+    heading: "Quality Assurance",
+  },
+  {
+    bgImg: UI,
+    heading: "UI/UX Design",
+  },
+  {
+    bgImg: AI,
+    heading: "AI & Chat GPT",
   },
 ];
 
