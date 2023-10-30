@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardSection from "./cardSection";
 import ServicesOffers from "./servisesOffers";
 import TopSolExperts from "./topSolExpert";
@@ -8,8 +8,8 @@ import Awards from "./awards";
 import GetInTouch from "./getInTouch";
 import Hero from "./hero";
 import Footer from "../../components/footerSection";
-import Navbar from "../../components/Navbar";
-import { motion } from "framer-motion";
+// import SideBar from "../../components/bar/sidebar";
+import { AnimatePresence, motion } from "framer-motion";
 import Modal from "./components/model/Modal";
 import reviews from "../../staticData/cardSectionData";
 import { reviewTypes } from "../../types/interfaceTypes";
@@ -17,17 +17,19 @@ import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
 import MetaPixel from "../../utils/meta/metaPixel";
 import Faqs from "./faqs";
+import MouseFollower from "mouse-follower";
+import gsap from "gsap";
+import "../../cursor.css";
+import { ToggleBar } from "../../components/bar";
+
+MouseFollower.registerGSAP(gsap);
 function Home() {
-  const [bg, setBg] = useState("#fff");
+  const cursor = new MouseFollower();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedId, setSelectedId] = useState<reviewTypes>();
+  const [selectedId, setSelectedId] = useState<string>();
 
   const openModal = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
     setIsModalOpen(true);
   };
 
@@ -35,19 +37,30 @@ function Home() {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    const cardSection = document.getElementById("follower");
+    const body = document.getElementById("unFollow");
+    cardSection.addEventListener("mouseenter", () => {
+      cursor.setText("View More");
+    });
+    cardSection.addEventListener("mouseleave", () => {
+      cursor.removeText();
+    });
+  });
   return (
     <div className="">
       <MetaPixel />
-      <Navbar />
+
+      <ToggleBar />
       <Hero />
-      <motion.div className="secSectionBg">
+      <motion.div className="secSectionBg" id="follower">
         <CardSection
           openModal={openModal}
           reviews={reviews}
           setSelectedId={setSelectedId}
         />
-        <ServicesOffers />
       </motion.div>
+      <ServicesOffers />
       <TopSolExperts />
       <OurPortfolio />
       <RatingSection />
@@ -57,13 +70,11 @@ function Home() {
         <GetInTouch />
       </div>
       <Footer />
-      {isModalOpen && (
-        <Modal
-          setShowModal={closeModal}
-          isLoader={isLoading}
-          selectedId={selectedId}
-        />
-      )}
+      <AnimatePresence>
+        {isModalOpen && (
+          <Modal id={selectedId} closeModal={closeModal} key={"item"} />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

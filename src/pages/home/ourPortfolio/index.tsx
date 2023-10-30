@@ -41,7 +41,7 @@ function OurPortfolio() {
     fetchPortFolios();
   }, []);
   return (
-    <div className=" w-[80%] mx-auto  flex flex-col mt-[50px] ">
+    <div className=" w-[90%] mx-auto  flex flex-col mt-[50px] ">
       <div className="flex flex-col items-center md:items-start ">
         <div className="">
           <h1 className="font-extrabold text-black font-urbanist uppercase text-[26px] md:text-34[px] lg:text-4xl md:text-left text-center">
@@ -56,7 +56,7 @@ function OurPortfolio() {
         />
         <p className="mt-[50px] font-figtree text-[20px] font-light md:w-[60%] w-[100%] text-center md:text-left">Explore our digital creations and innovative software solutions that empower businesses worldwide</p>
       </div>
-      <div className=" md:mt-[53px]  w-[100%] grid  md:grid-cols-2  grid-cols-1  md:gap-x-24 ">
+      <div className=" md:mt-[53px]  w-[100%] grid  md:grid-cols-2  xl:grid-cols-4  grid-cols-1  md:gap-x-4 ">
         {portfolioData?.map((item: any, index: any) => (
           <div
             key={index}
@@ -65,19 +65,19 @@ function OurPortfolio() {
             style={{ background: item.bg, transition: "all .50s ease " }}
           >
             <div className="  ">
-              <div className="flex flex-col items-center bg-white m-[16px] md:m-[32px] pb-10 overflow-hidden rounded-[19px] ">
+              <div className="flex flex-col items-center bg-white m-[15px] md:m-[21px]  overflow-hidden rounded-[19px] ">
                 <img
                   src={item.image}
-                  className="  my-[32px] 
-                    md:w-[350px] md:h-[290px] w-[250px] h-[150px] "
+                  className="  my-[20px] 
+                    md:w-[172px] md:h-[148px] w-[172px] h-[148px] "
                   alt={`Portfolio ${index}`}
                 />
               </div>
               <div
-                className=" md:ml-[32px] ml-[16px]  pb-[28px]">
+                className=" md:mx-[21px] mx-[15px]  pb-[28px]">
                 <p className="text-[#697484] text-[12px] leading-[16px]">UI Design / Brand Identity</p>
-                <h1 className="font-bold text-[#132238] leading-[32px] text-[24px] mt-2">{item.title}</h1>
-                <p className="text-[#697484] text-[16px] leading-[24px] mt-2">{item.doc}</p>
+                <h1 className="font-bold text-[#132238] leading-[32px] text-[18px] mt-2">{item.title}</h1>
+                <p className="text-[#697484] text-[10px] leading-[16px]  mt-2">{item?.doc?.slice(0, 90)}...</p>
                 <Link to={`/portfolioDetail?id=${item.id}`} key={index}>
                   <button className="flex flex-row mt-4 text-primary text-[16px] leading-[24px] font-semibold">
                     View Case Study

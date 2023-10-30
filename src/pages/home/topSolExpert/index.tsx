@@ -6,7 +6,7 @@ import data from "../../../staticData/topsolExpertsData";
 import CircleImage from "../../../components/CircleImage";
 import LineAnimation from "../../../components/LineAnimation";
 function TopSolExperts() {
-  const [selectedCategory, setSelectedCategory] = useState("Values");
+  const [selectedCategory, setSelectedCategory] = useState("Technologies");
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
   };
@@ -36,14 +36,15 @@ function TopSolExperts() {
           marginTop="20px"
         />
         <div className="grid md:grid-cols-3 grid-cols-1 gap-y-5  md:gap-x-[40px] mt-[59px] ">
+
           <button
-            onClick={() => handleCategoryChange("Values")}
-            className={`  ${selectedCategory === "Values"
+            onClick={() => handleCategoryChange("Technologies")}
+            className={`  text-primary  cursor-default ${selectedCategory === "Technologies"
               ? "bg-primary text-white"
               : "bg-white text-primary"
-              } cursor-default  hover:text-white px-[45px] font-figtree lg:px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
+              }  hover:text-white px-[45px] lg:px-[56px] py-4 font-figtree rounded-[5px] hover:bg-primary text-[20px] font-semibold`}
           >
-            Values
+            Technologies
           </button>
           <button
             onClick={() => handleCategoryChange("Industries")}
@@ -55,13 +56,13 @@ function TopSolExperts() {
             Industries
           </button>
           <button
-            onClick={() => handleCategoryChange("Technologies")}
-            className={`  text-primary  cursor-default ${selectedCategory === "Technologies"
+            onClick={() => handleCategoryChange("Values")}
+            className={`  ${selectedCategory === "Values"
               ? "bg-primary text-white"
               : "bg-white text-primary"
-              }  hover:text-white px-[45px] lg:px-[56px] py-4 font-figtree rounded-[5px] hover:bg-primary text-[20px] font-semibold`}
+              } cursor-default  hover:text-white px-[45px] font-figtree lg:px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
           >
-            Technologies
+            Values
           </button>
         </div>
       </div>

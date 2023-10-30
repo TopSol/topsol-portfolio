@@ -63,7 +63,7 @@ function Awards() {
   return (
     <>
       <div className="flex flex-col md:flex-row items-center justify-around h-[431px]  md:mt-[106px] mt-[78px] bg-[#F4F4F4] ">
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start mb-6">
           <h1 className="font-extrabold  font-urbanist  text-[26px] md:text-[34px] lg:text-[48px]  uppercase leading-[120%] ">
             AWARD &
           </h1>

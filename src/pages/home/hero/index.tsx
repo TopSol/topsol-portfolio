@@ -21,7 +21,7 @@ export default function Hero() {
           className="lg:text-[60px] sm:text-4xl uppercase md:text-5xl text-white font-extrabold font-urbanist leading-10 text-center sm:text-left "
         >
           A Better Approach to
-          <p className="md:mt-[30px] sm:text-4xl text-primary font-figtree">
+          <p className="md:mt-[30px] sm:text-4xl md:text-5xl lg:text-[60px] text-primary font-figtree">
             Develop Software
           </p>
         </h1>

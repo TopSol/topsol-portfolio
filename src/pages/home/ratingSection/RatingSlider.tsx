@@ -10,10 +10,10 @@ export default function RatingSlider({ review }: appProps) {
     <div className="">
       <div className=" pl-4  md:mx-auto pr-4 md:pl-16  ">
         <p className="mt-4  font-figtree font-light text-[#1F1F1F]">
-          {review?.text?.slice(0, 280)}...
+          {review?.text?.slice(0, 180)}...
         </p>
         <div className="flex justify-end space-x-2  ">
-          <img src={fiveStart} alt="" />
+          <img src={fiveStart} alt="" className="mt-5" />
         </div>
         <div className="flex  my-8">
           <img
