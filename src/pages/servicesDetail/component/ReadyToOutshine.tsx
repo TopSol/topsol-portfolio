@@ -15,16 +15,16 @@ function ReadyToOutshine(servicedata) {
           {servicedata?.servicedata?.details?.paragraphs?.map((item, index) => {
             return (
               <div key={index} className="mt-[30px]">
-                <h1 className=" text-[20px] lg:text-[40px] font-semibold">
+                <h1 className=" text-[22px] lg:text-[28px] font-semibold">
                   {item?.heading}
                 </h1>
-                <p className="lg:text-[24px] text-[20px] font-medium mt-[20px]">
+                <p className="lg:text-[20px] text-[16px] font-medium mt-[20px]">
                   {item?.text}
                 </p>
               </div>
             );
           })}
-          <p className="lg:text-[24px] text-[20px] font-medium mt-[20px]">
+          <p className="lg:text-[20px] text-[16px] font-medium mt-[20px]">
             {servicedata?.servicedata?.details?.conclusion}
           </p>
         </div>

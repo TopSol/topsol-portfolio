@@ -5,9 +5,9 @@ import { Link } from "gatsby";
 import LineAnimation from "../../../components/LineAnimation";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 
-function ServicesOffers({ page }) {
+function ServicesOffers({ page, showPrimaryBtn }) {
   return (
-    <div className="  py-[50px] relative flex flex-col justify-center items-center px-2"
+    <div className=" mt-8 py-[50px] relative flex flex-col justify-center items-center px-2"
       style={{
         background: page === 'services' ? "none" : "linear-gradient(#0B234C, #00B8F1)"
       }}
@@ -34,13 +34,15 @@ function ServicesOffers({ page }) {
         ))}
       </div>
       <div className="mt-16">
-        <Link to="/services">
-          <PrimaryBtn
-            text="All Services"
-            icon={true}
-            additionalClasses="text-primary flex items-center font-figtree py-[10px] sm:px-[88px] px-[26px] bg-none text-[18px] border-2 border-white text-white rounded-[6px] "
-          />
-        </Link>
+        {showPrimaryBtn && (
+          <Link to="/services">
+            <PrimaryBtn
+              text="All Services"
+              icon={true}
+              additionalClasses="text-primary flex items-center font-figtree py-[10px] sm:px-[88px] px-[26px] bg-none text-[18px] border-2 border-white text-white rounded-[6px] "
+            />
+          </Link>
+        )}
       </div>
     </div>
   );

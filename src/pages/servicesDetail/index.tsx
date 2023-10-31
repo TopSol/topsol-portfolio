@@ -15,7 +15,9 @@ export default function ServiceDetails({ location }) {
   return (
     <div>
       <Navbar />
-      <HeroSection servicedata={state?.service} />
+      <HeroSection servicedata={state?.service}
+        imageHead={state?.service?.details?.imageHead}
+      />
       <InfoSection
         heading={state?.service?.heading}
         mainHeading={state?.service?.details?.mainHeading}
