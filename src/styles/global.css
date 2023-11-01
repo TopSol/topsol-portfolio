@@ -70,6 +70,7 @@ height: 300%; */
 border-bottom: 0.738px solid white;
 padding-bottom: 20px;
 }
+
 .arrowAwards:hover svg path{
   stroke: white;
 }
@@ -108,4 +109,13 @@ padding-bottom: 20px;
 }
 .service-cards-transition:hover div img {
   transform: scale(1.3);
+}
+.arrowhide:last-child{
+  /* background-color: antiquewhite; */
+  width: 350px;
+}
+.arrowhide:last-child .imagearrow{
+ background-color: aqua;
+ display: none;
+
 }

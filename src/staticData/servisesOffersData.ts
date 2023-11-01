@@ -12,12 +12,12 @@ import svg2 from "../images/Svg/Group2.svg";
 import svg3 from "../images/Svg/Group3.svg";
 import customSoftware from "../images/servicesImages/Custom_Software.png";
 import devOps from "../images/servicesImages/devops.png";
-import team from "../images/servicesImages/team_Augmentation.png";
-import workshop from "../images/servicesImages/discover_workshop.png";
-import mobileApps from "../images/servicesImages/mobile_apps.png";
-import qualityAssurance from "../images/servicesImages/quality_assurance.png";
-import uiux from "../images/servicesImages/ui_ux_design.png";
-import aiChatGPT from "../images/servicesImages/Ai_and_chatgpt.png";
+import team from "../images/servicesImages/team Augmentation.png";
+import workshop from "../images/servicesImages/discover workshop.png";
+import mobileApps from "../images/servicesImages/mobile-apps.png";
+import qualityAssurance from "../images/servicesImages/quality assurance.png";
+import uiux from "../images/servicesImages/ui ux design.png";
+import aiChatGPT from "../images/servicesImages/Ai and chatgpt.png";
 import Custom from "../images/Custom.png";
 import Dev from "../images/devops.png";
 import Team from "../images/team.png";
@@ -26,14 +26,23 @@ import Mobile from "../images/mobile.png";
 import Quality from "../images/quality.png";
 import UI from "../images/ui.png";
 import AI from "../images/Ai.png";
-import customSoftwareHead from "../images/Icons/servicesHeader/Group 9242.png";
-import devOpsHead from "../images/Icons/servicesHeader/Devops.png";
-import teamHead from "../images/Icons/servicesHeader/Team Augmentation.png";
-import workshopHead from "../images/Icons/servicesHeader/Discover workshop.png";
-import mobileAppsHead from "../images/Icons/servicesHeader/Mobile Apps.png";
-import qualityAssuranceHead from "../images/Icons/servicesHeader/Quality Asurance.png";
-import uiuxHead from "../images/Icons/servicesHeader/Ui Ux design.png";
-import aiChatGPTHead from "../images/Icons/servicesHeader/Ai Chat gpt.png";
+import customSoftwareHead from "../images/Icons/servicesHeader/custom-software.png";
+import devOpsHead from "../images/Icons/servicesHeader/devops.png";
+import teamHead from "../images/Icons/servicesHeader/Team-Augmentation.png";
+import workshopHead from "../images/Icons/servicesHeader/Discover-wrokshops.png";
+import mobileAppsHead from "../images/Icons/servicesHeader//Mobile-app.png";
+import qualityAssuranceHead from "../images/Icons/servicesHeader/Quality.png";
+import uiuxHead from "../images/Icons/servicesHeader/ui-ux.png";
+import aiChatGPTHead from "../images/Icons/servicesHeader/Ai-chat-gpt.png";
+import requirment1 from '../images/Icons/Group 36919.png'
+import requirment2 from '../images/Icons/web-development-svgrepo-com.png'
+import requirment3 from '../images/Icons/deployment-svgrepo-com.png'
+import tec_1 from '../images/Icons/techonologies/pngwing 2.svg'
+import tec_2 from '../images/Icons/techonologies/tec_4.svg'
+import tec_3 from '../images/Icons/techonologies/tec_10.svg'
+import tec_4 from '../images/Icons/techonologies/tec_17.svg'
+import tec_5 from '../images/Icons/techonologies/tec_22.svg'
+
 
 const cards = [
   {
@@ -371,5 +380,51 @@ export const imgCards = [
     heading: "AI & Chat GPT",
   },
 ];
+
+export const workflowData =[
+  {
+    img:requirment1,
+    step:'step 1',
+    title:'Requirements Analysis',
+    doc:'Our team initiates the custom software development process by conducting in-depth consultations with your organization. We gather comprehensive requirements, understanding your unique business needs and objectives.',
+
+  },
+  {
+    img:requirment2,
+    step:'step 2',
+    title:'Tailored Development',
+    doc:'With a clear understanding of your requirements, our expert developers design a custom software solution from the ground up. This stage involves coding, testing, and iteration to ensure the software aligns perfectly with your business processes and goals.',
+    
+  },
+  {
+    img:requirment3,
+    step:'step 3',
+    title:'Deployment & Support',
+    doc:'Once development is complete, we oversee the seamless deployment of the custom software within your organization. Our commitment doesn"t end there. We provide continuous support and maintenance, ensuring the software remains up-to-date.',
+        
+   }
+]
+export const tecnology =[
+  {
+    img: tec_1,
+    title:'Node Js'
+  },
+  {
+    img: tec_2,
+    title:'Firebase'
+  },
+  {
+    img: tec_3,
+    title:'Mongodb'
+  },
+  {
+    img: tec_4,
+    title:'Express Js'
+  },
+  {
+    img: tec_5,
+    title:'React Js'
+  },
+]
 
 export default cards;

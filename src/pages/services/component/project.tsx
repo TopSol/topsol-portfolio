@@ -33,7 +33,7 @@ export default function Project() {
                 <h1 className="font-normal text-[20px] font-figtree text-primary   my-3 ">
                   {item.heading}
                 </h1>
-                <p className="text-[11px] mb-4 font-figtree leading-[125%] font-light">{item.detail}</p>
+                <p className="text-[18px] mb-4 font-figtree leading-[125%] font-light">{item.detail}</p>
               </div>
             );
           })}

@@ -29,7 +29,7 @@ export default function VideoHero({ title, image, page }: Iprops) {
               <h1 className="text-4xl mt-[158px] text-center md:text-start md:text-[54px] font-bold font-montserrat">
                 <span className={`${page === 'services' ? 'text-white' : 'text-textColors'}`}>{firstName}</span>{" "}
                 <span className="text-primary">{lastName}</span>
-              </h1>{" "}
+              </h1>
               <h3 className={`text-center md:text-start md:text-[22px]  font-figtree font-light  ${page === 'services' ? 'text-white' : 'text-textColors'} hero-text-sideLine   lg:w-[75%] mt-[56px]`} >
                 Topsol is a software and mobile app development company with a
                 world-class team of talented data scientists, developers,
@@ -42,7 +42,7 @@ export default function VideoHero({ title, image, page }: Iprops) {
                   <PrimaryBtn
                     text="Get Started"
                     icon={true}
-                    additionalClasses="text-primary flex items-center font-figtree py-[10px] sm:px-[88px] px-[26px] bg-none text-[18px] mt-[68px] text-white rounded-[6px] "
+                    additionalClasses="text-primary flex items-center font-figtree py-[20px] sm:px-[88px] px-[26px] bg-none text-[18px] mt-[68px] text-white rounded-[6px] "
                   />
                 </div>
               </Link>
