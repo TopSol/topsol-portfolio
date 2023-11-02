@@ -1,5 +1,6 @@
 import React from "react";
 import Arrowup from "../images/Icons/arrowup.svg";
+import { motion } from "framer-motion";
 
 interface Iprops {
   text: string;
@@ -11,7 +12,10 @@ export default function PrimaryBtn({ text, additionalClasses, icon }: Iprops) {
   const buttonClasses = `bg-primary py-4 px-16  rounded hover:bg-primary  ${additionalClasses}`;
 
   return (
-    <button className={buttonClasses}>
+    <motion.button className={`${buttonClasses} `}
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+    >
       {text || "enter your text"}{" "}
       {icon && (
         <img
@@ -23,6 +27,6 @@ export default function PrimaryBtn({ text, additionalClasses, icon }: Iprops) {
           }}
         />
       )}
-    </button>
+    </motion.button >
   );
 }

@@ -27,7 +27,7 @@ export default function Tecnology() {
                     <div className="grid mt-[36px] md:mt-[95px] gap-x-[30px] gap-y-[48px]  grid-cols-2 lg:grid-cols-5 ">
                         {tecnology?.map((item, index) => (
                             <div className='flex flex-col items-center justify-center '>
-                                <div className='border-[3px] border-white rounded-[8px] px-6 py-6 flex items-center flex-col'>
+                                <div className='border-[4px] border-white rounded-[8px] w-[136px] h-[136px] justify-center flex items-center flex-col'>
                                     <img src={item.img} alt="" className='' />
                                     <h1 className='text-textColors mt-5 font-urbanist text-[18px] leading-[120%] font-semibold'>{item.title}</h1>
                                 </div>

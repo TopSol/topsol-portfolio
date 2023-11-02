@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import PrimaryBtn from "./PrimaryBtn";
 import heroImg from "../images/hero-bg.png";
 import heroImage from '../images/heroImage.png'
 import { Link } from "gatsby";
 import ServicesOffers from "../pages/home/servisesOffers";
+import { useInView } from "framer-motion";
 interface Iprops {
   title: string;
   image?: string;
@@ -14,19 +15,27 @@ export default function VideoHero({ title, image, page }: Iprops) {
   const splitTitle = title?.split(" ");
   const firstName = splitTitle[0];
   const lastName = splitTitle.slice(1).join(" ");
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <div className=" ">
       <div
-        className={` ${page === 'services' ? "none" : 'bg-cover h-[100vh] flex items-center'}`}
+        className={`h-[100vh] flex items-center ${page === 'services' ? "none" : 'bg-cover '}`}
         style={{
           backgroundImage: page === 'services' ? "none" : `url(${heroImg})`,
         }}
       >
-        <section className="   flex flex-col  md:container mx-auto ">
+        <section className="   flex flex-col  md:container mx-auto "
+          ref={ref}
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+          }}
+        >
           <div className="   mx-6   md:mx-auto md:w-[90%] ">
             <div className="  ">
-              <h1 className="text-4xl mt-[158px] text-center md:text-start md:text-[54px] font-bold font-montserrat">
+              <h1 className="text-4xl  text-center md:text-start md:text-[54px] font-bold font-montserrat">
                 <span className={`${page === 'services' ? 'text-white' : 'text-textColors'}`}>{firstName}</span>{" "}
                 <span className="text-primary">{lastName}</span>
               </h1>
@@ -42,7 +51,7 @@ export default function VideoHero({ title, image, page }: Iprops) {
                   <PrimaryBtn
                     text="Get Started"
                     icon={true}
-                    additionalClasses="text-primary flex items-center font-figtree py-[20px] sm:px-[88px] px-[26px] bg-none text-[18px] mt-[68px] text-white rounded-[6px] "
+                    additionalClasses="text-primary flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none text-[18px] mt-[68px] text-white rounded-[6px] "
                   />
                 </div>
               </Link>

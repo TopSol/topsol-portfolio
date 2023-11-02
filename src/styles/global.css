@@ -111,11 +111,66 @@ padding-bottom: 20px;
   transform: scale(1.3);
 }
 .arrowhide:last-child{
-  /* background-color: antiquewhite; */
-  width: 350px;
+  width: 313px;
 }
 .arrowhide:last-child .imagearrow{
  background-color: aqua;
  display: none;
 
+}
+
+
+.box:hover {
+  --border-size: 3px;
+  --border-angle: 0turn;
+
+  background-image: conic-gradient(
+      from var(--border-angle),
+      rgb(255, 255, 255),
+      rgb(255, 255, 255) 50%,
+      rgb(253, 253, 253)
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #30E7ED, #00A6D7);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+.box {
+  animation-play-state: paused;
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.hide {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: .7s ease;
+  -moz-transition: .7s ease;
+  -o-transition: .7s ease;
+  transition: .7s ease;
+}
+
+.show {
+  height: 150px;
+  opacity: 1;
+  -webkit-transition: .7s ease;
+  -moz-transition: .7s ease;
+  -o-transition: .7s ease;
+  transition: .7s ease;
 }
