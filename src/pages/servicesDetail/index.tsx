@@ -15,6 +15,7 @@ export default function ServiceDetails({ location }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  // console.log(state?.service?.details?.paragraphs?.heading, 'paragraphs');
 
   return (
     <div>
@@ -28,8 +29,8 @@ export default function ServiceDetails({ location }) {
         initialText={state?.service?.details?.initialText}
         image={state?.service?.details?.image}
       />
-      <WorkFlow />
-      <Tecnology />
+      <WorkFlow servicedata={state?.service} />
+      <Tecnology servicedata={state?.service} />
       <RatingSection />
       <div className="mb-[69px]">
         <SmallFooter />

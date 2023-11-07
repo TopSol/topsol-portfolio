@@ -9,7 +9,7 @@ interface Iprops {
 }
 
 export default function PrimaryBtn({ text, additionalClasses, icon }: Iprops) {
-  const buttonClasses = `bg-primary py-4 px-16  rounded hover:bg-primary  ${additionalClasses}`;
+  const buttonClasses = `bg-primary py-4 px-16  rounded   ${additionalClasses}`;
 
   return (
     <motion.button className={`${buttonClasses} `}

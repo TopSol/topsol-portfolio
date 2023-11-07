@@ -20,9 +20,9 @@ export default function VideoHero({ title, image, page }: Iprops) {
   return (
     <div className=" ">
       <div
-        className={`h-[100vh] flex items-center ${page === 'services' ? "none" : 'bg-cover '}`}
+        className={`h-[70vh] flex items-center ${page === 'services' ? "none" : 'bg-cover '}`}
         style={{
-          backgroundImage: page === 'services' ? "none" : `url(${heroImg})`,
+          backgroundImage: page === 'services' ? "none" : `url(${image})`,
         }}
       >
         <section className="   flex flex-col  md:container mx-auto "
@@ -35,11 +35,11 @@ export default function VideoHero({ title, image, page }: Iprops) {
         >
           <div className="   mx-6   md:mx-auto md:w-[90%] ">
             <div className="  ">
-              <h1 className="text-4xl  text-center md:text-start md:text-[54px] font-bold font-montserrat">
-                <span className={`${page === 'services' ? 'text-white' : 'text-textColors'}`}>{firstName}</span>{" "}
+              <h1 className="text-4xl  text-center md:text-start md:text-[54px] font-bold font-urbanist">
+                <span className={`${page === 'services' || 'about' ? 'text-white' : 'text-textColors'}`}>{firstName}</span>{" "}
                 <span className="text-primary">{lastName}</span>
               </h1>
-              <h3 className={`text-center md:text-start md:text-[22px]  font-figtree font-light  ${page === 'services' ? 'text-white' : 'text-textColors'} hero-text-sideLine   lg:w-[75%] mt-[56px]`} >
+              <h3 className={`text-center md:text-start md:text-[22px]  font-figtree font-light  ${page === 'services' || 'about' ? 'text-white' : 'text-textColors'} hero-text-sideLine   lg:w-[75%] mt-[56px]`} >
                 Topsol is a software and mobile app development company with a
                 world-class team of talented data scientists, developers,
                 designers, mathematicians, engineers, and creative artists. We

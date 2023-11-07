@@ -11,8 +11,6 @@
 }
 
 .hoverDive:hover .hoverImage {
-  /* width: 300%;
-height: 300%; */
   transform: scale(50);
   transition: all 2s ease-in-out;
 }
@@ -43,7 +41,7 @@ height: 300%; */
 }
 
 .heroBackground {
-  background: url("../images/J4o.gif"), linear-gradient(#01112e, #005b77);
+  background: url("../images/homeHeroBack.gif"), linear-gradient(#01112e, #005b77);
   background-blend-mode: color-dodge;
   background-size: cover;
 }

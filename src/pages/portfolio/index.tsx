@@ -6,17 +6,17 @@ import SmallFooter from "../../components/smallFooter";
 import Logo from "../../images/favicon-01.png";
 import RecentWork from "./component/recentWork";
 import metaImage from "../../images/main-logo2.png";
+import Hero from "./component/Hero";
+import { ToggleBar } from "../../components/bar";
 export default function index() {
   return (
     <div>
       <Navbar />
-      <VideoHero
-        page="portfolio"
-        image="https://res.cloudinary.com/asifsaythe/image/upload/v1697092135/new_portfolio/portfolio_fhqqft.png"
-        title="Our Portfolio"
-      />
+      <Hero />
       <RecentWork />
-      <SmallFooter />
+      <div className="my-[70px]">
+        <SmallFooter />
+      </div>
       <Footer />
     </div>
   );
