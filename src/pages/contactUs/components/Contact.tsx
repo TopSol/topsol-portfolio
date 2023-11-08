@@ -110,9 +110,8 @@ export default function Contact() {
               </div>
             </motion.button>
             <ul
-              className={`dropDownUl ${
-                isOpen ? "relative" : "hidden"
-              }  shadow   mt-2  flex bg-formInput flex-col gap-5 `}
+              className={`dropDownUl ${isOpen ? "relative" : "hidden"
+                }  shadow   mt-2  flex bg-formInput flex-col gap-5 `}
               style={{
                 pointerEvents: isOpen ? "auto" : "none",
                 clipPath: "inset(10% 50% 90% 50% round 10px)",
@@ -121,9 +120,8 @@ export default function Contact() {
               {btnData.map((item) => (
                 <li
                   key={item.id}
-                  className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${
-                    selectedOption === item ? "bg-primary text-white" : ""
-                  }`}
+                  className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
+                    }`}
                   onClick={() => handleOptionClick(item)}
                 >
                   {item.name}
@@ -206,11 +204,10 @@ export default function Contact() {
           </div>
           <div className="w-[85%]">
             <button
-              className={` w-[100%]  py-[12px] font-medium  text-center px-[37px] rounded  text-[18px]   ${
-                isChecked
+              className={` w-[100%]  py-[12px] font-medium  text-center px-[37px] rounded  text-[18px]   ${isChecked
                   ? " bg-primary text-white cursor-pointer hover:bg-primary-lighter"
                   : "bg-primary text-white hover:bg-primary-lighter cursor-not-allowed "
-              }`}
+                }`}
               disabled={!isChecked}
               onClick={handleSubmit}
             >

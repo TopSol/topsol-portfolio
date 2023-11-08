@@ -108,11 +108,18 @@ padding-bottom: 20px;
 .service-cards-transition:hover div img {
   transform: scale(1.3);
 }
-.arrowhide:last-child{
-  width: 313px;
+.arrowhide {
+  width: auto;
+}
+
+/* Target the last child of its parent when the screen size is upper */
+@media (min-width: 786px) {
+  .arrowhide:last-child {
+    max-width: 384px;
+  }
 }
 .arrowhide:last-child .imagearrow{
- background-color: aqua;
+ /* background-color: aqua; */
  display: none;
 
 }

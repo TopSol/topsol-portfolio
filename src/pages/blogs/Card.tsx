@@ -154,7 +154,11 @@ export default function Card() {
               </div>
               <div className="mx-4 md:mx-8 flex flex-col ">
                 <div className="flex">
-                  <p className="text-primary py-2 rounded-[6px] text-left  mt-[26px] font-figtree font-semibold text-[16px] leading-[20px] px-[10px] bg-[#00baf871]  ">Technology</p>
+                  <p className="text-primary py-2 rounded-[6px] text-left  mt-[26px] font-figtree font-semibold text-[16px] leading-[20px] px-[10px]  "
+                    style={{
+                      backgroundColor: 'rgba(0, 184, 241, 0.20)'
+                    }}
+                  >Technology</p>
                 </div>
                 <p className=" break-words text-left mt-[16px] lg:text-[21px] font-medium font-figtree text-textColors">
                   {item?.description?.slice(0, 80)}...

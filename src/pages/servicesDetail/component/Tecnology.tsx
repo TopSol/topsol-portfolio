@@ -49,8 +49,8 @@ export default function Tecnology(servicedata) {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 },
             },
         ],
@@ -75,7 +75,7 @@ export default function Tecnology(servicedata) {
                         />
                         <p className='text-textColors font-figtree text-[24px] font-medium leading-[120%] mt-8 text-center md:text-left'>Empowering Business with Cutting-Edge Custom Software Solutions</p>
                     </div>
-                    <div className="mt-[36px] md:mt-[95px] w-[80vw]  ">
+                    <div className="mt-[36px] md:mt-[95px] md:w-[80vw] w-[97vw] ">
                         <Slider {...settings} ref={setSlider}>
                             {servicedata?.servicedata?.details?.tecnology?.map((item, index) => (
                                 <div className='flex flex-col   items-center justify-center '>

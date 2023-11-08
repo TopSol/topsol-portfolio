@@ -14,7 +14,9 @@ export default function index() {
       <Hero />
       <Contact />
       <AddressSection />
-      <SmallFooter />
+      <div className="mb-[80px]">
+        <SmallFooter />
+      </div>
       <Footer />
     </div>
   );
