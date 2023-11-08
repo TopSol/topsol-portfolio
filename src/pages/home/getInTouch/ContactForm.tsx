@@ -6,7 +6,11 @@ import { addDoc, collection } from "firebase/firestore";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import PrimaryBtn from "../../../components/PrimaryBtn";
-function ContactForm() {
+
+interface Iprops {
+  addressInfo: boolean
+}
+function ContactForm({ addressInfo }: Iprops) {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -139,7 +143,7 @@ function ContactForm() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col mt-[37px] md:flex-row justify-between">
+      <div className={` ${addressInfo ? 'flex' : 'hidden'}  flex-col mt-[37px] md:flex-row justify-between`}>
         <div className=" md:w-[30%] w-[100%]">
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">lOCATION</h1>
           <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">Lorem ipsum street 1880 1990 Baseline Faisalabad, Pakistan</p>

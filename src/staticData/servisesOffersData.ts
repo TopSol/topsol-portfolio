@@ -98,6 +98,12 @@ const cards = [
           heading:'Deployment & Support',
           text:'Once development is complete, we oversee the seamless deployment of the custom software within your organization. Our commitment doesn"t end there. We provide continuous support and maintenance, ensuring the software remains up-to-date.',
         },
+        {
+          img:requirment3,
+          step:'step 3',
+          heading:'Deployment & Support',
+          text:'Once development is complete, we oversee the seamless deployment of the custom software within your organization. Our commitment doesn"t end there. We provide continuous support and maintenance, ensuring the software remains up-to-date.',
+        },
       ],
       tecnology:[
         {
@@ -1180,29 +1186,7 @@ export const imgCards = [
   },
 ];
 
-export const workflowData =[
-  {
-    img:requirment1,
-    step:'step 1',
-    heading:'Requirements Analysis',
-    text:'Our team initiates the custom software development process by conducting in-depth consultations with your organization. We gather comprehensive requirements, understanding your unique business needs and objectives.',
 
-  },
-  {
-    img:requirment2,
-    step:'step 2',
-    heading:'Tailored Development',
-    text:'With a clear understanding of your requirements, our expert developers design a custom software solution from the ground up. This stage involves coding, testing, and iteration to ensure the software aligns perfectly with your business processes and goals.',
-    
-  },
-  {
-    img:requirment3,
-    step:'step 3',
-    heading:'Deployment & Support',
-    text:'Once development is complete, we oversee the seamless deployment of the custom software within your organization. Our commitment doesn"t end there. We provide continuous support and maintenance, ensuring the software remains up-to-date.',
-        
-   }
-]
 
 
 export default cards;

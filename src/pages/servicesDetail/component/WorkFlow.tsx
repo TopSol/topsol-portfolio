@@ -1,6 +1,5 @@
 import React from 'react'
 import LineAnimation from '../../../components/LineAnimation'
-import { workflowData } from '../../../staticData/servisesOffersData'
 import arrow from '../../../images/Icons/arrow.png'
 
 export default function WorkFlow(servicedata) {
@@ -21,7 +20,7 @@ export default function WorkFlow(servicedata) {
                     />
                     <p className='text-white font-figtree text-[24px] font-medium leading-[120%] text-center md:text-left mt-8'>Efficiently guiding projects from conception to successful delivery</p>
                 </div>
-                <div className="grid mt-[36px] md:mt-[95px] md:gap-x-[20px]  gap-y-[48px]  md:grid-cols-2 grid-cols-1 lg:grid-cols-3   ">
+                <div className="grid mt-[36px] md:mt-[95px] md:gap-x-[20px]  gap-y-[48px]  md:grid-cols-2 grid-cols-1 lg:grid-cols-4   ">
                     {servicedata?.servicedata?.details?.paragraphs?.map((item, index) => (
                         <div className='flex flex-row items-center justify-center arrowhide '>
                             <div className='flex flex-col items-center justify-center  '>

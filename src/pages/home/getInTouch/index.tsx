@@ -27,7 +27,7 @@ function GetInTouch() {
       </div>
       <div className=" md:w-[60%] w-[95%] justify-center items-center">
         <GoogleReCaptchaProvider reCaptchaKey="6Ld3fhcoAAAAAH4-XdxVLnTpos0snr6RyoJDARtn">
-          <ContactForm />
+          <ContactForm addressInfo={true} />
         </GoogleReCaptchaProvider>
       </div>
     </div>
