@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import LineAnimation from '../../../components/LineAnimation'
-import { tecnology } from '../../../staticData/servisesOffersData'
 import bgImage from '../../../images/bgImage.png'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -81,7 +80,7 @@ export default function Tecnology(servicedata) {
                             {servicedata?.servicedata?.details?.tecnology?.map((item, index) => (
                                 <div className='flex flex-col   items-center justify-center '>
                                     <div className='border-[4px] border-white rounded-[8px] w-[136px] h-[136px] justify-center flex items-center flex-col'>
-                                        <img src={item?.img} alt="" className='' />
+                                        <img src={item?.avatar} alt="" className='' />
                                         <h1 className='text-textColors mt-5 font-urbanist text-[18px] leading-[120%] font-semibold'>{item?.title}</h1>
                                     </div>
                                 </div>

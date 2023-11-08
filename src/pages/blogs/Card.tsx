@@ -109,7 +109,7 @@ export default function Card() {
 
   return (
     <div>
-      <div className=" lg:container  justify-center mx-auto">
+      {/* <div className=" lg:container  justify-center mx-auto">
         <div className=" md:container grid grid-col gap-3 items-center mt-[42px] md:mt-[76px] md:grid-cols-2 lg:grid-cols-4   md:mx-auto ">
           {btnData.map((item: any, index) => {
             return (
@@ -131,71 +131,48 @@ export default function Card() {
             );
           })}
         </div>
-      </div>
+      </div> */}
 
-      <div className="md:mt-[99px] md:container md:mx-auto   mt-[42px] space-y-[39px] md:space-y-[123px]">
+      <div className="  w-[80%] grid grid-col gap-x-16 items-center mt-[42px] md:mt-[76px] grid-cols-1 lg:grid-cols-2 xl:grid-cols-3   md:mx-auto ">
         {loader ? (
           <div className="flex justify-center h-[500px] items-center">
             <PulseLoader color="#8E8E8E" size={18} />
           </div>
         ) : (
           blogs.map((item: any, index) => (
-            <div
-              className={` ${
-                index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } px-5   lg:container  md:mx-auto  flex flex-col md:flex-row justify-center `}
-            >
-              <div
-                className={` md:w-[50%] xl:w-[55%] w-[100%] flex ${
-                  index % 2 == 0
-                    ? "justify-start md:mr-[50px] xl:mr-0"
-                    : "justify-end  md:ml-[50px] xl:ml-0"
-                }   `}
-              >
+            <div className=" flex flex-col py-3  border-2 rounded-[6px]"   >
+              <div className="">
                 <img
-                  className="w-[600px] h-[232px] md:h-[509px]  object-cover rounded-lg"
+                  className=" h-[200px]  object-cover rounded-[6px]"
                   src={item.image}
                   alt=""
                 />
               </div>
-              <div className="md:w-[50%] xl:w-[48%] w-[100%] mt-[14px] md:mt-0  ">
-                <div className="flex ">
-                  <div className="flex justify-center items-center">
-                    <div
-                      className="before:content-[''] before:block before:h-[5px] 
-                       before:bg-[#00B8F1] before:rounded-3xl
-                      before:hover:scale-x-50 before:scale-x-100 before:origin-top-left
-                      before:transition before:ease-in-out before:duration-1000
-                       w-[49px] pr-[8px] "
-                    ></div>
-                  </div>
-                  <h1 className=" md:text-[18px]   font-semibold lg:text-[25px] xl:text-[35px]  text-primary">
-                    {item.heading}
-                  </h1>
-                </div>
-
-                <p className=" break-words text-justify mt-[14px] lg:text-[20px] font-medium xl:text-[22px] text-light_Black ">
+              <div className=" flex flex-row ">
+                {/* <p className=" break-words text-justify mt-[14px] lg:text-[20px] font-medium xl:text-[22px] text-light_Black ">
                   {item.description}
-                </p>
+                </p> */}
 
                 <Link to={`/blogs/blogDetail?id=${item.id}`}>
-                  <PrimaryBtn
-                    text="Read More"
-                    additionalClasses="bg-primary mt-[14px] text-[16px] md:px-[79px] px-10 lg:text-[26px] xl:mt-[14px] font-semibold hover:bg-primary-lighter text-white "
-                  />
+                  <div className="flex  justify-center md:justify-start">
+                    <PrimaryBtn
+                      text="Read More"
+                      icon={true}
+                      additionalClasses="text-primary leading-[24px] flex items-center font-figtree py-[6px] px-[16px] rounded-full bg-none text-[14px] mt-[20px] text-white  "
+                    />
+                  </div>
                 </Link>
               </div>
             </div>
           ))
         )}
       </div>
-      <div className="flex justify-around mt-16">
+      {/* <div className="flex justify-around mt-16">
         <button
-          className={`bg-primary  w-[120px] justify-center items-center py-2 rounded-sm flex flex-row ${
-            !hasPreviousPage
+          className={`bg-primary  w-[120px] justify-center items-center py-2 rounded-sm flex flex-row ${!hasPreviousPage
               ? "opacity-50 cursor-not-allowed"
               : "cursor-pointer hover:opacity-50"
-          }`}
+            }`}
           onClick={handlePreviousPage}
           disabled={!hasPreviousPage}
         >
@@ -218,11 +195,10 @@ export default function Card() {
           <p className="text-white font-semibold">Previous</p>
         </button>
         <button
-          className={`bg-primary w-[120px] justify-center items-center py-2 rounded-sm flex flex-row ${
-            !startAfterDoc || !isNextPage
+          className={`bg-primary w-[120px] justify-center items-center py-2 rounded-sm flex flex-row ${!startAfterDoc || !isNextPage
               ? "opacity-50 cursor-not-allowed"
               : "cursor-pointer hover:opacity-50"
-          }`}
+            }`}
           onClick={handleNextPage}
           disabled={!startAfterDoc || !isNextPage}
         >
@@ -244,7 +220,7 @@ export default function Card() {
             />
           </svg>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

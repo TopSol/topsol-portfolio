@@ -37,15 +37,30 @@ import aiChatGPTHead from "../images/Icons/servicesHeader/Ai-chat-gpt.png";
 import requirment1 from '../images/Icons/Group 36919.png'
 import requirment2 from '../images/Icons/web-development-svgrepo-com.png'
 import requirment3 from '../images/Icons/deployment-svgrepo-com.png'
-import tec_1 from '../images/Icons/techonologies/pngwing 2.svg'
-import tec_2 from '../images/Icons/techonologies/tec_4.svg'
-import tec_3 from '../images/Icons/techonologies/tec_10.svg'
-import tec_4 from '../images/Icons/techonologies/tec_17.svg'
-import tec_5 from '../images/Icons/techonologies/tec_22.svg'
-import tec_6 from '../images/Icons/techonologies/tec_5.svg'
-import tec_7 from '../images/Icons/techonologies/tec_6.svg'
-import tec_8 from '../images/Icons/techonologies/tec_23.svg'
-import tec_9 from '../images/Icons/techonologies/vue.svg'
+import Tec_1 from "../images/Icons/techonologies/tec_1.svg";
+import Tec_2 from "../images/Icons/techonologies/tec_2.svg";
+import Tec_3 from "../images/Icons/techonologies/tec_3.svg";
+import Tec_4 from "../images/Icons/techonologies/tec_4.svg";
+import Tec_5 from "../images/Icons/techonologies/tec_5.svg";
+import Tec_6 from "../images/Icons/techonologies/tec_6.svg";
+import Tec_7 from "../images/Icons/techonologies/tec_7.svg";
+import Tec_8 from "../images/Icons/techonologies/tec_8.svg";
+import Tec_9 from "../images/Icons/techonologies/tec_9.svg";
+import Tec_10 from "../images/Icons/techonologies/tec_10.svg";
+import Tec_11 from "../images/Icons/techonologies/tec_11.svg";
+import Tec_12 from "../images/Icons/techonologies/tec_12.svg";
+import Tec_13 from "../images/Icons/techonologies/tec_13.svg";
+import Tec_14 from "../images/Icons/techonologies/tec_14.svg";
+import Tec_15 from "../images/Icons/techonologies/tec_15.svg";
+import Tec_16 from "../images/Icons/techonologies/tec_16.svg";
+import Tec_17 from "../images/Icons/techonologies/tec_17.svg";
+import Tec_18 from "../images/Icons/techonologies/tec_18.svg";
+import Tec_19 from "../images/Icons/techonologies/tec_19.svg";
+import Tec_20 from "../images/Icons/techonologies/tec_20.svg";
+import Tec_21 from "../images/Icons/techonologies/tec_21.svg";
+import Tec_22 from "../images/Icons/techonologies/tec_22.svg";
+import Tec_23 from "../images/Icons/techonologies/tec_23.svg";
+import Tec_24 from "../images/Icons/techonologies/tec_24.svg";
 
 
 
@@ -86,44 +101,101 @@ const cards = [
       ],
       tecnology:[
         {
-          img: tec_1,
-          title:'Node Js'
+          avatar: Tec_1,
+          title: "Azure",
         },
         {
-          img: tec_2,
-          title:'Firebase'
+          avatar: Tec_2,
+          title: "Python",
         },
         {
-          img: tec_3,
-          title:'Mongodb'
+          avatar: Tec_3,
+          title: "Android",
         },
         {
-          img: tec_4,
-          title:'Express Js'
+          avatar: Tec_4,
+          title: "Firebase",
         },
         {
-          img: tec_5,
-          title:'React Js'
+          avatar: Tec_5,
+          title: "TypeScript",
         },
         {
-          img: tec_6,
-          title:'TypeScript' 
-        }
-        ,
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
         {
-          img: tec_7,
-          title:'JavaScript' 
-        }
-        ,
+          avatar: Tec_7,
+          title: "AWS",
+        },
         {
-          img: tec_8,
-          title:'Angular Js' 
-        }
-        ,
+          avatar: Tec_8,
+          title: "Node.js",
+        },
         {
-          img: tec_9,
-          title:'Vue Js' 
-        }
+          avatar: Tec_9,
+          title: "Flutter",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+        {
+          avatar: Tec_11,
+          title: "Swift",
+        },
+        {
+          avatar: Tec_12,
+          title: "Heroku",
+        },
+        {
+          avatar: Tec_13,
+          title: "C#",
+        },
+        {
+          avatar: Tec_14,
+          title: "MySQL",
+        },
+        {
+          avatar: Tec_15,
+          title: "Kubernetes",
+        },
+        {
+          avatar: Tec_16,
+          title: "Google Cloud",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+        {
+          avatar: Tec_18,
+          title: "Laravel",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_20,
+          title: "Docker",
+        },
+        {
+          avatar: Tec_21,
+          title: "WordPress",
+        },
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_24,
+          title: "PostgreSQL",
+        },
       ]
     },
     showProjects: true,
@@ -163,44 +235,101 @@ const cards = [
       ],
       tecnology:[
         {
-          img: tec_1,
-          title:'Node Js'
+          avatar: Tec_1,
+          title: "Azure",
         },
         {
-          img: tec_2,
-          title:'Firebase'
+          avatar: Tec_2,
+          title: "Python",
         },
         {
-          img: tec_3,
-          title:'Mongodb'
+          avatar: Tec_3,
+          title: "Android",
         },
         {
-          img: tec_4,
-          title:'Express Js'
+          avatar: Tec_4,
+          title: "Firebase",
         },
         {
-          img: tec_5,
-          title:'React Js'
+          avatar: Tec_5,
+          title: "TypeScript",
         },
         {
-          img: tec_6,
-          title:'TypeScript' 
-        }
-        ,
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
         {
-          img: tec_7,
-          title:'JavaScript' 
-        }
-        ,
+          avatar: Tec_7,
+          title: "AWS",
+        },
         {
-          img: tec_8,
-          title:'Angular Js' 
-        }
-        ,
+          avatar: Tec_8,
+          title: "Node.js",
+        },
         {
-          img: tec_9,
-          title:'Vue Js' 
-        }
+          avatar: Tec_9,
+          title: "Flutter",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+        {
+          avatar: Tec_11,
+          title: "Swift",
+        },
+        {
+          avatar: Tec_12,
+          title: "Heroku",
+        },
+        {
+          avatar: Tec_13,
+          title: "C#",
+        },
+        {
+          avatar: Tec_14,
+          title: "MySQL",
+        },
+        {
+          avatar: Tec_15,
+          title: "Kubernetes",
+        },
+        {
+          avatar: Tec_16,
+          title: "Google Cloud",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+        {
+          avatar: Tec_18,
+          title: "Laravel",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_20,
+          title: "Docker",
+        },
+        {
+          avatar: Tec_21,
+          title: "WordPress",
+        },
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_24,
+          title: "PostgreSQL",
+        },
       ]
     },
   },
@@ -240,44 +369,101 @@ const cards = [
       ],
       tecnology:[
         {
-          img: tec_1,
-          title:'Node Js'
+          avatar: Tec_1,
+          title: "Azure",
         },
         {
-          img: tec_2,
-          title:'Firebase'
+          avatar: Tec_2,
+          title: "Python",
         },
         {
-          img: tec_3,
-          title:'Mongodb'
+          avatar: Tec_3,
+          title: "Android",
         },
         {
-          img: tec_4,
-          title:'Express Js'
+          avatar: Tec_4,
+          title: "Firebase",
         },
         {
-          img: tec_5,
-          title:'React Js'
+          avatar: Tec_5,
+          title: "TypeScript",
         },
         {
-          img: tec_6,
-          title:'TypeScript' 
-        }
-        ,
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
         {
-          img: tec_7,
-          title:'JavaScript' 
-        }
-        ,
+          avatar: Tec_7,
+          title: "AWS",
+        },
         {
-          img: tec_8,
-          title:'Angular Js' 
-        }
-        ,
+          avatar: Tec_8,
+          title: "Node.js",
+        },
         {
-          img: tec_9,
-          title:'Vue Js' 
-        }
+          avatar: Tec_9,
+          title: "Flutter",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+        {
+          avatar: Tec_11,
+          title: "Swift",
+        },
+        {
+          avatar: Tec_12,
+          title: "Heroku",
+        },
+        {
+          avatar: Tec_13,
+          title: "C#",
+        },
+        {
+          avatar: Tec_14,
+          title: "MySQL",
+        },
+        {
+          avatar: Tec_15,
+          title: "Kubernetes",
+        },
+        {
+          avatar: Tec_16,
+          title: "Google Cloud",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+        {
+          avatar: Tec_18,
+          title: "Laravel",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_20,
+          title: "Docker",
+        },
+        {
+          avatar: Tec_21,
+          title: "WordPress",
+        },
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_24,
+          title: "PostgreSQL",
+        },
       ]
     },
   },
@@ -318,44 +504,101 @@ const cards = [
       ],
       tecnology:[
         {
-          img: tec_1,
-          title:'Node Js'
+          avatar: Tec_1,
+          title: "Azure",
         },
         {
-          img: tec_2,
-          title:'Firebase'
+          avatar: Tec_2,
+          title: "Python",
         },
         {
-          img: tec_3,
-          title:'Mongodb'
+          avatar: Tec_3,
+          title: "Android",
         },
         {
-          img: tec_4,
-          title:'Express Js'
+          avatar: Tec_4,
+          title: "Firebase",
         },
         {
-          img: tec_5,
-          title:'React Js'
+          avatar: Tec_5,
+          title: "TypeScript",
         },
         {
-          img: tec_6,
-          title:'TypeScript' 
-        }
-        ,
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
         {
-          img: tec_7,
-          title:'JavaScript' 
-        }
-        ,
+          avatar: Tec_7,
+          title: "AWS",
+        },
         {
-          img: tec_8,
-          title:'Angular Js' 
-        }
-        ,
+          avatar: Tec_8,
+          title: "Node.js",
+        },
         {
-          img: tec_9,
-          title:'Vue Js' 
-        }
+          avatar: Tec_9,
+          title: "Flutter",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+        {
+          avatar: Tec_11,
+          title: "Swift",
+        },
+        {
+          avatar: Tec_12,
+          title: "Heroku",
+        },
+        {
+          avatar: Tec_13,
+          title: "C#",
+        },
+        {
+          avatar: Tec_14,
+          title: "MySQL",
+        },
+        {
+          avatar: Tec_15,
+          title: "Kubernetes",
+        },
+        {
+          avatar: Tec_16,
+          title: "Google Cloud",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+        {
+          avatar: Tec_18,
+          title: "Laravel",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_20,
+          title: "Docker",
+        },
+        {
+          avatar: Tec_21,
+          title: "WordPress",
+        },
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_24,
+          title: "PostgreSQL",
+        },
       ]
     },
   },
@@ -395,44 +638,101 @@ const cards = [
       ],
       tecnology:[
         {
-          img: tec_1,
-          title:'Node Js'
+          avatar: Tec_1,
+          title: "Azure",
         },
         {
-          img: tec_2,
-          title:'Firebase'
+          avatar: Tec_2,
+          title: "Python",
         },
         {
-          img: tec_3,
-          title:'Mongodb'
+          avatar: Tec_3,
+          title: "Android",
         },
         {
-          img: tec_4,
-          title:'Express Js'
+          avatar: Tec_4,
+          title: "Firebase",
         },
         {
-          img: tec_5,
-          title:'React Js'
+          avatar: Tec_5,
+          title: "TypeScript",
         },
         {
-          img: tec_6,
-          title:'TypeScript' 
-        }
-        ,
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
         {
-          img: tec_7,
-          title:'JavaScript' 
-        }
-        ,
+          avatar: Tec_7,
+          title: "AWS",
+        },
         {
-          img: tec_8,
-          title:'Angular Js' 
-        }
-        ,
+          avatar: Tec_8,
+          title: "Node.js",
+        },
         {
-          img: tec_9,
-          title:'Vue Js' 
-        }
+          avatar: Tec_9,
+          title: "Flutter",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+        {
+          avatar: Tec_11,
+          title: "Swift",
+        },
+        {
+          avatar: Tec_12,
+          title: "Heroku",
+        },
+        {
+          avatar: Tec_13,
+          title: "C#",
+        },
+        {
+          avatar: Tec_14,
+          title: "MySQL",
+        },
+        {
+          avatar: Tec_15,
+          title: "Kubernetes",
+        },
+        {
+          avatar: Tec_16,
+          title: "Google Cloud",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+        {
+          avatar: Tec_18,
+          title: "Laravel",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_20,
+          title: "Docker",
+        },
+        {
+          avatar: Tec_21,
+          title: "WordPress",
+        },
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_24,
+          title: "PostgreSQL",
+        },
       ]
     },
     showProjects: true,
@@ -474,44 +774,101 @@ const cards = [
       ],
       tecnology:[
         {
-          img: tec_1,
-          title:'Node Js'
+          avatar: Tec_1,
+          title: "Azure",
         },
         {
-          img: tec_2,
-          title:'Firebase'
+          avatar: Tec_2,
+          title: "Python",
         },
         {
-          img: tec_3,
-          title:'Mongodb'
+          avatar: Tec_3,
+          title: "Android",
         },
         {
-          img: tec_4,
-          title:'Express Js'
+          avatar: Tec_4,
+          title: "Firebase",
         },
         {
-          img: tec_5,
-          title:'React Js'
+          avatar: Tec_5,
+          title: "TypeScript",
         },
         {
-          img: tec_6,
-          title:'TypeScript' 
-        }
-        ,
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
         {
-          img: tec_7,
-          title:'JavaScript' 
-        }
-        ,
+          avatar: Tec_7,
+          title: "AWS",
+        },
         {
-          img: tec_8,
-          title:'Angular Js' 
-        }
-        ,
+          avatar: Tec_8,
+          title: "Node.js",
+        },
         {
-          img: tec_9,
-          title:'Vue Js' 
-        }
+          avatar: Tec_9,
+          title: "Flutter",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+        {
+          avatar: Tec_11,
+          title: "Swift",
+        },
+        {
+          avatar: Tec_12,
+          title: "Heroku",
+        },
+        {
+          avatar: Tec_13,
+          title: "C#",
+        },
+        {
+          avatar: Tec_14,
+          title: "MySQL",
+        },
+        {
+          avatar: Tec_15,
+          title: "Kubernetes",
+        },
+        {
+          avatar: Tec_16,
+          title: "Google Cloud",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+        {
+          avatar: Tec_18,
+          title: "Laravel",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_20,
+          title: "Docker",
+        },
+        {
+          avatar: Tec_21,
+          title: "WordPress",
+        },
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_24,
+          title: "PostgreSQL",
+        },
       ]
     },
     showProjects: true,
@@ -552,44 +909,101 @@ const cards = [
       ],
       tecnology:[
         {
-          img: tec_1,
-          title:'Node Js'
+          avatar: Tec_1,
+          title: "Azure",
         },
         {
-          img: tec_2,
-          title:'Firebase'
+          avatar: Tec_2,
+          title: "Python",
         },
         {
-          img: tec_3,
-          title:'Mongodb'
+          avatar: Tec_3,
+          title: "Android",
         },
         {
-          img: tec_4,
-          title:'Express Js'
+          avatar: Tec_4,
+          title: "Firebase",
         },
         {
-          img: tec_5,
-          title:'React Js'
+          avatar: Tec_5,
+          title: "TypeScript",
         },
         {
-          img: tec_6,
-          title:'TypeScript' 
-        }
-        ,
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
         {
-          img: tec_7,
-          title:'JavaScript' 
-        }
-        ,
+          avatar: Tec_7,
+          title: "AWS",
+        },
         {
-          img: tec_8,
-          title:'Angular Js' 
-        }
-        ,
+          avatar: Tec_8,
+          title: "Node.js",
+        },
         {
-          img: tec_9,
-          title:'Vue Js' 
-        }
+          avatar: Tec_9,
+          title: "Flutter",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+        {
+          avatar: Tec_11,
+          title: "Swift",
+        },
+        {
+          avatar: Tec_12,
+          title: "Heroku",
+        },
+        {
+          avatar: Tec_13,
+          title: "C#",
+        },
+        {
+          avatar: Tec_14,
+          title: "MySQL",
+        },
+        {
+          avatar: Tec_15,
+          title: "Kubernetes",
+        },
+        {
+          avatar: Tec_16,
+          title: "Google Cloud",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+        {
+          avatar: Tec_18,
+          title: "Laravel",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_20,
+          title: "Docker",
+        },
+        {
+          avatar: Tec_21,
+          title: "WordPress",
+        },
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_24,
+          title: "PostgreSQL",
+        },
       ]
     },
     showProjects: true,
@@ -630,44 +1044,101 @@ const cards = [
       ],
       tecnology:[
         {
-          img: tec_1,
-          title:'Node Js'
+          avatar: Tec_1,
+          title: "Azure",
         },
         {
-          img: tec_2,
-          title:'Firebase'
+          avatar: Tec_2,
+          title: "Python",
         },
         {
-          img: tec_3,
-          title:'Mongodb'
+          avatar: Tec_3,
+          title: "Android",
         },
         {
-          img: tec_4,
-          title:'Express Js'
+          avatar: Tec_4,
+          title: "Firebase",
         },
         {
-          img: tec_5,
-          title:'React Js'
+          avatar: Tec_5,
+          title: "TypeScript",
         },
         {
-          img: tec_6,
-          title:'TypeScript' 
-        }
-        ,
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
         {
-          img: tec_7,
-          title:'JavaScript' 
-        }
-        ,
+          avatar: Tec_7,
+          title: "AWS",
+        },
         {
-          img: tec_8,
-          title:'Angular Js' 
-        }
-        ,
+          avatar: Tec_8,
+          title: "Node.js",
+        },
         {
-          img: tec_9,
-          title:'Vue Js' 
-        }
+          avatar: Tec_9,
+          title: "Flutter",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+        {
+          avatar: Tec_11,
+          title: "Swift",
+        },
+        {
+          avatar: Tec_12,
+          title: "Heroku",
+        },
+        {
+          avatar: Tec_13,
+          title: "C#",
+        },
+        {
+          avatar: Tec_14,
+          title: "MySQL",
+        },
+        {
+          avatar: Tec_15,
+          title: "Kubernetes",
+        },
+        {
+          avatar: Tec_16,
+          title: "Google Cloud",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+        {
+          avatar: Tec_18,
+          title: "Laravel",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_20,
+          title: "Docker",
+        },
+        {
+          avatar: Tec_21,
+          title: "WordPress",
+        },
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_24,
+          title: "PostgreSQL",
+        },
       ]
     },
     showProjects: true,
@@ -732,46 +1203,6 @@ export const workflowData =[
         
    }
 ]
-export const tecnology =[
-  {
-    img: tec_1,
-    title:'Node Js'
-  },
-  {
-    img: tec_2,
-    title:'Firebase'
-  },
-  {
-    img: tec_3,
-    title:'Mongodb'
-  },
-  {
-    img: tec_4,
-    title:'Express Js'
-  },
-  {
-    img: tec_5,
-    title:'React Js'
-  },
-  {
-    img: tec_6,
-    title:'TypeScript' 
-  }
-  ,
-  {
-    img: tec_7,
-    title:'JavaScript' 
-  }
-  ,
-  {
-    img: tec_8,
-    title:'Angular Js' 
-  }
-  ,
-  {
-    img: tec_9,
-    title:'Vue Js' 
-  }
-]
+
 
 export default cards;
