@@ -133,32 +133,38 @@ export default function Card() {
         </div>
       </div> */}
 
-      <div className="  w-[80%] grid grid-col gap-x-16 items-center mt-[42px] md:mt-[76px] grid-cols-1 lg:grid-cols-2 xl:grid-cols-3   md:mx-auto ">
+      <div className=" w-[100%]  md:w-[80%] grid grid-col gap-x-0 md:gap-x-16 items-center mt-[42px] md:mt-[76px] grid-cols-1 md:grid-cols-2 xl:grid-cols-3   md:mx-auto ">
         {loader ? (
           <div className="flex justify-center h-[500px] items-center">
             <PulseLoader color="#8E8E8E" size={18} />
           </div>
         ) : (
           blogs.map((item: any, index) => (
-            <div className=" flex flex-col py-3  border-2 rounded-[6px]"   >
-              <div className="">
+            <div className=" flex flex-col py-6 mt-5 mx-3  border-2 rounded-[6px] hover:scale-[1.02]"
+              style={{
+                transition: "all .50s ease "
+              }}
+            >
+              <div className=" flex mx-4  justify-center">
                 <img
                   className=" h-[200px]  object-cover rounded-[6px]"
                   src={item.image}
                   alt=""
                 />
               </div>
-              <div className=" flex flex-row ">
-                {/* <p className=" break-words text-justify mt-[14px] lg:text-[20px] font-medium xl:text-[22px] text-light_Black ">
-                  {item.description}
-                </p> */}
-
+              <div className="mx-4 md:mx-8 flex flex-col ">
+                <div className="flex">
+                  <p className="text-primary py-2 rounded-[6px] text-left  mt-[26px] font-figtree font-semibold text-[16px] leading-[20px] px-[10px] bg-[#00baf871]  ">Technology</p>
+                </div>
+                <p className=" break-words text-left mt-[16px] lg:text-[21px] font-medium font-figtree text-textColors">
+                  {item?.description?.slice(0, 80)}...
+                </p>
                 <Link to={`/blogs/blogDetail?id=${item.id}`}>
-                  <div className="flex  justify-center md:justify-start">
+                  <div className="flex items-center justify-start">
                     <PrimaryBtn
                       text="Read More"
                       icon={true}
-                      additionalClasses="text-primary leading-[24px] flex items-center font-figtree py-[6px] px-[16px] rounded-full bg-none text-[14px] mt-[20px] text-white  "
+                      additionalClasses="text-primary  flex items-center font-figtree py-[10px] px-[16px] rounded-full bg-none text-[14px] mt-[20px] text-white  "
                     />
                   </div>
                 </Link>
