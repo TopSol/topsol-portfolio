@@ -4,9 +4,14 @@ import Icon2 from "../../images/Icons/servicersIcon/secourity.svg";
 import { Link } from "gatsby";
 import FileIcon from "../../../images/Icons/fileIcon.png";
 import LineAnimation from "../../../components/LineAnimation";
+import WhyChooesUs from '../../../images/whyChouesUs.png'
 export default function Project() {
   return (
-    <div className="bg-white ">
+    <div className="py-[90px] flex flex-col px-2 bg-cover items-center "
+      style={{
+        backgroundImage: `url(${WhyChooesUs})`
+      }}
+    >
       <div className="flex flex-col justify-center items-center     ">
         <div className=" mt-[48px] ">
           <h1 className="font-extrabold uppercase font-urbanist text-black  text-3xl md:text-3xl lg:text-4xl text-center">
@@ -33,7 +38,7 @@ export default function Project() {
                 <h1 className="font-normal text-[20px] font-figtree text-primary   my-3 ">
                   {item.heading}
                 </h1>
-                <p className="text-[11px] mb-4 font-figtree leading-[125%] font-light">{item.detail}</p>
+                <p className="text-[18px] mb-4 font-figtree leading-[125%] font-light">{item.detail}</p>
               </div>
             );
           })}

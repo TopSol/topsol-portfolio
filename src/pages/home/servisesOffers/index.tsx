@@ -7,7 +7,7 @@ import PrimaryBtn from "../../../components/PrimaryBtn";
 
 function ServicesOffers({ page, showPrimaryBtn }) {
   return (
-    <div className=" mt-8 py-[50px] relative flex flex-col justify-center items-center px-2"
+    <div className={` mt-8  ${page === 'services' ? "py-0" : "py-[50px]"}  relative flex flex-col justify-center items-center px-2`}
       style={{
         background: page === 'services' ? "none" : "linear-gradient(#0B234C, #00B8F1)"
       }}

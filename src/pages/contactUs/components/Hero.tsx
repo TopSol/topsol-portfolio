@@ -4,43 +4,10 @@ import { Link } from "gatsby";
 
 export default function Hero() {
   return (
-    <div>
-      <div className="pb-[30px]  md:pb-[123px] md:pt-[101px] bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
-        <div className="md:w-[80%] min-h-[100vh] items-center container md:mx-auto md:flex-row flex flex-col  justify-center">
-          <div className="w-full mt-[70px] md:container md:mx-auto md:mt-0  flex flex-col justify-center text-center md:text-left ">
-            <p className="text-[36px] md:text-[50px] xl:text-[70px]  text-white font-[600]">
-              Initiate a <br />
-              <span className="md:inline xl:w-[100%] text-primary">
-                Conversation
-              </span>
-              <br />
-              About Your <br />
-              <span className="inline md:block text-primary md:text-white">
-                Business
-              </span>
-            </p>
-            <div className="my-12 md:container md:mx-auto  mx-[24px]">
-              <p className="text-primary-white text-[18px] font-medium ">
-                Every endeavor takes root from a concept. Let's explore,
-                <br /> construct, and nurture your online enterprise
-              </p>
-            </div>
-            <a href="#contact">
-              <div className="">
-                <button className="border md:text-[26px] text-[20px] font-semibold rounded md:px-[56px] px-[23px] md:py-[19px] py-[15px] text-primary-white hover:bg-primary hover:border-primary">
-                  Start your project
-                </button>
-              </div>
-            </a>
-          </div>
-          <div className="mt-[36px] md:container md:mx-auto justify-center items-center flex flex-col">
-            <img
-              className="items-center w-[90%] md:w-[100%]"
-              src={contactUs}
-              alt="#"
-            />
-          </div>
-        </div>
+    <div className=' bg-primary py-[120px]'>
+      <div className='md:container  md:mx-auto   flex flex-col justify-center  text-center  '>
+        <h1 className='text-3xl md:text-5xl lg:text-6xl xl:text-[70px] mb-0 md:mb-[21px] font-urbanist  text-white font-bold'>CONTACT <span className='text-textColors'>Us</span></h1>
+        <p className='text-[20px] md:text-lg lg:text-xl xl:text-[24px] mt-[26px] font-figtree font-light  md:mt-[10px] text-white  '>Let's explore, construct, and nurture your online enterprise</p>
       </div>
     </div>
   );

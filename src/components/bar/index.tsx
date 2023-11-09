@@ -51,17 +51,18 @@ export const ToggleBar = () => {
   });
   return (
     <div className={` ${"bg-white"} `}>
-      <Link to="/">
-        <img
-          src={Logo}
-          alt=""
-          className="z-[900] sm:w-[230px] w-[200px] max-w-none h-24 sm:h-28"
-        />
-      </Link>
+      <div className="w-[20%]  ">
+        <Link to="/">
+          <img
+            src={Logo}
+            alt=""
+            className="w-[179px] sm:ml-36  sm:my-2  my-2"
+          />
+        </Link>
+      </div>
       <motion.nav
-        className={`navbar ${
-          isOpen && ""
-        } transition-bg duration-500 ease-in-out`}
+        className={`navbar ${isOpen && ""
+          } transition-bg duration-500 ease-in-out`}
         initial={false}
         animate={isOpen ? "open" : "closed"}
         custom={height}

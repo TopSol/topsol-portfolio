@@ -5,7 +5,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { addDoc, collection } from "firebase/firestore";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-function ContactForm() {
+import PrimaryBtn from "../../../components/PrimaryBtn";
+
+interface Iprops {
+  addressInfo: boolean
+}
+function ContactForm({ addressInfo }: Iprops) {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -128,18 +133,17 @@ function ContactForm() {
             type="button"
             onClick={submit}
             aria-label="Post Comment"
-            className="w-full px-6 py-[10px] bg-[#00B8F1] border-[1px] font-urbanist rounded-md text-white font-semibold text-[20px] hover:bg-[#96dff6] focus:bg-[#00B8F1] active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out flex items-center justify-center"
           >
-            Send
-            <div className="ml-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
-                <path d="M2.23234 10.884L8.44555 4.14408L8.4536 9.61177C8.4545 10.2602 8.98096 10.7851 9.62942 10.7841C9.95359 10.7836 10.247 10.6518 10.4591 10.439C10.6713 10.2262 10.8023 9.93243 10.8017 9.60825L10.7895 1.3061C10.7886 0.657704 10.2621 0.132785 9.61368 0.13374L1.31153 0.145962C0.663188 0.146917 0.138269 0.673383 0.139169 1.32178C0.140068 1.97018 0.666534 2.4951 1.31499 2.49414L6.78268 2.48609L0.569465 9.22597C0.11164 9.68515 0.112735 10.4286 0.57191 10.8864C1.03109 11.3442 1.77451 11.3431 2.23234 10.884Z" fill="white" />
-              </svg>
-            </div>
+            <PrimaryBtn
+              text="Send"
+              icon={true}
+              additionalClasses="text-primary flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none text-[18px]  text-white rounded-[6px] "
+            />
+
           </button>
         </div>
       </div>
-      <div className="flex flex-col mt-[37px] md:flex-row justify-between">
+      <div className={` ${addressInfo ? 'flex' : 'hidden'}  flex-col mt-[37px] md:flex-row justify-between`}>
         <div className=" md:w-[30%] w-[100%]">
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">lOCATION</h1>
           <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">Lorem ipsum street 1880 1990 Baseline Faisalabad, Pakistan</p>
