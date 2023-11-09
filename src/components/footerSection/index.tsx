@@ -22,7 +22,7 @@ export default function Footer() {
             <div>
               <div className="">
                 <h1 className="mb-4 text-primary text-[28px]  font-medium ">
-                  TopSol Solutions
+                  TOPSOL
                 </h1>
                 <span className="text-[18px] font-medium ">
                   A Software development Company

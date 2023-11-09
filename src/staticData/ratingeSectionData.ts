@@ -1,4 +1,4 @@
-import Chris from "../images/chris.jpeg";
+import Chris from "../images/chris_client.jpeg";
 
 import Nick from "../images/nick.png";
 
@@ -29,7 +29,6 @@ const reviews = [
     type: "Co-Founder, Developer & Manager @ Working Title Simulations",
     avatar: Chris,
   },
-
 ];
 
 export default reviews;

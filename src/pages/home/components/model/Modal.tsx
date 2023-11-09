@@ -9,11 +9,7 @@ export default function Modal({
   id: string;
   closeModal: () => void;
 }) {
-  const { heading, subheading, desc, avatar } = reviews.find(
-    (item) => item.id === id
-  );
-  // const { heading, subheading, desc, avatar } = reviews[0];
-  // console.log("hello", id);
+  const res = reviews?.find((item) => item.id === id);
 
   return (
     <>
@@ -68,19 +64,19 @@ export default function Modal({
                 we are here
               </h4>
               <p className="font-montserrat md:text-[18px] lg:text-[36px]  md:text-left text-center font-bold text-[#309BD3] capitalize">
-                {heading}
+                {res?.heading}
               </p>
               <p className="font-montserrat md:text-[18px] lg:text-[36px]  md:text-left text-center font-bold text-[#309BD3] capitalize">
-                {subheading}
+                {res?.subheading}
               </p>
               <p className="font-montserrat lg:pr-7 pr-3 lg:mt-5 md:mt-3 md:text-[13px]  md:text-left text-justify text-[10px]">
-                {desc}
+                {res?.desc}
               </p>
             </div>
             <motion.div className="md:w-[38%] w-[50%]">
               <img
                 className="modalCardImage h-full max-w-full"
-                src={avatar}
+                src={res?.avatar}
                 alt=""
               />
             </motion.div>

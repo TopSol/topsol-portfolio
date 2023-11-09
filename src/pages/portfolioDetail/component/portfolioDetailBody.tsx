@@ -36,7 +36,7 @@ export default function PortfolioDetailBody({ data }: any) {
         </div>
       </div>
       <div>
-        <div className="flex justify-center mx-6 md:mx-0">
+        {/* <div className="flex justify-center mx-6 md:mx-0">
           <video
             src={data?.videoUrl}
             className="h-[50vh] my-[20px] mx-6 md:mx-0 md:my-[70px]"
@@ -44,7 +44,7 @@ export default function PortfolioDetailBody({ data }: any) {
             muted
             loop
           ></video>
-        </div>
+        </div> */}
 
         <div className="flex flex-col justify-center items-center">
           <div className="">
