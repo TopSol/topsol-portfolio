@@ -10,7 +10,8 @@ import { db } from "../../../utils/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import ContactForm from "../../home/getInTouch/ContactForm";
+import contactImage from '../../../images/contactImage.png'
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<any>(null);
@@ -21,7 +22,7 @@ export default function Contact() {
   const [organization, setOrganization] = useState("");
   const [message, setMessage] = useState("");
 
-  const scope = useMenuAnimation(isOpen);
+  // const scope = useMenuAnimation(isOpen);
 
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
@@ -73,7 +74,23 @@ export default function Contact() {
       <div>
         <ToastContainer />
       </div>
-      <div className="md:w-[70%] md:justify-center md:mx-auto">
+      <div className=" mt-[84px] flex md:w-[85%] w-[100%] items-center justify-center mx-auto  md:flex-row flex-col ">
+        <div className=" md:w-[60%] w-[95%] justify-center items-center">
+          <div className='flex flex-col items-center md:items-start'>
+            <p className='text-4xl text-center md:text-5xl lg:text-6xl font-bold font-urbanist text-black'>
+              LET’S GET <span className='text-primary'>IN TOUCH</span>
+            </p>
+            <LineAnimation width='200px' height='7px' backgroundColor='#00B8F1' marginTop="22px" />
+          </div>
+          <div className="mt-[52px]">
+            <ContactForm addressInfo={false} />
+          </div>
+        </div>
+        <div className=" flex flex-col justify-center items-center  w-[50%] ">
+          <img src={contactImage} alt="" />
+        </div>
+      </div>
+      {/* <div className="md:w-[70%] md:justify-center md:mx-auto">
         <div className="mt-[118px] md:container md:mx-auto  flex flex-col justify-center items-center md:justify-start md:items-start">
           <div>
             <h1 className=" text-center text-black font-semibold text-[22px] md:text-[30px] lg:text-[40px]">
@@ -110,9 +127,8 @@ export default function Contact() {
               </div>
             </motion.button>
             <ul
-              className={`dropDownUl ${
-                isOpen ? "relative" : "hidden"
-              }  shadow   mt-2  flex bg-formInput flex-col gap-5 `}
+              className={`dropDownUl ${isOpen ? "relative" : "hidden"
+                }  shadow   mt-2  flex bg-formInput flex-col gap-5 `}
               style={{
                 pointerEvents: isOpen ? "auto" : "none",
                 clipPath: "inset(10% 50% 90% 50% round 10px)",
@@ -121,9 +137,8 @@ export default function Contact() {
               {btnData.map((item) => (
                 <li
                   key={item.id}
-                  className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${
-                    selectedOption === item ? "bg-primary text-white" : ""
-                  }`}
+                  className={`dropDownli  px-4 py-2  hover:bg-gray-100 origin-[-20px_50%] cursor-pointer ${selectedOption === item ? "bg-primary text-white" : ""
+                    }`}
                   onClick={() => handleOptionClick(item)}
                 >
                   {item.name}
@@ -206,11 +221,10 @@ export default function Contact() {
           </div>
           <div className="w-[85%]">
             <button
-              className={` w-[100%]  py-[12px] font-medium  text-center px-[37px] rounded  text-[18px]   ${
-                isChecked
+              className={` w-[100%]  py-[12px] font-medium  text-center px-[37px] rounded  text-[18px]   ${isChecked
                   ? " bg-primary text-white cursor-pointer hover:bg-primary-lighter"
                   : "bg-primary text-white hover:bg-primary-lighter cursor-not-allowed "
-              }`}
+                }`}
               disabled={!isChecked}
               onClick={handleSubmit}
             >
@@ -218,7 +232,7 @@ export default function Contact() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,3 +1,7 @@
+import img1 from '../images/Icons/portfolio/carbon_build-tool.png'
+import img2 from '../images/Icons/portfolio/icon-park-outline_muscle.png'
+import img3 from '../images/Icons/portfolio/material-symbols_noise-aware.png'
+
 export const data = [
   {
     id: 1,
@@ -50,5 +54,20 @@ export const data2 = [
     side: "md:flex-row-reverse ",
   },
 ];
+
+export const portfolioImg = [
+  {
+   img:img1,
+   text:'Real-time Transaction Insights'
+  },
+  {
+    img:img2,
+    text:'Automated Price-Book Management'
+   },
+   {
+    img:img3,
+    text:'Tailored Data Analysis Solutions'
+   }
+]
 
 export default data;

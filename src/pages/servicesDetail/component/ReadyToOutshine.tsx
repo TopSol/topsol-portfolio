@@ -4,10 +4,10 @@ import Cards from "./Cards";
 import { servicesDetailsCardTypes } from "../../../types/interfaceTypes";
 
 function ReadyToOutshine(servicedata) {
-  // {servicedata?.servicedata?.details?.paragraphs}
+  // { servicedata?.servicedata?.details?.paragraphs }
 
-  // const paragraphs = servicedata?.servicedata?.details?.paragraphs;
-  // console.log("paragraphs", paragraphs);
+  const paragraphs = servicedata?.servicedata?.details?.paragraphs;
+  console.log("paragraphs", paragraphs);
   return (
     <div className="md:container mx-auto">
       <div className="   md:my-[100px] my-[50px] flex flex-row items-center justify-center">

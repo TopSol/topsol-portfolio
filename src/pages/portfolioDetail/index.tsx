@@ -53,7 +53,9 @@ export default function index() {
           <PortfolioDetailBody data={detail} />
         </div>
       )}
-      <SmallFooter />
+      <div className="mb-[70px]">
+        <SmallFooter />
+      </div>
       <Footer />
     </div>
   );

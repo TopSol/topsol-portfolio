@@ -9,6 +9,8 @@ import Experience from "./component/Experience";
 import aboutUsData from "../../staticData/aboutusData";
 import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
+import aboutHero from '../../images/aboutHero.png'
+import aboutInfo from '../../images/aboutInfo.png'
 
 const aboutUs = () => {
   return (
@@ -16,13 +18,14 @@ const aboutUs = () => {
       <Navbar />
       <VidoeHero
         page="about"
-        image="https://res.cloudinary.com/asifsaythe/image/upload/v1697092135/new_portfolio/about_us_lcfcpj.png"
-        title="About TopSol"
+        image={aboutHero}
+        title="ABOUT US"
       />
       <InfoSection
         heading={aboutUsData?.heading}
         mainHeading={aboutUsData?.mainHeading}
         initialText={aboutUsData?.initialText}
+        image={aboutInfo}
       />
       <Experience />
       <div className="mt-[40px]">

@@ -17,17 +17,16 @@ function Navbar() {
   return (
     <motion.div
       variants={variants}
-      className={`relative  ${
-        !open
-          ? "hover:bg-primary-white transition-colors duration-500"
-          : "bg-primary-navbarBg"
-      }`}
+      className={`relative  ${!open
+        ? "hover:bg-primary-white transition-colors duration-500"
+        : "bg-primary-navbarBg"
+        }`}
     >
       <motion.div className="md:container  mx-auto " id="navbar">
         <header>
           <nav
             className="
-          sm:px-14
+          sm:px-2
           px-[8px]
           flex
           w-full
@@ -46,7 +45,7 @@ function Navbar() {
             <div>
               {!open && (
                 <div
-                  className="flex gap-1 items-center cursor-pointer "
+                  className="flex gap-1 -ml-4 md:-ml-0 items-center cursor-pointer "
                   onClick={() => setOpen(true)}
                 >
                   <h3 className="text-black font-figtree text-[18px]">Menu</h3>
@@ -59,9 +58,8 @@ function Navbar() {
               <img
                 src={closeImg}
                 onClick={() => setOpen(false)}
-                className={`h-6 w-6 cursor-pointer ${
-                  open ? "block" : "hidden"
-                } `}
+                className={`h-6 w-6 cursor-pointer ${open ? "block" : "hidden"
+                  } `}
               />
               {/* helo */}
             </div>
