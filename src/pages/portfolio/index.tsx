@@ -11,7 +11,7 @@ import { ToggleBar } from "../../components/bar";
 export default function index() {
   return (
     <div>
-      <Navbar />
+      <ToggleBar />
       <Hero />
       <RecentWork />
       <div className="my-[70px]">

@@ -5,11 +5,12 @@ import Logo from "../../images/favicon-01.png";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footerSection";
 import metaImage from "../../images/main-logo2.png";
+import { ToggleBar } from "../../components/bar";
 function JobDetail(props: any) {
   const details = props?.location?.state;
   return (
     <div>
-      <Navbar />
+      <ToggleBar />
       <Designer jobDetails={details} />
       <AboutUs jobDetails={details} />
       <Footer />

@@ -113,6 +113,7 @@ const cards = [
           heading: "Custom ERP",
           text: "Tailored ERP solutions for comprehensive business management, integrating processes, improving data visibility, and driving informed decision-making for sustained organizational success.",
         },
+
       ],
       tecnology: [
         {

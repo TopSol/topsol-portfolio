@@ -57,9 +57,8 @@ function ContactForm({ addressInfo }: Iprops) {
       </div>
       <div className=" mx-auto  w-[100%] mt-10 md:mt-0">
         <div
-          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${
-            isFocused === "name" ? "border-primary" : "border-[#1F1F1F]"
-          }`}
+          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${isFocused === "name" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
         >
           <div className="md:w-[6%] w-[13%]">
             <svg
@@ -90,11 +89,7 @@ function ContactForm({ addressInfo }: Iprops) {
           />
         </div>
         <div className="flex flex-col md:flex-row md:mt-7  mt-3 justify-between">
-          <div
-            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[7px]  px-[20px] ${
-              isFocused === "email" ? "border-primary" : "border-[#1F1F1F]"
-            }`}
-          >
+          <div className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "email" ? "border-primary" : "border-[#1F1F1F]"}`}>
             <div className="w-[9%] mr-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -120,9 +115,8 @@ function ContactForm({ addressInfo }: Iprops) {
             />
           </div>
           <div
-            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] md:mt-0  mt-3 border-[1px] items-center py-[7px]  px-[20px] ${
-              isFocused === "phone" ? "border-primary" : "border-[#1F1F1F]"
-            }`}
+            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] md:mt-0  mt-3 border-[1px] items-center py-[7px]  px-[20px] ${isFocused === "phone" ? "border-primary" : "border-[#1F1F1F]"
+              }`}
           >
             <PhoneInput
               inputStyle={{
@@ -141,9 +135,8 @@ function ContactForm({ addressInfo }: Iprops) {
           </div>
         </div>
         <div
-          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center py-[10px]  px-[20px] ${
-            isFocused === "message" ? "border-primary" : "border-[#1F1F1F]"
-          }`}
+          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "message" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
         >
           <input
             type="text"

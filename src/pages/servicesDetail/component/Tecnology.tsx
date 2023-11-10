@@ -57,14 +57,14 @@ export default function Tecnology(servicedata) {
     };
     return (
         <div>
-            <div className="py-[90px] flex px-2 bg-cover items-center"
+            <div className="md:py-[90px] mt-16 md:mt-0 flex px-2 bg-cover items-center"
                 style={{
                     backgroundImage: `url(${bgImage})`
                 }}
             >
                 <div className=' flex flex-col md:w-[80%] w-[100%] mx-auto justify-center md:justify-start '>
                     <div className=" flex flex-col md:justify-start justify-center  items-center md:items-start  ">
-                        <h1 className="font-bold text-textColors  uppercase font-urbanist text-[26px] md:text-34[px] lg:text-4xl text-center md:text-left">
+                        <h1 className="font-bold text-textColors  uppercase font-urbanist text-[26px] md:text-[34px] lg:text-4xl text-center md:text-left">
                             TECHNOLOGIES <span className="text-primary">WE USE</span>
                         </h1>
                         <LineAnimation

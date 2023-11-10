@@ -11,11 +11,12 @@ import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
 import aboutHero from '../../images/aboutHero.png'
 import aboutInfo from '../../images/aboutInfo.png'
+import { ToggleBar } from "../../components/bar";
 
 const aboutUs = () => {
   return (
     <div>
-      <Navbar />
+      <ToggleBar />
       <VidoeHero
         page="about"
         image={aboutHero}

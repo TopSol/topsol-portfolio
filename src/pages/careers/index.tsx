@@ -8,11 +8,12 @@ import AllOpenings from "./components/allOpenings";
 import Process from "./components/recruitmentProcess/Process";
 import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
+import { ToggleBar } from "../../components/bar";
 
 function Careers() {
   return (
     <div>
-      <Navbar />
+      <ToggleBar />
       <JoinTopSol />
       <LifeTopsol />
       <AllOpenings />

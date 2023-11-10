@@ -6,6 +6,7 @@ import CommentSection from "./components/CommentSection";
 import { db } from "../../../utils/firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { useLocation } from "@reach/router";
+import { ToggleBar } from "../../../components/bar";
 
 export default function index() {
   const [detail, setDetail] = useState({});
@@ -45,7 +46,7 @@ export default function index() {
   }, [id]);
   return (
     <div>
-      <Navbar />
+      <ToggleBar />
       <Hero data={detail} />
       {/* <div className=" md:container md:mx-auto flex"> */}
       <div dangerouslySetInnerHTML={{ __html: detail?.htmlCode || "" }} />

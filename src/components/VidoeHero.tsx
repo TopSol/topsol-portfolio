@@ -20,7 +20,7 @@ export default function VideoHero({ title, image, page }: Iprops) {
   return (
     <div className=" ">
       <div
-        className={`h-[70vh] flex items-center ${page === 'services' ? "none" : 'bg-cover '}`}
+        className={`md:h-[70vh] h-[90vh] flex items-center ${page === 'services' ? "none" : 'bg-cover '}`}
         style={{
           backgroundImage: page === 'services' ? "none" : `url(${image})`,
         }}

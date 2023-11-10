@@ -6,10 +6,11 @@ import Hero from './components/Hero';
 import CardSection from './components/CardSection';
 import CommentSection from './components/CommentSection';
 import ImageSection from './components/ImageSection';
+import { ToggleBar } from '../../components/bar';
 export default function index() {
   return (
     <div>
-      <Navbar />
+      <ToggleBar />
       <Hero />
       <CardSection />
       <DataScience showFlex={true} />

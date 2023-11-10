@@ -18,7 +18,7 @@ export default function HeroSection({ servicedata, imageHead }: propTypes) {
 
   return (
     <div className=" ">
-      <div className="flex items-center  bg-cover h-[70vh]"
+      <div className="flex items-center  bg-cover md:h-[70vh] h-[90vh]"
         style={{
           backgroundImage: `url(${imageHead})`,
         }}

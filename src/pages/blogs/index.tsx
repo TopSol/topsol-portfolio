@@ -6,10 +6,11 @@ import Footer from "../../components/footerSection";
 import Card from "./Card";
 import metaImage from "../../images/main-logo2.png";
 import Logo from "../../images/favicon-01.png";
+import { ToggleBar } from "../../components/bar";
 export default function index() {
   return (
     <div>
-      <Navbar />
+      <ToggleBar />
       <Header />
       <Heading />
       <Card />
