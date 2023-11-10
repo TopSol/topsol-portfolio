@@ -56,7 +56,7 @@ export const ToggleBar = () => {
           <img
             src={Logo}
             alt=""
-            className="md:w-[179px] w-[250px] sm:ml-36  sm:my-2  my-2"
+            className="md:w-[179px] w-[250px] sm:ml-36  sm:my-1  my-2"
           />
         </Link>
       </div>

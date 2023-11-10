@@ -3,7 +3,7 @@ import PrimaryBtn from "./PrimaryBtn";
 import { Link } from "gatsby";
 export default function SmallFooter() {
   return (
-    <div className="bg-gradient-to-b mt-[100px] md:container md:mx-auto mx-4 flex flex-col rounded-[16px]  justify-center items-center  from-secondary to-primary py-[56px]  ">
+    <div className="bg-gradient-to-b mt-[60px] md:container md:mx-auto mx-4 flex flex-col rounded-[16px]  justify-center items-center  from-secondary to-primary py-[40px]  ">
       <h1 className="font-bold text-[30px]  md:text-[36px] font-urbanist text-center  text-white ">
         Ready to discuss your project now?
       </h1>

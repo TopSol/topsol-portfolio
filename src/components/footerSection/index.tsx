@@ -11,7 +11,7 @@ import linkedin from "../../images/linkedIn.png";
 export default function Footer() {
   return (
     <div
-      className="bg-cover bg-center font-mont p-10 "
+      className="bg-cover bg-center font-mont px-10 pt-10 pb-1 "
       style={{
         backgroundImage: `url(${footerBg})`,
       }}
@@ -62,7 +62,7 @@ export default function Footer() {
                 <li>DevOps</li>
                 <li>UX/UI Design</li>
                 <li>Web Development</li>
-                <li>Business Strategy</li>
+                <li>Quality Assurance</li>
                 <li>App Development</li>
               </ul>
             </div>
@@ -129,7 +129,8 @@ export default function Footer() {
           <div className=" sm:grid hidden">
             <hr className="mt-[82px]  " />
             <div className="text-center text-white mt-[39px] mb-[10px] ">
-              © 2023 | All rights reserved
+
+              © 2023 | All rights reserved by <Link to="/home"> TOPSOL </Link>
             </div>
           </div>
         </div>

@@ -57,7 +57,7 @@ export default function Tecnology(servicedata) {
     };
     return (
         <div>
-            <div className="md:py-[90px] mt-16 md:mt-0 flex px-2 bg-cover items-center"
+            <div className="md:py-[50px] mt-16 md:mt-0 flex px-2 bg-cover items-center"
                 style={{
                     backgroundImage: `url(${bgImage})`
                 }}
@@ -87,7 +87,7 @@ export default function Tecnology(servicedata) {
                             ))}
                         </Slider>
                     </div>
-                    <div className="flex mt-16 justify-center">
+                    <div className="flex mt-10 justify-center">
                         <button className="button arrowAwards bg-white hover:bg-primary p-2 rounded-full" onClick={previous}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                 <path d="M20.25 12.1564H3.75" stroke="#121314" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
