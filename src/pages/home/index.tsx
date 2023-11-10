@@ -15,19 +15,21 @@ import reviews from "../../staticData/cardSectionData";
 import { reviewTypes } from "../../types/interfaceTypes";
 import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
+// import mainLogo from "../../../og_image.jpg";
 import MetaPixel from "../../utils/meta/metaPixel";
 import Faqs from "./faqs";
-import MouseFollower from "mouse-follower";
-import gsap from "gsap";
+// import MouseFollower from "mouse-follower";
+// import gsap from "gsap";
 import "../../cursor.css";
 import { ToggleBar } from "../../components/bar";
 
-MouseFollower.registerGSAP(gsap);
+// MouseFollower.registerGSAP(gsap);
 function Home() {
-  const cursor = new MouseFollower();
+  // const cursor = new MouseFollower();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedId, setSelectedId] = useState<string>();
+  const [cardSections, setCardSections] = useState(null);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -37,16 +39,16 @@ function Home() {
     setIsModalOpen(false);
   };
 
-  useEffect(() => {
-    const cardSection = document.getElementById("follower");
-    const body = document.getElementById("unFollow");
-    cardSection.addEventListener("mouseenter", () => {
-      cursor.setText("View More");
-    });
-    cardSection.addEventListener("mouseleave", () => {
-      cursor.removeText();
-    });
-  });
+  // useEffect(() => {
+  //   setCardSections(document.getElementById("follower"));
+  //   // const body = document.getElementById("unFollow");
+  //   cardSections?.addEventListener("mouseenter", () => {
+  //     cursor.setText("View More");
+  //   });
+  //   cardSections?.addEventListener("mouseleave", () => {
+  //     cursor.removeText();
+  //   });
+  // });
   return (
     <div className="">
       <MetaPixel />
@@ -60,7 +62,7 @@ function Home() {
           setSelectedId={setSelectedId}
         />
       </motion.div>
-      <ServicesOffers page='home' showPrimaryBtn={true} />
+      <ServicesOffers page="home" showPrimaryBtn={true} />
       <TopSolExperts />
       <OurPortfolio />
       <RatingSection />
@@ -97,7 +99,7 @@ export function Head() {
         property="og:description"
         content="Topsol Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
       />
-      <meta property="og:image" content={metaImage} />
+      <meta property="og:image" content={`../../../og_image.jpg`} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://topsol.org/" />
@@ -106,7 +108,7 @@ export function Head() {
         property="twitter:description"
         content="Topsol Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
       />
-      <meta property="twitter:image" content={metaImage} />
+      <meta property="twitter:image" content={`../../../og_image.jpg`} />
 
       <link rel="icon" href={Logo} type="image/png"></link>
     </>

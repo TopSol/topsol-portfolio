@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RatingSlider from "../ratingSection";
-import Chris from "../../images/chris.jpeg";
+import Chris from "../../images/chris_client.jpeg";
 import Nick from "../../images/nick.png";
 import Juan from "../../images/juan.png";
 

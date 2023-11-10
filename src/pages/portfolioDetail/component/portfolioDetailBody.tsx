@@ -2,12 +2,12 @@ import React from "react";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import check1 from "../../../images/check1.png";
 import LineAnimation from "../../../components/LineAnimation";
-import portfolioDetails from '../../../images/portfolio-details.png'
+import portfolioDetails from "../../../images/portfolio-details.png";
 import { portfolioImg } from "../../../staticData/portfolioData";
-import porfolioDetailsStar from '../../../images/porfolioDetailsStar.png'
+import porfolioDetailsStar from "../../../images/porfolioDetailsStar.png";
 export default function PortfolioDetailBody({ data }: any) {
   const shadowStyles = {
-    boxShadow: '0px 16px 32px 0px rgba(98, 183, 210, 0.25)',
+    boxShadow: "0px 16px 32px 0px rgba(98, 183, 210, 0.25)",
   };
   return (
     <div>
@@ -41,28 +41,40 @@ export default function PortfolioDetailBody({ data }: any) {
         </div> */}
       {/* </div> */}
       {/* <div> */}
-      <div className="mt-[250px] md:mt-[270px] py-[58px] px-[40px]  rounded-[20px] bg-white  w-[80%] flex justify-center flex-col mx-auto" style={shadowStyles}>
-        <h1 className="text-textColors font-urbanist  font-bold md:text-[34px] text-[25px] leading-[150%]">Project <span className="text-primary">Overview</span></h1>
-        <p className="text-[#333] font-figtree mt-[15px] font-light md:text-[20px] text-[16px] leading-[150%]">{data?.overview}</p>
-        <h1 className="text-textColors font-urbanist mt-[20px] font-bold  md:text-[34px] text-[25px] leading-[150%]">The Problem <span className="text-primary">Statement</span></h1>
-        <p className="text-[#333] font-figtree mt-[15px] font-light md:text-[20px] text-[16px] leading-[150%]">{data?.problem}</p>
-      </div>
-      <div className="-mt-20 flex  container mx-auto w-[85%]">
-        <img src={porfolioDetailsStar} alt="" className="-z-20" />
-      </div>
-      <div className="flex justify-center mx-3 md:mx-auto mt-20">
-        <img src={portfolioDetails} alt="" />
-      </div>
-      <div className="-mb-36 flex justify-end container mx-auto w-[85%]">
-        <img src={porfolioDetailsStar} alt="" className="-z-20" />
-      </div>
-      <div className="flex flex-col  py-[58px] px-[40px]   mt-16 rounded-[20px] bg-white  w-[80%] mx-auto"
+      <div
+        className="mt-[250px] md:mt-[270px] py-[58px] px-[40px]  rounded-[20px] bg-white  w-[80%] flex justify-center flex-col mx-auto"
         style={shadowStyles}
       >
-        <div className=" flex flex-col justify-center items-center">
-          <h1 className="font-bold uppercase font-urbanist text-textColors  md:text-[36px] text-[20px] mt-6 text-center">
-            Project  <span className="text-primary">Goals</span>
-          </h1>
+        <h1 className="text-textColors font-urbanist  font-bold md:text-[34px] text-[25px] leading-[150%]">
+          Project <span className="text-primary">Overview</span>
+        </h1>
+        <p className="text-[#333] font-figtree mt-[15px] font-light md:text-[20px] text-[16px] leading-[150%]">
+          {data?.overview}
+        </p>
+        <h1 className="text-textColors font-urbanist mt-[20px] font-bold  md:text-[34px] text-[25px] leading-[150%]">
+          The Problem <span className="text-primary">Statement</span>
+        </h1>
+        <p className="text-[#333] font-figtree mt-[15px] font-light md:text-[20px] text-[16px] leading-[150%]">
+          {data?.problem}
+        </p>
+      </div>
+      <div>
+        {/* <div className="flex justify-center mx-6 md:mx-0">
+          <video
+            src={data?.videoUrl}
+            className="h-[50vh] my-[20px] mx-6 md:mx-0 md:my-[70px]"
+            autoPlay
+            muted
+            loop
+          ></video>
+        </div> */}
+
+        <div className="flex flex-col justify-center items-center">
+          <div className="">
+            <h1 className="font-extrabold text-textColors  text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
+              {data?.unlockTitle}
+            </h1>
+          </div>
           <LineAnimation
             width="178px"
             height="7px"
@@ -77,21 +89,25 @@ export default function PortfolioDetailBody({ data }: any) {
                 <img src={item.img} alt="" />
               </div>
               <h1 className="text-center font-figtree md:text-[20px] text-[16px] leading-[150%] font-light mt-2 w-[179px]">
-                {data && data.goals && data.goals[index] ? data.goals[index] : 'Default Value'}
-
+                {data && data.goals && data.goals[index]
+                  ? data.goals[index]
+                  : "Default Value"}
               </h1>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="flex flex-col bg-cover py-[90px] my-20 mx-auto"
+      <div
+        className="flex flex-col bg-cover py-[90px] my-20 mx-auto"
         style={{
-          backgroundImage: `url(${data?.bg})`
+          backgroundImage: `url(${data?.bg})`,
         }}
       >
         <div className="flex flex-col  container mx-auto items-center md:items-start">
-          <h2 className="text-[36px]  text-textColors font-semibold my-6">TOP <span className="text-primary">FEATURES </span></h2>
+          <h2 className="text-[36px]  text-textColors font-semibold my-6">
+            TOP <span className="text-primary">FEATURES </span>
+          </h2>
           <LineAnimation
             width="178px"
             height="7px"

@@ -78,15 +78,15 @@ export default function RecentWork() {
   }, [selectedCategory]);
 
   const scrollToTop = () => {
-    if ("scrollBehavior" in document.documentElement.style) {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    } else {
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    }
+    // if ("scrollBehavior" in document.documentElement.style) {
+    //   window.scrollTo({
+    //     top: 0,
+    //     behavior: "smooth",
+    //   });
+    // } else {
+    //   document.documentElement.scrollTop = 0;
+    //   document.body.scrollTop = 0;
+    // }
   };
 
   const handleNextPage = () => {
