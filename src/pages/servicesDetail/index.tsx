@@ -8,7 +8,7 @@ import ReadyToOutshine from "./component/ReadyToOutshine";
 import { ToggleBar } from "../../components/bar";
 import WorkFlow from "./component/WorkFlow";
 import Tecnology from "./component/Tecnology";
-import RatingSection from '../home/ratingSection/index'
+import RatingSection from "../home/ratingSection/index";
 import SmallFooter from "../../components/smallFooter";
 export default function ServiceDetails({ location }) {
   const { state } = location;
@@ -19,8 +19,10 @@ export default function ServiceDetails({ location }) {
 
   return (
     <div>
-      <Navbar />
-      <HeroSection servicedata={state?.service}
+      {/* <Navbar /> */}
+      <ToggleBar />
+      <HeroSection
+        servicedata={state?.service}
         imageHead={state?.service?.details?.imageHead}
       />
       <InfoSection

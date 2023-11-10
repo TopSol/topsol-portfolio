@@ -34,9 +34,9 @@ import mobileAppsHead from "../images/Icons/servicesHeader//Mobile-app.png";
 import qualityAssuranceHead from "../images/Icons/servicesHeader/Quality.png";
 import uiuxHead from "../images/Icons/servicesHeader/ui-ux.png";
 import aiChatGPTHead from "../images/Icons/servicesHeader/Ai-chat-gpt.png";
-import requirment1 from '../images/Icons/Group 36919.png'
-import requirment2 from '../images/Icons/web-development-svgrepo-com.png'
-import requirment3 from '../images/Icons/deployment-svgrepo-com.png'
+import requirment1 from "../images/Icons/Group 36919.png";
+import requirment2 from "../images/Icons/web-development-svgrepo-com.png";
+import requirment3 from "../images/Icons/deployment-svgrepo-com.png";
 import Tec_1 from "../images/Icons/techonologies/tec_1.svg";
 import Tec_2 from "../images/Icons/techonologies/tec_2.svg";
 import Tec_3 from "../images/Icons/techonologies/tec_3.svg";
@@ -62,9 +62,6 @@ import Tec_22 from "../images/Icons/techonologies/tec_22.svg";
 import Tec_23 from "../images/Icons/techonologies/tec_23.svg";
 import Tec_24 from "../images/Icons/techonologies/tec_24.svg";
 
-
-
-
 const cards = [
   {
     heading: "CUSTOM SOFTWARE DEVELOPMENT",
@@ -73,7 +70,7 @@ const cards = [
     bg: svg1,
     details: {
       image: customSoftware,
-      imageHead:customSoftwareHead,
+      imageHead: customSoftwareHead,
       mainHeading: "Tailoring Solutions for Your Success",
       initialText:
         "Custom software development is a strategic approach to creating software solutions that are precisely aligned with the unique needs and requirements of your business or organization. Unlike off-the-shelf software, custom solutions are meticulously designed and developed to address your specific challenges, goals, and workflows.",
@@ -81,31 +78,43 @@ const cards = [
         "In conclusion, custom software development empowers organizations to have software that is uniquely tailored to their needs, offering efficiency, scalability, and a technological advantage in today's highly competitive business landscape.",
       paragraphs: [
         {
-          img:requirment1,
-          step:'step 1',
-          heading:'Requirements Analysis',
-          text:'Our team initiates the custom software development process by conducting in-depth consultations with your organization. We gather comprehensive requirements, understanding your unique business needs and objectives.',
+          img: requirment1,
+          step: "step 1",
+          heading: "Enterprise",
+          text: "Tailored enterprise solutions optimizing processes, scalability, and efficiency for seamless business operations and sustainable growth.",
         },
         {
-          img:requirment2,
-          step:'step 2',
-          heading:'Tailored Development',
-          text:'With a clear understanding of your requirements, our expert developers design a custom software solution from the ground up. This stage involves coding, testing, and iteration to ensure the software aligns perfectly with your business processes and goals.',
+          img: requirment2,
+          step: "step 2",
+          heading: "SaaS",
+          text: "Cloud-based SaaS applications delivering flexibility, accessibility, and cost-effectiveness, ensuring optimal user experiences and business agility.",
         },
         {
-          img:requirment3,
-          step:'step 3',
-          heading:'Deployment & Support',
-          text:'Once development is complete, we oversee the seamless deployment of the custom software within your organization. Our commitment doesn"t end there. We provide continuous support and maintenance, ensuring the software remains up-to-date.',
+          img: requirment3,
+          step: "step 3",
+          heading: "E-Commerce",
+          text: "Dynamic e-commerce platforms designed for engaging user interfaces, secure transactions, and efficient management, enhancing online business presence and revenue.",
         },
         {
-          img:requirment3,
-          step:'step 3',
-          heading:'Deployment & Support',
-          text:'Once development is complete, we oversee the seamless deployment of the custom software within your organization. Our commitment doesn"t end there. We provide continuous support and maintenance, ensuring the software remains up-to-date.',
+          img: requirment3,
+          step: "step 3",
+          heading: "Third-Party Integration",
+          text: "Seamlessly integrate third-party services to enhance functionality, streamline operations, and ensure a cohesive and interconnected software ecosystem.",
+        },
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "API & Database Solutions:",
+          text: "Robust API and database development, fostering data management, integration, and accessibility, ensuring scalable and responsive software architectures.",
+        },
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "Custom ERP",
+          text: "Tailored ERP solutions for comprehensive business management, integrating processes, improving data visibility, and driving informed decision-making for sustained organizational success.",
         },
       ],
-      tecnology:[
+      tecnology: [
         {
           avatar: Tec_1,
           title: "Azure",
@@ -202,7 +211,7 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
-      ]
+      ],
     },
     showProjects: true,
   },
@@ -221,25 +230,43 @@ const cards = [
         "In conclusion, our DevOps Services empower organizations to deliver software faster, more reliably, and with greater agility. By fostering collaboration, automating processes, and embracing a culture of continuous improvement, we enable businesses to thrive in the rapidly evolving world of technology.",
       paragraphs: [
         {
-          img:requirment1,
-          step:'step 1',
-          heading:'Requirements Analysis',
-          text: "DevOps revolutionizes software development by breaking down silos and enabling teams to work together cohesively. By automating manual processes, such as testing, deployment, and infrastructure provisioning, DevOps empowers organizations to achieve continuous integration and continuous delivery (CI/CD). This results in shorter development cycles, reducing time-to-market and enhancing software quality",
+          img: requirment1,
+          step: "step 1",
+          heading: "Continuous Integration",
+          text: "Streamline development with automated code integration, fostering collaboration and ensuring code quality through regular and efficient builds",
         },
         {
-          img:requirment2,
-          step:'step 2',
-          heading:'Tailored Development',
-          text: "Automation lies at the heart of DevOps. Infrastructure as Code (IaC) allows teams to define and manage infrastructure configurations using code. This approach facilitates the rapid provisioning of resources, scaling as needed, and ensures consistency across environments, reducing the risk of configuration errors.",
+          img: requirment2,
+          step: "step 2",
+          heading: "Continuous Deployment",
+          text: "Accelerate software delivery by automating the deployment process, enabling swift and reliable releases with minimal manual intervention",
         },
         {
-          img:requirment3,
-          step:'step 3',
-          heading:'Deployment & Support',
-          text: "DevOps relies on continuous monitoring and feedback loops to detect and address issues swiftly. By collecting and analyzing data from every stage of the software development process, teams gain actionable insights to make data-driven decisions. This proactive approach mitigates risks and ensures robust software performance.",
+          img: requirment3,
+          step: "step 3",
+          heading: "Infrastructure as Code",
+          text: "Enhance scalability and efficiency with automated infrastructure management, ensuring consistency and reducing deployment errors through code-defined infrastructure",
+        },
+        {
+          img: requirment1,
+          step: "step 1",
+          heading: "Monitoring and Logging:",
+          text: "Proactively identify and resolve issues with real-time monitoring and comprehensive logging, optimizing system performance and enhancing overall reliability",
+        },
+        {
+          img: requirment2,
+          step: "step 2",
+          heading: "Collaboration Tools",
+          text: "Foster seamless communication and teamwork across development and operations teams with integrated collaboration tools, ensuring efficient project coordination and knowledge sharing",
+        },
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "Security Integration",
+          text: "Embed security measures throughout the development lifecycle, integrating robust security practices to identify and mitigate potential vulnerabilities, safeguarding applications and data",
         },
       ],
-      tecnology:[
+      tecnology: [
         {
           avatar: Tec_1,
           title: "Azure",
@@ -336,7 +363,7 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
-      ]
+      ],
     },
   },
   {
@@ -346,7 +373,7 @@ const cards = [
     bg: svg,
     details: {
       image: team,
-      imageHead:teamHead,
+      imageHead: teamHead,
       mainHeading:
         "Team Augmentation Services: Enhancing Your Project Capabilities",
       initialText:
@@ -355,25 +382,43 @@ const cards = [
         "In today's fast-paced business landscape, Team Augmentation is a strategic resource that can drive your projects to new heights, enabling you to stay ahead in the race of innovation and deliver exceptional outcomes.",
       paragraphs: [
         {
-          img:requirment1,
-          step:'step 1',
-          heading:'Requirements Analysis',
-          text: "Team Augmentation is not merely about adding more hands to your projects; it's about infusing expertise into your team. The process begins by identifying your specific project requirements and skill gaps. Then, professionals with the right expertise are handpicked and brought on board to complement your existing team seamlessly. This approach ensures that the newly augmented team members align with your project's goals and culture, promoting effective collaboration and productivity.",
+          img: requirment1,
+          step: "step 1",
+          heading: "Expertise Expansion",
+          text: "Augment your team with skilled professionals to complement and enhance in-house capabilities, bringing specialized knowledge and experience to your projects",
         },
         {
-          img:requirment2,
-          step:'step 2',
-          heading:'Tailored Development',
-          text: "The core goal of Team Augmentation is to fortify your projects with the right skill set. By supplementing your team with experienced professionals, you gain access to specialized knowledge, broader skill sets, and fresh perspectives. This augmentation significantly enhances your project's capabilities, allowing it to tackle complex challenges, implement innovative solutions, and deliver superior results.",
+          img: requirment2,
+          step: "step 2",
+          heading: "Flexibility and Scalability",
+          text: "Scale your workforce as needed, adapting to project demands without the long-term commitment of hiring full-time employees, optimizing resource allocation.",
         },
         {
-          img:requirment3,
-          step:'step 3',
-          heading:'Deployment & Support',
-          text: "Team Augmentation not only empowers your projects but also accelerates your journey towards success. With professionals who bring extensive experience and a deep understanding of your project's domain, you can navigate through obstacles more efficiently and bring your ideas to fruition faster. This speed and efficiency ultimately contribute to a competitive edge and overall project success.",
+          img: requirment3,
+          step: "step 3",
+          heading: "Rapid Onboarding",
+          text: "Accelerate project timelines by quickly onboarding augmented team members who are equipped with the necessary skills, minimizing learning curves.",
+        },
+        {
+          img: requirment1,
+          step: "step 1",
+          heading: "Diverse Skill Sets",
+          text: "Access a diverse pool of talents with varied skill sets, ensuring a well-rounded team capable of handling different aspects of a project",
+        },
+        {
+          img: requirment2,
+          step: "step 2",
+          heading: "Cost-Efficiency",
+          text: "Mitigate costs associated with recruitment, training, and employee benefits, as team augmentation allows you to access expertise without the overhead of full-time hires.",
+        },
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "Project Delivery Excellence",
+          text: "Achieve project milestones with precision by bolstering your team with skilled professionals, ensuring timely and successful completion of tasks and objectives.",
         },
       ],
-      tecnology:[
+      tecnology: [
         {
           avatar: Tec_1,
           title: "Azure",
@@ -470,45 +515,60 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
-      ]
+      ],
     },
   },
   {
-    heading: "DISCOVER WORKSHOP",
-    desc: "Our Discovery Workshops dive into your goals, identifying technology solutions that fuel growth, efficiency, and innovation",
+    heading: "Web Development",
+    desc: "Empowering businesses through tailored web development solutions, bringing visions to life with cutting-edge technology and expert craftsmanship.",
     avatar: Img4,
     bg: svg3,
     details: {
       image: workshop,
-      imageHead:workshopHead,
-      mainHeading:
-        "Discover Workshop: Fueling Growth, Efficiency, and Innovation",
+      imageHead: workshopHead,
+      mainHeading: "Website Development: Tailored Web Development Solutions",
       initialText:
-        "At our Discover Workshop, we embark on a collaborative journey to understand your organization's objectives and aspirations. Our mission is to help you unlock your full potential by leveraging cutting-edge technology solutions that drive growth, enhance operational efficiency, and foster innovation.",
-      conclusion:
-        "In summary, our Discover Workshop is a pivotal step in propelling your organization toward a future where technology is a powerful catalyst for growth, efficiency, and innovation.",
+        "Our company is dedicated to delivering top-notch web development services, crafting customized solutions that align with your business goals. We leverage cutting-edge technology, expert skills, and innovative strategies to bring your digital vision to life. Elevate your online presence with our reliable and dynamic web development expertise, tailored to perfection",
+      conclusion: "",
       paragraphs: [
         {
-          img:requirment1,
-          step:'step 1',
-          heading:'Requirements Analysis',
-          text: "In the first phase of the workshop, we delve deep into your goals and challenges. Our team conducts extensive interviews and analyses to gain a comprehensive understanding of your specific needs and ambitions. We aim to align your technology strategy with your overall business objectives.",
+          img: requirment1,
+          step: "step 1",
+          heading: "Web Design",
+          text: "Craft visually stunning and user-centric websites with our expert web design services, blending aesthetics and functionality seamlessly for a captivating online experience.",
         },
         {
-          img:requirment2,
-          step:'step 2',
-          heading:'Tailored Development',
-          text: "With your goals in mind, we proceed to identify tailored technology solutions. Our experts explore the latest advancements in your industry, pinpointing solutions that can best address your unique requirements. Whether it's optimizing existing systems, implementing new software, or integrating emerging technologies, we ensure that the solutions we recommend align perfectly with your business.",
+          img: requirment2,
+          step: "step 2",
+          heading: "Web Development",
+          text: "Elevate your digital presence with our comprehensive web development solutions, leveraging the latest technologies to ensure robust, scalable, and performance-driven websites tailored to your unique requirements.",
         },
         {
-          img:requirment3,
-          step:'step 3',
-          heading:'Deployment & Support',
-          text: "One of the core objectives of our Discover Workshop is to help you achieve sustainable growth. We outline strategies to expand your market presence, enhance customer engagement, and increase revenue through technology-driven initiatives.",
+          img: requirment3,
+          step: "step 3",
+          heading: "CMS Development",
+          text: "Streamline content management effortlessly with our CMS development services, offering intuitive platforms for easy content updates, site maintenance, and a dynamic online presence.",
         },
-
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "E-Commerce",
+          text: "Launch and grow your online business with our e-commerce solutions, combining user-friendly interfaces, secure payment gateways, and scalable architectures for a seamless and profitable shopping experience.",
+        },
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "API & Database",
+          text: "Streamline content management effortlessly with our CMS development services, offering intuitive platforms for easy content updates, site maintenance, and a dynamic online presence.",
+        },
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "Web App Development",
+          text: "Transform your ideas into powerful web applications with our expert development services, delivering scalable, responsive, and feature-rich solutions that cater to your business goals and user expectations.",
+        },
       ],
-      tecnology:[
+      tecnology: [
         {
           avatar: Tec_1,
           title: "Azure",
@@ -605,7 +665,7 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
-      ]
+      ],
     },
   },
   {
@@ -615,7 +675,7 @@ const cards = [
     bg: svg,
     details: {
       image: mobileApps,
-      imageHead:mobileAppsHead,
+      imageHead: mobileAppsHead,
       mainHeading: "Mobile Apps Development: Innovating User Experiences",
       initialText:
         "In the fast-paced digital landscape, mobile apps have become an integral part of businesses' success. Our Mobile App Development solutions seamlessly blend innovation and functionality to create dynamic and user-centric experiences, ensuring your brand remains accessible to customers on the go.",
@@ -623,26 +683,43 @@ const cards = [
         "In a world where mobility is paramount, our Mobile App Development solutions empower your brand to remain competitive, engaging, and accessible in the palm of your customers' hands.",
       paragraphs: [
         {
-          img:requirment1,
-          step:'step 1',
-          heading:'Requirements Analysis',
-          text: "Our team of skilled developers is dedicated to crafting user-centric mobile apps. We begin by understanding your unique business needs and the expectations of your target audience. By leveraging cutting-edge technologies, we design apps that not only meet these expectations but also exceed them, ensuring high levels of user engagement.",
+          img: requirment1,
+          step: "step 1",
+          heading: "Consultation",
+          text: "We specialize in mobile development and consulting, tailoring Android/iOS solutions to meet your app's distinct requirements, offering insights informed by data for shaping your brand.",
         },
         {
-          img:requirment2,
-          step:'step 2',
-          heading:'Tailored Development',
-          text: "We specialize in developing apps for a wide range of platforms, including iOS, Android, and cross-platform solutions. Our expertise allows us to harness the unique features and capabilities of each platform, providing a consistent and seamless user experience across devices.",
+          img: requirment2,
+          step: "step 2",
+          heading: "UI/UX Design",
+          text: "Enhancing user experiences is the focus of Mobile App UI/UX Design. Our skilled developers create innovative designs aligned with business goals to meet user expectations.",
         },
         {
-          img:requirment3,
-          step:'step 3',
-          heading:'Deployment & Support',
-          text: "No two businesses are identical, and neither should their apps be. We offer tailor-made app development solutions that cater to your specific requirements. From e-commerce and social networking to healthcare and finance, our custom apps can fit any industry.",
+          img: requirment3,
+          step: "APIs Development",
+          heading: "APIs Development",
+          text: "Develop secure and efficient APIs to seamlessly integrate your mobile apps with third-party systems and data sources.",
         },
-     
+        {
+          img: requirment1,
+          step: "step 1",
+          heading: "App Development",
+          text: "Enhance mobile app development by incorporating UI enhancements, additional functionality, and engaging features to ensure premium results within the specified timeframe.",
+        },
+        {
+          img: requirment2,
+          step: "step 2",
+          heading: "Testing & QA",
+          text: "We meticulously test and quality-assure our Mobile Web App Development to guarantee usability, security, and functionality while addressing any potential vulnerabilities.",
+        },
+        {
+          img: requirment3,
+          step: "Custom App",
+          heading: "Deployment & Support",
+          text: "Custom mobile apps are tailored to client needs, ensuring unique business solutions, user experiences, and functionalities are met.",
+        },
       ],
-      tecnology:[
+      tecnology: [
         {
           avatar: Tec_1,
           title: "Azure",
@@ -739,7 +816,7 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
-      ]
+      ],
     },
     showProjects: true,
   },
@@ -750,7 +827,7 @@ const cards = [
     bg: svg1,
     details: {
       image: qualityAssurance,
-      imageHead:qualityAssuranceHead,
+      imageHead: qualityAssuranceHead,
       mainHeading: "Ensuring Flawless Performance and User Experiences",
       initialText:
         "In today's fast-paced and technology-driven world, delivering impeccable software and products is imperative for success. Our Quality Assurance Services play a pivotal role in achieving this goal.",
@@ -758,27 +835,43 @@ const cards = [
         "With our Quality Assurance Services, you can be confident that your software or product will meet and exceed the expectations of your users, ensuring long-term success and customer satisfaction.",
       paragraphs: [
         {
-          img:requirment1,
-          step:'step 1',
-          heading:'Requirements Analysis',
-          text: "Our team comprises highly skilled professionals who excel in the art of quality assurance. They bring unparalleled expertise and extensive industry knowledge to the table, ensuring that your product functions flawlessly.",
+          img: requirment1,
+          step: "step 1",
+          heading: "Comprehensive Testing Strategies",
+          text: "Implement robust testing methodologies to ensure the quality and functionality of software through a combination of manual and automated testing approaches.",
         },
         {
-          
-          img:requirment2,
-          step:'step 2',
-          heading:'Tailored Development',
-          text: "We employ a comprehensive testing approach to identify and rectify potential flaws in your software or product. From functional and performance testing to security and usability evaluations, no stone is left unturned.",
+          img: requirment2,
+          step: "step 2",
+          heading: "Early Defect Detection",
+          text: "Identify and rectify issues in the early stages of development, preventing the escalation of defects and reducing the overall cost of bug resolution",
         },
         {
-          img:requirment3,
-          step:'step 3',
-          heading:'Deployment & Support',
-          text: "We understand that every project is unique. Our services are highly adaptable and tailored to your specific needs, whether you're launching a mobile app, a web platform, or an intricate software solution.",
+          img: requirment3,
+          step: "step 3",
+          heading: "Test Automation",
+          text: "Enhance efficiency and coverage with automated testing, allowing for repeated and systematic validation of software functionality, especially in agile development environments.",
         },
-
+        {
+          img: requirment1,
+          step: "step 1",
+          heading: "Scalable Testing Environments",
+          text: "Establish flexible testing environments that can be easily scaled to accommodate the evolving needs of the project, ensuring thorough testing under various conditions.",
+        },
+        {
+          img: requirment2,
+          step: "step 2",
+          heading: "Regulatory Compliance",
+          text: "Ensure adherence to industry standards and regulatory requirements by incorporating compliance testing into the quality assurance process, mitigating risks and ensuring legal compliance.",
+        },
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "Continuous Improvement",
+          text: "Foster a culture of continuous improvement by analyzing testing results, gathering feedback, and implementing lessons learned, enhancing overall software quality with each development cycle.",
+        },
       ],
-      tecnology:[
+      tecnology: [
         {
           avatar: Tec_1,
           title: "Azure",
@@ -875,7 +968,7 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
-      ]
+      ],
     },
     showProjects: true,
   },
@@ -886,7 +979,7 @@ const cards = [
     bg: svg2,
     details: {
       image: uiux,
-      imageHead:uiuxHead,
+      imageHead: uiuxHead,
       mainHeading: "UI/UX Design: Elevating User Experiences",
       initialText:
         "In the digital age, our UI/UX Design team excels at creating immersive and user-centric interfaces that seamlessly blend aesthetics with functionality, thereby providing users with unparalleled journeys through digital platforms.",
@@ -894,26 +987,43 @@ const cards = [
         "In today's competitive digital landscape, UI/UX design stands as the bedrock for capturing and retaining user engagement. With our UI/UX expertise, we seamlessly blend form and function to create digital experiences that leave lasting impressions and drive tangible business outcomes.",
       paragraphs: [
         {
-          img:requirment1,
-          step:'step 1',
-          heading:'Requirements Analysis',
-          text: "User Interface (UI) and User Experience (UX) Design are the twin pillars of creating digital products that captivate and retain users. UI design focuses on crafting visually appealing, intuitive layouts, and elements, while UX design centers on enhancing the overall experience by streamlining user interactions and ensuring effortless navigation.",
+          img: requirment1,
+          step: "step 1",
+          heading: "User-Centric Approach",
+          text: "Craft intuitive and seamless user experiences by prioritizing user needs and preferences, ensuring a design that resonates with your target audience.",
         },
         {
-          img:requirment2,
-          step:'step 2',
-          heading:'Tailored Development',
-          text: "Our UI designers employ a keen eye for aesthetics, curating beautiful visual elements, color schemes, and typography that not only please the eye but also communicate the brand's identity. Every pixel is meticulously placed, ensuring a visually stunning and cohesive user interface.",
+          img: requirment2,
+          step: "step 2",
+          heading: "Visual Aesthetics",
+          text: "Elevate your brand's visual appeal through aesthetically pleasing designs, incorporating colors, typography, and imagery that align with your brand identity and captivate users.",
         },
         {
-          img:requirment3,
-          step:'step 3',
-          heading:'Deployment & Support',
-          text: "UX designers are the architects of functionality, meticulously crafting the user journey. They emphasize ease of use, information accessibility, and seamless interactions, thereby reducing friction and enhancing user satisfaction.",
+          img: requirment3,
+          step: "step 3",
+          heading: "Responsive Design",
+          text: "Create a consistent user experience across devices with responsive design, adapting layouts and interactions for optimal usability on various screen sizes",
         },
-
+        {
+          img: requirment1,
+          step: "step 1",
+          heading: "Usability Testing",
+          text: "Refine designs through thorough usability testing, identifying and addressing potential pain points, enhancing overall user satisfaction and interaction efficiency.",
+        },
+        {
+          img: requirment2,
+          step: "step 2",
+          heading: "Information Architecture",
+          text: "Organize content logically and intuitively, optimizing information architecture to facilitate easy navigation and enhance the overall user journey.",
+        },
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "Accessibility Integration",
+          text: "Ensure inclusivity by incorporating accessibility features, making your UI/UX design accessible to users with diverse abilities and creating an inclusive digital experience.",
+        },
       ],
-      tecnology:[
+      tecnology: [
         {
           avatar: Tec_1,
           title: "Azure",
@@ -1010,7 +1120,7 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
-      ]
+      ],
     },
     showProjects: true,
   },
@@ -1021,7 +1131,7 @@ const cards = [
     bg: svg3,
     details: {
       image: aiChatGPT,
-      imageHead:aiChatGPTHead,
+      imageHead: aiChatGPTHead,
       mainHeading: "AI & Chat GPT Services: Revolutionizing Conversational AI",
       initialText:
         "Our AI & Chat GPT services represent a groundbreaking leap in the field of conversational artificial intelligence. These services leverage cutting-edge technology to create dynamic, engaging conversations and streamline automation processes. Here's a detailed look at how these services are transforming the way we interact with machines.",
@@ -1029,26 +1139,43 @@ const cards = [
         "In conclusion, AI & Chat GPT services represent a monumental stride in human-computer interaction, revolutionizing the way we communicate with machines and offering unparalleled automation and personalization capabilities.",
       paragraphs: [
         {
-          img:requirment1,
-          step:'step 1',
-          heading:'Requirements Analysis',
-          text: "Our AI & Chat GPT services excel in natural language understanding. They can comprehend user input, whether it's a simple query or a complex conversation, and respond with remarkable coherence and context-awareness.",
+          img: requirment1,
+          step: "step 1",
+          heading: "AI Advancements",
+          text: "Explore the cutting-edge realm of Artificial Intelligence (AI) and its transformative impact on industries, leveraging machine learning algorithms for data-driven insights and decision-making.",
         },
         {
-          img:requirment2,
-          step:'step 2',
-          heading:'Tailored Development',
-          text: "These services have the ability to tailor conversations to individual users, enhancing user engagement and satisfaction. They adapt to users' preferences, language, and tone, ensuring a personalized experience.",
+          img: requirment2,
+          step: "step 2",
+          heading: "ChatGPT Innovation",
+          text: "Dive into the evolution of conversational AI with ChatGPT, a state-of-the-art language model by OpenAI, enabling natural and context-aware interactions in various applications",
         },
         {
-          img:requirment3,
-          step:'step 3',
-          heading:'Deployment & Support',
-          text: "One of the most compelling aspects of our services is their automation capabilities. They can handle repetitive tasks, answer frequently asked questions, and facilitate transactions, freeing up human resources for more value-added tasks.",
+          img: requirment3,
+          step: "step 3",
+          heading: "Natural Language Understanding",
+          text: "Witness the power of ChatGPT in comprehending and generating human-like text, facilitating improved communication and engagement through its sophisticated natural language processing capabilities",
         },
-
+        {
+          img: requirment1,
+          step: "step 1",
+          heading: "Versatility Across Domains",
+          text: "Experience the versatility of AI and ChatGPT across diverse domains, from customer service chatbots to content creation, showcasing adaptability in addressing a wide array of user needs.",
+        },
+        {
+          img: requirment2,
+          step: "step 2",
+          heading: "Continuous Learning",
+          text: "Understand the significance of continuous learning in AI systems, as ChatGPT evolves through ongoing updates, adapting to new trends and improving its understanding of language nuances",
+        },
+        {
+          img: requirment3,
+          step: "step 3",
+          heading: "Ethical Considerations",
+          text: "Delve into the ethical considerations surrounding AI and ChatGPT, exploring responsible development practices, transparency, and the ongoing dialogue on ensuring AI benefits society while minimizing potential risks",
+        },
       ],
-      tecnology:[
+      tecnology: [
         {
           avatar: Tec_1,
           title: "Azure",
@@ -1145,7 +1272,7 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
-      ]
+      ],
     },
     showProjects: true,
   },
@@ -1166,11 +1293,11 @@ export const imgCards = [
   },
   {
     bgImg: Discover,
-    heading: "Discover Workshop",
+    heading: "Web Development",
   },
   {
     bgImg: Mobile,
-    heading: "App Development",
+    heading: "Mobile App Development",
   },
   {
     bgImg: Quality,
@@ -1185,8 +1312,5 @@ export const imgCards = [
     heading: "AI & Chat GPT",
   },
 ];
-
-
-
 
 export default cards;
