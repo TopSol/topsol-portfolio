@@ -12,8 +12,8 @@ export default function HeroSection({ servicedata, imageHead }: propTypes) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const splitTitle = servicedata?.heading?.split(" ");
-  const firstName = splitTitle[0];
-  const lastName = splitTitle.slice(1).join(" ");
+  const firstName = splitTitle ? splitTitle[0] : "";
+  const lastName = splitTitle ? splitTitle.slice(1).join(" ") : "";
 
 
   return (
