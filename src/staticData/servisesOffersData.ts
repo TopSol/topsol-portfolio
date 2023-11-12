@@ -12,16 +12,16 @@ import svg2 from "../images/Svg/Group2.svg";
 import svg3 from "../images/Svg/Group3.svg";
 import customSoftware from "../images/servicesImages/Custom_Software.png";
 import devOps from "../images/servicesImages/devops.png";
-import team from "../images/servicesImages/team Augmentation.png";
-import workshop from "../images/servicesImages/discover workshop.png";
+import team from "../images/servicesImages/team_Augmentation.png";
+import workshop from "../images/servicesImages/discover_workshop.png";
 import mobileApps from "../images/servicesImages/mobile-apps.png";
-import qualityAssurance from "../images/servicesImages/quality assurance.png";
-import uiux from "../images/servicesImages/ui ux design.png";
-import aiChatGPT from "../images/servicesImages/Ai and chatgpt.png";
+import qualityAssurance from "../images/servicesImages/quality_assurance.png";
+import uiux from "../images/servicesImages/ui_ux_design.png";
+import aiChatGPT from "../images/servicesImages/ai_and_chatgpt.png";
 import Custom from "../images/Custom.png";
 import Dev from "../images/devops.png";
 import Team from "../images/team.png";
-import Discover from "../images/discover.png";
+import web_dev from "../images/webDevelopment.png";
 import Mobile from "../images/mobile.png";
 import Quality from "../images/quality.png";
 import UI from "../images/ui.png";
@@ -61,53 +61,51 @@ import Tec_21 from "../images/Icons/techonologies/tec_21.svg";
 import Tec_22 from "../images/Icons/techonologies/tec_22.svg";
 import Tec_23 from "../images/Icons/techonologies/tec_23.svg";
 import Tec_24 from "../images/Icons/techonologies/tec_24.svg";
-import enterprise from '../images/Icons/services-details-icon/customIcon/enterprise.png'
-import Erp from '../images/Icons/services-details-icon/customIcon/Erp.png'
-import apiDatabase from '../images/Icons/services-details-icon/customIcon/api-database.png'
-import ecommerce from '../images/Icons/services-details-icon/customIcon/ecommerce.png'
-import saas from '../images/Icons/services-details-icon/customIcon/saas.png'
-import thirdParty from '../images/Icons/services-details-icon/customIcon/thirdParty.png'
-import Collaboration from '../images/Icons/services-details-icon/devops/Collaboration tools.png'
-import deployement from '../images/Icons/services-details-icon/devops/Continous deployement.png'
-import integration from '../images/Icons/services-details-icon/devops/Continous integration.png'
-import Infrastructure from '../images/Icons/services-details-icon/devops/Infrastructure.png'
-import monitoring from '../images/Icons/services-details-icon/devops/monitoring and logging.png'
-import security from '../images/Icons/services-details-icon/devops/security integration.png'
-import Cost from '../images/Icons/services-details-icon/teamIcons/Cost.png'
-import Diverse from '../images/Icons/services-details-icon/teamIcons/Diverse.png'
-import Expertise from '../images/Icons/services-details-icon/teamIcons/Expertise.png'
-import delivery from '../images/Icons/services-details-icon/teamIcons/Project delivery.png'
-import Rapid from '../images/Icons/services-details-icon/teamIcons/Rapid.png'
-import Scalability from '../images/Icons/services-details-icon/teamIcons/Scalability.png'
-import Cms from '../images/Icons/services-details-icon/webApp/Cms.png'
-import WebApp from '../images/Icons/services-details-icon/webApp/Web App.png'
-import WebDesign from '../images/Icons/services-details-icon/webApp/Web design.png'
-import WebDevelpopment from '../images/Icons/services-details-icon/webApp/Web develpopment.png'
-import Apis from '../images/Icons/services-details-icon/mobileApp/Apis.png'
-import Consultation from '../images/Icons/services-details-icon/mobileApp/Consultation.png'
-import support from '../images/Icons/services-details-icon/mobileApp/Deployment and support.png'
-import Testing  from '../images/Icons/services-details-icon/mobileApp/Testing and qa.png'
-import UiUx  from '../images/Icons/services-details-icon/mobileApp/Ui ux design.png'
-import AppDevelopment  from '../images/Icons/services-details-icon/mobileApp/App development.png'
-import Automation  from '../images/Icons/services-details-icon/qualityIcon/Automation.png'
-import Comprehensive  from '../images/Icons/services-details-icon/qualityIcon/Comprehensive.png'
-import improvement  from '../images/Icons/services-details-icon/qualityIcon/Continous improvement.png'
-import Detection  from '../images/Icons/services-details-icon/qualityIcon/Detection.png'
-import Regularty  from '../images/Icons/services-details-icon/qualityIcon/Regularty.png'
-import envoronment  from '../images/Icons/services-details-icon/qualityIcon/Testing envoronment.png'
-import Visual  from '../images/Icons/services-details-icon/UiUXIcon/Visual.png'
-import Accesiabltyintegration  from '../images/Icons/services-details-icon/UiUXIcon/integration.png'
-import architecture  from '../images/Icons/services-details-icon/UiUXIcon/information architecture.png'
-import responsive  from '../images/Icons/services-details-icon/UiUXIcon/responsive.png'
-import centric  from '../images/Icons/services-details-icon/UiUXIcon/user centric.png'
-import Chatgpt  from '../images/Icons/services-details-icon/aIChatIcon/Chat gpt.png'
-import learning  from '../images/Icons/services-details-icon/aIChatIcon/Continous learning.png'
-import Ethical  from '../images/Icons/services-details-icon/aIChatIcon/Ethical.png'
-import Natural  from '../images/Icons/services-details-icon/aIChatIcon/Natural language.png'
-import Versatility  from '../images/Icons/services-details-icon/aIChatIcon/Versatility.png'
-import advancement  from '../images/Icons/services-details-icon/aIChatIcon/ai advancement.png'
-
-
+import enterprise from "../images/Icons/services-details-icon/customIcon/enterprise.png";
+import Erp from "../images/Icons/services-details-icon/customIcon/Erp.png";
+import apiDatabase from "../images/Icons/services-details-icon/customIcon/api-database.png";
+import ecommerce from "../images/Icons/services-details-icon/customIcon/ecommerce.png";
+import saas from "../images/Icons/services-details-icon/customIcon/saas.png";
+import thirdParty from "../images/Icons/services-details-icon/customIcon/thirdParty.png";
+import Collaboration from "../images/Icons/services-details-icon/devops/Collaboration tools.png";
+import deployement from "../images/Icons/services-details-icon/devops/Continous deployement.png";
+import integration from "../images/Icons/services-details-icon/devops/Continous integration.png";
+import Infrastructure from "../images/Icons/services-details-icon/devops/Infrastructure.png";
+import monitoring from "../images/Icons/services-details-icon/devops/monitoring and logging.png";
+import security from "../images/Icons/services-details-icon/devops/security integration.png";
+import Cost from "../images/Icons/services-details-icon/teamIcons/Cost.png";
+import Diverse from "../images/Icons/services-details-icon/teamIcons/Diverse.png";
+import Expertise from "../images/Icons/services-details-icon/teamIcons/Expertise.png";
+import delivery from "../images/Icons/services-details-icon/teamIcons/Project delivery.png";
+import Rapid from "../images/Icons/services-details-icon/teamIcons/Rapid.png";
+import Scalability from "../images/Icons/services-details-icon/teamIcons/Scalability.png";
+import Cms from "../images/Icons/services-details-icon/webApp/Cms.png";
+import WebApp from "../images/Icons/services-details-icon/webApp/Web App.png";
+import WebDesign from "../images/Icons/services-details-icon/webApp/Web design.png";
+import WebDevelpopment from "../images/Icons/services-details-icon/webApp/Web develpopment.png";
+import Apis from "../images/Icons/services-details-icon/mobileApp/Apis.png";
+import Consultation from "../images/Icons/services-details-icon/mobileApp/Consultation.png";
+import support from "../images/Icons/services-details-icon/mobileApp/Deployment and support.png";
+import Testing from "../images/Icons/services-details-icon/mobileApp/Testing and qa.png";
+import UiUx from "../images/Icons/services-details-icon/mobileApp/Ui ux design.png";
+import AppDevelopment from "../images/Icons/services-details-icon/mobileApp/App development.png";
+import Automation from "../images/Icons/services-details-icon/qualityIcon/Automation.png";
+import Comprehensive from "../images/Icons/services-details-icon/qualityIcon/Comprehensive.png";
+import improvement from "../images/Icons/services-details-icon/qualityIcon/Continous improvement.png";
+import Detection from "../images/Icons/services-details-icon/qualityIcon/Detection.png";
+import Regularty from "../images/Icons/services-details-icon/qualityIcon/Regularty.png";
+import envoronment from "../images/Icons/services-details-icon/qualityIcon/Testing envoronment.png";
+import Visual from "../images/Icons/services-details-icon/UiUXIcon/Visual.png";
+import Accesiabltyintegration from "../images/Icons/services-details-icon/UiUXIcon/integration.png";
+import architecture from "../images/Icons/services-details-icon/UiUXIcon/information architecture.png";
+import responsive from "../images/Icons/services-details-icon/UiUXIcon/responsive.png";
+import centric from "../images/Icons/services-details-icon/UiUXIcon/user centric.png";
+import Chatgpt from "../images/Icons/services-details-icon/aIChatIcon/Chat gpt.png";
+import learning from "../images/Icons/services-details-icon/aIChatIcon/Continous learning.png";
+import Ethical from "../images/Icons/services-details-icon/aIChatIcon/Ethical.png";
+import Natural from "../images/Icons/services-details-icon/aIChatIcon/Natural language.png";
+import Versatility from "../images/Icons/services-details-icon/aIChatIcon/Versatility.png";
+import advancement from "../images/Icons/services-details-icon/aIChatIcon/ai advancement.png";
 
 const cards = [
   {
@@ -160,7 +158,6 @@ const cards = [
           heading: "Custom ERP",
           text: "Tailored ERP solutions for comprehensive business management, integrating processes, improving data visibility, and driving informed decision-making for sustained organizational success.",
         },
-
       ],
       tecnology: [
         {
@@ -1340,7 +1337,7 @@ export const imgCards = [
     heading: "Team Augmentation",
   },
   {
-    bgImg: Discover,
+    bgImg: web_dev,
     heading: "Web Development",
   },
   {
