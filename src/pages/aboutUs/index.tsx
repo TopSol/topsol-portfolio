@@ -9,7 +9,7 @@ import Experience from "./component/Experience";
 import aboutUsData from "../../staticData/aboutusData";
 import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
-import aboutHero from '../../images/aboutHero.png'
+import aboutHero from '../../images/aboutHero.webp'
 import aboutInfo from '../../images/aboutInfo.png'
 import { ToggleBar } from "../../components/bar";
 

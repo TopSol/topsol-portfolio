@@ -98,7 +98,7 @@ padding-bottom: 20px;
 }
 
 .services-page-hero{
-  background:url('../images/heroImage.png'),linear-gradient(#0B234C, #00B8F1);
+  background:url('../images/heroImage.webp'),linear-gradient(#0B234C, #00B8F1);
   background-blend-mode: color-dodge;
   background-size: cover;
 }
