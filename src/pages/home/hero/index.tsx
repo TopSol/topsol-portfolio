@@ -17,7 +17,7 @@ export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <div className="bg-cover  min-h-[95vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground sm:justify-normal justify-center">
+    <div className="bg-cover  min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground  justify-center">
       <div className="flex flex-col justify-center px-4 sm:px-6 lg:px-2"
         ref={ref}
         style={{
@@ -28,21 +28,21 @@ export default function Hero() {
       >
         <h1
           id="root"
-          className="lg:text-[60px] sm:text-4xl uppercase md:text-5xl text-white font-extrabold font-urbanist leading-10 text-center sm:text-left "
+          className="lg:text-[60px] sm:text-4xl uppercase md:text-5xl text-white font-extrabold font-urbanist leading-10 text-center  "
         >
           A Better Approach to
           <p className="md:mt-[30px] sm:text-4xl md:text-5xl lg:text-[60px] text-primary font-figtree">
             Develop Software
           </p>
         </h1>
-        <p className="md:mt-[52px] mt-[25px] text-[12px] md:text-[22px] text-white font-figtree hero-text-sideLine text-center sm:text-left ">
+        <p className="md:mt-[52px] mt-[25px] text-[12px] md:text-[22px] text-white font-figtree  text-center  ">
           Accelerate your launch by 2x with our groundbreaking development
           process, and <br /> reduce costs significantly. Say goodbye to the
           tedious process of starting from scratch <br /> and embrace the future
           of innovative app development.
         </p>
         <div className="bg-transparent    "></div>
-        <div className="flex flex-col mt-[54px] sm:flex-row gap-[17px] sm:items-normal items-center">
+        <div className="flex flex-col mt-[54px] sm:flex-row gap-[17px] justify-center  items-center">
           {root && (
             <div className="relative">
               <PopupButton
@@ -54,7 +54,7 @@ export default function Hero() {
               />
               <img
                 src={arrowup}
-                className="absolute md:top-[40%] md:left-[66%] invert  left-[72%] top-[38%]"
+                className="absolute md:top-[40%] md:left-[66%]  left-[72%] top-[38%]"
               />
             </div>
           )}

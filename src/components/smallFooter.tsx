@@ -12,7 +12,7 @@ export default function SmallFooter() {
         <PrimaryBtn
           text="Get Started"
           icon={true}
-          additionalClasses="text-primary border-2 border-white hover:border-primary flex items-center font-figtree py-[10px] md:py-[16px] sm:px-[88px] px-[44px] bg-transparent text-[18px] mt-[40px] text-white rounded-[6px] "
+          additionalClasses="text-primary border-2 border-white hover:border-primary flex items-center font-figtree py-[10px] md:py-[16px] sm:px-[88px] px-[44px] bg-transparent hover:bg-primary text-[18px] mt-[40px] text-white rounded-[6px] "
         />
       </Link>
     </div>

@@ -4,7 +4,7 @@ import Icon2 from "../../images/Icons/servicersIcon/secourity.svg";
 import { Link } from "gatsby";
 import FileIcon from "../../../images/Icons/fileIcon.png";
 import LineAnimation from "../../../components/LineAnimation";
-import WhyChooesUs from '../../../images/whyChouesUs.png'
+import WhyChooesUs from '../../../images/servicesImages/bgImage/whyChouesUs.webp'
 export default function Project() {
   return (
     <div className="py-[90px] flex flex-col px-2 bg-cover items-center "

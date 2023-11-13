@@ -20,7 +20,7 @@ function Faqs() {
             </h1>
             {/* <h1 className='text-primary md:text-[48px] text-[40px] text-center md:text-left font-bold font-urbanist'>QUESTIONS</h1> */}
             <LineAnimation
-              width="230px"
+              width="170px"
               height="5px"
               backgroundColor="#fff"
               marginTop="5px"

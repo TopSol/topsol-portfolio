@@ -4,7 +4,7 @@ import arrow from "../../../images/Icons/arrow.png";
 
 export default function WorkFlow(servicedata) {
     return (
-        <div className=" mt-8 py-[92px]    px-2  bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
+        <div className=" mt-8 py-[92px]    px-2  bg-gradient-to-b from-secondary to-primary">
             <div className=" flex flex-col md:w-[75%] w-[100%] mx-auto justify-center md:justify-start ">
                 {/* <div className=" flex flex-col md:justify-start justify-center  items-center md:items-start ">
                     <h1 className="font-bold text-white leading-[120%] uppercase font-urbanist text-[26px] md:text-[34px] lg:text-[48px] text-center md:text-left">

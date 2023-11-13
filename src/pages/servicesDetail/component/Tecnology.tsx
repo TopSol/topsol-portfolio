@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import LineAnimation from '../../../components/LineAnimation'
-import bgImage from '../../../images/bgImage.png'
+import bgImage from '../../../images/servicesImages/bgImage/bgImage.webp'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

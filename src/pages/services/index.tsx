@@ -27,9 +27,7 @@ export default function index() {
       <Project />
       <RatingSection />
       <AddressSection />
-      <div className="mt-[20px]">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

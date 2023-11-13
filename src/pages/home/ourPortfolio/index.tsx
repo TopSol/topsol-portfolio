@@ -76,9 +76,9 @@ function OurPortfolio() {
               </div>
               <div
                 className=" md:mx-[21px] mx-[15px]  pb-[28px]">
-                <p className="text-[#697484] text-[12px] leading-[16px]">UI Design / Brand Identity</p>
+                <p className="text-[#697484] text-[12px] font-figtree font-light  leading-[16px]">UI Design / Brand Identity</p>
                 <h1 className="font-bold text-[#132238] leading-[32px] text-[18px] mt-2">{item.title}</h1>
-                <p className="text-[#697484] text-[10px] leading-[16px]  mt-2">{item?.doc?.slice(0, 90)}...</p>
+                <p className="text-[#697484] text-[12px] font-figtree font-light leading-[16px]  mt-2">{item?.doc?.slice(0, 90)}...</p>
                 <Link to={`/portfolioDetail?id=${item.id}`} key={index}>
                   <button className="flex flex-row mt-4 text-primary text-[16px] leading-[24px] font-semibold">
                     View Case Study

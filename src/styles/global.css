@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hoverDive:hover .hoverImage {

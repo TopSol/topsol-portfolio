@@ -158,12 +158,12 @@ function ContactForm({ addressInfo }: Iprops) {
           </button>
         </div>
       </div>
-      <div className="flex flex-col mt-[37px] md:flex-row justify-between">
+      <div className={` ${addressInfo ? 'flex' : 'hidden'} flex-col mt-[37px] md:flex-row justify-between`}>
         <div className=" md:w-[30%] w-[100%]">
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">
             lOCATION
           </h1>
-          <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">
+          <p className="mt-3 text-[#1F1F1F] font-figtree  text-[14px] leading-[125%] ">
             2nd Floor, Sitara Techno Park, Lower Cenal Road East, Faisalabad,
             Pakistan
           </p>
@@ -172,7 +172,7 @@ function ContactForm({ addressInfo }: Iprops) {
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">
             cALL NOW
           </h1>
-          <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">
+          <p className="mt-3 text-[#1F1F1F] font-figtree  text-[14px] leading-[125%] ">
             +92-303-6362191 <br />
             (041) 855 7244
           </p>
@@ -181,7 +181,7 @@ function ContactForm({ addressInfo }: Iprops) {
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">
             Email
           </h1>
-          <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">
+          <p className="mt-3 text-[#1F1F1F] font-figtree  text-[14px] leading-[125%] ">
             info@topsol.org
           </p>
         </div>
