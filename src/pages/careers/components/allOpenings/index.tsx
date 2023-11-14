@@ -78,8 +78,8 @@ function AllOpenings() {
     <div id="opening" className="bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
       <div className="md:container md:mx-auto sm:mx-0 mx-[14px] flex justify-center items-center flex-col">
         <div className="flex flex-col items-center justify-center mb-14">
-          <h1 className="text-primary-white md:text-[40px] text-3xl text-center font-semibold md:mt-[49px] mt-[52px] ">
-            All Openings
+          <h1 className="text-primary-white uppercase font-urbanist md:text-[40px] text-3xl text-center font-bold md:mt-[49px] mt-[52px] ">
+            Newest <span className="text-primary">Jobs </span> for You
           </h1>
           <div className="flex justify-center items-center">
             <LineAnimation
@@ -170,30 +170,6 @@ function AllOpenings() {
             )}
           </div>
 
-        </div>
-        <div className="flex justify-center items-center ">
-          <button
-            className=" w-[180px] py-[15px] mt-[50px] px-[34px] mb-[88px] text-[20px] font-semibold group flex text-center 
-            items-center justify-center rounded bg-white text-primary hover:scale-x-125 hover:pl-4 m hover:duration-500
-             transform origin-left transition-transform duration-500 ease-in-outy"
-          >
-            <div className=" group-hover:scale-x-[.8] ">View more</div>
-
-            <svg
-              className="w-4 h-4 hidden group-hover:inline"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </div>

@@ -58,76 +58,55 @@ function LifeTopsol() {
 
   return (
     <div className="md:container mx-auto">
-      <div className="flex lg:flex-row flex-col md:justify-center  xl:mx-0 lg:mx-3">
-        <div className="  lg:mb-[150px] flex items-center justify-center md:justify-start md:items-start flex-col lg:mx-0 md:mx-3">
-          <h1 className="md:text-6xl lg:text-start text-center text-3xl font-semibold  md:mt-[161px] mt-[51px]">
-            Life at Topsol
-          </h1>
-          <div className="flex justify-start items-start lg:ml-0 md:ml-2">
-            <LineAnimation
-              width="178px"
-              height="7px"
-              backgroundColor="#00B8F1"
-              marginTop="15px"
-            />
+      <div className="flex lg:flex-row flex-col md:justify-around items-center py-[31px]  xl:mx-0 lg:mx-3">
+        <div className="   text-center md:text-left flex flex-col   mt-6 lg:mt-12 md:w-[40%] w-[90%]">
+          <div className="flex  items-center ">
+            <div className="mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="2" viewBox="0 0 28 2" fill="none">
+                <path d="M26.0156 1L0.998779 1" stroke="#004264" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <p className=" text-[20px] font-figtree font-normal  capitalize  text-[#004264]">Benefits of working with us</p>
           </div>
-          <p className=" text-xl md:mx-0 mx-8   lg:text-start text-center font-medium my-10 flex items-center md:leading-10 leading-7 lg:max-w-[628px] ">
-            Life at Topsol is more than just a job - it's an immersive
-            experience that combines innovation, camaraderie, and personal
-            growth. From the moment you step through our doors, you'll become a
-            part of a thriving community that values creativity, collaboration,
-            and the pursuit of excellence From the moment you step through our
-            doors, you'll become a part of a thriving community that values
-            creativity, collaboration, and the pursuit of excellence
-            {showMore && (
-              <>
-                From the moment you step through our doors, you'll become a part
-                of a thriving community that values creativity, collaboration,
-                and the pursuit of excellence From the moment you step through
-                our doors, you'll become a part of a thriving community that
-                values creativity, collaboration,
-              </>
-            )}
+          <h1 className="  text-[20px] lg:text-[25px] text-primary font-urbanist xl:text-[34px] font-normal  mt-[10px] xl:mt-[34px] ">
+            Why you Should Join Our Awesome Team
+          </h1>
+          <p className=" text-justify mx-[24px] text-[#3D3D3D] md:mx-0 text-[15px] lg:text-[18px] xl:text-[20px] leading-[150%] font-light font-figtree mt-[10px] xl:mt-[34px] ">
+            Life at Topsol is more than just a job – it's an immersive experience that combines innovation, camaraderie, and personal growth. From the moment you step through our doors, you'll become a part of a thriving community that values creativity, collaboration, and the pursuit of excellence From the moment you step through our doors, you'll become a part of a thriving community that values creativity, collaboration, and the pursuit of excellence
           </p>
-          <button
-            onClick={toggleButton}
-            className="md:px-[53px] px-[42px] md:max-w-[260px] max-w-[191px] h-[44px] md:h-[65px] md:text-[26px] text-lg font-semibold rounded-[5px] bg-primary text-primary-white hover:bg-primary-light"
-          >
-            {showMore ? "Show less" : "Learn more"}
-          </button>
         </div>
 
         <div className="md:flex  justify-center gap-[42px] hidden">
-          <div className="lg:mt-[141px] lg:mb-0 mb-[150px] mt-20 flex flex-col gap-y-10">
+          <div className=" flex flex-col gap-y-10">
             {upperCardData?.map((review, index) => {
               return (
                 <div key={index} className="">
                   <SmallCards
                     heading={review?.heading}
-                    headingClass="font-semibold text-sm"
-                    textClass="text-[11px] font-normal"
+                    headingClass="font-semibold  font-urbanist text-[16px]"
+                    textClass=" font-light font-figtree text-[12px]"
                     text={review?.text}
                     avatar={review?.avatar}
                     hoverAvatar={review?.hoverAvatar}
-                    className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[230px]  p-[22px]"
+                    className="border-2 border-primary rounded-xl mx-auto max-w-[208px] max-h-[260px]  p-[22px]"
                   />
                 </div>
               );
             })}
           </div>
 
-          <div className="lg:mt-[219px] mt-20 flex flex-col gap-y-10">
+          <div className=" mt-16 flex flex-col gap-y-10">
             {lowerCardData?.map((review, index) => {
               return (
                 <div key={index} className="">
                   <SmallCards
                     heading={review?.heading}
-                    headingClass="font-semibold text-sm"
-                    textClass="text-[11px] font-normal"
+                    headingClass="font-medium font-urbanist text-[16px]"
+                    textClass="font-light font-figtree text-[12px]"
                     text={review?.text}
                     avatar={review?.avatar}
                     hoverAvatar={review?.hoverAvatar}
-                    className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[230px]  p-[22px]"
+                    className="border-2 border-primary rounded-xl mx-auto max-w-[208px] max-h-[260px]  p-[22px]"
                   />
                 </div>
               );
@@ -142,12 +121,12 @@ function LifeTopsol() {
                   <div key={index} className="">
                     <SmallCards
                       heading={review?.heading}
-                      headingClass="font-semibold text-sm"
-                      textClass="text-[11px] font-normal"
+                      headingClass="font-semibold   font-urbanist text-[16px]"
+                      textClass="font-light font-figtree text-[12px]"
                       text={review?.text}
                       avatar={review?.avatar}
                       hoverAvatar={review?.hoverAvatar}
-                      className="bg-primary-cardBg mx-auto max-w-[208px] max-h-[217px]  p-[22px]"
+                      className="border-2 border-primary rounded-xl mx-auto max-w-[208px] max-h-[250px]  p-[22px]"
                     />
                   </div>
                 );
