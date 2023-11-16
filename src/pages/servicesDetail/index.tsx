@@ -19,8 +19,12 @@ export default function ServiceDetails({ location }) {
 
   return (
     <div>
-      <ToggleBar />
-      <HeroSection servicedata={state?.service}
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
+      <HeroSection
+        servicedata={state?.service}
         imageHead={state?.service?.details?.imageHead}
       />
       <InfoSection

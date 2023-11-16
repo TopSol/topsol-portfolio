@@ -10,17 +10,16 @@ import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
 import { ToggleBar } from "../../components/bar";
 import VideoHero from "../../components/VidoeHero";
-import aboutHero from '../../images/aboutTopsolIcon/aboutHeader/aboutHero.webp'
+import aboutHero from "../../images/aboutTopsolIcon/aboutHeader/aboutHero.webp";
 function Careers() {
   return (
     <div>
-      <ToggleBar />
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
       {/* <JoinTopSol /> */}
-      <VideoHero
-        page="join"
-        image={aboutHero}
-        title="JOIN US"
-      />
+      <VideoHero page="join" image={aboutHero} title="JOIN US" />
       <LifeTopsol />
       <AllOpenings />
       {/* <Process /> */}

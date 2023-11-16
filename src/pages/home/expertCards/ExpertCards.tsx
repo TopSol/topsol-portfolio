@@ -8,12 +8,14 @@ type appProps = {
 
 function ExpertCards({ title, avatar, border }: appProps) {
   return (
-    <div className={`${border ? "min-h-[180px]" : ""} `}>
+    <div
+      className={`${border ? "min-h-[180px]" : ""} flex-col flex items-center `}
+    >
       <div
-        className={`hover:duration-500  flex flex-col items-center  ${
+        className={`hover:duration-500  flex flex-col items-center justify-center  ${
           border
             ? "rounded-[10px]  border-2 w-[198px]  hover:bg-primary-light group  border-primary-light  "
-            : "border-none shadow-lg shadow-gray-400 rounded-[20px] px-4 py-2"
+            : "border-none   px-4 py-2"
         }`}
       >
         <img

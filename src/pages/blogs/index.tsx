@@ -10,7 +10,10 @@ import { ToggleBar } from "../../components/bar";
 export default function index() {
   return (
     <div>
-      <ToggleBar />
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
       <Header />
       <Heading />
       <Card />

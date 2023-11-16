@@ -22,6 +22,7 @@ import Faqs from "./faqs";
 // import gsap from "gsap";
 import "../../cursor.css";
 import { ToggleBar } from "../../components/bar";
+import Navbar from "../../components/Navbar";
 
 // MouseFollower.registerGSAP(gsap);
 function Home() {
@@ -52,8 +53,10 @@ function Home() {
   return (
     <div className="">
       <MetaPixel />
-
-      <ToggleBar />
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
       <Hero />
       <motion.div className="secSectionBg" id="follower">
         <CardSection

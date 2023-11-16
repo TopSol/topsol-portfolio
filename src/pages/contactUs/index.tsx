@@ -11,7 +11,10 @@ import { ToggleBar } from "../../components/bar";
 export default function index() {
   return (
     <div>
-      <ToggleBar />
+      <div>
+        <ToggleBar />
+        <Navbar />
+      </div>
       <Hero />
       <Contact />
       <AddressSection />

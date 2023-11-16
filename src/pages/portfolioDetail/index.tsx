@@ -43,7 +43,10 @@ export default function index() {
   }, [id]);
   return (
     <div>
-      <ToggleBar />
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
       {loader ? (
         <div className="flex justify-center h-[500px] items-center">
           <PulseLoader color="#8E8E8E" size={18} />

@@ -10,7 +10,10 @@ function JobDetail(props: any) {
   const details = props?.location?.state;
   return (
     <div>
-      <ToggleBar />
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
       <Designer jobDetails={details} />
       <AboutUs jobDetails={details} />
       <Footer />

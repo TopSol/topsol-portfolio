@@ -1,10 +1,9 @@
-import imgOne from "../images/homeImages/awardsection/icon.webp";
+// import imgOne from "../images/homeImages/awardsection/icon.webp";
 
 import imgTwo from "../images/homeImages/awardsection/pakistan-thegem.webp";
 
 import imgThree from "../images/homeImages/awardsection/clutch-logo.webp";
-import imgFour from "../images/homeImages/awardsection/imgSlider1.webp";
-
+import imgOne from "../images/homeImages/awardsection/imgSlider1.webp";
 
 import imgFive from "../images/homeImages/awardsection/software-world.webp";
 
@@ -23,11 +22,11 @@ const images = [
   },
   {
     id: "4",
-    avatar: imgFour,
+    avatar: imgFive,
   },
   {
     id: "5",
-    avatar: imgFive,
+    avatar: imgOne,
   },
   {
     id: "6",
