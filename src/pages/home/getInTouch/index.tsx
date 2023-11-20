@@ -1,7 +1,6 @@
 import React from "react";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
-import touchImg1 from "../../../images/touchImg1.png";
-import check1 from "../../../images/check1.png";
+import touchImg1 from "../../../images/touchImg1.webp";
 import ContactForm from "./ContactForm";
 import LineAnimation from "../../../components/LineAnimation";
 

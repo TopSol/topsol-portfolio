@@ -1,8 +1,8 @@
-import Chris from "../images/chris_client.jpeg";
+import Chris from "../images/homeImages/ratingSection/chris_client.webp";
 
-import Nick from "../images/nick.png";
+import Nick from "../images/homeImages/ratingSection/nick.webp";
 
-import Juan from "../images/juan.png";
+import Juan from "../images/homeImages/ratingSection/juan.webp";
 
 const reviews = [
   {

@@ -57,9 +57,8 @@ function ContactForm({ addressInfo }: Iprops) {
       </div>
       <div className=" mx-auto  w-[100%] mt-10 md:mt-0">
         <div
-          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${
-            isFocused === "name" ? "border-primary" : "border-[#1F1F1F]"
-          }`}
+          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${isFocused === "name" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
         >
           <div className="md:w-[6%] w-[13%]">
             <svg
@@ -90,11 +89,7 @@ function ContactForm({ addressInfo }: Iprops) {
           />
         </div>
         <div className="flex flex-col md:flex-row md:mt-7  mt-3 justify-between">
-          <div
-            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[7px]  px-[20px] ${
-              isFocused === "email" ? "border-primary" : "border-[#1F1F1F]"
-            }`}
-          >
+          <div className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "email" ? "border-primary" : "border-[#1F1F1F]"}`}>
             <div className="w-[9%] mr-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -120,9 +115,8 @@ function ContactForm({ addressInfo }: Iprops) {
             />
           </div>
           <div
-            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] md:mt-0  mt-3 border-[1px] items-center py-[7px]  px-[20px] ${
-              isFocused === "phone" ? "border-primary" : "border-[#1F1F1F]"
-            }`}
+            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] md:mt-0  mt-3 border-[1px] items-center py-[7px]  px-[20px] ${isFocused === "phone" ? "border-primary" : "border-[#1F1F1F]"
+              }`}
           >
             <PhoneInput
               inputStyle={{
@@ -141,9 +135,8 @@ function ContactForm({ addressInfo }: Iprops) {
           </div>
         </div>
         <div
-          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center py-[10px]  px-[20px] ${
-            isFocused === "message" ? "border-primary" : "border-[#1F1F1F]"
-          }`}
+          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "message" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
         >
           <input
             type="text"
@@ -165,12 +158,12 @@ function ContactForm({ addressInfo }: Iprops) {
           </button>
         </div>
       </div>
-      <div className="flex flex-col mt-[37px] md:flex-row justify-between">
+      <div className={` ${addressInfo ? 'flex' : 'hidden'} flex-col mt-[37px] md:flex-row justify-between`}>
         <div className=" md:w-[30%] w-[100%]">
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">
             lOCATION
           </h1>
-          <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">
+          <p className="mt-3 text-[#1F1F1F] font-figtree  text-[14px] leading-[125%] ">
             2nd Floor, Sitara Techno Park, Lower Cenal Road East, Faisalabad,
             Pakistan
           </p>
@@ -179,7 +172,7 @@ function ContactForm({ addressInfo }: Iprops) {
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">
             cALL NOW
           </h1>
-          <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">
+          <p className="mt-3 text-[#1F1F1F] font-figtree  text-[14px] leading-[125%] ">
             +92-303-6362191 <br />
             (041) 855 7244
           </p>
@@ -188,7 +181,7 @@ function ContactForm({ addressInfo }: Iprops) {
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">
             Email
           </h1>
-          <p className="mt-3 text-[#1F1F1F] text-[14px] leading-[125%] ">
+          <p className="mt-3 text-[#1F1F1F] font-figtree  text-[14px] leading-[125%] ">
             info@topsol.org
           </p>
         </div>

@@ -8,7 +8,7 @@ import ImagSlider from "./ImagSlider";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import images from "../../../staticData/awardsData";
 import LineAnimation from "../../../components/LineAnimation";
-
+import bgImage from '../../../images/homeImages/awardsection/bgImage.webp'
 function Awards() {
   const [slider, setSlider] = useState<any | null>(null);
 
@@ -62,7 +62,11 @@ function Awards() {
 
   return (
     <>
-      <div className="flex  flex-col md:flex-row items-center justify-around h-[431px]  md:mt-[106px] mt-[78px] bg-[#F4F4F4] ">
+      <div className="flex  flex-col md:flex-row items-center justify-around h-[431px]  md:mt-[106px] mt-[78px] bg-cover "
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+      >
         <div className="flex flex-col  items-center md:items-start mb-6">
           <h1 className="font-extrabold  font-urbanist  text-[26px] md:text-[34px] lg:text-[48px]  uppercase leading-[120%] ">
             AWARD &

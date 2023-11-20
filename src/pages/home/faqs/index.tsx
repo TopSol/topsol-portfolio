@@ -20,7 +20,7 @@ function Faqs() {
             </h1>
             {/* <h1 className='text-primary md:text-[48px] text-[40px] text-center md:text-left font-bold font-urbanist'>QUESTIONS</h1> */}
             <LineAnimation
-              width="230px"
+              width="170px"
               height="5px"
               backgroundColor="#fff"
               marginTop="5px"
@@ -40,9 +40,8 @@ function Faqs() {
                     {faq.question}
                   </div>
                   <div
-                    className={`transform ${
-                      openIndex === index ? "-rotate-90" : ""
-                    } transition-transform`}
+                    className={`transform ${openIndex === index ? "-rotate-90" : ""
+                      } transition-transform`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +58,7 @@ function Faqs() {
                   </div>
                 </div>
                 {openIndex === index && (
-                  <div className="mt-[22px] text-white font-figtree md:text-[16px] text-[12px] leading-[125%]">
+                  <div className="mt-[22px] text-white font-figtree md:text-[18px] text-[14px] leading-[125%]">
                     {faq.answer}
                   </div>
                 )}

@@ -6,19 +6,37 @@ import data from "../../../staticData/topsolExpertsData";
 import CircleImage from "../../../components/CircleImage";
 import LineAnimation from "../../../components/LineAnimation";
 function TopSolExperts() {
-  const [selectedCategory, setSelectedCategory] = useState("Technologies");
+  const [selectedCategory, setSelectedCategory] = useState("Mobile");
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
   };
-  const { technologies, Industries, Values } = data;
+  const {
+    technologies,
+    Industries,
+    Mobile,
+    FrontEnd,
+    Devops,
+    CMS,
+    Database,
+    Backend,
+    UiUx,
+  } = data;
 
   let selectedArray;
-  if (selectedCategory === "Values") {
-    selectedArray = Values;
-  } else if (selectedCategory === "Industries") {
-    selectedArray = Industries;
-  } else if (selectedCategory === "Technologies") {
-    selectedArray = technologies;
+  if (selectedCategory === "Mobile") {
+    selectedArray = Mobile;
+  } else if (selectedCategory === "FrontEnd") {
+    selectedArray = FrontEnd;
+  } else if (selectedCategory === "Devops") {
+    selectedArray = Devops;
+  } else if (selectedCategory === "CMS") {
+    selectedArray = CMS;
+  } else if (selectedCategory === "Database") {
+    selectedArray = Database;
+  } else if (selectedCategory === "Backend") {
+    selectedArray = Backend;
+  } else if (selectedCategory === "UiUx") {
+    selectedArray = UiUx;
   }
 
   return (
@@ -26,7 +44,7 @@ function TopSolExperts() {
       <div className="flex flex-col justify-center items-center  ">
         <div className="">
           <h1 className="font-extrabold mt-[54px]  font-urbanist uppercase text-[26px] md:text-34[px] lg:text-4xl text-center">
-            Why Topsol  <span className="text-primary">Experts</span>
+            TECHNOLOGIES <span className="text-primary">WE WORK WITH</span>
           </h1>
         </div>
         <LineAnimation
@@ -35,34 +53,76 @@ function TopSolExperts() {
           backgroundColor="#00B8F1"
           marginTop="20px"
         />
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-y-5  md:gap-x-[40px] mt-[59px] ">
-
+        <div className="grid md:grid-cols-7 grid-cols-1 gap-y-5  md:gap-x-[40px] mt-[59px] ">
           <button
-            onClick={() => handleCategoryChange("Technologies")}
-            className={`  text-primary  cursor-default ${selectedCategory === "Technologies"
-              ? "bg-primary text-white"
-              : "bg-white text-primary"
-              }  hover:text-white px-[45px] lg:px-[56px] py-4 font-figtree rounded-[5px] hover:bg-primary text-[20px] font-semibold`}
+            onClick={() => handleCategoryChange("Mobile")}
+            className={`    cursor-default ${
+              selectedCategory === "Mobile"
+                ? "border-b-2 border-primary"
+                : "bg-white text-[#333]"
+            }    py-4 font-urbanist    text-[20px] font-medium`}
           >
-            Technologies
+            Mobile
           </button>
           <button
-            onClick={() => handleCategoryChange("Industries")}
-            className={`  ${selectedCategory === "Industries"
-              ? "bg-primary text-white"
-              : "bg-white text-primary"
-              } text-primary  cursor-default  hover:text-white font-figtree px-[45px] lg:px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
+            onClick={() => handleCategoryChange("FrontEnd")}
+            className={`  ${
+              selectedCategory === "FrontEnd"
+                ? "border-b-2 border-primary"
+                : "bg-white text-[#333]"
+            }   cursor-default   font-urbanist    py-4   text-[20px] font-medium `}
           >
-            Industries
+            FrontEnd
           </button>
           <button
-            onClick={() => handleCategoryChange("Values")}
-            className={`  ${selectedCategory === "Values"
-              ? "bg-primary text-white"
-              : "bg-white text-primary"
-              } cursor-default  hover:text-white px-[45px] font-figtree lg:px-[56px] py-4 rounded-[5px] hover:bg-primary text-[20px] font-semibold `}
+            onClick={() => handleCategoryChange("Devops")}
+            className={`  ${
+              selectedCategory === "Devops"
+                ? "border-b-2 border-primary"
+                : "bg-white text-[#333]"
+            } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
           >
-            Values
+            Devops
+          </button>
+          <button
+            onClick={() => handleCategoryChange("CMS")}
+            className={`  ${
+              selectedCategory === "CMS"
+                ? "border-b-2 border-primary"
+                : "bg-white text-[#333]"
+            } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
+          >
+            CMS
+          </button>
+          <button
+            onClick={() => handleCategoryChange("Database")}
+            className={`  ${
+              selectedCategory === "Database"
+                ? "border-b-2 border-primary"
+                : "bg-white text-[#333]"
+            } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
+          >
+            Database
+          </button>
+          <button
+            onClick={() => handleCategoryChange("Backend")}
+            className={`  ${
+              selectedCategory === "Backend"
+                ? "border-b-2 border-primary"
+                : "bg-white text-[#333]"
+            } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
+          >
+            Backend
+          </button>
+          <button
+            onClick={() => handleCategoryChange("UiUx")}
+            className={`  ${
+              selectedCategory === "UiUx"
+                ? "border-b-2 border-primary"
+                : "bg-white text-[#333]"
+            } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
+          >
+            UiUx
           </button>
         </div>
       </div>
@@ -73,17 +133,18 @@ function TopSolExperts() {
           Motivation are Nurtured for Everyone
         </p>
         <div
-          className={`grid mt-[75px] min-h-[200px]    ${selectedCategory === "Technologies"
-            ? "lg:grid-cols-8  grid-cols-2 sm:grid-cols-3 md:grid-cols-5  gap-x-[41px]"
-            : " md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5            gap-x-[28px]"
-            }  sm:grid-cols-2 grid-cols-1 gap-y-[70px] gap-[28px] pb-[50px]  `}
+          className={`grid mt-[75px] min-h-[200px]    ${
+            selectedCategory === "Technologies"
+              ? "lg:grid-cols-8  grid-cols-2 sm:grid-cols-3 md:grid-cols-5  gap-x-[41px]"
+              : " md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-6            gap-x-[28px]"
+          }  sm:grid-cols-2 grid-cols-1 gap-y-[70px] gap-[28px] pb-[50px]  `}
         >
           {selectedArray?.map((item: any, index) => {
             return (
               <div className="  " key={index}>
                 <ExpertCards
                   title={item.title}
-                  border={selectedCategory !== "Technologies"}
+                  border={selectedCategory == "22"}
                   avatar={item.avatar}
                 />
               </div>

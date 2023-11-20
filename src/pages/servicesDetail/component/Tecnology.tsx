@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import LineAnimation from '../../../components/LineAnimation'
-import bgImage from '../../../images/bgImage.png'
+import bgImage from '../../../images/servicesImages/bgImage/bgImage.webp'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,14 +57,14 @@ export default function Tecnology(servicedata) {
     };
     return (
         <div>
-            <div className="py-[90px] flex px-2 bg-cover items-center"
+            <div className="md:py-[50px] mt-16 md:mt-0 flex px-2 bg-cover items-center"
                 style={{
                     backgroundImage: `url(${bgImage})`
                 }}
             >
                 <div className=' flex flex-col md:w-[80%] w-[100%] mx-auto justify-center md:justify-start '>
                     <div className=" flex flex-col md:justify-start justify-center  items-center md:items-start  ">
-                        <h1 className="font-bold text-textColors  uppercase font-urbanist text-[26px] md:text-34[px] lg:text-4xl text-center md:text-left">
+                        <h1 className="font-bold text-textColors  uppercase font-urbanist text-[26px] md:text-[34px] lg:text-4xl text-center md:text-left">
                             TECHNOLOGIES <span className="text-primary">WE USE</span>
                         </h1>
                         <LineAnimation
@@ -87,7 +87,7 @@ export default function Tecnology(servicedata) {
                             ))}
                         </Slider>
                     </div>
-                    <div className="flex mt-16 justify-center">
+                    <div className="flex mt-10 justify-center">
                         <button className="button arrowAwards bg-white hover:bg-primary p-2 rounded-full" onClick={previous}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                 <path d="M20.25 12.1564H3.75" stroke="#121314" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

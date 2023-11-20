@@ -19,8 +19,10 @@ export default function ServiceDetails({ location }) {
 
   return (
     <div>
-      {/* <Navbar /> */}
-      <ToggleBar />
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
       <HeroSection
         servicedata={state?.service}
         imageHead={state?.service?.details?.imageHead}
@@ -33,7 +35,7 @@ export default function ServiceDetails({ location }) {
       />
       <WorkFlow servicedata={state?.service} />
       <Tecnology servicedata={state?.service} />
-      <RatingSection />
+      {/* <RatingSection /> */}
       <div className="mb-[69px]">
         <SmallFooter />
       </div>

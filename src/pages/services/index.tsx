@@ -10,12 +10,15 @@ import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
 import { Link } from "gatsby";
 import Project from "./component/project";
-import heroImage from '../../images/heroImage.png'
+import heroImage from "../../images/heroImage.png";
 import { ToggleBar } from "../../components/bar";
 export default function index() {
   return (
     <div>
-      <ToggleBar />
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
       <div className="services-page-hero">
         <VideoHero
           page="services"
@@ -27,9 +30,7 @@ export default function index() {
       <Project />
       <RatingSection />
       <AddressSection />
-      <div className="mt-[20px]">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

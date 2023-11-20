@@ -7,10 +7,14 @@ import Hero from "./components/Hero";
 import Logo from "../../images/favicon-01.png";
 import Contact from "./components/Contact";
 import metaImage from "../../images/main-logo2.png";
+import { ToggleBar } from "../../components/bar";
 export default function index() {
   return (
     <div>
-      <Navbar />
+      <div>
+        <ToggleBar />
+        <Navbar />
+      </div>
       <Hero />
       <Contact />
       <AddressSection />

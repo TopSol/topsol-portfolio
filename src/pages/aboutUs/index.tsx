@@ -9,18 +9,18 @@ import Experience from "./component/Experience";
 import aboutUsData from "../../staticData/aboutusData";
 import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
-import aboutHero from '../../images/aboutHero.png'
-import aboutInfo from '../../images/aboutInfo.png'
+import aboutHero from "../../images/aboutTopsolIcon/aboutHeader/aboutHero.webp";
+import aboutInfo from "../../images/aboutTopsolIcon/aboutHeader/aboutInfo.webp";
+import { ToggleBar } from "../../components/bar";
 
 const aboutUs = () => {
   return (
     <div>
-      <Navbar />
-      <VidoeHero
-        page="about"
-        image={aboutHero}
-        title="ABOUT US"
-      />
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
+      <VidoeHero page="about" image={aboutHero} title="ABOUT US" />
       <InfoSection
         heading={aboutUsData?.heading}
         mainHeading={aboutUsData?.mainHeading}
@@ -32,9 +32,9 @@ const aboutUs = () => {
         <RatingSection />
       </div>
       <AddressSection />
-      <div className="mt-10">
-        <Footer />
-      </div>
+      {/* <div className="mt-10"> */}
+      <Footer />
+      {/* </div> */}
     </div>
   );
 };

@@ -13,12 +13,12 @@ function ServicesCards({ serviceData }) {
         </h1>
         <div className="flex justify-between items-center text-white py-[20px]">
           <p>View More</p>
-          <img src={Arrowup} alt="" className="invert" />
+          <img src={Arrowup} alt="" className="" />
         </div>
       </div>
       <div className="service-hover-cards-transition">
         <p className="uppercase">View More</p>
-        <img src={Arrowup} alt="" className="invert" />
+        <img src={Arrowup} alt="" className="" />
       </div>
     </div>
   );

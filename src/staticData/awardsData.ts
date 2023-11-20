@@ -1,10 +1,11 @@
-import imgOne from "../images/imgSlider1.png";
+// import imgOne from "../images/homeImages/awardsection/icon.webp";
 
-import imgTwo from "../images/pakistan-thegem.png";
+import imgTwo from "../images/homeImages/awardsection/pakistan-thegem.webp";
 
-import imgThree from "../images/clutch-logo.png";
+import imgThree from "../images/homeImages/awardsection/clutch-logo.webp";
+import imgOne from "../images/homeImages/awardsection/imgSlider1.webp";
 
-import imgFive from "../images/software-world.png";
+import imgFive from "../images/homeImages/awardsection/software-world.webp";
 
 const images = [
   {

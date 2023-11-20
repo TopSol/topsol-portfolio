@@ -39,70 +39,254 @@ import Tec_21 from "../images/Icons/techonologies/tec_21.svg";
 import Tec_22 from "../images/Icons/techonologies/tec_22.svg";
 import Tec_23 from "../images/Icons/techonologies/tec_23.svg";
 import Tec_24 from "../images/Icons/techonologies/tec_24.svg";
+import Tec_25 from "../images/Icons/techonologies/Vector.png";
+import Tec_26 from "../images/Icons/techonologies/GETSBY.png";
+import Tec_27 from "../images/Icons/techonologies/Group 39303.png";
+import Tec_28 from "../images/Icons/techonologies/wiv.png";
+import Tec_29 from "../images/Icons/techonologies/wordpress.png";
+import Tec_30 from "../images/Icons/techonologies/Group 39285.png";
+import Tec_31 from "../images/Icons/techonologies/clipart1128690.png";
+import Tec_32 from "../images/Icons/techonologies/postgresql.png";
+import Tec_33 from "../images/Icons/techonologies/Group 39307.png";
+import Tec_34 from "../images/Icons/techonologies/Group 39308.png";
+import Tec_35 from "../images/Icons/techonologies/Group 39309.png";
+import Tec_36 from "../images/Icons/techonologies/Group 39310.png";
 
-const Values = [
+const Mobile = [
   {
-    title: "HEALTH",
-    avatar: Expert_1,
+    avatar: Tec_8,
+    title: "Node.js",
   },
   {
-    title: "TRAVEL & TOURISM",
-    avatar: Expert_2,
+    avatar: Tec_9,
+    title: "Flutter",
   },
   {
-    title: "AVIATION",
-    avatar: Expert_3,
+    avatar: Tec_3,
+    title: "Android",
   },
   {
-    title: "ON DEMAND SERVICES",
-    avatar: Expert_4,
+    avatar: Tec_4,
+    title: "Firebase",
   },
   {
-    title: "INDUSTRIALS",
-    avatar: Expert_5,
+    avatar: Tec_5,
+    title: "TypeScript",
+  },
+  {
+    avatar: Tec_6,
+    title: "JavasScript",
+  },
+  {
+    avatar: Tec_25,
+    title: "IOS",
   },
 ];
+const FrontEnd = [
+  {
+    avatar: Tec_22,
+    title: "React",
+  },
+  {
+    avatar: Tec_19,
+    title: "Next.js",
+  },
+  {
+    avatar: Tec_26,
+    title: "Gats by",
+  },
+  {
+    avatar: Tec_4,
+    title: "Firebase",
+  },
+  {
+    avatar: Tec_5,
+    title: "TypeScript",
+  },
+  {
+    avatar: Tec_6,
+    title: "JavasScript",
+  },
+  {
+    avatar: Tec_9,
+    title: "Flutter",
+  },
+];
+const Devops = [
+  {
+    avatar: Tec_1,
+    title: "Azure",
+  },
 
+  {
+    avatar: Tec_15,
+    title: "Kubernetes",
+  },
+  {
+    avatar: Tec_16,
+    title: "Google Cloud",
+  },
+  {
+    avatar: Tec_20,
+    title: "Docker",
+  },
+  {
+    avatar: Tec_7,
+    title: "AWS",
+  },
+];
+const CMS = [
+  {
+    avatar: Tec_27,
+    title: "Shopify",
+  },
+  {
+    avatar: Tec_28,
+    title: "Wordpress",
+  },
+  {
+    avatar: Tec_29,
+    title: "Wix",
+  },
+];
+const Database = [
+  {
+    avatar: Tec_30,
+    title: "Dynamo db",
+  },
+  {
+    avatar: Tec_31,
+    title: "Cosmos db",
+  },
+  {
+    avatar: Tec_32,
+    title: "Postgresql",
+  },
+  {
+    avatar: Tec_10,
+    title: "MongoDB",
+  },
+  {
+    avatar: Tec_14,
+    title: "MySQL",
+  },
+];
+const Backend = [
+  {
+    avatar: Tec_1,
+    title: "Azure",
+  },
+  {
+    avatar: Tec_2,
+    title: "Python",
+  },
+  {
+    avatar: Tec_14,
+    title: "MySQL",
+  },
+  {
+    avatar: Tec_4,
+    title: "Firebase",
+  },
+  {
+    avatar: Tec_17,
+    title: "Express.js",
+  },
+  {
+    avatar: Tec_8,
+    title: "Node.js",
+  },
+  {
+    avatar: Tec_7,
+    title: "AWS",
+  },
+];
+const UiUx = [
+  {
+    avatar: Tec_33,
+    title: "Figma",
+  },
+  {
+    avatar: Tec_34,
+    title: "Adobexd",
+  },
+  {
+    avatar: Tec_35,
+    title: "Photoshop",
+  },
+  {
+    avatar: Tec_36,
+    title: "Illustrator",
+  },
+];
 const Industries = [
   {
-    title: "HEALTH",
-    avatar: Industries_1,
+    avatar: Tec_1,
+    title: "Azure",
   },
   {
-    title: "TRAVEL & TOURISM",
-    avatar: Industries_2,
+    avatar: Tec_2,
+    title: "Python",
   },
   {
-    title: "AVIATION",
-    avatar: Industries_3,
+    avatar: Tec_3,
+    title: "Android",
   },
   {
-    title: "EDUCATION",
-    avatar: Industries_4,
+    avatar: Tec_4,
+    title: "Firebase",
   },
   {
-    title: "INDUSTRIALS",
-    avatar: Industries_5,
+    avatar: Tec_5,
+    title: "TypeScript",
   },
   {
-    title: "ON DEMAND SERVICES",
-    avatar: Industries_6,
+    avatar: Tec_6,
+    title: "JavasScript",
   },
   {
-    title: "ECOMMERCE",
-    avatar: Industries_7,
+    avatar: Tec_7,
+    title: "AWS",
   },
   {
-    title: "REAL ESTATE",
-    avatar: Industries_8,
+    avatar: Tec_8,
+    title: "Node.js",
   },
   {
-    title: "BEAUTY & WELLNESS",
-    avatar: Industries_9,
+    avatar: Tec_9,
+    title: "Flutter",
   },
   {
-    title: "FINANCE",
-    avatar: Industries_10,
+    avatar: Tec_10,
+    title: "MongoDB",
+  },
+  {
+    avatar: Tec_11,
+    title: "Swift",
+  },
+  {
+    avatar: Tec_12,
+    title: "Heroku",
+  },
+  {
+    avatar: Tec_13,
+    title: "C#",
+  },
+  {
+    avatar: Tec_14,
+    title: "MySQL",
+  },
+  {
+    avatar: Tec_15,
+    title: "Kubernetes",
+  },
+  {
+    avatar: Tec_16,
+    title: "Google Cloud",
+  },
+  {
+    avatar: Tec_17,
+    title: "Express.js",
   },
 ];
 
@@ -204,6 +388,16 @@ const technologies = [
     title: "PostgreSQL",
   },
 ];
-const data = { technologies, Industries, Values };
+const data = {
+  technologies,
+  Industries,
+  Mobile,
+  FrontEnd,
+  Devops,
+  CMS,
+  Database,
+  Backend,
+  UiUx,
+};
 
 export default data;

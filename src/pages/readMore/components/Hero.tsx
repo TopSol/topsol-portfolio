@@ -15,8 +15,8 @@ export default function Hero() {
             </h1>
           </div>
           <div className='w-[100%] mt-[56px] md:container justify-center items-center flex flex-col'>
-            <img className='items-center md:w-[471px] '
-              src={dataSciences} alt="#" />
+            {/* <img className='items-center md:w-[471px] '
+              src={dataSciences} alt="#" /> */}
           </div>
         </div>
       </div>

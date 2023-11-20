@@ -10,33 +10,30 @@ import svg from "../images/Svg/Group.svg";
 import svg1 from "../images/Svg/Group1.svg";
 import svg2 from "../images/Svg/Group2.svg";
 import svg3 from "../images/Svg/Group3.svg";
-import customSoftware from "../images/servicesImages/Custom_Software.png";
-import devOps from "../images/servicesImages/devops.png";
-import team from "../images/servicesImages/team Augmentation.png";
-import workshop from "../images/servicesImages/discover workshop.png";
-import mobileApps from "../images/servicesImages/mobile-apps.png";
-import qualityAssurance from "../images/servicesImages/quality assurance.png";
-import uiux from "../images/servicesImages/ui ux design.png";
-import aiChatGPT from "../images/servicesImages/Ai and chatgpt.png";
-import Custom from "../images/Custom.png";
-import Dev from "../images/devops.png";
-import Team from "../images/team.png";
-import Discover from "../images/discover.png";
-import Mobile from "../images/mobile.png";
-import Quality from "../images/quality.png";
-import UI from "../images/ui.png";
-import AI from "../images/Ai.png";
-import customSoftwareHead from "../images/Icons/servicesHeader/custom-software.png";
-import devOpsHead from "../images/Icons/servicesHeader/devops.png";
-import teamHead from "../images/Icons/servicesHeader/Team-Augmentation.png";
-import workshopHead from "../images/Icons/servicesHeader/Discover-wrokshops.png";
-import mobileAppsHead from "../images/Icons/servicesHeader//Mobile-app.png";
-import qualityAssuranceHead from "../images/Icons/servicesHeader/Quality.png";
-import uiuxHead from "../images/Icons/servicesHeader/ui-ux.png";
-import aiChatGPTHead from "../images/Icons/servicesHeader/Ai-chat-gpt.png";
-import requirment1 from "../images/Icons/Group 36919.png";
-import requirment2 from "../images/Icons/web-development-svgrepo-com.png";
-import requirment3 from "../images/Icons/deployment-svgrepo-com.png";
+import customSoftware from "../images/servicesImages/Custom_Software.webp";
+import devOps from "../images/servicesImages/devops.webp";
+import team from "../images/servicesImages/team_Augmentation.webp";
+import workshop from "../images/servicesImages/discover_workshop.webp";
+import mobileApps from "../images/servicesImages/mobile-apps.webp";
+import qualityAssurance from "../images/servicesImages/quality_assurance.webp";
+import uiux from "../images/servicesImages/ui_ux_design.webp";
+import aiChatGPT from "../images/servicesImages/ai_and_chatgpt.webp";
+import Custom from "../images/servicesImages/homeServices/Custom.webp";
+import Dev from "../images/servicesImages/homeServices/devops.webp";
+import Team from "../images/servicesImages/homeServices/team.webp";
+import web_dev from "../images/servicesImages/homeServices/webDevelopment.webp";
+import Mobile from "../images/servicesImages/homeServices/mobile.webp";
+import Quality from "../images/servicesImages/homeServices/quality.webp";
+import UI from "../images/servicesImages/homeServices/ui.webp";
+import AI from "../images/servicesImages/homeServices/Ai.webp";
+import customSoftwareHead from "../images/Icons/servicesHeader/custom-software.webp";
+import devOpsHead from "../images/Icons/servicesHeader/devops.webp";
+import teamHead from "../images/Icons/servicesHeader/Team-Augmentation.webp";
+import workshopHead from "../images/Icons/servicesHeader/Discover-wrokshops.webp";
+import mobileAppsHead from "../images/Icons/servicesHeader/Mobile-app.webp";
+import qualityAssuranceHead from "../images/Icons/servicesHeader/Quality.webp";
+import uiuxHead from "../images/Icons/servicesHeader/ui-ux.webp";
+import aiChatGPTHead from "../images/Icons/servicesHeader/Ai-chat-gpt.webp";
 import Tec_1 from "../images/Icons/techonologies/tec_1.svg";
 import Tec_2 from "../images/Icons/techonologies/tec_2.svg";
 import Tec_3 from "../images/Icons/techonologies/tec_3.svg";
@@ -61,6 +58,51 @@ import Tec_21 from "../images/Icons/techonologies/tec_21.svg";
 import Tec_22 from "../images/Icons/techonologies/tec_22.svg";
 import Tec_23 from "../images/Icons/techonologies/tec_23.svg";
 import Tec_24 from "../images/Icons/techonologies/tec_24.svg";
+import enterprise from "../images/Icons/services-details-icon/customIcon/enterprise.png";
+import Erp from "../images/Icons/services-details-icon/customIcon/Erp.png";
+import apiDatabase from "../images/Icons/services-details-icon/customIcon/api-database.png";
+import ecommerce from "../images/Icons/services-details-icon/customIcon/ecommerce.png";
+import saas from "../images/Icons/services-details-icon/customIcon/saas.png";
+import thirdParty from "../images/Icons/services-details-icon/customIcon/thirdParty.png";
+import Collaboration from "../images/Icons/services-details-icon/devops/Collaboration tools.png";
+import deployement from "../images/Icons/services-details-icon/devops/Continous deployement.png";
+import integration from "../images/Icons/services-details-icon/devops/Continous integration.png";
+import Infrastructure from "../images/Icons/services-details-icon/devops/Infrastructure.png";
+import monitoring from "../images/Icons/services-details-icon/devops/monitoring and logging.png";
+import security from "../images/Icons/services-details-icon/devops/security integration.png";
+import Cost from "../images/Icons/services-details-icon/teamIcons/Cost.png";
+import Diverse from "../images/Icons/services-details-icon/teamIcons/Diverse.png";
+import Expertise from "../images/Icons/services-details-icon/teamIcons/Expertise.png";
+import delivery from "../images/Icons/services-details-icon/teamIcons/Project delivery.png";
+import Rapid from "../images/Icons/services-details-icon/teamIcons/Rapid.png";
+import Scalability from "../images/Icons/services-details-icon/teamIcons/Scalability.png";
+import Cms from "../images/Icons/services-details-icon/webApp/Cms.png";
+import WebApp from "../images/Icons/services-details-icon/webApp/Web App.png";
+import WebDesign from "../images/Icons/services-details-icon/webApp/Web design.png";
+import WebDevelpopment from "../images/Icons/services-details-icon/webApp/Web develpopment.png";
+import Apis from "../images/Icons/services-details-icon/mobileApp/Apis.png";
+import Consultation from "../images/Icons/services-details-icon/mobileApp/Consultation.png";
+import support from "../images/Icons/services-details-icon/mobileApp/Deployment and support.png";
+import Testing from "../images/Icons/services-details-icon/mobileApp/Testing and qa.png";
+import UiUx from "../images/Icons/services-details-icon/mobileApp/Ui ux design.png";
+import AppDevelopment from "../images/Icons/services-details-icon/mobileApp/App development.png";
+import Automation from "../images/Icons/services-details-icon/qualityIcon/Automation.png";
+import Comprehensive from "../images/Icons/services-details-icon/qualityIcon/Comprehensive.png";
+import improvement from "../images/Icons/services-details-icon/qualityIcon/Continous improvement.png";
+import Detection from "../images/Icons/services-details-icon/qualityIcon/Detection.png";
+import Regularty from "../images/Icons/services-details-icon/qualityIcon/Regularty.png";
+import envoronment from "../images/Icons/services-details-icon/qualityIcon/Testing envoronment.png";
+import Visual from "../images/Icons/services-details-icon/UiUXIcon/Visual.png";
+import Accesiabltyintegration from "../images/Icons/services-details-icon/UiUXIcon/integration.png";
+import architecture from "../images/Icons/services-details-icon/UiUXIcon/information architecture.png";
+import responsive from "../images/Icons/services-details-icon/UiUXIcon/responsive.png";
+import centric from "../images/Icons/services-details-icon/UiUXIcon/user centric.png";
+import Chatgpt from "../images/Icons/services-details-icon/aIChatIcon/Chat gpt.png";
+import learning from "../images/Icons/services-details-icon/aIChatIcon/Continous learning.png";
+import Ethical from "../images/Icons/services-details-icon/aIChatIcon/Ethical.png";
+import Natural from "../images/Icons/services-details-icon/aIChatIcon/Natural language.png";
+import Versatility from "../images/Icons/services-details-icon/aIChatIcon/Versatility.png";
+import advancement from "../images/Icons/services-details-icon/aIChatIcon/ai advancement.png";
 
 const cards = [
   {
@@ -78,37 +120,37 @@ const cards = [
         "In conclusion, custom software development empowers organizations to have software that is uniquely tailored to their needs, offering efficiency, scalability, and a technological advantage in today's highly competitive business landscape.",
       paragraphs: [
         {
-          img: requirment1,
+          img: enterprise,
           step: "step 1",
           heading: "Enterprise",
           text: "Tailored enterprise solutions optimizing processes, scalability, and efficiency for seamless business operations and sustainable growth.",
         },
         {
-          img: requirment2,
+          img: saas,
           step: "step 2",
           heading: "SaaS",
           text: "Cloud-based SaaS applications delivering flexibility, accessibility, and cost-effectiveness, ensuring optimal user experiences and business agility.",
         },
         {
-          img: requirment3,
+          img: ecommerce,
           step: "step 3",
           heading: "E-Commerce",
           text: "Dynamic e-commerce platforms designed for engaging user interfaces, secure transactions, and efficient management, enhancing online business presence and revenue.",
         },
         {
-          img: requirment3,
+          img: thirdParty,
           step: "step 3",
           heading: "Third-Party Integration",
           text: "Seamlessly integrate third-party services to enhance functionality, streamline operations, and ensure a cohesive and interconnected software ecosystem.",
         },
         {
-          img: requirment3,
+          img: apiDatabase,
           step: "step 3",
-          heading: "API & Database Solutions:",
+          heading: "API & Database Solutions",
           text: "Robust API and database development, fostering data management, integration, and accessibility, ensuring scalable and responsive software architectures.",
         },
         {
-          img: requirment3,
+          img: Erp,
           step: "step 3",
           heading: "Custom ERP",
           text: "Tailored ERP solutions for comprehensive business management, integrating processes, improving data visibility, and driving informed decision-making for sustained organizational success.",
@@ -230,37 +272,37 @@ const cards = [
         "In conclusion, our DevOps Services empower organizations to deliver software faster, more reliably, and with greater agility. By fostering collaboration, automating processes, and embracing a culture of continuous improvement, we enable businesses to thrive in the rapidly evolving world of technology.",
       paragraphs: [
         {
-          img: requirment1,
+          img: integration,
           step: "step 1",
           heading: "Continuous Integration",
           text: "Streamline development with automated code integration, fostering collaboration and ensuring code quality through regular and efficient builds",
         },
         {
-          img: requirment2,
+          img: deployement,
           step: "step 2",
           heading: "Continuous Deployment",
           text: "Accelerate software delivery by automating the deployment process, enabling swift and reliable releases with minimal manual intervention",
         },
         {
-          img: requirment3,
+          img: Infrastructure,
           step: "step 3",
           heading: "Infrastructure as Code",
           text: "Enhance scalability and efficiency with automated infrastructure management, ensuring consistency and reducing deployment errors through code-defined infrastructure",
         },
         {
-          img: requirment1,
+          img: monitoring,
           step: "step 1",
           heading: "Monitoring and Logging:",
           text: "Proactively identify and resolve issues with real-time monitoring and comprehensive logging, optimizing system performance and enhancing overall reliability",
         },
         {
-          img: requirment2,
+          img: Collaboration,
           step: "step 2",
           heading: "Collaboration Tools",
           text: "Foster seamless communication and teamwork across development and operations teams with integrated collaboration tools, ensuring efficient project coordination and knowledge sharing",
         },
         {
-          img: requirment3,
+          img: security,
           step: "step 3",
           heading: "Security Integration",
           text: "Embed security measures throughout the development lifecycle, integrating robust security practices to identify and mitigate potential vulnerabilities, safeguarding applications and data",
@@ -382,37 +424,37 @@ const cards = [
         "In today's fast-paced business landscape, Team Augmentation is a strategic resource that can drive your projects to new heights, enabling you to stay ahead in the race of innovation and deliver exceptional outcomes.",
       paragraphs: [
         {
-          img: requirment1,
+          img: Expertise,
           step: "step 1",
           heading: "Expertise Expansion",
           text: "Augment your team with skilled professionals to complement and enhance in-house capabilities, bringing specialized knowledge and experience to your projects",
         },
         {
-          img: requirment2,
+          img: Scalability,
           step: "step 2",
           heading: "Flexibility and Scalability",
           text: "Scale your workforce as needed, adapting to project demands without the long-term commitment of hiring full-time employees, optimizing resource allocation.",
         },
         {
-          img: requirment3,
+          img: Rapid,
           step: "step 3",
           heading: "Rapid Onboarding",
           text: "Accelerate project timelines by quickly onboarding augmented team members who are equipped with the necessary skills, minimizing learning curves.",
         },
         {
-          img: requirment1,
+          img: Diverse,
           step: "step 1",
           heading: "Diverse Skill Sets",
           text: "Access a diverse pool of talents with varied skill sets, ensuring a well-rounded team capable of handling different aspects of a project",
         },
         {
-          img: requirment2,
+          img: Cost,
           step: "step 2",
           heading: "Cost-Efficiency",
           text: "Mitigate costs associated with recruitment, training, and employee benefits, as team augmentation allows you to access expertise without the overhead of full-time hires.",
         },
         {
-          img: requirment3,
+          img: delivery,
           step: "step 3",
           heading: "Project Delivery Excellence",
           text: "Achieve project milestones with precision by bolstering your team with skilled professionals, ensuring timely and successful completion of tasks and objectives.",
@@ -532,37 +574,37 @@ const cards = [
       conclusion: "",
       paragraphs: [
         {
-          img: requirment1,
+          img: WebDesign,
           step: "step 1",
           heading: "Web Design",
           text: "Craft visually stunning and user-centric websites with our expert web design services, blending aesthetics and functionality seamlessly for a captivating online experience.",
         },
         {
-          img: requirment2,
+          img: WebDevelpopment,
           step: "step 2",
           heading: "Web Development",
           text: "Elevate your digital presence with our comprehensive web development solutions, leveraging the latest technologies to ensure robust, scalable, and performance-driven websites tailored to your unique requirements.",
         },
         {
-          img: requirment3,
+          img: Cms,
           step: "step 3",
           heading: "CMS Development",
           text: "Streamline content management effortlessly with our CMS development services, offering intuitive platforms for easy content updates, site maintenance, and a dynamic online presence.",
         },
         {
-          img: requirment3,
+          img: ecommerce,
           step: "step 3",
           heading: "E-Commerce",
           text: "Launch and grow your online business with our e-commerce solutions, combining user-friendly interfaces, secure payment gateways, and scalable architectures for a seamless and profitable shopping experience.",
         },
         {
-          img: requirment3,
+          img: apiDatabase,
           step: "step 3",
           heading: "API & Database",
           text: "Streamline content management effortlessly with our CMS development services, offering intuitive platforms for easy content updates, site maintenance, and a dynamic online presence.",
         },
         {
-          img: requirment3,
+          img: WebApp,
           step: "step 3",
           heading: "Web App Development",
           text: "Transform your ideas into powerful web applications with our expert development services, delivering scalable, responsive, and feature-rich solutions that cater to your business goals and user expectations.",
@@ -683,37 +725,37 @@ const cards = [
         "In a world where mobility is paramount, our Mobile App Development solutions empower your brand to remain competitive, engaging, and accessible in the palm of your customers' hands.",
       paragraphs: [
         {
-          img: requirment1,
+          img: Consultation,
           step: "step 1",
           heading: "Consultation",
           text: "We specialize in mobile development and consulting, tailoring Android/iOS solutions to meet your app's distinct requirements, offering insights informed by data for shaping your brand.",
         },
         {
-          img: requirment2,
+          img: UiUx,
           step: "step 2",
           heading: "UI/UX Design",
           text: "Enhancing user experiences is the focus of Mobile App UI/UX Design. Our skilled developers create innovative designs aligned with business goals to meet user expectations.",
         },
         {
-          img: requirment3,
+          img: Apis,
           step: "APIs Development",
           heading: "APIs Development",
           text: "Develop secure and efficient APIs to seamlessly integrate your mobile apps with third-party systems and data sources.",
         },
         {
-          img: requirment1,
+          img: AppDevelopment,
           step: "step 1",
           heading: "App Development",
           text: "Enhance mobile app development by incorporating UI enhancements, additional functionality, and engaging features to ensure premium results within the specified timeframe.",
         },
         {
-          img: requirment2,
+          img: Testing,
           step: "step 2",
           heading: "Testing & QA",
           text: "We meticulously test and quality-assure our Mobile Web App Development to guarantee usability, security, and functionality while addressing any potential vulnerabilities.",
         },
         {
-          img: requirment3,
+          img: support,
           step: "Custom App",
           heading: "Deployment & Support",
           text: "Custom mobile apps are tailored to client needs, ensuring unique business solutions, user experiences, and functionalities are met.",
@@ -835,37 +877,37 @@ const cards = [
         "With our Quality Assurance Services, you can be confident that your software or product will meet and exceed the expectations of your users, ensuring long-term success and customer satisfaction.",
       paragraphs: [
         {
-          img: requirment1,
+          img: Comprehensive,
           step: "step 1",
           heading: "Comprehensive Testing Strategies",
           text: "Implement robust testing methodologies to ensure the quality and functionality of software through a combination of manual and automated testing approaches.",
         },
         {
-          img: requirment2,
+          img: Detection,
           step: "step 2",
           heading: "Early Defect Detection",
           text: "Identify and rectify issues in the early stages of development, preventing the escalation of defects and reducing the overall cost of bug resolution",
         },
         {
-          img: requirment3,
+          img: Automation,
           step: "step 3",
           heading: "Test Automation",
           text: "Enhance efficiency and coverage with automated testing, allowing for repeated and systematic validation of software functionality, especially in agile development environments.",
         },
         {
-          img: requirment1,
+          img: envoronment,
           step: "step 1",
           heading: "Scalable Testing Environments",
           text: "Establish flexible testing environments that can be easily scaled to accommodate the evolving needs of the project, ensuring thorough testing under various conditions.",
         },
         {
-          img: requirment2,
+          img: Regularty,
           step: "step 2",
           heading: "Regulatory Compliance",
           text: "Ensure adherence to industry standards and regulatory requirements by incorporating compliance testing into the quality assurance process, mitigating risks and ensuring legal compliance.",
         },
         {
-          img: requirment3,
+          img: improvement,
           step: "step 3",
           heading: "Continuous Improvement",
           text: "Foster a culture of continuous improvement by analyzing testing results, gathering feedback, and implementing lessons learned, enhancing overall software quality with each development cycle.",
@@ -987,37 +1029,37 @@ const cards = [
         "In today's competitive digital landscape, UI/UX design stands as the bedrock for capturing and retaining user engagement. With our UI/UX expertise, we seamlessly blend form and function to create digital experiences that leave lasting impressions and drive tangible business outcomes.",
       paragraphs: [
         {
-          img: requirment1,
+          img: centric,
           step: "step 1",
           heading: "User-Centric Approach",
           text: "Craft intuitive and seamless user experiences by prioritizing user needs and preferences, ensuring a design that resonates with your target audience.",
         },
         {
-          img: requirment2,
+          img: Visual,
           step: "step 2",
           heading: "Visual Aesthetics",
           text: "Elevate your brand's visual appeal through aesthetically pleasing designs, incorporating colors, typography, and imagery that align with your brand identity and captivate users.",
         },
         {
-          img: requirment3,
+          img: responsive,
           step: "step 3",
           heading: "Responsive Design",
           text: "Create a consistent user experience across devices with responsive design, adapting layouts and interactions for optimal usability on various screen sizes",
         },
         {
-          img: requirment1,
+          img: Testing,
           step: "step 1",
           heading: "Usability Testing",
           text: "Refine designs through thorough usability testing, identifying and addressing potential pain points, enhancing overall user satisfaction and interaction efficiency.",
         },
         {
-          img: requirment2,
+          img: architecture,
           step: "step 2",
           heading: "Information Architecture",
           text: "Organize content logically and intuitively, optimizing information architecture to facilitate easy navigation and enhance the overall user journey.",
         },
         {
-          img: requirment3,
+          img: Accesiabltyintegration,
           step: "step 3",
           heading: "Accessibility Integration",
           text: "Ensure inclusivity by incorporating accessibility features, making your UI/UX design accessible to users with diverse abilities and creating an inclusive digital experience.",
@@ -1139,37 +1181,37 @@ const cards = [
         "In conclusion, AI & Chat GPT services represent a monumental stride in human-computer interaction, revolutionizing the way we communicate with machines and offering unparalleled automation and personalization capabilities.",
       paragraphs: [
         {
-          img: requirment1,
+          img: advancement,
           step: "step 1",
           heading: "AI Advancements",
           text: "Explore the cutting-edge realm of Artificial Intelligence (AI) and its transformative impact on industries, leveraging machine learning algorithms for data-driven insights and decision-making.",
         },
         {
-          img: requirment2,
+          img: Chatgpt,
           step: "step 2",
           heading: "ChatGPT Innovation",
           text: "Dive into the evolution of conversational AI with ChatGPT, a state-of-the-art language model by OpenAI, enabling natural and context-aware interactions in various applications",
         },
         {
-          img: requirment3,
+          img: Natural,
           step: "step 3",
           heading: "Natural Language Understanding",
           text: "Witness the power of ChatGPT in comprehending and generating human-like text, facilitating improved communication and engagement through its sophisticated natural language processing capabilities",
         },
         {
-          img: requirment1,
+          img: Versatility,
           step: "step 1",
           heading: "Versatility Across Domains",
           text: "Experience the versatility of AI and ChatGPT across diverse domains, from customer service chatbots to content creation, showcasing adaptability in addressing a wide array of user needs.",
         },
         {
-          img: requirment2,
+          img: learning,
           step: "step 2",
           heading: "Continuous Learning",
           text: "Understand the significance of continuous learning in AI systems, as ChatGPT evolves through ongoing updates, adapting to new trends and improving its understanding of language nuances",
         },
         {
-          img: requirment3,
+          img: Ethical,
           step: "step 3",
           heading: "Ethical Considerations",
           text: "Delve into the ethical considerations surrounding AI and ChatGPT, exploring responsible development practices, transparency, and the ongoing dialogue on ensuring AI benefits society while minimizing potential risks",
@@ -1292,7 +1334,7 @@ export const imgCards = [
     heading: "Team Augmentation",
   },
   {
-    bgImg: Discover,
+    bgImg: web_dev,
     heading: "Web Development",
   },
   {

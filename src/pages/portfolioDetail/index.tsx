@@ -8,6 +8,7 @@ import { db } from "../../utils/firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { PulseLoader } from "react-spinners";
 import { useLocation } from "@reach/router";
+import { ToggleBar } from "../../components/bar";
 
 export default function index() {
   const [detail, setDetail] = useState({});
@@ -42,7 +43,10 @@ export default function index() {
   }, [id]);
   return (
     <div>
-      <Navbar />
+      <div>
+        <Navbar />
+        <ToggleBar />
+      </div>
       {loader ? (
         <div className="flex justify-center h-[500px] items-center">
           <PulseLoader color="#8E8E8E" size={18} />
