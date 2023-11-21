@@ -4,6 +4,7 @@ import imgTwo from "../images/homeImages/awardsection/pakistan-thegem.webp";
 
 import imgThree from "../images/homeImages/awardsection/clutch-logo.webp";
 import imgOne from "../images/homeImages/awardsection/imgSlider1.webp";
+import imgFour from "../images/homeImages/awardsection/Toprated.webp";
 
 import imgFive from "../images/homeImages/awardsection/software-world.webp";
 
@@ -22,23 +23,27 @@ const images = [
   },
   {
     id: "4",
-    avatar: imgFive,
+    avatar: imgFour,
   },
   {
     id: "5",
-    avatar: imgOne,
+    avatar: imgFive,
   },
   {
     id: "6",
-    avatar: imgTwo,
+    avatar: imgOne,
   },
   {
     id: "7",
-    avatar: imgThree,
+    avatar: imgTwo,
   },
   {
     id: "8",
-    avatar: imgFive,
+    avatar: imgThree,
+  },
+  {
+    id: "9",
+    avatar: imgFour,
   },
 ];
 export default images;

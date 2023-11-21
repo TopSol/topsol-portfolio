@@ -12,13 +12,13 @@ function ExpertCards({ title, avatar }: appProps) {
     >
       <div
         className={` flex flex-col items-center justify-center 
-           border-none   px-4 py-2
+           border-none   md:px-4 py-2 w-[80px] md:w-[150px] px-0
         `}
       >
         <img
           src={avatar}
           alt=""
-          className={`  w-[48px] h-[48px]  `}
+          className={`  h-[60px] w-auto  `}
         />
         <div>
           <h1

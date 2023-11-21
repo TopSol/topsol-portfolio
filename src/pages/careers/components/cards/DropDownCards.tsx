@@ -20,12 +20,18 @@ function DropDownCards({ className, item }: CardsProps) {
           {item?.title}
         </h1>
         <p className="font-figtree text-[15px] capitalize font-light mb-4">{item?.experience}</p>
-        <div className="max-w-[169px] h-[47px] mb-[19.5px] ">
-          <Link to={`/jobDetails`} state={item}>
-            <button className=" px-10 w-[100%] h-[100%] rounded-[10px] font-semibold text-base bg-primary text-primary-white hover:bg-primary-light">
-              Apply now
-            </button>
-          </Link>
+        <div className="flex flex-row justify-between">
+          <div className="max-w-[169px] h-[47px] mb-[19.5px] ">
+            <Link to={`/jobDetails`} state={item}>
+              <button className=" px-10 w-[100%] h-[100%] rounded-[10px] font-semibold text-base bg-primary text-primary-white hover:bg-primary-light">
+                Apply now
+              </button>
+            </Link>
+          </div>
+          <div className="max-w-[169px] h-[47px] mb-[19.5px] mr-6 ">
+            <h1 className="text-[#9B9B9B] font-urbanist text-[12px] capitalize font-medium">deadline</h1>
+            <h1 className="text-[#1F1F1F] font-figtree text-[15px] capitalize font-medium">19/04/2024</h1>
+          </div>
         </div>
       </div>
     </div>

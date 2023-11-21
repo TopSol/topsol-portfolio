@@ -17,7 +17,7 @@ export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <div className="bg-cover  min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground  justify-center">
+    <div className="bg-cover min-h-[90vh] md:min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground  justify-center">
       <div className="flex flex-col justify-center px-4 sm:px-6 lg:px-2"
         ref={ref}
         style={{
@@ -28,14 +28,14 @@ export default function Hero() {
       >
         <h1
           id="root"
-          className="lg:text-[48px] sm:text-4xl uppercase md:text-5xl text-white font-extrabold font-urbanist leading-10 text-center  "
+          className="lg:text-[48px] sm:text-3xl tex-[20px] uppercase md:text-5xl text-white font-extrabold font-urbanist leading-[50px] text-center  "
         >
           A Better Approach to <span className="text-primary"> Develop Software</span>
         </h1>
         <p className="md:mt-[52px] mt-[25px] text-[12px] md:text-[22px] text-white font-figtree  text-center  ">
           Accelerate your launch by 2x with our groundbreaking development
-          process, and <br /> reduce costs significantly. Say goodbye to the
-          tedious process of starting from scratch <br /> and embrace the future
+          process, and  reduce costs significantly. Say goodbye to the
+          tedious process of starting from scratch  and embrace the future
           of innovative app development.
         </p>
         <div className="bg-transparent    "></div>

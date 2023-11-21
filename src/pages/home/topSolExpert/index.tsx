@@ -51,13 +51,13 @@ function TopSolExperts() {
           backgroundColor="#00B8F1"
           marginTop="20px"
         />
-        <div className="grid md:grid-cols-7 grid-cols-1 gap-y-5  md:gap-x-[40px] mt-[59px] ">
+        <div className="grid md:grid-cols-7 grid-cols-3 gap-y-5  md:gap-x-[40px] mt-[59px] ">
           <button
             onClick={() => handleCategoryChange("Mobile")}
-            className={`    cursor-default ${selectedCategory === "Mobile"
+            className={`    cursor-pointer ${selectedCategory === "Mobile"
               ? "border-b-2 border-primary"
               : "bg-transparent text-[#333]"
-              }    py-4 font-urbanist    text-[20px] font-medium`}
+              }    py-4  font-urbanist    text-[20px] font-medium`}
           >
             Mobile
           </button>
@@ -66,7 +66,7 @@ function TopSolExperts() {
             className={`  ${selectedCategory === "FrontEnd"
               ? "border-b-2 border-primary"
               : "bg-transparent text-[#333]"
-              }   cursor-default   font-urbanist    py-4   text-[20px] font-medium `}
+              }   cursor-pointer   font-urbanist    py-4    text-[20px] font-medium `}
           >
             FrontEnd
           </button>
@@ -75,7 +75,7 @@ function TopSolExperts() {
             className={`  ${selectedCategory === "Devops"
               ? "border-b-2 border-primary"
               : "bg-transparent text-[#333]"
-              } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
+              } cursor-pointer font-urbanist      py-4    text-[20px] font-medium `}
           >
             Devops
           </button>
@@ -84,7 +84,7 @@ function TopSolExperts() {
             className={`  ${selectedCategory === "CMS"
               ? "border-b-2 border-primary"
               : "bg-transparent text-[#333]"
-              } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
+              } cursor-pointer font-urbanist      py-4    text-[20px] font-medium `}
           >
             CMS
           </button>
@@ -93,7 +93,7 @@ function TopSolExperts() {
             className={`  ${selectedCategory === "Database"
               ? "border-b-2 border-primary"
               : "bg-transparent text-[#333]"
-              } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
+              } cursor-pointer font-urbanist      py-4    text-[20px] font-medium `}
           >
             Database
           </button>
@@ -102,7 +102,7 @@ function TopSolExperts() {
             className={`  ${selectedCategory === "Backend"
               ? "border-b-2 border-primary"
               : "bg-transparent text-[#333]"
-              } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
+              } cursor-pointer font-urbanist      py-4    text-[20px] font-medium `}
           >
             Backend
           </button>
@@ -111,9 +111,9 @@ function TopSolExperts() {
             className={`  ${selectedCategory === "UiUx"
               ? "border-b-2 border-primary"
               : "bg-transparent text-[#333]"
-              } cursor-default font-urbanist      py-4   text-[20px] font-medium `}
+              } cursor-pointer font-urbanist      py-4    text-[20px] font-medium `}
           >
-            UiUx
+            UI/UX
           </button>
         </div>
       </div>

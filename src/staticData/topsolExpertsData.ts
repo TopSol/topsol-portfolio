@@ -42,7 +42,7 @@ import Tec_24 from "../images/Icons/techonologies/tec_24.svg";
 import Tec_25 from "../images/Icons/techonologies/Vector.png";
 import Tec_26 from "../images/Icons/techonologies/GETSBY.png";
 import Tec_27 from "../images/Icons/techonologies/Group 39303.png";
-import Tec_28 from "../images/Icons/techonologies/wiv.png";
+import Tec_28 from "../images/Icons/techonologies/Vector.svg";
 import Tec_29 from "../images/Icons/techonologies/wordpress.png";
 import Tec_30 from "../images/Icons/techonologies/Group 39285.png";
 import Tec_31 from "../images/Icons/techonologies/clipart1128690.png";
@@ -51,23 +51,32 @@ import Tec_33 from "../images/Icons/techonologies/Group 39307.png";
 import Tec_34 from "../images/Icons/techonologies/Group 39308.png";
 import Tec_35 from "../images/Icons/techonologies/Group 39309.png";
 import Tec_36 from "../images/Icons/techonologies/Group 39310.png";
+import Tec_37 from "../images/Icons/techonologies/flask.png";
+import Tec_38 from "../images/Icons/techonologies/Group 39286.png";
+import Tec_39 from "../images/Icons/techonologies/pngwing 6.png";
+import Tec_40 from "../images/Icons/techonologies/expo.png";
+
+
+
+
 
 const Mobile = [
   {
-    avatar: Tec_8,
-    title: "Node.js",
-  },
-  {
-    avatar: Tec_9,
-    title: "Flutter",
+    avatar: Tec_25,
+    title: "IOS",
   },
   {
     avatar: Tec_3,
     title: "Android",
   },
   {
-    avatar: Tec_4,
-    title: "Firebase",
+    avatar: Tec_22,
+    title: "React Native",
+  },
+
+  {
+    avatar: Tec_9,
+    title: "Flutter",
   },
   {
     avatar: Tec_5,
@@ -78,8 +87,8 @@ const Mobile = [
     title: "JavasScript",
   },
   {
-    avatar: Tec_25,
-    title: "IOS",
+    avatar: Tec_40,
+    title: "Expo",
   },
 ];
 const FrontEnd = [
@@ -94,10 +103,6 @@ const FrontEnd = [
   {
     avatar: Tec_26,
     title: "Gats by",
-  },
-  {
-    avatar: Tec_4,
-    title: "Firebase",
   },
   {
     avatar: Tec_5,
@@ -134,6 +139,10 @@ const Devops = [
     avatar: Tec_7,
     title: "AWS",
   },
+  {
+    avatar: Tec_39,
+    title: "Jenkins",
+  },
 ];
 const CMS = [
   {
@@ -142,11 +151,11 @@ const CMS = [
   },
   {
     avatar: Tec_28,
-    title: "Wordpress",
+    title: "WIX",
   },
   {
     avatar: Tec_29,
-    title: "Wix",
+    title: "Wordpress",
   },
 ];
 const Database = [
@@ -170,35 +179,42 @@ const Database = [
     avatar: Tec_14,
     title: "MySQL",
   },
+  {
+    avatar: Tec_4,
+    title: "Firebase",
+  },
 ];
 const Backend = [
   {
-    avatar: Tec_1,
-    title: "Azure",
+    avatar: Tec_17,
+    title: "Express.js",
+  },
+
+  {
+    avatar: Tec_8,
+    title: "Node.js",
   },
   {
     avatar: Tec_2,
     title: "Python",
   },
   {
-    avatar: Tec_14,
-    title: "MySQL",
+    avatar: Tec_37,
+    title: "Flask",
+  },
+
+  {
+    avatar: Tec_38,
+    title: "Django",
   },
   {
     avatar: Tec_4,
     title: "Firebase",
   },
+
   {
-    avatar: Tec_17,
-    title: "Express.js",
-  },
-  {
-    avatar: Tec_8,
-    title: "Node.js",
-  },
-  {
-    avatar: Tec_7,
-    title: "AWS",
+    avatar: Tec_18,
+    title: "Laravel",
   },
 ];
 const UiUx = [

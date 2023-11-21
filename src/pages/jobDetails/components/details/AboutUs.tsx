@@ -151,17 +151,15 @@ function AboutUs({ jobDetails }: any) {
               Job Description
             </h1>
           </div>
-          <div className="md:my-6 my-[25px] text-center lg:relative">
-            <img
-              src={dotImg}
-              className="absolute lg:block hidden left-[-77px] bottom-5"
-            />
+          <div className="md:my-6 my-[25px] text-center ">
+
             <p className="md:text-lg text-base font-medium text-justify">
               {jobDetails?.description}
             </p>
           </div>
+
         </div>
-        <div className="lg:border-t sm:order-2  border-pageBorder lg:border-l md:pr-0 md:pl-0  md:mb-0 mb-[55px] ">
+        <div className=" sm:order-2   bg-[#F9F9F9] pb-[40px] rounded-[8px]    ">
           <div className="flex flex-row items-center md:ml-[10px] xl:mr-[142px] mt-[55px]  md:mt-[57px] ">
             <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
             <h1 className="md:text-[28px] text-[22px] flex whitespace-nowrap font-semibold  md:ml-[15.5px] ml-[10px]">
@@ -204,7 +202,7 @@ function AboutUs({ jobDetails }: any) {
           </div>
         </div>
       </div>
-      <div className=" lg:mx-[160px] md:mr-[209px] md:mt-[58px]">
+      <div className=" md:w-[78%] mx-auto ">
         <div className="flex flex-row items-center">
           <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
           <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
