@@ -41,8 +41,8 @@ export default function PortfolioDetailBody({ data }: any) {
 
         <div className="py-[58px] px-[40px]  rounded-[20px] bg-white  w-[80%] flex justify-center flex-col mx-auto" style={shadowStyles}>
           <div className=" flex items-center flex-col justify-center">
-            <h1 className="font-extrabold text-textColors uppercase  text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
-              Project <span className="text-primary">Goals</span>
+            <h1 className="font-extrabold text-textColors uppercase font-urbanist  text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
+              Project <span className="text-primary font-urbanist">Goals</span>
             </h1>
             <LineAnimation
               width="178px"
@@ -75,8 +75,8 @@ export default function PortfolioDetailBody({ data }: any) {
         }}
       >
         <div className="flex flex-col  container mx-auto items-center md:items-start">
-          <h2 className="text-[36px]  text-textColors font-semibold my-6">
-            TOP <span className="text-primary">FEATURES </span>
+          <h2 className="text-[36px] font-urbanist  text-textColors font-semibold my-6">
+            TOP <span className="text-primary font-urbanist">FEATURES </span>
           </h2>
           <LineAnimation
             width="178px"

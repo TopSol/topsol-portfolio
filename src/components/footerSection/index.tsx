@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import facebook from "../../images/facebook.png";
 import instagram from "../../images/instagram.png";
 import linkedin from "../../images/linkedIn.png";
+import EmailOptInForm from "../NewsLeter";
 
 export default function Footer() {
   return (
@@ -21,10 +22,10 @@ export default function Footer() {
           <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
             <div>
               <div className="">
-                <h1 className="mb-4 text-primary text-[28px]  font-medium ">
+                <h1 className="mb-4 text-primary text-[28px] font-urbanist font-medium ">
                   TOPSOL
                 </h1>
-                <span className="text-[18px] font-medium ">
+                <span className="text-[18px] font-medium font-urbanist">
                   A Software development Company
                 </span>
               </div>
@@ -54,6 +55,9 @@ export default function Footer() {
                     className="logo_default h-[30px] w-[30px]"
                   />
                 </Link>
+              </div>
+              <div className="mt-12">
+                <EmailOptInForm />
               </div>
             </div>
             <div className="md:grid hidden justify-center">
@@ -123,6 +127,7 @@ export default function Footer() {
                   info@topsol.org
                 </li>
               </ul>
+
             </div>
           </div>
 

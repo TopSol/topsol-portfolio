@@ -3,14 +3,15 @@ import AddressSection from "../../components/addressSection";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footerSection";
 import JoinTopSol from "./components/joinUs/JoinTopSol";
-import LifeTopsol from "./components/lifeAtTopsol/LifeTopsol";
-import AllOpenings from "./components/allOpenings";
+
 import Process from "./components/recruitmentProcess/Process";
 import Logo from "../../images/favicon-01.png";
 import metaImage from "../../images/main-logo2.png";
 import { ToggleBar } from "../../components/bar";
 import VideoHero from "../../components/VidoeHero";
 import aboutHero from "../../images/aboutTopsolIcon/aboutHeader/aboutHero.webp";
+import LifeTopsol from "./components/lifeAtTopsol/LifeTopsol";
+import AllOpenings from "./components/allOpenings";
 function Careers() {
   return (
     <div>

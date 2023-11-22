@@ -18,23 +18,23 @@ function Navbar() {
         </div>
         <div>
           <ul className="flex flex-row items-center justify-center space-x-6 xl:space-x-12 ">
-            <li className=" text-[14px] xl:text-[16px] capitalize font-figtree font-semibold block hover:text-blue-400">
-              <Link to="/services" activeClassName="border-b-4 border-[#00B8F1] pb-2">Services</Link>
+            <li className=" text-[14px] xl:text-[16px] capitalize font-figtree text-[#333] font-semibold block hover:text-blue-400">
+              <Link to="/services" activeClassName="border-b-4 border-[#00B8F1] pb-2 ">Services</Link>
             </li>
-            <li className=" text-[14px] xl:text-[16px] capitalize font-figtree font-semibold block hover:text-blue-400">
-              <Link to="/portfolio" activeClassName="border-b-4 border-[#00B8F1] pb-2">portfolio</Link>
+            <li className=" text-[14px] xl:text-[16px] capitalize font-figtree text-[#333] font-semibold block hover:text-blue-400">
+              <Link to="/portfolio" activeClassName="border-b-4 border-[#00B8F1] pb-2 ">portfolio</Link>
             </li>
-            <li className="text-[14px] xl:text-[16px] capitalize font-figtree font-semibold block hover:text-blue-400">
-              <Link to="/aboutUs" activeClassName="border-b-4 border-[#00B8F1] pb-2">about Us</Link>
+            <li className="text-[14px] xl:text-[16px] capitalize font-figtree text-[#333] font-semibold block hover:text-blue-400">
+              <Link to="/aboutUs" activeClassName="border-b-4 border-[#00B8F1] pb-2 ">about Us</Link>
             </li>
-            <li className=" text-[14px] xl:text-[16px] capitalize  font-figtree font-semibold block hover:text-blue-400">
-              <Link to="/careers" activeClassName="border-b-4 border-[#00B8F1] pb-2">careers</Link>
+            <li className=" text-[14px] xl:text-[16px] capitalize  font-figtree text-[#333] font-semibold block hover:text-blue-400">
+              <Link to="/careers" activeClassName="border-b-4 border-[#00B8F1] pb-2 ">careers</Link>
             </li>
-            <li className="text-[14px] xl:text-[16px] capitalize font-figtree font-semibold block hover:text-blue-400">
-              <Link to="/contactUs" activeClassName="border-b-4 border-[#00B8F1] pb-2">contact Us</Link>
+            <li className="text-[14px] xl:text-[16px] capitalize font-figtree text-[#333] font-semibold block hover:text-blue-400">
+              <Link to="/contactUs" activeClassName="border-b-4 border-[#00B8F1] pb-2 ">contact Us</Link>
             </li>
-            <li className=" text-[14px] xl:text-[16px] capitalize font-figtree font-semibold block hover:text-blue-400">
-              <Link to="/blogs" activeClassName="border-b-4 border-[#00B8F1] pb-2">blogs</Link>
+            <li className=" text-[14px] xl:text-[16px] capitalize font-figtree text-[#333] font-semibold block hover:text-blue-400">
+              <Link to="/blogs" activeClassName="border-b-4 border-[#00B8F1] pb-2 ">blogs</Link>
             </li>
           </ul>
         </div>

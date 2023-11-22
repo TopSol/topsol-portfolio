@@ -39,7 +39,7 @@ function AllOpenings() {
   }, [selectedCategory]);
 
   return (
-    <div id="opening" className="bg-gradient-to-b from-primary-gradientOne to-primary">
+    <div id="opening" className="bg-gradient-to-b from-primary-gradientOne to-primary pb-7">
       <div className="md:container md:mx-auto sm:mx-0 mx-[14px] flex justify-center items-center flex-col">
         <div className="flex flex-col items-center justify-center mb-14">
           <h1 className="text-primary-white uppercase font-urbanist md:text-[40px] text-3xl text-center font-bold md:mt-[49px] mt-[52px] ">
@@ -54,7 +54,7 @@ function AllOpenings() {
             />
           </div>
         </div>
-        <div className="flex flex-row items-center justify-center mb-12 space-x-16 ">
+        <div className=" grid grid-cols-3 sm:grid-cols-2 md:grid-cols-5 mb-8 md:mb-[60px] gap-y-[35px] xl:gap-x-[10px] xl:gap-y-[36px] gap-x-3">
           {data.map((item, index) => (
             <div
               className="    "
@@ -66,13 +66,13 @@ function AllOpenings() {
               <div className={`${selectedCategory === item.value
                 ? " text-white border-b-4 border-primary "
                 : " text-[#9B9B9B]"
-                } mt-4 md:mt-0 uppercase bg-transparent px-0 cursor-pointer  lg:text-[18px] text-[10px] rounded-0  py-1 
+                } mt-4 md:mt-0 uppercase bg-transparent px-0 cursor-pointer text-center lg:text-[18px] text-[10px] rounded-0  py-1 
                   font-semibold hover:text-white font-montserrat` }>{item.name}</div>
             </div>
           ))}
         </div>
 
-        <div className="w-[95%] flex flex-col items-center justify-center mx-auto ">
+        <div className="w-[95%] flex flex-col items-center justify-center mx-auto  ">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 md:mb-[60px] gap-y-[35px] xl:gap-x-[60px] xl:gap-y-[36px] gap-x-3">
             {loading ? (
               <div className="flex justify-center items-center">

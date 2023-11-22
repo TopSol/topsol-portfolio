@@ -161,10 +161,10 @@ export default function CardSection({
                       alt="Avatar"
                       className=" "
                     />
-                    <h1 className="text-[22px] px-2 font-semibold mt-[46px] capitalize tracking-wide font-figtree ">
+                    <h1 className="text-[22px] px-2 font-medium mt-[46px] capitalize tracking-wide font-figtree ">
                       {item?.heading}
                     </h1>
-                    <h1 className="text-[22px] px-2 font-semibold capitalize  font-figtree ">
+                    <h1 className="text-[22px] px-2 font-medium capitalize  font-figtree ">
                       {item?.subheading}
                     </h1>
                     <p className="text-[18px] px-2 mr-4 font-figtree font-light mt-[20px]">

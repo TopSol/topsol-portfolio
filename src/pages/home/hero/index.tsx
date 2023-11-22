@@ -30,9 +30,9 @@ export default function Hero() {
           id="root"
           className="lg:text-[48px] sm:text-3xl tex-[20px] uppercase md:text-5xl text-white font-extrabold font-urbanist leading-[50px] text-center  "
         >
-          A Better Approach to <span className="text-primary"> Develop Software</span>
+          A Better Approach to <span className="text-primary font-urbanist">Develop Software</span>
         </h1>
-        <p className="md:mt-[52px] mt-[25px] text-[12px] md:text-[22px] text-white font-figtree  text-center  ">
+        <p className="md:mt-[52px] mt-[25px] text-[12px] md:text-[22px] text-white font-figtree md:w-[70%] mx-auto  w-[95%] text-center  ">
           Accelerate your launch by 2x with our groundbreaking development
           process, and  reduce costs significantly. Say goodbye to the
           tedious process of starting from scratch  and embrace the future

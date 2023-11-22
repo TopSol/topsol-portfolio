@@ -12,7 +12,7 @@ export default function index() {
   const [detail, setDetail] = useState({});
   const location = useLocation();
   const nameToIdMap = {
-    "future-ai": "id112e1e13e13e12w12w21e",
+    "future-ai": "12e1e13e13e12w12w21e",
     "mastering-git": "15616156156156",
     "development-trends": "ds",
 
@@ -52,7 +52,10 @@ export default function index() {
   }, [id]);
   return (
     <div>
-      <ToggleBar />
+      <div>
+        <ToggleBar />
+        <Navbar />
+      </div>
       {/* <Hero data={detail} /> */}
       {/* <div className=" md:container md:mx-auto flex"> */}
       <div dangerouslySetInnerHTML={{ __html: detail?.htmlCode || "" }} />
