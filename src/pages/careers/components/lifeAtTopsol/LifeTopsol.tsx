@@ -88,7 +88,7 @@ function LifeTopsol() {
                     text={review?.text}
                     avatar={review?.avatar}
                     hoverAvatar={review?.hoverAvatar}
-                    className="border-2 border-primary rounded-xl mx-auto max-w-[208px] max-h-[260px]  p-[22px]"
+                    className="border-2 border-primary shadow-xl rounded-xl mx-auto max-w-[208px] max-h-[260px]  p-[22px]"
                   />
                 </div>
               );
@@ -106,7 +106,7 @@ function LifeTopsol() {
                     text={review?.text}
                     avatar={review?.avatar}
                     hoverAvatar={review?.hoverAvatar}
-                    className="border-2 border-primary rounded-xl mx-auto max-w-[208px] max-h-[260px]  p-[22px]"
+                    className="border-2 border-primary shadow-xl rounded-xl mx-auto max-w-[208px] max-h-[260px]  p-[22px]"
                   />
                 </div>
               );
@@ -126,7 +126,7 @@ function LifeTopsol() {
                       text={review?.text}
                       avatar={review?.avatar}
                       hoverAvatar={review?.hoverAvatar}
-                      className="border-2 border-primary rounded-xl mx-auto max-w-[208px] max-h-[250px]  p-[22px]"
+                      className="border-2 border-primary  shadow-xl rounded-xl mx-auto max-w-[208px] max-h-[250px]  p-[22px]"
                     />
                   </div>
                 );

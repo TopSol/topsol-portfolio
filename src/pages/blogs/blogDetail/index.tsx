@@ -11,8 +11,14 @@ import { ToggleBar } from "../../../components/bar";
 export default function index() {
   const [detail, setDetail] = useState({});
   const location = useLocation();
+  const nameToIdMap = {
+    "future-ai": "id112e1e13e13e12w12w21e",
+    "mastering-git": "15616156156156",
+    "development-trends": "ds",
 
-  const id = new URLSearchParams(location.search).get("id");
+  };
+  const name = new URLSearchParams(location.search).get("name");
+  const id = nameToIdMap[name];
 
   // let url;
 
@@ -47,12 +53,14 @@ export default function index() {
   return (
     <div>
       <ToggleBar />
-      <Hero data={detail} />
+      {/* <Hero data={detail} /> */}
       {/* <div className=" md:container md:mx-auto flex"> */}
       <div dangerouslySetInnerHTML={{ __html: detail?.htmlCode || "" }} />
       {/* </div> */}
-      <CommentSection />
-      <Footer />
+      {/* <CommentSection /> */}
+      <div className="mt-10">
+        <Footer />
+      </div>
     </div>
   );
 }

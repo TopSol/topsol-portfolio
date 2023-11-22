@@ -60,7 +60,7 @@ export default function Footer() {
               <h2 className="mb-[40px] text-[18px] font-semibold ">Services</h2>
               <ul className="text-base font-normal space-y-[26px] font-figtree ">
                 <li>DevOps</li>
-                <li>UX/UI Design</li>
+                <li>UI/UX Design</li>
                 <li>Web Development</li>
                 <li>Quality Assurance</li>
                 <li>App Development</li>

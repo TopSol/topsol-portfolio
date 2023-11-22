@@ -12,7 +12,7 @@ function Faqs() {
   };
   return (
     <div>
-      <div className="pb-[108px] pt-[38px] bg-gradient-to-b from-primary-gradientOne to-primary-gradientTwo">
+      <div className="pb-[108px] pt-[38px] bg-gradient-to-b from-primary-gradientOne to-primary">
         <div className="md:w-[80%] items-center container md:mx-auto ">
           <div className="flex flex-col md:items-start items-center ">
             <h1 className="text-white md:text-[48px] text-[40px] text-center md:text-left  font-bold font-urbanist">

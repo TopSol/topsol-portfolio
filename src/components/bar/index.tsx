@@ -4,8 +4,7 @@ import { motion, sync, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuItem";
 import { Navigation } from "./Navigation";
 import "./style.css";
-import Logo from "../../images/main-logo2.png";
-import Logo2 from "../../images/main-logo.png";
+import Logo from "../../images/main_logo2.png";
 import { Link, navigate } from "gatsby";
 
 const sidebar = {
@@ -51,15 +50,14 @@ export const ToggleBar = () => {
   });
   return (
     <div className={` ${"bg-white"} flex lg:hidden`}>
-      <div className="md:w-[20%] w-[45%] mt-3 ">
+      <div className="md:w-[20%] w-[45%] pb-4 pl-2 ">
         <Link to="/">
           <img src={Logo} alt="" className=" " />
         </Link>
       </div>
       <motion.nav
-        className={`navbar ${
-          isOpen && ""
-        } transition-bg duration-500 ease-in-out`}
+        className={`navbar ${isOpen && ""
+          } transition-bg duration-500 ease-in-out`}
         initial={false}
         animate={isOpen ? "open" : "closed"}
         custom={height}

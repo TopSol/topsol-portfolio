@@ -52,7 +52,7 @@ export default function PortfolioDetailBody({ data }: any) {
             />
           </div>
 
-          <div className="flex md:flex-row flex-col  justify-around mt-[49px]">
+          <div className="flex md:flex-row flex-col w-[75%] mx-auto  justify-around mt-[49px]">
             {portfolioImg?.map((item: any, index: any) => (
               <div className="bg-[#E7F9FF]   flex flex-col justify-center mt-5 p-3 rounded-[10px]  items-center">
                 <div>

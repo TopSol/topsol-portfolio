@@ -163,7 +163,7 @@ export default function Card() {
                 <p className=" break-words text-left mt-[16px] lg:text-[21px] font-medium font-figtree text-textColors">
                   {item?.description?.slice(0, 80)}...
                 </p>
-                <Link to={`/blogs/blogDetail?id=${item.id}`}>
+                <Link to={`/blogs/blogDetail?name=${item.name}`}>
                   <div className="flex items-center justify-start">
                     <PrimaryBtn
                       text="Read More"
