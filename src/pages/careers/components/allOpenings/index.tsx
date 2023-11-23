@@ -43,7 +43,7 @@ function AllOpenings() {
       <div className="md:container md:mx-auto sm:mx-0 mx-[14px] flex justify-center items-center flex-col">
         <div className="flex flex-col items-center justify-center mb-14">
           <h1 className="text-primary-white uppercase font-urbanist md:text-[40px] text-3xl text-center font-bold md:mt-[49px] mt-[52px] ">
-            Newest <span className="text-primary">Jobs </span> for You
+            Newest <span className="text-primary font-bold font-urbanist">Jobs </span> for You
           </h1>
           <div className="flex justify-center items-center">
             <LineAnimation
@@ -54,7 +54,7 @@ function AllOpenings() {
             />
           </div>
         </div>
-        <div className=" grid grid-cols-3 sm:grid-cols-2 md:grid-cols-5 mb-8 md:mb-[60px] gap-y-[35px] xl:gap-x-[10px] xl:gap-y-[36px] gap-x-3">
+        <div className=" flex flex-col md:flex-row md:space-x-12 mb-8  mx-auto w-[95%] justify-center items-center">
           {data.map((item, index) => (
             <div
               className="    "

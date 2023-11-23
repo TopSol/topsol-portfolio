@@ -42,7 +42,7 @@ function TopSolExperts() {
       <div className="flex flex-col justify-center items-center mx-auto ">
         <div className="">
           <h1 className="font-extrabold mt-[54px]  font-urbanist uppercase text-[26px] md:text-34[px] lg:text-4xl text-center">
-            TECHNOLOGIES <span className="text-primary">WE WORK WITH</span>
+            TECHNOLOGIES <span className="text-primary font-urbanist font-extrabold">WE WORK WITH</span>
           </h1>
         </div>
         <LineAnimation

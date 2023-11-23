@@ -15,7 +15,7 @@ export default function Project() {
       <div className="flex flex-col justify-center items-center     ">
         <div className=" mt-[48px] ">
           <h1 className="font-extrabold uppercase font-urbanist text-black  text-3xl md:text-3xl lg:text-4xl text-center">
-            Why<span className="text-primary">choose us</span>
+            Why <span className="text-primary font-extrabold font-urbanist">choose us</span>
           </h1>
         </div>
         <LineAnimation

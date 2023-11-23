@@ -53,7 +53,7 @@ const EmailOptInForm = () => {
             <form className='rounded-md mt-4' name="email-opt-in" method="post" onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="email-opt-in" />
                 <input
-                    className='text-black rounded-tl-[4px] rounded-bl-[4px] text-[12px] py-4 md:px-4 px-1 placeholder-[#7C7C7C] outline-none'
+                    className='text-black rounded-tl-[4px] rounded-bl-[4px] text-[12px] md:text-[16px] py-4 md:px-4 px-1 placeholder-[#7C7C7C] outline-none'
                     type="email"
                     name="email"
                     value={email}

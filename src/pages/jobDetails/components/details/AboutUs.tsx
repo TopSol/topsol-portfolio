@@ -131,7 +131,7 @@ function AboutUs({ jobDetails }: any) {
         <div className="lg:border-t sm:order-1 order-2 border-pageBorder lg:pr-[52px]">
           <div className="flex flex-row items-center md:mt-[57px] md:mb-[35px] ">
             <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-            <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+            <h1 className="md:text-[28px] text-[22px] font-semibold font-urbanist text-center md:ml-[15.5px] ml-[10px]">
               About us
             </h1>
           </div>
@@ -147,7 +147,7 @@ function AboutUs({ jobDetails }: any) {
           </div>
           <div className="flex flex-row items-center">
             <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-            <h1 className=" md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+            <h1 className=" md:text-[28px] text-[22px] font-urbanist font-semibold text-center md:ml-[15.5px] ml-[10px]">
               Job Description
             </h1>
           </div>
@@ -162,7 +162,7 @@ function AboutUs({ jobDetails }: any) {
         <div className=" sm:order-2   bg-[#F9F9F9] pb-[40px] rounded-[8px]    ">
           <div className="flex flex-row items-center md:ml-[10px] xl:mr-[142px] mt-[55px]  md:mt-[57px] ">
             <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-            <h1 className="md:text-[28px] text-[22px] flex whitespace-nowrap font-semibold  md:ml-[15.5px] ml-[10px]">
+            <h1 className="md:text-[28px] text-[22px] font-urbanist flex whitespace-nowrap font-semibold  md:ml-[15.5px] ml-[10px]">
               Job information
             </h1>
           </div>
@@ -205,7 +205,7 @@ function AboutUs({ jobDetails }: any) {
       <div className=" md:w-[78%] mx-auto ">
         <div className="flex flex-row items-center">
           <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-          <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+          <h1 className="md:text-[28px] font-urbanist text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
             Responsibilities
           </h1>
         </div>
@@ -221,7 +221,7 @@ function AboutUs({ jobDetails }: any) {
       <div className=" lg:ml-[160px] lg:mr-[209px] md:mt-[58px]">
         <div className="flex flex-row items-center">
           <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-          <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+          <h1 className="md:text-[28px] font-urbanist text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
             Requirements
           </h1>
         </div>
@@ -236,7 +236,7 @@ function AboutUs({ jobDetails }: any) {
       <div className=" lg:ml-[160px] lg:mr-[209px] md:mt-[58px]">
         <div className="flex flex-row items-center">
           <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-          <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+          <h1 className="md:text-[28px] font-urbanist text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
             Benefits
           </h1>
         </div>
@@ -252,7 +252,7 @@ function AboutUs({ jobDetails }: any) {
       <div className="flex justify-center items-center md:mt-[92px] md:mb-[86px] mb-[63px]">
         <button
           onClick={handleApplyClick}
-          className=" font-semibold text-base bg-primary  hover:bg-primary-light rounded-[10px] text-primary-white py-[13px] pr-[41px] pl-[40px] "
+          className=" font-semibold text-base bg-primary  font-urbanist hover:bg-primary-light rounded-[10px] text-primary-white py-[13px] pr-[41px] pl-[40px] "
         >
           Apply Now
         </button>

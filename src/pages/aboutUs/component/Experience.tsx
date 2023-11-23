@@ -7,7 +7,7 @@ export default function Experience() {
     <div className="bg-gradient-to-b from-secondary to-primary mt-[80px] pt-[48px] pb-[140px] md:pt-[92px] md:pb-[92px] ">
       <div className=" flex flex-col md:justify-start justify-center  items-center  ">
         <h1 className="font-bold text-white  uppercase font-urbanist text-[26px] md:text-[48px] text-center ">
-          Our <span className="text-primary">Achievements</span>
+          Our <span className="text-primary font-bold font-urbanist">Achievements</span>
         </h1>
         <LineAnimation
           width="178px"

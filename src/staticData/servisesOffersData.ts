@@ -58,6 +58,22 @@ import Tec_21 from "../images/Icons/techonologies/tec_21.svg";
 import Tec_22 from "../images/Icons/techonologies/tec_22.svg";
 import Tec_23 from "../images/Icons/techonologies/tec_23.svg";
 import Tec_24 from "../images/Icons/techonologies/tec_24.svg";
+import Tec_25 from "../images/Icons/techonologies/pngwing 6.png";
+import Tec_26 from "../images/Icons/techonologies/GETSBY.png";
+import Tec_27 from "../images/Icons/techonologies/flask.png";
+import Tec_28 from "../images/Icons/techonologies/Group 39286.png";
+import Tec_29 from "../images/Icons/techonologies/expo.png";
+import Tec_30 from "../images/Icons/techonologies/Vector.png";
+import Tec_31 from "../images/Icons/techonologies/Group 39307.png";
+import Tec_32 from "../images/Icons/techonologies/Group 39308.png";
+import Tec_33 from "../images/Icons/techonologies/Group 39309.png";
+import Tec_34 from "../images/Icons/techonologies/Group 39310.png";
+import Tec_35 from "../images/Icons/techonologies/canva-icon 1.png";
+
+
+
+
+
 import enterprise from "../images/Icons/services-details-icon/customIcon/enterprise.png";
 import Erp from "../images/Icons/services-details-icon/customIcon/Erp.png";
 import apiDatabase from "../images/Icons/services-details-icon/customIcon/api-database.png";
@@ -253,6 +269,43 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
+        {
+          avatar: Tec_27,
+          title: "flask",
+        },
+  
+        {
+          avatar: Tec_28,
+          title: "Django",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobexd",
+        },
+        {
+          avatar: Tec_33,
+          title: "Photoshop",
+        },
+        {
+          avatar: Tec_34,
+          title: "Illustrator",
+        },
+        {
+          avatar: Tec_35,
+          title: "Canva",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobexd",
+        },
       ],
     },
     showProjects: true,
@@ -313,58 +366,17 @@ const cards = [
           avatar: Tec_1,
           title: "Azure",
         },
-        {
-          avatar: Tec_2,
-          title: "Python",
-        },
-        {
-          avatar: Tec_3,
-          title: "Android",
-        },
-        {
-          avatar: Tec_4,
-          title: "Firebase",
-        },
-        {
-          avatar: Tec_5,
-          title: "TypeScript",
-        },
-        {
-          avatar: Tec_6,
-          title: "JavasScript",
-        },
+
         {
           avatar: Tec_7,
           title: "AWS",
         },
-        {
-          avatar: Tec_8,
-          title: "Node.js",
-        },
-        {
-          avatar: Tec_9,
-          title: "Flutter",
-        },
-        {
-          avatar: Tec_10,
-          title: "MongoDB",
-        },
-        {
-          avatar: Tec_11,
-          title: "Swift",
-        },
+
         {
           avatar: Tec_12,
           title: "Heroku",
         },
-        {
-          avatar: Tec_13,
-          title: "C#",
-        },
-        {
-          avatar: Tec_14,
-          title: "MySQL",
-        },
+
         {
           avatar: Tec_15,
           title: "Kubernetes",
@@ -373,37 +385,42 @@ const cards = [
           avatar: Tec_16,
           title: "Google Cloud",
         },
-        {
-          avatar: Tec_17,
-          title: "Express.js",
-        },
-        {
-          avatar: Tec_18,
-          title: "Laravel",
-        },
-        {
-          avatar: Tec_19,
-          title: "Next.js",
-        },
+
         {
           avatar: Tec_20,
           title: "Docker",
         },
         {
-          avatar: Tec_21,
-          title: "WordPress",
+          avatar: Tec_25,
+          title: "Jenkins",
         },
         {
-          avatar: Tec_22,
-          title: "React",
+          avatar: Tec_31,
+          title: "Figma",
         },
         {
-          avatar: Tec_23,
-          title: "GraphQL",
+          avatar: Tec_32,
+          title: "Adobexd",
         },
         {
-          avatar: Tec_24,
-          title: "PostgreSQL",
+          avatar: Tec_33,
+          title: "Photoshop",
+        },
+        {
+          avatar: Tec_34,
+          title: "Illustrator",
+        },
+        {
+          avatar: Tec_35,
+          title: "Canva",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobexd",
         },
       ],
     },
@@ -557,6 +574,43 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
+        {
+          avatar: Tec_27,
+          title: "flask",
+        },
+  
+        {
+          avatar: Tec_28,
+          title: "Django",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobexd",
+        },
+        {
+          avatar: Tec_33,
+          title: "Photoshop",
+        },
+        {
+          avatar: Tec_34,
+          title: "Illustrator",
+        },
+        {
+          avatar: Tec_35,
+          title: "Canva",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobexd",
+        },
       ],
     },
   },
@@ -612,21 +666,39 @@ const cards = [
       ],
       tecnology: [
         {
-          avatar: Tec_1,
-          title: "Azure",
+          avatar: Tec_22,
+          title: "React",
         },
         {
-          avatar: Tec_2,
-          title: "Python",
+          avatar: Tec_19,
+          title: "Next.js",
         },
         {
-          avatar: Tec_3,
-          title: "Android",
+          avatar: Tec_26,
+          title: "Gats by",
+        },
+        {
+          avatar: Tec_8,
+          title: "Node.js",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
         },
         {
           avatar: Tec_4,
           title: "Firebase",
         },
+        {
+          avatar: Tec_2,
+          title: "Python",
+        },
+
         {
           avatar: Tec_5,
           title: "TypeScript",
@@ -636,77 +708,19 @@ const cards = [
           title: "JavasScript",
         },
         {
-          avatar: Tec_7,
-          title: "AWS",
+          avatar: Tec_27,
+          title: "flask",
         },
+  
         {
-          avatar: Tec_8,
-          title: "Node.js",
-        },
-        {
-          avatar: Tec_9,
-          title: "Flutter",
+          avatar: Tec_28,
+          title: "Django",
         },
         {
           avatar: Tec_10,
           title: "MongoDB",
         },
-        {
-          avatar: Tec_11,
-          title: "Swift",
-        },
-        {
-          avatar: Tec_12,
-          title: "Heroku",
-        },
-        {
-          avatar: Tec_13,
-          title: "C#",
-        },
-        {
-          avatar: Tec_14,
-          title: "MySQL",
-        },
-        {
-          avatar: Tec_15,
-          title: "Kubernetes",
-        },
-        {
-          avatar: Tec_16,
-          title: "Google Cloud",
-        },
-        {
-          avatar: Tec_17,
-          title: "Express.js",
-        },
-        {
-          avatar: Tec_18,
-          title: "Laravel",
-        },
-        {
-          avatar: Tec_19,
-          title: "Next.js",
-        },
-        {
-          avatar: Tec_20,
-          title: "Docker",
-        },
-        {
-          avatar: Tec_21,
-          title: "WordPress",
-        },
-        {
-          avatar: Tec_22,
-          title: "React",
-        },
-        {
-          avatar: Tec_23,
-          title: "GraphQL",
-        },
-        {
-          avatar: Tec_24,
-          title: "PostgreSQL",
-        },
+       
       ],
     },
   },
@@ -763,20 +777,25 @@ const cards = [
       ],
       tecnology: [
         {
-          avatar: Tec_1,
-          title: "Azure",
+          avatar: Tec_22,
+          title: "React Native",
         },
         {
-          avatar: Tec_2,
-          title: "Python",
+          avatar: Tec_9,
+          title: "Flutter",
         },
         {
           avatar: Tec_3,
           title: "Android",
         },
         {
-          avatar: Tec_4,
-          title: "Firebase",
+          avatar: Tec_29,
+          title: "Expo",
+        },
+
+        {
+          avatar: Tec_30,
+          title: "IOS",
         },
         {
           avatar: Tec_5,
@@ -787,77 +806,24 @@ const cards = [
           title: "JavasScript",
         },
         {
-          avatar: Tec_7,
-          title: "AWS",
-        },
-        {
           avatar: Tec_8,
           title: "Node.js",
-        },
-        {
-          avatar: Tec_9,
-          title: "Flutter",
         },
         {
           avatar: Tec_10,
           title: "MongoDB",
         },
-        {
-          avatar: Tec_11,
-          title: "Swift",
-        },
-        {
-          avatar: Tec_12,
-          title: "Heroku",
-        },
-        {
-          avatar: Tec_13,
-          title: "C#",
-        },
-        {
-          avatar: Tec_14,
-          title: "MySQL",
-        },
-        {
-          avatar: Tec_15,
-          title: "Kubernetes",
-        },
-        {
-          avatar: Tec_16,
-          title: "Google Cloud",
-        },
-        {
-          avatar: Tec_17,
-          title: "Express.js",
-        },
-        {
-          avatar: Tec_18,
-          title: "Laravel",
-        },
-        {
-          avatar: Tec_19,
-          title: "Next.js",
-        },
-        {
-          avatar: Tec_20,
-          title: "Docker",
-        },
-        {
-          avatar: Tec_21,
-          title: "WordPress",
-        },
-        {
-          avatar: Tec_22,
-          title: "React",
-        },
+
         {
           avatar: Tec_23,
           title: "GraphQL",
         },
         {
-          avatar: Tec_24,
-          title: "PostgreSQL",
+          avatar: Tec_2,
+          title: "Python",
         },
+        
+      
       ],
     },
     showProjects: true,
@@ -1010,6 +976,43 @@ const cards = [
           avatar: Tec_24,
           title: "PostgreSQL",
         },
+        {
+          avatar: Tec_27,
+          title: "flask",
+        },
+  
+        {
+          avatar: Tec_28,
+          title: "Django",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobexd",
+        },
+        {
+          avatar: Tec_33,
+          title: "Photoshop",
+        },
+        {
+          avatar: Tec_34,
+          title: "Illustrator",
+        },
+        {
+          avatar: Tec_35,
+          title: "Canva",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobexd",
+        },
       ],
     },
     showProjects: true,
@@ -1067,100 +1070,32 @@ const cards = [
       ],
       tecnology: [
         {
-          avatar: Tec_1,
-          title: "Azure",
+          avatar: Tec_31,
+          title: "Figma",
         },
         {
-          avatar: Tec_2,
-          title: "Python",
+          avatar: Tec_32,
+          title: "Adobexd",
         },
         {
-          avatar: Tec_3,
-          title: "Android",
+          avatar: Tec_33,
+          title: "Photoshop",
         },
         {
-          avatar: Tec_4,
-          title: "Firebase",
+          avatar: Tec_34,
+          title: "Illustrator",
         },
         {
-          avatar: Tec_5,
-          title: "TypeScript",
+          avatar: Tec_35,
+          title: "Canva",
         },
         {
-          avatar: Tec_6,
-          title: "JavasScript",
+          avatar: Tec_31,
+          title: "Figma",
         },
         {
-          avatar: Tec_7,
-          title: "AWS",
-        },
-        {
-          avatar: Tec_8,
-          title: "Node.js",
-        },
-        {
-          avatar: Tec_9,
-          title: "Flutter",
-        },
-        {
-          avatar: Tec_10,
-          title: "MongoDB",
-        },
-        {
-          avatar: Tec_11,
-          title: "Swift",
-        },
-        {
-          avatar: Tec_12,
-          title: "Heroku",
-        },
-        {
-          avatar: Tec_13,
-          title: "C#",
-        },
-        {
-          avatar: Tec_14,
-          title: "MySQL",
-        },
-        {
-          avatar: Tec_15,
-          title: "Kubernetes",
-        },
-        {
-          avatar: Tec_16,
-          title: "Google Cloud",
-        },
-        {
-          avatar: Tec_17,
-          title: "Express.js",
-        },
-        {
-          avatar: Tec_18,
-          title: "Laravel",
-        },
-        {
-          avatar: Tec_19,
-          title: "Next.js",
-        },
-        {
-          avatar: Tec_20,
-          title: "Docker",
-        },
-        {
-          avatar: Tec_21,
-          title: "WordPress",
-        },
-        {
-          avatar: Tec_22,
-          title: "React",
-        },
-        {
-          avatar: Tec_23,
-          title: "GraphQL",
-        },
-        {
-          avatar: Tec_24,
-          title: "PostgreSQL",
+          avatar: Tec_32,
+          title: "Adobexd",
         },
       ],
     },
@@ -1313,6 +1248,43 @@ const cards = [
         {
           avatar: Tec_24,
           title: "PostgreSQL",
+        },
+        {
+          avatar: Tec_27,
+          title: "flask",
+        },
+  
+        {
+          avatar: Tec_28,
+          title: "Django",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobexd",
+        },
+        {
+          avatar: Tec_33,
+          title: "Photoshop",
+        },
+        {
+          avatar: Tec_34,
+          title: "Illustrator",
+        },
+        {
+          avatar: Tec_35,
+          title: "Canva",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobexd",
         },
       ],
     },

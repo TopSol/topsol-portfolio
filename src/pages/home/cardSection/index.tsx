@@ -127,8 +127,8 @@ export default function CardSection({
           >
             <div className="relative">
               <h1 className="mb-10 text-[30px] md:text-[48px] font-semibold mt-16 font-urbanist uppercase ">
-                Build <span className="text-primary">Smarter</span> <br /> Not
-                From <span className="text-primary">Scratch</span>
+                Build <span className="text-primary md:text-[48px] font-semibold  font-urbanist">Smarter</span> <br /> Not
+                From <span className="text-primary md:text-[48px] font-semibold  font-urbanist">Scratch</span>
               </h1>
               <div className="absolute w-[259px] h-[4px] bg-primary"></div>
             </div>

@@ -9,7 +9,7 @@ export default function AddressSection() {
       <div className="flex   flex-col md:flex-row md:container mx-auto justify-between ">
         <div className="mx-5">
           <h1 className="text-[26px] md:text-[34px] uppercase font-urbanist font-bold  ">
-            Where to <span className="text-primary"> Find us ?</span>
+            Where to <span className="text-primary font-urbanist font-bold md:text-[34px]"> Find us ?</span>
           </h1>
           <LineAnimation
             width="178px"
