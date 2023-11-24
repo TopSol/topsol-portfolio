@@ -42,7 +42,7 @@ function TopSolExperts() {
       <div className="flex flex-col justify-center items-center mx-auto ">
         <div className="">
           <h1 className="font-extrabold mt-[54px]  font-urbanist uppercase text-[26px] md:text-34[px] lg:text-4xl text-center">
-            TECHNOLOGIES <span className="text-primary">WE WORK WITH</span>
+            TECHNOLOGIES <span className="text-primary font-urbanist font-extrabold">WE WORK WITH</span>
           </h1>
         </div>
         <LineAnimation
@@ -118,7 +118,7 @@ function TopSolExperts() {
         </div>
       </div>
 
-      <div className="md:container md:mx-auto flex flex-col justify-center items-center mt-[42px] px-4 mb-[50px] bg-white rounded-[20px]">
+      <div className="md:container md:mx-auto flex flex-col justify-center items-center mt-[42px] px-4 mb-[50px]  rounded-[20px]">
         <p className="text-[#737373] mt-[49px] text-center">
           We Go Beyond to Cultivate a Workspace Where Safety, Value, and Motivation are Nurtured for Everyone
         </p>

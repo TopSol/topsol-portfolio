@@ -12,8 +12,8 @@ export default function index() {
   return (
     <div>
       <div>
-        <ToggleBar />
         <Navbar />
+        <ToggleBar />
       </div>
       <Hero />
       <Contact />

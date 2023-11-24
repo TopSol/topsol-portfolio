@@ -112,7 +112,7 @@ export default function RecentWork() {
         <div className="flex  flex-col items-center md:items-start ">
           <div className="">
             <h1 className="font-extrabold text-textColors text-center md:text-left uppercase font-urbanist text-3xl md:text-3xl lg:text-4xl  ">
-              LATEST <span className="text-primary">PROJECTS</span>
+              LATEST <span className="text-primary font-extrabold font-urbanist">PROJECTS</span>
             </h1>
           </div>
           <LineAnimation

@@ -5887,6 +5887,11 @@ gatsby-plugin-utils@^4.12.3:
     joi "^17.9.2"
     mime "^3.0.0"
 
+gatsby-plugin-wrap-pages@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-wrap-pages/-/gatsby-plugin-wrap-pages-1.1.1.tgz#2b088cc90b6609ed379ec70270c3c347fa743efd"
+  integrity sha512-lA0aNsi6YYGWh2YHgysU1UJvnoUppNssZIG4Pmgo+8nYDWfxDjgomOdO2GmthMwmH54IebsfNvscCe2hMC/rmw==
+
 gatsby-react-router-scroll@^6.12.0:
   version "6.12.0"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-6.12.0.tgz#506439ef83ca7140258703d2ba5c9a85237b3354"

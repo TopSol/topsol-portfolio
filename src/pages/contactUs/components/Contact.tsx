@@ -9,7 +9,7 @@ export default function Contact() {
         <div className=" md:w-[60%] w-[95%] justify-center items-center">
           <div className='flex flex-col mt-6 md:mt-0 items-center md:items-start'>
             <p className='text-4xl text-center sm:text-left md:text-5xl lg:text-6xl font-bold font-urbanist text-black'>
-              LET’S GET <span className='text-primary'>IN TOUCH</span>
+              LET’S GET <span className='text-primary lg:text-6xl font-bold font-urbanist'>IN TOUCH</span>
             </p>
             <LineAnimation width='200px' height='7px' backgroundColor='#00B8F1' marginTop="22px" />
           </div>

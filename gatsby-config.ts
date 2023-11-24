@@ -21,7 +21,7 @@ const config: GatsbyConfig = {
   plugins: [
     "gatsby-plugin-postcss",
     {
-      resolve: `gatsby-plugin-facebook-pixel`,
+      resolve: `gatsby-plugin-wrap-pages`,
       options: {
         pixelId: "651807596939712",
       },

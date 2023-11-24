@@ -15,7 +15,7 @@ function GetInTouch() {
           let’s
         </h1>
         <h1 className="font-extrabold uppercase font-urbanist text-[26px] md:text-[40px] lg:text-[60px]  md:text-left  text-center">
-          get in <span className="text-primary">touch</span>
+          get in <span className="text-primary font-extrabold font-urbanist">touch</span>
         </h1>
         <LineAnimation
           width="160px"

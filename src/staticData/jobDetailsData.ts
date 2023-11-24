@@ -6,12 +6,12 @@ export const data = [
     },
     {
       id: 2,
-      name: "development",
+      name: "web development",
       value: "development",
     },
     {
       id: 3,
-      name: "Design",
+      name: "UIUX",
       value: "Design",
     },
     {

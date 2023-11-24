@@ -45,8 +45,8 @@ function OurPortfolio() {
     <div className=" w-[80%] mx-auto  flex flex-col mt-[50px] ">
       <div className="flex flex-col items-center md:items-start ">
         <div className="flex items-start justify-start">
-          <h1 className="font-extrabold text-black font-urbanist uppercase text-[26px] md:text-34[px] lg:text-4xl md:text-left text-center">
-            Our <span className="text-primary"> Portfolio </span>
+          <h1 className="font-extrabold text-black font-urbanist uppercase text-[26px] md:text-[34px] lg:text-4xl md:text-left text-center">
+            Our <span className="text-primary font-urbanist font-extrabold"> Portfolio </span>
           </h1>
         </div>
         <LineAnimation

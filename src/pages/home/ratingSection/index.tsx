@@ -42,7 +42,7 @@ export default function index() {
         <div className="flex flex-col justify-center items-center">
           <div className="">
             <h1 className="font-extrabold font-urbanist uppercase text-[26px] md:text-[34px] lg:text-4xl  text-center">
-              WHAT OUR <span className="text-primary">CLIENTS SAY </span>
+              What our <span className="text-primary  font-extrabold font-urbanist">Clients say </span>
             </h1>
           </div>
           <LineAnimation

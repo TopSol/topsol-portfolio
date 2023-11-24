@@ -131,12 +131,12 @@ function AboutUs({ jobDetails }: any) {
         <div className="lg:border-t sm:order-1 order-2 border-pageBorder lg:pr-[52px]">
           <div className="flex flex-row items-center md:mt-[57px] md:mb-[35px] ">
             <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-            <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+            <h1 className="md:text-[28px] text-[22px] font-semibold font-urbanist text-center md:ml-[15.5px] ml-[10px]">
               About us
             </h1>
           </div>
           <div className="md:mb-[41px] md:my-0 my-[25px]">
-            <p className=" md:text-lg  font-medium text-justify ">
+            <p className=" md:text-[16px] font-figtree font-light text-justify ">
               At Topsol, we're more than a company - we're a collective of
               passionate innovators dedicated to pushing boundaries and crafting
               exceptional digital solutions. Our journey is rooted in a
@@ -147,13 +147,13 @@ function AboutUs({ jobDetails }: any) {
           </div>
           <div className="flex flex-row items-center">
             <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-            <h1 className=" md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+            <h1 className=" md:text-[28px] text-[22px] font-urbanist font-semibold text-center md:ml-[15.5px] ml-[10px]">
               Job Description
             </h1>
           </div>
           <div className="md:my-6 my-[25px] text-center ">
 
-            <p className="md:text-lg text-base font-medium text-justify">
+            <p className="md:text-[16px] font-figtree text-base font-light text-justify">
               {jobDetails?.description}
             </p>
           </div>
@@ -161,39 +161,38 @@ function AboutUs({ jobDetails }: any) {
         </div>
         <div className=" sm:order-2   bg-[#F9F9F9] pb-[40px] rounded-[8px]    ">
           <div className="flex flex-row items-center md:ml-[10px] xl:mr-[142px] mt-[55px]  md:mt-[57px] ">
-            <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-            <h1 className="md:text-[28px] text-[22px] flex whitespace-nowrap font-semibold  md:ml-[15.5px] ml-[10px]">
-              Job information
+            <h1 className="md:text-[28px] text-primary text-[22px] font-urbanist flex whitespace-nowrap font-semibold  md:ml-[15.5px] ml-[10px]">
+              Job Summary
             </h1>
           </div>
-          <div className="md:ml-[65px] ml-[42px] ">
+          <div className="md:ml-[30px] ml-[15px] ">
             <ul className="">
-              <li className="flex flex-col md:text-2xl text-lg font-semibold text-primary-darkGray md:mt-8 mt-[25px]">
-                <span className=" text-primary-gray md:text-2xl text-lg font-medium">
+              <li className="flex flex-col md:text-[17px] text-[14px] font-medium text-[#1F1F1F] font-figtree md:mt-8 mt-[25px]">
+                <span className=" text-[#C2C2C2] md:text-[17px] text-[14px] font-figtree font-medium">
                   Industry
                 </span>
                 {jobDetails?.industry}
               </li>
-              <li className="flex flex-col md:text-2xl text-lg font-semibold text-primary-darkGray md:my-10 my-[25px]">
-                <span className=" text-primary-gray md:text-2xl text-lg md:mb-0 mb-[17px] font-medium">
+              <li className="flex flex-col md:text-[17px] text-[14px] font-medium text-[#1F1F1F] font-figtree md:mt-8 mt-[25px]">
+                <span className=" text-[#C2C2C2] md:text-[17px] text-[14px] font-figtree font-medium">
                   Work Experience
                 </span>
                 {jobDetails?.experience}
               </li>
-              <li className="flex flex-col ml-0 md:text-2xl text-lg font-semibold text-primary-darkGray">
-                <span className=" text-primary-gray md:text-2xl text-lg md:mb-0 mb-[17px] font-medium">
+              <li className="flex flex-col md:text-[17px] text-[14px] font-medium text-[#1F1F1F] font-figtree md:mt-8 mt-[25px]">
+                <span className=" text-[#C2C2C2] md:text-[17px] text-[14px] font-figtree font-medium">
                   Location
                 </span>
                 {jobDetails?.location}
               </li>
-              <li className="flex flex-col md:text-2xl text-lg font-semibold text-primary-darkGray md:my-10 my-[25px]">
-                <span className=" text-primary-gray md:text-2xl text-lg md:mb-0 mb-[17px] font-medium">
+              <li className="flex flex-col md:text-[17px] text-[14px] font-medium text-[#1F1F1F] font-figtree md:mt-8 mt-[25px]">
+                <span className=" text-[#C2C2C2] md:text-[17px] text-[14px] font-figtree font-medium">
                   State/Province
                 </span>
                 Punjab
               </li>
-              <li className="flex flex-col md:text-2xl text-lg font-semibold text-primary-darkGray">
-                <span className=" text-primary-gray md:text-2xl text-lg md:mb-0 mb-[17px] font-medium">
+              <li className="flex flex-col md:text-[17px] text-[14px] font-medium text-[#1F1F1F] font-figtree md:mt-8 mt-[25px]">
+                <span className=" text-[#C2C2C2] md:text-[17px] text-[14px] font-figtree font-medium">
                   Country
                 </span>
                 Pakistan
@@ -205,14 +204,14 @@ function AboutUs({ jobDetails }: any) {
       <div className=" md:w-[78%] mx-auto ">
         <div className="flex flex-row items-center">
           <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-          <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+          <h1 className="md:text-[28px] font-urbanist text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
             Responsibilities
           </h1>
         </div>
         <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px]">
           <ul className="pl-5 list-disc">
             {jobDetails?.responsibilities?.map((i: string) => {
-              return <li className="md:text-lg text-base font-medium">{i}</li>;
+              return <li className=" text-base md:text-[16px] font-figtree font-light">{i}</li>;
             })}
           </ul>
         </div>
@@ -221,12 +220,12 @@ function AboutUs({ jobDetails }: any) {
       <div className=" lg:ml-[160px] lg:mr-[209px] md:mt-[58px]">
         <div className="flex flex-row items-center">
           <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-          <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+          <h1 className="md:text-[28px] font-urbanist text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
             Requirements
           </h1>
         </div>
         <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px] ">
-          <ul className="pl-5 list-disc md:text-lg text-base font-medium">
+          <ul className="pl-5 list-disc md:text-[16px] font-figtree font-light text-base ">
             {jobDetails?.requirements?.map((i: string) => {
               return <li>{i}</li>;
             })}
@@ -236,12 +235,12 @@ function AboutUs({ jobDetails }: any) {
       <div className=" lg:ml-[160px] lg:mr-[209px] md:mt-[58px]">
         <div className="flex flex-row items-center">
           <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-          <h1 className="md:text-[28px] text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
+          <h1 className="md:text-[28px] font-urbanist text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
             Benefits
           </h1>
         </div>
         <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px] ">
-          <ul className="pl-5 list-disc md:text-lg text-base font-medium">
+          <ul className="pl-5 list-disc md:text-[16px] font-figtree font-light text-base ">
             {jobDetails?.benefits?.map((i: string) => (
               <li key={i}>{i}</li>
             ))}
@@ -252,7 +251,7 @@ function AboutUs({ jobDetails }: any) {
       <div className="flex justify-center items-center md:mt-[92px] md:mb-[86px] mb-[63px]">
         <button
           onClick={handleApplyClick}
-          className=" font-semibold text-base bg-primary  hover:bg-primary-light rounded-[10px] text-primary-white py-[13px] pr-[41px] pl-[40px] "
+          className=" font-semibold text-base bg-primary  font-urbanist hover:bg-primary-light rounded-[10px] text-primary-white py-[13px] pr-[41px] pl-[40px] "
         >
           Apply Now
         </button>

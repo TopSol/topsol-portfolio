@@ -55,6 +55,9 @@ import Tec_37 from "../images/Icons/techonologies/flask.png";
 import Tec_38 from "../images/Icons/techonologies/Group 39286.png";
 import Tec_39 from "../images/Icons/techonologies/pngwing 6.png";
 import Tec_40 from "../images/Icons/techonologies/expo.png";
+import Tec_41 from "../images/Icons/techonologies/canva-icon 1.png";
+
+
 
 
 
@@ -233,6 +236,10 @@ const UiUx = [
   {
     avatar: Tec_36,
     title: "Illustrator",
+  },
+  {
+    avatar: Tec_41,
+    title: "Canva",
   },
 ];
 const Industries = [

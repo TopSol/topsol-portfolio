@@ -24,6 +24,7 @@
     "gatsby-plugin-facebook-pixel": "^1.0.8",
     "gatsby-plugin-google-gtag": "^5.12.2",
     "gatsby-plugin-postcss": "^6.11.0",
+    "gatsby-plugin-wrap-pages": "^1.1.1",
     "gsap": "^3.12.2",
     "mouse-follower": "^1.1.2",
     "postcss": "^8.4.28",

@@ -13,8 +13,8 @@ function ServicesOffers({ page, showPrimaryBtn }) {
       }}
     >
       <div className=" flex flex-col md:justify-start justify-center items-center  ">
-        <h1 className="font-extrabold text-white  uppercase font-urbanist text-[26px] md:text-34[px] lg:text-4xl text-center md:text-left">
-          Explore our <span className="text-primary">services</span>
+        <h1 className="font-extrabold text-white  uppercase font-urbanist text-[26px] md:text-[34px] lg:text-4xl text-center md:text-left">
+          Explore our <span className="text-primary font-extrabold   font-urbanist ">services</span>
         </h1>
         <LineAnimation
           width="178px"

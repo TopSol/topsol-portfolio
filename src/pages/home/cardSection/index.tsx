@@ -127,8 +127,8 @@ export default function CardSection({
           >
             <div className="relative">
               <h1 className="mb-10 text-[30px] md:text-[48px] font-semibold mt-16 font-urbanist uppercase ">
-                Build <span className="text-primary">Smarter</span> <br /> Not
-                From <span className="text-primary">Scratch</span>
+                Build <span className="text-primary md:text-[48px] font-semibold  font-urbanist">Smarter</span> <br /> Not
+                From <span className="text-primary md:text-[48px] font-semibold  font-urbanist">Scratch</span>
               </h1>
               <div className="absolute w-[259px] h-[4px] bg-primary"></div>
             </div>
@@ -161,10 +161,10 @@ export default function CardSection({
                       alt="Avatar"
                       className=" "
                     />
-                    <h1 className="text-[22px] px-2 font-semibold mt-[46px] capitalize tracking-wide font-figtree ">
+                    <h1 className="text-[22px] px-2 font-medium mt-[46px] capitalize tracking-wide font-figtree ">
                       {item?.heading}
                     </h1>
-                    <h1 className="text-[22px] px-2 font-semibold capitalize  font-figtree ">
+                    <h1 className="text-[22px] px-2 font-medium capitalize  font-figtree ">
                       {item?.subheading}
                     </h1>
                     <p className="text-[18px] px-2 mr-4 font-figtree font-light mt-[20px]">

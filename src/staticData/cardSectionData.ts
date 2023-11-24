@@ -17,7 +17,7 @@ const reviews = [
   },
   {
     id: "3",
-    heading: "Luanch Faster",
+    heading: "Launch Faster",
     subheading: "and Iterate",
     desc: "Request a tailored quote to fast-track your building project from concept to a functional Minimum Viable Product (MVP) within weeks, not months. Our streamlined process ensures rapid development, saving you valuable time. With a personalized estimate, you can unlock the potential of your idea sooner, turning it into a tangible reality. We optimize every step, eliminating unnecessary delays, and providing efficient solutions that expedite your project's journey. Say goodbye to lengthy timelines and hello to a swift MVP, realizing your vision promptly, all within the span of a few weeks. Don't wait when you can accelerate your progress today.",
     avatar:

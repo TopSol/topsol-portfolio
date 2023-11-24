@@ -65,7 +65,7 @@ export default function Tecnology(servicedata) {
                 <div className=' flex flex-col md:w-[80%] w-[100%] mx-auto justify-center md:justify-start '>
                     <div className=" flex flex-col md:justify-start justify-center  items-center md:items-start  ">
                         <h1 className="font-bold text-textColors  uppercase font-urbanist text-[26px] md:text-[34px] lg:text-4xl text-center md:text-left">
-                            TECHNOLOGIES <span className="text-primary">WE USE</span>
+                            TECHNOLOGIES <span className="text-primary font-urbanist font-bold">WE USE</span>
                         </h1>
                         <LineAnimation
                             width="178px"

@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import facebook from "../../images/facebook.png";
 import instagram from "../../images/instagram.png";
 import linkedin from "../../images/linkedIn.png";
+import EmailOptInForm from "../NewsLeter";
 
 export default function Footer() {
   return (
@@ -21,10 +22,10 @@ export default function Footer() {
           <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
             <div>
               <div className="">
-                <h1 className="mb-4 text-primary text-[28px]  font-medium ">
+                <h1 className="mb-4 text-primary text-[28px] font-urbanist font-medium ">
                   TOPSOL
                 </h1>
-                <span className="text-[18px] font-medium ">
+                <span className="text-[18px] font-medium font-urbanist">
                   A Software development Company
                 </span>
               </div>
@@ -55,15 +56,18 @@ export default function Footer() {
                   />
                 </Link>
               </div>
+              <div className="mt-12">
+                <EmailOptInForm />
+              </div>
             </div>
             <div className="md:grid hidden justify-center">
               <h2 className="mb-[40px] text-[18px] font-semibold ">Services</h2>
-              <ul className="text-base font-normal space-y-[26px] font-figtree ">
-                <li>DevOps</li>
-                <li>UI/UX Design</li>
-                <li>Web Development</li>
-                <li>Quality Assurance</li>
-                <li>App Development</li>
+              <ul className="text-base font-normal space-y-[26px]  font-figtree ">
+                <li ><Link to="/services">DevOps</Link></li>
+                <li ><Link to="/services">UI/UX Design</Link></li>
+                <li ><Link to="/services">Web Development</Link></li>
+                <li ><Link to="/services">Quality Assurance</Link></li>
+                <li ><Link to="/services">App Development</Link></li>
               </ul>
             </div>
             <div className="md:grid hidden ">
@@ -123,6 +127,7 @@ export default function Footer() {
                   info@topsol.org
                 </li>
               </ul>
+
             </div>
           </div>
 
