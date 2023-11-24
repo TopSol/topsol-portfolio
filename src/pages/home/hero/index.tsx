@@ -17,7 +17,7 @@ export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <div className="bg-cover min-h-[90vh] md:min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground  justify-center">
+    <div className="bg-cover min-h-[90vh] md:min-h-[100vh] xl:min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground  justify-center">
       <div className="flex flex-col justify-center px-4 sm:px-6 lg:px-2"
         ref={ref}
         style={{

@@ -30,9 +30,6 @@ function Navbar() {
             <li className=" text-[14px] xl:text-[16px] capitalize  font-figtree text-[#333] font-semibold block hover:text-blue-400">
               <Link to="/careers" activeClassName="border-b-4 border-[#00B8F1] pb-2 ">careers</Link>
             </li>
-            <li className="text-[14px] xl:text-[16px] capitalize font-figtree text-[#333] font-semibold block hover:text-blue-400">
-              <Link to="/contactUs" activeClassName="border-b-4 border-[#00B8F1] pb-2 ">contact Us</Link>
-            </li>
             <li className=" text-[14px] xl:text-[16px] capitalize font-figtree text-[#333] font-semibold block hover:text-blue-400">
               <Link to="/blogs" activeClassName="border-b-4 border-[#00B8F1] pb-2 ">blogs</Link>
             </li>
