@@ -137,12 +137,7 @@ function AboutUs({ jobDetails }: any) {
           </div>
           <div className="md:mb-[41px] md:my-0 my-[25px]">
             <p className=" md:text-[16px] font-figtree font-light text-justify ">
-              At Topsol, we're more than a company - we're a collective of
-              passionate innovators dedicated to pushing boundaries and crafting
-              exceptional digital solutions. Our journey is rooted in a
-              commitment to creativity, collaboration, and client success. With
-              a blend of expertise and vision, we strive to create meaningful
-              impacts in the digital landscape, one project at a time.
+              TopSol is a leading software company with a reputation for excellence in web and mobile application development services. With a focus on client-centric solutions and a commitment to innovation and scalability, TopSol delivers customized and efficient software solutions across diverse industries. We are dedicated to contributing to the digital transformation of businesses worldwide and are excited to connect with professionals who share our values.
             </p>
           </div>
           <div className="flex flex-row items-center">
@@ -205,30 +200,15 @@ function AboutUs({ jobDetails }: any) {
         <div className="flex flex-row items-center">
           <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
           <h1 className="md:text-[28px] font-urbanist text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
-            Responsibilities
+            Qualification &  requirements
           </h1>
         </div>
         <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px]">
           <ul className="pl-5 list-disc">
-            {jobDetails?.responsibilities?.map((i: string) => {
-              return <li className=" text-base md:text-[16px] font-figtree font-light">{i}</li>;
-            })}
-          </ul>
-        </div>
-      </div>
-
-      <div className=" lg:ml-[160px] lg:mr-[209px] md:mt-[58px]">
-        <div className="flex flex-row items-center">
-          <img src={hrImg} className="h-[5px] md:w-[49px] w-8" />
-          <h1 className="md:text-[28px] font-urbanist text-[22px] font-semibold text-center md:ml-[15.5px] ml-[10px]">
-            Requirements
-          </h1>
-        </div>
-        <div className="md:mt-[35px] md:my-0 my-[25px] mx-[5px] ">
-          <ul className="pl-5 list-disc md:text-[16px] font-figtree font-light text-base ">
-            {jobDetails?.requirements?.map((i: string) => {
-              return <li>{i}</li>;
-            })}
+            {jobDetails?.requirements
+              ?.map((i: string) => {
+                return <li className=" text-base md:text-[16px] font-figtree font-light">{i}</li>;
+              })}
           </ul>
         </div>
       </div>
