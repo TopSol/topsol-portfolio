@@ -41,7 +41,7 @@
 }
 
 .heroBackground {
-  background: url("../images/homeHeroBack.gif"), linear-gradient(#01112e, #005b77);
+  background: url("https://res.cloudinary.com/asifsaythe/image/upload/v1700809049/homeHeroBack_ovxxbh.gif"), linear-gradient(#01112e, #005b77);
   background-blend-mode: color-dodge;
   background-size: cover;
 }
