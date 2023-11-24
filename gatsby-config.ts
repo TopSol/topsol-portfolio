@@ -23,7 +23,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-wrap-pages`,
       options: {
-        pixelId: "651807596939712",
+        pixelId: process.env.FB_PIXEL_ID,
       },
     },
     {
@@ -31,7 +31,7 @@ const config: GatsbyConfig = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-28SQWDEXY0", // Google Analytics / GA
+          process.env.GOOGLE_TRACKING_ID, // Google Analytics / GA
         ],
         // This object is used for configuration specific to this plugin
         pluginConfig: {
