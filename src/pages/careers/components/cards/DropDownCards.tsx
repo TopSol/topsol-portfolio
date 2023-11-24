@@ -19,15 +19,15 @@ function DropDownCards({ className, item }: CardsProps) {
           {item?.experience}
         </p>
         <div className="flex flex-row justify-between">
-          <div className="max-w-[169px] h-[47px] mb-[19.5px] ">
+          <div className=" h-[47px] mb-[19.5px] ">
             <Link to={`/jobDetails`} state={item}>
               <button className=" px-10 w-[100%] h-[100%] rounded-[10px] font-semibold text-base bg-primary text-primary-white hover:bg-primary-light">
                 Apply now
               </button>
             </Link>
           </div>
-          <div className="max-w-[169px] h-[47px] mb-[19.5px]  flex flex-row justify-center items-center">
-            <div>
+          <div className=" h-[47px] mb-[19.5px] flex flex-row justify-center items-center">
+            <div className="ml-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
