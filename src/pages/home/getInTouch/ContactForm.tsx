@@ -16,6 +16,7 @@ function ContactForm({ addressInfo }: Iprops) {
   const [message, setMessage] = useState<string>("");
   const [phone, setPhone] = useState("");
   const [isFocused, setIsFocused] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleFocus = (inputName) => {
     setIsFocused(inputName);
@@ -26,27 +27,31 @@ function ContactForm({ addressInfo }: Iprops) {
   };
 
   const submit = async () => {
-    if (!name || !email || !message || !phone) {
-      toast.error("Please fill all the fields");
-      return;
-    }
-    const body = {
-      name,
-      email,
-      phone,
-      message,
-    };
     try {
+      setLoading(true);
+      if (!name || !email || !message || !phone || phone.length < 10) {
+        toast.error("Please fill all the fields");
+        return;
+      }
+      const body = {
+        name,
+        email,
+        phone,
+        message,
+      };
       await addDoc(collection(db, "getInTouch"), body);
-      setName("");
-      setEmail("");
-      setPhone("");
-      setMessage("");
+
       toast.success(
         "Your message is received. We will contact you back shortly."
       );
     } catch (error) {
       toast.error("Data cannot be submitted");
+    } finally {
+      setName("");
+      setEmail("");
+      setPhone("+92");
+      setMessage("");
+      setLoading(false);
     }
   };
 
@@ -57,8 +62,9 @@ function ContactForm({ addressInfo }: Iprops) {
       </div>
       <div className=" mx-auto  w-[100%] mt-10 md:mt-0">
         <div
-          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${isFocused === "name" ? "border-primary" : "border-[#1F1F1F]"
-            }`}
+          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${
+            isFocused === "name" ? "border-primary" : "border-[#1F1F1F]"
+          }`}
         >
           <div className="md:w-[6%] w-[13%]">
             <svg
@@ -80,6 +86,7 @@ function ContactForm({ addressInfo }: Iprops) {
           </div>
           <input
             type="text"
+            required
             placeholder="Name*"
             onChange={(e) => setName(e.target.value as string)}
             value={name}
@@ -89,7 +96,11 @@ function ContactForm({ addressInfo }: Iprops) {
           />
         </div>
         <div className="flex flex-col md:flex-row md:mt-7  mt-3 justify-between">
-          <div className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "email" ? "border-primary" : "border-[#1F1F1F]"}`}>
+          <div
+            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${
+              isFocused === "email" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
+          >
             <div className="w-[9%] mr-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,6 +117,7 @@ function ContactForm({ addressInfo }: Iprops) {
             </div>
             <input
               type="email"
+              required
               placeholder="Email*"
               value={email}
               onChange={(e) => setEmail(e.target.value as string)}
@@ -115,8 +127,9 @@ function ContactForm({ addressInfo }: Iprops) {
             />
           </div>
           <div
-            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] md:mt-0  mt-3 border-[1px] items-center py-[7px]  px-[20px] ${isFocused === "phone" ? "border-primary" : "border-[#1F1F1F]"
-              }`}
+            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] md:mt-0  mt-3 border-[1px] items-center py-[7px]  px-[20px] ${
+              isFocused === "phone" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
           >
             <PhoneInput
               inputStyle={{
@@ -131,12 +144,14 @@ function ContactForm({ addressInfo }: Iprops) {
               onChange={(e) => setPhone(e)}
               onFocus={() => handleFocus("phone")}
               onBlur={handleBlur}
+              placeholder="000 0000000"
             />
           </div>
         </div>
         <div
-          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "message" ? "border-primary" : "border-[#1F1F1F]"
-            }`}
+          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center py-[10px]  px-[20px] ${
+            isFocused === "message" ? "border-primary" : "border-[#1F1F1F]"
+          }`}
         >
           <input
             type="text"
@@ -149,16 +164,27 @@ function ContactForm({ addressInfo }: Iprops) {
           />
         </div>
         <div className="mt-10 md:w-[30%] w-[50%] ">
-          <button type="button" onClick={submit} aria-label="Post Comment">
+          <button
+            disabled={loading}
+            type="button"
+            onClick={submit}
+            aria-label="Post Comment"
+          >
             <PrimaryBtn
               text="Send"
               icon={true}
-              additionalClasses="text-primary flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none text-[18px]  text-white rounded-[6px] "
+              additionalClasses={`text-primary flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px]  text-[18px]  text-white rounded-[6px] ${
+                loading ? "bg-gray-500" : "bg-primary"
+              } `}
             />
           </button>
         </div>
       </div>
-      <div className={` ${addressInfo ? 'flex' : 'hidden'} flex-col mt-[37px] md:flex-row justify-between`}>
+      <div
+        className={` ${
+          addressInfo ? "flex" : "hidden"
+        } flex-col mt-[37px] md:flex-row justify-between`}
+      >
         <div className=" md:w-[30%] w-[100%]">
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">
             lOCATION
