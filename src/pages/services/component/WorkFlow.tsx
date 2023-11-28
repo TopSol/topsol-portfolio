@@ -1,6 +1,5 @@
 import React from "react";
-import LineAnimation from "../../../components/LineAnimation";
-import arrow from "../../../images/Icons/arrow.png";
+
 
 export default function WorkFlow(servicedata) {
     return (

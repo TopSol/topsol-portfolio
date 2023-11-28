@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import VideoHero from "../../components/VidoeHero";
 import ServicesOffers from "../home/servisesOffers";
@@ -12,7 +12,44 @@ import { Link } from "gatsby";
 import Project from "./component/project";
 import heroImage from "../../images/heroImage.png";
 import { ToggleBar } from "../../components/bar";
+import { useLocation } from "@reach/router";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { db } from "../../utils/firebase";
+
 export default function index() {
+  const [detail, setDetail] = useState({});
+  const [loader, setLoader] = useState(false);
+
+  const location = useLocation();
+
+  const id = new URLSearchParams(location.search).get("id");
+
+  const fetchPortfolioItem = async () => {
+    try {
+      setLoader(true);
+      const portfolioItemRef = doc(collection(db, "services"), id);
+      const portfolioItemDoc = await getDoc(portfolioItemRef);
+
+      if (portfolioItemDoc.exists()) {
+        setDetail(portfolioItemDoc.data());
+      } else {
+        console.error("Portfolio item not found.");
+      }
+      setLoader(false);
+    } catch (error) {
+      console.error("Error fetching portfolio item:", error);
+      setLoader(false);
+    }
+  };
+
+  useEffect(() => {
+    if (id) {
+      fetchPortfolioItem();
+    }
+  }, [id]);
+
+  // console.log(detail, "detaildetaildetail");
+
   return (
     <div>
       <div>
@@ -25,7 +62,7 @@ export default function index() {
           title="Our Services"
           image="https://res.cloudinary.com/asifsaythe/image/upload/v1697023024/new_portfolio/flat-lay-business-concept_1_q6ptf7.png"
         />
-        <ServicesOffers page="services" showPrimaryBtn={false} />
+        <ServicesOffers page="services" showPrimaryBtn={false} detail={detail} />
       </div>
       <Project />
       <RatingSection />

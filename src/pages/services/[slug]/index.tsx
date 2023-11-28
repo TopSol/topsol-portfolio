@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
-import Navbar from "../../components/Navbar";
-import InfoSection from "../../components/infoSection";
-import Footer from "../../components/footerSection";
-import HeroSection from "./component/HeroSection";
-import ProjectSection from "./component/projectSection";
-import ReadyToOutshine from "./component/ReadyToOutshine";
-import { ToggleBar } from "../../components/bar";
-import WorkFlow from "./component/WorkFlow";
-import Tecnology from "./component/Tecnology";
-import RatingSection from "../home/ratingSection/index";
-import SmallFooter from "../../components/smallFooter";
+import Navbar from "../../../components/Navbar";
+import InfoSection from "../../../components/infoSection";
+import Footer from "../../../components/footerSection";
+import HeroSection from "../component/HeroSection";
+import { ToggleBar } from "../../../components/bar";
+import WorkFlow from "../component/WorkFlow";
+import Tecnology from "../component/Tecnology";
+import RatingSection from "../../home/ratingSection/index";
+import SmallFooter from "../../../components/smallFooter";
 export default function ServiceDetails({ location }) {
+
   const { state } = location;
   useEffect(() => {
     window.scrollTo(0, 0);

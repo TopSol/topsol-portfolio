@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../../components/Navbar";
-import SmallFooter from "../../components/smallFooter";
-import Footer from "../../components/footerSection";
-import Hero from "./component/Hero";
-import PortfolioDetailBody from "./component/portfolioDetailBody";
-import { db } from "../../utils/firebase";
+import Navbar from "../../../components/Navbar";
+import SmallFooter from "../../../components/smallFooter";
+import Footer from "../../../components/footerSection";
+import Hero from "../component/HeroDetails";
+import PortfolioDetailBody from "../component/portfolioDetailBody";
+import { db } from "../../../utils/firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { PulseLoader } from "react-spinners";
 import { useLocation } from "@reach/router";
-import { ToggleBar } from "../../components/bar";
+import { ToggleBar } from "../../../components/bar";
 
 export default function index() {
   const [detail, setDetail] = useState({});

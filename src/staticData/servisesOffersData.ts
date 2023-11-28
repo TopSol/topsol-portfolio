@@ -122,7 +122,9 @@ import advancement from "../images/Icons/services-details-icon/aIChatIcon/ai adv
 
 const cards = [
   {
-    heading: "CUSTOM SOFTWARE DEVELOPMENT",
+    id:'custom-software',
+    bgImg: Custom,
+    heading: "Custom Software Development",
     desc: "Our Custom Software Solutions are meticulously designed to fit your unique needs, delivering efficiency, scalability, and a technological edge",
     avatar: Img1,
     bg: svg1,
@@ -311,7 +313,9 @@ const cards = [
     showProjects: true,
   },
   {
-    heading: "DEVOPS",
+    id:'devops',
+    bgImg: Dev,
+    heading: "Devops",
     desc: "Our DevOps Services unify development and operations,streamlining workflows for faster, reliable software delivery",
     avatar: Img2,
     bg: svg2,
@@ -425,8 +429,123 @@ const cards = [
       ],
     },
   },
+ 
   {
-    heading: "TEAM AUGMENTATION",
+    id:'web-development',
+    bgImg: web_dev,
+    heading: "Web Development",
+    desc: "Empowering businesses through tailored web development solutions, bringing visions to life with cutting-edge technology and expert craftsmanship.",
+    avatar: Img4,
+    bg: svg3,
+    details: {
+      image: workshop,
+      imageHead: workshopHead,
+      mainHeading: "Website Development: Tailored Web Development Solutions",
+      initialText:
+        "Our company is dedicated to delivering top-notch web development services, crafting customized solutions that align with your business goals. We leverage cutting-edge technology, expert skills, and innovative strategies to bring your digital vision to life. Elevate your online presence with our reliable and dynamic web development expertise, tailored to perfection",
+      conclusion: "",
+      paragraphs: [
+        {
+          img: WebDesign,
+          step: "step 1",
+          heading: "Web Design",
+          text: "Craft visually stunning and user-centric websites with our expert web design services, blending aesthetics and functionality seamlessly for a captivating online experience.",
+        },
+        {
+          img: WebDevelpopment,
+          step: "step 2",
+          heading: "Web Development",
+          text: "Elevate your digital presence with our comprehensive web development solutions, leveraging the latest technologies to ensure robust, scalable, and performance-driven websites tailored to your unique requirements.",
+        },
+        {
+          img: Cms,
+          step: "step 3",
+          heading: "CMS Development",
+          text: "Streamline content management effortlessly with our CMS development services, offering intuitive platforms for easy content updates, site maintenance, and a dynamic online presence.",
+        },
+        {
+          img: ecommerce,
+          step: "step 3",
+          heading: "E-Commerce",
+          text: "Launch and grow your online business with our e-commerce solutions, combining user-friendly interfaces, secure payment gateways, and scalable architectures for a seamless and profitable shopping experience.",
+        },
+        {
+          img: apiDatabase,
+          step: "step 3",
+          heading: "API & Database",
+          text: "Streamline content management effortlessly with our CMS development services, offering intuitive platforms for easy content updates, site maintenance, and a dynamic online presence.",
+        },
+        {
+          img: WebApp,
+          step: "step 3",
+          heading: "Web App Development",
+          text: "Transform your ideas into powerful web applications with our expert development services, delivering scalable, responsive, and feature-rich solutions that cater to your business goals and user expectations.",
+        },
+      ],
+      tecnology: [
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_26,
+          title: "Gats by",
+        },
+        {
+          avatar: Tec_8,
+          title: "Node.js",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_4,
+          title: "Firebase",
+        },
+        {
+          avatar: Tec_2,
+          title: "Python",
+        },
+
+        {
+          avatar: Tec_5,
+          title: "TypeScript",
+        },
+        {
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
+        {
+          avatar: Tec_27,
+          title: "flask",
+        },
+  
+        {
+          avatar: Tec_28,
+          title: "Django",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+       
+      ],
+    },
+  },
+  {
+    id:'team-augmentation',
+    bgImg: Team,
+    heading: "Team Augmentation",
     desc: "Our Team Augmentation services integrate skilled professionals seamlessly into your projects, amplifying your capabilities and accelerating success",
     avatar: Img3,
     bg: svg,
@@ -615,117 +734,9 @@ const cards = [
     },
   },
   {
-    heading: "Web Development",
-    desc: "Empowering businesses through tailored web development solutions, bringing visions to life with cutting-edge technology and expert craftsmanship.",
-    avatar: Img4,
-    bg: svg3,
-    details: {
-      image: workshop,
-      imageHead: workshopHead,
-      mainHeading: "Website Development: Tailored Web Development Solutions",
-      initialText:
-        "Our company is dedicated to delivering top-notch web development services, crafting customized solutions that align with your business goals. We leverage cutting-edge technology, expert skills, and innovative strategies to bring your digital vision to life. Elevate your online presence with our reliable and dynamic web development expertise, tailored to perfection",
-      conclusion: "",
-      paragraphs: [
-        {
-          img: WebDesign,
-          step: "step 1",
-          heading: "Web Design",
-          text: "Craft visually stunning and user-centric websites with our expert web design services, blending aesthetics and functionality seamlessly for a captivating online experience.",
-        },
-        {
-          img: WebDevelpopment,
-          step: "step 2",
-          heading: "Web Development",
-          text: "Elevate your digital presence with our comprehensive web development solutions, leveraging the latest technologies to ensure robust, scalable, and performance-driven websites tailored to your unique requirements.",
-        },
-        {
-          img: Cms,
-          step: "step 3",
-          heading: "CMS Development",
-          text: "Streamline content management effortlessly with our CMS development services, offering intuitive platforms for easy content updates, site maintenance, and a dynamic online presence.",
-        },
-        {
-          img: ecommerce,
-          step: "step 3",
-          heading: "E-Commerce",
-          text: "Launch and grow your online business with our e-commerce solutions, combining user-friendly interfaces, secure payment gateways, and scalable architectures for a seamless and profitable shopping experience.",
-        },
-        {
-          img: apiDatabase,
-          step: "step 3",
-          heading: "API & Database",
-          text: "Streamline content management effortlessly with our CMS development services, offering intuitive platforms for easy content updates, site maintenance, and a dynamic online presence.",
-        },
-        {
-          img: WebApp,
-          step: "step 3",
-          heading: "Web App Development",
-          text: "Transform your ideas into powerful web applications with our expert development services, delivering scalable, responsive, and feature-rich solutions that cater to your business goals and user expectations.",
-        },
-      ],
-      tecnology: [
-        {
-          avatar: Tec_22,
-          title: "React",
-        },
-        {
-          avatar: Tec_19,
-          title: "Next.js",
-        },
-        {
-          avatar: Tec_26,
-          title: "Gats by",
-        },
-        {
-          avatar: Tec_8,
-          title: "Node.js",
-        },
-        {
-          avatar: Tec_17,
-          title: "Express.js",
-        },
-
-        {
-          avatar: Tec_23,
-          title: "GraphQL",
-        },
-        {
-          avatar: Tec_4,
-          title: "Firebase",
-        },
-        {
-          avatar: Tec_2,
-          title: "Python",
-        },
-
-        {
-          avatar: Tec_5,
-          title: "TypeScript",
-        },
-        {
-          avatar: Tec_6,
-          title: "JavasScript",
-        },
-        {
-          avatar: Tec_27,
-          title: "flask",
-        },
-  
-        {
-          avatar: Tec_28,
-          title: "Django",
-        },
-        {
-          avatar: Tec_10,
-          title: "MongoDB",
-        },
-       
-      ],
-    },
-  },
-  {
-    heading: "MOBILE APPS DEVELOPMENT",
+    id:'mobile-apps-development',
+    bgImg: Mobile,
+    heading: "Mobile App Development",
     desc: "Our Mobile App solutions blend innovation and functionality, crafting dynamic experiences that connect users with your brand",
     avatar: Img5,
     bg: svg,
@@ -829,7 +840,9 @@ const cards = [
     showProjects: true,
   },
   {
-    heading: "QUALITY ASSURANCE",
+    id:'quality-assurance',
+    bgImg: Quality,
+    heading: "Quality Assurance",
     desc: "Our Quality Assurance Services fine-tune solutions, ensuring flawless performance and seamless user experiences",
     avatar: Img6,
     bg: svg1,
@@ -1018,7 +1031,9 @@ const cards = [
     showProjects: true,
   },
   {
-    heading: "UI/UX DESIGN",
+    id:'ui-ux-design',
+    bgImg: UI,
+    heading: "UI/UX Design",
     desc: "Our UI/UX Design expertise crafts intuitive interfaces, marrying aesthetics with functionality for unparalleled user journeys",
     avatar: Img7,
     bg: svg2,
@@ -1102,7 +1117,9 @@ const cards = [
     showProjects: true,
   },
   {
-    heading: "AI & CHAT GPT",
+    id:'gen-ai-and-chat-bots',
+    bgImg: AI,
+    heading: "Gen AI and Chat Bots",
     desc: "Our AI & Chat GPT services harness the potential of advanced technology, engaging users in dynamic conversations and automation",
     avatar: Img8,
     bg: svg3,
@@ -1294,34 +1311,42 @@ const cards = [
 
 export const imgCards = [
   {
+    id:'custom-software',
     bgImg: Custom,
     heading: "Custom Software",
   },
   {
+    id:'devops',
     bgImg: Dev,
     heading: "Devops",
   },
   {
+    id:'team-augmentation',
     bgImg: Team,
     heading: "Team Augmentation",
   },
   {
+    id:'web-development',
     bgImg: web_dev,
     heading: "Web Development",
   },
   {
+    id:'mobile-app-development',
     bgImg: Mobile,
     heading: "Mobile App Development",
   },
   {
+    id:'quality-assurance',
     bgImg: Quality,
     heading: "Quality Assurance",
   },
   {
+    id:'ui-ux-design',
     bgImg: UI,
     heading: "UI/UX Design",
   },
   {
+    id:'ai-and-chat-gpt',
     bgImg: AI,
     heading: "AI & Chat GPT",
   },

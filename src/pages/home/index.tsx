@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import CardSection from "./cardSection";
-import ServicesOffers from "./servisesOffers";
 import TopSolExperts from "./topSolExpert";
 import OurPortfolio from "./ourPortfolio";
 import RatingSection from "./ratingSection";
@@ -23,6 +22,7 @@ import Faqs from "./faqs";
 import "../../cursor.css";
 import { ToggleBar } from "../../components/bar";
 import Navbar from "../../components/Navbar";
+import ServicesOffers from "./servisesOffers";
 
 // MouseFollower.registerGSAP(gsap);
 function Home() {

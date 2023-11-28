@@ -38,11 +38,12 @@ export default function Modal({
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "none",
+          opacity: 0.1,
           zIndex: 2000,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)'
         }}
-        className="overlay"
-        onClick={() => closeModal()}
+        className=""
+
       >
         <motion.div
           className="card-content-container open bg-[#efefef] xl:mx-[12%] md:mx-[4%] lg:mx-[8%] xl:min-h-[70vh] md:min-h-[60vh] sm:min-h-[65vh] min-h-[80vh] mx-[1%] rounded-2xl px-[60px] xl:py-[100px] lg:py-[40px] relative"
@@ -51,7 +52,7 @@ export default function Modal({
           transition={{ duration: 0.8, delay: 0.4 }}
           style={{ overflow: "hidden" }}
         >
-          <div className="absolute top-12 right-12 px-[11px] py-1 text-white text-center align-middle cursor-pointer font-bold rounded-full bg-[#309BD3]">
+          <div className="absolute top-12 right-12 px-[11px] py-1 text-white text-center align-middle cursor-pointer font-bold rounded-full bg-[#309BD3]" onClick={() => closeModal()}>
             X
           </div>
 
@@ -60,9 +61,6 @@ export default function Modal({
             layoutId={`card-container-${id}`}
           >
             <div className="md:w-[62%] w-full mt-6">
-              <h4 className="font-montserrat capitalize md:text-[12px] md:text-left text-center lg:text-[20px] text-[#004264]">
-                we are here
-              </h4>
               <p className="font-montserrat md:text-[18px] lg:text-[36px]  md:text-left text-center font-bold text-[#309BD3] capitalize">
                 {res?.heading}
               </p>
