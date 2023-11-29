@@ -16,7 +16,7 @@ function Faqs() {
         <div className="md:w-[80%] items-center container md:mx-auto ">
           <div className="flex flex-col md:items-start items-center ">
             <h1 className="text-white md:text-[48px] text-[40px] text-center md:text-left  font-bold font-urbanist">
-              FAQ's
+              FAQs
             </h1>
             {/* <h1 className='text-primary md:text-[48px] text-[40px] text-center md:text-left font-bold font-urbanist'>QUESTIONS</h1> */}
             <LineAnimation

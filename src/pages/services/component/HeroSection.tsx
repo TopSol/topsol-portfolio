@@ -5,22 +5,22 @@ import { useInView } from "framer-motion";
 
 interface propTypes {
   servicedata?: any;
-  imageHead: string;
 }
 
-export default function HeroSection({ servicedata, imageHead }: propTypes) {
+export default function HeroSection({ servicedata }: propTypes) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const splitTitle = servicedata?.heading?.split(" ");
   const firstName = splitTitle ? splitTitle[0] : "";
   const lastName = splitTitle ? splitTitle.slice(1).join(" ") : "";
+  console.log(servicedata?.servicedata?.heading, "servicedata");
 
   return (
     <div className=" ">
       <div
         className="flex items-center  bg-cover md:h-[70vh] h-[90vh]"
         style={{
-          backgroundImage: `url(${imageHead})`,
+          backgroundImage: `url(${servicedata?.servicesHeader})`,
         }}
       >
         <section

@@ -6,10 +6,18 @@ import { addDoc, collection } from "firebase/firestore";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import PrimaryBtn from "../../../components/PrimaryBtn";
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
 
 interface Iprops {
   addressInfo: boolean;
 }
+const validationSchema = Yup.object().shape({
+  name: Yup.string().required('Name is required'),
+  email: Yup.string().email('Invalid email').required('Email is required'),
+  phone: Yup.string().required('Phone number is required').min(10, 'Invalid phone number'),
+  message: Yup.string().required('Message is required'),
+});
 function ContactForm({ addressInfo }: Iprops) {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -29,28 +37,29 @@ function ContactForm({ addressInfo }: Iprops) {
   const submit = async () => {
     try {
       setLoading(true);
-      if (!name || !email || !message || !phone || phone.length < 10) {
-        toast.error("Please fill all the fields");
-        return;
-      }
+      await validationSchema.validate({ name, email, phone, message }, { abortEarly: false });
+
       const body = {
         name,
         email,
         phone,
         message,
       };
-      await addDoc(collection(db, "getInTouch"), body);
 
-      toast.success(
-        "Your message is received. We will contact you back shortly."
-      );
+      await addDoc(collection(db, 'getInTouch'), body);
+
+      toast.success('Your message is received. We will contact you back shortly.');
     } catch (error) {
-      toast.error("Data cannot be submitted");
+      if (error.name === 'ValidationError') {
+        error.errors.forEach((err) => toast.error(err));
+      } else {
+        toast.error('Data cannot be submitted');
+      }
     } finally {
-      setName("");
-      setEmail("");
-      setPhone("+92");
-      setMessage("");
+      setName('');
+      setEmail('');
+      setPhone('+92');
+      setMessage('');
       setLoading(false);
     }
   };
@@ -62,9 +71,8 @@ function ContactForm({ addressInfo }: Iprops) {
       </div>
       <div className=" mx-auto  w-[100%] mt-10 md:mt-0">
         <div
-          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${
-            isFocused === "name" ? "border-primary" : "border-[#1F1F1F]"
-          }`}
+          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${isFocused === "name" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
         >
           <div className="md:w-[6%] w-[13%]">
             <svg
@@ -97,9 +105,8 @@ function ContactForm({ addressInfo }: Iprops) {
         </div>
         <div className="flex flex-col md:flex-row md:mt-7  mt-3 justify-between">
           <div
-            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${
-              isFocused === "email" ? "border-primary" : "border-[#1F1F1F]"
-            }`}
+            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "email" ? "border-primary" : "border-[#1F1F1F]"
+              }`}
           >
             <div className="w-[9%] mr-3">
               <svg
@@ -127,9 +134,8 @@ function ContactForm({ addressInfo }: Iprops) {
             />
           </div>
           <div
-            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] md:mt-0  mt-3 border-[1px] items-center py-[7px]  px-[20px] ${
-              isFocused === "phone" ? "border-primary" : "border-[#1F1F1F]"
-            }`}
+            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] md:mt-0  mt-3 border-[1px] items-center py-[7px]  px-[20px] ${isFocused === "phone" ? "border-primary" : "border-[#1F1F1F]"
+              }`}
           >
             <PhoneInput
               inputStyle={{
@@ -149,16 +155,14 @@ function ContactForm({ addressInfo }: Iprops) {
           </div>
         </div>
         <div
-          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center py-[10px]  px-[20px] ${
-            isFocused === "message" ? "border-primary" : "border-[#1F1F1F]"
-          }`}
+          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center pt-[10px]  pl-[20px] ${isFocused === "message" ? "border-primary" : "border-[#1F1F1F]"
+            }`}
         >
-          <input
-            type="text"
+          <textarea
             placeholder="Write your Message"
             value={message}
             onChange={(e) => setMessage(e.target.value as string)}
-            className="outline-none text-[18px] font-medium w-[90%] font-figtree"
+            className="outline-none text-[18px] font-medium w-[100%] font-figtree"
             onFocus={() => handleFocus("message")}
             onBlur={handleBlur}
           />
@@ -173,24 +177,22 @@ function ContactForm({ addressInfo }: Iprops) {
             <PrimaryBtn
               text="Send"
               icon={true}
-              additionalClasses={`text-primary flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px]  text-[18px]  text-white rounded-[6px] ${
-                loading ? "bg-gray-500" : "bg-primary"
-              } `}
+              additionalClasses={`text-primary flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px]  text-[18px]  text-white rounded-[6px] ${loading ? "bg-gray-500" : "bg-primary"
+                } `}
             />
           </button>
         </div>
       </div>
       <div
-        className={` ${
-          addressInfo ? "flex" : "hidden"
-        } flex-col mt-[37px] md:flex-row justify-between`}
+        className={` ${addressInfo ? "flex" : "hidden"
+          } flex-col mt-[37px] md:flex-row justify-between`}
       >
         <div className=" md:w-[30%] w-[100%]">
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">
             lOCATION
           </h1>
           <p className="mt-3 text-[#1F1F1F] font-figtree  text-[14px] leading-[125%] ">
-            2nd Floor, Sitara Techno Park, Lower Cenal Road East, Faisalabad,
+            2nd Floor, Sitara Techno Park, Lower Canal Road East, Faisalabad,
             Pakistan
           </p>
         </div>

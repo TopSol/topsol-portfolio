@@ -6,12 +6,15 @@ import LineAnimation from "../../../components/LineAnimation";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../../utils/firebase";
+import { useLocation } from "@reach/router";
 
-function ServicesOffers({ page, showPrimaryBtn, detail }) {
+function ServicesOffers({ page, showPrimaryBtn }) {
   const [portFolios, setPortFolios] = useState([]);
   const [loader, setLoader] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const location = useLocation();
 
+  const id = new URLSearchParams(location.search).get("id");
   const fetchPortFolios = async () => {
     try {
       setLoader(true);
@@ -58,8 +61,8 @@ function ServicesOffers({ page, showPrimaryBtn, detail }) {
       <div className="grid mt-[36px] md:mt-[85px] gap-x-[27px] gap-y-[48px]  sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
         {portFolios?.map((item, index) => (
           <div key={index}>
-            <Link to={`/services/${item.id}`} state={{ service: item }}>
-              <ServicesCards serviceData={item} />
+            <Link to={`/services/[${item.name}]/?id=${item.id}`} key={item.id}>
+              <ServicesCards serviceData={item} index={item.id} />
             </Link>
           </div>
         ))}

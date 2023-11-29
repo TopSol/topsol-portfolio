@@ -1,7 +1,7 @@
 import React from "react";
 import Arrowup from "../../../images/Icons/arrowup.svg";
 
-function ServicesCards({ serviceData }) {
+function ServicesCards({ serviceData, index }) {
   return (
     <div className=" rounded-2xl w-[285px] h-[320px] relative overflow-hidden service-cards-transition">
       <div className="w-full h-full absolute">

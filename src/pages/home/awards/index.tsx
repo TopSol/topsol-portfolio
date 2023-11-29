@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import prevImg from "../../../images/prev.png";
 import nextImg from "../../../images/next.png";
 import Slider from "react-slick";
@@ -11,6 +11,35 @@ import LineAnimation from "../../../components/LineAnimation";
 import bgImage from '../../../images/homeImages/awardsection/bgImage.webp'
 function Awards() {
   const [slider, setSlider] = useState<any | null>(null);
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  const updateSlidesToShow = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+      setSlidesToShow(1);
+    } else if (screenWidth >= 768 && screenWidth <= 1024) {
+      setSlidesToShow(2);
+    }
+    else {
+      setSlidesToShow(4);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('resize', updateSlidesToShow);
+    updateSlidesToShow();
+    return () => {
+      window.removeEventListener('resize', updateSlidesToShow);
+    };
+  }, []);
+  const settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 2500,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+  };
 
   const next = () => {
     if (slider) {
@@ -24,41 +53,41 @@ function Awards() {
     }
   };
 
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    arrows: false,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // var settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 1000,
+  //   arrows: false,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 5,
+  //   initialSlide: 0,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         infinite: true,
+  //         dots: false,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         initialSlide: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
 
   return (
     <>
@@ -69,10 +98,10 @@ function Awards() {
       >
         <div className="flex flex-col  items-center md:items-start mb-6">
           <h1 className="font-extrabold  font-urbanist  text-[26px] md:text-[34px] lg:text-[48px]  uppercase leading-[120%] ">
-            AWARD &
+            AWADS &
           </h1>
           <h1 className="font-extrabold font-urbanist  text-primary text-[26px] md:text-[34px] lg:text-[48px]  uppercase leading-[120%] ">
-            HONOURS
+            HONORS
           </h1>
           <LineAnimation
             width="178px"

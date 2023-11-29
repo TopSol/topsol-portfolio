@@ -56,6 +56,14 @@ import Tec_38 from "../images/Icons/techonologies/Group 39286.png";
 import Tec_39 from "../images/Icons/techonologies/pngwing 6.png";
 import Tec_40 from "../images/Icons/techonologies/expo.png";
 import Tec_41 from "../images/Icons/techonologies/canva-icon 1.png";
+import Tec_42 from "../images/Icons/techonologies/Group 39329.svg";
+import Tec_43 from "../images/Icons/techonologies/rubyrails.svg";
+import Tec_44 from "../images/Icons/techonologies/Vector1.png";
+import Tec_45 from "../images/Icons/techonologies/Vector2.png";
+import Tec_46 from "../images/Icons/techonologies/image 168.png";
+import Tec_47 from "../images/Icons/techonologies/Group 39330.png";
+import Tec_48 from "../images/Icons/techonologies/Group 39331.png";
+
 
 
 
@@ -119,6 +127,15 @@ const FrontEnd = [
     avatar: Tec_9,
     title: "Flutter",
   },
+
+  {
+    avatar: Tec_18,
+    title: "Laravel",
+  },
+  {
+    avatar: Tec_42,
+    title: "PHP",
+  },
 ];
 const Devops = [
   {
@@ -159,6 +176,25 @@ const CMS = [
   {
     avatar: Tec_29,
     title: "Wordpress",
+  },
+  {
+    avatar: Tec_44,
+    title: "Magento",
+  }, {
+    avatar: Tec_45,
+    title: "Drupal",
+  },
+  {
+    avatar: Tec_46,
+    title: "Bubble.io",
+  },
+  {
+    avatar: Tec_47,
+    title: "Joomla",
+  },
+  {
+    avatar: Tec_48,
+    title: "Realm",
   },
 ];
 const Database = [
@@ -214,11 +250,15 @@ const Backend = [
     avatar: Tec_4,
     title: "Firebase",
   },
-
   {
-    avatar: Tec_18,
-    title: "Laravel",
+    avatar: Tec_42,
+    title: "PHP",
   },
+  {
+    avatar: Tec_43,
+    title: "Ruby on Rails",
+  },
+
 ];
 const UiUx = [
   {

@@ -40,7 +40,7 @@ export default function AddressSection() {
             </div>
             <h1 className="text-primary uppercase mt-[22px]">Email</h1>
             <div className="flex items-center  ">
-              <p className="text-base ">admin@topsol.org</p>
+              <p className="text-base ">info@topsol.org</p>
             </div>
           </div>
         </div>

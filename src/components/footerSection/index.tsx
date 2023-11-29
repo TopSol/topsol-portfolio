@@ -29,9 +29,8 @@ export default function Footer() {
                   A Software development Company
                 </span>
               </div>
-              <div className="flex space-x-4 mt-[34px] ">
-                <Link to="https://www.linkedin.com/company/topsolorg/mycompany/">
-                  {/* <AiFillLinkedin className="w-[30px] h-[30px] " /> */}
+              <div className="flex space-x-4 mt-[34px]">
+                <Link to="https://www.linkedin.com/company/topsolorg/mycompany/" target="_blank" rel="noopener noreferrer">
                   <img
                     src={linkedin}
                     alt="linkedin"
@@ -39,7 +38,7 @@ export default function Footer() {
                     className="logo_default h-[30px] w-[30px]"
                   />
                 </Link>
-                <Link to="https://www.instagram.com/topsol_org/">
+                <Link to="https://www.instagram.com/topsol_org/" target="_blank" rel="noopener noreferrer">
                   <img
                     src={instagram}
                     alt="instagram"
@@ -47,7 +46,7 @@ export default function Footer() {
                     className="logo_default h-[30px] w-[30px]"
                   />
                 </Link>
-                <Link to="https://www.facebook.com/topsol.org">
+                <Link to="https://www.facebook.com/topsol.org" target="_blank" rel="noopener noreferrer">
                   <img
                     src={facebook}
                     alt="facebook"
@@ -56,6 +55,7 @@ export default function Footer() {
                   />
                 </Link>
               </div>
+
               <div className="mt-12">
                 <EmailOptInForm />
               </div>

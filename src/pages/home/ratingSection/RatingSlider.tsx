@@ -1,7 +1,5 @@
 import React from "react";
-import ratingCircle from "../../../images/rating1.png";
-import fiveStart from "../../../images/fiveStars.png";
-import CircleImage from "../../../components/CircleImage";
+import fiveStart from "../../../images/fiveStars.svg";
 type appProps = {
   review: any;
 };

@@ -40,7 +40,7 @@ export default function VideoHero({ title, image, page }: Iprops) {
                 <span className="text-primary md:text-[60px] font-bold font-urbanist ">{lastName}</span>
               </h1>
               <h3 className={`text-center md:text-start md:text-[22px]  font-figtree font-light  ${page === 'services' || 'about' ? 'text-white' : 'text-textColors'} hero-text-sideLine   lg:w-[75%] mt-[56px]`} >
-                Topsol is a software and mobile app development company with a
+                TOPSOL is a software and mobile app development company with a
                 world-class team of talented data scientists, developers,
                 designers, mathematicians, engineers, and creative artists. We
                 are motivated to build elegant and functional digital products
