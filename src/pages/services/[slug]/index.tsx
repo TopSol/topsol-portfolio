@@ -9,42 +9,42 @@ import Tecnology from "../component/Tecnology";
 import RatingSection from "../../home/ratingSection/index";
 import SmallFooter from "../../../components/smallFooter";
 import { useLocation } from "@reach/router";
-import { collection, doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../../utils/firebase";
 import { PulseLoader } from "react-spinners";
+import { Link, useParams } from "react-router-dom";
 
-export default function ServiceDetails() {
-
-  const [detail, setDetail] = useState({});
+export default function ServiceDetails(pageContext) {
+  const [portFolios, setPortFolios] = useState([]);
   const [loader, setLoader] = useState(false);
-
   const location = useLocation();
+  const { slug } = pageContext.params;
+  // const name = new URLSearchParams(location.search).get("name");
+  console.log(pageContext, 'portFoliosportFolios');
 
-  const id = new URLSearchParams(location.search).get("id");
-
-  const fetchPortfolioItem = async () => {
+  const fetchPortFolios = async () => {
     try {
       setLoader(true);
-      const portfolioItemRef = doc(collection(db, "services"), id);
-      const portfolioItemDoc = await getDoc(portfolioItemRef);
 
-      if (portfolioItemDoc.exists()) {
-        setDetail(portfolioItemDoc.data());
-      } else {
-        console.error("Portfolio item not found.");
-      }
+      const portfolioCollection = collection(db, "services");
+      let portfolioQuery = query(portfolioCollection, orderBy("createdAt"));
+      const portfolioSnapshot = await getDocs(portfolioQuery);
+      const portfolioData = portfolioSnapshot.docs.map((doc) => doc.data());
+      const filteredPortfolios = slug
+        ? portfolioData.filter((portfolio) => portfolio.name === slug)
+        : portfolioData;
+      setPortFolios(filteredPortfolios);
       setLoader(false);
     } catch (error) {
-      console.error("Error fetching portfolio item:", error);
       setLoader(false);
+      console.error("Error fetching portfolios:", error);
     }
   };
 
   useEffect(() => {
-    if (id) {
-      fetchPortfolioItem();
-    }
-  }, [id]);
+    fetchPortFolios();
+  }, [slug]);
+
   return (
     <div>
       <div>
@@ -59,7 +59,7 @@ export default function ServiceDetails() {
         <div>
 
           <HeroSection
-            servicedata={detail}
+            servicedata={portFolios[0]}
           />
         </div>
       )}

@@ -1,10 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import PrimaryBtn from "./PrimaryBtn";
 import heroImg from "../images/hero-bg.png";
 import heroImage from '../images/heroImage.png'
 import { Link } from "gatsby";
-import ServicesOffers from "../pages/home/servisesOffers";
-import { useInView } from "framer-motion";
+
 interface Iprops {
   title: string;
   image?: string;
@@ -15,8 +14,7 @@ export default function VideoHero({ title, image, page }: Iprops) {
   const splitTitle = title?.split(" ");
   const firstName = splitTitle[0];
   const lastName = splitTitle.slice(1).join(" ");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+
   return (
     <div className=" ">
       <div
@@ -25,13 +23,8 @@ export default function VideoHero({ title, image, page }: Iprops) {
           backgroundImage: page === 'services' ? "none" : `url(${image})`,
         }}
       >
-        <section className="   flex flex-col  md:container mx-auto "
-          ref={ref}
-          style={{
-            transform: isInView ? "none" : "translateX(-200px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-          }}
+        <section data-aos="fade-up" className="   flex flex-col  md:container mx-auto "
+
         >
           <div className="   mx-6   md:mx-auto md:w-[90%] ">
             <div className="  ">

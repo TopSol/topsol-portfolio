@@ -5,7 +5,7 @@ import LineAnimation from "../../../components/LineAnimation";
 export default function Experience() {
   return (
     <div className="bg-gradient-to-b from-secondary to-primary mt-[80px] pt-[48px] pb-[140px] md:pt-[92px] md:pb-[92px] ">
-      <div className=" flex flex-col md:justify-start justify-center  items-center  ">
+      <div className=" flex flex-col md:justify-start justify-center  items-center  " data-aos="fade-up">
         <h1 className="font-bold text-white  uppercase font-urbanist text-[26px] md:text-[48px] text-center ">
           Our <span className="text-primary font-bold font-urbanist">Achievements</span>
         </h1>
@@ -17,7 +17,7 @@ export default function Experience() {
         />
         <p className='text-white font-figtree md:text-[24px] text-[16px] font-medium leading-[120%] mt-8 text-center '>Discover our track record of success with these dynamic statistics showcasing our achievements</p>
       </div>
-      <div className=" md:container md:mx-auto mt-16  mx-[18px] flex flex-col justify-center items-center ">
+      <div className=" md:container md:mx-auto mt-16  mx-[18px] flex flex-col justify-center items-center " data-aos="fade-up">
         <div className="flex lg:flex-row flex-col  lg:space-x-4 ">
           <div className="bg-white rounded-[10px]  justify-center flex flex-row  items-center  w-[300px] sm:w-[500px]   py-4  sm:py-9 ">
             <div className="w-[20%] sm:w-[25%]">

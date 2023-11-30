@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import closeImg from "../images/close.png";
-import logoTwo from "../images/main_logo2.png";
-import Arrowup from "../images/Icons/arrowup.svg";
-import { motion } from "framer-motion";
+import logoTwo from "../images/TOPSOL LOGO-01-01 2.svg";
 import PrimaryBtn from "./PrimaryBtn";
 import { Link } from "gatsby";
 function Navbar() {
@@ -13,7 +10,7 @@ function Navbar() {
       <div className="lg:flex md:container hidden  mx-auto flex-row justify-between items-center">
         <div className="py-2 ml-2 ">
           <Link to="/">
-            <img src={logoTwo} alt="TopSol" decoding="async" />
+            <img src={logoTwo} alt="TOPSOL" decoding="async" />
           </Link>
         </div>
         <div>

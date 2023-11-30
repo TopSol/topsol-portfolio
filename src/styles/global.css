@@ -177,3 +177,9 @@ padding-bottom: 20px;
   -o-transition: .7s ease;
   transition: .7s ease;
 }
+
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+

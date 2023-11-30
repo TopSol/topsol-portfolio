@@ -4,7 +4,7 @@ import cards, { imgCards } from "../../../staticData/servisesOffersData";
 import { Link } from "gatsby";
 import LineAnimation from "../../../components/LineAnimation";
 import PrimaryBtn from "../../../components/PrimaryBtn";
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../../utils/firebase";
 import { useLocation } from "@reach/router";
 
@@ -14,16 +14,14 @@ function ServicesOffers({ page, showPrimaryBtn }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const location = useLocation();
 
-  const id = new URLSearchParams(location.search).get("id");
+  const id = new URLSearchParams(location.search).get("name");
+
   const fetchPortFolios = async () => {
     try {
       setLoader(true);
-      const portfolioCollection = collection(db, "services");
-      const portfolioQuery = query(
-        portfolioCollection,
-        orderBy("createdAt")
-      );
 
+      const portfolioCollection = collection(db, "services");
+      let portfolioQuery = query(portfolioCollection, orderBy("createdAt"));
       const portfolioSnapshot = await getDocs(portfolioQuery);
       const portfolioData = portfolioSnapshot.docs.map((doc) => doc.data());
 
@@ -61,7 +59,7 @@ function ServicesOffers({ page, showPrimaryBtn }) {
       <div className="grid mt-[36px] md:mt-[85px] gap-x-[27px] gap-y-[48px]  sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
         {portFolios?.map((item, index) => (
           <div key={index}>
-            <Link to={`/services/[${item.name}]/?id=${item.id}`} key={item.id}>
+            <Link to={`/services/${item.name}`} key={item.name}>
               <ServicesCards serviceData={item} index={item.id} />
             </Link>
           </div>

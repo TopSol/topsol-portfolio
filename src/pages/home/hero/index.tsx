@@ -4,7 +4,6 @@ import { PopupButton } from "react-calendly";
 import PrimaryBtn from "../../../components/PrimaryBtn";
 import arrowup from "../../../images/Icons/arrowup.svg";
 import { Link } from "gatsby";
-import { useInView } from "framer-motion";
 
 export default function Hero() {
   const [root, setRoot] = useState(null);
@@ -14,17 +13,11 @@ export default function Hero() {
   useEffect(() => {
     setRoot(document.body);
   }, []);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+
   return (
     <div className="bg-cover min-h-[90vh] md:min-h-[100vh] xl:min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground  justify-center">
       <div className="flex flex-col justify-center px-4 sm:px-6 lg:px-2"
-        ref={ref}
-        style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-        }}
+        data-aos="fade-up"
       >
         <h1
           id="root"

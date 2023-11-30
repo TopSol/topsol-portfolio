@@ -1,15 +1,13 @@
 import React, { useRef } from "react";
 import { Link } from "gatsby";
 import PrimaryBtn from "../../../components/PrimaryBtn";
-import { useInView } from "framer-motion";
 
 interface propTypes {
   servicedata?: any;
 }
 
 export default function HeroSection({ servicedata }: propTypes) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+
   const splitTitle = servicedata?.heading?.split(" ");
   const firstName = splitTitle ? splitTitle[0] : "";
   const lastName = splitTitle ? splitTitle.slice(1).join(" ") : "";
@@ -25,12 +23,7 @@ export default function HeroSection({ servicedata }: propTypes) {
       >
         <section
           className="   flex flex-col  md:container mx-auto "
-          ref={ref}
-          style={{
-            transform: isInView ? "none" : "translateX(-200px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-          }}
+          data-aos="fade-up"
         >
           <div className="     md:mx-auto md:w-[90%] ">
             <div className="  ">

@@ -4,7 +4,7 @@ import { motion, sync, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuItem";
 import { Navigation } from "./Navigation";
 import "./style.css";
-import Logo from "../../images/main_logo2.png";
+import Logo from "../../images/TOPSOL LOGO-01-01 2.svg";
 import { Link, navigate } from "gatsby";
 
 const sidebar = {

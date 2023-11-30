@@ -14,7 +14,7 @@ export default function InfoSection({
   image
 }: Props) {
   return (
-    <div className="flex flex-col md:flex-row  md:container md:mx-auto items-center  my-20 justify-center">
+    <div className="flex flex-col md:flex-row  md:container md:mx-auto items-center  my-20 justify-center" data-aos="fade-up">
 
       <div className="   text-center md:text-left flex flex-col  mt-6 lg:mt-12 md:w-[40%] w-[90%]">
         <div className="flex  items-center ">

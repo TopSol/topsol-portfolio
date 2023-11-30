@@ -3,7 +3,7 @@ import Arrowup from "../../../images/Icons/arrowup.svg";
 
 function ServicesCards({ serviceData, index }) {
   return (
-    <div className=" rounded-2xl w-[285px] h-[320px] relative overflow-hidden service-cards-transition">
+    <div className=" rounded-2xl w-[285px] h-[320px] relative overflow-hidden service-cards-transition" data-aos="fade-up">
       <div className="w-full h-full absolute">
         <img src={serviceData?.bgImg} />
       </div>

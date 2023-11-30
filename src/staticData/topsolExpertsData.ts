@@ -200,7 +200,7 @@ const CMS = [
 const Database = [
   {
     avatar: Tec_30,
-    title: "Dynamo db",
+    title: "DynamoDB",
   },
   {
     avatar: Tec_31,

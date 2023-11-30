@@ -8,7 +8,7 @@ import { ToggleBar } from "../../../components/bar";
 
 
 export default function index() {
-  const [detail, setDetail] = useState({});
+  const [detail, setDetail] = useState<any>({});
   const location = useLocation();
 
   const name = new URLSearchParams(location.search).get("name");
