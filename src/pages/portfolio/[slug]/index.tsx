@@ -5,42 +5,47 @@ import Footer from "../../../components/footerSection";
 import Hero from "../component/HeroDetails";
 import PortfolioDetailBody from "../component/portfolioDetailBody";
 import { db } from "../../../utils/firebase";
-import { collection, doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { PulseLoader } from "react-spinners";
 import { useLocation } from "@reach/router";
 import { ToggleBar } from "../../../components/bar";
 
-export default function index() {
+export default function index(pageContext) {
   const [detail, setDetail] = useState({});
   const [loader, setLoader] = useState(false);
 
-  const location = useLocation();
+  const { slug } = pageContext.params;
 
-  const id = new URLSearchParams(location.search).get("id");
 
-  const fetchPortfolioItem = async () => {
+  const fetchPortfolioItems = async () => {
     try {
       setLoader(true);
-      const portfolioItemRef = doc(collection(db, "portFolio"), id);
-      const portfolioItemDoc = await getDoc(portfolioItemRef);
+      const portfolioItemsRef = collection(db, "portFolio");
+      const portfolioItemsSnapshot = await getDocs(portfolioItemsRef);
 
-      if (portfolioItemDoc.exists()) {
-        setDetail(portfolioItemDoc.data());
-      } else {
-        console.error("Portfolio item not found.");
-      }
-      setLoader(false);
+      const items = [];
+      portfolioItemsSnapshot.forEach((doc) => {
+        if (doc.exists()) {
+          items.push(doc.data());
+
+        } else {
+          console.error("Portfolio item not found.");
+        }
+      });
+      const filteredItems = items.filter((item) => item.name === slug);
+      setDetail(filteredItems);
     } catch (error) {
-      console.error("Error fetching portfolio item:", error);
+      console.error("Error fetching portfolio items:", error);
+    } finally {
       setLoader(false);
     }
   };
 
+
   useEffect(() => {
-    if (id) {
-      fetchPortfolioItem();
-    }
-  }, [id]);
+    fetchPortfolioItems();
+  }, [slug]);
+
   return (
     <div>
       <div>
@@ -53,8 +58,8 @@ export default function index() {
         </div>
       ) : (
         <div>
-          <Hero data={detail} />
-          <PortfolioDetailBody data={detail} />
+          <Hero data={detail[0]} />
+          <PortfolioDetailBody data={detail[0]} />
         </div>
       )}
       <div className="mb-[70px]">

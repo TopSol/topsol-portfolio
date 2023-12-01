@@ -12,15 +12,13 @@ import { useLocation } from "@reach/router";
 import { collection, doc, getDoc, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../../utils/firebase";
 import { PulseLoader } from "react-spinners";
-import { Link, useParams } from "react-router-dom";
 
 export default function ServiceDetails(pageContext) {
   const [portFolios, setPortFolios] = useState([]);
   const [loader, setLoader] = useState(false);
   const location = useLocation();
   const { slug } = pageContext.params;
-  // const name = new URLSearchParams(location.search).get("name");
-  console.log(pageContext, 'portFoliosportFolios');
+  // console.log(pageContext, 'portFoliosportFolios');
 
   const fetchPortFolios = async () => {
     try {
@@ -61,6 +59,14 @@ export default function ServiceDetails(pageContext) {
           <HeroSection
             servicedata={portFolios[0]}
           />
+          <InfoSection
+            heading={portFolios[0]?.heading}
+            mainHeading={portFolios[0]?.infoHeading}
+            initialText={portFolios[0]?.infoDesc}
+            image={portFolios[0]?.infoImage}
+          />
+          <WorkFlow workFlowData={portFolios[0]?.paragraph} />
+          <Tecnology servicedata={portFolios[0]?.tecnology} />
         </div>
       )}
       {/* <InfoSection
@@ -69,7 +75,6 @@ export default function ServiceDetails(pageContext) {
         initialText={state?.service?.details?.initialText}
         image={state?.service?.details?.image}
       />
-      <WorkFlow servicedata={state?.service} />
       <Tecnology servicedata={state?.service} /> */}
       {/* <RatingSection /> */}
       <div className="mb-[69px]">

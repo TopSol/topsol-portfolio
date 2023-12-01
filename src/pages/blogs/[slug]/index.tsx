@@ -2,46 +2,53 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/footerSection";
 import { db } from "../../../utils/firebase";
-import { collection, doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { useLocation, } from "@reach/router";
 import { ToggleBar } from "../../../components/bar";
 
 
-export default function index() {
+export default function index(pageContext) {
   const [detail, setDetail] = useState<any>({});
-  const location = useLocation();
+  const [loader, setLoader] = useState(false);
 
-  const name = new URLSearchParams(location.search).get("name");
-  const id = detail[name];
+  const { slug } = pageContext.params;
 
 
-  const fetchPortfolioItem = async () => {
+  const fetchPortfolioItems = async () => {
     try {
-      const portfolioItemRef = doc(collection(db, "blogs"), id);
-      const portfolioItemDoc = await getDoc(portfolioItemRef);
+      setLoader(true);
+      const portfolioItemsRef = collection(db, "blogs");
+      const portfolioItemsSnapshot = await getDocs(portfolioItemsRef);
 
-      if (portfolioItemDoc.exists()) {
-        setDetail(portfolioItemDoc.data());
-      } else {
-        console.error("Portfolio item not found.");
-      }
+      const items = [];
+      portfolioItemsSnapshot.forEach((doc) => {
+        if (doc.exists()) {
+          items.push(doc.data());
+
+        } else {
+          console.error("Portfolio item not found.");
+        }
+      });
+      const filteredItems = items.filter((item) => item.name === slug);
+      setDetail(filteredItems);
     } catch (error) {
-      console.error("Error fetching portfolio item:", error);
+      console.error("Error fetching portfolio items:", error);
+    } finally {
+      setLoader(false);
     }
   };
 
+
   useEffect(() => {
-    if (id) {
-      fetchPortfolioItem();
-    }
-  }, [id]);
+    fetchPortfolioItems();
+  }, [slug]);
   return (
     <div>
       <div>
         <ToggleBar />
         <Navbar />
       </div>
-      <div dangerouslySetInnerHTML={{ __html: detail?.htmlCode || "" }} />
+      <div dangerouslySetInnerHTML={{ __html: detail[0]?.htmlCode || "" }} />
       <div className="mt-10">
         <Footer />
       </div>

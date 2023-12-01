@@ -59,7 +59,7 @@ function OurPortfolio() {
       </div>
       <div className=" md:mt-[53px]   w-[100%] grid  md:grid-cols-2  xl:grid-cols-4  grid-cols-1  md:gap-x-4 ">
         {portfolioData?.map((item: any, index: any) => (
-          <Link to={`/portfolio/[${item.name}]/?id=${item.id}`} key={item.id}>
+          <Link to={`/portfolio/${item.name}`} key={item.name}>
             <div
               key={index}
               className={`rounded-[16px] mt-[28px]  

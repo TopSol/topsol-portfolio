@@ -156,7 +156,7 @@ export default function RecentWork() {
           )
           .slice(currentIndex, currentIndex + itemsPerPage)
           .map((item, index) => (
-            <Link to={`/portfolio/${item.name}/?id=${item.id}`} key={item.id}>
+            <Link to={`/portfolio/${item.name}`} key={item.name}>
               <div className=" mt-10 md:mt-[100px]">
                 <PortfolioCard
                   data={item}
