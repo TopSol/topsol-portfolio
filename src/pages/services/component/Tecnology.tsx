@@ -81,7 +81,7 @@ export default function Tecnology({ servicedata }) {
                                 <div className='flex flex-col   items-center justify-center '>
                                     <div className='border-[4px] border-white rounded-[8px] w-[136px] h-[136px] justify-center flex items-center flex-col'>
                                         <img src={item?.icon} alt="" className='' />
-                                        <h1 className='text-textColors mt-5 font-urbanist text-[18px] leading-[120%] font-semibold'>{item?.name}</h1>
+                                        <h1 className='text-textColors mt-5 font-urbanist text-[18px] text-center leading-[120%] font-semibold'>{item?.name}</h1>
                                     </div>
                                 </div>
                             ))}

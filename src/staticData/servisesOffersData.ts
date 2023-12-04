@@ -60,7 +60,7 @@ import Tec_23 from "../images/Icons/techonologies/tec_23.svg";
 import Tec_24 from "../images/Icons/techonologies/tec_24.svg";
 import Tec_25 from "../images/Icons/techonologies/pngwing 6.png";
 import Tec_26 from "../images/Icons/techonologies/GETSBY.png";
-import Tec_27 from "../images/Icons/techonologies/flask.png";
+import Tec_27 from "../images/Icons/techonologies/Flask.png";
 import Tec_28 from "../images/Icons/techonologies/Group 39286.png";
 import Tec_29 from "../images/Icons/techonologies/expo.png";
 import Tec_30 from "../images/Icons/techonologies/Vector.png";
@@ -177,7 +177,7 @@ const cards = [
       tecnology: [
         {
           avatar: Tec_1,
-          title: "Azure",
+          title: "Microsoft Azure",
         },
         {
           avatar: Tec_2,
@@ -201,7 +201,7 @@ const cards = [
         },
         {
           avatar: Tec_7,
-          title: "AWS",
+          title: "Amazon Web Services",
         },
         {
           avatar: Tec_8,
@@ -273,7 +273,7 @@ const cards = [
         },
         {
           avatar: Tec_27,
-          title: "flask",
+          title: "Flask",
         },
   
         {
@@ -286,28 +286,21 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
         {
           avatar: Tec_33,
-          title: "Photoshop",
+          title: "Adobe Photoshop",
         },
         {
           avatar: Tec_34,
-          title: "Illustrator",
+          title: "Adobe Illustrator",
         },
         {
           avatar: Tec_35,
           title: "Canva",
         },
-        {
-          avatar: Tec_31,
-          title: "Figma",
-        },
-        {
-          avatar: Tec_32,
-          title: "Adobexd",
-        },
+
       ],
     },
     showProjects: true,
@@ -368,12 +361,12 @@ const cards = [
       tecnology: [
         {
           avatar: Tec_1,
-          title: "Azure",
+          title: "Microsoft Azure",
         },
 
         {
           avatar: Tec_7,
-          title: "AWS",
+          title: "Amazon Web Services",
         },
 
         {
@@ -398,34 +391,7 @@ const cards = [
           avatar: Tec_25,
           title: "Jenkins",
         },
-        {
-          avatar: Tec_31,
-          title: "Figma",
-        },
-        {
-          avatar: Tec_32,
-          title: "Adobexd",
-        },
-        {
-          avatar: Tec_33,
-          title: "Photoshop",
-        },
-        {
-          avatar: Tec_34,
-          title: "Illustrator",
-        },
-        {
-          avatar: Tec_35,
-          title: "Canva",
-        },
-        {
-          avatar: Tec_31,
-          title: "Figma",
-        },
-        {
-          avatar: Tec_32,
-          title: "Adobexd",
-        },
+       
       ],
     },
   },
@@ -527,7 +493,7 @@ const cards = [
         },
         {
           avatar: Tec_27,
-          title: "flask",
+          title: "Flask",
         },
   
         {
@@ -599,7 +565,7 @@ const cards = [
       tecnology: [
         {
           avatar: Tec_1,
-          title: "Azure",
+          title: "Microsoft Azure",
         },
         {
           avatar: Tec_2,
@@ -623,7 +589,7 @@ const cards = [
         },
         {
           avatar: Tec_7,
-          title: "AWS",
+          title: "Amazon Web Services",
         },
         {
           avatar: Tec_8,
@@ -695,7 +661,7 @@ const cards = [
         },
         {
           avatar: Tec_27,
-          title: "flask",
+          title: "Flask",
         },
   
         {
@@ -708,15 +674,15 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
         {
           avatar: Tec_33,
-          title: "Photoshop",
+          title: "Adobe Photoshop",
         },
         {
           avatar: Tec_34,
-          title: "Illustrator",
+          title: "Adobe Illustrator",
         },
         {
           avatar: Tec_35,
@@ -728,7 +694,7 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
       ],
     },
@@ -895,7 +861,7 @@ const cards = [
       tecnology: [
         {
           avatar: Tec_1,
-          title: "Azure",
+          title: "Microsoft Azure",
         },
         {
           avatar: Tec_2,
@@ -919,7 +885,7 @@ const cards = [
         },
         {
           avatar: Tec_7,
-          title: "AWS",
+          title: "Amazon Web Services",
         },
         {
           avatar: Tec_8,
@@ -991,7 +957,7 @@ const cards = [
         },
         {
           avatar: Tec_27,
-          title: "flask",
+          title: "Flask",
         },
   
         {
@@ -1004,15 +970,15 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
         {
           avatar: Tec_33,
-          title: "Photoshop",
+          title: "Adobe Photoshop",
         },
         {
           avatar: Tec_34,
-          title: "Illustrator",
+          title: "Adobe Illustrator",
         },
         {
           avatar: Tec_35,
@@ -1024,7 +990,7 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
       ],
     },
@@ -1090,15 +1056,15 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
         {
           avatar: Tec_33,
-          title: "Photoshop",
+          title: "Adobe Photoshop",
         },
         {
           avatar: Tec_34,
-          title: "Illustrator",
+          title: "Adobe Illustrator",
         },
         {
           avatar: Tec_35,
@@ -1110,7 +1076,7 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
       ],
     },
@@ -1172,7 +1138,7 @@ const cards = [
       tecnology: [
         {
           avatar: Tec_1,
-          title: "Azure",
+          title: "Microsoft Azure",
         },
         {
           avatar: Tec_2,
@@ -1196,7 +1162,7 @@ const cards = [
         },
         {
           avatar: Tec_7,
-          title: "AWS",
+          title: "Amazon Web Services",
         },
         {
           avatar: Tec_8,
@@ -1268,7 +1234,7 @@ const cards = [
         },
         {
           avatar: Tec_27,
-          title: "flask",
+          title: "Flask",
         },
   
         {
@@ -1281,15 +1247,15 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
         {
           avatar: Tec_33,
-          title: "Photoshop",
+          title: "Adobe Photoshop",
         },
         {
           avatar: Tec_34,
-          title: "Illustrator",
+          title: "Adobe Illustrator",
         },
         {
           avatar: Tec_35,
@@ -1301,7 +1267,7 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
       ],
     },

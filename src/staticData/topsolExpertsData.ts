@@ -113,7 +113,7 @@ const FrontEnd = [
   },
   {
     avatar: Tec_26,
-    title: "Gats by",
+    title: "Gatsby",
   },
   {
     avatar: Tec_5,
@@ -140,7 +140,7 @@ const FrontEnd = [
 const Devops = [
   {
     avatar: Tec_1,
-    title: "Azure",
+    title: "Microsoft Azure",
   },
 
   {
@@ -157,7 +157,7 @@ const Devops = [
   },
   {
     avatar: Tec_7,
-    title: "AWS",
+    title: "Amazon Web Services",
   },
   {
     avatar: Tec_39,
@@ -186,7 +186,7 @@ const CMS = [
   },
   {
     avatar: Tec_46,
-    title: "Bubble.io",
+    title: "Bubble",
   },
   {
     avatar: Tec_47,
@@ -204,7 +204,7 @@ const Database = [
   },
   {
     avatar: Tec_31,
-    title: "Cosmos db",
+    title: "Cosmos DB",
   },
   {
     avatar: Tec_32,
@@ -267,15 +267,15 @@ const UiUx = [
   },
   {
     avatar: Tec_34,
-    title: "Adobexd",
+    title: "Adobe XD",
   },
   {
     avatar: Tec_35,
-    title: "Photoshop",
+    title: "Adobe Photoshop",
   },
   {
     avatar: Tec_36,
-    title: "Illustrator",
+    title: "Adobe Illustrator",
   },
   {
     avatar: Tec_41,
@@ -285,7 +285,7 @@ const UiUx = [
 const Industries = [
   {
     avatar: Tec_1,
-    title: "Azure",
+    title: "Microsoft Azure",
   },
   {
     avatar: Tec_2,
@@ -309,7 +309,7 @@ const Industries = [
   },
   {
     avatar: Tec_7,
-    title: "AWS",
+    title: "Amazon Web Services",
   },
   {
     avatar: Tec_8,
@@ -356,7 +356,7 @@ const Industries = [
 const technologies = [
   {
     avatar: Tec_1,
-    title: "Azure",
+    title: "Microsoft Azure",
   },
   {
     avatar: Tec_2,
@@ -380,7 +380,7 @@ const technologies = [
   },
   {
     avatar: Tec_7,
-    title: "AWS",
+    title: "Amazon Web Services",
   },
   {
     avatar: Tec_8,
