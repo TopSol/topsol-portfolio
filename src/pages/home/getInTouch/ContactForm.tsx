@@ -99,8 +99,10 @@ function ContactForm({ addressInfo }: Iprops) {
             className="outline-none text-[18px] font-medium w-[90%] font-figtree bg-transparent"
             name="name"
           />
-
         </div>
+        {isFocused === "name" ? " " : formik.errors.name && formik.touched.name && (
+          <p className="text-red-500 text-sm mt-1 ml-2">{formik.errors.name}</p>
+        )}
         <div className="flex flex-col md:flex-row md:mt-7  mt-3 justify-between">
           <div
             className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "email" ? "border-primary" : formik.errors.email && formik.touched.email ? 'border-red-500' : 'border-[#1F1F1F]'}`}
@@ -119,6 +121,9 @@ function ContactForm({ addressInfo }: Iprops) {
                 />
               </svg>
             </div>
+            {isFocused === "email" ? " " : formik.errors.email && formik.touched.email && (
+              <p className="text-red-500 text-sm mt-20 absolute ">{formik.errors.email}</p>
+            )}
             <input
               type="email"
               required
@@ -131,12 +136,16 @@ function ContactForm({ addressInfo }: Iprops) {
               name="email"
             />
 
+
           </div>
           <div
             className={`flex flex-row rounded-lg md:w-[48%] border-[1px] w-[100%] md:mt-0 mt-3 items-center py-[7px] px-[20px] 
               ${isFocused === "phone" ? "border-primary" : formik.errors.phone && formik.touched.phone ? 'border-red-500' : 'border-[#1F1F1F]'}`}
 
           >
+            {isFocused === "phone" ? " " : formik.errors.phone && formik.touched.phone && (
+              <p className="text-red-500 text-sm mt-20 absolute ">{formik.errors.phone}</p>
+            )}
             <PhoneInput
               country="pk"
               value={formik.values.phone}
@@ -171,7 +180,7 @@ function ContactForm({ addressInfo }: Iprops) {
           </div>
         </div>
         <div
-          className={`flex flex-row rounded-lg md:mt-7  mt-3 border-[1px] items-center pt-[10px]  pl-[20px]  ${isFocused === "message" ? "border-primary" : formik.errors.message && formik.touched.message ? 'border-red-500' : 'border-[#1F1F1F]'}`}
+          className={`flex flex-row rounded-lg md:mt-10  mt-3 border-[1px] items-center pt-[10px]  pl-[20px]  ${isFocused === "message" ? "border-primary" : formik.errors.message && formik.touched.message ? 'border-red-500' : 'border-[#1F1F1F]'}`}
         >
           <textarea
             placeholder="Write your Message"
@@ -185,29 +194,24 @@ function ContactForm({ addressInfo }: Iprops) {
           />
 
         </div>
-        {loader ? (
-          <div className="mt-10 md:w-[30%] w-[50%]">
-            <PulseLoader color="#8E8E8E" size={18} />
-          </div>
-        ) : (
-          <div className="mt-10 md:w-[30%] w-[50%] ">
-            <button
-              disabled={!formik.isValid || formik.isSubmitting}
-              type="submit"
-              aria-label="Post Comment"
-              className={` flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none  text-[18px]  text-white rounded-[6px] ${formik.isSubmitting || !formik.isValid ? "bg-gray-300" : "bg-primary"
-                } `}
-            >
-              {/* <PrimaryBtn
-              text="Send"
-              icon={true}
-              additionalClasses={`text-primary flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none  text-[18px]  text-white rounded-[6px] ${formik.isSubmitting || formik.isValid ? "bg-gray-500" : "bg-primary"
-                } `}
-            /> */}
-              send
-            </button>
-          </div>
+        {isFocused === "message" ? " " : formik.errors.message && formik.touched.message && (
+          <p className="text-red-500 text-sm mt-1 ml-2">{formik.errors.message}</p>
         )}
+        <div className="mt-10 md:w-[30%] w-[50%] ">
+          <button
+            disabled={loader || !formik.isValid || formik.isSubmitting}
+            type="submit"
+            aria-label="Post Comment"
+            className={` flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none  text-[18px]  text-white rounded-[6px] ${loader || formik.isSubmitting || !formik.isValid ? "bg-gray-300" : "bg-primary"
+              } `}
+          >
+            {loader ? (
+              <PulseLoader color="#8E8E8E" size={15} />
+            ) : ('Send')}
+
+          </button>
+        </div>
+
       </form>
       <div
         className={` ${addressInfo ? "flex" : "hidden"

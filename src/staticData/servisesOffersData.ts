@@ -60,7 +60,7 @@ import Tec_23 from "../images/Icons/techonologies/tec_23.svg";
 import Tec_24 from "../images/Icons/techonologies/tec_24.svg";
 import Tec_25 from "../images/Icons/techonologies/pngwing 6.png";
 import Tec_26 from "../images/Icons/techonologies/GETSBY.png";
-import Tec_27 from "../images/Icons/techonologies/Flask.png";
+import Tec_27 from "../images/Icons/techonologies/flask.png";
 import Tec_28 from "../images/Icons/techonologies/Group 39286.png";
 import Tec_29 from "../images/Icons/techonologies/expo.png";
 import Tec_30 from "../images/Icons/techonologies/Vector.png";
@@ -459,7 +459,7 @@ const cards = [
         },
         {
           avatar: Tec_26,
-          title: "Gats by",
+          title: "Gatsby",
         },
         {
           avatar: Tec_8,
@@ -1276,46 +1276,48 @@ const cards = [
 ];
 
 export const imgCards = [
+  // {
+  //   name:'custom-software',
+  //   bgImg: Custom,
+  //   heading: "Custom Software",
+  // },
   {
-    id:'custom-software',
-    bgImg: Custom,
-    heading: "Custom Software",
-  },
-  {
-    id:'devops',
+    name:'devops',
     bgImg: Dev,
     heading: "Devops",
   },
   {
-    id:'team-augmentation',
-    bgImg: Team,
-    heading: "Team Augmentation",
+    name:'ui-ux-design',
+    bgImg: UI,
+    heading: "UI/UX Design",
   },
+  // {
+  //   name:'team-augmentation',
+  //   bgImg: Team,
+  //   heading: "Team Augmentation",
+  // },
   {
-    id:'web-development',
+    name:'web-development',
     bgImg: web_dev,
     heading: "Web Development",
   },
   {
-    id:'mobile-app-development',
-    bgImg: Mobile,
-    heading: "Mobile App Development",
-  },
-  {
-    id:'quality-assurance',
+    name:'quality-assurance',
     bgImg: Quality,
     heading: "Quality Assurance",
   },
   {
-    id:'ui-ux-design',
-    bgImg: UI,
-    heading: "UI/UX Design",
+    name:'mobile-app-development',
+    bgImg: Mobile,
+    heading: "Mobile App Development",
   },
-  {
-    id:'ai-and-chat-gpt',
-    bgImg: AI,
-    heading: "AI & Chat GPT",
-  },
+
+ 
+  // {
+  //   name:'ai-and-chat-gpt',
+  //   bgImg: AI,
+  //   heading: "AI & Chat GPT",
+  // },
 ];
 
 export default cards;

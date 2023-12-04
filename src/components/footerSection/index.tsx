@@ -8,6 +8,7 @@ import facebook from "../../images/facebook.png";
 import instagram from "../../images/instagram.png";
 import linkedin from "../../images/linkedIn.png";
 import EmailOptInForm from "../NewsLeter";
+import cards, { imgCards } from "../../staticData/servisesOffersData";
 
 export default function Footer() {
   return (
@@ -62,16 +63,18 @@ export default function Footer() {
             </div>
             <div className="md:grid hidden justify-center">
               <h2 className="mb-[40px] text-[18px] font-semibold ">Services</h2>
-              <ul className="text-base font-normal space-y-[26px]  font-figtree ">
-                <li ><Link to="/services">DevOps</Link></li>
-                <li ><Link to="/services">UI/UX Design</Link></li>
-                <li ><Link to="/services">Web Development</Link></li>
-                <li ><Link to="/services">Quality Assurance</Link></li>
-                <li ><Link to="/services">App Development</Link></li>
+
+              <ul className="text-base grid  space-y-[26px]">
+                {imgCards?.map((item, index) => (
+                  <Link to={`/services/${item.name}`} key={item.name}>
+                    <li className="text-base text-white   ">{item.heading}</li>
+                  </Link>
+                ))}
               </ul>
+
             </div>
             <div className="md:grid hidden ">
-              <h1 className="mb-[40px] text-[18px] font-semibold">
+              <h1 className="mb-[40px] text-white text-[18px] font-semibold">
                 Quick Links
               </h1>
               <ul className="text-base  space-y-[26px]">
@@ -93,7 +96,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="mt-[60px] md:mt-0">
-              <h1 className="mb-[40px] text-[18px] ml-[7px]  font-semibold">
+              <h1 className="mb-[40px] text-white text-[18px] ml-[7px]  font-semibold">
                 Contact
               </h1>
               <ul className="text-base font-normal space-y-[16px] font-figtree">
