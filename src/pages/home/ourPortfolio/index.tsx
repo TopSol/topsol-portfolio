@@ -94,15 +94,15 @@ function OurPortfolio() {
           </Link>
         ))}
       </div>
-      <Link to={"/portfolio"}>
-        <div className="flex  justify-center ">
+      <div className="flex  justify-center ">
+        <Link to={"/portfolio"}>
           <PrimaryBtn
             text="More Projects"
             icon={true}
             additionalClasses="text-primary flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none text-[18px] mt-[68px] text-white rounded-[6px] "
           />
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }

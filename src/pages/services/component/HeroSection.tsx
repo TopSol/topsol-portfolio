@@ -36,15 +36,15 @@ export default function HeroSection({ servicedata }: propTypes) {
               >
                 {servicedata?.desc}
               </h3>
-              <Link to="/contactUs">
-                <div className="flex  justify-center md:justify-start">
+              <div className="flex  justify-center md:justify-start">
+                <Link to="/contactUs">
                   <PrimaryBtn
                     text="Get Started"
                     icon={true}
                     additionalClasses="text-primary flex items-center font-figtree md:py-[16px]  py-[10px]  md:px-[68px] px-[58px]  bg-none text-[12px] md:text-[18px] mt-[68px] text-white rounded-[6px] "
                   />
-                </div>
-              </Link>
+                </Link>
+              </div>
             </div>
           </div>
         </section>

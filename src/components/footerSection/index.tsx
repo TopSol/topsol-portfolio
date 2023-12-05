@@ -23,8 +23,10 @@ export default function Footer() {
           <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
             <div>
               <div className="">
-                <h1 className="mb-4 text-primary text-[28px] font-urbanist font-medium ">
-                  TOPSOL
+                <h1 className="mb-4 text-primary text-[28px] font-urbanist font-bold ">
+                  <Link to="/">
+                    TOPSOL
+                  </Link>
                 </h1>
                 <span className="text-[18px] font-medium font-urbanist">
                   A Software development Company
@@ -66,9 +68,8 @@ export default function Footer() {
 
               <ul className="text-base grid  space-y-[26px]">
                 {imgCards?.map((item, index) => (
-                  <Link to={`/services/${item.name}`} key={item.name}>
-                    <li className="text-base text-white   ">{item.heading}</li>
-                  </Link>
+                  <li className="text-base text-white ">
+                    <Link to={`/services/${item.name}`} key={item.name}>{item.heading}</Link></li>
                 ))}
               </ul>
 

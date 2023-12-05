@@ -39,15 +39,15 @@ export default function VideoHero({ title, image, page }: Iprops) {
                 are motivated to build elegant and functional digital products
                 that solve complex problem.
               </h3>
-              <Link to="/contactUs">
-                <div className="flex  justify-center md:justify-start">
+              <div className="flex  justify-center md:justify-start">
+                <Link to="/contactUs">
                   <PrimaryBtn
                     text="Get Started"
                     icon={true}
                     additionalClasses="text-primary flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none text-[18px] mt-[68px] text-white rounded-[6px] "
                   />
-                </div>
-              </Link>
+                </Link>
+              </div>
             </div>
           </div>
         </section>

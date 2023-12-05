@@ -10,6 +10,9 @@ export default function Modal({
   closeModal: () => void;
 }) {
   const res = reviews?.find((item) => item.id === id);
+  const handleChildClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    event.stopPropagation();
+  };
 
   return (
     <>
@@ -43,14 +46,15 @@ export default function Modal({
           backgroundColor: 'rgba(0, 0, 0, 0.8)'
         }}
         className=""
-
+        onClick={closeModal}
       >
         <motion.div
-          className="card-content-container open bg-[#efefef] xl:mx-[12%] md:mx-[4%] lg:mx-[8%] xl:min-h-[70vh] md:min-h-[60vh] sm:min-h-[65vh] min-h-[80vh] mx-[1%] rounded-2xl px-[60px] xl:py-[100px] lg:py-[40px] relative"
+          className="card-content-container  open bg-[#efefef] xl:mx-[12%] md:mx-[4%] lg:mx-[8%] xl:min-h-[70vh] md:min-h-[60vh] sm:min-h-[65vh] min-h-[80vh] mx-[1%] rounded-2xl px-[60px] xl:py-[100px] lg:py-[40px] relative"
           initial={{ opacity: 0, width: "0px", height: "0px" }}
           animate={{ opacity: 1, width: "100%" }}
           transition={{ duration: 0.8, delay: 0.4 }}
           style={{ overflow: "hidden" }}
+          onClick={handleChildClick}
         >
           <div className="absolute top-12 right-12 px-[11px] py-1 text-white text-center align-middle cursor-pointer font-bold rounded-full bg-[#309BD3]" onClick={() => closeModal()}>
             X

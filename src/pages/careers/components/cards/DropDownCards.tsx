@@ -20,7 +20,7 @@ function DropDownCards({ className, item }: CardsProps) {
         </p>
         <div className="flex flex-row justify-between">
           <div className=" h-[47px] mb-[19.5px] ">
-            <Link to={`/jobDetails`} state={item}>
+            <Link to={`/careers/${item.name}`} key={item.name}>
               <button className=" px-10 w-[100%] h-[100%] rounded-[10px] font-semibold text-base bg-primary text-primary-white hover:bg-primary-light">
                 Apply now
               </button>

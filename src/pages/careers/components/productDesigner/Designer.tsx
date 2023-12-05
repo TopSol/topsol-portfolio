@@ -1,6 +1,5 @@
 import React from "react";
 //@ts-ignore
-import jobImg from "../../../../images/jobDt1.png";
 
 function Designer({ jobDetails = {} }: any) {
   const total_miliseconds =

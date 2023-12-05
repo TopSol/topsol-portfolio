@@ -18,7 +18,6 @@ export default function ServiceDetails(pageContext) {
   const [loader, setLoader] = useState(false);
   const location = useLocation();
   const { slug } = pageContext.params;
-  // console.log(pageContext, 'portFoliosportFolios');
 
   const fetchPortFolios = async () => {
     try {
