@@ -63,7 +63,7 @@ export default function Footer() {
                 <EmailOptInForm />
               </div>
             </div>
-            <div className="md:grid hidden justify-center">
+            <div className="md:grid hidden justify-center ml-10">
               <h2 className="mb-[40px] text-[18px] font-semibold ">Services</h2>
 
               <ul className="text-base grid  space-y-[26px]">
@@ -74,7 +74,7 @@ export default function Footer() {
               </ul>
 
             </div>
-            <div className="md:grid hidden ">
+            <div className="md:grid hidden  ml-10">
               <h1 className="mb-[40px] text-white text-[18px] font-semibold">
                 Quick Links
               </h1>
@@ -96,7 +96,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="mt-[60px] md:mt-0">
+            <div className="mt-[60px] md:mt-6">
               <h1 className="mb-[40px] text-white text-[18px] ml-[7px]  font-semibold">
                 Contact
               </h1>

@@ -6,9 +6,7 @@ import HeroSection from "../component/HeroSection";
 import { ToggleBar } from "../../../components/bar";
 import WorkFlow from "../component/WorkFlow";
 import Tecnology from "../component/Tecnology";
-import RatingSection from "../../home/ratingSection/index";
 import SmallFooter from "../../../components/smallFooter";
-import { useLocation } from "@reach/router";
 import { collection, doc, getDoc, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../../utils/firebase";
 import { PulseLoader } from "react-spinners";
@@ -16,7 +14,6 @@ import { PulseLoader } from "react-spinners";
 export default function ServiceDetails(pageContext) {
   const [portFolios, setPortFolios] = useState([]);
   const [loader, setLoader] = useState(false);
-  const location = useLocation();
   const { slug } = pageContext.params;
 
   const fetchPortFolios = async () => {
@@ -66,21 +63,11 @@ export default function ServiceDetails(pageContext) {
           />
           <WorkFlow workFlowData={portFolios[0]?.paragraph} />
           <Tecnology servicedata={portFolios[0]?.tecnology} />
+          <div className="mb-[69px]">
+            <SmallFooter />
+          </div>
         </div>
       )}
-      {/* <InfoSection
-        heading={state?.service?.heading}
-        mainHeading={state?.service?.details?.mainHeading}
-        initialText={state?.service?.details?.initialText}
-        image={state?.service?.details?.image}
-      />
-      <Tecnology servicedata={state?.service} /> */}
-      {/* <RatingSection /> */}
-      <div className="mb-[69px]">
-        <SmallFooter />
-      </div>
-      {/* <ReadyToOutshine servicedata={state?.service} />
-      {state?.service?.showProjects && <ProjectSection />} */}
       <Footer />
     </div>
   );

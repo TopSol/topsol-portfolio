@@ -15,17 +15,17 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="bg-cover min-h-[90vh] md:min-h-[100vh] xl:min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground  justify-center">
+    <div className="bg-cover min-h-[100vh] md:min-h-[100vh] xl:min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground  justify-center">
       <div className="flex flex-col justify-center px-4 sm:px-6 lg:px-2"
         data-aos="fade-up"
       >
         <h1
           id="root"
-          className="lg:text-[48px] sm:text-3xl tex-[20px] uppercase md:text-5xl text-white font-extrabold font-urbanist leading-[50px] text-center  "
+          className="lg:text-[48px] sm:text-3xl text-[25px] uppercase md:text-5xl text-white font-extrabold font-urbanist leading-[50px] text-center  "
         >
           A Better Approach to <span className="text-primary font-urbanist">Develop Software</span>
         </h1>
-        <p className="md:mt-[52px] mt-[25px] text-[12px] md:text-[22px] text-white font-figtree md:w-[70%] mx-auto  w-[95%] text-center  ">
+        <p className="md:mt-[52px] mt-[25px] text-[16px] md:text-[22px] text-white font-figtree md:w-[70%] mx-auto  w-[95%] text-center  ">
           Accelerate your launch by 2x with our groundbreaking development
           process, and  reduce costs significantly. Say goodbye to the
           tedious process of starting from scratch  and embrace the future
@@ -40,11 +40,11 @@ export default function Hero() {
                 text={`Let's Talk`}
                 rootElement={root}
                 url="https://calendly.com/asif-mushtaq"
-                className="bg-primary sm:px-[45px] px-[16px] sm:pr-[70px] pr-[40px] py-[12px] rounded-[6px] text-[18px] font-figtree text-white hover:bg-[#009ccc]"
+                className="bg-primary sm:px-[45px] px-[36px] sm:pr-[70px] pr-[40px] py-[12px] rounded-[6px] text-[18px] font-figtree text-white hover:bg-[#009ccc]"
               />
               <img
                 src={arrowup}
-                className="absolute md:top-[40%] md:left-[66%]  left-[72%] top-[38%]"
+                className="absolute md:top-[40%] md:left-[66%]  left-[80%] top-[36%]"
               />
             </div>
           )}

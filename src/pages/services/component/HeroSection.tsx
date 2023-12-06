@@ -16,7 +16,7 @@ export default function HeroSection({ servicedata }: propTypes) {
   return (
     <div className=" ">
       <div
-        className="flex items-center  bg-cover md:h-[70vh] h-[90vh]"
+        className="flex items-center  bg-cover lg:h-[70vh] md:h-[90vh] h-[70vh]"
         style={{
           backgroundImage: `url(${servicedata?.servicesHeader})`,
         }}
@@ -27,12 +27,12 @@ export default function HeroSection({ servicedata }: propTypes) {
         >
           <div className="     md:mx-auto md:w-[90%] ">
             <div className="  ">
-              <h1 className="text-4xl hei leading-normal   text-center md:text-start md:text-[54px] font-bold font-montserrat">
+              <h1 className="text-4xl hei leading-normal   text-center md:text-start lg:text-[54px] font-bold font-montserrat">
                 <span className={`text-white `}>{firstName}</span>{" "}
                 <span className="text-primary">{lastName}</span>
               </h1>
               <h3
-                className={`text-center md:text-start  md:text-[28px]  font-figtree font-light text-white  hero-text-sideLine   lg:w-[75%] mt-[56px]`}
+                className={`text-center md:text-start  md:text-[22px]  font-figtree font-light text-white  hero-text-sideLine   lg:w-[75%] mt-[56px]`}
               >
                 {servicedata?.desc}
               </h3>

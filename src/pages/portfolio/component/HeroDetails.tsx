@@ -17,7 +17,7 @@ export default function Hero({ data }: any) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col object-cover  justify-center items-center" data-aos="fade-up">
+      <div className="flex flex-col object-cover bg-cover  justify-center items-center" data-aos="fade-up">
         <img
           src={data?.detailImageUrl}
           alt=""

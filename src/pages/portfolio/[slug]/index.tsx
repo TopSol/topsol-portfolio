@@ -7,7 +7,6 @@ import PortfolioDetailBody from "../component/portfolioDetailBody";
 import { db } from "../../../utils/firebase";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { PulseLoader } from "react-spinners";
-import { useLocation } from "@reach/router";
 import { ToggleBar } from "../../../components/bar";
 
 export default function index(pageContext) {
@@ -60,11 +59,12 @@ export default function index(pageContext) {
         <div>
           <Hero data={detail[0]} />
           <PortfolioDetailBody data={detail[0]} />
+          <div className="mb-[70px]">
+            <SmallFooter />
+          </div>
         </div>
       )}
-      <div className="mb-[70px]">
-        <SmallFooter />
-      </div>
+
       <Footer />
     </div>
   );

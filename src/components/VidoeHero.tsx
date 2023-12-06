@@ -18,7 +18,7 @@ export default function VideoHero({ title, image, page }: Iprops) {
   return (
     <div className=" ">
       <div
-        className={`md:h-[70vh] h-[90vh] flex items-center ${page === 'services' ? "none" : 'bg-cover '}`}
+        className={`lg:h-[70vh] h-[90vh]  flex items-center ${page === 'services' ? "none" : 'bg-cover '}`}
         style={{
           backgroundImage: page === 'services' ? "none" : `url(${image})`,
         }}
@@ -28,9 +28,9 @@ export default function VideoHero({ title, image, page }: Iprops) {
         >
           <div className="   mx-6   md:mx-auto md:w-[90%] ">
             <div className="  ">
-              <h1 className="text-4xl  text-center md:text-start md:text-[60px] font-bold font-urbanist uppercase">
-                <span className={`${page === 'services' || 'about' ? 'text-white' : 'text-textColors'} md:text-[60px] font-bold font-urbanist`}>{firstName}</span>{" "}
-                <span className="text-primary md:text-[60px] font-bold font-urbanist ">{lastName}</span>
+              <h1 className="text-4xl  text-center md:text-start lg:text-[60px] font-bold font-urbanist uppercase">
+                <span className={`${page === 'services' || 'about' ? 'text-white' : 'text-textColors'}  font-bold font-urbanist`}>{firstName}</span>{" "}
+                <span className="text-primary font-bold font-urbanist ">{lastName}</span>
               </h1>
               <h3 className={`text-center md:text-start md:text-[22px]  font-figtree font-light  ${page === 'services' || 'about' ? 'text-white' : 'text-textColors'} hero-text-sideLine   lg:w-[75%] mt-[56px]`} >
                 TOPSOL is a software and mobile app development company with a
