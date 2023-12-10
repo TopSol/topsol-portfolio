@@ -122,7 +122,9 @@ import advancement from "../images/Icons/services-details-icon/aIChatIcon/ai adv
 
 const cards = [
   {
-    heading: "CUSTOM SOFTWARE DEVELOPMENT",
+    id:'custom-software',
+    bgImg: Custom,
+    heading: "Custom Software Development",
     desc: "Our Custom Software Solutions are meticulously designed to fit your unique needs, delivering efficiency, scalability, and a technological edge",
     avatar: Img1,
     bg: svg1,
@@ -175,7 +177,7 @@ const cards = [
       tecnology: [
         {
           avatar: Tec_1,
-          title: "Azure",
+          title: "Microsoft Azure",
         },
         {
           avatar: Tec_2,
@@ -199,7 +201,7 @@ const cards = [
         },
         {
           avatar: Tec_7,
-          title: "AWS",
+          title: "Amazon Web Services",
         },
         {
           avatar: Tec_8,
@@ -271,7 +273,7 @@ const cards = [
         },
         {
           avatar: Tec_27,
-          title: "flask",
+          title: "Flask",
         },
   
         {
@@ -284,34 +286,29 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
         {
           avatar: Tec_33,
-          title: "Photoshop",
+          title: "Adobe Photoshop",
         },
         {
           avatar: Tec_34,
-          title: "Illustrator",
+          title: "Adobe Illustrator",
         },
         {
           avatar: Tec_35,
           title: "Canva",
         },
-        {
-          avatar: Tec_31,
-          title: "Figma",
-        },
-        {
-          avatar: Tec_32,
-          title: "Adobexd",
-        },
+
       ],
     },
     showProjects: true,
   },
   {
-    heading: "DEVOPS",
+    id:'devops',
+    bgImg: Dev,
+    heading: "Devops",
     desc: "Our DevOps Services unify development and operations,streamlining workflows for faster, reliable software delivery",
     avatar: Img2,
     bg: svg2,
@@ -364,12 +361,12 @@ const cards = [
       tecnology: [
         {
           avatar: Tec_1,
-          title: "Azure",
+          title: "Microsoft Azure",
         },
 
         {
           avatar: Tec_7,
-          title: "AWS",
+          title: "Amazon Web Services",
         },
 
         {
@@ -394,227 +391,14 @@ const cards = [
           avatar: Tec_25,
           title: "Jenkins",
         },
-        {
-          avatar: Tec_31,
-          title: "Figma",
-        },
-        {
-          avatar: Tec_32,
-          title: "Adobexd",
-        },
-        {
-          avatar: Tec_33,
-          title: "Photoshop",
-        },
-        {
-          avatar: Tec_34,
-          title: "Illustrator",
-        },
-        {
-          avatar: Tec_35,
-          title: "Canva",
-        },
-        {
-          avatar: Tec_31,
-          title: "Figma",
-        },
-        {
-          avatar: Tec_32,
-          title: "Adobexd",
-        },
+       
       ],
     },
   },
+ 
   {
-    heading: "TEAM AUGMENTATION",
-    desc: "Our Team Augmentation services integrate skilled professionals seamlessly into your projects, amplifying your capabilities and accelerating success",
-    avatar: Img3,
-    bg: svg,
-    details: {
-      image: team,
-      imageHead: teamHead,
-      mainHeading:
-        "Team Augmentation Services: Enhancing Your Project Capabilities",
-      initialText:
-        "In a world driven by ever-evolving technologies and the constant pursuit of innovation, the ability to adapt and scale your team quickly is paramount. Team Augmentation services offer a flexible solution to meet these dynamic demands. With skilled professionals seamlessly integrated into your projects, this approach amplifies your capabilities and accelerates your path to success.",
-      conclusion:
-        "In today's fast-paced business landscape, Team Augmentation is a strategic resource that can drive your projects to new heights, enabling you to stay ahead in the race of innovation and deliver exceptional outcomes.",
-      paragraphs: [
-        {
-          img: Expertise,
-          step: "step 1",
-          heading: "Expertise Expansion",
-          text: "Augment your team with skilled professionals to complement and enhance in-house capabilities, bringing specialized knowledge and experience to your projects",
-        },
-        {
-          img: Scalability,
-          step: "step 2",
-          heading: "Flexibility and Scalability",
-          text: "Scale your workforce as needed, adapting to project demands without the long-term commitment of hiring full-time employees, optimizing resource allocation.",
-        },
-        {
-          img: Rapid,
-          step: "step 3",
-          heading: "Rapid Onboarding",
-          text: "Accelerate project timelines by quickly onboarding augmented team members who are equipped with the necessary skills, minimizing learning curves.",
-        },
-        {
-          img: Diverse,
-          step: "step 1",
-          heading: "Diverse Skill Sets",
-          text: "Access a diverse pool of talents with varied skill sets, ensuring a well-rounded team capable of handling different aspects of a project",
-        },
-        {
-          img: Cost,
-          step: "step 2",
-          heading: "Cost-Efficiency",
-          text: "Mitigate costs associated with recruitment, training, and employee benefits, as team augmentation allows you to access expertise without the overhead of full-time hires.",
-        },
-        {
-          img: delivery,
-          step: "step 3",
-          heading: "Project Delivery Excellence",
-          text: "Achieve project milestones with precision by bolstering your team with skilled professionals, ensuring timely and successful completion of tasks and objectives.",
-        },
-      ],
-      tecnology: [
-        {
-          avatar: Tec_1,
-          title: "Azure",
-        },
-        {
-          avatar: Tec_2,
-          title: "Python",
-        },
-        {
-          avatar: Tec_3,
-          title: "Android",
-        },
-        {
-          avatar: Tec_4,
-          title: "Firebase",
-        },
-        {
-          avatar: Tec_5,
-          title: "TypeScript",
-        },
-        {
-          avatar: Tec_6,
-          title: "JavasScript",
-        },
-        {
-          avatar: Tec_7,
-          title: "AWS",
-        },
-        {
-          avatar: Tec_8,
-          title: "Node.js",
-        },
-        {
-          avatar: Tec_9,
-          title: "Flutter",
-        },
-        {
-          avatar: Tec_10,
-          title: "MongoDB",
-        },
-        {
-          avatar: Tec_11,
-          title: "Swift",
-        },
-        {
-          avatar: Tec_12,
-          title: "Heroku",
-        },
-        {
-          avatar: Tec_13,
-          title: "C#",
-        },
-        {
-          avatar: Tec_14,
-          title: "MySQL",
-        },
-        {
-          avatar: Tec_15,
-          title: "Kubernetes",
-        },
-        {
-          avatar: Tec_16,
-          title: "Google Cloud",
-        },
-        {
-          avatar: Tec_17,
-          title: "Express.js",
-        },
-        {
-          avatar: Tec_18,
-          title: "Laravel",
-        },
-        {
-          avatar: Tec_19,
-          title: "Next.js",
-        },
-        {
-          avatar: Tec_20,
-          title: "Docker",
-        },
-        {
-          avatar: Tec_21,
-          title: "WordPress",
-        },
-        {
-          avatar: Tec_22,
-          title: "React",
-        },
-        {
-          avatar: Tec_23,
-          title: "GraphQL",
-        },
-        {
-          avatar: Tec_24,
-          title: "PostgreSQL",
-        },
-        {
-          avatar: Tec_27,
-          title: "flask",
-        },
-  
-        {
-          avatar: Tec_28,
-          title: "Django",
-        },
-        {
-          avatar: Tec_31,
-          title: "Figma",
-        },
-        {
-          avatar: Tec_32,
-          title: "Adobexd",
-        },
-        {
-          avatar: Tec_33,
-          title: "Photoshop",
-        },
-        {
-          avatar: Tec_34,
-          title: "Illustrator",
-        },
-        {
-          avatar: Tec_35,
-          title: "Canva",
-        },
-        {
-          avatar: Tec_31,
-          title: "Figma",
-        },
-        {
-          avatar: Tec_32,
-          title: "Adobexd",
-        },
-      ],
-    },
-  },
-  {
+    id:'web-development',
+    bgImg: web_dev,
     heading: "Web Development",
     desc: "Empowering businesses through tailored web development solutions, bringing visions to life with cutting-edge technology and expert craftsmanship.",
     avatar: Img4,
@@ -675,7 +459,7 @@ const cards = [
         },
         {
           avatar: Tec_26,
-          title: "Gats by",
+          title: "Gatsby",
         },
         {
           avatar: Tec_8,
@@ -709,7 +493,7 @@ const cards = [
         },
         {
           avatar: Tec_27,
-          title: "flask",
+          title: "Flask",
         },
   
         {
@@ -725,7 +509,200 @@ const cards = [
     },
   },
   {
-    heading: "MOBILE APPS DEVELOPMENT",
+    id:'team-augmentation',
+    bgImg: Team,
+    heading: "Team Augmentation",
+    desc: "Our Team Augmentation services integrate skilled professionals seamlessly into your projects, amplifying your capabilities and accelerating success",
+    avatar: Img3,
+    bg: svg,
+    details: {
+      image: team,
+      imageHead: teamHead,
+      mainHeading:
+        "Team Augmentation Services: Enhancing Your Project Capabilities",
+      initialText:
+        "In a world driven by ever-evolving technologies and the constant pursuit of innovation, the ability to adapt and scale your team quickly is paramount. Team Augmentation services offer a flexible solution to meet these dynamic demands. With skilled professionals seamlessly integrated into your projects, this approach amplifies your capabilities and accelerates your path to success.",
+      conclusion:
+        "In today's fast-paced business landscape, Team Augmentation is a strategic resource that can drive your projects to new heights, enabling you to stay ahead in the race of innovation and deliver exceptional outcomes.",
+      paragraphs: [
+        {
+          img: Expertise,
+          step: "step 1",
+          heading: "Expertise Expansion",
+          text: "Augment your team with skilled professionals to complement and enhance in-house capabilities, bringing specialized knowledge and experience to your projects",
+        },
+        {
+          img: Scalability,
+          step: "step 2",
+          heading: "Flexibility and Scalability",
+          text: "Scale your workforce as needed, adapting to project demands without the long-term commitment of hiring full-time employees, optimizing resource allocation.",
+        },
+        {
+          img: Rapid,
+          step: "step 3",
+          heading: "Rapid Onboarding",
+          text: "Accelerate project timelines by quickly onboarding augmented team members who are equipped with the necessary skills, minimizing learning curves.",
+        },
+        {
+          img: Diverse,
+          step: "step 1",
+          heading: "Diverse Skill Sets",
+          text: "Access a diverse pool of talents with varied skill sets, ensuring a well-rounded team capable of handling different aspects of a project",
+        },
+        {
+          img: Cost,
+          step: "step 2",
+          heading: "Cost-Efficiency",
+          text: "Mitigate costs associated with recruitment, training, and employee benefits, as team augmentation allows you to access expertise without the overhead of full-time hires.",
+        },
+        {
+          img: delivery,
+          step: "step 3",
+          heading: "Project Delivery Excellence",
+          text: "Achieve project milestones with precision by bolstering your team with skilled professionals, ensuring timely and successful completion of tasks and objectives.",
+        },
+      ],
+      tecnology: [
+        {
+          avatar: Tec_1,
+          title: "Microsoft Azure",
+        },
+        {
+          avatar: Tec_2,
+          title: "Python",
+        },
+        {
+          avatar: Tec_3,
+          title: "Android",
+        },
+        {
+          avatar: Tec_4,
+          title: "Firebase",
+        },
+        {
+          avatar: Tec_5,
+          title: "TypeScript",
+        },
+        {
+          avatar: Tec_6,
+          title: "JavasScript",
+        },
+        {
+          avatar: Tec_7,
+          title: "Amazon Web Services",
+        },
+        {
+          avatar: Tec_8,
+          title: "Node.js",
+        },
+        {
+          avatar: Tec_9,
+          title: "Flutter",
+        },
+        {
+          avatar: Tec_10,
+          title: "MongoDB",
+        },
+        {
+          avatar: Tec_11,
+          title: "Swift",
+        },
+        {
+          avatar: Tec_12,
+          title: "Heroku",
+        },
+        {
+          avatar: Tec_13,
+          title: "C#",
+        },
+        {
+          avatar: Tec_14,
+          title: "MySQL",
+        },
+        {
+          avatar: Tec_15,
+          title: "Kubernetes",
+        },
+        {
+          avatar: Tec_16,
+          title: "Google Cloud",
+        },
+        {
+          avatar: Tec_17,
+          title: "Express.js",
+        },
+        {
+          avatar: Tec_18,
+          title: "Laravel",
+        },
+        {
+          avatar: Tec_19,
+          title: "Next.js",
+        },
+        {
+          avatar: Tec_20,
+          title: "Docker",
+        },
+        {
+          avatar: Tec_21,
+          title: "WordPress",
+        },
+        {
+          avatar: Tec_22,
+          title: "React",
+        },
+        {
+          avatar: Tec_23,
+          title: "GraphQL",
+        },
+        {
+          avatar: Tec_24,
+          title: "PostgreSQL",
+        },
+        {
+          avatar: Tec_27,
+          title: "Flask",
+        },
+  
+        {
+          avatar: Tec_28,
+          title: "Django",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobe XD",
+        },
+        {
+          avatar: Tec_33,
+          title: "Adobe Photoshop",
+        },
+        {
+          avatar: Tec_34,
+          title: "Adobe Illustrator",
+        },
+        {
+          avatar: Tec_35,
+          title: "Canva",
+        },
+        {
+          avatar: Tec_31,
+          title: "Figma",
+        },
+        {
+          avatar: Tec_32,
+          title: "Adobe XD",
+        },
+      ],
+    },
+  },
+  {
+    id:'mobile-apps-development',
+    bgImg: Mobile,
+    heading: "Mobile App Development",
     desc: "Our Mobile App solutions blend innovation and functionality, crafting dynamic experiences that connect users with your brand",
     avatar: Img5,
     bg: svg,
@@ -829,7 +806,9 @@ const cards = [
     showProjects: true,
   },
   {
-    heading: "QUALITY ASSURANCE",
+    id:'quality-assurance',
+    bgImg: Quality,
+    heading: "Quality Assurance",
     desc: "Our Quality Assurance Services fine-tune solutions, ensuring flawless performance and seamless user experiences",
     avatar: Img6,
     bg: svg1,
@@ -882,7 +861,7 @@ const cards = [
       tecnology: [
         {
           avatar: Tec_1,
-          title: "Azure",
+          title: "Microsoft Azure",
         },
         {
           avatar: Tec_2,
@@ -906,7 +885,7 @@ const cards = [
         },
         {
           avatar: Tec_7,
-          title: "AWS",
+          title: "Amazon Web Services",
         },
         {
           avatar: Tec_8,
@@ -978,7 +957,7 @@ const cards = [
         },
         {
           avatar: Tec_27,
-          title: "flask",
+          title: "Flask",
         },
   
         {
@@ -991,15 +970,15 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
         {
           avatar: Tec_33,
-          title: "Photoshop",
+          title: "Adobe Photoshop",
         },
         {
           avatar: Tec_34,
-          title: "Illustrator",
+          title: "Adobe Illustrator",
         },
         {
           avatar: Tec_35,
@@ -1011,14 +990,16 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
       ],
     },
     showProjects: true,
   },
   {
-    heading: "UI/UX DESIGN",
+    id:'ui-ux-design',
+    bgImg: UI,
+    heading: "UI/UX Design",
     desc: "Our UI/UX Design expertise crafts intuitive interfaces, marrying aesthetics with functionality for unparalleled user journeys",
     avatar: Img7,
     bg: svg2,
@@ -1075,15 +1056,15 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
         {
           avatar: Tec_33,
-          title: "Photoshop",
+          title: "Adobe Photoshop",
         },
         {
           avatar: Tec_34,
-          title: "Illustrator",
+          title: "Adobe Illustrator",
         },
         {
           avatar: Tec_35,
@@ -1095,14 +1076,16 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
       ],
     },
     showProjects: true,
   },
   {
-    heading: "AI & CHAT GPT",
+    id:'gen-ai-and-chat-bots',
+    bgImg: AI,
+    heading: "Gen AI and Chat Bots",
     desc: "Our AI & Chat GPT services harness the potential of advanced technology, engaging users in dynamic conversations and automation",
     avatar: Img8,
     bg: svg3,
@@ -1155,7 +1138,7 @@ const cards = [
       tecnology: [
         {
           avatar: Tec_1,
-          title: "Azure",
+          title: "Microsoft Azure",
         },
         {
           avatar: Tec_2,
@@ -1179,7 +1162,7 @@ const cards = [
         },
         {
           avatar: Tec_7,
-          title: "AWS",
+          title: "Amazon Web Services",
         },
         {
           avatar: Tec_8,
@@ -1251,7 +1234,7 @@ const cards = [
         },
         {
           avatar: Tec_27,
-          title: "flask",
+          title: "Flask",
         },
   
         {
@@ -1264,15 +1247,15 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
         {
           avatar: Tec_33,
-          title: "Photoshop",
+          title: "Adobe Photoshop",
         },
         {
           avatar: Tec_34,
-          title: "Illustrator",
+          title: "Adobe Illustrator",
         },
         {
           avatar: Tec_35,
@@ -1284,7 +1267,7 @@ const cards = [
         },
         {
           avatar: Tec_32,
-          title: "Adobexd",
+          title: "Adobe XD",
         },
       ],
     },
@@ -1293,38 +1276,48 @@ const cards = [
 ];
 
 export const imgCards = [
+  // {
+  //   name:'custom-software',
+  //   bgImg: Custom,
+  //   heading: "Custom Software",
+  // },
   {
-    bgImg: Custom,
-    heading: "Custom Software",
-  },
-  {
+    name:'devops',
     bgImg: Dev,
     heading: "Devops",
   },
   {
-    bgImg: Team,
-    heading: "Team Augmentation",
+    name:'ui-ux-design',
+    bgImg: UI,
+    heading: "UI/UX Design",
   },
+  // {
+  //   name:'team-augmentation',
+  //   bgImg: Team,
+  //   heading: "Team Augmentation",
+  // },
   {
+    name:'web-development',
     bgImg: web_dev,
     heading: "Web Development",
   },
   {
-    bgImg: Mobile,
-    heading: "Mobile App Development",
-  },
-  {
+    name:'quality-assurance',
     bgImg: Quality,
     heading: "Quality Assurance",
   },
   {
-    bgImg: UI,
-    heading: "UI/UX Design",
+    name:'mobile-app-development',
+    bgImg: Mobile,
+    heading: "Mobile App Development",
   },
-  {
-    bgImg: AI,
-    heading: "AI & Chat GPT",
-  },
+
+ 
+  // {
+  //   name:'ai-and-chat-gpt',
+  //   bgImg: AI,
+  //   heading: "AI & Chat GPT",
+  // },
 ];
 
 export default cards;

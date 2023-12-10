@@ -41,7 +41,7 @@ function TopSolExperts() {
     <div className="flex flex-col justify-center  items-center bg-[#FCFCFC] ">
       <div className="flex flex-col justify-center items-center mx-auto ">
         <div className="">
-          <h1 className="font-extrabold mt-[54px]  font-urbanist uppercase text-[26px] md:text-34[px] lg:text-4xl text-center">
+          <h1 className="font-extrabold mt-[54px]  font-urbanist uppercase text-[26px] md:text-[34px] lg:text-4xl text-center">
             TECHNOLOGIES <span className="text-primary font-urbanist font-extrabold">WE WORK WITH</span>
           </h1>
         </div>
@@ -51,7 +51,7 @@ function TopSolExperts() {
           backgroundColor="#00B8F1"
           marginTop="20px"
         />
-        <div className="grid md:grid-cols-7 grid-cols-3 gap-y-5  md:gap-x-[40px] mt-[59px] ">
+        <div className="grid md:grid-cols-7 grid-cols-3 gap-y-5  md:gap-x-[40px] mt-[30px] ">
           <button
             onClick={() => handleCategoryChange("Mobile")}
             className={`    cursor-pointer ${selectedCategory === "Mobile"
@@ -118,8 +118,8 @@ function TopSolExperts() {
         </div>
       </div>
 
-      <div className="md:container md:mx-auto flex flex-col justify-center items-center mt-[42px] px-4 mb-[50px]  rounded-[20px]">
-        <p className="text-[#737373] mt-[49px] text-center">
+      <div className="md:container md:mx-auto flex flex-col justify-center items-center mt-[25px] px-4 mb-[40px]  rounded-[20px]">
+        <p className="text-[#737373] mt-[25px] text-center">
           We Go Beyond to Cultivate a Workspace Where Safety, Value, and Motivation are Nurtured for Everyone
         </p>
         <div

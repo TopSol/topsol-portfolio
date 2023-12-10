@@ -8,6 +8,7 @@ import facebook from "../../images/facebook.png";
 import instagram from "../../images/instagram.png";
 import linkedin from "../../images/linkedIn.png";
 import EmailOptInForm from "../NewsLeter";
+import cards, { imgCards } from "../../staticData/servisesOffersData";
 
 export default function Footer() {
   return (
@@ -22,16 +23,17 @@ export default function Footer() {
           <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
             <div>
               <div className="">
-                <h1 className="mb-4 text-primary text-[28px] font-urbanist font-medium ">
-                  TOPSOL
+                <h1 className="mb-4 text-primary text-[28px] font-urbanist font-bold ">
+                  <Link to="/">
+                    TOPSOL
+                  </Link>
                 </h1>
                 <span className="text-[18px] font-medium font-urbanist">
                   A Software development Company
                 </span>
               </div>
-              <div className="flex space-x-4 mt-[34px] ">
-                <Link to="https://www.linkedin.com/company/topsolorg/mycompany/">
-                  {/* <AiFillLinkedin className="w-[30px] h-[30px] " /> */}
+              <div className="flex space-x-4 mt-[34px]">
+                <Link to="https://www.linkedin.com/company/topsolorg/mycompany/" target="_blank" rel="noopener noreferrer">
                   <img
                     src={linkedin}
                     alt="linkedin"
@@ -39,7 +41,7 @@ export default function Footer() {
                     className="logo_default h-[30px] w-[30px]"
                   />
                 </Link>
-                <Link to="https://www.instagram.com/topsol_org/">
+                <Link to="https://www.instagram.com/topsol_org/" target="_blank" rel="noopener noreferrer">
                   <img
                     src={instagram}
                     alt="instagram"
@@ -47,7 +49,7 @@ export default function Footer() {
                     className="logo_default h-[30px] w-[30px]"
                   />
                 </Link>
-                <Link to="https://www.facebook.com/topsol.org">
+                <Link to="https://www.facebook.com/topsol.org" target="_blank" rel="noopener noreferrer">
                   <img
                     src={facebook}
                     alt="facebook"
@@ -56,22 +58,24 @@ export default function Footer() {
                   />
                 </Link>
               </div>
+
               <div className="mt-12">
                 <EmailOptInForm />
               </div>
             </div>
-            <div className="md:grid hidden justify-center">
+            <div className="md:grid hidden justify-center ml-10">
               <h2 className="mb-[40px] text-[18px] font-semibold ">Services</h2>
-              <ul className="text-base font-normal space-y-[26px]  font-figtree ">
-                <li ><Link to="/services">DevOps</Link></li>
-                <li ><Link to="/services">UI/UX Design</Link></li>
-                <li ><Link to="/services">Web Development</Link></li>
-                <li ><Link to="/services">Quality Assurance</Link></li>
-                <li ><Link to="/services">App Development</Link></li>
+
+              <ul className="text-base grid  space-y-[26px]">
+                {imgCards?.map((item, index) => (
+                  <li className="text-base text-white ">
+                    <Link to={`/services/${item.name}`} key={item.name}>{item.heading}</Link></li>
+                ))}
               </ul>
+
             </div>
-            <div className="md:grid hidden ">
-              <h1 className="mb-[40px] text-[18px] font-semibold">
+            <div className="md:grid hidden  ml-10">
+              <h1 className="mb-[40px] text-white text-[18px] font-semibold">
                 Quick Links
               </h1>
               <ul className="text-base  space-y-[26px]">
@@ -92,8 +96,8 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="mt-[60px] md:mt-0">
-              <h1 className="mb-[40px] text-[18px] ml-[7px]  font-semibold">
+            <div className="mt-[60px] md:mt-6">
+              <h1 className="mb-[40px] text-white text-[18px] ml-[7px]  font-semibold">
                 Contact
               </h1>
               <ul className="text-base font-normal space-y-[16px] font-figtree">

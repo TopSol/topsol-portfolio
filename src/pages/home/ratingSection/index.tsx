@@ -39,7 +39,7 @@ export default function index() {
   return (
     <div className="  mt-[69px] lg:mt-[100px] flex justify-center ">
       <div className="w-[85%]    ">
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center" data-aos="fade-up">
           <div className="">
             <h1 className="font-extrabold font-urbanist uppercase text-[26px] md:text-[34px] lg:text-4xl  text-center">
               What our <span className="text-primary  font-extrabold font-urbanist">Clients say </span>
@@ -56,7 +56,7 @@ export default function index() {
           <Slider {...settings}>
             {reviews?.map((review, index) => {
               return (
-                <div key={index} className="mt-[81px]">
+                <div key={index} className="mt-[81px]" data-aos="fade-up">
                   <RatingSlider review={review} />
                 </div>
               );

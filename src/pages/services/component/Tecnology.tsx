@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function Tecnology(servicedata) {
+export default function Tecnology({ servicedata }) {
     const [slider, setSlider] = useState<any | null>(null);
 
     const next = () => {
@@ -77,11 +77,11 @@ export default function Tecnology(servicedata) {
                     </div>
                     <div className="mt-[36px] md:mt-[95px] md:w-[80vw] w-[97vw] ">
                         <Slider {...settings} ref={setSlider}>
-                            {servicedata?.servicedata?.details?.tecnology?.map((item, index) => (
+                            {servicedata && servicedata?.map((item, index) => (
                                 <div className='flex flex-col   items-center justify-center '>
                                     <div className='border-[4px] border-white rounded-[8px] w-[136px] h-[136px] justify-center flex items-center flex-col'>
-                                        <img src={item?.avatar} alt="" className='' />
-                                        <h1 className='text-textColors mt-5 font-urbanist text-[18px] leading-[120%] font-semibold'>{item?.title}</h1>
+                                        <img src={item?.icon} alt="" className='' />
+                                        <h1 className='text-textColors mt-5 font-urbanist text-[18px] text-center leading-[120%] font-semibold'>{item?.name}</h1>
                                     </div>
                                 </div>
                             ))}

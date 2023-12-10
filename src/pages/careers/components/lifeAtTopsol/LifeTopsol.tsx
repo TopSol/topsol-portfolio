@@ -72,7 +72,7 @@ function LifeTopsol() {
             Why you Should Join Our Awesome Team
           </h1>
           <p className=" text-justify mx-[24px] text-[#3D3D3D] md:mx-0 text-[15px] lg:text-[18px] xl:text-[20px] leading-[150%] font-light font-figtree mt-[10px] xl:mt-[34px] ">
-            Life at Topsol is more than just a job – it's an immersive experience that combines innovation, camaraderie, and personal growth. From the moment you step through our doors, you'll become a part of a thriving community that values creativity, collaboration, and the pursuit of excellence From the moment you step through our doors, you'll become a part of a thriving community that values creativity, collaboration, and the pursuit of excellence
+            Life at TOPSOL is more than just a job – it's an immersive experience that combines innovation, camaraderie, and personal growth. From the moment you step through our doors, you'll become a part of a thriving community that values creativity, collaboration, and the pursuit of excellence From the moment you step through our doors, you'll become a part of a thriving community that values creativity, collaboration, and the pursuit of excellence
           </p>
         </div>
 

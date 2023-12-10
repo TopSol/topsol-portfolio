@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import VideoHero from "../../components/VidoeHero";
 import ServicesOffers from "../home/servisesOffers";
@@ -12,7 +12,12 @@ import { Link } from "gatsby";
 import Project from "./component/project";
 import heroImage from "../../images/heroImage.png";
 import { ToggleBar } from "../../components/bar";
+import { useLocation } from "@reach/router";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { db } from "../../utils/firebase";
+
 export default function index() {
+
   return (
     <div>
       <div>

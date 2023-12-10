@@ -32,7 +32,7 @@ export default function PortfolioDetailBody({ data }: any) {
         <div className="mx-auto w-[84%] md:flex  hidden  -mt-24">
           <img src={porfolioDetailsStar} alt="" className="-z-20" />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center object-cover w-[90%] mx-auto my-10">
           <img src={portfolioDetails} alt="" />
         </div>
         <div className="mx-auto w-[83%] md:flex  hidden justify-end -mb-24">
@@ -52,13 +52,13 @@ export default function PortfolioDetailBody({ data }: any) {
             />
           </div>
 
-          <div className="flex md:flex-row flex-col w-[75%] mx-auto  justify-around mt-[49px]">
+          <div className="flex md:flex-row flex-col lg:w-[75%] w-[100%] mx-auto justify-between  lg:justify-around mt-[49px]">
             {portfolioImg?.map((item: any, index: any) => (
-              <div className="bg-[#E7F9FF]   flex flex-col justify-center mt-5 p-3 rounded-[10px]  items-center">
+              <div className="bg-[#E7F9FF]   flex flex-col justify-center mt-5 md:p-3 p-2 ml-1 rounded-[10px]  items-center">
                 <div>
                   <img src={item.img} alt="" />
                 </div>
-                <h1 className="text-center font-figtree md:text-[20px] text-[16px] leading-[150%] font-light mt-2 w-[179px]">
+                <h1 className="text-center font-figtree md:text-[20px] text-[16px] leading-[150%] font-light mt-2  max-w-[179px]">
                   {data && data.goals && data.goals[index]
                     ? data.goals[index]
                     : "Default Value"}

@@ -22,7 +22,7 @@ function ExpertCards({ title, avatar }: appProps) {
         />
         <div>
           <h1
-            className={`  mt-[19px] text-black text-[13px] font-bold `}
+            className={`  mt-[19px] text-center text-black text-[13px] font-bold `}
           >
             {title}
           </h1>

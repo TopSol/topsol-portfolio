@@ -56,6 +56,14 @@ import Tec_38 from "../images/Icons/techonologies/Group 39286.png";
 import Tec_39 from "../images/Icons/techonologies/pngwing 6.png";
 import Tec_40 from "../images/Icons/techonologies/expo.png";
 import Tec_41 from "../images/Icons/techonologies/canva-icon 1.png";
+import Tec_42 from "../images/Icons/techonologies/Group 39329.svg";
+import Tec_43 from "../images/Icons/techonologies/rubyrails.svg";
+import Tec_44 from "../images/Icons/techonologies/Vector1.png";
+import Tec_45 from "../images/Icons/techonologies/Vector2.png";
+import Tec_46 from "../images/Icons/techonologies/image 168.png";
+import Tec_47 from "../images/Icons/techonologies/Group 39330.png";
+import Tec_48 from "../images/Icons/techonologies/Group 39331.png";
+
 
 
 
@@ -105,7 +113,7 @@ const FrontEnd = [
   },
   {
     avatar: Tec_26,
-    title: "Gats by",
+    title: "Gatsby",
   },
   {
     avatar: Tec_5,
@@ -119,11 +127,20 @@ const FrontEnd = [
     avatar: Tec_9,
     title: "Flutter",
   },
+
+  {
+    avatar: Tec_18,
+    title: "Laravel",
+  },
+  {
+    avatar: Tec_42,
+    title: "PHP",
+  },
 ];
 const Devops = [
   {
     avatar: Tec_1,
-    title: "Azure",
+    title: "Microsoft Azure",
   },
 
   {
@@ -140,7 +157,7 @@ const Devops = [
   },
   {
     avatar: Tec_7,
-    title: "AWS",
+    title: "Amazon Web Services",
   },
   {
     avatar: Tec_39,
@@ -160,15 +177,34 @@ const CMS = [
     avatar: Tec_29,
     title: "Wordpress",
   },
+  {
+    avatar: Tec_44,
+    title: "Magento",
+  }, {
+    avatar: Tec_45,
+    title: "Drupal",
+  },
+  {
+    avatar: Tec_46,
+    title: "Bubble",
+  },
+  {
+    avatar: Tec_47,
+    title: "Joomla",
+  },
+  {
+    avatar: Tec_48,
+    title: "Realm",
+  },
 ];
 const Database = [
   {
     avatar: Tec_30,
-    title: "Dynamo db",
+    title: "DynamoDB",
   },
   {
     avatar: Tec_31,
-    title: "Cosmos db",
+    title: "Cosmos DB",
   },
   {
     avatar: Tec_32,
@@ -214,11 +250,15 @@ const Backend = [
     avatar: Tec_4,
     title: "Firebase",
   },
-
   {
-    avatar: Tec_18,
-    title: "Laravel",
+    avatar: Tec_42,
+    title: "PHP",
   },
+  {
+    avatar: Tec_43,
+    title: "Ruby on Rails",
+  },
+
 ];
 const UiUx = [
   {
@@ -227,15 +267,15 @@ const UiUx = [
   },
   {
     avatar: Tec_34,
-    title: "Adobexd",
+    title: "Adobe XD",
   },
   {
     avatar: Tec_35,
-    title: "Photoshop",
+    title: "Adobe Photoshop",
   },
   {
     avatar: Tec_36,
-    title: "Illustrator",
+    title: "Adobe Illustrator",
   },
   {
     avatar: Tec_41,
@@ -245,7 +285,7 @@ const UiUx = [
 const Industries = [
   {
     avatar: Tec_1,
-    title: "Azure",
+    title: "Microsoft Azure",
   },
   {
     avatar: Tec_2,
@@ -269,7 +309,7 @@ const Industries = [
   },
   {
     avatar: Tec_7,
-    title: "AWS",
+    title: "Amazon Web Services",
   },
   {
     avatar: Tec_8,
@@ -316,7 +356,7 @@ const Industries = [
 const technologies = [
   {
     avatar: Tec_1,
-    title: "Azure",
+    title: "Microsoft Azure",
   },
   {
     avatar: Tec_2,
@@ -340,7 +380,7 @@ const technologies = [
   },
   {
     avatar: Tec_7,
-    title: "AWS",
+    title: "Amazon Web Services",
   },
   {
     avatar: Tec_8,

@@ -4,7 +4,7 @@ import { motion, sync, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuItem";
 import { Navigation } from "./Navigation";
 import "./style.css";
-import Logo from "../../images/main_logo2.png";
+import Logo from "../../images/TOPSOL LOGO-01-01 2.svg";
 import { Link, navigate } from "gatsby";
 
 const sidebar = {
@@ -41,8 +41,6 @@ export const ToggleBar = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-  const [hovered, setHovered] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       toggleOpen(0);
@@ -50,11 +48,11 @@ export const ToggleBar = () => {
   });
   return (
     <div className={` ${"bg-white"} flex lg:hidden`}>
-      <div className="md:w-[20%] w-[45%] pb-4 pl-2 ">
-        <Link to="/">
-          <img src={Logo} alt="" className=" " />
-        </Link>
-      </div>
+      <Link to="/">
+        <div className=" w-[100%] pb-4 pl-2 ">
+          <img src={Logo} alt="" className=" W-[100%]" />
+        </div>
+      </Link>
       <motion.nav
         className={`navbar ${isOpen && ""
           } transition-bg duration-500 ease-in-out`}
