@@ -21,7 +21,7 @@ const reviews = [
     subheading: "and Iterate",
     desc: "Request a tailored quote to fast-track your building project from concept to a functional Minimum Viable Product (MVP) within weeks, not months. Our streamlined process ensures rapid development, saving you valuable time. With a personalized estimate, you can unlock the potential of your idea sooner, turning it into a tangible reality. We optimize every step, eliminating unnecessary delays, and providing efficient solutions that expedite your project's journey. Say goodbye to lengthy timelines and hello to a swift MVP, realizing your vision promptly, all within the span of a few weeks. Don't wait when you can accelerate your progress today.",
     avatar:
-      "https://res.cloudinary.com/asifsaythe/image/upload/v1701252345/new_portfolio/32891647_m018t0223_e_rocket_21july22_1_psdghs.png",
+      "https://res.cloudinary.com/asifsaythe/image/upload/v1702292284/new_portfolio/Group_39348_u2e4vl.png",
   },
   {
     id: "4",
