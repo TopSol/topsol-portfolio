@@ -10,7 +10,9 @@ export default function Modal({
   closeModal: () => void;
 }) {
   const res = reviews?.find((item) => item.id === id);
-  const handleChildClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleChildClick = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     event.stopPropagation();
   };
 
@@ -43,7 +45,7 @@ export default function Modal({
           alignItems: "center",
           opacity: 0.1,
           zIndex: 2000,
-          backgroundColor: 'rgba(0, 0, 0, 0.8)'
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
         }}
         className=""
         onClick={closeModal}
@@ -56,7 +58,10 @@ export default function Modal({
           style={{ overflow: "hidden" }}
           onClick={handleChildClick}
         >
-          <div className="absolute top-12 right-12 px-[11px] py-1 text-white text-center align-middle cursor-pointer font-bold rounded-full bg-[#309BD3]" onClick={() => closeModal()}>
+          <div
+            className="absolute top-12 right-12 px-[11px] py-1 text-white text-center align-middle cursor-pointer font-bold rounded-full bg-[#309BD3]"
+            onClick={() => closeModal()}
+          >
             X
           </div>
 
@@ -71,7 +76,7 @@ export default function Modal({
               <p className="font-montserrat md:text-[18px] lg:text-[36px]  md:text-left text-center font-bold text-[#309BD3] capitalize">
                 {res?.subheading}
               </p>
-              <p className="font-montserrat lg:pr-7 pr-3 lg:mt-5 md:mt-3 md:text-[13px]  md:text-left text-justify text-[10px]">
+              <p className="font-montserrat lg:pr-7 pr-3 lg:mt-5 md:mt-3 md:text-[16px]  md:text-left text-justify text-[14]">
                 {res?.desc}
               </p>
             </div>

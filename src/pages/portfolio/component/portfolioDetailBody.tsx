@@ -5,7 +5,7 @@ import LineAnimation from "../../../components/LineAnimation";
 import portfolioDetails from "../../../images/portfolioImage/portfolio-details.webp";
 import { portfolioImg } from "../../../staticData/portfolioData";
 import porfolioDetailsStar from "../../../images/portfolioImage/porfolioDetailsStar.webp";
-export default function PortfolioDetailBody({ data }: any) {
+export default function PortfolioDetailBody({ data }) {
   const shadowStyles = {
     boxShadow: "0px 16px 32px 0px rgba(98, 183, 210, 0.25)",
   };
@@ -16,13 +16,17 @@ export default function PortfolioDetailBody({ data }: any) {
         style={shadowStyles}
       >
         <h1 className="text-textColors font-urbanist  font-bold md:text-[34px] text-[25px] leading-[150%]">
-          Project <span className="text-primary font-urbanist font-bold">Overview</span>
+          Project{" "}
+          <span className="text-primary font-urbanist font-bold">Overview</span>
         </h1>
         <p className="text-[#333] font-figtree mt-[15px] font-light md:text-[20px] text-[16px] leading-[150%]">
           {data?.overview}
         </p>
         <h1 className="text-textColors font-urbanist mt-[20px] font-bold  md:text-[34px] text-[25px] leading-[150%]">
-          The Problem <span className="text-primary font-urbanist font-bold">Statement</span>
+          The Problem{" "}
+          <span className="text-primary font-urbanist font-bold">
+            Statement
+          </span>
         </h1>
         <p className="text-[#333] font-figtree mt-[15px] font-light md:text-[20px] text-[16px] leading-[150%]">
           {data?.problem}
@@ -39,10 +43,16 @@ export default function PortfolioDetailBody({ data }: any) {
           <img src={porfolioDetailsStar} alt="" className="-z-20" />
         </div>
 
-        <div className="py-[58px] px-[40px]  rounded-[20px] bg-white  w-[80%] flex justify-center flex-col mx-auto" style={shadowStyles}>
+        <div
+          className="py-[58px] px-[40px]  rounded-[20px] bg-white  w-[80%] flex justify-center flex-col mx-auto"
+          style={shadowStyles}
+        >
           <div className=" flex items-center flex-col justify-center">
             <h1 className="font-extrabold text-textColors uppercase font-urbanist  text-3xl md:text-3xl lg:text-4xl mt-6 text-center">
-              Project <span className="text-primary font-urbanist font-extrabold">Goals</span>
+              Project{" "}
+              <span className="text-primary font-urbanist font-extrabold">
+                Goals
+              </span>
             </h1>
             <LineAnimation
               width="178px"
@@ -76,7 +86,10 @@ export default function PortfolioDetailBody({ data }: any) {
       >
         <div className="flex flex-col  container mx-auto items-center md:items-start">
           <h2 className="text-[36px] font-urbanist  text-textColors font-semibold my-6">
-            TOP <span className="text-primary font-urbanist font-semibold">FEATURES </span>
+            TOP{" "}
+            <span className="text-primary font-urbanist font-semibold">
+              FEATURES{" "}
+            </span>
           </h2>
           <LineAnimation
             width="178px"

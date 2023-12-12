@@ -4,14 +4,14 @@ import PrimaryBtn from "../../PrimaryBtn";
 import Form from "../form/Form";
 
 function AboutUs() {
-    const [showForm, setShowForm] = useState(false);
-    const handleApplyClick = () => {
-        setShowForm(true);
-      };
-    
-      const handleSendMessage = () => {
-        setShowForm(false);
-      };
+  const [showForm, setShowForm] = useState(false);
+  const handleApplyClick = () => {
+    setShowForm(true);
+  };
+
+  const handleSendMessage = () => {
+    setShowForm(false);
+  };
 
   return (
     <div className="py-10 sm:px-32 px-10">
@@ -23,7 +23,7 @@ function AboutUs() {
           </div>
           <div className="my-6">
             <p className="text-justify ">
-              At Topsol, we're more than a company - we're a collective of
+              At TOPSOL, we're more than a company - we're a collective of
               passionate innovators dedicated to pushing boundaries and crafting
               exceptional digital solutions. Our journey is rooted in a
               commitment to creativity, collaboration, and client success. With
@@ -38,7 +38,7 @@ function AboutUs() {
           <div className="my-6 text-center">
             <p className="text-justify">
               We are seeking a talented Product Designer to join our team. As a
-              Product Designer at Topsol, you will play a pivotal role in
+              Product Designer at TOPSOL, you will play a pivotal role in
               shaping user-centered web solutions that seamlessly blend
               aesthetics with functionality. Your creative vision and attention
               to detail will be key in crafting captivating digital experiences
@@ -174,8 +174,9 @@ function AboutUs() {
 
       <div className="flex justify-center items-center">
         <button
-        onClick={handleApplyClick}
-        className="font-bold bg-primary  hover:bg-primary-light font-montserrat rounded-xl text-primary-white py-3 px-10">
+          onClick={handleApplyClick}
+          className="font-bold bg-primary  hover:bg-primary-light font-montserrat rounded-xl text-primary-white py-3 px-10"
+        >
           apply now
         </button>
       </div>

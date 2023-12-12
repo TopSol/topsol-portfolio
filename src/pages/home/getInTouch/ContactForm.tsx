@@ -6,53 +6,52 @@ import { addDoc, collection } from "firebase/firestore";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import PrimaryBtn from "../../../components/PrimaryBtn";
-import * as Yup from 'yup';
-import { useFormik } from 'formik';
+import * as Yup from "yup";
+import { useFormik } from "formik";
 import { PulseLoader } from "react-spinners";
 
 interface Iprops {
   addressInfo: boolean;
 }
 const validationSchema = Yup.object().shape({
-  name: Yup.string().required('Name is required'),
-  email: Yup.string().email('Invalid email').required('Email is required'),
+  name: Yup.string().required("Name is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
   phone: Yup.string()
-    .required('Phone number is required')
-    .matches(/^\+?[0-9]{12,}$/, 'Invalid phone number. Must be at least 10 digits.'),
-  message: Yup.string().required('Message is required'),
+    .required("Phone number is required")
+    .matches(
+      /^\+?[0-9]{12,}$/,
+      "Invalid phone number. Must be at least 10 digits."
+    ),
+  message: Yup.string().required("Message is required"),
 });
-
-
-
-
 
 function ContactForm({ addressInfo }: Iprops) {
   const [isFocused, setIsFocused] = useState("");
   const [loader, setLoader] = useState(false);
   const formik = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      phone: '+92',
-      message: '',
+      name: "",
+      email: "",
+      phone: "+1",
+      message: "",
     },
     validationSchema,
     onSubmit: async (values) => {
       try {
         setLoader(true);
-        await addDoc(collection(db, 'getInTouch'), values);
-        toast.success('Your message is received. We will contact you back shortly.');
+        await addDoc(collection(db, "getInTouch"), values);
+        toast.success(
+          "Your message is received. We will contact you back shortly."
+        );
         formik.resetForm();
       } catch (error) {
         setLoader(false);
-        toast.error('Data cannot be submitted');
-
+        toast.error("Data cannot be submitted");
       } finally {
         setLoader(false);
-        setIsFocused('')
+        setIsFocused("");
       }
     },
-
   });
 
   const handleFocus = (inputName) => {
@@ -64,9 +63,18 @@ function ContactForm({ addressInfo }: Iprops) {
       <div>
         <ToastContainer />
       </div>
-      <form className=" mx-auto  w-[100%] mt-10 md:mt-0" onSubmit={formik.handleSubmit}>
+      <form
+        className=" mx-auto  w-[100%] mt-10 md:mt-0"
+        onSubmit={formik.handleSubmit}
+      >
         <div
-          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${isFocused === "name" ? "border-primary" : formik.errors.name && formik.touched.name ? 'border-red-500' : 'border-[#1F1F1F]'}`}
+          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${
+            isFocused === "name"
+              ? "border-primary"
+              : formik.errors.name && formik.touched.name
+              ? "border-red-500"
+              : "border-[#1F1F1F]"
+          }`}
         >
           <div className="md:w-[6%] w-[13%]">
             <svg
@@ -100,12 +108,23 @@ function ContactForm({ addressInfo }: Iprops) {
             name="name"
           />
         </div>
-        {isFocused === "name" ? " " : formik.errors.name && formik.touched.name && (
-          <p className="text-red-500 text-sm mt-1 ml-2">{formik.errors.name}</p>
-        )}
+        {isFocused === "name"
+          ? " "
+          : formik.errors.name &&
+            formik.touched.name && (
+              <p className="text-red-500 text-sm mt-1 ml-2">
+                {formik.errors.name}
+              </p>
+            )}
         <div className="flex flex-col md:flex-row md:mt-7  mt-3 justify-between">
           <div
-            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "email" ? "border-primary" : formik.errors.email && formik.touched.email ? 'border-red-500' : 'border-[#1F1F1F]'}`}
+            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${
+              isFocused === "email"
+                ? "border-primary"
+                : formik.errors.email && formik.touched.email
+                ? "border-red-500"
+                : "border-[#1F1F1F]"
+            }`}
           >
             <div className="w-[9%] mr-3">
               <svg
@@ -121,9 +140,14 @@ function ContactForm({ addressInfo }: Iprops) {
                 />
               </svg>
             </div>
-            {isFocused === "email" ? " " : formik.errors.email && formik.touched.email && (
-              <p className="text-red-500 text-sm mt-20 absolute ">{formik.errors.email}</p>
-            )}
+            {isFocused === "email"
+              ? " "
+              : formik.errors.email &&
+                formik.touched.email && (
+                  <p className="text-red-500 text-sm mt-20 absolute ">
+                    {formik.errors.email}
+                  </p>
+                )}
             <input
               type="email"
               required
@@ -135,25 +159,33 @@ function ContactForm({ addressInfo }: Iprops) {
               className="outline-none text-[18px] font-medium w-[90%] font-figtree"
               name="email"
             />
-
-
           </div>
           <div
             className={`flex flex-row rounded-lg md:w-[48%] border-[1px] w-[100%] md:mt-0 mt-3 items-center py-[7px] px-[20px] 
-              ${isFocused === "phone" ? "border-primary" : formik.errors.phone && formik.touched.phone ? 'border-red-500' : 'border-[#1F1F1F]'}`}
-
+              ${
+                isFocused === "phone"
+                  ? "border-primary"
+                  : formik.errors.phone && formik.touched.phone
+                  ? "border-red-500"
+                  : "border-[#1F1F1F]"
+              }`}
           >
-            {isFocused === "phone" ? " " : formik.errors.phone && formik.touched.phone && (
-              <p className="text-red-500 text-sm mt-20 absolute ">{formik.errors.phone}</p>
-            )}
+            {isFocused === "phone"
+              ? " "
+              : formik.errors.phone &&
+                formik.touched.phone && (
+                  <p className="text-red-500 text-sm mt-20 absolute ">
+                    {formik.errors.phone}
+                  </p>
+                )}
             <PhoneInput
-              country="pk"
+              country="us"
               value={formik.values.phone}
               onChange={(e) => formik.setFieldValue("phone", e)}
               onBlur={formik.handleBlur}
               placeholder="000 0000000"
               inputProps={{
-                name: 'phone',
+                name: "phone",
                 require,
                 style: {
                   width: "100%",
@@ -163,7 +195,6 @@ function ContactForm({ addressInfo }: Iprops) {
               }}
               buttonStyle={{ border: "none", backgroundColor: "white" }}
             />
-
 
             {/* <input
               type="phone"
@@ -176,14 +207,20 @@ function ContactForm({ addressInfo }: Iprops) {
               className="outline-none text-[18px] font-medium w-[90%] font-figtree"
               name="phone"
             /> */}
-
           </div>
         </div>
         <div
-          className={`flex flex-row rounded-lg md:mt-10  mt-3 border-[1px] items-center pt-[10px]  pl-[20px]  ${isFocused === "message" ? "border-primary" : formik.errors.message && formik.touched.message ? 'border-red-500' : 'border-[#1F1F1F]'}`}
+          className={`flex flex-row rounded-lg md:mt-10  mt-3 border-[1px] items-center pt-[10px]  pl-[20px]  ${
+            isFocused === "message"
+              ? "border-primary"
+              : formik.errors.message && formik.touched.message
+              ? "border-red-500"
+              : "border-[#1F1F1F]"
+          }`}
         >
           <textarea
             placeholder="Write your Message"
+            numberOfLines={3}
             value={formik.values.message}
             onChange={formik.handleChange}
             className="outline-none text-[18px] font-medium w-[100%] font-figtree"
@@ -192,30 +229,34 @@ function ContactForm({ addressInfo }: Iprops) {
             name="message"
             required
           />
-
         </div>
-        {isFocused === "message" ? " " : formik.errors.message && formik.touched.message && (
-          <p className="text-red-500 text-sm mt-1 ml-2">{formik.errors.message}</p>
-        )}
+        {isFocused === "message"
+          ? " "
+          : formik.errors.message &&
+            formik.touched.message && (
+              <p className="text-red-500 text-sm mt-1 ml-2">
+                {formik.errors.message}
+              </p>
+            )}
         <div className="mt-10 md:w-[30%] w-[50%] ">
           <button
             disabled={loader || !formik.isValid || formik.isSubmitting}
             type="submit"
             aria-label="Post Comment"
-            className={` flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none  text-[18px]  text-white rounded-[6px] ${loader || formik.isSubmitting || !formik.isValid ? "bg-gray-300" : "bg-primary"
-              } `}
+            className={` flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none  text-[18px]  text-white rounded-[6px] ${
+              loader || formik.isSubmitting || !formik.isValid
+                ? "bg-gray-300"
+                : "bg-primary"
+            } `}
           >
-            {loader ? (
-              <PulseLoader color="#8E8E8E" size={15} />
-            ) : ('Send')}
-
+            {loader ? <PulseLoader color="#8E8E8E" size={15} /> : "Send"}
           </button>
         </div>
-
       </form>
       <div
-        className={` ${addressInfo ? "flex" : "hidden"
-          } flex-col mt-[37px] md:flex-row justify-between`}
+        className={` ${
+          addressInfo ? "flex" : "hidden"
+        } flex-col mt-[37px] md:flex-row justify-between`}
       >
         <div className=" md:w-[30%] w-[100%]">
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">

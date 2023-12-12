@@ -7,29 +7,28 @@ import { Link } from "gatsby";
 
 export default function Hero() {
   const [root, setRoot] = useState(null);
-  // let root = document.body;
-
-  // let root;
   useEffect(() => {
     setRoot(document.body);
   }, []);
 
   return (
     <div className="bg-cover min-h-[100vh] md:min-h-[100vh] xl:min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 heroBackground  justify-center">
-      <div className="flex flex-col justify-center px-4 sm:px-6 lg:px-2"
+      <div
+        className="flex flex-col justify-center px-4 sm:px-6 lg:px-2"
         data-aos="fade-up"
       >
         <h1
           id="root"
-          className="lg:text-[48px] sm:text-3xl text-[25px] uppercase md:text-5xl text-white font-extrabold font-urbanist leading-[50px] text-center  "
+          className="lg:text-[48px] sm:text-4xl text-[25px] uppercase md:text-5xl text-white font-extrabold font-urbanist leading-[50px] text-center  "
         >
-          A Better Approach to <span className="text-primary font-urbanist">Develop Software</span>
+          A Better Approach to{" "}
+          <span className="text-primary font-urbanist">Develop Software</span>
         </h1>
-        <p className="md:mt-[52px] mt-[25px] text-[16px] md:text-[22px] text-white font-figtree md:w-[70%] mx-auto  w-[95%] text-center  ">
+        <p className="md:mt-[52px] mt-[15px] text-[18px] md:text-[22px] text-white font-figtree md:w-[70%] mx-auto  w-[95%] text-center  ">
           Accelerate your launch by 2x with our groundbreaking development
-          process, and  reduce costs significantly. Say goodbye to the
-          tedious process of starting from scratch  and embrace the future
-          of innovative app development.
+          process, and reduce costs significantly. Say goodbye to the tedious
+          process of starting from scratch and embrace the future of innovative
+          app development.
         </p>
         <div className="bg-transparent    "></div>
         <div className="flex flex-col mt-[54px] sm:flex-row gap-[17px] justify-center  items-center">
