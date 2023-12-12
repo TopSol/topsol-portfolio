@@ -7,9 +7,19 @@ import { ToggleBar } from "../../../components/bar";
 import WorkFlow from "../component/WorkFlow";
 import Tecnology from "../component/Tecnology";
 import SmallFooter from "../../../components/smallFooter";
-import { collection, doc, getDoc, getDocs, orderBy, query, where } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  orderBy,
+  query,
+  where,
+} from "firebase/firestore";
 import { db } from "../../../utils/firebase";
 import { PulseLoader } from "react-spinners";
+import Logo from "../../../images/favicon-01.png";
+import metaImage from "../../../images/main-logo2.png";
 
 export default function ServiceDetails(pageContext) {
   const [portFolios, setPortFolios] = useState([]);
@@ -51,10 +61,7 @@ export default function ServiceDetails(pageContext) {
         </div>
       ) : (
         <div>
-
-          <HeroSection
-            servicedata={portFolios[0]}
-          />
+          <HeroSection servicedata={portFolios[0]} />
           <InfoSection
             heading={portFolios[0]?.heading}
             mainHeading={portFolios[0]?.infoHeading}
@@ -70,5 +77,36 @@ export default function ServiceDetails(pageContext) {
       )}
       <Footer />
     </div>
+  );
+}
+
+export function Head() {
+  return (
+    <>
+      <title>TOPSOL Innovative Solution</title>
+      <meta
+        name="description"
+        content="TOPSOL Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
+      />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://topsol.org/" />
+      <meta property="og:title" content="TOPSOL Innovative Solution" />
+      <meta
+        property="og:description"
+        content="TOPSOL Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
+      />
+      <meta property="og:image" content={metaImage} />
+
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://topsol.org/" />
+      <meta property="twitter:title" content="TOPSOL Innovative Solution" />
+      <meta
+        property="twitter:description"
+        content="TOPSOL Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
+      />
+      <meta property="twitter:image" content={metaImage} />
+      <link rel="icon" href={Logo} type="image/png"></link>
+    </>
   );
 }
