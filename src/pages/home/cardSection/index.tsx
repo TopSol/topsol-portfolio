@@ -109,7 +109,7 @@ export default function CardSection({
   return (
     <div ref={containerRef}>
       <div
-        className={`  lg:h-screen flex justify-center lg:justify-normal    items-center py-4 overflow-hidden`}
+        className={`  xl:h-screen flex justify-center lg:justify-normal    items-center py-4 overflow-hidden`}
       >
         <div className="flex flex-col lg:flex-row">
           <div

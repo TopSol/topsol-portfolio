@@ -164,19 +164,6 @@ function ContactForm({ addressInfo }: Iprops) {
               buttonStyle={{ border: "none", backgroundColor: "white" }}
             />
 
-
-            {/* <input
-              type="phone"
-              required
-              placeholder="000 0000000"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.phone}
-              onFocus={() => handleFocus("phone")}
-              className="outline-none text-[18px] font-medium w-[90%] font-figtree"
-              name="phone"
-            /> */}
-
           </div>
         </div>
         <div
@@ -191,6 +178,7 @@ function ContactForm({ addressInfo }: Iprops) {
             onBlur={formik.handleBlur}
             name="message"
             required
+            rows={4}
           />
 
         </div>
