@@ -13,8 +13,7 @@ import Logo from "../../../images/favicon-01.png";
 
 export default function index(pageContext) {
   const [detail, setDetail] = useState({});
-  const [loader, setLoader] = useState(false);
-
+  const [loader, setLoader] = useState(true);
   const { slug } = pageContext?.params;
 
   const fetchPortfolioItems = async () => {
@@ -43,8 +42,6 @@ export default function index(pageContext) {
   useEffect(() => {
     fetchPortfolioItems();
   }, [slug]);
-
-  console.log("slug==============", slug);
 
   return (
     <div>

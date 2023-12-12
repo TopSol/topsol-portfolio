@@ -23,13 +23,12 @@ import metaImage from "../../../images/main-logo2.png";
 
 export default function ServiceDetails(pageContext) {
   const [portFolios, setPortFolios] = useState([]);
-  const [loader, setLoader] = useState(false);
+  const [loader, setLoader] = useState(true);
   const { slug } = pageContext.params;
 
   const fetchPortFolios = async () => {
     try {
       setLoader(true);
-
       const portfolioCollection = collection(db, "services");
       let portfolioQuery = query(portfolioCollection, orderBy("createdAt"));
       const portfolioSnapshot = await getDocs(portfolioQuery);
@@ -38,10 +37,10 @@ export default function ServiceDetails(pageContext) {
         ? portfolioData.filter((portfolio) => portfolio.name === slug)
         : portfolioData;
       setPortFolios(filteredPortfolios);
-      setLoader(false);
     } catch (error) {
-      setLoader(false);
       console.error("Error fetching portfolios:", error);
+    } finally {
+      setLoader(false);
     }
   };
 
