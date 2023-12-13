@@ -10,7 +10,7 @@ function Designer() {
           <div className=" border-r-2 border-primary mr-4 text-lg">
             <h1 className="pr-4 text-primary">Senior Level</h1>
           </div>
-          
+
           <div>
             <h1 className=" text-primary-white text-lg">Full Time</h1>
           </div>
@@ -20,7 +20,7 @@ function Designer() {
         </div>
         <div className="mb-4">
           <p className="text-primary-white font-montserrat">
-            As a product designer at Topsol, you'll shape the future of
+            As a product designer at TOPSOL, you'll shape the future of
             user-centered web solutions, seamlessly blending aesthetics and
             functionality to create captivating digital experiences
           </p>
@@ -28,7 +28,7 @@ function Designer() {
         <div>
           <div className="flex sm:flex-row flex-col text-primary-white">
             <div className="border-r-2 border-primary-white">
-            <p className="pr-4">Faisalabad, Pakistan</p>
+              <p className="pr-4">Faisalabad, Pakistan</p>
             </div>
             <p className="sm:ml-4">Posted on 08/21/2023</p>
           </div>
@@ -36,7 +36,7 @@ function Designer() {
       </div>
 
       <div className="">
-        <img src={jobImg} className=""/>
+        <img src={jobImg} className="" />
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ const MenuItem = ({ itemName }) => {
   );
 };
 
-export const Navigation = () => {
+export const Navigation = ({ isOpen }) => {
   const itemNames = [
     { name: "SERVICES", link: "/services" },
     { name: "PORTFOLIO", link: "/portfolio" },
@@ -54,7 +54,7 @@ export const Navigation = () => {
   };
 
   return (
-    <motion.ul variants={variants} className="linkUi">
+    <motion.ul variants={variants} className={`linkUi ${!isOpen && "hidden"}`}>
       {itemNames.map((itemName, index) => (
         <MenuItem itemName={itemName} key={index} />
       ))}

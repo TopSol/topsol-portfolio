@@ -54,8 +54,9 @@ export const ToggleBar = () => {
         </div>
       </Link>
       <motion.nav
-        className={`navbar ${isOpen && ""
-          } transition-bg duration-500 ease-in-out`}
+        className={`navbar ${
+          isOpen && ""
+        } transition-bg duration-500 ease-in-out`}
         initial={false}
         animate={isOpen ? "open" : "closed"}
         custom={height}
@@ -65,7 +66,7 @@ export const ToggleBar = () => {
           className="background sm:top-[18px] top-[10px] relative"
           variants={sidebar}
         />
-        <Navigation />
+        <Navigation isOpen={isOpen} />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
     </div>

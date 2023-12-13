@@ -17,7 +17,6 @@ import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../utils/firebase";
 
 export default function index() {
-
   return (
     <div>
       <div>
@@ -45,7 +44,7 @@ export function Head() {
       <title>TOPSOL Innovative Solution</title>
       <meta
         name="description"
-        content="Topsol Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
+        content="TOPSOL Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
       />
 
       <meta property="og:type" content="website" />
@@ -53,7 +52,7 @@ export function Head() {
       <meta property="og:title" content="TOPSOL Innovative Solution" />
       <meta
         property="og:description"
-        content="Topsol Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
+        content="TOPSOL Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
       />
       <meta property="og:image" content={metaImage} />
 
@@ -62,7 +61,7 @@ export function Head() {
       <meta property="twitter:title" content="TOPSOL Innovative Solution" />
       <meta
         property="twitter:description"
-        content="Topsol Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
+        content="TOPSOL Innovative Solutions leads the way in cutting-edge technology, offering creative, tailored solutions to address complex challenges, driving progress across diverse industries."
       />
       <meta property="twitter:image" content={metaImage} />
       <link rel="icon" href={Logo} type="image/png"></link>
