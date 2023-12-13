@@ -21,7 +21,7 @@ const config: GatsbyConfig = {
   plugins: [
     "gatsby-plugin-postcss",
     {
-      resolve: `gatsby-plugin-wrap-pages`,
+      resolve: `gatsby-plugin-facebook-pixel`,
       options: {
         pixelId: process.env.FB_PIXEL_ID,
       },
@@ -46,7 +46,5 @@ const config: GatsbyConfig = {
     },
   ],
 };
-
-
 
 export default config;

@@ -61,7 +61,7 @@
   transform: translateY(-50%);
 }
 .secSectionBg {
-  background: url("../images/secSection.svg");
+  /* background: url("../images/secSection.svg"); */
   background-size: contain;
 }
 .borderss:last-child{
