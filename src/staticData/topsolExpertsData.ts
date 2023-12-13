@@ -260,7 +260,7 @@ const Backend = [
   },
 
 ];
-const UiUx = [
+const UIUX = [
   {
     avatar: Tec_33,
     title: "Figma",
@@ -460,7 +460,7 @@ const data = {
   CMS,
   Database,
   Backend,
-  UiUx,
+  UIUX,
 };
 
 export default data;

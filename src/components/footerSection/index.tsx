@@ -96,7 +96,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="mt-[60px] md:mt-6">
+            <div className="mt-[60px] md:mt-0">
               <h1 className="mb-[40px] text-white text-[18px] ml-[7px]  font-semibold">
                 Contact
               </h1>

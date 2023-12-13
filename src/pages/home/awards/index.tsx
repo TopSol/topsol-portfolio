@@ -111,7 +111,7 @@ function Awards() {
           />
         </div>
         <div className="flex flex-col justify-center items-center    ">
-          <div className=" md:w-[50vw] w-[90vw] ">
+          <div className=" md:w-[50vw] w-[85vw] ">
             <Slider {...settings} ref={setSlider}>
               {images?.map((review, id) => {
                 return (
@@ -119,7 +119,7 @@ function Awards() {
                     <img
                       src={review?.avatar}
                       alt="#"
-                      className="w-[105px] h-[105px] mx-auto "
+                      className="w-[90px] h-[90px] mx-auto "
                     />
                   </div>
                 );
