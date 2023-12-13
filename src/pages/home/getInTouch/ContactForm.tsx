@@ -19,7 +19,7 @@ const validationSchema = Yup.object().shape({
   phone: Yup.string()
     .required("Phone number is required")
     .matches(
-      /^\+?[0-9]{12,}$/,
+      /^\+?[0-9]{11,}$/,
       "Invalid phone number. Must be at least 10 digits."
     ),
   message: Yup.string().required("Message is required"),
@@ -38,14 +38,19 @@ function ContactForm({ addressInfo }: Iprops) {
     validationSchema,
     onSubmit: async (values) => {
       try {
+        const dataObj = {
+          name: values.name,
+          email: values.email,
+          message: values.message,
+          phone: `+${values.phone}`,
+        };
         setLoader(true);
-        await addDoc(collection(db, "getInTouch"), values);
+        await addDoc(collection(db, "getInTouch"), dataObj);
         toast.success(
           "Your message is received. We will contact you back shortly."
         );
         formik.resetForm();
       } catch (error) {
-        setLoader(false);
         toast.error("Data cannot be submitted");
       } finally {
         setLoader(false);
@@ -68,12 +73,13 @@ function ContactForm({ addressInfo }: Iprops) {
         onSubmit={formik.handleSubmit}
       >
         <div
-          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${isFocused === "name"
+          className={`flex flex-row rounded-lg border-[1px] items-center py-[10px]  pl-[20px] ${
+            isFocused === "name"
               ? "border-primary"
               : formik.errors.name && formik.touched.name
-                ? "border-red-500"
-                : "border-[#1F1F1F]"
-            }`}
+              ? "border-red-500"
+              : "border-[#1F1F1F]"
+          }`}
         >
           <div className="md:w-[6%] w-[13%]">
             <svg
@@ -110,19 +116,20 @@ function ContactForm({ addressInfo }: Iprops) {
         {isFocused === "name"
           ? " "
           : formik.errors.name &&
-          formik.touched.name && (
-            <p className="text-red-500 text-sm mt-1 ml-2">
-              {formik.errors.name}
-            </p>
-          )}
+            formik.touched.name && (
+              <p className="text-red-500 text-sm mt-1 ml-2">
+                {formik.errors.name}
+              </p>
+            )}
         <div className="flex flex-col md:flex-row md:mt-7  mt-3 justify-between">
           <div
-            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${isFocused === "email"
+            className={`flex flex-row rounded-lg md:w-[48%] w-[100%] border-[1px] items-center py-[10px]  px-[20px] ${
+              isFocused === "email"
                 ? "border-primary"
                 : formik.errors.email && formik.touched.email
-                  ? "border-red-500"
-                  : "border-[#1F1F1F]"
-              }`}
+                ? "border-red-500"
+                : "border-[#1F1F1F]"
+            }`}
           >
             <div className="w-[9%] mr-3">
               <svg
@@ -141,11 +148,11 @@ function ContactForm({ addressInfo }: Iprops) {
             {isFocused === "email"
               ? " "
               : formik.errors.email &&
-              formik.touched.email && (
-                <p className="text-red-500 text-sm mt-20 absolute ">
-                  {formik.errors.email}
-                </p>
-              )}
+                formik.touched.email && (
+                  <p className="text-red-500 text-sm mt-20 absolute ">
+                    {formik.errors.email}
+                  </p>
+                )}
             <input
               type="email"
               required
@@ -160,9 +167,10 @@ function ContactForm({ addressInfo }: Iprops) {
           </div>
           <div
             className={`flex flex-row rounded-lg md:w-[48%] border-[1px] w-[100%] md:mt-0 mt-3 items-center py-[7px] px-[20px] 
-              ${isFocused === "phone"
-                ? "border-primary"
-                : formik.errors.phone && formik.touched.phone
+              ${
+                isFocused === "phone"
+                  ? "border-primary"
+                  : formik.errors.phone && formik.touched.phone
                   ? "border-red-500"
                   : "border-[#1F1F1F]"
               }`}
@@ -170,11 +178,11 @@ function ContactForm({ addressInfo }: Iprops) {
             {isFocused === "phone"
               ? " "
               : formik.errors.phone &&
-              formik.touched.phone && (
-                <p className="text-red-500 text-sm mt-20 absolute ">
-                  {formik.errors.phone}
-                </p>
-              )}
+                formik.touched.phone && (
+                  <p className="text-red-500 text-sm mt-20 absolute ">
+                    {formik.errors.phone}
+                  </p>
+                )}
             <PhoneInput
               country="us"
               value={formik.values.phone}
@@ -192,16 +200,16 @@ function ContactForm({ addressInfo }: Iprops) {
               }}
               buttonStyle={{ border: "none", backgroundColor: "white" }}
             />
-
           </div>
         </div>
         <div
-          className={`flex flex-row rounded-lg md:mt-10  mt-3 border-[1px] items-center pt-[10px]  pl-[20px]  ${isFocused === "message"
+          className={`flex flex-row rounded-lg md:mt-10  mt-3 border-[1px] items-center pt-[10px]  pl-[20px]  ${
+            isFocused === "message"
               ? "border-primary"
               : formik.errors.message && formik.touched.message
-                ? "border-red-500"
-                : "border-[#1F1F1F]"
-            }`}
+              ? "border-red-500"
+              : "border-[#1F1F1F]"
+          }`}
         >
           <textarea
             placeholder="Write your Message"
@@ -218,28 +226,30 @@ function ContactForm({ addressInfo }: Iprops) {
         {isFocused === "message"
           ? " "
           : formik.errors.message &&
-          formik.touched.message && (
-            <p className="text-red-500 text-sm mt-1 ml-2">
-              {formik.errors.message}
-            </p>
-          )}
+            formik.touched.message && (
+              <p className="text-red-500 text-sm mt-1 ml-2">
+                {formik.errors.message}
+              </p>
+            )}
         <div className="mt-10 md:w-[30%] w-[50%] ">
           <button
             disabled={loader || !formik.isValid || formik.isSubmitting}
             type="submit"
             aria-label="Post Comment"
-            className={` flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none  text-[18px]  text-white rounded-[6px] ${loader || formik.isSubmitting || !formik.isValid
+            className={` flex items-center font-figtree py-[16px] sm:px-[68px] px-[68px] bg-none  text-[18px]  text-white rounded-[6px] ${
+              loader || formik.isSubmitting || !formik.isValid
                 ? "bg-gray-300"
                 : "bg-primary"
-              } `}
+            } `}
           >
             {loader ? <PulseLoader color="#8E8E8E" size={15} /> : "Send"}
           </button>
         </div>
       </form>
       <div
-        className={` ${addressInfo ? "flex" : "hidden"
-          } flex-col mt-[37px] md:flex-row justify-between`}
+        className={` ${
+          addressInfo ? "flex" : "hidden"
+        } flex-col mt-[37px] md:flex-row justify-between`}
       >
         <div className=" md:w-[30%] w-[100%]">
           <h1 className="font-figtree text-[16px] text-primary leading-[90%] uppercase">
@@ -255,8 +265,9 @@ function ContactForm({ addressInfo }: Iprops) {
             cALL NOW
           </h1>
           <p className="mt-3 text-[#1F1F1F] font-figtree  text-[14px] leading-[125%] ">
-            +92-303-6362191 <br />
             (041) 855 7244
+            <br />
+            +92-303-6362191
           </p>
         </div>
         <div className="md:w-[30%] mt-3 md:mt-0 w-[100%]">

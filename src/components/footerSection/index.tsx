@@ -24,16 +24,18 @@ export default function Footer() {
             <div>
               <div className="">
                 <h1 className="mb-4 text-primary text-[28px] font-urbanist font-bold ">
-                  <Link to="/">
-                    TOPSOL
-                  </Link>
+                  <Link to="/">TOPSOL</Link>
                 </h1>
                 <span className="text-[18px] font-medium font-urbanist">
                   A Software development Company
                 </span>
               </div>
               <div className="flex space-x-4 mt-[34px]">
-                <Link to="https://www.linkedin.com/company/topsolorg/mycompany/" target="_blank" rel="noopener noreferrer">
+                <Link
+                  to="https://www.linkedin.com/company/topsolorg/mycompany/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={linkedin}
                     alt="linkedin"
@@ -41,7 +43,11 @@ export default function Footer() {
                     className="logo_default h-[30px] w-[30px]"
                   />
                 </Link>
-                <Link to="https://www.instagram.com/topsol_org/" target="_blank" rel="noopener noreferrer">
+                <Link
+                  to="https://www.instagram.com/topsol_org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={instagram}
                     alt="instagram"
@@ -49,7 +55,11 @@ export default function Footer() {
                     className="logo_default h-[30px] w-[30px]"
                   />
                 </Link>
-                <Link to="https://www.facebook.com/topsol.org" target="_blank" rel="noopener noreferrer">
+                <Link
+                  to="https://www.facebook.com/topsol.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={facebook}
                     alt="facebook"
@@ -69,10 +79,12 @@ export default function Footer() {
               <ul className="text-base grid  space-y-[26px]">
                 {imgCards?.map((item, index) => (
                   <li className="text-base text-white ">
-                    <Link to={`/services/${item.name}`} key={item.name}>{item.heading}</Link></li>
+                    <Link to={`/services/${item.name}`} key={item.name}>
+                      {item.heading}
+                    </Link>
+                  </li>
                 ))}
               </ul>
-
             </div>
             <div className="md:grid hidden  ml-10">
               <h1 className="mb-[40px] text-white text-[18px] font-semibold">
@@ -118,8 +130,9 @@ export default function Footer() {
                     decoding="async"
                     className="logo_default h-6 mr-4"
                   />
-                  +92-303-6362191 <br />
                   (041) 855 7244
+                  <br />
+                  +92-303-6362191
                 </li>
                 <li className="flex flex-wrap my-4">
                   <img
@@ -131,14 +144,12 @@ export default function Footer() {
                   info@topsol.org
                 </li>
               </ul>
-
             </div>
           </div>
 
           <div className=" sm:grid hidden">
             <hr className="mt-[82px]  " />
             <div className="text-center text-white mt-[39px] mb-[10px] ">
-
               © 2023 | All rights reserved by <Link to="/home"> TOPSOL </Link>
             </div>
           </div>

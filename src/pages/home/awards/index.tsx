@@ -8,7 +8,7 @@ import ImagSlider from "./ImagSlider";
 import AnimateHr from "../../../components/animatedLine/AnimateHr";
 import images from "../../../staticData/awardsData";
 import LineAnimation from "../../../components/LineAnimation";
-import bgImage from '../../../images/homeImages/awardsection/bgImage.webp'
+import bgImage from "../../../images/homeImages/awardsection/bgImage.webp";
 function Awards() {
   const [slider, setSlider] = useState<any | null>(null);
   const [slidesToShow, setSlidesToShow] = useState(3);
@@ -19,16 +19,15 @@ function Awards() {
       setSlidesToShow(1);
     } else if (screenWidth >= 768 && screenWidth <= 1024) {
       setSlidesToShow(2);
-    }
-    else {
+    } else {
       setSlidesToShow(4);
     }
   };
   useEffect(() => {
-    window.addEventListener('resize', updateSlidesToShow);
+    window.addEventListener("resize", updateSlidesToShow);
     updateSlidesToShow();
     return () => {
-      window.removeEventListener('resize', updateSlidesToShow);
+      window.removeEventListener("resize", updateSlidesToShow);
     };
   }, []);
   const settings = {
@@ -91,14 +90,15 @@ function Awards() {
 
   return (
     <>
-      <div className="flex  flex-col md:flex-row items-center justify-around h-[431px]  md:mt-[106px] mt-[78px] bg-cover "
+      <div
+        className="flex  flex-col md:flex-row items-center justify-around h-[431px]  md:mt-[106px] mt-[78px] bg-cover "
         style={{
           backgroundImage: `url(${bgImage})`,
         }}
       >
         <div className="flex flex-col  items-center md:items-start mb-6">
           <h1 className="font-extrabold  font-urbanist  text-[26px] md:text-[34px] lg:text-[48px]  uppercase leading-[120%] ">
-            AWADS &
+            AWARDS &
           </h1>
           <h1 className="font-extrabold font-urbanist  text-primary text-[26px] md:text-[34px] lg:text-[48px]  uppercase leading-[120%] ">
             HONORS
@@ -127,16 +127,58 @@ function Awards() {
             </Slider>
           </div>
           <div className="flex mt-[32px]">
-            <button className="button arrowAwards bg-white hover:bg-primary p-2 rounded-full" onClick={previous}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                <path d="M20.25 12.1564H3.75" stroke="#121314" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M10.5 5.40637L3.75 12.1564L10.5 18.9064" stroke="#121314" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <button
+              className="button arrowAwards bg-white hover:bg-primary p-2 rounded-full"
+              onClick={previous}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M20.25 12.1564H3.75"
+                  stroke="#121314"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5 5.40637L3.75 12.1564L10.5 18.9064"
+                  stroke="#121314"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
-            <button className="button arrowAwards bg-white p-2 hover:bg-primary rounded-full ml-6" onClick={next}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                <path d="M3.75 12.1564H20.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M13.5 5.40637L20.25 12.1564L13.5 18.9064" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <button
+              className="button arrowAwards bg-white p-2 hover:bg-primary rounded-full ml-6"
+              onClick={next}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M3.75 12.1564H20.25"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.5 5.40637L20.25 12.1564L13.5 18.9064"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
           </div>

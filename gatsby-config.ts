@@ -27,6 +27,12 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `static/favicon.ico`, // This is the path to your favicon
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.

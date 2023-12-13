@@ -10,15 +10,15 @@ export default function RatingSlider({ review }: appProps) {
       <div className=" pl-4  md:mx-auto pr-4 md:pl-16  ">
         <div className="bg-[#70707005] p-4">
           <p className="mt-4  font-figtree font-light text-[#1F1F1F] ">
-            {review?.text?.length < 300 ? (
+            {review?.text?.length < 180 ? (
               review?.text
             ) : // {review?.text?.slice(0, 180)}<span className="text-gray-400 font-semibold">{expand? "Show less":"Show more"}</span>
             !expand ? (
               <>
-                {review?.text?.slice(0, 300)}...
+                {review?.text?.slice(0, 180)}...
                 <span
                   onClick={() => setExpand((prev) => !prev)}
-                  className="text-gray-400 cursor-pointer"
+                  className="text-[#00B8F1] cursor-pointer"
                 >
                   {"Show more"}
                 </span>
@@ -28,7 +28,7 @@ export default function RatingSlider({ review }: appProps) {
                 {review?.text}{" "}
                 <span
                   onClick={() => setExpand((prev) => !prev)}
-                  className="text-gray-400 cursor-pointer"
+                  className="text-[#00B8F1] cursor-pointer"
                 >
                   {"Show less"}
                 </span>

@@ -9,7 +9,11 @@ export default function AddressSection() {
       <div className="flex   flex-col md:flex-row md:container mx-auto justify-between ">
         <div className="mx-5">
           <h1 className="text-[26px] md:text-[34px] uppercase font-urbanist font-bold  ">
-            Where to <span className="text-primary font-urbanist font-bold md:text-[34px]"> Find us ?</span>
+            Where to{" "}
+            <span className="text-primary font-urbanist font-bold md:text-[34px]">
+              {" "}
+              Find us ?
+            </span>
           </h1>
           <LineAnimation
             width="178px"
@@ -25,7 +29,6 @@ export default function AddressSection() {
           <div className="mt-8">
             <h1 className="text-primary uppercase">Location</h1>
             <div className="flex items-center  ">
-
               <p className="text-base ">
                 Sitara Techno Park, 2nd Floor, Lower Canal Road East Faisalabad,
                 Pakistan
@@ -34,8 +37,9 @@ export default function AddressSection() {
             <h1 className="text-primary uppercase mt-[22px]">cALL NOW</h1>
             <div className="flex items-center  ">
               <p className="text-base ">
-                +92-303-6362191 <br />
                 (041) 855 7244
+                <br />
+                +92-303-6362191
               </p>
             </div>
             <h1 className="text-primary uppercase mt-[22px]">Email</h1>
