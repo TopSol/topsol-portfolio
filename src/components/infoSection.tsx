@@ -25,10 +25,10 @@ export default function InfoSection({
           </div>
           <p className=" text-[20px] font-figtree font-normal  capitalize  text-[#004264]">{heading}</p>
         </div>
-        <h1 className="  text-[20px] lg:text-[25px] text-primary font-urbanist xl:text-[34px] font-normal  mt-[10px] xl:mt-[34px] ">
+        <h1 className="  text-[20px] text-left lg:text-[25px] text-primary font-urbanist xl:text-[34px] font-normal  mt-[10px] xl:mt-[34px] ">
           {mainHeading}
         </h1>
-        <p className=" text-justify mx-[24px] text-[#3D3D3D] md:mx-0 text-[15px] lg:text-[18px] xl:text-[20px] leading-[150%] font-light font-figtree mt-[10px] xl:mt-[34px] ">
+        <p className=" text-justify  text-[#3D3D3D] md:mx-0 text-[15px] lg:text-[18px] xl:text-[20px] leading-[150%] font-light font-figtree mt-[10px] xl:mt-[34px] ">
           {initialText}
         </p>
       </div>
