@@ -21,9 +21,15 @@ const config: GatsbyConfig = {
   plugins: [
     "gatsby-plugin-postcss",
     {
-      resolve: `gatsby-plugin-wrap-pages`,
+      resolve: `gatsby-plugin-facebook-pixel`,
       options: {
         pixelId: process.env.FB_PIXEL_ID,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `static/favicon.ico`, // This is the path to your favicon
       },
     },
     {
@@ -46,7 +52,5 @@ const config: GatsbyConfig = {
     },
   ],
 };
-
-
 
 export default config;

@@ -26,28 +26,28 @@ const data = [
     icon: Icon3,
     heading: "Security Solutions",
     detail:
-      "Offering competitive pricing to ensure customers get the best value for their money.",
+      "Experience peace of mind with TOPSOL's cutting-edge Security Solutions, safeguarding your assets and data with industry-leading technology and expertise.",
   },
   {
     id: 4,
     icon: Icon5,
     heading: "Competitive Pricing",
     detail:
-      "Comprehensive testing procedures to ensure the software meets customer needs and expectations.",
+      "Offering competitive pricing to ensure customers get the best value for their money.",
   },
   {
     id: 5,
     icon: Icon4,
     heading: "Quality Assurance",
     detail:
-      "Ability to scale the software to meet customer needs in the future.",
+      "Comprehensive testing procedures to ensure the software meets customer needs and expectations.",
   },
   {
     id: 6,
     icon: Icon6,
     heading: "Scalability",
     detail:
-      "Providing ongoing technical support to ensure customers are getting the most out of the software.",
+      "Ability to scale the software to meet customer needs in the future.",
   },
 ];
 

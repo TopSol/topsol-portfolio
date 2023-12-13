@@ -64,13 +64,6 @@ import Tec_46 from "../images/Icons/techonologies/image 168.png";
 import Tec_47 from "../images/Icons/techonologies/Group 39330.png";
 import Tec_48 from "../images/Icons/techonologies/Group 39331.png";
 
-
-
-
-
-
-
-
 const Mobile = [
   {
     avatar: Tec_25,
@@ -180,7 +173,8 @@ const CMS = [
   {
     avatar: Tec_44,
     title: "Magento",
-  }, {
+  },
+  {
     avatar: Tec_45,
     title: "Drupal",
   },
@@ -258,9 +252,8 @@ const Backend = [
     avatar: Tec_43,
     title: "Ruby on Rails",
   },
-
 ];
-const UiUx = [
+const UIUX = [
   {
     avatar: Tec_33,
     title: "Figma",
@@ -460,7 +453,7 @@ const data = {
   CMS,
   Database,
   Backend,
-  UiUx,
+  UIUX,
 };
 
 export default data;
