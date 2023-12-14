@@ -14,7 +14,7 @@ const ParticleBackground = () => {
     }, []);
 
     return (
-        <div style={{ width: "100vw", }}>
+        <div>
             {init && (
                 <Particles
                     id="tsparticles"

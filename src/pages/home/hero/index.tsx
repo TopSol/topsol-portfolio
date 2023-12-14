@@ -13,10 +13,10 @@ export default function Hero() {
 
   return (
     <>
-      <section id="tsparticles" className="absolute min-h-[100vh] md:min-h-[100vh] xl:min-h-[75vh]">
+      <section id="tsparticles" className="absolute min-h-[100vh] md:min-h-[100vh] xl:min-h-[75vh] w-[100%]">
         <ParticleBackground />
       </section>
-      <div className="bg-cover min-h-[100vh] md:min-h-[100vh] xl:min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1   justify-center">
+      <div className="bg-cover min-h-[100vh] md:min-h-[100vh] xl:min-h-[75vh] bg-center flex items-center xl:px-[167px] lg:px-[130px] sm:px-1 bg-[#031730]   justify-center">
         <div
           className="flex flex-col justify-center px-4 sm:px-6 lg:px-2"
           data-aos="fade-up"
