@@ -12,7 +12,7 @@ export const onInitialClientRender = () => {
   });
 };
 
-export const wrapPageElement = ({ element, props }) => {
+// export const wrapPageElement = ({ element, props }) => {
   // const isNestedRoute = props.location.pathname.split('/').filter(Boolean).length > 2;
 
   // Redirect to 404 page for nested routes
@@ -22,6 +22,6 @@ export const wrapPageElement = ({ element, props }) => {
   // }
 
   // Render the page normally if it's not a nested route
-  return <React.Fragment {...props}>{element}</React.Fragment>;
-};
+  // return <React.Fragment {...props}>{element}</React.Fragment>;
+// };
 

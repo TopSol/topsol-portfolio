@@ -61,11 +61,10 @@ function TopSolExperts() {
             <button
               key={category}
               onClick={() => handleCategoryChange(category)}
-              className={`cursor-pointer mt-4  mx-1 ${
-                selectedCategory === category
-                  ? "md:border-b-2 border-primary bg-primary md:bg-white text-white md:text-black"
+              className={`cursor-pointer mt-4  mx-1 ${selectedCategory === category
+                  ? "md:border-b-2 border-primary bg-primary md:bg-transparent text-white md:text-black"
                   : "bg-transparent border-primary text-[#333]"
-              } py-2 border-2 md:border-0 md:px-0 px-[20px] w-[90px] md:w-auto md:rounded-none rounded-full font-urbanist text-[12px] md:text-[20px] font-medium `}
+                } py-2 border-2 md:border-0 md:px-0 px-[20px] w-[90px] md:w-auto md:rounded-none rounded-full font-urbanist text-[12px] md:text-[20px] font-medium `}
             >
               {category}
             </button>
