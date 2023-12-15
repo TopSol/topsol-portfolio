@@ -51,7 +51,7 @@ export default function Modal({
         onClick={closeModal}
       >
         <motion.div
-          className="card-content-container  open bg-[#efefef] xl:mx-[12%] md:mx-[4%] lg:mx-[8%] xl:min-h-[70vh] md:min-h-[60vh] sm:min-h-[65vh] min-h-[80vh] mx-[1%] rounded-2xl px-[60px] xl:py-[100px] lg:py-[40px] relative"
+          className="card-content-container  open bg-[#efefef] xl:mx-[12%] md:mx-[4%] lg:mx-[8%] xl:min-h-[70vh] md:min-h-[60vh] sm:min-h-[65vh] min-h-[90vh] mx-[1%] rounded-2xl md:px-[60px] px-[20px] xl:py-[100px] lg:py-[40px] relative"
           initial={{ opacity: 0, width: "0px", height: "0px" }}
           animate={{ opacity: 1, width: "100%" }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -59,7 +59,7 @@ export default function Modal({
           onClick={handleChildClick}
         >
           <div
-            className="absolute top-12 right-12 px-[11px] py-1 text-white text-center align-middle cursor-pointer font-bold rounded-full bg-[#309BD3]"
+            className="absolute xl:top-12 top-6  right-6 xl:right-12 px-[11px] py-1 text-white text-center align-middle cursor-pointer font-bold rounded-full bg-[#309BD3] "
             onClick={() => closeModal()}
           >
             X
@@ -70,13 +70,13 @@ export default function Modal({
             layoutId={`card-container-${id}`}
           >
             <div className="md:w-[62%] w-full mt-6">
-              <p className="font-montserrat md:text-[18px] lg:text-[36px]  md:text-left text-center font-bold text-[#309BD3] capitalize">
+              <p className="font-montserrat text-[15px] xl:text-[36px]  text-left  font-bold text-[#309BD3] capitalize">
                 {res?.heading}
               </p>
-              <p className="font-montserrat md:text-[18px] lg:text-[36px]  md:text-left text-center font-bold text-[#309BD3] capitalize">
+              <p className="font-montserrat text-[15px] xl:text-[36px]  text-left  font-bold text-[#309BD3] capitalize">
                 {res?.subheading}
               </p>
-              <p className="font-montserrat lg:pr-7 pr-3 lg:mt-5 md:mt-3 md:text-[16px]  md:text-left text-justify text-[14]">
+              <p className="font-montserrat lg:pr-7 pr-0 lg:mt-5 md:mt-3 xl:text-[16px]  md:text-left  text-[10px] ">
                 {res?.desc}
               </p>
             </div>
