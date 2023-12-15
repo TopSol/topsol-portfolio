@@ -51,7 +51,7 @@ function Home() {
   //   });
   // });
   return (
-    <div className="">
+    <>
       <MetaPixel />
       <div>
         <Navbar />
@@ -80,7 +80,7 @@ function Home() {
           <Modal id={selectedId} closeModal={closeModal} key={"item"} />
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 }
 

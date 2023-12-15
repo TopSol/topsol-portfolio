@@ -1,19 +1,38 @@
-import * as React from "react";
-import type { PageProps } from "gatsby";
-import Home from "./home";
+import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import { ToggleBar } from "../components/bar";
+import HeroSection from "../pages/services/component/HeroSection";
+import InfoSection from "../components/infoSection";
+import WorkFlow from "../pages/services/component/WorkFlow";
+import Technology from "../pages/services/component/Tecnology";
+import SmallFooter from "../components/smallFooter";
+import Footer from "../components/footerSection";
 import Logo from "../images/favicon-01.png";
 import metaImage from "../images/main-logo2.png";
-import { useParams } from "@reach/router";
+import "../styles/global.css";
 
-const IndexPage: React.FC<PageProps> = ({ pageContext }) => {
+export default function ServiceDetails({ pageContext }) {
+  const [portFolios, setPortFolios] = useState([pageContext?.service]);
+
   return (
-    <div>
-      <Home />
-    </div>
+    <>
+      <Navbar />
+      <ToggleBar />
+      <HeroSection servicedata={portFolios[0]} />
+      <InfoSection
+        heading={portFolios[0]?.heading}
+        mainHeading={portFolios[0]?.infoHeading}
+        initialText={portFolios[0]?.infoDesc}
+        image={portFolios[0]?.infoImage}
+      />
+      <WorkFlow workFlowData={portFolios[0]?.paragraph} />
+      <Technology servicedata={portFolios[0]?.tecnology} />
+      <SmallFooter />
+      <div className="mb-[60px]">Hello</div>
+      <Footer />
+    </>
   );
-};
-
-export default IndexPage;
+}
 
 export function Head() {
   return (

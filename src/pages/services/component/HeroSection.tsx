@@ -7,11 +7,9 @@ interface propTypes {
 }
 
 export default function HeroSection({ servicedata }: propTypes) {
-
   const splitTitle = servicedata?.heading?.split(" ");
   const firstName = splitTitle ? splitTitle[0] : "";
   const lastName = splitTitle ? splitTitle.slice(1).join(" ") : "";
-  console.log(servicedata?.servicedata?.heading, "servicedata");
 
   return (
     <div className=" ">
