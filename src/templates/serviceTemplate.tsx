@@ -28,7 +28,6 @@ export default function ServiceDetails({ pageContext }) {
       <WorkFlow workFlowData={portFolios[0]?.paragraph} />
       <Technology servicedata={portFolios[0]?.tecnology} />
       <SmallFooter />
-      <div className="mb-[60px]">Hello</div>
       <Footer />
     </>
   );
