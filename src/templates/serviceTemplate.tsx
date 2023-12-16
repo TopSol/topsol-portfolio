@@ -12,23 +12,25 @@ import metaImage from "../images/main-logo2.png";
 import "../styles/global.css";
 
 export default function ServiceDetails({ pageContext }) {
-  const [portFolios, setPortFolios] = useState([pageContext?.service]);
+  const [service, setService] = useState([pageContext?.service]);
 
   return (
     <>
       <Navbar />
       <ToggleBar />
-      <HeroSection servicedata={portFolios[0]} />
+      <HeroSection servicedata={service[0]} />
       <InfoSection
-        heading={portFolios[0]?.heading}
-        mainHeading={portFolios[0]?.infoHeading}
-        initialText={portFolios[0]?.infoDesc}
-        image={portFolios[0]?.infoImage}
+        heading={service[0]?.heading}
+        mainHeading={service[0]?.infoHeading}
+        initialText={service[0]?.infoDesc}
+        image={service[0]?.infoImage}
       />
-      <WorkFlow workFlowData={portFolios[0]?.paragraph} />
-      <Technology servicedata={portFolios[0]?.tecnology} />
+      <WorkFlow workFlowData={service[0]?.paragraph} />
+      <Technology servicedata={service[0]?.tecnology} />
       <SmallFooter />
-      <Footer />
+      <div className="mt-[69px]">
+        <Footer />
+      </div>
     </>
   );
 }
