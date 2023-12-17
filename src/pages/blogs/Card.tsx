@@ -108,31 +108,7 @@ export default function Card() {
   };
 
   return (
-    <div>
-      {/* <div className=" lg:container  justify-center mx-auto">
-        <div className=" md:container grid grid-col gap-3 items-center mt-[42px] md:mt-[76px] md:grid-cols-2 lg:grid-cols-4   md:mx-auto ">
-          {btnData.map((item: any, index) => {
-            return (
-              <div
-                className={`mx-5 md:mx-5 flex rounded justify-around ${
-                  selectedCategory === item.name ? "bg-primary" : ""
-                }`}
-                key={index}
-                onClick={() => {
-                  setSelectedCategory(item.name);
-                }}
-              >
-                <PrimaryBtn
-                  text={item.name}
-                  additionalClasses="bg-primary  px-4 text-[20px] w-full 
-                   md:mx-0 hover:bg-primary-lighter text-white font-semibold rounded"
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div> */}
-
+    <>
       <div className=" w-[100%]  md:w-[80%] grid grid-col gap-x-0 md:gap-x-16 items-center mt-[42px] md:mt-[76px] grid-cols-1 md:grid-cols-2 xl:grid-cols-3   md:mx-auto ">
         {loader ? (
           <div className="flex justify-center h-[500px] items-center">
@@ -231,6 +207,6 @@ export default function Card() {
           </svg>
         </button>
       </div> */}
-    </div>
+    </>
   );
 }
