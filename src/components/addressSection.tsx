@@ -5,7 +5,7 @@ import EmailIcon from "../images/Icons/Mail_Send.png";
 import LineAnimation from "./LineAnimation";
 export default function AddressSection() {
   return (
-    <div className="bg-[#FCFCFC]  py-[70px] mt-[100px]">
+    <div className="bg-[#FCFCFC]  py-[70px] ">
       <div className="flex   flex-col md:flex-row md:container mx-auto justify-between ">
         <div className="mx-5">
           <h1 className="text-[26px] md:text-[34px] uppercase font-urbanist font-bold  ">

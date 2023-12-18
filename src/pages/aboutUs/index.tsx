@@ -28,7 +28,7 @@ const aboutUs = () => {
         image={aboutInfo}
       />
       <Experience />
-      <div className="mt-[40px]">
+      <div className="mt-[40px] mb-[100px]">
         <RatingSection />
       </div>
       <AddressSection />

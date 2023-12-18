@@ -32,7 +32,9 @@ export default function index() {
         <ServicesOffers page="services" showPrimaryBtn={false} />
       </div>
       <Project />
-      <RatingSection />
+      <div className="mb-[100px]">
+        <RatingSection />
+      </div>
       <AddressSection />
       <Footer />
     </div>
