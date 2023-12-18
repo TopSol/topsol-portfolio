@@ -29,7 +29,7 @@ const reviews = [
   {
     text: "Arsalan is a talented developer in his field. He quickly picks up the needs of his clients and is easy to work with. He managed to implement quick fixes to my ReactJs website and orchestrated the global redux store for data keeping. Very responsive and has great attention to details. I would love to work with him again and definitely recommend him to anyone who needs proper website development or assistance with website code issues.",
     clientName: "Vladimir B Kagarlitskiy",
-    type: "Founder",
+    type: "Founder The Process Guys",
     avatar: Chris,
     link:'https://www.upwork.com/freelancers/~013b22c7c852e9eda0'
 

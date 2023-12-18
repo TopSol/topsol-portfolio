@@ -58,7 +58,7 @@ export default function RatingSlider({ review }: appProps) {
           </div>
           <div className="cursor-pointer">
             <Link
-              to={`${review.link}`}
+              to={`${review?.link}`}
               target="_blank"
               rel="noopener noreferrer"
             >
