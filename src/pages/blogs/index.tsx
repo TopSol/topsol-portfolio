@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import Header from "../../components/headerSection";
-import Heading from "./Heading";
 import Footer from "../../components/footerSection";
-import Card from "./Card";
+import Card from "./components/Card";
 import metaImage from "../../images/main-logo2.png";
 import Logo from "../../images/favicon-01.png";
 import { ToggleBar } from "../../components/bar";
@@ -15,7 +14,6 @@ export default function index() {
         <ToggleBar />
       </div>
       <Header />
-      <Heading />
       <Card />
       <div className="mt-[100px] md:mt-[139px]">
         <Footer />

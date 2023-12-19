@@ -61,3 +61,57 @@ exports.createPages = async ({ actions }) => {
     console.log(error);
   }
 };
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions;
+
+  const excludedPatterns = [
+'/aboutUs/component/Experience/',
+"/aboutUs/component/NumberAnimation/",
+'/blogs//component/Card/',
+'/blogs/components/Card/',
+"/careers/components/allOpenings/",
+"/careers/components/cards/DropDownCards/",
+"/careers/components/details/AboutUs/",
+"/careers/components/joinUs/JoinTopSol/",
+"/careers/components/lifeAtTopsol/LifeTopsol/",
+"/careers/components/productDesigner/Designer/",
+"/careers/components/recruitmentProcess/Process/",
+'/contactUs/components/Contact/',
+'/contactUs/components/Hero/',
+"/home/awards/",
+"/home/awards/ImagSlider/",
+"/home/cardSection/CardSlider/",
+"/home/cardSection/",
+"/home/expertCards/ExpertCards/",
+"/home/faqs/",
+"/home/getInTouch/ContactForm/",
+"/home/getInTouch/",
+"/home/hero/",
+"/home/ourPortfolio/",
+"/home/ratingSection/RatingSlider/",
+"/home/ratingSection/",
+"/home/servisesCards/ServicesCards/",
+"/home/servisesOffers/",
+"/home/topSolExpert/",
+'/home/ServicesOffers',
+"/home/components/model/Modal/",
+"/portfolio/component/Hero/",
+'/portfolio/component/HeroDetails/',
+'/portfolio/component/portfolioDetailBody/',
+'/portfolio/component/recentWork/',
+"/services/component/Cards/",
+"/services/component/HeroSection/",
+"/services/component/Tecnology/",
+"/services/component/WorkFlow/",
+"/services/component/project/",
+
+
+  ];
+  const shouldExclude = excludedPatterns.some(pattern => page.path.includes(pattern));
+
+  if (shouldExclude) {
+    deletePage(page);
+  }
+};
+

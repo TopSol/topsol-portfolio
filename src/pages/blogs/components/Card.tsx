@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import PrimaryBtn from "../../components/PrimaryBtn";
-import btnData from "../../staticData/blogDetailsData";
+import PrimaryBtn from "../../../components/PrimaryBtn";
+import btnData from "../../../staticData/blogDetailsData";
 import { Link } from "gatsby";
 import { PulseLoader } from "react-spinners";
 import {
@@ -11,7 +11,8 @@ import {
   getDocs,
   startAfter,
 } from "firebase/firestore";
-import { db } from "../../utils/firebase";
+import { db } from "../../../utils/firebase";
+import LineAnimation from "../../../components/LineAnimation";
 
 interface BlogDocument {
   createdAt: number; // Replace with the actual type
@@ -109,6 +110,14 @@ export default function Card() {
 
   return (
     <>
+      <div className='w-[95%] md:w-[80%] md:mx-auto flex flex-row mt-[43px] md:mt-[76px] items-center justify-center md:justify-start'>
+        <div className='flex flex-col items-center md:items-start' data-aos="fade-up">
+          <p className='text-4xl text-center md:text-5xl lg:text-6xl font-bold font-urbanist text-black'>
+            LATEST <span className='text-primary font-urbanist font-bold'>BLOGS </span>
+          </p>
+          <LineAnimation width='200px' height='7px' backgroundColor='#00B8F1' marginTop="22px" />
+        </div>
+      </div>
       <div className=" w-[100%]  md:w-[80%] grid grid-col gap-x-0 md:gap-x-16 items-center mt-[42px] md:mt-[76px] grid-cols-1 md:grid-cols-2 xl:grid-cols-3   md:mx-auto ">
         {loader ? (
           <div className="flex justify-center h-[500px] items-center">

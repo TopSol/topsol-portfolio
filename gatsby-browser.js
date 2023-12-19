@@ -1,5 +1,4 @@
 import "./src/styles/global.css"
-import React from 'react';
 // import { navigate } from 'gatsby';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
