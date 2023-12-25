@@ -182,4 +182,6 @@ padding-bottom: 20px;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
 }
-
+.svg-color-change:hover{
+  fill: #5b5959;
+}

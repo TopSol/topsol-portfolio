@@ -61,3 +61,20 @@ exports.createPages = async ({ actions }) => {
     console.log(error);
   }
 };
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions;
+
+  const isNestedRoute = page.path !== '/' && page.path.split('/').filter(Boolean).length > 1;
+
+  if (isNestedRoute) {
+    deletePage(page);
+  } else {
+    createPage({
+      ...page,
+    });
+  }
+};
+
+
+
