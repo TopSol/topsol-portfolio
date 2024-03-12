@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import VideoHero from "../../components/VidoeHero";
 import Footer from "../../components/footerSection";
-import SmallFooter from "../../components/smallFooter";
+import SmallFooter from "../../components/rightsFooter";
 import Logo from "../../images/favicon-01.png";
 import RecentWork from "./component/recentWork";
 import metaImage from "../../images/main-logo2.png";

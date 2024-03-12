@@ -132,7 +132,7 @@ export default function Footer() {
                   />
                   (041) 855 7244
                   <br />
-                  +92-303-6362191
+                  +92-313-7701371
                 </li>
                 <li className="flex flex-wrap my-4">
                   <img

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import SmallFooter from "../components/smallFooter";
+import SmallFooter from "../components/rightsFooter";
 import Footer from "../components/footerSection";
 import Hero from "../pages/portfolio/component/HeroDetails";
 import PortfolioDetailBody from "../pages/portfolio/component/portfolioDetailBody";

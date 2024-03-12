@@ -267,7 +267,7 @@ function ContactForm({ addressInfo }: Iprops) {
           <p className="mt-3 text-[#1F1F1F] font-figtree  text-[14px] leading-[125%] ">
             (041) 855 7244
             <br />
-            +92-303-6362191
+            +92-313-7701371
           </p>
         </div>
         <div className="md:w-[30%] mt-3 md:mt-0 w-[100%]">

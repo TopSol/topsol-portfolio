@@ -39,7 +39,7 @@ export default function AddressSection() {
               <p className="text-base ">
                 (041) 855 7244
                 <br />
-                +92-303-6362191
+                +92-313-7701371
               </p>
             </div>
             <h1 className="text-primary uppercase mt-[22px]">Email</h1>

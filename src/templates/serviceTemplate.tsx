@@ -5,7 +5,7 @@ import HeroSection from "../pages/services/component/HeroSection";
 import InfoSection from "../components/infoSection";
 import WorkFlow from "../pages/services/component/WorkFlow";
 import Technology from "../pages/services/component/Tecnology";
-import SmallFooter from "../components/smallFooter";
+import SmallFooter from "../components/rightsFooter";
 import Footer from "../components/footerSection";
 import Logo from "../images/favicon-01.png";
 import metaImage from "../images/main-logo2.png";
